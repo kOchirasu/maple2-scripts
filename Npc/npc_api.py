@@ -4,7 +4,8 @@ _state_pattern = re.compile(r"_.+__(\d+)")
 
 
 class Script:
-    def __init__(self):
+    def __init__(self, ctx):
+        self.ctx = ctx
         self.states = {}
 
         for d in dir(self):
@@ -27,3 +28,16 @@ class Script:
 
         # Invalid id
         return -1
+
+    # Script API
+    def move_player(self, portal_id: int):
+        self.ctx.MovePlayer(portal_id)
+
+    def open_dialog(self, name: str, tags: str):
+        self.ctx.OpenDialog(name, tags)
+
+    def reward_item(self, rewards) -> bool:
+        return self.ctx.RewardItem(rewards)
+
+    def has_item(self, item_id: int, rarity: int = -1) -> bool:
+        return self.ctx.HasItem(item_id, rarity)

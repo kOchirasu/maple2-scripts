@@ -1,6 +1,5 @@
 """ 11000254: Jane """
 from npc_api import Script
-import random
 
 
 class Main(Script):
@@ -16,9 +15,11 @@ class Main(Script):
         if pick == 0:
             # $script:0831180407001061$
             # - Yep.
-            # TODO: goto 61, 62
-            # TODO: gotoFail 63
-            return 63
+            if self.has_item(39000014):
+                return 62  # Already have item
+            if self.reward_item([(39000014, 1, 1)]):
+                return 61
+            return 63  # Inventory is full
         elif pick == 1:
             # $script:0831180407001062$
             # - I'd like some advice.
@@ -26,7 +27,7 @@ class Main(Script):
         return -1
 
     def __61(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True 
+        # functionID=1 openTalkReward=True
         # $script:0831180407001063$
         # - Sure thing. This has all the latest styles. Have a seat and check them out.
         return -1
