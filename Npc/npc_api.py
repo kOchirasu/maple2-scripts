@@ -41,3 +41,6 @@ class Script:
 
     def has_item(self, item_id: int, rarity: int = -1) -> bool:
         return self.ctx.HasItem(item_id, rarity)
+    
+    def has_mesos(self, amount: int) -> bool:
+        return self.ctx.HasMesos(amount)

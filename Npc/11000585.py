@@ -5,7 +5,8 @@ import random
 
 class Main(Script):
     def first(self) -> int:
-        # TODO: Job 1
+        if self.has_mesos(1000):
+            return 1
         return random.choice([40])
 
     def select(self) -> int:
