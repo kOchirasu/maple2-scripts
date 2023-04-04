@@ -51,5 +51,8 @@ class Script:
     def job(self) -> int:
         return self.ctx.Job()
 
+    def job_code(self) -> int:
+        return self.ctx.Job()//10
+
     def current_map(self) -> int:
         return self.ctx.CurrentMap()

@@ -5,10 +5,10 @@ import random
 
 class Main(Script):
     def first(self) -> int:
-        x = self.job()//10
-        if self.level() >= 10 and x == 1:
+        job_code = self.job_code()
+        if self.level() >= 10 and job_code == 1:
             return 1
-        return x + 10
+        return job_code + 10
 
     def select(self) -> int:
         return 0
