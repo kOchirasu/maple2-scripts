@@ -5,8 +5,14 @@ import random
 
 class Main(Script):
     def first(self) -> int:
-        # TODO: Job 1
-        return random.choice([10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120])
+        x = self.job()//10
+        if self.level() >= 10 and x == 1:
+            return 1
+        if x == 70:
+            return 20
+        if x < 70:
+            return x + 20
+        return x + 10
 
     def select(self) -> int:
         return 0

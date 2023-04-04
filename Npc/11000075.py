@@ -5,7 +5,7 @@ import random
 
 class Main(Script):
     def first(self) -> int:
-        return random.choice([10, 20, 30, 40])
+        return 20
 
     def select(self) -> int:
         return 0

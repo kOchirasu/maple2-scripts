@@ -5,7 +5,9 @@ import random
 
 class Main(Script):
     def first(self) -> int:
-        return random.choice([30, 40])
+        if self.has_item(30000435):
+            return 40
+        return 30
 
     def select(self) -> int:
         return 0
