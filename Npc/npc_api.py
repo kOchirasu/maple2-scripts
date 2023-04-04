@@ -51,5 +51,5 @@ class Script:
     def job(self) -> int:
         return self.ctx.Job()
 
-    def current_map(self, map_id: int) -> bool:
-        return self.ctx.CurrentMap(map_id)
+    def current_map(self) -> int:
+        return self.ctx.CurrentMap()

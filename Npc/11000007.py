@@ -5,7 +5,7 @@ import random
 
 class Main(Script):
     def first(self) -> int:
-        if self.current_map(2000146):
+        if self.current_map() == 2000146:
             return 30
         return 40
 
