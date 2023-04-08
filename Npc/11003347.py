@@ -11,8 +11,7 @@ class Main(Script):
         return 0
 
     def __31(self, index: int, pick: int) -> int:
-        # functionID=1 
+        # functionID=1
         # $script:0517164307008495$
         # - Sure thing. Right this way.
         return -1
-

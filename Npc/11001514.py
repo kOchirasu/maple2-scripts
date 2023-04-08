@@ -21,4 +21,3 @@ class Main(Script):
             self.open_dialog("BeautyShopDialog", "hair,style")
             return -1
         return -1
-

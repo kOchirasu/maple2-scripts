@@ -173,44 +173,44 @@ class Main(Script):
         return -1
 
     def __8000(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True 
+        # functionID=1 openTalkReward=True
         # $script:0831180509004167$
         # - Whoa, you're paying me already? Thank you much! Teehee! Let's have a feast tonight!
         # TODO: gotoConditionTalkID 40, 50, 60, 8040, 8050, 8060, 9040
         return -1
 
     def __8001(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True 
+        # functionID=1 openTalkReward=True
         # $script:0831180509004168$
         # - I needed this! I spent all my money on a preparing a fancy lunch box for $npcName:11000015[gender:1]$ the other day. Teehee! Thank you, $OwnerName$!
         # TODO: gotoConditionTalkID 40, 50, 60, 8040, 8050, 8060, 9040
         return -1
 
     def __8010(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True 
+        # functionID=1 openTalkReward=True
         # $script:0831180509004169$
         # - Yay, you finally have money to pay me! I thought I was going to starve to death. I'm so happy everything worked out!
         # TODO: gotoConditionTalkID 40, 50, 60, 8040, 8050, 8060, 9040
         return -1
 
     def __8011(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True 
+        # functionID=1 openTalkReward=True
         # $script:0831180509004170$
         # - Whoa! I was debating whether I should look for another job. It's not because of you, $OwnerName$, promise. But, a girl's gotta eat.
         # TODO: gotoConditionTalkID 40, 50, 60, 8040, 8050, 8060, 9040
         return -1
 
     def __8020(self, index: int, pick: int) -> int:
-        # functionID=1 
+        # functionID=1
         # $script:0831180509004171$
-        # - Hmmm, our contract expires in a few days and I'm running out of money for groceries. Are you planning to pay me soon? 
+        # - Hmmm, our contract expires in a few days and I'm running out of money for groceries. Are you planning to pay me soon?
         # TODO: gotoConditionTalkID 21, 22, 8021, 9021
         return -1
 
     def __8021(self, index: int, pick: int) -> int:
-        # functionID=1 
+        # functionID=1
         # $script:0831180509004172$
-        # - Hah hah! No pressure! 
+        # - Hah hah! No pressure!
         if pick == 0:
             # $script:0831180509004173$
             # - I need you to craft something.
@@ -360,7 +360,7 @@ class Main(Script):
 
     def __9003(self, index: int, pick: int) -> int:
         # $script:0831180509004204$
-        # - The injury I got from training isn't healing well, but I don't have the money to pay ointment for it... 
+        # - The injury I got from training isn't healing well, but I don't have the money to pay ointment for it...
         if pick == 0:
             # $script:0831180509004205$
             # - Don't I owe you money? (Pay salary of $MaidSalary$.)
@@ -379,22 +379,22 @@ class Main(Script):
         return -1
 
     def __9011(self, index: int, pick: int) -> int:
-        # functionID=1 
+        # functionID=1
         # $script:0831180509004209$
         # - Excuse me, $OwnerName$, but our contract expired, just like I've been warning you about for days. I can't believe you let it expire!
         return -1
 
     def __9020(self, index: int, pick: int) -> int:
-        # functionID=1 
+        # functionID=1
         # $script:0831180509004210$
-        # - I haven't eaten for $MaidPassedDay$. Maybe my injuries aren't healing due to lack of nutrition!  
+        # - I haven't eaten for $MaidPassedDay$. Maybe my injuries aren't healing due to lack of nutrition!
         # TODO: gotoConditionTalkID 21, 22, 8021, 9021
         return -1
 
     def __9021(self, index: int, pick: int) -> int:
-        # functionID=1 
+        # functionID=1
         # $script:0831180509004211$
-        # - I feel so weak... 
+        # - I feel so weak...
         if pick == 0:
             # $script:0831180509004212$
             # - Don't I owe you money? (Pay salary of $MaidSalary$.)
@@ -414,7 +414,7 @@ class Main(Script):
 
     def __9040(self, index: int, pick: int) -> int:
         # $script:0831180509004215$
-        # - I miss $npcName:11000015[gender:1]$... 
+        # - I miss $npcName:11000015[gender:1]$...
         if pick == 0:
             # $script:0831180509004216$
             # - Don't I owe you money? (Pay salary of $MaidSalary$.)
@@ -440,7 +440,7 @@ class Main(Script):
 
     def __9031(self, index: int, pick: int) -> int:
         # $script:0831180509004220$
-        # - Is this because I gave your food to $npc:11000502[gender:0]$? I hope not. I didn't think you were a petty person. 
+        # - Is this because I gave your food to $npc:11000502[gender:0]$? I hope not. I didn't think you were a petty person.
         # TODO: gotoConditionTalkID 40, 50, 60, 8040, 8050, 8060, 9040
         return -1
 
@@ -452,28 +452,28 @@ class Main(Script):
         return -1
 
     def __10(self, index: int, pick: int) -> int:
-        # functionID=1 
+        # functionID=1
         # $script:0831180509004222$
         # - I love messing around with beads! I'm good at it, too.
         # TODO: gotoConditionTalkID 11, 9011
         return -1
 
     def __11(self, index: int, pick: int) -> int:
-        # functionID=1 
+        # functionID=1
         # $script:0831180509004223$
         # - I can craft stuff for you whenever.
         # TODO: gotoConditionTalkID 40, 50, 60, 8040, 8050, 8060
         return -1
 
     def __20(self, index: int, pick: int) -> int:
-        # functionID=1 
+        # functionID=1
         # $script:0831180509004224$
         # - Our contract includes some details about me.
         # TODO: gotoConditionTalkID 21, 22, 8021, 9021
         return -1
 
     def __21(self, index: int, pick: int) -> int:
-        # functionID=1 
+        # functionID=1
         # $script:0831180509004225$
         # - Just say the word.
         if pick == 0:
@@ -496,7 +496,7 @@ class Main(Script):
         return -1
 
     def __22(self, index: int, pick: int) -> int:
-        # functionID=1 
+        # functionID=1
         # $script:0831180509004229$
         # - Just say the word.
         if pick == 0:
@@ -689,25 +689,25 @@ class Main(Script):
         return -1
 
     def __1001(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True 
+        # functionID=1 openTalkReward=True
         # $script:0831180509004266$
         # - I see... $OwnerName$, you have no idea what it's like to be hated by someone you admire.
         return -1
 
     def __1002(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True 
+        # functionID=1 openTalkReward=True
         # $script:0831180509004267$
         # - Ughhhh. My world... has ended...
         return -1
 
     def __1011(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True 
+        # functionID=1 openTalkReward=True
         # $script:0831180509004268$
         # - Huh? What do you mean? You think she got angry because... she cares about me? You really think so?
         return -1
 
     def __1012(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True 
+        # functionID=1 openTalkReward=True
         # $script:0831180509004269$
         # - So you're saying $npcName:11000015[gender:1]$ was angry because she was worried about me? Ah, $npcName:11000015[gender:1]$!
         return -1
@@ -738,25 +738,25 @@ class Main(Script):
         return -1
 
     def __1101(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True 
+        # functionID=1 openTalkReward=True
         # $script:0831180509004275$
         # - Wow, ever heard of tact? Sheesh!
         return -1
 
     def __1102(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True 
+        # functionID=1 openTalkReward=True
         # $script:0831180509004276$
         # - Wh-what?! Of course $npcName:11000015[gender:1]$ is important to me, but I'm in the Green Hoods to protect Maple World!
         return -1
 
     def __1111(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True 
+        # functionID=1 openTalkReward=True
         # $script:0831180509004277$
         # - I knew you'd say that. You're right. I can't quit!
         return -1
 
     def __1112(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True 
+        # functionID=1 openTalkReward=True
         # $script:0831180509004278$
         # - That's right! By protecting Maple World, I'm protecting my father. $OwnerName$, you have such sound logic!
         return -1
@@ -831,7 +831,7 @@ class Main(Script):
             # - But obviously, $npcName:11000015[gender:1]$ is way more beautiful.
             return 3000
         elif index == 2:
-            # functionID=1 openTalkReward=True 
+            # functionID=1 openTalkReward=True
             # $script:0831180509004293$
             # - Ahhh... $npcName:11000015[gender:1]$... What I wouldn't give for a chance to comb her hair every day...
             return -1
@@ -848,14 +848,14 @@ class Main(Script):
             return 3100
         elif index == 2:
             # $script:0831180509004296$
-            # - As for me, I'm more interested in protecting $npcName:11000015[gender:1]$ than in protecting Maple World. 
+            # - As for me, I'm more interested in protecting $npcName:11000015[gender:1]$ than in protecting Maple World.
             return 3100
         elif index == 3:
             # $script:0831180509004297$
             # - I know $npcName:11000015[gender:1]$ is much stronger than I am, but I'm sure she has things that she can't tell others... I want to help her in any way I can...
             return 3100
         elif index == 4:
-            # functionID=1 openTalkReward=True 
+            # functionID=1 openTalkReward=True
             # $script:0831180509004298$
             # - Uhh? What am I saying? Ah... Ah hah hah... Hah hah...
             return -1
@@ -1000,4 +1000,3 @@ class Main(Script):
             # TODO: goto 105, 106
             return -1
         return -1
-

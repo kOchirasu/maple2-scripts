@@ -11,7 +11,7 @@ class Main(Script):
         return 0
 
     def __30(self, index: int, pick: int) -> int:
-        # functionID=1 
+        # functionID=1
         # $script:1010204110002257$
         # - Give us 5 $itemPlural:30001442$ for a chance to spin the $npc:11004728$. How about it? Feeling lucky?
         if pick == 0:
@@ -36,7 +36,7 @@ class Main(Script):
 
     def __31(self, index: int, pick: int) -> int:
         if index == 0:
-            # functionID=1 
+            # functionID=1
             # $script:1010204110002261$
             # - Wonderful! Are you ready to spin?
             return 31
@@ -47,14 +47,14 @@ class Main(Script):
         return -1
 
     def __32(self, index: int, pick: int) -> int:
-        # functionID=1 
+        # functionID=1
         # $script:1010204110002263$
         # - You don't have enough coins. You need 5 $itemPlural:30001442$ to spin the $npc:11004728$ once.
         return -1
 
     def __40(self, index: int, pick: int) -> int:
         if index == 0:
-            # functionID=1 
+            # functionID=1
             # $script:1010204110002264$
             # - You need 5 $itemPlural:30001442$ to give the $npc:11004728$ a spin. Play Hide-and-Seek to get $itemPlural:30001442$!
             return 40
@@ -66,7 +66,7 @@ class Main(Script):
 
     def __10(self, index: int, pick: int) -> int:
         if index == 0:
-            # functionID=1 
+            # functionID=1
             # $script:1010204110002266$
             # - All right, let's spin it 10 times in a row! Keep your fingers crossed, $MyPCName$!
             return 10
@@ -78,7 +78,7 @@ class Main(Script):
 
     def __100(self, index: int, pick: int) -> int:
         if index == 0:
-            # functionID=1 
+            # functionID=1
             # $script:1010204110002268$
             # - All right, let's spin it 100 times in a row! Keep your fingers crossed, $MyPCName$!
             return 100
@@ -87,4 +87,3 @@ class Main(Script):
             # - Spin number $rouletteCurrent$! Good luck!
             return -1
         return -1
-

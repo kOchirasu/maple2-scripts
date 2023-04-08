@@ -17,4 +17,3 @@ class Main(Script):
         # - You look a right mess! How about I treat you? It'll only be a measly $paneltyPrice$ mesos.
         #   Don't worry, I'm a real doctor!
         return -1
-

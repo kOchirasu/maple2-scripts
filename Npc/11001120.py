@@ -18,7 +18,7 @@ class Main(Script):
             # - Look at all those $itemPlural:30000406$> you've got! You're sitting pretty! Why don't you invest them in a chance to spin the $npc:11001120$? Could be a wise investment, indeed!
             return 30
         elif index == 1:
-            # functionID=1 
+            # functionID=1
             # $script:0909140310001158$
             # - Spin the wheel for a chance at great prizes! You know you want to.
             return 30
@@ -27,4 +27,3 @@ class Main(Script):
             # - Here's hoping Lady Luck's on your side!
             return -1
         return -1
-

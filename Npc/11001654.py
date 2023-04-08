@@ -35,7 +35,7 @@ class Main(Script):
 
     def __31(self, index: int, pick: int) -> int:
         if index == 0:
-            # functionID=1 
+            # functionID=1
             # $script:0615152810001562$
             # - Spin the wheel for a chance at great prizes! You know you want to.
             return 31
@@ -47,7 +47,7 @@ class Main(Script):
 
     def __10(self, index: int, pick: int) -> int:
         if index == 0:
-            # functionID=1 
+            # functionID=1
             # $script:0125175010001820$
             # - All right, let's spin it 10 times in a row! Keep your fingers crossed, $MyPCName$!
             return 10
@@ -59,7 +59,7 @@ class Main(Script):
 
     def __100(self, index: int, pick: int) -> int:
         if index == 0:
-            # functionID=1 
+            # functionID=1
             # $script:0125175010001822$
             # - All right, let's spin it 100 times in a row! Keep your fingers crossed, $MyPCName$!
             return 100
@@ -68,4 +68,3 @@ class Main(Script):
             # - Roulette spin number $rouletteCurrent$! Good luck!
             return -1
         return -1
-

@@ -22,8 +22,7 @@ class Main(Script):
         return -1
 
     def __31(self, index: int, pick: int) -> int:
-        # functionID=1 
+        # functionID=1
         # $script:0120170607005854$
         # - If not for him...
         return -1
-

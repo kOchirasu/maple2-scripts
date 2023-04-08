@@ -12,7 +12,7 @@ class Main(Script):
 
     def __20(self, index: int, pick: int) -> int:
         # $script:0831180407002730$
-        # - Hey! Did you just throw me on the ground? 
+        # - Hey! Did you just throw me on the ground?
         if pick == 0:
             # $script:0831180407002731$
             # - How did you end up on the bookshelf?
@@ -22,8 +22,7 @@ class Main(Script):
         return -1
 
     def __21(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True 
+        # functionID=1 openTalkReward=True
         # $script:0831180407002732$
         # - A stupid monster brought me back here. Please, you've got to take me with you!
         return -1
-

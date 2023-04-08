@@ -9,4 +9,3 @@ class Main(Script):
 
     def select(self) -> int:
         return 1
-

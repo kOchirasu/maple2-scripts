@@ -21,8 +21,7 @@ class Main(Script):
         return -1
 
     def __21(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True 
+        # functionID=1 openTalkReward=True
         # $script:0831180407003329$
         # - Get out of here! Oh, and take this with you.
         return -1
-

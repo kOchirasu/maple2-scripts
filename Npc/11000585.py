@@ -28,4 +28,3 @@ class Main(Script):
             #   Are you interested?
             return -1
         return -1
-

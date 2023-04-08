@@ -19,4 +19,3 @@ class Main(Script):
         #   It's 4,000 mesos to go back on the ship, the same fare as before.
         #   Do you want to depart for $map:02000062$ now?
         return -1
-

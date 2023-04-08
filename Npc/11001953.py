@@ -11,7 +11,7 @@ class Main(Script):
         return 0
 
     def __30(self, index: int, pick: int) -> int:
-        # functionID=1 
+        # functionID=1
         # $script:1128172510001804$
         # - Give us 1 $item:30000610$ for a chance to spin $npc:11001953$. What do you say?
         if pick == 0:
@@ -36,7 +36,7 @@ class Main(Script):
 
     def __31(self, index: int, pick: int) -> int:
         if index == 0:
-            # functionID=1 
+            # functionID=1
             # $script:1128172510001806$
             # - Spin the wheel for a chance at great prizes! You know you want to.
             return 31
@@ -47,14 +47,14 @@ class Main(Script):
         return -1
 
     def __32(self, index: int, pick: int) -> int:
-        # functionID=1 
+        # functionID=1
         # $script:1128172510001808$
         # - It looks like you don't have any $itemPlural:30000610$. You need at least 1 to spin $npc:11001953$!
         return -1
 
     def __40(self, index: int, pick: int) -> int:
         if index == 0:
-            # functionID=1 
+            # functionID=1
             # $script:1128172510001809$
             # - You need at least 1 $item:30000610$ to spin $npc:11001953$. You know you can get $itemPlural:30000610$ by playing MC Kay's games, right?
             return 40
@@ -66,7 +66,7 @@ class Main(Script):
 
     def __10(self, index: int, pick: int) -> int:
         if index == 0:
-            # functionID=1 
+            # functionID=1
             # $script:0612103010001838$
             # - All right, let's spin it 10 times in a row! Keep your fingers crossed, $MyPCName$!
             return 10
@@ -78,7 +78,7 @@ class Main(Script):
 
     def __100(self, index: int, pick: int) -> int:
         if index == 0:
-            # functionID=1 
+            # functionID=1
             # $script:0612103010001840$
             # - All right, let's spin it 100 times in a row! Keep your fingers crossed, $MyPCName$!
             return 100
@@ -87,4 +87,3 @@ class Main(Script):
             # - Spin number $rouletteCurrent$! Good luck!
             return -1
         return -1
-

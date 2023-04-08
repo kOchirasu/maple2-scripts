@@ -28,8 +28,7 @@ class Main(Script):
         return -1
 
     def __47(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True 
+        # functionID=1 openTalkReward=True
         # $script:1227015507005627$
         # - Take this to $npcName:11001396[gender:1]$. And tell her she's welcome.
         return -1
-

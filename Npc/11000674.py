@@ -11,9 +11,8 @@ class Main(Script):
         return 0
 
     def __11(self, index: int, pick: int) -> int:
-        # functionID=1 
+        # functionID=1
         # $script:0831180610000470$
         # - <i>The wrathful shadows have devoured every one of your blessings and taken over your mind.
         #   Now, you see that friendship is a myth, and everyone is your enemy!</i>
         return -1
-

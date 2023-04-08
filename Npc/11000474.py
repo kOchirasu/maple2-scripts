@@ -18,7 +18,7 @@ class Main(Script):
             # - Spin, spin!
             return 30
         elif index == 1:
-            # functionID=1 
+            # functionID=1
             # $script:0831180610000453$
             # - Welcome!
             #   $npc:11000474$ is filled with <font color="#ffd200">wondrous items</font>!
@@ -29,4 +29,3 @@ class Main(Script):
             #   May luck be with you, <font color="#ffd200">$MyPCName$</font>!
             return -1
         return -1
-

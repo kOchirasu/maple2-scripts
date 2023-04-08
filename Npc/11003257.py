@@ -11,8 +11,7 @@ class Main(Script):
         return 0
 
     def __42(self, index: int, pick: int) -> int:
-        # functionID=1 
+        # functionID=1
         # $script:0530154407008545$
         # - I'm trying! Close your eyes. It'll work for sure this time!
         return -1
-

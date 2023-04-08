@@ -18,9 +18,8 @@ class Main(Script):
             # - Ugh. This place makes me so uncomfortable.  Hmm... Your eyes... I can see you're a kindred spirit... How would you like to join us and walk among the shadows?
             return 1
         elif index == 1:
-            # functionID=1 
+            # functionID=1
             # $script:0831180610000334$
-            # - Happiness, anger, sadness, forgiveness—emotions are just baggage that gets in the way. Your enemies don't deserve your mercy. 
+            # - Happiness, anger, sadness, forgiveness—emotions are just baggage that gets in the way. Your enemies don't deserve your mercy.
             return -1
         return -1
-

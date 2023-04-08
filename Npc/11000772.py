@@ -173,42 +173,42 @@ class Main(Script):
         return -1
 
     def __8000(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True 
+        # functionID=1 openTalkReward=True
         # $script:0831180509002354$
         # - Ding, ding! You have renewed your contract! Thank you, $OwnerName$.
         # TODO: gotoConditionTalkID 40, 50, 60, 8040, 8050, 8060, 9040
         return -1
 
     def __8001(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True 
+        # functionID=1 openTalkReward=True
         # $script:0831180509002355$
         # - Ding, ding! You have renewed your contract! I will serve you until I am no longer of use, $OwnerName$!
         # TODO: gotoConditionTalkID 40, 50, 60, 8040, 8050, 8060, 9040
         return -1
 
     def __8010(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True 
+        # functionID=1 openTalkReward=True
         # $script:0831180509002356$
         # - Ding! Paycheck received! Canceling service disconnection... Vrroomm...
         # TODO: gotoConditionTalkID 40, 50, 60, 8040, 8050, 8060, 9040
         return -1
 
     def __8011(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True 
+        # functionID=1 openTalkReward=True
         # $script:0831180509002357$
         # - Ding! Paycheck received! Canceling maximum power saver mode... Checking system status... Beep! Beep! Beep!
         # TODO: gotoConditionTalkID 40, 50, 60, 8040, 8050, 8060, 9040
         return -1
 
     def __8020(self, index: int, pick: int) -> int:
-        # functionID=1 
+        # functionID=1
         # $script:0831180509002358$
         # - Beep! Alert, $OwnerName$: our contract expires in a few days.
         # TODO: gotoConditionTalkID 21, 22, 8021, 9021
         return -1
 
     def __8021(self, index: int, pick: int) -> int:
-        # functionID=1 
+        # functionID=1
         # $script:0831180509002359$
         # - When our contract expires, my main system will automatically shut down.
         if pick == 0:
@@ -320,7 +320,7 @@ class Main(Script):
 
     def __9001(self, index: int, pick: int) -> int:
         # $script:0831180509002383$
-        # - Beeeeeep! Unable to move. 
+        # - Beeeeeep! Unable to move.
         if pick == 0:
             # $script:0831180509002384$
             # - Don't I owe you money? (Pay salary of $MaidSalary$.)
@@ -360,7 +360,7 @@ class Main(Script):
 
     def __9003(self, index: int, pick: int) -> int:
         # $script:0831180509002391$
-        # - Beeeeeep... $OwnerName$...  
+        # - Beeeeeep... $OwnerName$...
         if pick == 0:
             # $script:0831180509002392$
             # - Don't I owe you money? (Pay salary of $MaidSalary$.)
@@ -379,20 +379,20 @@ class Main(Script):
         return -1
 
     def __9011(self, index: int, pick: int) -> int:
-        # functionID=1 
+        # functionID=1
         # $script:0831180509002396$
         # - Contract expired. Switching to hibernation mode.
         return -1
 
     def __9020(self, index: int, pick: int) -> int:
-        # functionID=1 
+        # functionID=1
         # $script:0831180509002397$
         # - $MaidPassedDay$ have passed since our contract expired.
         # TODO: gotoConditionTalkID 21, 22, 8021, 9021
         return -1
 
     def __9021(self, index: int, pick: int) -> int:
-        # functionID=1 
+        # functionID=1
         # $script:0831180509002398$
         # - I don't know how much longer I can stay online.
         if pick == 0:
@@ -451,28 +451,28 @@ class Main(Script):
         return -1
 
     def __10(self, index: int, pick: int) -> int:
-        # functionID=1 
+        # functionID=1
         # $script:0831180509002409$
         # - Switching to cooking mode. What would you like?
         # TODO: gotoConditionTalkID 11, 9011
         return -1
 
     def __11(self, index: int, pick: int) -> int:
-        # functionID=1 
+        # functionID=1
         # $script:0831180509002410$
         # - Canceling cooking mode...
         # TODO: gotoConditionTalkID 40, 50, 60, 8040, 8050, 8060
         return -1
 
     def __20(self, index: int, pick: int) -> int:
-        # functionID=1 
+        # functionID=1
         # $script:0831180509002411$
         # - $OwnerName$... who am I?
         # TODO: gotoConditionTalkID 21, 22, 8021, 9021
         return -1
 
     def __21(self, index: int, pick: int) -> int:
-        # functionID=1 
+        # functionID=1
         # $script:0831180509002412$
         # - I want to be like you, $OwnerName$.
         if pick == 0:
@@ -495,7 +495,7 @@ class Main(Script):
         return -1
 
     def __22(self, index: int, pick: int) -> int:
-        # functionID=1 
+        # functionID=1
         # $script:0831180509002416$
         # - I want to be like you, $OwnerName$.
         if pick == 0:
@@ -526,7 +526,7 @@ class Main(Script):
         # - Switching to conversation mode.
         if pick == 0:
             # $script:0831180509002422$
-            # - Did anything interesting happen today? 
+            # - Did anything interesting happen today?
             # TODO: goto 1000, 1100, 1200, 1300, 1400, 1500, 1600, 2000, 2100, 2200, 9011
             return -1
         elif pick == 1:
@@ -551,7 +551,7 @@ class Main(Script):
         # - The following conversation will be recorded for training purposes.
         if pick == 0:
             # $script:0831180509002427$
-            # - Did anything interesting happen today? 
+            # - Did anything interesting happen today?
             # TODO: goto 1000, 1100, 1200, 1300, 1400, 1500, 1600, 2000, 2100, 2200, 9011
             return -1
         elif pick == 1:
@@ -576,7 +576,7 @@ class Main(Script):
         # - I always save my conversations with you, $OwnerName$.
         if pick == 0:
             # $script:0831180509002432$
-            # - Did anything interesting happen today? 
+            # - Did anything interesting happen today?
             # TODO: goto 1000, 1100, 1200, 1300, 1400, 1500, 1600, 2000, 2100, 2200, 9011
             return -1
         elif pick == 1:
@@ -665,7 +665,7 @@ class Main(Script):
     def __1000(self, index: int, pick: int) -> int:
         if index == 0:
             # $script:0831180509002448$
-            # - I can function as long as my battery has power, but a human will perish without a constant supply of sustenance. 
+            # - I can function as long as my battery has power, but a human will perish without a constant supply of sustenance.
             return 1000
         elif index == 1:
             # $script:0831180509002449$
@@ -684,25 +684,25 @@ class Main(Script):
         return -1
 
     def __1001(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True 
+        # functionID=1 openTalkReward=True
         # $script:0831180509002452$
         # - I followed the recipe in my database. The recipe itself must be the problem. Deleting it now...
         return -1
 
     def __1002(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True 
+        # functionID=1 openTalkReward=True
         # $script:0831180509002453$
         # - $OwnerName$, I am incapable of tasting food. Please install a taste sensor if you'd like me to solve this problem.
         return -1
 
     def __1011(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True 
+        # functionID=1 openTalkReward=True
         # $script:0831180509002454$
         # - Noted. I am glad you like it, <font color="#ffd200">$OwnerName$</font>.
         return -1
 
     def __1012(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True 
+        # functionID=1 openTalkReward=True
         # $script:0831180509002455$
         # - Was that a compliment? ...Beep, beep, beep. The system has overheated. Turning on fans... Vroom...
         return -1
@@ -731,30 +731,30 @@ class Main(Script):
     def __1101(self, index: int, pick: int) -> int:
         if index == 0:
             # $script:0831180509002460$
-            # - Unable to locate that word in the database. Searching for synonyms... Beep! Beep! Beep! 
+            # - Unable to locate that word in the database. Searching for synonyms... Beep! Beep! Beep!
             return 1101
         elif index == 1:
-            # functionID=1 openTalkReward=True 
+            # functionID=1 openTalkReward=True
             # $script:0831180509002461$
             # - One entry found: dynamite. $OwnerName$, sitting on dynamite is hazardous to your health.
             return -1
         return -1
 
     def __1102(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True 
+        # functionID=1 openTalkReward=True
         # $script:0831180509002462$
         # - $OwnerName$, based on your activity level, you need an average of 5,630 kcal per day. Be sure to meet your calorie needs for optimal health.
         return -1
 
     def __1111(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True 
+        # functionID=1 openTalkReward=True
         # $script:0831180509002463$
         # - According to my database, people exchange gifts as a way of thanking each other.
         #   <font color="#ffd200">$OwnerName$</font>, you can just give me oil.
         return -1
 
     def __1112(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True 
+        # functionID=1 openTalkReward=True
         # $script:0831180509002464$
         # - Did you just hand me some oil, $OwnerName$? Why is my vision blurry, all of a sudden? Is that moisture in my visual sensors?
         return -1
@@ -781,25 +781,25 @@ class Main(Script):
         return -1
 
     def __1201(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True 
+        # functionID=1 openTalkReward=True
         # $script:0831180509002469$
         # - I apologize if the color does not appeal to you, $OwnerName$. I am colorblind.
         return -1
 
     def __1202(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True 
+        # functionID=1 openTalkReward=True
         # $script:0831180509002470$
         # - Does it matter what color it is, as long as it's effective? I am unable to distinguish between colors, but that never has stopped me from functioning properly.
         return -1
 
     def __1211(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True 
+        # functionID=1 openTalkReward=True
         # $script:0831180509002471$
         # - Do you like it? To help it go down smoothly, I've added a few drops of sesame seed oil, my favorite lubricant.
         return -1
 
     def __1212(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True 
+        # functionID=1 openTalkReward=True
         # $script:0831180509002472$
         # - It may not smell enticing, but I assure you, that does not affect the potion's efficacy.
         return -1
@@ -826,25 +826,25 @@ class Main(Script):
         return -1
 
     def __1301(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True 
+        # functionID=1 openTalkReward=True
         # $script:0831180509002477$
         # - How so? I need more data. Please elaborate.
         return -1
 
     def __1302(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True 
+        # functionID=1 openTalkReward=True
         # $script:0831180509002478$
         # - Beep! Dust detected. I must go clean, $OwnerName$. Excuse me.
         return -1
 
     def __1311(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True 
+        # functionID=1 openTalkReward=True
         # $script:0831180509002479$
         # - Saving the recipe and your response in my database. Your eyes are really shining, $OwnerName$.
         return -1
 
     def __1312(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True 
+        # functionID=1 openTalkReward=True
         # $script:0831180509002480$
         # - Good. I'm curious about tastes. Will you get me a taste sensor, $OwnerName$?
         return -1
@@ -871,25 +871,25 @@ class Main(Script):
         return -1
 
     def __1401(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True 
+        # functionID=1 openTalkReward=True
         # $script:0831180509002485$
         # - $OwnerName$, your blood pressure is rising too quickly. Have you tried aromatherapy? I highly recommend sesame seed oil.
         return -1
 
     def __1402(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True 
+        # functionID=1 openTalkReward=True
         # $script:0831180509002486$
         # - Beep! Beep! Beep! I apologize, $OwnerName$. There was an error with my auditory sensor, so I missed what you said.
         return -1
 
     def __1411(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True 
+        # functionID=1 openTalkReward=True
         # $script:0831180509002487$
         # - Leaving items on the floor is not a good habit, $OwnerName$. Also, please think of my vacuum.
         return -1
 
     def __1412(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True 
+        # functionID=1 openTalkReward=True
         # $script:0831180509002488$
         # - Glad to be of help, $OwnerName$.
         return -1
@@ -916,7 +916,7 @@ class Main(Script):
         return -1
 
     def __1501(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True 
+        # functionID=1 openTalkReward=True
         # $script:0831180509002493$
         # - Very well. Beep, beep, beep. Deleting record of receiving the package... Beep!
         return -1
@@ -927,22 +927,22 @@ class Main(Script):
             # - I don't understand. My scan revealed your name printed on the package. Searching database...
             return 1502
         elif index == 1:
-            # functionID=1 openTalkReward=True 
+            # functionID=1 openTalkReward=True
             # $script:0831180509002495$
             # - Beep beep beep! Unable to local scanned label image. Beep.
             return -1
         return -1
 
     def __1511(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True 
+        # functionID=1 openTalkReward=True
         # $script:0831180509002496$
-        # - Understood. I was unable to locate a record receiving the package. I do recall someone entered the house, but all other records have been erased. 
+        # - Understood. I was unable to locate a record receiving the package. I do recall someone entered the house, but all other records have been erased.
         return -1
 
     def __1512(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True 
+        # functionID=1 openTalkReward=True
         # $script:0831180509002497$
-        # - You purchased something? It is difficult to clean when there are too many items in the house. Might I suggest limiting your purchases to oil? 
+        # - You purchased something? It is difficult to clean when there are too many items in the house. Might I suggest limiting your purchases to oil?
         return -1
 
     def __2000(self, index: int, pick: int) -> int:
@@ -980,11 +980,11 @@ class Main(Script):
     def __2200(self, index: int, pick: int) -> int:
         if index == 0:
             # $script:0831180509002504$
-            # - Scanning target... Beep. No data found. 
+            # - Scanning target... Beep. No data found.
             return 2200
         elif index == 1:
             # $script:0831180509002505$
-            # - Beep. Possible intruder. Activating attack mode... This place is Dr. Kartronic's... Whirr... Whirrrrr... 
+            # - Beep. Possible intruder. Activating attack mode... This place is Dr. Kartronic's... Whirr... Whirrrrr...
             return 2200
         elif index == 2:
             # $script:0831180509002506$
@@ -997,7 +997,7 @@ class Main(Script):
         elif index == 4:
             # $script:0831180509002508$
             # - Beep. Nice to meet you, $OwnerName$. Pulse: 124. Blood pressure: 155, still rising. $OwnerName$,
-            #   I recommend you see a doctor at once. 
+            #   I recommend you see a doctor at once.
             # TODO: gotoConditionTalkID 30, 31, 32, 9011
             return -1
         return -1
@@ -1044,9 +1044,9 @@ class Main(Script):
             # - Here is a fact: 99.4% of machines that are no longer productive are discarded. It is natural. I fully understand that one day you will abandon me.
             return 3000
         elif index == 2:
-            # functionID=1 openTalkReward=True 
+            # functionID=1 openTalkReward=True
             # $script:0831180509002517$
-            # - Why do you look so upset, $OwnerName$? Is your system experiencing an error? 
+            # - Why do you look so upset, $OwnerName$? Is your system experiencing an error?
             return -1
         return -1
 
@@ -1056,7 +1056,7 @@ class Main(Script):
             # - When you are not present, $OwnerName$, it feels like some of my screws are loose. But when I check them, they are all secure.
             return 3100
         elif index == 1:
-            # functionID=1 openTalkReward=True 
+            # functionID=1 openTalkReward=True
             # $script:0831180509002519$
             # - Perhaps I am broken somewhere. Do you know any good technicians?
             return -1
@@ -1089,7 +1089,7 @@ class Main(Script):
     def __5000(self, index: int, pick: int) -> int:
         if index == 0:
             # $script:0831180509002524$
-            # - I'm Maple World's first domestic robot. My creator, Dr. Kartronic, is like a parent to me. Dr. Kartronic is... Whirrrr... 
+            # - I'm Maple World's first domestic robot. My creator, Dr. Kartronic, is like a parent to me. Dr. Kartronic is... Whirrrr...
             return 5000
         elif index == 1:
             # $script:0831180509002525$
@@ -1097,11 +1097,11 @@ class Main(Script):
             return 5000
         elif index == 2:
             # $script:0831180509002526$
-            # - It also shows that $npc:11000335[gender:0]$ made a backup of my system data... In $map:02000163$... Whirrrr... Whirr... 
+            # - It also shows that $npc:11000335[gender:0]$ made a backup of my system data... In $map:02000163$... Whirrrr... Whirr...
             return 5000
         elif index == 3:
             # $script:0831180509002527$
-            # - The data related to $map:02000163$ has been damaged and is unreadable. Cause: unknown. Beep. 
+            # - The data related to $map:02000163$ has been damaged and is unreadable. Cause: unknown. Beep.
             # TODO: gotoConditionTalkID 30, 31, 32, 9011
             return -1
         return -1
@@ -1133,7 +1133,7 @@ class Main(Script):
             return 6000
         elif index == 2:
             # $script:0831180509002533$
-            # - I infer from this that he hates dust. So, $OwnerName$, I hope you understand if I leave in the middle of a conversation to eliminate dust. 
+            # - I infer from this that he hates dust. So, $OwnerName$, I hope you understand if I leave in the middle of a conversation to eliminate dust.
             # TODO: gotoConditionTalkID 30, 31, 32, 9011
             return -1
         return -1
@@ -1177,4 +1177,3 @@ class Main(Script):
             # TODO: goto 105, 106
             return -1
         return -1
-

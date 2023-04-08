@@ -12,8 +12,7 @@ class Main(Script):
 
     # Job
     def __0(self, index: int, pick: int) -> int:
-        # functionID=1 
+        # functionID=1
         # $script:0831180610000437$
         # - Just look at that gorgeous reflection! Can you believe that's you?
         return -1
-

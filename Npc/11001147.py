@@ -12,7 +12,7 @@ class Main(Script):
 
     def __21(self, index: int, pick: int) -> int:
         # $script:0916043407003995$
-        # - (Add the first ingredient.) 
+        # - (Add the first ingredient.)
         if pick == 0:
             # $script:0916043407003996$
             # - (Add 10 $itemPlural:30000390$.)
@@ -41,7 +41,7 @@ class Main(Script):
 
     def __22(self, index: int, pick: int) -> int:
         # $script:0916043407004000$
-        # - <font color="#909090">(Add the second ingredient.)</font> 
+        # - <font color="#909090">(Add the second ingredient.)</font>
         if pick == 0:
             # $script:0916043407004001$
             # - (Add 10 $itemPlural:30000392$.)
@@ -70,7 +70,7 @@ class Main(Script):
 
     def __23(self, index: int, pick: int) -> int:
         # $script:0916043407004005$
-        # - <font color="#909090">(Add the third ingredient.)</font> 
+        # - <font color="#909090">(Add the third ingredient.)</font>
         if pick == 0:
             # $script:0916043407004006$
             # - (Add 10 $itemPlural:30000391$.)
@@ -99,7 +99,7 @@ class Main(Script):
 
     def __24(self, index: int, pick: int) -> int:
         # $script:0916043407004010$
-        # - <font color="#909090">(Add the fourth ingredient.)</font> 
+        # - <font color="#909090">(Add the fourth ingredient.)</font>
         if pick == 0:
             # $script:0916043407004011$
             # - (Add 10 $itemPlural:30000393$.)
@@ -150,15 +150,15 @@ class Main(Script):
         return -1
 
     def __26(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True 
+        # functionID=1 openTalkReward=True
         # $script:0916043407004020$
-        # - <font color="#909090">(The syrupy candy crystallizes into a $item:30000395$ with a pop. 
+        # - <font color="#909090">(The syrupy candy crystallizes into a $item:30000395$ with a pop.
         #   Quickly, remove the candy from the $npcName:11001147$!)</font>
         return -1
 
     def __41(self, index: int, pick: int) -> int:
         # $script:1027181907004303$
-        # - <font color="#909090">(Add the second ingredient.)</font> 
+        # - <font color="#909090">(Add the second ingredient.)</font>
         if pick == 0:
             # $script:1027181907004304$
             # - (Add 10 $itemPlural:30000392$.)
@@ -187,7 +187,7 @@ class Main(Script):
 
     def __42(self, index: int, pick: int) -> int:
         # $script:1027181907004308$
-        # - <font color="#909090">(Add the second ingredient.)</font> 
+        # - <font color="#909090">(Add the second ingredient.)</font>
         if pick == 0:
             # $script:1027181907004309$
             # - (Add 10 $itemPlural:30000392$.)
@@ -216,7 +216,7 @@ class Main(Script):
 
     def __43(self, index: int, pick: int) -> int:
         # $script:1027181907004313$
-        # - <font color="#909090">(Add the second ingredient.)</font> 
+        # - <font color="#909090">(Add the second ingredient.)</font>
         if pick == 0:
             # $script:1027181907004314$
             # - (Add 10 $itemPlural:30000392$.)
@@ -245,7 +245,7 @@ class Main(Script):
 
     def __44(self, index: int, pick: int) -> int:
         # $script:1027181907004318$
-        # - <font color="#909090">(Add the second ingredient.)</font> 
+        # - <font color="#909090">(Add the second ingredient.)</font>
         if pick == 0:
             # $script:1027181907004319$
             # - (Add 10 $itemPlural:30000392$.)
@@ -274,7 +274,7 @@ class Main(Script):
 
     def __51(self, index: int, pick: int) -> int:
         # $script:1027181907004323$
-        # - <font color="#909090">(Add the third ingredient.)</font> 
+        # - <font color="#909090">(Add the third ingredient.)</font>
         if pick == 0:
             # $script:1027181907004324$
             # - (Add 10 $itemPlural:30000391$.)
@@ -303,7 +303,7 @@ class Main(Script):
 
     def __52(self, index: int, pick: int) -> int:
         # $script:1027181907004328$
-        # - <font color="#909090">(Add the third ingredient.)</font> 
+        # - <font color="#909090">(Add the third ingredient.)</font>
         if pick == 0:
             # $script:1027181907004329$
             # - (Add 10 $itemPlural:30000391$.)
@@ -332,7 +332,7 @@ class Main(Script):
 
     def __53(self, index: int, pick: int) -> int:
         # $script:1027181907004333$
-        # - <font color="#909090">(Add the third ingredient.)</font> 
+        # - <font color="#909090">(Add the third ingredient.)</font>
         if pick == 0:
             # $script:1027181907004334$
             # - (Add 10 $itemPlural:30000391$.)
@@ -361,7 +361,7 @@ class Main(Script):
 
     def __54(self, index: int, pick: int) -> int:
         # $script:1027181907004338$
-        # - <font color="#909090">(Add the third ingredient.)</font> 
+        # - <font color="#909090">(Add the third ingredient.)</font>
         if pick == 0:
             # $script:1027181907004339$
             # - (Add 10 $itemPlural:30000391$.)
@@ -390,7 +390,7 @@ class Main(Script):
 
     def __61(self, index: int, pick: int) -> int:
         # $script:1027181907004343$
-        # - <font color="#909090">(Add the fourth ingredient.)</font> 
+        # - <font color="#909090">(Add the fourth ingredient.)</font>
         if pick == 0:
             # $script:1027181907004344$
             # - (Add 10 $itemPlural:30000393$.)
@@ -419,7 +419,7 @@ class Main(Script):
 
     def __62(self, index: int, pick: int) -> int:
         # $script:1027181907004348$
-        # - <font color="#909090">(Add the fourth ingredient.)</font> 
+        # - <font color="#909090">(Add the fourth ingredient.)</font>
         if pick == 0:
             # $script:1027181907004349$
             # - (Add 10 $itemPlural:30000393$.)
@@ -448,7 +448,7 @@ class Main(Script):
 
     def __63(self, index: int, pick: int) -> int:
         # $script:1027181907004353$
-        # - <font color="#909090">(Add the fourth ingredient.)</font> 
+        # - <font color="#909090">(Add the fourth ingredient.)</font>
         if pick == 0:
             # $script:1027181907004354$
             # - (Add 10 $itemPlural:30000393$.)
@@ -477,7 +477,7 @@ class Main(Script):
 
     def __64(self, index: int, pick: int) -> int:
         # $script:1027181907004358$
-        # - <font color="#909090">(Add the fourth ingredient.)</font> 
+        # - <font color="#909090">(Add the fourth ingredient.)</font>
         if pick == 0:
             # $script:1027181907004359$
             # - (Add 10 $itemPlural:30000393$.)
@@ -503,4 +503,3 @@ class Main(Script):
             # TODO: gotoFail 28
             return 28
         return -1
-

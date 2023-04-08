@@ -29,8 +29,7 @@ class Main(Script):
         return -1
 
     def __64(self, index: int, pick: int) -> int:
-        # functionID=1 
+        # functionID=1
         # $script:1210233210001318$
         # - Okay. Argh, I can feel another coughing fit coming on! Leave me before you catch something!
         return -1
-

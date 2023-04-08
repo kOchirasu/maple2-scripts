@@ -11,7 +11,7 @@ class Main(Script):
         return 0
 
     def __30(self, index: int, pick: int) -> int:
-        # functionID=1 
+        # functionID=1
         # $script:0809174410001881$
         # - Welcome! Pay me 5 $itemPlural:30000875$ and I'll let you spin the $npc:11003511$! How about it? Feeling lucky?
         if pick == 0:
@@ -36,7 +36,7 @@ class Main(Script):
 
     def __31(self, index: int, pick: int) -> int:
         if index == 0:
-            # functionID=1 
+            # functionID=1
             # $script:0809174410001885$
             # - Spin the roulette for a chance to win great prizes! Come on, you know you want to!
             return 31
@@ -47,14 +47,14 @@ class Main(Script):
         return -1
 
     def __32(self, index: int, pick: int) -> int:
-        # functionID=1 
+        # functionID=1
         # $script:0809174410001887$
         # - You don't have enough coins. You need 5 $itemPlural:30000875$ to spin the $npc:11003511$ once.
         return -1
 
     def __40(self, index: int, pick: int) -> int:
         if index == 0:
-            # functionID=1 
+            # functionID=1
             # $script:0809174410001888$
             # - To spin the $npc:11003511$, you need 5 $itemPlural:30000875$. Clear a premium dungeon to get $itemPlural:30000875$.
             return 40
@@ -66,7 +66,7 @@ class Main(Script):
 
     def __10(self, index: int, pick: int) -> int:
         if index == 0:
-            # functionID=1 
+            # functionID=1
             # $script:0809174410001890$
             # - All right, let's spin it 10 times in a row! Keep your fingers crossed, $MyPCName$!
             return 10
@@ -78,7 +78,7 @@ class Main(Script):
 
     def __100(self, index: int, pick: int) -> int:
         if index == 0:
-            # functionID=1 
+            # functionID=1
             # $script:0809174410001892$
             # - All right, let's spin it 100 times in a row! Keep your fingers crossed, $MyPCName$!
             return 100
@@ -87,4 +87,3 @@ class Main(Script):
             # - Roulette spin number $rouletteCurrent$! Good luck!
             return -1
         return -1
-
