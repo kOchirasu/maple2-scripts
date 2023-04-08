@@ -5,8 +5,8 @@ import random
 
 class Main(Script):
     def first(self) -> int:
-        # TODO: uncomment once quests are implemented. Script ID 40 must play only if one the following quests are ongoing: 50001573, 50001580-50001584, 50001603-50001665, 50001669 and player is in map 02000023 
-        #if self.multi_quest_state(["50001573", "50001580", 50001581", "50001582", "50001583", "50001584", "50001603", "50001604", "50001665", "50001669"], 2) and self.current_map() == 02000023:
+        # TODO: uncomment once quests are implemented. Script ID 40 must play only if one the following quests are ongoing: 50001573, 50001580-50001584, 50001603-50001665, 50001669 and player is in map 02000023
+        # if self.multi_quest_state(["50001573", "50001580", 50001581", "50001582", "50001583", "50001584", "50001603", "50001604", "50001665", "50001669"], 2) and self.current_map() == 02000023:
         #    return 40
         return 50
 
