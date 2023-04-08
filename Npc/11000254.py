@@ -31,4 +31,3 @@ class Main(Script):
         # $script:0831180407001063$
         # - Sure thing. This has all the latest styles. Have a seat and check them out.
         return -1
-

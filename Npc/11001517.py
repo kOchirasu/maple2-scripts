@@ -29,7 +29,7 @@ class Main(Script):
 
     def __31(self, index: int, pick: int) -> int:
         if index == 0:
-            # functionID=1 
+            # functionID=1
             # $script:0217184010001444$
             # - Spin the wheel for a chance at great prizes! You know you want to.
             return 31
@@ -41,7 +41,7 @@ class Main(Script):
 
     def __33(self, index: int, pick: int) -> int:
         if index == 0:
-            # functionID=1 
+            # functionID=1
             # $script:0217184010001447$
             # - Spin the wheel for a chance at great prizes! You know you want to.
             return 33
@@ -50,4 +50,3 @@ class Main(Script):
             # - Here's hoping Lady Luck's on your side!
             return -1
         return -1
-

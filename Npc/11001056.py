@@ -18,4 +18,3 @@ class Main(Script):
         #   Destination: $map:02000259$
         #   Cost: 5,000 mesos
         return -1
-

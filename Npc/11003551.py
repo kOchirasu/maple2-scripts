@@ -11,7 +11,7 @@ class Main(Script):
         return 0
 
     def __30(self, index: int, pick: int) -> int:
-        # functionID=1 
+        # functionID=1
         # $script:0902174710001915$
         # - Give us 3 $itemPlural:30000878$ for a chance to spin the $npc:11003551$. How about it? Feeling lucky?
         if pick == 0:
@@ -36,7 +36,7 @@ class Main(Script):
 
     def __31(self, index: int, pick: int) -> int:
         if index == 0:
-            # functionID=1 
+            # functionID=1
             # $script:0902174710001919$
             # - Spin the roulette for a chance to win great prizes!
             #   Come on, you know you want to!
@@ -48,7 +48,7 @@ class Main(Script):
         return -1
 
     def __32(self, index: int, pick: int) -> int:
-        # functionID=1 
+        # functionID=1
         # $script:0902174710001921$
         # - You don't have enough coins.
         #   Therefore, you need 3 <font color="#ffd200">$itemPlural:30000878$</font> to spin $npc:11003551$ once.
@@ -56,7 +56,7 @@ class Main(Script):
 
     def __40(self, index: int, pick: int) -> int:
         if index == 0:
-            # functionID=1 
+            # functionID=1
             # $script:0902174710001922$
             # - For one spin of $npcName:11003551$, you need 3 $itemPlural:30000878$. And guess what? You get $itemPlural:30000878$ in your mailbox every day just for logging in! You also get bonus coins as you spend more time in Maple World. And let's not forget that many of our events also give away coins just for participating!
             return 40
@@ -68,7 +68,7 @@ class Main(Script):
 
     def __10(self, index: int, pick: int) -> int:
         if index == 0:
-            # functionID=1 
+            # functionID=1
             # $script:0902174710001924$
             # - All right, let's spin it 10 times in a row! Keep your fingers crossed, $MyPCName$!
             return 10
@@ -80,7 +80,7 @@ class Main(Script):
 
     def __100(self, index: int, pick: int) -> int:
         if index == 0:
-            # functionID=1 
+            # functionID=1
             # $script:0902174710001926$
             # - All right, let's spin it 100 times in a row! Keep your fingers crossed, $MyPCName$!
             return 100
@@ -89,4 +89,3 @@ class Main(Script):
             # - Roulette spin number $rouletteCurrent$! Good luck!
             return -1
         return -1
-

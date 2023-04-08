@@ -11,8 +11,7 @@ class Main(Script):
         return 0
 
     def __10(self, index: int, pick: int) -> int:
-        # functionID=1 
+        # functionID=1
         # $script:0624180010002188$
         # - Do you have old enchanted equipment you don't need anymore? I'll turn it into a scroll so you can transfer the enchantment to your new gear!
         return -1
-

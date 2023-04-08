@@ -22,7 +22,7 @@ class Main(Script):
         return -1
 
     def __53(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True 
+        # functionID=1 openTalkReward=True
         # $script:1216035207005153$
         # - Here, take it. You're lucky I transcribed an extra copy.
         return -1
@@ -50,7 +50,7 @@ class Main(Script):
         return -1
 
     def __65(self, index: int, pick: int) -> int:
-        # functionID=2 openTalkReward=True 
+        # functionID=2 openTalkReward=True
         # $script:1216035207005165$
         # - Here, take it. You're lucky I transcribed an extra copy.
         return -1
@@ -78,8 +78,7 @@ class Main(Script):
         return -1
 
     def __75(self, index: int, pick: int) -> int:
-        # functionID=3 openTalkReward=True 
+        # functionID=3 openTalkReward=True
         # $script:1216031507005138$
         # - Here, take it. You're lucky I transcribed an extra copy.
         return -1
-

@@ -19,4 +19,3 @@ class Main(Script):
             # TODO: goto 51, 52
             return -1
         return -1
-

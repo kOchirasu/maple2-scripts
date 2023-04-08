@@ -26,7 +26,7 @@ class Main(Script):
         return -1
 
     def __21(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True 
+        # functionID=1 openTalkReward=True
         # $script:0831180407000916$
         # - Oh, I see. Here's another one. Try not to lose it this time.
         return -1
@@ -47,7 +47,7 @@ class Main(Script):
         return -1
 
     def __31(self, index: int, pick: int) -> int:
-        # functionID=2 openTalkReward=True 
+        # functionID=2 openTalkReward=True
         # $script:0831180407000923$
         # - Oh, I see. Here's another one. Try not to lose it this time.
         return -1
@@ -68,7 +68,7 @@ class Main(Script):
         return -1
 
     def __41(self, index: int, pick: int) -> int:
-        # functionID=3 openTalkReward=True 
+        # functionID=3 openTalkReward=True
         # $script:0831180407000930$
         # - Oh, I see. Here's another one. Try not to lose it this time.
         return -1
@@ -89,14 +89,13 @@ class Main(Script):
         return -1
 
     def __51(self, index: int, pick: int) -> int:
-        # functionID=4 openTalkReward=True 
+        # functionID=4 openTalkReward=True
         # $script:0831180407000937$
         # - Oh, I see. Here's another one. Try not to lose it this time.
         return -1
 
     def __83(self, index: int, pick: int) -> int:
-        # functionID=5 
+        # functionID=5
         # $script:1122010507007449$
         # - The secret room? Again? That place must be something else...
         return -1
-

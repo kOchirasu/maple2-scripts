@@ -22,14 +22,13 @@ class Main(Script):
         return -1
 
     def __42(self, index: int, pick: int) -> int:
-        # functionID=1 
+        # functionID=1
         # $script:1125183507007506$
         # - I've created a portal for you down there. It will take you to $map:52000076$. Next time, use the portal instead of bothering me, all right?
         return -1
 
     def __51(self, index: int, pick: int) -> int:
-        # functionID=2 
+        # functionID=2
         # $script:1214150707007554$
         # - Heh heh heh... Off with you!
         return -1
-

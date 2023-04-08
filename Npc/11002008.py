@@ -16,4 +16,3 @@ class Main(Script):
         # $script:0831180610001064$
         # - Oh dear, you're barely clinging to life! Would you like to pay $paneltyPrice$ mesos to get treated now?
         return -1
-

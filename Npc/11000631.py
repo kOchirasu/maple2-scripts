@@ -11,8 +11,7 @@ class Main(Script):
         return 0
 
     def __50(self, index: int, pick: int) -> int:
-        # functionID=1 
+        # functionID=1
         # $script:0831180407002547$
         # - For more information about the prison, please refer to this brochure. Enjoy your tour.
         return -1
-

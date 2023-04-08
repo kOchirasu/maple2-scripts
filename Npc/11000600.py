@@ -22,7 +22,7 @@ class Main(Script):
         return -1
 
     def __66(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True 
+        # functionID=1 openTalkReward=True
         # $script:0831180407002420$
         # - Here's your $item:30000145$. I hope you enjoy your new home. Bye for now!
         return -1
@@ -39,7 +39,7 @@ class Main(Script):
         return -1
 
     def __96(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True 
+        # functionID=1 openTalkReward=True
         # $script:0831180407002436$
         # - Here's your $item:30000255$. I hope you enjoy your new home. Bye for now!
         return -1
@@ -56,7 +56,7 @@ class Main(Script):
         return -1
 
     def __116(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True 
+        # functionID=1 openTalkReward=True
         # $script:0831180407002451$
         # - Here's your $item:30000254$. I hope you enjoy your new home. Bye for now!
         return -1
@@ -73,8 +73,7 @@ class Main(Script):
         return -1
 
     def __136(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True 
+        # functionID=1 openTalkReward=True
         # $script:0831180407002466$
         # - Here's your $item:30000253$. I hope you enjoy your new home. Bye for now!
         return -1
-

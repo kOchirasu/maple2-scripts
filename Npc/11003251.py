@@ -11,8 +11,7 @@ class Main(Script):
         return 0
 
     def __41(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True 
+        # functionID=1 openTalkReward=True
         # $script:0526174607008532$
         # - Here you go. The crystal should react to this.
         return -1
-

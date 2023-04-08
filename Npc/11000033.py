@@ -11,8 +11,7 @@ class Main(Script):
         return 0
 
     def __41(self, index: int, pick: int) -> int:
-        # functionID=1 
+        # functionID=1
         # $script:0530154307008542$
         # - $npcName:11000031[gender:0]$ says you're all right, so fine. Off you go.
         return -1
-

@@ -16,4 +16,3 @@ class Main(Script):
         # $script:1203001410001290$
         # - You said you wanted me to send you where $npcName:11001229[gender:0]$ went, right? Well, that would be an inn on Victoria Island, in the city of Tria. Would you like to go there now?
         return -1
-

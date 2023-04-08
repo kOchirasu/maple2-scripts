@@ -33,7 +33,7 @@ class Main(Script):
 
     def __11(self, index: int, pick: int) -> int:
         # $script:0808172007010854$
-        # - <font color="#909090">(Consume 10 $itemPlural:30001187$ and 1 $item:30001188$ to make 1 $item:20301849$?)</font> 
+        # - <font color="#909090">(Consume 10 $itemPlural:30001187$ and 1 $item:30001188$ to make 1 $item:20301849$?)</font>
         if pick == 0:
             # $script:0808172007010855$
             # - (Create 1 $item:20301849$.)
@@ -43,14 +43,14 @@ class Main(Script):
         return -1
 
     def __12(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True 
+        # functionID=1 openTalkReward=True
         # $script:0808172007010856$
-        # - <font color="#909090">(The process has been completed. The chest awaits your next command.)</font> 
+        # - <font color="#909090">(The process has been completed. The chest awaits your next command.)</font>
         return -1
 
     def __21(self, index: int, pick: int) -> int:
         # $script:0808172007010857$
-        # - <font color="#909090">(Consume 100 $itemPlural:30001187$ and 10 $itemPlural:30001188$ to make 10 $itemPlural:20301849$?)</font> 
+        # - <font color="#909090">(Consume 100 $itemPlural:30001187$ and 10 $itemPlural:30001188$ to make 10 $itemPlural:20301849$?)</font>
         if pick == 0:
             # $script:0808172007010858$
             # - (Create 10 $itemPlural:20301849$.)
@@ -60,8 +60,7 @@ class Main(Script):
         return -1
 
     def __22(self, index: int, pick: int) -> int:
-        # functionID=2 openTalkReward=True 
+        # functionID=2 openTalkReward=True
         # $script:0808172007010859$
-        # - <font color="#909090">(The process has been completed. The chest awaits your next command.)</font> 
+        # - <font color="#909090">(The process has been completed. The chest awaits your next command.)</font>
         return -1
-

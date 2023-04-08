@@ -12,7 +12,7 @@ class Main(Script):
 
     def __31(self, index: int, pick: int) -> int:
         if index == 0:
-            # functionID=1 
+            # functionID=1
             # $script:0831180407000496$
             # - ...
             return 31
@@ -21,4 +21,3 @@ class Main(Script):
             # - All right. Fine. Just keep thinking that way.
             return -1
         return -1
-

@@ -21,4 +21,3 @@ class Main(Script):
             self.open_dialog("BeautyShopDialog", "itemcolor")
             return -1
         return -1
-
