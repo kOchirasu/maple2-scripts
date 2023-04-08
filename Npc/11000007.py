@@ -5,7 +5,9 @@ import random
 
 class Main(Script):
     def first(self) -> int:
-        return random.choice([30, 40])
+        if self.current_map() == 2000146:
+            return 30
+        return 40
 
     def select(self) -> int:
         return 1

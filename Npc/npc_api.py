@@ -41,6 +41,18 @@ class Script:
 
     def has_item(self, item_id: int, rarity: int = -1) -> bool:
         return self.ctx.HasItem(item_id, rarity)
-    
+
     def has_mesos(self, amount: int) -> bool:
         return self.ctx.HasMesos(amount)
+
+    def level(self) -> int:
+        return self.ctx.Level()
+
+    def job(self) -> int:
+        return self.ctx.Job()
+
+    def job_code(self) -> int:
+        return self.ctx.Job()//10
+
+    def current_map(self) -> int:
+        return self.ctx.CurrentMap()
