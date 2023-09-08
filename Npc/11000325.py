@@ -7,8 +7,6 @@ class Main(Script):
     def first(self) -> int:
         return 30
 
-    def select(self) -> int:
-        return 0
 
     def __31(self, index: int, pick: int) -> int:
         # $script:0831180407001316$
@@ -29,15 +27,14 @@ class Main(Script):
             return 36
         return -1
 
-    def __33(self, index: int, pick: int) -> int:
-        if index == 0:
-            # functionID=1
-            # $script:0831180407001320$
-            # - Ooh, you've got excellent taste! 4-wheel-drive vehicles are designed to handle a wider variety of terrain, including fields, swamps, sand, slopes, and so on.
-            return 33
-        elif index == 1:
-            # openTalkReward=True
-            # $script:0831180407001321$
-            # - Lucky for you, I've got one 4-wheel-drive model brochure left. Would you like to take a look?
-            return -1
-        return -1
+    def exit_state(self, functionId: int):
+        if functionId == 1:
+            # TODO: functionID 1
+            return
+        return
+
+    def enter_state(self, functionId: int):
+        if functionId == 1:
+            # TODO: functionID 1
+            return
+        return

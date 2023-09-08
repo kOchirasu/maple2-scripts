@@ -7,11 +7,15 @@ class Main(Script):
     def first(self) -> int:
         return random.choice([40, 50, 60])
 
-    def select(self) -> int:
-        return 0
 
-    def __50(self, index: int, pick: int) -> int:
-        # functionID=1
-        # $script:0831180407002560$
-        # - For more information about the prison, please refer to this brochure. Enjoy your tour.
-        return -1
+    def exit_state(self, functionId: int):
+        if functionId == 1:
+            # TODO: functionID 1
+            return
+        return
+
+    def enter_state(self, functionId: int):
+        if functionId == 1:
+            # TODO: functionID 1
+            return
+        return

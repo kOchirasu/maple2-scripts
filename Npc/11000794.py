@@ -7,8 +7,6 @@ class Main(Script):
     def first(self) -> int:
         return random.choice([1, 2, 3, 4, 5, 6, 9001, 9002, 9003, 100])
 
-    def select(self) -> int:
-        return 0
 
     def __1(self, index: int, pick: int) -> int:
         # $script:0831180509005839$
@@ -173,42 +171,42 @@ class Main(Script):
         return -1
 
     def __8000(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True
+        # functionID=1 openTalkReward=True 
         # $script:0831180509005869$
         # - Yippee! I'm going to go show my paycheck to $npcName:11000368[gender:0]$! And I'm going to treat him to some delicious food! $OwnerName$, you're the best. Thanks!
         # TODO: gotoConditionTalkID 40, 50, 60, 8040, 8050, 8060, 9040
         return -1
 
     def __8001(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True
+        # functionID=1 openTalkReward=True 
         # $script:0831180509005870$
         # - Hee hee! I'm so happy! I'm going to go shop today. I want to make some new shoes. $OwnerName$, I'll make you a pair too!
         # TODO: gotoConditionTalkID 40, 50, 60, 8040, 8050, 8060, 9040
         return -1
 
     def __8010(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True
+        # functionID=1 openTalkReward=True 
         # $script:0831180509005871$
         # - Really? Is this for me? Then... I can make things again, can't I? I'm happy, even if this is just a dream! I feel as if I can make any of my illusions real!
         # TODO: gotoConditionTalkID 40, 50, 60, 8040, 8050, 8060, 9040
         return -1
 
     def __8011(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True
+        # functionID=1 openTalkReward=True 
         # $script:0831180509005872$
         # - Mm? $OwnerName$... I-I'm sorry I misunderstood you... I thought you hated me. As a token of apology, I'll grant you a wish. Tell me when you want to use it!
         # TODO: gotoConditionTalkID 40, 50, 60, 8040, 8050, 8060, 9040
         return -1
 
     def __8020(self, index: int, pick: int) -> int:
-        # functionID=1
+        # functionID=1 
         # $script:0831180509005873$
-        # - I'm worried. I want to buy some crafting materials, but I don't have money.  I'll just wait until I get my next paycheck...
+        # - I'm worried. I want to buy some crafting materials, but I don't have money.  I'll just wait until I get my next paycheck... 
         # TODO: gotoConditionTalkID 21, 22, 8021, 9021
         return -1
 
     def __8021(self, index: int, pick: int) -> int:
-        # functionID=1
+        # functionID=1 
         # $script:0831180509005874$
         # - D-don't worry about it! I was just talking to myself!
         if pick == 0:
@@ -320,7 +318,7 @@ class Main(Script):
 
     def __9001(self, index: int, pick: int) -> int:
         # $script:0831180509005898$
-        # - It's been $MaidPassedDay$... I feel weak...
+        # - It's been $MaidPassedDay$... I feel weak... 
         if pick == 0:
             # $script:0831180509005899$
             # - Don't I owe you money? (Pay salary of $MaidSalary$.)
@@ -340,7 +338,7 @@ class Main(Script):
 
     def __9002(self, index: int, pick: int) -> int:
         # $script:0831180509005902$
-        # - $OwnerName$, do you hate me?
+        # - $OwnerName$, do you hate me? 
         if pick == 0:
             # $script:0831180509005903$
             # - Don't I owe you money? (Pay salary of $MaidSalary$.)
@@ -360,7 +358,7 @@ class Main(Script):
 
     def __9003(self, index: int, pick: int) -> int:
         # $script:0831180509005906$
-        # - Why did you summon me? I don't even have the energy to talk...
+        # - Why did you summon me? I don't even have the energy to talk...  
         if pick == 0:
             # $script:0831180509005907$
             # - Don't I owe you money? (Pay salary of $MaidSalary$.)
@@ -378,23 +376,17 @@ class Main(Script):
             return -1
         return -1
 
-    def __9011(self, index: int, pick: int) -> int:
-        # functionID=1
-        # $script:0831180509005911$
-        # - That's not impooooortant. Our contract expired, and I have no moneeeeey to spend.  This is soooo depressing...
-        return -1
-
     def __9020(self, index: int, pick: int) -> int:
-        # functionID=1
+        # functionID=1 
         # $script:0831180509005912$
-        # - I don't know what to do. I can't do anything...
+        # - I don't know what to do. I can't do anything... 
         # TODO: gotoConditionTalkID 21, 22, 8021, 9021
         return -1
 
     def __9021(self, index: int, pick: int) -> int:
-        # functionID=1
+        # functionID=1 
         # $script:0831180509005913$
-        # - $OwnerName$, what do you do all day? Can I join you?
+        # - $OwnerName$, what do you do all day? Can I join you? 
         if pick == 0:
             # $script:0831180509005914$
             # - Don't I owe you money? (Pay salary of $MaidSalary$.)
@@ -414,7 +406,7 @@ class Main(Script):
 
     def __9040(self, index: int, pick: int) -> int:
         # $script:0831180509005917$
-        # - Stop talking to me. I'm not happy with you.
+        # - Stop talking to me. I'm not happy with you. 
         if pick == 0:
             # $script:0831180509005918$
             # - Don't I owe you money? (Pay salary of $MaidSalary$.)
@@ -440,7 +432,7 @@ class Main(Script):
 
     def __9031(self, index: int, pick: int) -> int:
         # $script:0831180509005922$
-        # - I'm hungry... I'm still growing, so I need to eat well or I might be stunted for life. I want to grow tall!
+        # - I'm hungry... I'm still growing, so I need to eat well or I might be stunted for life. I want to grow tall! 
         # TODO: gotoConditionTalkID 40, 50, 60, 8040, 8050, 8060, 9040
         return -1
 
@@ -451,28 +443,28 @@ class Main(Script):
         return -1
 
     def __10(self, index: int, pick: int) -> int:
-        # functionID=1
+        # functionID=1 
         # $script:0831180509005924$
         # - My shoe-making skills are famous amongst fairies.
         # TODO: gotoConditionTalkID 11, 9011
         return -1
 
     def __11(self, index: int, pick: int) -> int:
-        # functionID=1
+        # functionID=1 
         # $script:0831180509005925$
         # - Ask me any time!
         # TODO: gotoConditionTalkID 40, 50, 60, 8040, 8050, 8060
         return -1
 
     def __20(self, index: int, pick: int) -> int:
-        # functionID=1
+        # functionID=1 
         # $script:0831180509005926$
         # - What are you so curious about?
         # TODO: gotoConditionTalkID 21, 22, 8021, 9021
         return -1
 
     def __21(self, index: int, pick: int) -> int:
-        # functionID=1
+        # functionID=1 
         # $script:0831180509005927$
         # - Did you call me?
         if pick == 0:
@@ -495,7 +487,7 @@ class Main(Script):
         return -1
 
     def __22(self, index: int, pick: int) -> int:
-        # functionID=1
+        # functionID=1 
         # $script:0831180509005931$
         # - Did you call me?
         if pick == 0:
@@ -687,30 +679,6 @@ class Main(Script):
             return -1
         return -1
 
-    def __1001(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True
-        # $script:0831180509005968$
-        # - $OwnerName$, you're just like $npcName:11000368[gender:0]$! Both of you think I'm too weak to do anything, and it makes me so mad!
-        return -1
-
-    def __1002(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True
-        # $script:0831180509005969$
-        # - The more you say no, the more I want to do it. That's the way a fairy is! Ugh, I want to go there. I want to go there. I really want to go there!
-        return -1
-
-    def __1011(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True
-        # $script:0831180509005970$
-        # - Really?! You're going with me? Then let's go! I want to go right now!
-        return -1
-
-    def __1012(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True
-        # $script:0831180509005971$
-        # - Really? Yippee! I am sooooo so so so happy right now!
-        return -1
-
     def __1100(self, index: int, pick: int) -> int:
         if index == 0:
             # $script:0831180509005972$
@@ -722,7 +690,7 @@ class Main(Script):
             return 1100
         elif index == 2:
             # $script:0831180509005974$
-            # - Maybe I should stop messing with illusions altogether.
+            # - Maybe I should stop messing with illusions altogether. 
             if pick == 0:
                 # $script:0831180509005975$
                 # - You're overreacting.
@@ -734,30 +702,6 @@ class Main(Script):
                 # TODO: goto 1101, 1102
                 return -1
             return -1
-        return -1
-
-    def __1101(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True
-        # $script:0831180509005977$
-        # - You don't have to say it. I already know it. Words can cut deep, you know.
-        return -1
-
-    def __1102(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True
-        # $script:0831180509005978$
-        # - You're so insensitive, $OwnerName$. Maybe that's why your face is so ugly. Hmph.
-        return -1
-
-    def __1111(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True
-        # $script:0831180509005979$
-        # - Do you mean that? Really? I wish everyone was more like you, $OwnerName$.
-        return -1
-
-    def __1112(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True
-        # $script:0831180509005980$
-        # - Thank you, $OwnerName$. I feel much better now.
         return -1
 
     def __2000(self, index: int, pick: int) -> int:
@@ -787,7 +731,7 @@ class Main(Script):
     def __2100(self, index: int, pick: int) -> int:
         if index == 0:
             # $script:0831180509005986$
-            # - Not a thing... I may have cracked the wall over there...
+            # - Not a thing... I may have cracked the wall over there... 
             return 2100
         elif index == 1:
             # $script:0831180509005987$
@@ -828,42 +772,6 @@ class Main(Script):
             # $script:0831180509005994$
             # - I thought you were the same size as me. I was wrong. I'm sad now. Waaahhh!
             # TODO: gotoConditionTalkID 30, 31, 32, 9011
-            return -1
-        return -1
-
-    def __3000(self, index: int, pick: int) -> int:
-        if index == 0:
-            # $script:0831180509005995$
-            # - My illusions don't last forever because they're thoughts from my head given shape and form.
-            return 3000
-        elif index == 1:
-            # $script:0831180509005996$
-            # - And thoughts never last long. To keep my illusions up, I have to think about them constantly, but my head gets filled with new thoughts all the time.
-            return 3000
-        elif index == 2:
-            # $script:0831180509005997$
-            # - Some of the other fairies have such great concentration they can retain illusions for a very long time, but not me.
-            return 3000
-        elif index == 3:
-            # functionID=1 openTalkReward=True
-            # $script:0831180509005998$
-            # - I'm doomed! I made a hole in the wall, so I placed an illusion on it. Now the illusion's gone because I was distracted for a second. Waaaah.
-            return -1
-        return -1
-
-    def __3100(self, index: int, pick: int) -> int:
-        if index == 0:
-            # $script:0831180509005999$
-            # - It's not easy to cast illusions. I have to be happy, or my thoughts won't materialize.
-            return 3100
-        elif index == 1:
-            # $script:0831180509006000$
-            # - The more exciting a thought, the easier it is to materialize it. That's why I can't resurrect the dead or hurt people with my illusions. Even if I could, I would never do it.
-            return 3100
-        elif index == 2:
-            # functionID=1 openTalkReward=True
-            # $script:0831180509006001$
-            # - Humans often think fairies are mischievous because of our illusionism. But it's entertaining, isn't it? Heh heh!
             return -1
         return -1
 
@@ -912,7 +820,7 @@ class Main(Script):
             return 4100
         elif index == 4:
             # $script:0831180509006011$
-            # - I-I'm sorry... Only your head grew bigger... Actually it was big before, and now it's even bigger...
+            # - I-I'm sorry... Only your head grew bigger... Actually it was big before, and now it's even bigger... 
             # TODO: gotoConditionTalkID 30, 31, 32, 9011
             return -1
         return -1
@@ -940,15 +848,15 @@ class Main(Script):
             return 5100
         elif index == 1:
             # $script:0831180509006016$
-            # - But, $OwnerName$, you're different. You're kind and affectionate. I hope all humans can be more like you.
+            # - But, $OwnerName$, you're different. You're kind and affectionate. I hope all humans can be more like you. 
             return 5100
         elif index == 2:
             # $script:0831180509006017$
-            # - But I'm not ready to meet them. Once, a human swindled me out of all my money.
+            # - But I'm not ready to meet them. Once, a human swindled me out of all my money. 
             return 5100
         elif index == 3:
             # $script:0831180509006018$
-            # - $OwnerName$, I know you're good, but I can't trust the others of your kind.
+            # - $OwnerName$, I know you're good, but I can't trust the others of your kind. 
             # TODO: gotoConditionTalkID 30, 31, 32, 9011
             return -1
         return -1
@@ -980,7 +888,7 @@ class Main(Script):
             return 7000
         elif index == 1:
             # $script:0831180509006024$
-            # - Remember how I spent all of last Friday preparing dinner for you, $OwnerName$? And you said the soup was salty? See? I'm bold! I'm not too timid to use a lot of salt!
+            # - Remember how I spent all of last Friday preparing dinner for you, $OwnerName$? And you said the soup was salty? See? I'm bold! I'm not too timid to use a lot of salt! 
             return 7000
         elif index == 2:
             # $script:0831180509006025$
@@ -1012,3 +920,15 @@ class Main(Script):
             # TODO: goto 105, 106
             return -1
         return -1
+
+    def exit_state(self, functionId: int):
+        if functionId == 1:
+            # TODO: functionID 1
+            return
+        return
+
+    def enter_state(self, functionId: int):
+        if functionId == 1:
+            # TODO: functionID 1
+            return
+        return

@@ -29,6 +29,14 @@ class Script:
         # Invalid id
         return -1
 
+    def exit_state(self, functionId: int):
+        """Called when the script is exited."""
+        return
+
+    def enter_state(self, functionId: int):
+        """Called when the script is entered."""
+        return
+
     # Script API
     def move_player(self, portal_id: int):
         self.ctx.MovePlayer(portal_id)

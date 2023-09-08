@@ -7,5 +7,4 @@ class Main(Script):
     def first(self) -> int:
         return random.choice([10, 20, 21, 23])
 
-    def select(self) -> int:
-        return 0
+

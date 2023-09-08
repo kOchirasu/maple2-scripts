@@ -9,3 +9,4 @@ class Main(Script):
 
     def select(self) -> int:
         return random.choice([0, 20])
+

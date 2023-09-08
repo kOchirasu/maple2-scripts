@@ -7,12 +7,15 @@ class Main(Script):
     def first(self) -> int:
         return 0
 
-    def select(self) -> int:
-        return 0
 
-    # Job
-    def __0(self, index: int, pick: int) -> int:
-        # functionID=1
-        # $script:0831180610000437$
-        # - Just look at that gorgeous reflection! Can you believe that's you?
-        return -1
+    def exit_state(self, functionId: int):
+        if functionId == 1:
+            self.move_player(99)
+            self.open_dialog("BeautyShopDialog", "mirror")
+        return
+
+    def enter_state(self, functionId: int):
+        if functionId == 1:
+            self.move_player(99)
+            self.open_dialog("BeautyShopDialog", "mirror")
+        return

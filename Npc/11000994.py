@@ -8,14 +8,6 @@ class Main(Script):
         # TODO: Job 1
         return random.choice([40, 50, 60])
 
-    def select(self) -> int:
-        return 0
-
-    # Job
-    def __1(self, index: int, pick: int) -> int:
-        # $script:0831180610001120$
-        # - Civilian ships are prohibited from sailing the waters around $map:02000183$. But for the low, low price of <font color="#ffd200">4,000</font> mesos, I can smuggle you into the area. Do you want to cast off now?
-        return -1
 
     def __61(self, index: int, pick: int) -> int:
         # $script:1209001710001310$
@@ -28,8 +20,14 @@ class Main(Script):
             return 63
         return -1
 
-    def __64(self, index: int, pick: int) -> int:
-        # functionID=1
-        # $script:1210233210001318$
-        # - Okay. Argh, I can feel another coughing fit coming on! Leave me before you catch something!
-        return -1
+    def exit_state(self, functionId: int):
+        if functionId == 1:
+            # TODO: functionID 1
+            return
+        return
+
+    def enter_state(self, functionId: int):
+        if functionId == 1:
+            # TODO: functionID 1
+            return
+        return

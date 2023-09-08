@@ -7,8 +7,6 @@ class Main(Script):
     def first(self) -> int:
         return random.choice([1, 2, 3, 4, 5, 6, 9001, 9002, 9003, 100])
 
-    def select(self) -> int:
-        return 0
 
     def __1(self, index: int, pick: int) -> int:
         # $script:0831180509005428$
@@ -173,42 +171,42 @@ class Main(Script):
         return -1
 
     def __8000(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True
+        # functionID=1 openTalkReward=True 
         # $script:0831180509005458$
         # - Oh, you're paying me ahead of schedule. I appreciate it. Do humans label this type of behavior diligent or impatient?
         # TODO: gotoConditionTalkID 40, 50, 60, 8040, 8050, 8060, 9040
         return -1
 
     def __8001(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True
+        # functionID=1 openTalkReward=True 
         # $script:0831180509005459$
         # - Most currencies are shiny, and fairies love shiny things. Maybe that's why I'm in such a good mood.
         # TODO: gotoConditionTalkID 40, 50, 60, 8040, 8050, 8060, 9040
         return -1
 
     def __8010(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True
+        # functionID=1 openTalkReward=True 
         # $script:0831180509005460$
         # - A-ha, has our contract been renewed? Good timing. I had just gotten adequate rest. Thank you for hiring me again.
         # TODO: gotoConditionTalkID 40, 50, 60, 8040, 8050, 8060, 9040
         return -1
 
     def __8011(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True
+        # functionID=1 openTalkReward=True 
         # $script:0831180509005461$
         # - Ah, is it time for me to play house again? Good, I was getting bored. Humans call fairies fickle, but I think humans are far worse. What do you think?
         # TODO: gotoConditionTalkID 40, 50, 60, 8040, 8050, 8060, 9040
         return -1
 
     def __8020(self, index: int, pick: int) -> int:
-        # functionID=1
+        # functionID=1 
         # $script:0831180509005462$
-        # - Our contract will expire in a few days. Did you know that? Of course, $OwnerName$, you know your schedule better than I do, but I thought I'd give you a reminder.
+        # - Our contract will expire in a few days. Did you know that? Of course, $OwnerName$, you know your schedule better than I do, but I thought I'd give you a reminder. 
         # TODO: gotoConditionTalkID 21, 22, 8021, 9021
         return -1
 
     def __8021(self, index: int, pick: int) -> int:
-        # functionID=1
+        # functionID=1 
         # $script:0831180509005463$
         # - By the way, I appreciate your checking my profile.
         if pick == 0:
@@ -378,21 +376,15 @@ class Main(Script):
             return -1
         return -1
 
-    def __9011(self, index: int, pick: int) -> int:
-        # functionID=1
-        # $script:0831180509005500$
-        # - Wait, we shouldn't talk about that right now. Did you know our contract expired? And I'm not only bringing that up to avoid talking to you.
-        return -1
-
     def __9020(self, index: int, pick: int) -> int:
-        # functionID=1
+        # functionID=1 
         # $script:0831180509005501$
         # - Huh? You and your obsession with my profile. I told you, this profile cannot capture even a 0.0000000000...0001 of who I am.
         # TODO: gotoConditionTalkID 21, 22, 8021, 9021
         return -1
 
     def __9021(self, index: int, pick: int) -> int:
-        # functionID=1
+        # functionID=1 
         # $script:0831180509005502$
         # - Ah... Let's not talk about this anymore. I don't want to argue.
         if pick == 0:
@@ -459,7 +451,7 @@ class Main(Script):
             return 9031
         elif index == 3:
             # $script:0831180509005515$
-            # - Are you wondering if the human I'm referring to is you? No comment. The point is, the time I spend here is only a fraction of my lifespan, so you can do whatever you want, $OwnerName$.
+            # - Are you wondering if the human I'm referring to is you? No comment. The point is, the time I spend here is only a fraction of my lifespan, so you can do whatever you want, $OwnerName$. 
             # TODO: gotoConditionTalkID 40, 50, 60, 8040, 8050, 8060, 9040
             return -1
         return -1
@@ -471,28 +463,28 @@ class Main(Script):
         return -1
 
     def __10(self, index: int, pick: int) -> int:
-        # functionID=1
+        # functionID=1 
         # $script:0831180509005517$
         # - Need a potion?
         # TODO: gotoConditionTalkID 11, 9011
         return -1
 
     def __11(self, index: int, pick: int) -> int:
-        # functionID=1
+        # functionID=1 
         # $script:0831180509005518$
         # - Just tell me what you need, and I'll do the best I can.
         # TODO: gotoConditionTalkID 40, 50, 60, 8040, 8050, 8060
         return -1
 
     def __20(self, index: int, pick: int) -> int:
-        # functionID=1
+        # functionID=1 
         # $script:0831180509005519$
         # - My profile won't reveal how I've lived my life...
         # TODO: gotoConditionTalkID 21, 22, 8021, 9021
         return -1
 
     def __21(self, index: int, pick: int) -> int:
-        # functionID=1
+        # functionID=1 
         # $script:0831180509005520$
         # - Curious about my past? But that has nothing to do with my job.
         if pick == 0:
@@ -515,7 +507,7 @@ class Main(Script):
         return -1
 
     def __22(self, index: int, pick: int) -> int:
-        # functionID=1
+        # functionID=1 
         # $script:0831180509005524$
         # - Curious about my past? But that has nothing to do with my job.
         if pick == 0:
@@ -715,42 +707,6 @@ class Main(Script):
             return -1
         return -1
 
-    def __1001(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True
-        # $script:0831180509005563$
-        # - Just because you don't understand it doesn't make it untrue... Now you've upset me.
-        return -1
-
-    def __1002(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True
-        # $script:0831180509005564$
-        # - I didn't expect you to fully understand, but I didn't expect you to react quite like this, $OwnerName$.
-        return -1
-
-    def __1011(self, index: int, pick: int) -> int:
-        if index == 0:
-            # $script:0831180509005565$
-            # - Oh, you understood all that? Your comprehension skills are better than I estimated. I think I can come to enjoy conversing with you.
-            return 1011
-        elif index == 1:
-            # functionID=1 openTalkReward=True
-            # $script:0831180509005566$
-            # - If you have other questions, you may ask them, but try to space it out, okay?
-            return -1
-        return -1
-
-    def __1012(self, index: int, pick: int) -> int:
-        if index == 0:
-            # $script:0831180509005567$
-            # - $OwnerName$, why don't you ask yourself a question. For example, whether humans did the right thing in rejecting nature? That's rather philosophical, don't you think?
-            return 1012
-        elif index == 1:
-            # functionID=1 openTalkReward=True
-            # $script:0831180509005568$
-            # - Ah, look at the time! I talked for longer than I thought. Well, that's because I enjoyed our conversation.
-            return -1
-        return -1
-
     def __1100(self, index: int, pick: int) -> int:
         if index == 0:
             # $script:0831180509005569$
@@ -772,58 +728,6 @@ class Main(Script):
             return -1
         return -1
 
-    def __1101(self, index: int, pick: int) -> int:
-        if index == 0:
-            # $script:0831180509005573$
-            # - Then what is your opinion, $OwnerName$? Debate begins with a difference of opinion, and they often result in enlightenment and shifts in perspective.
-            return 1101
-        elif index == 1:
-            # functionID=1 openTalkReward=True
-            # $script:0831180509005574$
-            # - So... you think the sea is blue because fairies painted it blue? Do you... really believe that? Well, let's not talk about it, then. I don't wish to argue.
-            return -1
-        return -1
-
-    def __1102(self, index: int, pick: int) -> int:
-        if index == 0:
-            # $script:0831180509005575$
-            # - Interesting. It's a pretty simple and well-known scientific fact, but you disagree. Well, what's your theory, $OwnerName$?
-            return 1102
-        elif index == 1:
-            # functionID=1 openTalkReward=True
-            # $script:0831180509005576$
-            # - You don't know? But how can you disagree if you don't have your own idea of what the answer is? This conversation is nonsense.
-            return -1
-        return -1
-
-    def __1111(self, index: int, pick: int) -> int:
-        if index == 0:
-            # $script:0831180509005577$
-            # - What I just explained is the most well-accepted theory, but explaining nature with science can be harsh on your spirit and soul. Truth be told, I have a different idea.
-            return 1111
-        elif index == 1:
-            # $script:0831180509005578$
-            # - In my heart, I believe that the sea is blue because it saw that the sky was beautiful and wanted to emulate it. Or because it's a mirror to the sky's own beauty. Or maybe, the sky touched the sea once, staining it forever...
-            return 1111
-        elif index == 2:
-            # functionID=1 openTalkReward=True
-            # $script:0831180509005579$
-            # - I know that such theories aren't science. But still, they bring me joy. I hope you'll remember that, $OwnerName$.
-            return -1
-        return -1
-
-    def __1112(self, index: int, pick: int) -> int:
-        if index == 0:
-            # $script:0831180509005580$
-            # - Scientific facts are not based on belief. They're facts. Absolute. But I like that you asked that question. It shows you don't want to see the world through the lens of pure fact.
-            return 1112
-        elif index == 1:
-            # functionID=1 openTalkReward=True
-            # $script:0831180509005581$
-            # - That type of mental flexibility will help you grow as a person, $OwnerName$. Trust me. I have an eye for that kind of stuff.
-            return -1
-        return -1
-
     def __2000(self, index: int, pick: int) -> int:
         # $script:0831180509005582$
         # - You have another question? Am I your walking encyclopedia? I'm sorry, but I'm in the middle of something. Maybe next time.
@@ -834,55 +738,6 @@ class Main(Script):
         # $script:0831180509005583$
         # - I'm sorry, but I don't have time to answer a question right now. As you can clearly see, I'm very busy. This isn't because I don't know the answer...
         # TODO: gotoConditionTalkID 30, 31, 32, 9011
-        return -1
-
-    def __3000(self, index: int, pick: int) -> int:
-        if index == 0:
-            # $script:0831180509005584$
-            # - This is a story from so long ago that even history doesn't known when it happened. It's from a time when fairies could speak to the stars, wind, and moon. I wasn't there personally. This is a tale known to all fairies who love reading.
-            return 3000
-        elif index == 1:
-            # $script:0831180509005585$
-            # - It is about a male fairy, his sister, and an evil witch.
-            #   <font color="#909090">(He goes on and on, summarizing the story from a historian's perspective.)</font>
-            return 3000
-        elif index == 2:
-            # $script:0831180509005586$
-            # - <font color="#909090">(He goes into a lot of boring details and even the exciting moments are dragged down by his unnecessary analyses.)</font>
-            return 3000
-        elif index == 3:
-            # functionID=1 openTalkReward=True
-            # $script:0831180509005587$
-            # - And thus, the brother and sister concluded their adventure. Did you enjoy the tale? You're an excellent listener. I enjoyed relaying the story to you.
-            return -1
-        return -1
-
-    def __3100(self, index: int, pick: int) -> int:
-        if index == 0:
-            # $script:0831180509005588$
-            # - This time, I will share something I experienced firsthand. I've seen quite a lot in my not-so-short life, and I'm sure you'd enjoy some of my extraordinary tales.
-            return 3100
-        elif index == 1:
-            # $script:0831180509005589$
-            # - When I was young and curious, I traveled to many locales, even though I don't much care for traveling. This tale takes us to a remove village in the far south, whose name I can no longer remember.
-            return 3100
-        elif index == 2:
-            # $script:0831180509005590$
-            # - There was a big tree in the center of the village, which the villagers consulted for important events...
-            return 3100
-        elif index == 3:
-            # $script:0831180509005591$
-            # - <font color="#909090">(He goes into a lot of boring details and even the exciting moments are dragged down by his unnecessary analyses.)</font>
-            return 3100
-        elif index == 4:
-            # $script:0831180509005592$
-            # - In the end, I left that village to return home, but I still wonder sometimes... what was that tree? Was it really holy?
-            return 3100
-        elif index == 5:
-            # functionID=1 openTalkReward=True
-            # $script:0831180509005593$
-            # - I experienced that personally, and I guarantee everything I said is 100% truth. Well, I may have exaggerated a little, but doesn't that just make it 120% truth?
-            return -1
         return -1
 
     def __4000(self, index: int, pick: int) -> int:
@@ -964,3 +819,15 @@ class Main(Script):
             # TODO: goto 105, 106
             return -1
         return -1
+
+    def exit_state(self, functionId: int):
+        if functionId == 1:
+            # TODO: functionID 1
+            return
+        return
+
+    def enter_state(self, functionId: int):
+        if functionId == 1:
+            # TODO: functionID 1
+            return
+        return

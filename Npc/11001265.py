@@ -7,8 +7,6 @@ class Main(Script):
     def first(self) -> int:
         return random.choice([30, 40, 60, 70])
 
-    def select(self) -> int:
-        return 0
 
     def __52(self, index: int, pick: int) -> int:
         # $script:1216035207005151$
@@ -19,12 +17,6 @@ class Main(Script):
             # TODO: goto 53
             # TODO: gotoFail 90
             return 90
-        return -1
-
-    def __53(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True
-        # $script:1216035207005153$
-        # - Here, take it. You're lucky I transcribed an extra copy.
         return -1
 
     def __62(self, index: int, pick: int) -> int:
@@ -49,12 +41,6 @@ class Main(Script):
             return 90
         return -1
 
-    def __65(self, index: int, pick: int) -> int:
-        # functionID=2 openTalkReward=True
-        # $script:1216035207005165$
-        # - Here, take it. You're lucky I transcribed an extra copy.
-        return -1
-
     def __72(self, index: int, pick: int) -> int:
         # $script:1216031507005132$
         # - You're here for the $item:40000023$? Please wait a moment.
@@ -77,8 +63,26 @@ class Main(Script):
             return 90
         return -1
 
-    def __75(self, index: int, pick: int) -> int:
-        # functionID=3 openTalkReward=True
-        # $script:1216031507005138$
-        # - Here, take it. You're lucky I transcribed an extra copy.
-        return -1
+    def exit_state(self, functionId: int):
+        if functionId == 1:
+            # TODO: functionID 1
+            return
+        if functionId == 2:
+            # TODO: functionID 2
+            return
+        if functionId == 3:
+            # TODO: functionID 3
+            return
+        return
+
+    def enter_state(self, functionId: int):
+        if functionId == 1:
+            # TODO: functionID 1
+            return
+        if functionId == 2:
+            # TODO: functionID 2
+            return
+        if functionId == 3:
+            # TODO: functionID 3
+            return
+        return

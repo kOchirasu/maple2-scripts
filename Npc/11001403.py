@@ -7,11 +7,15 @@ class Main(Script):
     def first(self) -> int:
         return 30
 
-    def select(self) -> int:
-        return 0
 
-    def __32(self, index: int, pick: int) -> int:
-        # functionID=1
-        # $script:1223143510001431$
-        # - All right, bon voyage!
-        return -1
+    def exit_state(self, functionId: int):
+        if functionId == 1:
+            # TODO: functionID 1
+            return
+        return
+
+    def enter_state(self, functionId: int):
+        if functionId == 1:
+            # TODO: functionID 1
+            return
+        return

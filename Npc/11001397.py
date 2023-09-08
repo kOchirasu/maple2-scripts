@@ -7,8 +7,6 @@ class Main(Script):
     def first(self) -> int:
         return random.choice([30, 40, 50])
 
-    def select(self) -> int:
-        return 0
 
     def __46(self, index: int, pick: int) -> int:
         if index == 0:
@@ -27,8 +25,14 @@ class Main(Script):
             return -1
         return -1
 
-    def __47(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True
-        # $script:1227015507005627$
-        # - Take this to $npcName:11001396[gender:1]$. And tell her she's welcome.
-        return -1
+    def exit_state(self, functionId: int):
+        if functionId == 1:
+            # TODO: functionID 1
+            return
+        return
+
+    def enter_state(self, functionId: int):
+        if functionId == 1:
+            # TODO: functionID 1
+            return
+        return

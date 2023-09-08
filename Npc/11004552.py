@@ -7,8 +7,6 @@ class Main(Script):
     def first(self) -> int:
         return random.choice([90, 100, 110])
 
-    def select(self) -> int:
-        return 30
 
     def __90(self, index: int, pick: int) -> int:
         # $script:0116132907012729$
@@ -21,8 +19,14 @@ class Main(Script):
             return 92
         return -1
 
-    def __91(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True
-        # $script:0116132907012731$
-        # - Here you go! I hope you save some chocolate for me!
-        return -1
+    def exit_state(self, functionId: int):
+        if functionId == 1:
+            # TODO: functionID 1
+            return
+        return
+
+    def enter_state(self, functionId: int):
+        if functionId == 1:
+            # TODO: functionID 1
+            return
+        return

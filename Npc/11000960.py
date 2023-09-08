@@ -7,8 +7,6 @@ class Main(Script):
     def first(self) -> int:
         return 20
 
-    def select(self) -> int:
-        return 0
 
     def __20(self, index: int, pick: int) -> int:
         # $script:0831180407003327$
@@ -20,8 +18,14 @@ class Main(Script):
             return -1
         return -1
 
-    def __21(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True
-        # $script:0831180407003329$
-        # - Get out of here! Oh, and take this with you.
-        return -1
+    def exit_state(self, functionId: int):
+        if functionId == 1:
+            # TODO: functionID 1
+            return
+        return
+
+    def enter_state(self, functionId: int):
+        if functionId == 1:
+            # TODO: functionID 1
+            return
+        return

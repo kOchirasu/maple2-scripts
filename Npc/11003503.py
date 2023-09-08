@@ -7,8 +7,6 @@ class Main(Script):
     def first(self) -> int:
         return random.choice([30, 40, 50])
 
-    def select(self) -> int:
-        return 0
 
     def __50(self, index: int, pick: int) -> int:
         # $script:0816160115008989$
@@ -19,3 +17,4 @@ class Main(Script):
             # TODO: goto 51, 52
             return -1
         return -1
+

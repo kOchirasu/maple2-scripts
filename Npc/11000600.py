@@ -7,8 +7,6 @@ class Main(Script):
     def first(self) -> int:
         return random.choice([50, 60, 70, 80, 90, 100, 110, 120, 130])
 
-    def select(self) -> int:
-        return 0
 
     def __65(self, index: int, pick: int) -> int:
         # $script:0831180407002418$
@@ -19,12 +17,6 @@ class Main(Script):
             # TODO: goto 66
             # TODO: gotoFail 67
             return 67
-        return -1
-
-    def __66(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True
-        # $script:0831180407002420$
-        # - Here's your $item:30000145$. I hope you enjoy your new home. Bye for now!
         return -1
 
     def __95(self, index: int, pick: int) -> int:
@@ -38,12 +30,6 @@ class Main(Script):
             return 97
         return -1
 
-    def __96(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True
-        # $script:0831180407002436$
-        # - Here's your $item:30000255$. I hope you enjoy your new home. Bye for now!
-        return -1
-
     def __115(self, index: int, pick: int) -> int:
         # $script:0831180407002449$
         # - Good, then it's 10,000 mesos for a $item:30000254$.
@@ -53,12 +39,6 @@ class Main(Script):
             # TODO: goto 116
             # TODO: gotoFail 117
             return 117
-        return -1
-
-    def __116(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True
-        # $script:0831180407002451$
-        # - Here's your $item:30000254$. I hope you enjoy your new home. Bye for now!
         return -1
 
     def __135(self, index: int, pick: int) -> int:
@@ -72,8 +52,14 @@ class Main(Script):
             return 137
         return -1
 
-    def __136(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True
-        # $script:0831180407002466$
-        # - Here's your $item:30000253$. I hope you enjoy your new home. Bye for now!
-        return -1
+    def exit_state(self, functionId: int):
+        if functionId == 1:
+            # TODO: functionID 1
+            return
+        return
+
+    def enter_state(self, functionId: int):
+        if functionId == 1:
+            # TODO: functionID 1
+            return
+        return

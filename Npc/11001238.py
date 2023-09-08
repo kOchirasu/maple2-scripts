@@ -7,8 +7,6 @@ class Main(Script):
     def first(self) -> int:
         return random.choice([30, 40, 50, 60])
 
-    def select(self) -> int:
-        return 0
 
     def __41(self, index: int, pick: int) -> int:
         # $script:1125183507007504$
@@ -21,14 +19,20 @@ class Main(Script):
             return 43
         return -1
 
-    def __42(self, index: int, pick: int) -> int:
-        # functionID=1
-        # $script:1125183507007506$
-        # - I've created a portal for you down there. It will take you to $map:52000076$. Next time, use the portal instead of bothering me, all right?
-        return -1
+    def exit_state(self, functionId: int):
+        if functionId == 1:
+            # TODO: functionID 1
+            return
+        if functionId == 2:
+            # TODO: functionID 2
+            return
+        return
 
-    def __51(self, index: int, pick: int) -> int:
-        # functionID=2
-        # $script:1214150707007554$
-        # - Heh heh heh... Off with you!
-        return -1
+    def enter_state(self, functionId: int):
+        if functionId == 1:
+            # TODO: functionID 1
+            return
+        if functionId == 2:
+            # TODO: functionID 2
+            return
+        return

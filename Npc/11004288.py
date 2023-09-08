@@ -7,8 +7,6 @@ class Main(Script):
     def first(self) -> int:
         return 10
 
-    def select(self) -> int:
-        return 0
 
     def __10(self, index: int, pick: int) -> int:
         if index == 0:
@@ -42,26 +40,32 @@ class Main(Script):
             return 50
         return -1
 
-    def __30(self, index: int, pick: int) -> int:
-        # functionID=1
-        # $script:0218154407014484$
-        # - Taking it from the top, eh? Exciting! Now, let's get to it!
-        return -1
+    def exit_state(self, functionId: int):
+        if functionId == 1:
+            # TODO: functionID 1
+            return
+        if functionId == 2:
+            # TODO: functionID 2
+            return
+        if functionId == 3:
+            # TODO: functionID 3
+            return
+        if functionId == 4:
+            # TODO: functionID 4
+            return
+        return
 
-    def __40(self, index: int, pick: int) -> int:
-        # functionID=2
-        # $script:0218154407014485$
-        # - You already beat everyone, ya goof! Why don't we start over, instead?
-        return -1
-
-    def __50(self, index: int, pick: int) -> int:
-        # functionID=3
-        # $script:0226191507014580$
-        # - Great! Keep up that fighting spirit! Now start!
-        return -1
-
-    def __60(self, index: int, pick: int) -> int:
-        # functionID=4
-        # $script:0226191507014581$
-        # - Here's your first challenge. Good luck!
-        return -1
+    def enter_state(self, functionId: int):
+        if functionId == 1:
+            # TODO: functionID 1
+            return
+        if functionId == 2:
+            # TODO: functionID 2
+            return
+        if functionId == 3:
+            # TODO: functionID 3
+            return
+        if functionId == 4:
+            # TODO: functionID 4
+            return
+        return

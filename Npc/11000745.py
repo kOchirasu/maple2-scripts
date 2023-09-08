@@ -7,8 +7,6 @@ class Main(Script):
     def first(self) -> int:
         return random.choice([30, 60])
 
-    def select(self) -> int:
-        return 0
 
     def __30(self, index: int, pick: int) -> int:
         # $script:0831180407002894$
@@ -32,7 +30,7 @@ class Main(Script):
 
     def __46(self, index: int, pick: int) -> int:
         # $script:0831180407002928$
-        # - <font color="#909090">(She gives you a sideways scowl.)</font>
+        # - <font color="#909090">(She gives you a sideways scowl.)</font> 
         #   I think you played after I did. You're lucky that my eyes are too old to see clearly.
         if pick == 0:
             # $script:0831180407002929$
@@ -40,13 +38,6 @@ class Main(Script):
             # TODO: goto 47, 48
             # TODO: gotoFail 49
             return 49
-        return -1
-
-    def __47(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True
-        # $script:0831180407002930$
-        # - <font color="#909090">(Her scowl deepens.)</font>
-        #   Here!
         return -1
 
     def __50(self, index: int, pick: int) -> int:
@@ -68,3 +59,15 @@ class Main(Script):
             # TODO: goto 41, 42, 43, 44, 45
             return -1
         return -1
+
+    def exit_state(self, functionId: int):
+        if functionId == 1:
+            # TODO: functionID 1
+            return
+        return
+
+    def enter_state(self, functionId: int):
+        if functionId == 1:
+            # TODO: functionID 1
+            return
+        return

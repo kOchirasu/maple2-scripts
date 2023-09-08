@@ -1,13 +1,12 @@
 """ 11000254: Jane """
 from npc_api import Script
+import random
 
 
 class Main(Script):
     def first(self) -> int:
         return 60
 
-    def select(self) -> int:
-        return 0
 
     def __60(self, index: int, pick: int) -> int:
         # $script:0831180407001060$
@@ -26,8 +25,14 @@ class Main(Script):
             return 64
         return -1
 
-    def __61(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True
-        # $script:0831180407001063$
-        # - Sure thing. This has all the latest styles. Have a seat and check them out.
-        return -1
+    def exit_state(self, functionId: int):
+        if functionId == 1:
+            # TODO: functionID 1
+            return
+        return
+
+    def enter_state(self, functionId: int):
+        if functionId == 1:
+            # TODO: functionID 1
+            return
+        return

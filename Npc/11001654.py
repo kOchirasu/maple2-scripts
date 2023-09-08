@@ -7,8 +7,6 @@ class Main(Script):
     def first(self) -> int:
         return random.choice([30, 40])
 
-    def select(self) -> int:
-        return 0
 
     def __30(self, index: int, pick: int) -> int:
         # $script:0615152810001561$
@@ -33,38 +31,14 @@ class Main(Script):
             return 32
         return -1
 
-    def __31(self, index: int, pick: int) -> int:
-        if index == 0:
-            # functionID=1
-            # $script:0615152810001562$
-            # - Spin the wheel for a chance at great prizes! You know you want to.
-            return 31
-        elif index == 1:
-            # $script:0615152810001563$
-            # - Here's hoping Lady Luck's on your side!
-            return -1
-        return -1
+    def exit_state(self, functionId: int):
+        if functionId == 1:
+            # TODO: functionID 1
+            return
+        return
 
-    def __10(self, index: int, pick: int) -> int:
-        if index == 0:
-            # functionID=1
-            # $script:0125175010001820$
-            # - All right, let's spin it 10 times in a row! Keep your fingers crossed, $MyPCName$!
-            return 10
-        elif index == 1:
-            # $script:0125175010001821$
-            # - Roulette spin number $rouletteCurrent$! Good luck!
-            return -1
-        return -1
-
-    def __100(self, index: int, pick: int) -> int:
-        if index == 0:
-            # functionID=1
-            # $script:0125175010001822$
-            # - All right, let's spin it 100 times in a row! Keep your fingers crossed, $MyPCName$!
-            return 100
-        elif index == 1:
-            # $script:0125175010001823$
-            # - Roulette spin number $rouletteCurrent$! Good luck!
-            return -1
-        return -1
+    def enter_state(self, functionId: int):
+        if functionId == 1:
+            # TODO: functionID 1
+            return
+        return

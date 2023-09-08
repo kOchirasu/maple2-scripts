@@ -7,8 +7,6 @@ class Main(Script):
     def first(self) -> int:
         return random.choice([1, 2, 3, 4, 5, 6, 9001, 9002, 9003, 100])
 
-    def select(self) -> int:
-        return 0
 
     def __1(self, index: int, pick: int) -> int:
         # $script:0831180509000251$
@@ -173,42 +171,42 @@ class Main(Script):
         return -1
 
     def __8000(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True
+        # functionID=1 openTalkReward=True 
         # $script:0831180509000281$
         # - Thank you for hiring me for another month. You won't regret it.
         # TODO: gotoConditionTalkID 40, 50, 60, 8040, 8050, 8060, 9040
         return -1
 
     def __8001(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True
+        # functionID=1 openTalkReward=True 
         # $script:0831180509000282$
         # - Thank you for paying me on time, $OwnerName$. My bosses at Helping Hands just can't stop talking about how wonderful you are.
         # TODO: gotoConditionTalkID 40, 50, 60, 8040, 8050, 8060, 9040
         return -1
 
     def __8010(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True
+        # functionID=1 openTalkReward=True 
         # $script:0831180509000283$
         # - I thought you'd forgotten about me. You were late, but you made it before I had no choice but to leave. Now, would you like a cup of tea?
         # TODO: gotoConditionTalkID 40, 50, 60, 8040, 8050, 8060, 9040
         return -1
 
     def __8011(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True
+        # functionID=1 openTalkReward=True 
         # $script:0831180509000284$
         # - Thank you for not disappointing me $OwnerName$. It is my pleasure to stay under your employment.
         # TODO: gotoConditionTalkID 40, 50, 60, 8040, 8050, 8060, 9040
         return -1
 
     def __8020(self, index: int, pick: int) -> int:
-        # functionID=1
+        # functionID=1 
         # $script:0831180509000285$
         # - Just so you are aware, it is almost payday.
         # TODO: gotoConditionTalkID 21, 22, 8021, 9021
         return -1
 
     def __8021(self, index: int, pick: int) -> int:
-        # functionID=1
+        # functionID=1 
         # $script:0831180509000286$
         # - I hope you haven't forgotten about it.
         if pick == 0:
@@ -378,21 +376,15 @@ class Main(Script):
             return -1
         return -1
 
-    def __9011(self, index: int, pick: int) -> int:
-        # functionID=1
-        # $script:0831180509000323$
-        # - $OwnerName$, shouldn't we be talking how you're $MaidPassedDay$ overdue on my paycheck instead?
-        return -1
-
     def __9020(self, index: int, pick: int) -> int:
-        # functionID=1
+        # functionID=1 
         # $script:0831180509000324$
         # - I don't really have much to say.
         # TODO: gotoConditionTalkID 21, 22, 8021, 9021
         return -1
 
     def __9021(self, index: int, pick: int) -> int:
-        # functionID=1
+        # functionID=1 
         # $script:0831180509000325$
         # - You're $MaidPassedDay$ behind on my paycheck.
         if pick == 0:
@@ -451,28 +443,28 @@ class Main(Script):
         return -1
 
     def __10(self, index: int, pick: int) -> int:
-        # functionID=1
+        # functionID=1 
         # $script:0831180509000336$
         # - Would you like me to craft you a ring?
         # TODO: gotoConditionTalkID 11, 9011
         return -1
 
     def __11(self, index: int, pick: int) -> int:
-        # functionID=1
+        # functionID=1 
         # $script:0831180509000337$
         # - Feel free to discuss rings with me whenever you like.
         # TODO: gotoConditionTalkID 40, 50, 60, 8040, 8050, 8060
         return -1
 
     def __20(self, index: int, pick: int) -> int:
-        # functionID=1
+        # functionID=1 
         # $script:0831180509000338$
         # - Ah, you must wish to learn more about me.
         # TODO: gotoConditionTalkID 21, 22, 8021, 9021
         return -1
 
     def __21(self, index: int, pick: int) -> int:
-        # functionID=1
+        # functionID=1 
         # $script:0831180509000339$
         # - But I just don't feel comfortable going into too much detail about myself...
         if pick == 0:
@@ -495,7 +487,7 @@ class Main(Script):
         return -1
 
     def __22(self, index: int, pick: int) -> int:
-        # functionID=1
+        # functionID=1 
         # $script:0831180509000343$
         # - But I just don't feel comfortable going into too much detail about myself...
         if pick == 0:
@@ -687,30 +679,6 @@ class Main(Script):
             return -1
         return -1
 
-    def __1001(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True
-        # $script:0831180509000380$
-        # - I apologize. I should be working, not spouting philosophy. If you'll excuse me...
-        return -1
-
-    def __1002(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True
-        # $script:0831180509000381$
-        # - You may think it's corny, but there are many books that go into great depth about this topic. But perhaps I should keep my thoughts to myself.
-        return -1
-
-    def __1011(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True
-        # $script:0831180509000382$
-        # - I knew you would, $OwnerName$. Some may think what I said is corny, but I knew you would understand.
-        return -1
-
-    def __1012(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True
-        # $script:0831180509000383$
-        # - Take a deep breath. Ahhh. See? Even the air is more invigorating when you take a moment to treasure it. Thank you for chatting with me about this, $OwnerName$.
-        return -1
-
     def __1100(self, index: int, pick: int) -> int:
         if index == 0:
             # $script:0831180509000384$
@@ -729,48 +697,6 @@ class Main(Script):
                 # - Awww, did you play with him? And feed him?
                 # TODO: goto 1111, 1112
                 return -1
-            return -1
-        return -1
-
-    def __1101(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True
-        # $script:0831180509000388$
-        # - Ah, I sent him away, as gently as I could, and wiped away all his paw prints. That's all.
-        return -1
-
-    def __1102(self, index: int, pick: int) -> int:
-        if index == 0:
-            # $script:0831180509000389$
-            # - I didn't "let" him, he jumped the fence. It was no big deal. He didn't mess up your flowers or anything.
-            return 1102
-        elif index == 1:
-            # functionID=1 openTalkReward=True
-            # $script:0831180509000390$
-            # - He was such a cute little thing. I couldn't scold him. He was so cute, you wouldn't have been able to either, $OwnerName$.
-            return -1
-        return -1
-
-    def __1111(self, index: int, pick: int) -> int:
-        if index == 0:
-            # $script:0831180509000391$
-            # - I did. In fact, I probably should've asked permission before I did this, but...
-            return 1111
-        elif index == 1:
-            # functionID=1 openTalkReward=True
-            # $script:0831180509000392$
-            # - I also gave him a much-needed bath. He was such a cute little guy. I hope he comes back.
-            return -1
-        return -1
-
-    def __1112(self, index: int, pick: int) -> int:
-        if index == 0:
-            # $script:0831180509000393$
-            # - I knew you'd say that, $OwnerName$. You're just like me.
-            return 1112
-        elif index == 1:
-            # functionID=1 openTalkReward=True
-            # $script:0831180509000394$
-            # - I not only fed him and played with him, I also gave him a bath and brushed his fur. Then he settled down for a nice long nap at my side while I finished with the garden.
             return -1
         return -1
 
@@ -804,42 +730,6 @@ class Main(Script):
                 # - Wait, so I don't have any ironed clothes to wear tomorrow?
                 # TODO: goto 1201, 1202
                 return -1
-            return -1
-        return -1
-
-    def __1201(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True
-        # $script:0831180509000402$
-        # - That's correct. I'm so, so sorry. I feel absolutely horrible.
-        return -1
-
-    def __1202(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True
-        # $script:0831180509000403$
-        # - I have no excuse. I will stay up all through the night to attempt to get at least one outfit wrinkle-free for you to wear tomorrow.
-        return -1
-
-    def __1211(self, index: int, pick: int) -> int:
-        if index == 0:
-            # $script:0831180509000404$
-            # - I'm so sorry, I know I've completely ruined your— Excuse me? Did you just compliment me? Heh, I guess my shirt does look pretty good, doesn't it?
-            return 1211
-        elif index == 1:
-            # functionID=1 openTalkReward=True
-            # $script:0831180509000405$
-            # - $OwnerName$, you are an amazing person. I am honored to work for you. Let me try ironing your clothes one more time. I think I can do it this time!
-            return -1
-        return -1
-
-    def __1212(self, index: int, pick: int) -> int:
-        if index == 0:
-            # $script:0831180509000406$
-            # - Oh! Um. Heh. T-thank you. A servant should look presentable and sharp at all times. See this edge here? I'm normally so good at getting the seams to an extra sharp point!
-            return 1212
-        elif index == 1:
-            # functionID=1 openTalkReward=True
-            # $script:0831180509000407$
-            # - I feel inspired and motivated now. I will collect my ironing kit and try ironing your clothes again. Thank you for the compliment.
             return -1
         return -1
 
@@ -877,37 +767,6 @@ class Main(Script):
             return -1
         return -1
 
-    def __1301(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True
-        # $script:0831180509000415$
-        # - Who says I'm taking it seriously? You asked if anything interesting happened. I answered. Now if you'll excuse me, I have to go mend your socks.
-        return -1
-
-    def __1302(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True
-        # $script:0831180509000416$
-        # - Of course not. Do you take me for an idiot? For the record, I've always carried I pack of mints on me. I didn't just start today.
-        return -1
-
-    def __1311(self, index: int, pick: int) -> int:
-        # functionID=1 openTalkReward=True
-        # $script:0831180509000417$
-        # - Wh-what? No! It's not... I'm not... Ahem. Let's not talk about this anymore.
-        return -1
-
-    def __1312(self, index: int, pick: int) -> int:
-        if index == 0:
-            # $script:0831180509000418$
-            # - You've got it all wrong, $OwnerName$. It's just a silly fortune. I'm not stupid enough to get all excited over it.
-            return 1312
-        elif index == 1:
-            # functionID=1 openTalkReward=True
-            # $script:0831180509000419$
-            # - Now if you'll excuse me, I believe I hear the kettle. Your tea is almost ready. Ahem.
-            #   <font color="#909090">(He walks away, blushing hard.)</font>
-            return -1
-        return -1
-
     def __2000(self, index: int, pick: int) -> int:
         if index == 0:
             # $script:0831180509000420$
@@ -933,34 +792,6 @@ class Main(Script):
             # $script:0831180509000424$
             # - On days like this, I like to relax with a nice cup of tea.
             # TODO: gotoConditionTalkID 30, 31, 32, 9011
-            return -1
-        return -1
-
-    def __3000(self, index: int, pick: int) -> int:
-        if index == 0:
-            # $script:0831180509000425$
-            # - In fact, that's just what you should do. Nothing like a sunny afternoon sipping a cup of tea. Just give me a moment to prepare it...
-            return 3000
-        elif index == 1:
-            # functionID=1 openTalkReward=True
-            # $script:0831180509000426$
-            # - There you go. How do you like it? It's Royal Blend with a touch of cream, perfect for an afternoon as beautiful as this one. I'll leave you to enjoy your tea in peace.
-            return -1
-        return -1
-
-    def __3100(self, index: int, pick: int) -> int:
-        if index == 0:
-            # $script:0831180509000427$
-            # - I recently purchases an amazing Earl Grey tea. How about I treat you to a cup, $OwnerName$? Just give me a moment, and you'll have the best tea you've ever tasted in your life.
-            return 3100
-        elif index == 1:
-            # $script:0831180509000428$
-            # - Here you go. My favorite Earl Grey blend. Do you taste the bergamot flavor? Magnificent! Do you like it?
-            return 3100
-        elif index == 2:
-            # functionID=1 openTalkReward=True
-            # $script:0831180509000429$
-            # - I knew you would like it. The secret to brewing the perfect cup of tea is whispering for it to be delicious as you prepare it, and that's just what I did today.
             return -1
         return -1
 
@@ -1077,3 +908,15 @@ class Main(Script):
             # TODO: goto 105, 106
             return -1
         return -1
+
+    def exit_state(self, functionId: int):
+        if functionId == 1:
+            # TODO: functionID 1
+            return
+        return
+
+    def enter_state(self, functionId: int):
+        if functionId == 1:
+            # TODO: functionID 1
+            return
+        return
