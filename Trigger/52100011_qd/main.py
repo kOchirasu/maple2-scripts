@@ -2,9 +2,6 @@
 import trigger_api
 from Maple2.Server.Game.Scripting.Trigger import Align
 
-#include dungeon_common/checkusercount.py
-from dungeon_common.checkusercount import *
-
 
 # 플레이어 감지
 class idle(trigger_api.Trigger):

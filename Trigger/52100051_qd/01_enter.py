@@ -1,9 +1,6 @@
 """ trigger/52100051_qd/01_enter.xml """
 import trigger_api
 
-#include dungeon_common/checkusercount.py
-from dungeon_common.checkusercount import *
-
 
 class Wait(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':

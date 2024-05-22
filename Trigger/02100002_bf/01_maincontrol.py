@@ -1,9 +1,6 @@
 """ trigger/02100002_bf/01_maincontrol.xml """
 import trigger_api
 
-#include dungeon_common/checkuser10_guildraid.py
-from dungeon_common.checkuser10_guildraid import *
-
 
 class Wait(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':

@@ -1,9 +1,6 @@
 """ trigger/02000331_bf/seeker01.xml """
 import trigger_api
 
-#include dungeon_common/checkusercount.py
-from dungeon_common.checkusercount import *
-
 
 class 대기(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':

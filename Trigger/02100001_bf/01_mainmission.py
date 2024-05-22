@@ -2,9 +2,6 @@
 import trigger_api
 from Maple2.Server.Game.Scripting.Trigger import Align
 
-#include dungeon_common/checkuser10_guildraid.py
-from dungeon_common.checkuser10_guildraid import *
-
 
 # 아프렐라 오지
 class Wait(trigger_api.Trigger):

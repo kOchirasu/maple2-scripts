@@ -2,9 +2,6 @@
 import trigger_api
 from Maple2.Server.Game.Scripting.Trigger import Align
 
-#include dungeon_common/checkusercount.py
-from dungeon_common.checkusercount import *
-
 
 class 퀘스트체크(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:

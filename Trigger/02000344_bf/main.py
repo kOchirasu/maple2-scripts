@@ -1,9 +1,6 @@
 """ trigger/02000344_bf/main.xml """
 import trigger_api
 
-#include dungeon_common/checkusercount.py
-from dungeon_common.checkusercount import *
-
 
 """
 플레이어 감지
