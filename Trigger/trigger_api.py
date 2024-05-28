@@ -2545,12 +2545,12 @@ class Trigger:
         """
         return self.ctx.NpcIsDeadByStringId(string_id)
 
-    def object_interacted(self, interact_ids: List[int], state: int) -> bool:
+    def object_interacted(self, interact_ids: List[int], state: int=0) -> bool:
         """오브젝트가반응했으면
 
         Args:
             interact_ids (List[int]): _description_.
-            state (int): _description_.
+            state (int): _description_. Defaults to 0.
 
         Returns: None
         """
