@@ -321,4 +321,4 @@ class end(trigger_api.Trigger):
         self.move_user(map_id=2000068, portal_id=1)
 
 
-initial_state = test
+initial_state = main

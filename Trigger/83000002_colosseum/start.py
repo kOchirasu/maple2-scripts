@@ -143,4 +143,4 @@ class ContinueGame(trigger_api.Trigger):
         self.set_user_value(trigger_id=900001, key='MainStart', value=2)
 
 
-initial_state = 대기
+initial_state = 유저감지

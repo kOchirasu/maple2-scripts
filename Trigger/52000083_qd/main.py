@@ -394,4 +394,4 @@ class 종료(trigger_api.Trigger):
     pass
 
 
-initial_state = start
+initial_state = 연출출력체크50001536

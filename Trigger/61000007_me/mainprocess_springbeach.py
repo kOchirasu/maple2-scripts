@@ -94,8 +94,8 @@ class 시작멘트2(trigger_api.Trigger):
 class 시작멘트3(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.play_system_sound_in_box(sound='ME_Mainprocess_Springbeach_04')
-        self.set_timer(timer_id='15', seconds=7)
-        self.set_event_ui(type=1, arg2='$61000007_ME__MAINPROCESS_SPRINGBEACH__4$', arg3='7000')
+        self.set_timer(timer_id='15', seconds=5)
+        self.set_event_ui(type=1, arg2='$61000007_ME__MAINPROCESS_SPRINGBEACH__4$', arg3='5500')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='15'):

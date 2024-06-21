@@ -231,23 +231,21 @@ class 오프닝연출끝(trigger_api.Trigger):
             return 구르는천둥대사(self.ctx)
 
 
-# 구르는천둥대사1
 class 구르는천둥대사(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.side_npc_talk(npc_id=11000009, illust='RollingThunder_normal', duration=7000, script='$52020036_QD__main__12$', voice='ko/Npc/00002150')
+        self.side_npc_talk(npc_id=11000009, illust='RollingThunder_normal', duration=5000, script='$52020036_QD__main__12$', voice='ko/Npc/00002150')
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.wait_tick(wait_tick=7000):
+        if self.wait_tick(wait_tick=5502):
             return 콘대르전투참여대사(self.ctx)
 
 
-# 콘대르전투참여대사
 class 콘대르전투참여대사(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.side_npc_talk(npc_id=11003776, illust='Conder_normal', duration=8300, script='$52020036_QD__main__13$', voice='ko/Npc/00002147')
+        self.side_npc_talk(npc_id=11003776, illust='Conder_normal', duration=5000, script='$52020036_QD__main__13$', voice='ko/Npc/00002147')
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.wait_tick(wait_tick=8300):
+        if self.wait_tick(wait_tick=8271):
             return 침략자소탕퀘스트완료체크(self.ctx)
 
 
@@ -366,45 +364,43 @@ class 부상자구출퀘스트완료체크(trigger_api.Trigger):
             return 부상자옮기기대사(self.ctx)
 
 
-# 티나 팝업 대사 UI_1
 class 부상자옮기기대사(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_onetime_effect(id=1, path='BG/Common/ScreenMask/Eff_CameraMasking_FastFadeIn.xml')
         self.set_quest_complete(quest_id=91000048)
         self.set_quest_accept(quest_id=91000049)
-        self.side_npc_talk(npc_id=11003780, illust='WhitewolfGirl_normal', duration=5648, script='$52020036_QD__main__14$', voice='ko/Npc/00002151')
+        self.side_npc_talk(npc_id=11003780, illust='WhitewolfGirl_normal', duration=5000, script='$52020036_QD__main__14$', voice='ko/Npc/00002151')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5648):
             return 네이린팝업1(self.ctx)
 
 
-# 네이린팝업1
 class 네이린팝업1(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_onetime_effect(id=1, path='BG/Common/ScreenMask/Eff_CameraMasking_FastFadeIn.xml')
-        self.side_npc_talk(npc_id=11003536, illust='Neirin_normal', duration=7000, script='$52020036_QD__main__15$', voice='ko/Npc/00002126')
+        self.side_npc_talk(npc_id=11003536, illust='Neirin_normal', duration=5000, script='$52020036_QD__main__15$', voice='ko/Npc/00002126')
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.wait_tick(wait_tick=7000):
+        if self.wait_tick(wait_tick=5000):
             return 네이린팝업2(self.ctx)
 
 
 class 네이린팝업2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.side_npc_talk(npc_id=11003536, illust='Neirin_smile', duration=7000, script='$52020036_QD__main__16$', voice='ko/Npc/00002127')
+        self.side_npc_talk(npc_id=11003536, illust='Neirin_smile', duration=5000, script='$52020036_QD__main__16$', voice='ko/Npc/00002127')
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.wait_tick(wait_tick=7000):
+        if self.wait_tick(wait_tick=5003):
             return 네이린팝업3(self.ctx)
 
 
 class 네이린팝업3(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.side_npc_talk(npc_id=11003536, illust='Neirin_normal', duration=7000, script='$52020036_QD__main__17$', voice='ko/Npc/00002128')
+        self.side_npc_talk(npc_id=11003536, illust='Neirin_normal', duration=5000, script='$52020036_QD__main__17$', voice='ko/Npc/00002128')
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.wait_tick(wait_tick=7000):
+        if self.wait_tick(wait_tick=5000):
             return 공중지원퀘스트자동수락(self.ctx)
 
 
@@ -457,28 +453,28 @@ class 석궁비추기끝(trigger_api.Trigger):
 
 class 콘대르팝업1(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.side_npc_talk(npc_id=11003776, illust='Conder_normal', duration=7000, script='$52020036_QD__main__18$', voice='ko/Npc/00002148')
+        self.side_npc_talk(npc_id=11003776, illust='Conder_normal', duration=5000, script='$52020036_QD__main__18$', voice='ko/Npc/00002148')
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.wait_tick(wait_tick=7000):
+        if self.wait_tick(wait_tick=5000):
             return 네이린팝업4(self.ctx)
 
 
 class 네이린팝업4(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.side_npc_talk(npc_id=11003536, illust='Neirin_shy', duration=7000, script='$52020036_QD__main__19$', voice='ko/Npc/00002129')
+        self.side_npc_talk(npc_id=11003536, illust='Neirin_shy', duration=5000, script='$52020036_QD__main__19$', voice='ko/Npc/00002129')
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.wait_tick(wait_tick=7000):
+        if self.wait_tick(wait_tick=6222):
             return 콘대르팝업2(self.ctx)
 
 
 class 콘대르팝업2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.side_npc_talk(npc_id=11003776, illust='Conder_normal', duration=6000, script='$52020036_QD__main__20$', voice='ko/Npc/00002149')
+        self.side_npc_talk(npc_id=11003776, illust='Conder_normal', duration=4000, script='$52020036_QD__main__20$', voice='ko/Npc/00002149')
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.wait_tick(wait_tick=6000):
+        if self.wait_tick(wait_tick=4266):
             return 네이린웨이브경고팝업(self.ctx)
 
 
@@ -493,7 +489,7 @@ class 네이린웨이브경고팝업(trigger_api.Trigger):
 
 class 네이린웨이브경고팝업1(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.side_npc_talk(npc_id=11003536, illust='Neirin_surprise', duration=7000, script='$52020036_QD__main__22$', voice='ko/Npc/00002131')
+        self.side_npc_talk(npc_id=11003536, illust='Neirin_surprise', duration=5000, script='$52020036_QD__main__22$', voice='ko/Npc/00002131')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=7012):
