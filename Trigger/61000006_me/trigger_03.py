@@ -23,10 +23,10 @@ class 대기(trigger_api.Trigger):
 class 어나운스0(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.play_system_sound_in_box(sound='ME_Trigger_03_00')
-        self.set_event_ui(type=1, arg2='$61000006_ME__TRIGGER_03__0$', arg3='7000', arg4='0')
+        self.set_event_ui(type=1, arg2='$61000006_ME__TRIGGER_03__0$', arg3='4000', arg4='0')
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.wait_tick(wait_tick=7000):
+        if self.wait_tick(wait_tick=5000):
             return 어나운스1(self.ctx)
 
 

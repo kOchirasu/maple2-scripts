@@ -108,4 +108,4 @@ class 연출종료(trigger_api.Trigger):
             return None # Missing State: 종료
 
 
-initial_state = idle
+initial_state = 대기

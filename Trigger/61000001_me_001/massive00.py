@@ -119,9 +119,9 @@ class 멘트0(trigger_api.Trigger):
 
 class 멘트1(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_timer(timer_id='1', seconds=11)
+        self.set_timer(timer_id='1', seconds=8)
         self.play_system_sound_in_box(sound='ME_001_Massive00_01')
-        self.set_event_ui(type=1, arg2='$61000001_ME_001__MASSIVE00__1$', arg3='11000')
+        self.set_event_ui(type=1, arg2='$61000001_ME_001__MASSIVE00__1$', arg3='8000')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='1'):
@@ -133,9 +133,9 @@ class 멘트1(trigger_api.Trigger):
 
 class 멘트2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_timer(timer_id='1', seconds=10)
+        self.set_timer(timer_id='1', seconds=8)
         self.play_system_sound_in_box(sound='ME_001_Massive00_02')
-        self.set_event_ui(type=1, arg2='$61000001_ME_001__MASSIVE00__2$', arg3='10000')
+        self.set_event_ui(type=1, arg2='$61000001_ME_001__MASSIVE00__2$', arg3='8000')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='1'):
