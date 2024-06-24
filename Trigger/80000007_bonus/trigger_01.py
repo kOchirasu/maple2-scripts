@@ -4,7 +4,7 @@ import trigger_api
 
 class 대기(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_state(id=1, states=[미로패턴01,미로패턴02])
+        self.set_state(id=1, states=['미로패턴01','미로패턴02'])
         self.set_mesh(trigger_ids=[201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217])
         self.set_mesh(trigger_ids=[101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117], visible=True)
         self.set_mesh(trigger_ids=[401,402,403,404,405,406,407,408,409], visible=True)

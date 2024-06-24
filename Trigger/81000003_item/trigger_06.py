@@ -74,8 +74,8 @@ class 시간표확인(trigger_api.Trigger):
 
 class 어나운스0(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_state(id=1, states=[미로패턴01,미로패턴02,미로패턴03])
-        self.set_state(id=2, states=[점프패턴01,점프패턴02])
+        self.set_state(id=1, states=['미로패턴01','미로패턴02','미로패턴03'])
+        self.set_state(id=2, states=['점프패턴01','점프패턴02'])
         self.set_timer(timer_id='89', seconds=5)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -85,8 +85,8 @@ class 어나운스0(trigger_api.Trigger):
 
 class 레버(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_state(id=1, states=[미로패턴01,미로패턴02,미로패턴03])
-        self.set_state(id=2, states=[점프패턴01,점프패턴02])
+        self.set_state(id=1, states=['미로패턴01','미로패턴02','미로패턴03'])
+        self.set_state(id=2, states=['점프패턴01','점프패턴02'])
         self.set_mesh(trigger_ids=[527,528,529], visible=True)
 
     def on_tick(self) -> trigger_api.Trigger:
