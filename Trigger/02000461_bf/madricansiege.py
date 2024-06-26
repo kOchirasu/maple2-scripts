@@ -1,5 +1,6 @@
 """ trigger/02000461_bf/madricansiege.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 #include dungeon_common/checkusercount.py
 from dungeon_common.checkusercount import *
@@ -146,7 +147,7 @@ class 보스등장(trigger_api.Trigger):
 
 class 보스_버프패턴(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$02000461_BF__MADRICANSIEGE__0$', arg3='5000')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02000461_BF__MADRICANSIEGE__0$', duration=5000)
         self.set_user_value(trigger_id=99999102, key='Bosscannon02', value=1)
         self.set_user_value(trigger_id=99999103, key='Bosscannon03', value=1)
         self.set_user_value(trigger_id=99999104, key='Bosscannon04', value=1)

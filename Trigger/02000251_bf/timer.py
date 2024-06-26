@@ -1,5 +1,6 @@
 """ trigger/02000251_bf/timer.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class 대기(trigger_api.Trigger):
@@ -27,7 +28,7 @@ class 초재기1(trigger_api.Trigger):
 class 초재기2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='99', seconds=5)
-        self.set_event_ui(type=1, arg2='$02000251_BF__TIMER__0$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02000251_BF__TIMER__0$', duration=3000, box_ids='0')
         self.set_effect(trigger_ids=[3001], visible=True)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -38,7 +39,7 @@ class 초재기2(trigger_api.Trigger):
 class 딜레이(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='99', seconds=5)
-        self.set_event_ui(type=1, arg2='$02000251_BF__TIMER__1$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02000251_BF__TIMER__1$', duration=3000, box_ids='0')
         self.set_effect(trigger_ids=[3002], visible=True)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -48,7 +49,7 @@ class 딜레이(trigger_api.Trigger):
 
 class 초재기3(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$02000251_BF__TIMER__2$', arg3='5000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02000251_BF__TIMER__2$', duration=5000, box_ids='0')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='99'):

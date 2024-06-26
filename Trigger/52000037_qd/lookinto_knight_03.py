@@ -1,5 +1,6 @@
 """ trigger/52000037_qd/lookinto_knight_03.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class Wait(trigger_api.Trigger):
@@ -231,7 +232,7 @@ class Quit02(trigger_api.Trigger):
         self.set_cinematic_ui(type=2)
         self.select_camera(trigger_id=811, enable=False)
         self.play_system_sound_in_box(sound='System_ShowGuideSummary_01')
-        self.set_event_ui(type=1, arg2='$52000037_QD__LOOKINTO_KNIGHT_03__0$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$52000037_QD__LOOKINTO_KNIGHT_03__0$', duration=3000, box_ids='0')
 
 
 class Quit(trigger_api.Trigger):

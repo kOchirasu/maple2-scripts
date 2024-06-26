@@ -1,5 +1,6 @@
 """ trigger/52100301_qd/300005_phase_4.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class 대기(trigger_api.Trigger):
@@ -104,7 +105,7 @@ class 폭발물제어장치_생성(trigger_api.Trigger):
 
 class 길막열기(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$52100301_QD__300005_PHASE_4__4$', arg3='4000')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$52100301_QD__300005_PHASE_4__4$', duration=4000)
         self.set_mesh(trigger_ids=[5241,5242,5243,5244]) # 4페이즈 상하좌우 엘리베이터 길막 열기
         self.set_agent(trigger_ids=[1800000,1800001,1800002,1800003,1800004,1800005,1800006,1800007,1800008,1800009,1800010,1800011])
 

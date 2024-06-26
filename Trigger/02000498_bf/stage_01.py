@@ -1,6 +1,7 @@
 """ trigger/02000498_bf/stage_01.xml """
 import trigger_api
 from System.Numerics import Vector3
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class 시작연출_6(trigger_api.Trigger):
@@ -20,7 +21,7 @@ class 페이드아웃(trigger_api.Trigger):
 
 class 페이드아웃_2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='곧 새로운 차원으로 당신을 안내 합니다.', arg3='3000')
+        self.set_event_ui_script(type=BannerType.GameOver, script='곧 새로운 차원으로 당신을 안내 합니다.', duration=3000)
         self.set_effect(trigger_ids=[500], visible=True)
         self.set_effect(trigger_ids=[501], visible=True)
         self.set_onetime_effect(id=1, enable=True, path='BG/Common/ScreenMask/Eff_fadein_3sec.xml')
@@ -123,7 +124,7 @@ class 라운드대기1(trigger_api.Trigger):
         self.set_effect(trigger_ids=[6113], visible=True)
         self.set_timer(timer_id='3', seconds=3)
         self.dark_stream_start_round(round=1, ui_duration=3000, damage_penalty=5)
-        self.set_event_ui(type=0, arg2='1,5,1')
+        self.set_event_ui_round(rounds=[1,5,1])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='3'):
@@ -147,7 +148,7 @@ class 라운드대기2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.dark_stream_start_round(round=2, ui_duration=3000, damage_penalty=5)
         self.set_timer(timer_id='3', seconds=3)
-        self.set_event_ui(type=0, arg2='2,5,1')
+        self.set_event_ui_round(rounds=[2,5,1])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='3'):
@@ -169,7 +170,7 @@ class 라운드2(trigger_api.Trigger):
 """
 class 라운드대기3(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=0, arg2='3,5,1')
+        self.set_event_ui_round(rounds=[3,5,1])
         self.dark_stream_start_round(round=3, ui_duration=3000, damage_penalty=5)
         self.set_timer(timer_id='3', seconds=3)
 
@@ -193,21 +194,21 @@ class 라운드3(trigger_api.Trigger):
 """
 class 라운드대기4(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=0, arg2='4,5,1')
+        self.set_event_ui_round(rounds=[4,5,1])
         self.set_timer(timer_id='3', seconds=3)
         self.dark_stream_start_round(round=4, ui_duration=3000, damage_penalty=5)
-        self.set_event_ui(type=1, arg2='$02000350_BF__MAIN__3$', arg3='2000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02000350_BF__MAIN__3$', duration=2000, box_ids='0')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='3'):
-            self.set_event_ui(type=0, arg2='4,5,1')
+            self.set_event_ui_round(rounds=[4,5,1])
             return 라운드4(self.ctx)
 """
 
 """
 class 라운드4(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_timer(timer_id='30', seconds=30, start_delay=1, interval=1, v_offset=80)
+        self.set_timer(timer_id='30', seconds=30, auto_remove=True, display=True, v_offset=80)
         self.spawn_monster(spawn_ids=[104099], auto_target=False)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -222,7 +223,7 @@ class 라운드4(trigger_api.Trigger):
 """
 class 라운드대기5(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=0, arg2='5,5,1')
+        self.set_event_ui_round(rounds=[5,5,1])
         self.set_effect(trigger_ids=[6101], visible=True)
         self.dark_stream_start_round(round=5, ui_duration=3000, damage_penalty=5)
         self.set_timer(timer_id='3', seconds=3)
@@ -259,7 +260,7 @@ class 바닥부심(trigger_api.Trigger):
             self.set_effect(trigger_ids=[6113])
             self.set_skill(trigger_ids=[702], enable=True)
             self.set_mesh(trigger_ids=[3101,3102,3103,3104,3105,3106,3107,3108,3109,3110,3111,3112,3113,3114,3115,3116,3117,3118,3119,3120,3121,3122,3123,3124,3125,3126,3127,3128,3129,3130,3131,3132,3133,3134,3135,3136,3137,3138,3139,3140,3141,3142,3143,3144,3145,3146])
-            self.set_event_ui(type=0, arg2='0,0')
+            self.set_event_ui_round(rounds=[0,0])
             return 종료(self.ctx)
 """
 

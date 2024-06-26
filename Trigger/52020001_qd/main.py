@@ -1,5 +1,6 @@
 """ trigger/52020001_qd/main.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class 시작(trigger_api.Trigger):
@@ -90,7 +91,7 @@ class 인트로_종료(trigger_api.Trigger):
 
 class 알림(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='시간이 얼마 없습니다.\\n폭격을 일삼는 에고웨폰들을 처치하며 크리티아스로 침투하세요.', arg3='4000')
+        self.set_event_ui_script(type=BannerType.GameOver, script='시간이 얼마 없습니다.\\n폭격을 일삼는 에고웨폰들을 처치하며 크리티아스로 침투하세요.', duration=4000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=1000):
@@ -105,7 +106,7 @@ class 감지(trigger_api.Trigger):
 
 class 타이머시작(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_timer(timer_id='100', seconds=180, start_delay=1, interval=1)
+        self.set_timer(timer_id='100', seconds=180, auto_remove=True, display=True)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=100):
@@ -399,7 +400,7 @@ class 실패(trigger_api.Trigger):
         self.set_effect(trigger_ids=[10092], visible=True)
         self.set_mesh(trigger_ids=[80000], visible=True)
         self.destroy_monster(spawn_ids=[-1])
-        self.set_event_ui(type=1, arg2='미션에 실패하였습니다. 다시 재도전 해보세요.', arg3='4000')
+        self.set_event_ui_script(type=BannerType.GameOver, script='미션에 실패하였습니다. 다시 재도전 해보세요.', duration=4000)
         self.move_user(map_id=52020001, portal_id=99)
         self.set_portal(portal_id=14, visible=True, enable=True)
 

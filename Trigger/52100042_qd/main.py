@@ -189,7 +189,7 @@ class end(trigger_api.Trigger):
 
 class quest_end(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        # self.set_event_ui(type=7, arg2='전투에서 승리했습니다!', arg3='5000', arg4='0')
+        # self.set_event_ui_script(type=BannerType.Fail, script='전투에서 승리했습니다!', duration=5000, box_ids='0')
         self.set_dialogue(type=1, spawn_id=510, script='$52100042_QD__MAIN__0$', time=2)
         self.set_dialogue(type=1, spawn_id=510, script='$52100042_QD__MAIN__1$', time=2, arg5=2)
         self.set_achievement(trigger_id=90000, type='trigger', achieve='Madracan_Q03')

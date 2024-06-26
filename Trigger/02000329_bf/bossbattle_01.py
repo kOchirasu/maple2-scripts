@@ -53,7 +53,7 @@ class 닭장열기(trigger_api.Trigger):
         self.set_interact_object(trigger_ids=[10000759], state=1)
         self.play_system_sound_in_box(sound='System_ShowGuideSummary_01')
         self.show_guide_summary(entity_id=103, text_id=20000050) # 닭장을 여세요
-        # self.set_event_ui(type=1, arg2='$02000329_BF__BOSSBATTLE_01__2$', arg3='3000')
+        # self.set_event_ui_script(type=BannerType.GameOver, script='$02000329_BF__BOSSBATTLE_01__2$', duration=3000)
         self.set_timer(timer_id='3', seconds=3)
 
     def on_tick(self) -> trigger_api.Trigger:

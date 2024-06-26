@@ -1,5 +1,6 @@
 """ trigger/61000009_me/timer.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class ready(trigger_api.Trigger):
@@ -16,7 +17,7 @@ class ready(trigger_api.Trigger):
 class Ready_Idle(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.hide_guide_summary(entity_id=100)
-        self.set_timer(timer_id='1200', seconds=1200, interval=1)
+        self.set_timer(timer_id='1200', seconds=1200, display=True)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='1200'):
@@ -25,7 +26,7 @@ class Ready_Idle(trigger_api.Trigger):
 
 class endGame(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=5, arg2='$61000004_ME__TRIGGER_01__2$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.Success, script='$61000004_ME__TRIGGER_01__2$', duration=3000, box_ids='0')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):

@@ -1,5 +1,6 @@
 """ trigger/02000409_bf/giveuptime.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class 대기(trigger_api.Trigger):
@@ -11,7 +12,7 @@ class 대기(trigger_api.Trigger):
 class 타이머(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=30000):
-            self.set_event_ui(type=1, arg2='$DUNGEON__GIVEUP__TIME__0$', arg3='3000')
+            self.set_event_ui_script(type=BannerType.GameOver, script='$DUNGEON__GIVEUP__TIME__0$', duration=3000)
             self.dungeon_enable_give_up(is_enable=True)
             return 종료(self.ctx)
 

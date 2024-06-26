@@ -41,7 +41,7 @@ class 딜레이02(trigger_api.Trigger):
 
 class 이동안내(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        # self.set_event_ui(type=1, arg2='$02000331_BF__Seeker01__812$', arg3='3000', arg4='0')
+        # self.set_event_ui_script(type=BannerType.GameOver, script='$02000331_BF__Seeker01__812$', duration=3000, box_ids='0')
         self.set_effect(trigger_ids=[7771], visible=True) # UI  메시지 알림 사운드
         self.set_interact_object(trigger_ids=[10000802], state=0) # 첫번째 다리 재생성레버 나타남
         self.set_interact_object(trigger_ids=[10000802], state=1) # 첫번째 다리 재생성레버 활성화

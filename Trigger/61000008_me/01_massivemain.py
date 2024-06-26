@@ -1,5 +1,6 @@
 """ trigger/61000008_me/01_massivemain.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class Wait(trigger_api.Trigger):
@@ -71,7 +72,7 @@ class GameGuide01(trigger_api.Trigger):
         self.set_user_value(trigger_id=4, key='BannerCheckIn', value=1)
         self.set_sound(trigger_id=30000) # Silence
         self.set_sound(trigger_id=10000, enable=True) # Intro
-        self.set_event_ui(type=1, arg2='$61000008_ME__01_MASSIVEMAIN__0$', arg3='3000', arg4='0') # Voice 02000952
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000008_ME__01_MASSIVEMAIN__0$', duration=3000, box_ids='0') # Voice 02000952
         self.play_system_sound_in_box(box_ids=[9000], sound='DJDD_Notice_01')
         self.set_achievement(trigger_id=9001, type='trigger', achieve='dailyquest_start')
         # 길드 경험치 지급 / boxID="타겟박스id", 0이면 맵전체, type="GuildGainExp의 id" 2가 매시브이벤트
@@ -87,7 +88,7 @@ class GameGuide01(trigger_api.Trigger):
 
 class GameGuide02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$61000008_ME__01_MASSIVEMAIN__1$', arg3='4000', arg4='0') # Voice 02000981
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000008_ME__01_MASSIVEMAIN__1$', duration=4000, box_ids='0') # Voice 02000981
         self.play_system_sound_in_box(box_ids=[9000], sound='DJDD_Notice_02')
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -97,7 +98,7 @@ class GameGuide02(trigger_api.Trigger):
 
 class GameGuide03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$61000008_ME__01_MASSIVEMAIN__2$', arg3='4000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000008_ME__01_MASSIVEMAIN__2$', duration=4000, box_ids='0')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):
@@ -106,7 +107,7 @@ class GameGuide03(trigger_api.Trigger):
 
 class GameGuide04(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$61000008_ME__01_MASSIVEMAIN__3$', arg3='5000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000008_ME__01_MASSIVEMAIN__3$', duration=5000, box_ids='0')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=6000):
@@ -119,9 +120,9 @@ class GameGuide04(trigger_api.Trigger):
 # R01 시작
 class R01Start(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$61000008_ME__01_MASSIVEMAIN__4$', arg3='3000', arg4='0') # Voice 02000953
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000008_ME__01_MASSIVEMAIN__4$', duration=3000, box_ids='0') # Voice 02000953
         self.play_system_sound_in_box(box_ids=[9000], sound='DJDD_Dancetime_01')
-        self.set_event_ui(type=0, arg2='1,5') # Round1
+        self.set_event_ui_round(rounds=[1,5]) # Round1
         self.set_sound(trigger_id=10000) # Intro
         self.set_sound(trigger_id=30000, enable=True) # Silence
         self.set_effect(trigger_ids=[8000], visible=True) # Scratch
@@ -208,7 +209,7 @@ class R01DancePattern0401(trigger_api.Trigger):
 
 class R01DancePattern0402(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$61000008_ME__01_MASSIVEMAIN__9$', arg3='1000') # Voice 02000958
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000008_ME__01_MASSIVEMAIN__9$', duration=1000) # Voice 02000958
         self.play_system_sound_in_box(box_ids=[9000], sound='DJDD_Dancerandom_01')
         self.set_sound(trigger_id=20000) # Dance
         self.set_sound(trigger_id=30000, enable=True) # Silence
@@ -222,7 +223,7 @@ class R01DancePattern0402(trigger_api.Trigger):
 
 class R01DancePattern0403(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$61000008_ME__01_MASSIVEMAIN__10$', arg3='1500', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000008_ME__01_MASSIVEMAIN__10$', duration=1500, box_ids='0')
         self.set_interact_object(trigger_ids=[10000933], state=2) # 7000ms
         self.set_interact_object(trigger_ids=[10000934], state=0) # 9000ms
 
@@ -258,7 +259,7 @@ class R01DancePattern0501(trigger_api.Trigger):
 
 class R01DancePattern0502(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$61000008_ME__01_MASSIVEMAIN__11$', arg3='1000') # Voice 02000982
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000008_ME__01_MASSIVEMAIN__11$', duration=1000) # Voice 02000982
         self.play_system_sound_in_box(box_ids=[9000], sound='DJDD_Dancerandom_02')
         self.set_sound(trigger_id=20000) # Dance
         self.set_sound(trigger_id=30000, enable=True) # Silence
@@ -272,7 +273,7 @@ class R01DancePattern0502(trigger_api.Trigger):
 
 class R01DancePattern0503(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$61000008_ME__01_MASSIVEMAIN__12$', arg3='1500', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000008_ME__01_MASSIVEMAIN__12$', duration=1500, box_ids='0')
         self.set_interact_object(trigger_ids=[10000934], state=2) # 9000ms
         self.set_interact_object(trigger_ids=[10000933], state=0) # 7000ms
 
@@ -308,7 +309,7 @@ class R01DancePattern0601(trigger_api.Trigger):
 
 class R01DancePattern0602(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$61000008_ME__01_MASSIVEMAIN__13$', arg3='1000') # Voice 02000983
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000008_ME__01_MASSIVEMAIN__13$', duration=1000) # Voice 02000983
         self.play_system_sound_in_box(box_ids=[9000], sound='DJDD_Dancerandom_03')
         self.set_sound(trigger_id=20000) # Dance
         self.set_sound(trigger_id=30000, enable=True) # Silence
@@ -322,7 +323,7 @@ class R01DancePattern0602(trigger_api.Trigger):
 
 class R01DancePattern0603(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$61000008_ME__01_MASSIVEMAIN__14$', arg3='1500', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000008_ME__01_MASSIVEMAIN__14$', duration=1500, box_ids='0')
         self.set_interact_object(trigger_ids=[10000935], state=2) # 12000ms
         self.set_interact_object(trigger_ids=[10000933], state=0) # 7000ms
 
@@ -358,7 +359,7 @@ class R01DancePattern0701(trigger_api.Trigger):
 
 class R01DancePattern0702(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$61000008_ME__01_MASSIVEMAIN__15$', arg3='1000') # Voice 02000984
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000008_ME__01_MASSIVEMAIN__15$', duration=1000) # Voice 02000984
         self.play_system_sound_in_box(box_ids=[9000], sound='DJDD_Dancerandom_04')
         self.set_sound(trigger_id=20000) # Dance
         self.set_sound(trigger_id=30000, enable=True) # Silence
@@ -372,7 +373,7 @@ class R01DancePattern0702(trigger_api.Trigger):
 
 class R01DancePattern0703(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$61000008_ME__01_MASSIVEMAIN__16$', arg3='1500', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000008_ME__01_MASSIVEMAIN__16$', duration=1500, box_ids='0')
         self.set_interact_object(trigger_ids=[10000933], state=2) # 7000ms
         self.set_interact_object(trigger_ids=[10000935], state=0) # 12000ms
 
@@ -413,7 +414,7 @@ class R01_GameStart(trigger_api.Trigger):
         self.set_interact_object(trigger_ids=[10000934], state=2) # 9000ms
         self.set_interact_object(trigger_ids=[10000935], state=2) # 12000ms
         self.set_interact_object(trigger_ids=[10000936], state=2) # 15000ms
-        self.set_event_ui(type=1, arg2='$61000008_ME__01_MASSIVEMAIN__17$', arg3='4000') # Voice 02000959
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000008_ME__01_MASSIVEMAIN__17$', duration=4000) # Voice 02000959
         self.play_system_sound_in_box(box_ids=[9000], sound='DJDD_Round_01')
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -423,7 +424,7 @@ class R01_GameStart(trigger_api.Trigger):
 
 class R01_GameTimerStart(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_timer(timer_id='11111', seconds=30, start_delay=1, interval=1, v_offset=-40) # Round1 / 30sec  / UI 표시
+        self.set_timer(timer_id='11111', seconds=30, auto_remove=True, display=True, v_offset=-40) # Round1 / 30sec  / UI 표시
         self.set_user_value(trigger_id=8, key='CheerUpTimer', value=1) # 이속 증가 버프
         self.set_user_value(trigger_id=7, key='GameGuide', value=1) # 가이드 : 숫자 발판
 
@@ -957,12 +958,12 @@ class R02Start(trigger_api.Trigger):
         self.set_user_value(trigger_id=8420, key='Barrier42', value=10)
         self.set_user_value(trigger_id=8430, key='Barrier43', value=10)
         self.set_user_value(trigger_id=8440, key='Barrier44', value=10)
-        self.set_event_ui(type=1, arg2='$61000008_ME__01_MASSIVEMAIN__5$', arg3='3000', arg4='0') # Voice 02000954
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000008_ME__01_MASSIVEMAIN__5$', duration=3000, box_ids='0') # Voice 02000954
         self.play_system_sound_in_box(box_ids=[9000], sound='DJDD_Dancetime_02')
         self.set_sound(trigger_id=40000) # Intro
         self.set_sound(trigger_id=30000, enable=True) # Silence
         self.set_effect(trigger_ids=[8000], visible=True) # Scratch
-        self.set_event_ui(type=0, arg2='2,5') # Round2
+        self.set_event_ui_round(rounds=[2,5]) # Round2
         self.start_mini_game_round(box_id=9001, round=2)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -1043,7 +1044,7 @@ class R02DancePattern0401(trigger_api.Trigger):
 
 class R02DancePattern0402(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$61000008_ME__01_MASSIVEMAIN__9$', arg3='1000') # Voice 02000958
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000008_ME__01_MASSIVEMAIN__9$', duration=1000) # Voice 02000958
         self.play_system_sound_in_box(box_ids=[9000], sound='DJDD_Dancerandom_01')
         self.set_sound(trigger_id=20000) # Dance
         self.set_sound(trigger_id=30000, enable=True) # Silence
@@ -1057,7 +1058,7 @@ class R02DancePattern0402(trigger_api.Trigger):
 
 class R02DancePattern0403(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$61000008_ME__01_MASSIVEMAIN__10$', arg3='1500', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000008_ME__01_MASSIVEMAIN__10$', duration=1500, box_ids='0')
         self.set_interact_object(trigger_ids=[10000933], state=2) # 7000ms
         self.set_interact_object(trigger_ids=[10000934], state=0) # 9000ms
 
@@ -1093,7 +1094,7 @@ class R02DancePattern0501(trigger_api.Trigger):
 
 class R02DancePattern0502(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$61000008_ME__01_MASSIVEMAIN__11$', arg3='1000') # Voice 02000982
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000008_ME__01_MASSIVEMAIN__11$', duration=1000) # Voice 02000982
         self.play_system_sound_in_box(box_ids=[9000], sound='DJDD_Dancerandom_02')
         self.set_sound(trigger_id=20000) # Dance
         self.set_sound(trigger_id=30000, enable=True) # Silence
@@ -1107,7 +1108,7 @@ class R02DancePattern0502(trigger_api.Trigger):
 
 class R02DancePattern0503(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$61000008_ME__01_MASSIVEMAIN__12$', arg3='1500', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000008_ME__01_MASSIVEMAIN__12$', duration=1500, box_ids='0')
         self.set_interact_object(trigger_ids=[10000934], state=2) # 9000ms
         self.set_interact_object(trigger_ids=[10000933], state=0) # 7000ms
 
@@ -1143,7 +1144,7 @@ class R02DancePattern0601(trigger_api.Trigger):
 
 class R02DancePattern0602(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$61000008_ME__01_MASSIVEMAIN__13$', arg3='1000') # Voice 02000983
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000008_ME__01_MASSIVEMAIN__13$', duration=1000) # Voice 02000983
         self.play_system_sound_in_box(box_ids=[9000], sound='DJDD_Dancerandom_03')
         self.set_sound(trigger_id=20000) # Dance
         self.set_sound(trigger_id=30000, enable=True) # Silence
@@ -1157,7 +1158,7 @@ class R02DancePattern0602(trigger_api.Trigger):
 
 class R02DancePattern0603(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$61000008_ME__01_MASSIVEMAIN__14$', arg3='1500', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000008_ME__01_MASSIVEMAIN__14$', duration=1500, box_ids='0')
         self.set_interact_object(trigger_ids=[10000935], state=2) # 12000ms
         self.set_interact_object(trigger_ids=[10000933], state=0) # 7000ms
 
@@ -1193,7 +1194,7 @@ class R02DancePattern0701(trigger_api.Trigger):
 
 class R02DancePattern0702(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$61000008_ME__01_MASSIVEMAIN__15$', arg3='1000') # Voice 02000984
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000008_ME__01_MASSIVEMAIN__15$', duration=1000) # Voice 02000984
         self.play_system_sound_in_box(box_ids=[9000], sound='DJDD_Dancerandom_04')
         self.set_sound(trigger_id=20000) # Dance
         self.set_sound(trigger_id=30000, enable=True) # Silence
@@ -1207,7 +1208,7 @@ class R02DancePattern0702(trigger_api.Trigger):
 
 class R02DancePattern0703(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$61000008_ME__01_MASSIVEMAIN__16$', arg3='1500', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000008_ME__01_MASSIVEMAIN__16$', duration=1500, box_ids='0')
         self.set_interact_object(trigger_ids=[10000933], state=2) # 7000ms
         self.set_interact_object(trigger_ids=[10000935], state=0) # 12000ms
 
@@ -1248,7 +1249,7 @@ class R02_GameStart(trigger_api.Trigger):
         self.set_interact_object(trigger_ids=[10000934], state=2) # 9000ms
         self.set_interact_object(trigger_ids=[10000935], state=2) # 12000ms
         self.set_interact_object(trigger_ids=[10000936], state=2) # 15000ms
-        self.set_event_ui(type=1, arg2='$61000008_ME__01_MASSIVEMAIN__18$', arg3='4000') # Voice 02000960
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000008_ME__01_MASSIVEMAIN__18$', duration=4000) # Voice 02000960
         self.play_system_sound_in_box(box_ids=[9000], sound='DJDD_Round_02')
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -1258,7 +1259,7 @@ class R02_GameStart(trigger_api.Trigger):
 
 class R02_GameTimerStart(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_timer(timer_id='11111', seconds=20, start_delay=1, interval=1, v_offset=-40) # Round2 / 20sec  / UI 표시
+        self.set_timer(timer_id='11111', seconds=20, auto_remove=True, display=True, v_offset=-40) # Round2 / 20sec  / UI 표시
         self.set_user_value(trigger_id=8, key='CheerUpTimer', value=2) # 이속 증가 버프
         self.set_user_value(trigger_id=7, key='GameGuide', value=2) # 가이드 : 숫자 발판
 
@@ -1359,12 +1360,12 @@ class R03Start(trigger_api.Trigger):
         self.set_user_value(trigger_id=8420, key='Barrier42', value=10)
         self.set_user_value(trigger_id=8430, key='Barrier43', value=10)
         self.set_user_value(trigger_id=8440, key='Barrier44', value=10)
-        self.set_event_ui(type=1, arg2='$61000008_ME__01_MASSIVEMAIN__6$', arg3='3000', arg4='0') # Voice 02000955
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000008_ME__01_MASSIVEMAIN__6$', duration=3000, box_ids='0') # Voice 02000955
         self.play_system_sound_in_box(box_ids=[9000], sound='DJDD_Dancetime_03')
         self.set_sound(trigger_id=40000) # Intro
         self.set_sound(trigger_id=30000, enable=True) # Silence
         self.set_effect(trigger_ids=[8000], visible=True) # Scratch
-        self.set_event_ui(type=0, arg2='3,5') # Round3
+        self.set_event_ui_round(rounds=[3,5]) # Round3
         self.start_mini_game_round(box_id=9001, round=3)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -1445,7 +1446,7 @@ class R03DancePattern0401(trigger_api.Trigger):
 
 class R03DancePattern0402(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$61000008_ME__01_MASSIVEMAIN__9$', arg3='1000') # Voice 02000958
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000008_ME__01_MASSIVEMAIN__9$', duration=1000) # Voice 02000958
         self.play_system_sound_in_box(box_ids=[9000], sound='DJDD_Dancerandom_01')
         self.set_sound(trigger_id=20000) # Dance
         self.set_sound(trigger_id=30000, enable=True) # Silence
@@ -1459,7 +1460,7 @@ class R03DancePattern0402(trigger_api.Trigger):
 
 class R03DancePattern0403(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$61000008_ME__01_MASSIVEMAIN__10$', arg3='1500', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000008_ME__01_MASSIVEMAIN__10$', duration=1500, box_ids='0')
         self.set_interact_object(trigger_ids=[10000933], state=2) # 7000ms
         self.set_interact_object(trigger_ids=[10000934], state=0) # 9000ms
 
@@ -1495,7 +1496,7 @@ class R03DancePattern0501(trigger_api.Trigger):
 
 class R03DancePattern0502(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$61000008_ME__01_MASSIVEMAIN__11$', arg3='1000') # Voice 02000982
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000008_ME__01_MASSIVEMAIN__11$', duration=1000) # Voice 02000982
         self.play_system_sound_in_box(box_ids=[9000], sound='DJDD_Dancerandom_02')
         self.set_sound(trigger_id=20000) # Dance
         self.set_sound(trigger_id=30000, enable=True) # Silence
@@ -1509,7 +1510,7 @@ class R03DancePattern0502(trigger_api.Trigger):
 
 class R03DancePattern0503(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$61000008_ME__01_MASSIVEMAIN__12$', arg3='1500', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000008_ME__01_MASSIVEMAIN__12$', duration=1500, box_ids='0')
         self.set_interact_object(trigger_ids=[10000934], state=2) # 9000ms
         self.set_interact_object(trigger_ids=[10000933], state=0) # 7000ms
 
@@ -1545,7 +1546,7 @@ class R03DancePattern0601(trigger_api.Trigger):
 
 class R03DancePattern0602(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$61000008_ME__01_MASSIVEMAIN__13$', arg3='1000') # Voice 02000983
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000008_ME__01_MASSIVEMAIN__13$', duration=1000) # Voice 02000983
         self.play_system_sound_in_box(box_ids=[9000], sound='DJDD_Dancerandom_03')
         self.set_sound(trigger_id=20000) # Dance
         self.set_sound(trigger_id=30000, enable=True) # Silence
@@ -1559,7 +1560,7 @@ class R03DancePattern0602(trigger_api.Trigger):
 
 class R03DancePattern0603(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$61000008_ME__01_MASSIVEMAIN__14$', arg3='1500', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000008_ME__01_MASSIVEMAIN__14$', duration=1500, box_ids='0')
         self.set_interact_object(trigger_ids=[10000935], state=2) # 12000ms
         self.set_interact_object(trigger_ids=[10000933], state=0) # 7000ms
 
@@ -1595,7 +1596,7 @@ class R03DancePattern0701(trigger_api.Trigger):
 
 class R03DancePattern0702(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$61000008_ME__01_MASSIVEMAIN__15$', arg3='1000') # Voice 02000984
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000008_ME__01_MASSIVEMAIN__15$', duration=1000) # Voice 02000984
         self.play_system_sound_in_box(box_ids=[9000], sound='DJDD_Dancerandom_04')
         self.set_sound(trigger_id=20000) # Dance
         self.set_sound(trigger_id=30000, enable=True) # Silence
@@ -1609,7 +1610,7 @@ class R03DancePattern0702(trigger_api.Trigger):
 
 class R03DancePattern0703(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$61000008_ME__01_MASSIVEMAIN__16$', arg3='1500', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000008_ME__01_MASSIVEMAIN__16$', duration=1500, box_ids='0')
         self.set_interact_object(trigger_ids=[10000933], state=2) # 7000ms
         self.set_interact_object(trigger_ids=[10000935], state=0) # 12000ms
 
@@ -1650,7 +1651,7 @@ class R03_GameStart(trigger_api.Trigger):
         self.set_interact_object(trigger_ids=[10000934], state=2) # 9000ms
         self.set_interact_object(trigger_ids=[10000935], state=2) # 12000ms
         self.set_interact_object(trigger_ids=[10000936], state=2) # 15000ms
-        self.set_event_ui(type=1, arg2='$61000008_ME__01_MASSIVEMAIN__19$', arg3='4000') # Voice 02000961
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000008_ME__01_MASSIVEMAIN__19$', duration=4000) # Voice 02000961
         self.play_system_sound_in_box(box_ids=[9000], sound='DJDD_Round_03')
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -1660,7 +1661,7 @@ class R03_GameStart(trigger_api.Trigger):
 
 class R03_GameTimerStart(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_timer(timer_id='11111', seconds=15, start_delay=1, interval=1, v_offset=-40) # Round3 / 15sec  / UI 표시
+        self.set_timer(timer_id='11111', seconds=15, auto_remove=True, display=True, v_offset=-40) # Round3 / 15sec  / UI 표시
         self.set_user_value(trigger_id=8, key='CheerUpTimer', value=3) # 이속 증가 버프
         self.set_user_value(trigger_id=7, key='GameGuide', value=3) # 가이드 : 숫자 발판
 
@@ -1761,12 +1762,12 @@ class R04Start(trigger_api.Trigger):
         self.set_user_value(trigger_id=8420, key='Barrier42', value=10)
         self.set_user_value(trigger_id=8430, key='Barrier43', value=10)
         self.set_user_value(trigger_id=8440, key='Barrier44', value=10)
-        self.set_event_ui(type=1, arg2='$61000008_ME__01_MASSIVEMAIN__7$', arg3='3000', arg4='0') # Voice 02000956
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000008_ME__01_MASSIVEMAIN__7$', duration=3000, box_ids='0') # Voice 02000956
         self.play_system_sound_in_box(box_ids=[9000], sound='DJDD_Dancetime_04')
         self.set_sound(trigger_id=40000) # Intro
         self.set_sound(trigger_id=30000, enable=True) # Silence
         self.set_effect(trigger_ids=[8000], visible=True) # Scratch
-        self.set_event_ui(type=0, arg2='4,5') # Round4
+        self.set_event_ui_round(rounds=[4,5]) # Round4
         self.start_mini_game_round(box_id=9001, round=4)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -1847,7 +1848,7 @@ class R04DancePattern0401(trigger_api.Trigger):
 
 class R04DancePattern0402(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$61000008_ME__01_MASSIVEMAIN__9$', arg3='1000') # Voice 02000958
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000008_ME__01_MASSIVEMAIN__9$', duration=1000) # Voice 02000958
         self.play_system_sound_in_box(box_ids=[9000], sound='DJDD_Dancerandom_01')
         self.set_sound(trigger_id=20000) # Dance
         self.set_sound(trigger_id=30000, enable=True) # Silence
@@ -1861,7 +1862,7 @@ class R04DancePattern0402(trigger_api.Trigger):
 
 class R04DancePattern0403(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$61000008_ME__01_MASSIVEMAIN__10$', arg3='1500', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000008_ME__01_MASSIVEMAIN__10$', duration=1500, box_ids='0')
         self.set_interact_object(trigger_ids=[10000933], state=2) # 7000ms
         self.set_interact_object(trigger_ids=[10000934], state=0) # 9000ms
 
@@ -1897,7 +1898,7 @@ class R04DancePattern0501(trigger_api.Trigger):
 
 class R04DancePattern0502(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$61000008_ME__01_MASSIVEMAIN__11$', arg3='1000') # Voice 02000982
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000008_ME__01_MASSIVEMAIN__11$', duration=1000) # Voice 02000982
         self.play_system_sound_in_box(box_ids=[9000], sound='DJDD_Dancerandom_02')
         self.set_sound(trigger_id=20000) # Dance
         self.set_sound(trigger_id=30000, enable=True) # Silence
@@ -1911,7 +1912,7 @@ class R04DancePattern0502(trigger_api.Trigger):
 
 class R04DancePattern0503(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$61000008_ME__01_MASSIVEMAIN__12$', arg3='1500', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000008_ME__01_MASSIVEMAIN__12$', duration=1500, box_ids='0')
         self.set_interact_object(trigger_ids=[10000934], state=2) # 9000ms
         self.set_interact_object(trigger_ids=[10000933], state=0) # 7000ms
 
@@ -1947,7 +1948,7 @@ class R04DancePattern0601(trigger_api.Trigger):
 
 class R04DancePattern0602(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$61000008_ME__01_MASSIVEMAIN__13$', arg3='1000') # Voice 02000983
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000008_ME__01_MASSIVEMAIN__13$', duration=1000) # Voice 02000983
         self.play_system_sound_in_box(box_ids=[9000], sound='DJDD_Dancerandom_03')
         self.set_sound(trigger_id=20000) # Dance
         self.set_sound(trigger_id=30000, enable=True) # Silence
@@ -1961,7 +1962,7 @@ class R04DancePattern0602(trigger_api.Trigger):
 
 class R04DancePattern0603(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$61000008_ME__01_MASSIVEMAIN__14$', arg3='1500', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000008_ME__01_MASSIVEMAIN__14$', duration=1500, box_ids='0')
         self.set_interact_object(trigger_ids=[10000935], state=2) # 12000ms
         self.set_interact_object(trigger_ids=[10000933], state=0) # 7000ms
 
@@ -1997,7 +1998,7 @@ class R04DancePattern0701(trigger_api.Trigger):
 
 class R04DancePattern0702(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$61000008_ME__01_MASSIVEMAIN__15$', arg3='1000') # Voice 02000984
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000008_ME__01_MASSIVEMAIN__15$', duration=1000) # Voice 02000984
         self.play_system_sound_in_box(box_ids=[9000], sound='DJDD_Dancerandom_04')
         self.set_sound(trigger_id=20000) # Dance
         self.set_sound(trigger_id=30000, enable=True) # Silence
@@ -2011,7 +2012,7 @@ class R04DancePattern0702(trigger_api.Trigger):
 
 class R04DancePattern0703(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$61000008_ME__01_MASSIVEMAIN__16$', arg3='1500', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000008_ME__01_MASSIVEMAIN__16$', duration=1500, box_ids='0')
         self.set_interact_object(trigger_ids=[10000933], state=2) # 7000ms
         self.set_interact_object(trigger_ids=[10000935], state=0) # 12000ms
 
@@ -2086,7 +2087,7 @@ class R04_GambleGuide01(trigger_api.Trigger):
         self.set_interact_object(trigger_ids=[10000934], state=2) # 9000ms
         self.set_interact_object(trigger_ids=[10000935], state=2) # 12000ms
         self.set_interact_object(trigger_ids=[10000936], state=2) # 15000ms
-        self.set_event_ui(type=1, arg2='$61000008_ME__01_MASSIVEMAIN__22$', arg3='3000') # Voice 02000964
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000008_ME__01_MASSIVEMAIN__22$', duration=3000) # Voice 02000964
         self.play_system_sound_in_box(box_ids=[9000], sound='DJDD_Round_06')
         self.write_log(log_name='dancedancestop', trigger_id=9001, event='system_event', level=4, sub_event='gamble')
 
@@ -2097,7 +2098,7 @@ class R04_GambleGuide01(trigger_api.Trigger):
 
 class R04_GambleGuide02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$61000008_ME__01_MASSIVEMAIN__23$', arg3='3000')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000008_ME__01_MASSIVEMAIN__23$', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -2106,7 +2107,7 @@ class R04_GambleGuide02(trigger_api.Trigger):
 
 class R04_GambleTimerStart(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_timer(timer_id='11111', seconds=15, start_delay=1, interval=1, v_offset=-40) # Gamble / 15sec  / UI 표시
+        self.set_timer(timer_id='11111', seconds=15, auto_remove=True, display=True, v_offset=-40) # Gamble / 15sec  / UI 표시
         self.set_user_value(trigger_id=8, key='CheerUpTimer', value=3) # 이속 증가 버프
         self.set_user_value(trigger_id=7, key='GameGuide', value=6) # 가이드 : 붉은색  발판
 
@@ -2286,7 +2287,7 @@ class R04_JackpotGuide01(trigger_api.Trigger):
         self.set_interact_object(trigger_ids=[10000934], state=2) # 9000ms
         self.set_interact_object(trigger_ids=[10000935], state=2) # 12000ms
         self.set_interact_object(trigger_ids=[10000936], state=2) # 15000ms
-        self.set_event_ui(type=1, arg2='$61000008_ME__01_MASSIVEMAIN__24$', arg3='3000') # Voice 02000964
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000008_ME__01_MASSIVEMAIN__24$', duration=3000) # Voice 02000964
         self.play_system_sound_in_box(box_ids=[9000], sound='DJDD_Round_06')
         self.write_log(log_name='dancedancestop', trigger_id=9001, event='system_event', level=4, sub_event='jackpot')
 
@@ -2297,7 +2298,7 @@ class R04_JackpotGuide01(trigger_api.Trigger):
 
 class R04_JackpotGuide02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$61000008_ME__01_MASSIVEMAIN__25$', arg3='3000')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000008_ME__01_MASSIVEMAIN__25$', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -2306,7 +2307,7 @@ class R04_JackpotGuide02(trigger_api.Trigger):
 
 class R04_JackpotTimerStart(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_timer(timer_id='11111', seconds=20, start_delay=1, interval=1, v_offset=-40) # Jackpot / 20sec  / UI 표시
+        self.set_timer(timer_id='11111', seconds=20, auto_remove=True, display=True, v_offset=-40) # Jackpot / 20sec  / UI 표시
         self.set_user_value(trigger_id=8, key='CheerUpTimer', value=2) # 이속 증가 버프
         self.set_user_value(trigger_id=7, key='GameGuide', value=7) # 가이드 : 숫자 발판
 
@@ -2483,9 +2484,9 @@ class R05StartGamblePass(trigger_api.Trigger):
         self.set_user_value(trigger_id=8420, key='Barrier42', value=10)
         self.set_user_value(trigger_id=8430, key='Barrier43', value=10)
         self.set_user_value(trigger_id=8440, key='Barrier44', value=10)
-        self.set_event_ui(type=1, arg2='$61000008_ME__01_MASSIVEMAIN__26$', arg3='5000', arg4='0') # Voice 02000966
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000008_ME__01_MASSIVEMAIN__26$', duration=5000, box_ids='0') # Voice 02000966
         self.play_system_sound_in_box(box_ids=[9000], sound='DJDD_Dancing_02')
-        self.set_event_ui(type=0, arg2='5,5') # Round5
+        self.set_event_ui_round(rounds=[5,5]) # Round5
         self.start_mini_game_round(box_id=9001, round=5)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -2511,9 +2512,9 @@ class R05StartGambleFail(trigger_api.Trigger):
         self.set_user_value(trigger_id=8420, key='Barrier42', value=10)
         self.set_user_value(trigger_id=8430, key='Barrier43', value=10)
         self.set_user_value(trigger_id=8440, key='Barrier44', value=10)
-        self.set_event_ui(type=1, arg2='$61000008_ME__01_MASSIVEMAIN__27$', arg3='4000', arg4='0') # Voice 02000967
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000008_ME__01_MASSIVEMAIN__27$', duration=4000, box_ids='0') # Voice 02000967
         self.play_system_sound_in_box(box_ids=[9000], sound='DJDD_Dancing_03')
-        self.set_event_ui(type=0, arg2='5,5') # Round5
+        self.set_event_ui_round(rounds=[5,5]) # Round5
         self.start_mini_game_round(box_id=9001, round=5)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -2530,7 +2531,7 @@ class R04_GameStart(trigger_api.Trigger):
         self.set_interact_object(trigger_ids=[10000934], state=2) # 9000ms
         self.set_interact_object(trigger_ids=[10000935], state=2) # 12000ms
         self.set_interact_object(trigger_ids=[10000936], state=2) # 15000ms
-        self.set_event_ui(type=1, arg2='$61000008_ME__01_MASSIVEMAIN__20$', arg3='4000') # Voice 02000962
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000008_ME__01_MASSIVEMAIN__20$', duration=4000) # Voice 02000962
         self.play_system_sound_in_box(box_ids=[9000], sound='DJDD_Round_04')
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -2540,7 +2541,7 @@ class R04_GameStart(trigger_api.Trigger):
 
 class R04_GameTimerStart(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_timer(timer_id='11111', seconds=10, start_delay=1, interval=1, v_offset=-40) # Round4 / 10sec  / UI 표시
+        self.set_timer(timer_id='11111', seconds=10, auto_remove=True, display=True, v_offset=-40) # Round4 / 10sec  / UI 표시
         self.set_user_value(trigger_id=8, key='CheerUpTimer', value=4) # 이속 증가 버프
         self.set_user_value(trigger_id=7, key='GameGuide', value=4) # 가이드 : 숫자 발판
 
@@ -2572,7 +2573,7 @@ class R05DanceTimeDelay(trigger_api.Trigger):
         self.set_sound(trigger_id=40000) # Intro
         self.set_sound(trigger_id=30000, enable=True) # Silence
         self.set_effect(trigger_ids=[8000], visible=True) # Scratch
-        self.set_event_ui(type=1, arg2='$61000008_ME__01_MASSIVEMAIN__33$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000008_ME__01_MASSIVEMAIN__33$', duration=3000, box_ids='0')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=1500):
@@ -2654,12 +2655,12 @@ class R05Start(trigger_api.Trigger):
         self.set_user_value(trigger_id=8420, key='Barrier42', value=10)
         self.set_user_value(trigger_id=8430, key='Barrier43', value=10)
         self.set_user_value(trigger_id=8440, key='Barrier44', value=10)
-        self.set_event_ui(type=1, arg2='$61000008_ME__01_MASSIVEMAIN__8$', arg3='3000', arg4='0') # Voice 02000957
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000008_ME__01_MASSIVEMAIN__8$', duration=3000, box_ids='0') # Voice 02000957
         self.play_system_sound_in_box(box_ids=[9000], sound='DJDD_Dancetime_05')
         self.set_sound(trigger_id=40000) # Intro
         self.set_sound(trigger_id=30000, enable=True) # Silence
         self.set_effect(trigger_ids=[8000], visible=True) # Scratch
-        self.set_event_ui(type=0, arg2='5,5') # Round5
+        self.set_event_ui_round(rounds=[5,5]) # Round5
         self.start_mini_game_round(box_id=9001, round=5)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -2740,7 +2741,7 @@ class R05DancePattern0401(trigger_api.Trigger):
 
 class R05DancePattern0402(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$61000008_ME__01_MASSIVEMAIN__34$', arg3='1000')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000008_ME__01_MASSIVEMAIN__34$', duration=1000)
         self.set_sound(trigger_id=20000) # Dance
         self.set_sound(trigger_id=30000, enable=True) # Silence
         self.set_effect(trigger_ids=[8000], visible=True) # Scratch
@@ -2753,7 +2754,7 @@ class R05DancePattern0402(trigger_api.Trigger):
 
 class R05DancePattern0403(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$61000008_ME__01_MASSIVEMAIN__35$', arg3='1500', arg4='0') # Voice 02000985
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000008_ME__01_MASSIVEMAIN__35$', duration=1500, box_ids='0') # Voice 02000985
         self.play_system_sound_in_box(box_ids=[9000], sound='DJDD_Dancerandom_05')
         self.set_interact_object(trigger_ids=[10000933], state=2) # 7000ms
         self.set_interact_object(trigger_ids=[10000934], state=0) # 9000ms
@@ -2790,7 +2791,7 @@ class R05DancePattern0501(trigger_api.Trigger):
 
 class R05DancePattern0502(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$61000008_ME__01_MASSIVEMAIN__36$', arg3='1000')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000008_ME__01_MASSIVEMAIN__36$', duration=1000)
         self.set_sound(trigger_id=20000) # Dance
         self.set_sound(trigger_id=30000, enable=True) # Silence
         self.set_effect(trigger_ids=[8000], visible=True) # Scratch
@@ -2803,7 +2804,7 @@ class R05DancePattern0502(trigger_api.Trigger):
 
 class R05DancePattern0503(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$61000008_ME__01_MASSIVEMAIN__37$', arg3='1500', arg4='0') # Voice 02000985
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000008_ME__01_MASSIVEMAIN__37$', duration=1500, box_ids='0') # Voice 02000985
         self.play_system_sound_in_box(box_ids=[9000], sound='DJDD_Dancerandom_05')
         self.set_interact_object(trigger_ids=[10000934], state=2) # 9000ms
         self.set_interact_object(trigger_ids=[10000933], state=0) # 7000ms
@@ -2840,7 +2841,7 @@ class R05DancePattern0601(trigger_api.Trigger):
 
 class R05DancePattern0602(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$61000008_ME__01_MASSIVEMAIN__38$', arg3='1000')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000008_ME__01_MASSIVEMAIN__38$', duration=1000)
         self.set_sound(trigger_id=20000) # Dance
         self.set_sound(trigger_id=30000, enable=True) # Silence
         self.set_effect(trigger_ids=[8000], visible=True) # Scratch
@@ -2853,7 +2854,7 @@ class R05DancePattern0602(trigger_api.Trigger):
 
 class R05DancePattern0603(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$61000008_ME__01_MASSIVEMAIN__39$', arg3='1500', arg4='0') # Voice 02000985
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000008_ME__01_MASSIVEMAIN__39$', duration=1500, box_ids='0') # Voice 02000985
         self.play_system_sound_in_box(box_ids=[9000], sound='DJDD_Dancerandom_05')
         self.set_interact_object(trigger_ids=[10000935], state=2) # 12000ms
         self.set_interact_object(trigger_ids=[10000933], state=0) # 7000ms
@@ -2890,7 +2891,7 @@ class R05DancePattern0701(trigger_api.Trigger):
 
 class R05DancePattern0702(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$61000008_ME__01_MASSIVEMAIN__40$', arg3='1000')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000008_ME__01_MASSIVEMAIN__40$', duration=1000)
         self.set_sound(trigger_id=20000) # Dance
         self.set_sound(trigger_id=30000, enable=True) # Silence
         self.set_effect(trigger_ids=[8000], visible=True) # Scratch
@@ -2903,7 +2904,7 @@ class R05DancePattern0702(trigger_api.Trigger):
 
 class R05DancePattern0703(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$61000008_ME__01_MASSIVEMAIN__41$', arg3='1500', arg4='0') # Voice 02000985
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000008_ME__01_MASSIVEMAIN__41$', duration=1500, box_ids='0') # Voice 02000985
         self.play_system_sound_in_box(box_ids=[9000], sound='DJDD_Dancerandom_05')
         self.set_interact_object(trigger_ids=[10000933], state=2) # 7000ms
         self.set_interact_object(trigger_ids=[10000935], state=0) # 12000ms
@@ -2945,7 +2946,7 @@ class R05_GameStart(trigger_api.Trigger):
         self.set_interact_object(trigger_ids=[10000934], state=2) # 9000ms
         self.set_interact_object(trigger_ids=[10000935], state=2) # 12000ms
         self.set_interact_object(trigger_ids=[10000936], state=2) # 15000ms
-        self.set_event_ui(type=1, arg2='$61000008_ME__01_MASSIVEMAIN__21$', arg3='4000') # Voice 02000963
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000008_ME__01_MASSIVEMAIN__21$', duration=4000) # Voice 02000963
         self.play_system_sound_in_box(box_ids=[9000], sound='DJDD_Round_05')
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -2955,7 +2956,7 @@ class R05_GameStart(trigger_api.Trigger):
 
 class R05_GameTimerStart(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_timer(timer_id='11111', seconds=10, start_delay=1, interval=1, v_offset=-40) # Round5 / 10sec  / UI 표시
+        self.set_timer(timer_id='11111', seconds=10, auto_remove=True, display=True, v_offset=-40) # Round5 / 10sec  / UI 표시
         self.set_user_value(trigger_id=8, key='CheerUpTimer', value=4) # 이속 증가 버프
         self.set_user_value(trigger_id=7, key='GameGuide', value=5) # 가이드 : 숫자 발판
 
@@ -3064,8 +3065,8 @@ class MiniGameCameraDirection(trigger_api.Trigger):
 class GameOver(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.move_user(map_id=61000008, portal_id=3, box_id=9002)
-        self.set_event_ui(type=3, arg2='$61000008_ME__01_MASSIVEMAIN__29$', arg3='3000', arg4='9001') # Voice 02000968
-        self.set_event_ui(type=4, arg2='$61000008_ME__01_MASSIVEMAIN__30$', arg3='3000', arg4='!9001') # Voice 02000969
+        self.set_event_ui_script(type=BannerType.Bonus, script='$61000008_ME__01_MASSIVEMAIN__29$', duration=3000, box_ids='9001') # Voice 02000968
+        self.set_event_ui_script(type=BannerType.Draw, script='$61000008_ME__01_MASSIVEMAIN__30$', duration=3000, box_ids='!9001') # Voice 02000969
         self.play_system_sound_in_box(box_ids=[9001], sound='DJDD_Ending_01')
         self.play_system_sound_in_box(box_ids=[9010,9011,9012,9013], sound='DJDD_Ending_02')
         self.set_achievement(trigger_id=9001, type='trigger', achieve='ddstop_win')
@@ -3091,8 +3092,8 @@ class GiveReward(trigger_api.Trigger):
 class FailAll(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.end_mini_game(winner_box_id=9001, game_name='dancedancestop')
-        self.set_event_ui(type=0, arg2='0,0')
-        self.set_event_ui(type=5, arg2='$61000008_ME__01_MASSIVEMAIN__28$', arg3='5000') # Voice 02000969
+        self.set_event_ui_round(rounds=[0,0])
+        self.set_event_ui_script(type=BannerType.Success, script='$61000008_ME__01_MASSIVEMAIN__28$', duration=5000) # Voice 02000969
         self.play_system_sound_in_box(box_ids=[9000], sound='DJDD_Ending_02')
         self.set_mesh(trigger_ids=[8900,8901,8902,8903,8904,8905,8906,8907,8908,8909,8910,8911,8912,8913,8914], start_delay=400) # Barrier
         self.set_user_value(trigger_id=4, key='BannerCheckIn', value=1)
@@ -3144,7 +3145,7 @@ class LeaveAll(trigger_api.Trigger):
         self.unset_mini_game_area_for_hack() # 해킹 보안 종료
         self.set_sound(trigger_id=40000) # Game
         self.set_user_value(trigger_id=5, key='BannerNumber', value=0)
-        self.set_event_ui(type=1, arg2='$61000008_ME__01_MASSIVEMAIN__31$', arg3='10000') # Voice 02000970
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000008_ME__01_MASSIVEMAIN__31$', duration=10000) # Voice 02000970
         self.play_system_sound_in_box(box_ids=[9000], sound='DJDD_Ending_03')
         self.set_sound(trigger_id=10000) # Intro
 

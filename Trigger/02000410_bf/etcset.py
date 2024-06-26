@@ -1,5 +1,6 @@
 """ trigger/02000410_bf/etcset.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class Ready(trigger_api.Trigger):
@@ -12,7 +13,7 @@ class Ready(trigger_api.Trigger):
 class 타이머(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=28000):
-            self.set_event_ui(type=1, arg2='$02000410_BF__BARRICADE_GIVEUP_0$', arg3='5000')
+            self.set_event_ui_script(type=BannerType.GameOver, script='$02000410_BF__BARRICADE_GIVEUP_0$', duration=5000)
             self.dungeon_enable_give_up(is_enable=True)
             return 입구포탈제거(self.ctx)
 

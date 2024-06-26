@@ -13,7 +13,7 @@ class 대기(trigger_api.Trigger):
 
 class 타이머시작(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_timer(timer_id='1', seconds=10, start_delay=1, interval=1, v_offset=-40)
+        self.set_timer(timer_id='1', seconds=10, auto_remove=True, display=True, v_offset=-40)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.user_value(key='Timer') >= 2:

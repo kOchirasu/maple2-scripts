@@ -13,7 +13,7 @@ class 대기(trigger_api.Trigger):
 
 class 타이머1_시작(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_timer(timer_id='1', seconds=20, start_delay=1, interval=1, v_offset=-40)
+        self.set_timer(timer_id='1', seconds=20, auto_remove=True, display=True, v_offset=-40)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.user_value(key='TimerStart') >= 9:
@@ -38,7 +38,7 @@ class 리셋_1(trigger_api.Trigger):
 
 class 타이머2_시작(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_timer(timer_id='2', seconds=20, start_delay=1, interval=1, v_offset=-40)
+        self.set_timer(timer_id='2', seconds=20, auto_remove=True, display=True, v_offset=-40)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.user_value(key='TimerStart') >= 9:
@@ -63,7 +63,7 @@ class 리셋_2(trigger_api.Trigger):
 
 class 타이머3_시작(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_timer(timer_id='3', seconds=20, start_delay=1, interval=1, v_offset=-40)
+        self.set_timer(timer_id='3', seconds=20, auto_remove=True, display=True, v_offset=-40)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.user_value(key='TimerStart') >= 9:

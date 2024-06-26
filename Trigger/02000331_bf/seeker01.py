@@ -1,5 +1,6 @@
 """ trigger/02000331_bf/seeker01.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 #include dungeon_common/checkusercount.py
 from dungeon_common.checkusercount import *
@@ -215,7 +216,7 @@ class 몬스터출현01_생성랜덤01(trigger_api.Trigger):
 class 몬스터출현01_1번생성(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.spawn_monster(spawn_ids=[901,902], auto_target=False)
-        self.set_event_ui(type=1, arg2='$02000331_BF__Seeker01__801$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02000331_BF__Seeker01__801$', duration=3000, box_ids='0')
         self.set_effect(trigger_ids=[7771], visible=True) # UI  메시지 알림 사운드
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -226,7 +227,7 @@ class 몬스터출현01_1번생성(trigger_api.Trigger):
 class 몬스터출현01_2번생성(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.spawn_monster(spawn_ids=[902,904], auto_target=False)
-        self.set_event_ui(type=1, arg2='$02000331_BF__Seeker01__801$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02000331_BF__Seeker01__801$', duration=3000, box_ids='0')
         self.set_effect(trigger_ids=[7771], visible=True) # UI  메시지 알림 사운드
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -237,7 +238,7 @@ class 몬스터출현01_2번생성(trigger_api.Trigger):
 class 몬스터출현01_3번생성(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.spawn_monster(spawn_ids=[903,905], auto_target=False)
-        self.set_event_ui(type=1, arg2='$02000331_BF__Seeker01__801$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02000331_BF__Seeker01__801$', duration=3000, box_ids='0')
         self.set_effect(trigger_ids=[7771], visible=True) # UI  메시지 알림 사운드
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -248,7 +249,7 @@ class 몬스터출현01_3번생성(trigger_api.Trigger):
 class 몬스터출현01_4번생성(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.spawn_monster(spawn_ids=[901,905], auto_target=False)
-        self.set_event_ui(type=1, arg2='$02000331_BF__Seeker01__801$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02000331_BF__Seeker01__801$', duration=3000, box_ids='0')
         self.set_effect(trigger_ids=[7771], visible=True) # UI  메시지 알림 사운드
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -491,7 +492,7 @@ class 첫번째꼬마랜덤(trigger_api.Trigger):
 # 첫번째힌트발견01 - 110000766, 201
 class 첫번째힌트발견01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$02000331_BF__Seeker01__800$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02000331_BF__Seeker01__800$', duration=3000, box_ids='0')
         self.set_effect(trigger_ids=[7771], visible=True) # UI  메시지 알림 사운드
         self.set_random_mesh(trigger_ids=[2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016], visible=True, start_delay=16, interval=100, fade=100) # 1st Hint ON
         self.set_effect(trigger_ids=[777501], visible=True) # 발자국 나타남01 사운드
@@ -560,7 +561,7 @@ class 첫번째꼬마교체01(trigger_api.Trigger):
 # 첫번째힌트발견02 - 110000767, 202
 class 첫번째힌트발견02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$02000331_BF__Seeker01__800$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02000331_BF__Seeker01__800$', duration=3000, box_ids='0')
         self.set_effect(trigger_ids=[7771], visible=True) # UI  메시지 알림 사운드
         self.set_random_mesh(trigger_ids=[2101,2102,2103,2104,2105,2106,2107,2108,2109,2110,2111,2112,2113,2114,2115,2116,2117], visible=True, start_delay=17, interval=100, fade=100) # 1st Hint ON
         self.set_effect(trigger_ids=[777501], visible=True) # 발자국 나타남01 사운드
@@ -629,7 +630,7 @@ class 첫번째꼬마교체02(trigger_api.Trigger):
 # 첫번째힌트발견03 - 10000768, 203
 class 첫번째힌트발견03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$02000331_BF__Seeker01__800$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02000331_BF__Seeker01__800$', duration=3000, box_ids='0')
         self.set_effect(trigger_ids=[7771], visible=True) # UI  메시지 알림 사운드
         self.set_random_mesh(trigger_ids=[2201,2202,2203,2204,2205,2206,2207,2208,2209,2210,2211,2212,2213,2214,2215,2216,2217,2218,2219,2220], visible=True, start_delay=20, interval=100, fade=100) # 1st Hint ON
         self.set_effect(trigger_ids=[777501], visible=True) # 발자국 나타남01 사운드
@@ -698,7 +699,7 @@ class 첫번째꼬마교체03(trigger_api.Trigger):
 # 첫번째힌트발견04 - 10000769, 204
 class 첫번째힌트발견04(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$02000331_BF__Seeker01__800$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02000331_BF__Seeker01__800$', duration=3000, box_ids='0')
         self.set_effect(trigger_ids=[7771], visible=True) # UI  메시지 알림 사운드
         self.set_random_mesh(trigger_ids=[2301,2302,2303,2304,2305,2306,2307,2308,2309,2310,2311,2312,2313,2314,2315], visible=True, start_delay=15, interval=100, fade=100) # 1st Hint ON
         self.set_effect(trigger_ids=[777501], visible=True) # 발자국 나타남01 사운드
@@ -897,7 +898,7 @@ class 두번째꼬마랜덤(trigger_api.Trigger):
 # 두번째힌트발견01 - 10000771, 301, 311
 class 두번째힌트발견01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$02000331_BF__Seeker01__800$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02000331_BF__Seeker01__800$', duration=3000, box_ids='0')
         self.set_effect(trigger_ids=[7771], visible=True) # UI  메시지 알림 사운드
         self.move_npc(spawn_id=100, patrol_name='MS2PatrolData_997')
         self.move_npc(spawn_id=200, patrol_name='MS2PatrolData_2013')
@@ -1003,7 +1004,7 @@ class 두번째꼬마교체01(trigger_api.Trigger):
 # 두번째힌트발견02 - 10000772, 302, 312
 class 두번째힌트발견02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$02000331_BF__Seeker01__800$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02000331_BF__Seeker01__800$', duration=3000, box_ids='0')
         self.set_effect(trigger_ids=[7771], visible=True) # UI  메시지 알림 사운드
         self.move_npc(spawn_id=100, patrol_name='MS2PatrolData_997')
         self.move_npc(spawn_id=200, patrol_name='MS2PatrolData_2013')
@@ -1109,7 +1110,7 @@ class 두번째꼬마교체02(trigger_api.Trigger):
 # 두번째힌트발견03 - 10000773, 303, 313
 class 두번째힌트발견03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$02000331_BF__Seeker01__800$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02000331_BF__Seeker01__800$', duration=3000, box_ids='0')
         self.set_effect(trigger_ids=[7771], visible=True) # UI  메시지 알림 사운드
         self.move_npc(spawn_id=100, patrol_name='MS2PatrolData_997')
         self.move_npc(spawn_id=200, patrol_name='MS2PatrolData_2013')
@@ -1215,7 +1216,7 @@ class 두번째꼬마교체03(trigger_api.Trigger):
 # 두번째힌트발견04 - 10000774, 304, 314
 class 두번째힌트발견04(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$02000331_BF__Seeker01__800$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02000331_BF__Seeker01__800$', duration=3000, box_ids='0')
         self.set_effect(trigger_ids=[7771], visible=True) # UI  메시지 알림 사운드
         self.move_npc(spawn_id=100, patrol_name='MS2PatrolData_997')
         self.move_npc(spawn_id=200, patrol_name='MS2PatrolData_2013')
@@ -1322,7 +1323,7 @@ class 두번째힌트발견05(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.move_npc(spawn_id=100, patrol_name='MS2PatrolData_997')
         self.move_npc(spawn_id=200, patrol_name='MS2PatrolData_2013')
-        self.set_event_ui(type=1, arg2='$02000331_BF__Seeker01__800$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02000331_BF__Seeker01__800$', duration=3000, box_ids='0')
         self.set_effect(trigger_ids=[7771], visible=True) # UI  메시지 알림 사운드
         self.set_random_mesh(trigger_ids=[3401,3402,3403,3404,3405,3406,3407,3408,3409,3410,3411,3412,3413,3414,3415,3416,3417,3418,3419], visible=True, start_delay=19, interval=50, fade=50) # 2nd Hint ON
         self.set_effect(trigger_ids=[777502], visible=True) # 발자국 나타남02 사운드
@@ -1576,7 +1577,7 @@ class 고립연출종료01(trigger_api.Trigger):
 
 class 구출안내01_01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$02000331_BF__Seeker01__802$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02000331_BF__Seeker01__802$', duration=3000, box_ids='0')
         self.set_effect(trigger_ids=[7771], visible=True) # UI  메시지 알림 사운드
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -1656,7 +1657,7 @@ class 고립연출종료02(trigger_api.Trigger):
 
 class 구출안내02_01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$02000331_BF__Seeker01__802$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02000331_BF__Seeker01__802$', duration=3000, box_ids='0')
         self.set_effect(trigger_ids=[7771], visible=True) # UI  메시지 알림 사운드
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -1736,7 +1737,7 @@ class 고립연출종료03(trigger_api.Trigger):
 
 class 구출안내03_01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$02000331_BF__Seeker01__802$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02000331_BF__Seeker01__802$', duration=3000, box_ids='0')
         self.set_effect(trigger_ids=[7771], visible=True) # UI  메시지 알림 사운드
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -1816,7 +1817,7 @@ class 고립연출종료04(trigger_api.Trigger):
 
 class 구출안내04_01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$02000331_BF__Seeker01__802$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02000331_BF__Seeker01__802$', duration=3000, box_ids='0')
         self.set_effect(trigger_ids=[7771], visible=True) # UI  메시지 알림 사운드
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -1896,7 +1897,7 @@ class 고립연출종료05(trigger_api.Trigger):
 
 class 구출안내05_01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$02000331_BF__Seeker01__802$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02000331_BF__Seeker01__802$', duration=3000, box_ids='0')
         self.set_effect(trigger_ids=[7771], visible=True) # UI  메시지 알림 사운드
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -2315,7 +2316,7 @@ class 추격연출시작01(trigger_api.Trigger):
 
 class 추격연출종료01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$02000331_BF__Seeker01__803$', arg3='2000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02000331_BF__Seeker01__803$', duration=2000, box_ids='0')
         self.set_effect(trigger_ids=[7771], visible=True) # UI  메시지 알림 사운드
         self.select_camera(trigger_id=800, enable=False)
         self.set_cinematic_ui(type=0)
@@ -2497,7 +2498,7 @@ class 외다리스위치출현01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_interact_object(trigger_ids=[10000785], state=0) # 외다리 생성하는 레버01 나타남
         self.set_interact_object(trigger_ids=[10000785], state=1) # 외다리 생성하는 레버01 나타남
-        self.set_event_ui(type=1, arg2='$02000331_BF__Seeker01__804$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02000331_BF__Seeker01__804$', duration=3000, box_ids='0')
         self.set_effect(trigger_ids=[7771], visible=True) # UI  메시지 알림 사운드
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -2523,7 +2524,7 @@ class 외다리스위치출현02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_interact_object(trigger_ids=[10000796], state=0) # 외다리 생성하는 레버01 나타남
         self.set_interact_object(trigger_ids=[10000796], state=1) # 외다리 생성하는 레버01 나타남
-        self.set_event_ui(type=1, arg2='$02000331_BF__Seeker01__804$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02000331_BF__Seeker01__804$', duration=3000, box_ids='0')
         self.set_effect(trigger_ids=[7771], visible=True) # UI  메시지 알림 사운드
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -2549,7 +2550,7 @@ class 외다리스위치출현03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_interact_object(trigger_ids=[10000797], state=0) # 외다리 생성하는 레버01 나타남
         self.set_interact_object(trigger_ids=[10000797], state=1) # 외다리 생성하는 레버01 나타남
-        self.set_event_ui(type=1, arg2='$02000331_BF__Seeker01__804$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02000331_BF__Seeker01__804$', duration=3000, box_ids='0')
         self.set_effect(trigger_ids=[7771], visible=True) # UI  메시지 알림 사운드
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -2575,7 +2576,7 @@ class 외다리스위치출현04(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_interact_object(trigger_ids=[10000798], state=0) # 외다리 생성하는 레버01 나타남
         self.set_interact_object(trigger_ids=[10000798], state=1) # 외다리 생성하는 레버01 나타남
-        self.set_event_ui(type=1, arg2='$02000331_BF__Seeker01__804$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02000331_BF__Seeker01__804$', duration=3000, box_ids='0')
         self.set_effect(trigger_ids=[7771], visible=True) # UI  메시지 알림 사운드
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -2601,7 +2602,7 @@ class 외다리스위치출현05(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_interact_object(trigger_ids=[10000799], state=0) # 외다리 생성하는 레버01 나타남
         self.set_interact_object(trigger_ids=[10000799], state=1) # 외다리 생성하는 레버01 나타남
-        self.set_event_ui(type=1, arg2='$02000331_BF__Seeker01__804$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02000331_BF__Seeker01__804$', duration=3000, box_ids='0')
         self.set_effect(trigger_ids=[7771], visible=True) # UI  메시지 알림 사운드
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -2635,7 +2636,7 @@ class 외다리생성시작01(trigger_api.Trigger):
 
 class 다리건너갈준비01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$02000331_BF__Seeker01__805$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02000331_BF__Seeker01__805$', duration=3000, box_ids='0')
         self.set_effect(trigger_ids=[7771], visible=True) # UI  메시지 알림 사운드
         self.move_npc(spawn_id=100, patrol_name='MS2PatrolData_1013')
 
@@ -2800,7 +2801,7 @@ class 보스등장연출끝01(trigger_api.Trigger):
 
 class 마지막웨이브알림01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$02000331_BF__Seeker01__806$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02000331_BF__Seeker01__806$', duration=3000, box_ids='0')
         self.set_effect(trigger_ids=[7771], visible=True) # UI  메시지 알림 사운드
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -3647,7 +3648,7 @@ class 보스전투_준비04(trigger_api.Trigger):
 class 보스전투_시작01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.destroy_monster(spawn_ids=[990])
-        self.set_event_ui(type=1, arg2='$02000331_BF__Seeker01__807$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02000331_BF__Seeker01__807$', duration=3000, box_ids='0')
         self.set_effect(trigger_ids=[7771], visible=True) # UI  메시지 알림 사운드
         self.spawn_monster(spawn_ids=[999], auto_target=False)
 
@@ -3704,7 +3705,7 @@ class 보스도망연출03(trigger_api.Trigger):
 
 class 보스전투_끝01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$02000331_BF__Seeker01__808$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02000331_BF__Seeker01__808$', duration=3000, box_ids='0')
         self.set_dialogue(type=1, spawn_id=600, script='$02000331_BF__Seeker01__120$', time=2, arg5=1)
         self.destroy_monster(spawn_ids=[1000])
         self.set_effect(trigger_ids=[7771], visible=True) # UI  메시지 알림 사운드
@@ -3729,7 +3730,7 @@ class 마지막연출_준비01(trigger_api.Trigger):
 
 class 마지막연출_포털출현01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=7, arg2='$02000331_BF__Seeker01__809$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.Fail, script='$02000331_BF__Seeker01__809$', duration=3000, box_ids='0')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):

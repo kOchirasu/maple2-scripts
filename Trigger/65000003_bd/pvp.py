@@ -1,10 +1,11 @@
 """ trigger/65000003_bd/pvp.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class 시작(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_timer(timer_id='60', seconds=60, interval=1)
+        self.set_timer(timer_id='60', seconds=60, display=True)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.count_users(box_id=104) >= 20:
@@ -67,7 +68,7 @@ class 비김(trigger_api.Trigger):
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='3'):
-            self.set_event_ui(type=5, arg2='$65000002_BD__PVP__5$', arg3='3000', arg4='0')
+            self.set_event_ui_script(type=BannerType.Success, script='$65000002_BD__PVP__5$', duration=3000, box_ids='0')
             return 완료(self.ctx)
 
 

@@ -1,5 +1,6 @@
 """ trigger/66000002_gd/mainprocess_springbeach.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class 대기(trigger_api.Trigger):
@@ -27,7 +28,7 @@ class 이벤트대기중(trigger_api.Trigger):
 class 준비멘트1(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='11', seconds=6)
-        self.set_event_ui(type=1, arg2='$61000007_ME__MAINPROCESS_SPRINGBEACH__0$', arg3='5000')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000007_ME__MAINPROCESS_SPRINGBEACH__0$', duration=5000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='11'):
@@ -37,7 +38,7 @@ class 준비멘트1(trigger_api.Trigger):
 class 준비멘트2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='12', seconds=4)
-        self.set_event_ui(type=1, arg2='$61000007_ME__MAINPROCESS_SPRINGBEACH__1$', arg3='3000')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000007_ME__MAINPROCESS_SPRINGBEACH__1$', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='12'):
@@ -64,7 +65,7 @@ class 시작멘트1(trigger_api.Trigger):
         self.set_mini_game_area_for_hack(box_id=301) # 해킹 보안용 시작 box 설정
         self.set_timer(timer_id='13', seconds=5)
         # 로그에서 해당 이벤트에 참여한 사람을 체크하기 위한 명령어 / 1=미니게임 이름, 2=타겟박스 id
-        self.set_event_ui(type=1, arg2='$61000007_ME__MAINPROCESS_SPRINGBEACH__2$', arg3='4000')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000007_ME__MAINPROCESS_SPRINGBEACH__2$', duration=4000)
         # 트로피 / 1=타겟박스 id, 2=achieveType, 3=code에 들어갈 값
         # self.set_achievement(trigger_id=301, type='trigger', achieve='springbeach_start')
         # self.set_achievement(trigger_id=301, type='trigger', achieve='dailyquest_start')
@@ -77,7 +78,7 @@ class 시작멘트1(trigger_api.Trigger):
 class 시작멘트2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='14', seconds=5)
-        self.set_event_ui(type=1, arg2='$61000007_ME__MAINPROCESS_SPRINGBEACH__3$', arg3='4000')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000007_ME__MAINPROCESS_SPRINGBEACH__3$', duration=4000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='14'):
@@ -87,7 +88,7 @@ class 시작멘트2(trigger_api.Trigger):
 class 시작멘트3(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='15', seconds=5)
-        self.set_event_ui(type=1, arg2='$61000007_ME__MAINPROCESS_SPRINGBEACH__4$', arg3='4000')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000007_ME__MAINPROCESS_SPRINGBEACH__4$', duration=4000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='15'):
@@ -98,7 +99,7 @@ class 시작멘트3(trigger_api.Trigger):
 class 라운드1(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='16', seconds=4)
-        self.set_event_ui(type=1, arg2='$61000007_ME__MAINPROCESS_SPRINGBEACH__5$', arg3='3000')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000007_ME__MAINPROCESS_SPRINGBEACH__5$', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='16'):
@@ -108,7 +109,7 @@ class 라운드1(trigger_api.Trigger):
 class 게임시작1(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='17', seconds=6)
-        self.set_event_ui(type=0, arg2='1,5')
+        self.set_event_ui_round(rounds=[1,5])
         self.show_count_ui(text='$61000007_ME__MAINPROCESS_SPRINGBEACH__6$', stage=1, count=5)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -294,7 +295,7 @@ class 한숨돌리기01(trigger_api.Trigger):
 class 라운드2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='21', seconds=4)
-        self.set_event_ui(type=1, arg2='$61000007_ME__MAINPROCESS_SPRINGBEACH__7$', arg3='3000')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000007_ME__MAINPROCESS_SPRINGBEACH__7$', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='21'):
@@ -304,7 +305,7 @@ class 라운드2(trigger_api.Trigger):
 class 게임시작2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='22', seconds=6)
-        self.set_event_ui(type=0, arg2='2,5')
+        self.set_event_ui_round(rounds=[2,5])
         self.show_count_ui(text='$61000007_ME__MAINPROCESS_SPRINGBEACH__8$', stage=2, count=5)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -490,7 +491,7 @@ class 한숨돌리기02(trigger_api.Trigger):
 class 라운드3(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='25', seconds=4)
-        self.set_event_ui(type=1, arg2='$61000007_ME__MAINPROCESS_SPRINGBEACH__9$', arg3='3000')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000007_ME__MAINPROCESS_SPRINGBEACH__9$', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='25'):
@@ -500,7 +501,7 @@ class 라운드3(trigger_api.Trigger):
 class 게임시작3(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='26', seconds=6)
-        self.set_event_ui(type=0, arg2='3,5')
+        self.set_event_ui_round(rounds=[3,5])
         self.show_count_ui(text='$61000007_ME__MAINPROCESS_SPRINGBEACH__10$', stage=3, count=5)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -686,7 +687,7 @@ class 한숨돌리기03(trigger_api.Trigger):
 class 라운드4(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='29', seconds=4)
-        self.set_event_ui(type=1, arg2='$61000007_ME__MAINPROCESS_SPRINGBEACH__11$', arg3='3000')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000007_ME__MAINPROCESS_SPRINGBEACH__11$', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='29'):
@@ -696,7 +697,7 @@ class 라운드4(trigger_api.Trigger):
 class 게임시작4(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='30', seconds=6)
-        self.set_event_ui(type=0, arg2='4,5')
+        self.set_event_ui_round(rounds=[4,5])
         self.show_count_ui(text='$61000007_ME__MAINPROCESS_SPRINGBEACH__12$', stage=4, count=5)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -882,7 +883,7 @@ class 한숨돌리기04(trigger_api.Trigger):
 class 라운드5(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='33', seconds=4)
-        self.set_event_ui(type=1, arg2='$61000007_ME__MAINPROCESS_SPRINGBEACH__13$', arg3='3000')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000007_ME__MAINPROCESS_SPRINGBEACH__13$', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='33'):
@@ -892,7 +893,7 @@ class 라운드5(trigger_api.Trigger):
 class 게임시작5(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='34', seconds=6)
-        self.set_event_ui(type=0, arg2='5,5')
+        self.set_event_ui_round(rounds=[5,5])
         self.show_count_ui(text='$61000007_ME__MAINPROCESS_SPRINGBEACH__14$', stage=5, count=5)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -1047,9 +1048,9 @@ class 한숨돌리기05(trigger_api.Trigger):
 class 보상단계(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='37', seconds=7)
-        self.set_event_ui(type=3, arg2='$61000007_ME__MAINPROCESS_SPRINGBEACH__15$', arg3='5000', arg4='301')
+        self.set_event_ui_script(type=BannerType.Bonus, script='$61000007_ME__MAINPROCESS_SPRINGBEACH__15$', duration=5000, box_ids='301')
         # 로그에서 해당 이벤트에서 우승한 사람을 체크하기 위한 명령어 / 1=미니게임 이름, 2=타겟박스 id
-        self.set_event_ui(type=6, arg2='$61000007_ME__MAINPROCESS_SPRINGBEACH__16$', arg3='5000', arg4='303,304,305,306')
+        self.set_event_ui_script(type=BannerType.Text, script='$61000007_ME__MAINPROCESS_SPRINGBEACH__16$', duration=5000, box_ids='303,304,305,306')
         # 트로피 / 1=타겟박스 id, 2=achieveType, 3=code에 들어갈 값
         # self.set_achievement(trigger_id=301, type='trigger', achieve='springbeach_win')
 
@@ -1072,8 +1073,8 @@ class 경험치지급(trigger_api.Trigger):
 class 버프걸기(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='38', seconds=6)
-        # self.set_event_ui(type=3, arg2='$61000007_ME__MAINPROCESS_SPRINGBEACH__17$', arg3='5000', arg4='301')
-        # self.set_event_ui(type=6, arg2='$61000007_ME__MAINPROCESS_SPRINGBEACH__18$', arg3='5000', arg4='303,304,305,306')
+        # self.set_event_ui_script(type=BannerType.Bonus, script='$61000007_ME__MAINPROCESS_SPRINGBEACH__17$', duration=5000, box_ids='301')
+        # self.set_event_ui_script(type=BannerType.Text, script='$61000007_ME__MAINPROCESS_SPRINGBEACH__18$', duration=5000, box_ids='303,304,305,306')
         # self.add_buff(box_ids=[301], skill_id=70000019, level=1)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -1085,8 +1086,8 @@ class 버프걸기(trigger_api.Trigger):
 class 돈벼락(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='39', seconds=20)
-        self.set_event_ui(type=3, arg2='$61000007_ME__MAINPROCESS_SPRINGBEACH__19$', arg3='5000', arg4='301')
-        self.set_event_ui(type=6, arg2='$61000007_ME__MAINPROCESS_SPRINGBEACH__20$', arg3='5000', arg4='303,304,305,306')
+        self.set_event_ui_script(type=BannerType.Bonus, script='$61000007_ME__MAINPROCESS_SPRINGBEACH__19$', duration=5000, box_ids='301')
+        self.set_event_ui_script(type=BannerType.Text, script='$61000007_ME__MAINPROCESS_SPRINGBEACH__20$', duration=5000, box_ids='303,304,305,306')
         self.create_item(spawn_ids=[1001,1002,1003,1004,1005,1006,1007,1008,1009,1010,1011,1012,1013,1014,1015,1016,1017,1018,1019,1020,1021,1022,1023,1024,1025,1026,1027,1028,1029,1030,1031,1032,1033,1034,1035,1036,1037,1038,1039,1040,1041,1042,1043,1044,1045,1046,1047,1048,1049,1050,1051,1052,1053,1054,1055,1056,1057,1058,1059,1060,1061,1062,1063,1064,1101,1102,1103,1104,1105,1106,1107,1108,1109,1110,1111,1112,1113,1114,1115,1116,1117,1118,1119,1120,1121,1122,1123,1124,1125,1126,1127,1128,1129,1130,1131,1132,1133,1134,1135,1136,1137,1138,1139,1140,1141,1142,1143,1144,1145,1146,1147,1148,1149,1150,1151,1152,1153,1154,1155,1156])
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -1107,7 +1108,7 @@ class 모두탈락(trigger_api.Trigger):
 class 탈락멘트(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='40', seconds=6)
-        self.set_event_ui(type=5, arg2='$61000007_ME__MAINPROCESS_SPRINGBEACH__21$', arg3='5000')
+        self.set_event_ui_script(type=BannerType.Success, script='$61000007_ME__MAINPROCESS_SPRINGBEACH__21$', duration=5000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='40'):
@@ -1122,7 +1123,7 @@ class 다리등장(trigger_api.Trigger):
         self.set_mesh(trigger_ids=[601,602,603,604,605,606,607,608,609,610,611,612,613,614,615,616,617,618,619,620,621,622,623,624], visible=True)
         self.set_mesh(trigger_ids=[651,652,653,654,655,656,657,658,659,660,661,662,663,664,665,666,667,668,669,670,671,672,673,674,675,676,677])
         self.set_mesh(trigger_ids=[701,702,703,704,705,706,707,708,709,710,711,712,713,714,715,716,717,718,719,720,721,722,723,724,725,726,727,728,729,730,731,732,733,734,735,736,737,738,739,740,741,742,743,744,745,746,747,748,749,750,751,752,753,754,755,756,757,758,759,760,761,762,763,764,765,766,767,768,769,770,771,772,773,774,775,776,777,778,779,780,781,782,783,784,785,786,787,788,789,790,791,792,793,794,795,796,797,798,799,800,801,802,803,804,805,806,807,808,809,810,811,812,813,814,815,816,817,818,819,820,821,822,823,824,825,826,827,828,829,830,831,832])
-        self.set_event_ui(type=1, arg2='$61000007_ME__MAINPROCESS_SPRINGBEACH__22$', arg3='10000')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000007_ME__MAINPROCESS_SPRINGBEACH__22$', duration=10000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='41'):
@@ -1131,7 +1132,7 @@ class 다리등장(trigger_api.Trigger):
 
 class 유저이동(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$61000007_ME__MAINPROCESS_SPRINGBEACH__23$', arg3='5000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000007_ME__MAINPROCESS_SPRINGBEACH__23$', duration=5000, box_ids='0')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=120000):

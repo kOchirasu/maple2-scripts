@@ -1,5 +1,6 @@
 """ trigger/02020300_bf/elevator.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class 메시지_대기(trigger_api.Trigger):
@@ -10,7 +11,7 @@ class 메시지_대기(trigger_api.Trigger):
 
 class 엘리베이터_정지(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$02020300_BF__MAIN__12$', arg3='5000')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02020300_BF__MAIN__12$', duration=5000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=30000):

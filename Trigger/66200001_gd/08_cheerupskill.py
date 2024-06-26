@@ -10,7 +10,7 @@ class Wait(trigger_api.Trigger):
 
 class CheerUpTimer_20(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_timer(timer_id='1', seconds=20, start_delay=1) # 20sec
+        self.set_timer(timer_id='1', seconds=20, auto_remove=True) # 20sec
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=16000):

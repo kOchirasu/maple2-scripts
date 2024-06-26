@@ -1,5 +1,6 @@
 """ trigger/52000067_qd/main.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class idle(trigger_api.Trigger):
@@ -393,7 +394,7 @@ class play(trigger_api.Trigger):
 
 class GuideMission(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$52000067_QD__MAIN__9$', arg3='3000')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$52000067_QD__MAIN__9$', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.monster_dead(spawn_ids=[801,802,803,804,805,806,807]):

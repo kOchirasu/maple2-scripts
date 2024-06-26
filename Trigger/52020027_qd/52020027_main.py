@@ -1,5 +1,6 @@
 """ trigger/52020027_qd/52020027_main.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class 감지(trigger_api.Trigger):
@@ -87,7 +88,7 @@ class 보스전종료(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.destroy_monster(spawn_ids=[-1])
         self.set_achievement(trigger_id=904, achieve='KritiasScrimmage')
-        self.set_event_ui(type=1, arg2='연출들어갈 예정입니다', arg3='3000')
+        self.set_event_ui_script(type=BannerType.GameOver, script='연출들어갈 예정입니다', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):

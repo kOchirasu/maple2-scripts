@@ -1,6 +1,6 @@
 """ trigger/52100300_qd/main.xml """
 import trigger_api
-from Maple2.Server.Game.Scripting.Trigger import Align
+from Maple2.Server.Game.Scripting.Trigger import Align, BannerType
 
 
 class 대기(trigger_api.Trigger):
@@ -129,7 +129,7 @@ class 연출시작_7(trigger_api.Trigger):
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.user_detected(box_ids=[902]):
-            self.set_event_ui(type=1, arg2='$52100300_QD__MAIN__0$', arg3='5000')
+            self.set_event_ui_script(type=BannerType.GameOver, script='$52100300_QD__MAIN__0$', duration=5000)
             self.spawn_monster(spawn_ids=[101,102,103], auto_target=False)
             return 추가대사_01(self.ctx)
 
@@ -140,7 +140,7 @@ class 연출시작_7(trigger_api.Trigger):
 class 시작(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.user_detected(box_ids=[902]):
-            self.set_event_ui(type=1, arg2='$52100300_QD__MAIN__0$', arg3='5000')
+            self.set_event_ui_script(type=BannerType.GameOver, script='$52100300_QD__MAIN__0$', duration=5000)
             self.spawn_monster(spawn_ids=[101,102,103], auto_target=False)
             return 추가대사_01(self.ctx)
 """
@@ -194,7 +194,7 @@ class 엘리베이터_활성화(trigger_api.Trigger):
 
 class 아르케온_탑승_가이드(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$52100300_QD__MAIN__5$', arg3='5000')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$52100300_QD__MAIN__5$', duration=5000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.user_detected(box_ids=[711]):

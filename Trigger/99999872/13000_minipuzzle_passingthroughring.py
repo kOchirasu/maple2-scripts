@@ -44,7 +44,7 @@ class Setting(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.object_interacted(interact_ids=[12000076], state=0):
             # UI 표시 안함 / 황금 상자 소유권 Additional Effect 71001031 지속시간 동일
-            self.set_timer(timer_id='1', seconds=90, start_delay=1)
+            self.set_timer(timer_id='1', seconds=90, auto_remove=True)
             return PassingThroughRing_Start_Delay(self.ctx)
         if self.user_value(key='TimeEventOn') >= 0:
             return Wait(self.ctx)
@@ -139,7 +139,7 @@ class PassingThroughRing_Success(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.add_buff(box_ids=[130001], skill_id=71001032, level=1, is_player=False, is_skill_set=False)
         # UI 표시 안함 / 황금 상자 소유권 Additional Effect 71001031 지속시간 동일
-        self.set_timer(timer_id='10', seconds=61, start_delay=1)
+        self.set_timer(timer_id='10', seconds=61, auto_remove=True)
         self.set_effect(trigger_ids=[13200], visible=True) # Success Sound Effect
         self.set_mesh(trigger_ids=[13300], visible=True) # Final_FootHold
         # RareBox / 기믹 종료 오브젝트 / Additional Effect 71001131 걸어서 71001031 제거

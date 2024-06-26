@@ -1408,18 +1408,42 @@ class Trigger:
         """
         self.ctx.SetEffect(Array[Int32](trigger_ids), visible, start_delay, interval)
 
-    def set_event_ui(self, type: int, arg2: str='', arg3: str='', arg4: str='') -> None:
-        """이벤트UI를설정한다
+    def set_event_ui_countdown(self, round_countdown: List[int], script: str='', box_ids: str='') -> None:
+        """이벤트UI를설정한다: arg1=2
 
         Args:
-            type (int): _description_.
-            arg2 (str): _description_. Defaults to ''.
-            arg3 (str): _description_. Defaults to ''.
-            arg4 (str): _description_. Defaults to ''.
+            round_countdown (List[int]): _description_.
+            script (str): _description_. Defaults to ''.
+            box_ids (str): _description_. Defaults to ''.
 
         Returns: None
         """
-        self.ctx.SetEventUi(type, arg2, arg3, arg4)
+        self.ctx.SetEventUiCountdown(script, Array[Int32](round_countdown), box_ids)
+
+    def set_event_ui_round(self, rounds: List[int], v_offset: int=0, arg3: int=0) -> None:
+        """이벤트UI를설정한다: arg1=0
+
+        Args:
+            rounds (List[int]): _description_.
+            v_offset (int): _description_. Defaults to 0.
+            arg3 (int): _description_. Defaults to 0.
+
+        Returns: None
+        """
+        self.ctx.SetEventUiRound(Array[Int32](rounds), v_offset, arg3)
+
+    def set_event_ui_script(self, type: BannerType, duration: int, script: str='', box_ids: str='') -> None:
+        """이벤트UI를설정한다: arg1=1
+
+        Args:
+            type (BannerType): _description_.
+            duration (int): _description_.
+            script (str): _description_. Defaults to ''.
+            box_ids (str): _description_. Defaults to ''.
+
+        Returns: None
+        """
+        self.ctx.SetEventUiScript(type, script, duration, box_ids)
 
     def set_gravity(self, gravity: float) -> None:
         """SetGravity
@@ -1753,21 +1777,21 @@ class Trigger:
         """
         self.ctx.SetTimeScale(enable, start_scale, end_scale, duration, interpolator)
 
-    def set_timer(self, timer_id: str='', seconds: int=0, start_delay: int=0, interval: int=0, v_offset: int=0, type: str='', desc: str='') -> None:
+    def set_timer(self, timer_id: str='', seconds: int=0, auto_remove: bool=False, display: bool=False, v_offset: int=0, type: str='', desc: str='') -> None:
         """타이머를설정한다
 
         Args:
             timer_id (str): _description_. Defaults to ''.
             seconds (int): _description_. Defaults to 0.
-            start_delay (int): _description_. Defaults to 0.
-            interval (int): _description_. Defaults to 0.
+            auto_remove (bool): _description_. Defaults to False.
+            display (bool): _description_. Defaults to False.
             v_offset (int): _description_. Defaults to 0.
             type (str): _description_. Defaults to ''.
             desc (str): _description_. Defaults to ''.
 
         Returns: None
         """
-        self.ctx.SetTimer(timer_id, seconds, start_delay, interval, v_offset, type, desc)
+        self.ctx.SetTimer(timer_id, seconds, auto_remove, display, v_offset, type, desc)
 
     def set_user_value(self, key: str, value: int, trigger_id: int=0) -> None:
         """SetUserValue

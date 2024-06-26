@@ -1,5 +1,6 @@
 """ trigger/02000403_bf/event_01.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class idle(trigger_api.Trigger):
@@ -10,7 +11,7 @@ class idle(trigger_api.Trigger):
 
 class Ready(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$02000403_BF__EVENT_01__0$', arg3='3000')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02000403_BF__EVENT_01__0$', duration=3000)
 
 
 initial_state = idle

@@ -1,5 +1,6 @@
 """ trigger/52000002_qd/main.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class 대기(trigger_api.Trigger):
@@ -198,7 +199,7 @@ class 미션성공(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.spawn_monster(spawn_ids=[1102], auto_target=False)
         self.move_npc(spawn_id=1102, patrol_name='MS2PatrolData_1102')
-        self.set_event_ui(type=7, arg2='$52000002_QD__MAIN__5$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.Fail, script='$52000002_QD__MAIN__5$', duration=3000, box_ids='0')
         self.set_timer(timer_id='5', seconds=5)
 
     def on_tick(self) -> trigger_api.Trigger:

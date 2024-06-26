@@ -1,5 +1,6 @@
 """ trigger/02000384_bf/main.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class ready(trigger_api.Trigger):
@@ -190,7 +191,7 @@ class end(trigger_api.Trigger):
 
 class quest_end(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=7, arg2='$02000384_BF__MAIN__0$', arg3='5000', arg4='0')
+        self.set_event_ui_script(type=BannerType.Fail, script='$02000384_BF__MAIN__0$', duration=5000, box_ids='0')
         self.set_dialogue(type=1, spawn_id=510, script='$02000384_BF__MAIN__1$', time=2)
         self.set_dialogue(type=1, spawn_id=510, script='$02000384_BF__MAIN__2$', time=2, arg5=2)
         self.set_achievement(trigger_id=90000, type='trigger', achieve='Madracan_Q03')

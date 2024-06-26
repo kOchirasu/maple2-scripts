@@ -1,5 +1,6 @@
 """ trigger/61000011_me/main.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class 입장(trigger_api.Trigger):
@@ -195,7 +196,7 @@ class 게임끝(trigger_api.Trigger):
 
 class 게임취소(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$61000011_ME__GAME_END_BY_CANCEL$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000011_ME__GAME_END_BY_CANCEL$', duration=3000, box_ids='0')
         self.set_timer(timer_id='2', seconds=10)
         self.move_user(map_id=61000003, portal_id=99, box_id=104)
 
@@ -223,8 +224,8 @@ class 성공(trigger_api.Trigger):
 
 class 우승자카메라연출(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=3, arg2='$61000011_ME__WINNER_IS$', arg3='5000', arg4='105')
-        self.set_event_ui(type=3, arg2='$61000011_ME__ENVY_IS$', arg3='5000', arg4='!105')
+        self.set_event_ui_script(type=BannerType.Bonus, script='$61000011_ME__WINNER_IS$', duration=5000, box_ids='105')
+        self.set_event_ui_script(type=BannerType.Bonus, script='$61000011_ME__ENVY_IS$', duration=5000, box_ids='!105')
         self.mini_game_camera_direction(box_id=105, camera_id=301)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -248,8 +249,8 @@ class 종료(trigger_api.Trigger):
         self.widget_action(type='OxQuizUGC', func='EndGame')
         self.end_mini_game(winner_box_id=105, game_name='oxquiz_ugc', is_only_winner=True)
         self.set_effect(trigger_ids=[608], visible=True)
-        self.set_event_ui(type=0, arg2='0,0')
-        self.set_event_ui(type=5, arg2='$61000011_ME__GAME_END_BY_ALL_RETIRED$', arg3='3000', arg4='0')
+        self.set_event_ui_round(rounds=[0,0])
+        self.set_event_ui_script(type=BannerType.Success, script='$61000011_ME__GAME_END_BY_ALL_RETIRED$', duration=3000, box_ids='0')
         self.set_timer(timer_id='3', seconds=3)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -259,7 +260,7 @@ class 종료(trigger_api.Trigger):
 
 class 성공알림(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=7, arg2='$61000011_ME__MAIN__SUCCESS_IS$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.Fail, script='$61000011_ME__MAIN__SUCCESS_IS$', duration=3000, box_ids='0')
         self.set_timer(timer_id='40', seconds=5)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -271,7 +272,7 @@ class 마무리(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.unset_mini_game_area_for_hack() # 해킹 보안 종료
         self.set_effect(trigger_ids=[609], visible=True)
-        self.set_event_ui(type=1, arg2='$61000011_ME__MAIN__GOODBYE$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000011_ME__MAIN__GOODBYE$', duration=3000, box_ids='0')
         self.set_timer(timer_id='6', seconds=6)
 
     def on_tick(self) -> trigger_api.Trigger:

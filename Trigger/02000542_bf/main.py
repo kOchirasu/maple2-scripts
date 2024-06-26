@@ -1,5 +1,6 @@
 """ trigger/02000542_bf/main.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 # 플레이어 감지
@@ -24,7 +25,7 @@ class idle(trigger_api.Trigger):
 
 class 문열기오브젝트설정1(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$02000542_BF__MAIN__0$', arg3='5000')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02000542_BF__MAIN__0$', duration=5000)
         self.set_interact_object(trigger_ids=[10003142], state=1)
         self.spawn_monster(spawn_ids=[112], auto_target=False)
         self.add_balloon_talk(spawn_id=112, msg='$02000542_BF__MAIN__1$', duration=3500, delay_tick=1500)
@@ -102,7 +103,7 @@ class 몬스터생성하기4(trigger_api.Trigger):
 
 class 문열기오브젝트설정2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$02000542_BF__MAIN__5$', arg3='5000')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02000542_BF__MAIN__5$', duration=5000)
         self.set_interact_object(trigger_ids=[10003143], state=1)
         self.spawn_monster(spawn_ids=[113], auto_target=False)
         self.add_balloon_talk(spawn_id=113, msg='$02000542_BF__MAIN__6$', duration=3500)

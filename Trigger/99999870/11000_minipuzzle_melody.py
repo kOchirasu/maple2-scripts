@@ -64,7 +64,7 @@ class Setting(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.object_interacted(interact_ids=[12000074], state=0):
             # UI 표시 안함 / 황금 상자 소유권 Additional Effect 71001011 지속시간 동일
-            self.set_timer(timer_id='1', seconds=120, start_delay=1)
+            self.set_timer(timer_id='1', seconds=120, auto_remove=True)
             return StartMelodyQuiz_Delay01(self.ctx)
         if self.user_value(key='TimeEventOn') >= 0:
             return Wait(self.ctx)
@@ -499,7 +499,7 @@ class EndMelodyQuiz_Success(trigger_api.Trigger):
         self.set_effect(trigger_ids=[11300], visible=True) # Success Sound Effect
         # RareBox 맵 별로 유니크하도록 변경해야 하는 값
         self.set_interact_object(trigger_ids=[12000066], state=1)
-        self.set_timer(timer_id='2', seconds=60, start_delay=1)
+        self.set_timer(timer_id='2', seconds=60, auto_remove=True)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.object_interacted(interact_ids=[12000066], state=0):

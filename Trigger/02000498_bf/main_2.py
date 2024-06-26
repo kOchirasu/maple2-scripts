@@ -1,5 +1,6 @@
 """ trigger/02000498_bf/main_2.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class 대기(trigger_api.Trigger):
@@ -22,7 +23,7 @@ class 대기(trigger_api.Trigger):
 
 class 시작대기(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=0, arg2='6,10,6')
+        self.set_event_ui_round(rounds=[6,10,6])
         self.dark_stream_start_round(round=6, ui_duration=3000, damage_penalty=10)
         self.set_timer(timer_id='3', seconds=3)
 
@@ -33,7 +34,7 @@ class 시작대기(trigger_api.Trigger):
 
 class 라운드6(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$02000350_BF__MAIN_2__0$', arg3='4000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02000350_BF__MAIN_2__0$', duration=4000, box_ids='0')
         self.dark_stream_spawn_monster(spawn_ids=[106001,106002,106003,106004,106005], score=18000)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -45,7 +46,7 @@ class 라운드6(trigger_api.Trigger):
 
 class 라운드대기7(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=0, arg2='7,10,6')
+        self.set_event_ui_round(rounds=[7,10,6])
         self.dark_stream_start_round(round=7, ui_duration=3000, damage_penalty=10)
         self.set_timer(timer_id='3', seconds=3)
 
@@ -67,10 +68,10 @@ class 라운드7(trigger_api.Trigger):
 
 class 라운드대기8(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=0, arg2='8,10,6')
+        self.set_event_ui_round(rounds=[8,10,6])
         self.set_timer(timer_id='3', seconds=3)
         self.dark_stream_start_round(round=8, ui_duration=3000, damage_penalty=10)
-        self.set_event_ui(type=1, arg2='$02000350_BF__MAIN_2__1$', arg3='2000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02000350_BF__MAIN_2__1$', duration=2000, box_ids='0')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='3'):
@@ -79,7 +80,7 @@ class 라운드대기8(trigger_api.Trigger):
 
 class 라운드8(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_timer(timer_id='30', seconds=30, start_delay=1, interval=1, v_offset=80)
+        self.set_timer(timer_id='30', seconds=30, auto_remove=True, display=True, v_offset=80)
         self.spawn_monster(spawn_ids=[108099], auto_target=False)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -93,7 +94,7 @@ class 라운드8(trigger_api.Trigger):
 
 class 라운드대기9(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=0, arg2='9,10,6')
+        self.set_event_ui_round(rounds=[9,10,6])
         self.set_timer(timer_id='3', seconds=3)
         self.dark_stream_start_round(round=9, ui_duration=3000, damage_penalty=10)
 
@@ -115,7 +116,7 @@ class 라운드9(trigger_api.Trigger):
 
 class 라운드대기10(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=0, arg2='10,10,6')
+        self.set_event_ui_round(rounds=[10,10,6])
         self.set_effect(trigger_ids=[6201], visible=True)
         self.dark_stream_start_round(round=10, ui_duration=3000, damage_penalty=10)
         self.set_timer(timer_id='3', seconds=3)
@@ -146,7 +147,7 @@ class 바닥부심(trigger_api.Trigger):
             self.set_effect(trigger_ids=[620], visible=True)
             self.set_skill(trigger_ids=[703], enable=True)
             self.set_mesh(trigger_ids=[3201,3202,3203,3204,3205,3206,3207,3208,3209,3210,3211,3212,3213,3214,3215,3216,3217,3218,3219,3220,3221,3222,3223,3224,3225,3226,3227,3228,3229,3230,3231,3232,3233,3234,3235])
-            self.set_event_ui(type=0, arg2='0,0')
+            self.set_event_ui_round(rounds=[0,0])
             return 종료(self.ctx)
 
 

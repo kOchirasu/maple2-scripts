@@ -1,5 +1,6 @@
 """ trigger/84000007_wd/09_fireworks.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class Staging(trigger_api.Trigger):
@@ -12,7 +13,7 @@ class Staging(trigger_api.Trigger):
 
 class Volley_Ready(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$84000007_WD__09_FIREWORKS__0$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$84000007_WD__09_FIREWORKS__0$', duration=3000, box_ids='0')
         # self.select_camera_path(path_ids=[902,903])
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -22,7 +23,7 @@ class Volley_Ready(trigger_api.Trigger):
 
 class Volley_Ready2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$84000007_WD__09_FIREWORKS__1$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$84000007_WD__09_FIREWORKS__1$', duration=3000, box_ids='0')
         # self.select_camera_path(path_ids=[902,903])
 
     def on_tick(self) -> trigger_api.Trigger:

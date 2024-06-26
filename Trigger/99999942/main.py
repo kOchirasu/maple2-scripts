@@ -23,7 +23,7 @@ class StateNone(trigger_api.Trigger):
 
 class 유저대기중(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_timer(timer_id='1', seconds=15, interval=1)
+        self.set_timer(timer_id='1', seconds=15, display=True)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.user_value(key='MoveUser') >= 1:
@@ -34,7 +34,7 @@ class 유저대기중(trigger_api.Trigger):
 
 class 유저이동(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_timer(timer_id='1', seconds=5, interval=1)
+        self.set_timer(timer_id='1', seconds=5, display=True)
         self.move_user(map_id=99999942, portal_id=2)
 
     def on_tick(self) -> trigger_api.Trigger:

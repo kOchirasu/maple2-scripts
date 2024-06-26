@@ -1,5 +1,6 @@
 """ trigger/02000348_bf/main.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 #include dungeon_common/checkusercount.py
 from dungeon_common.checkusercount import *
@@ -147,7 +148,7 @@ class start_game(trigger_api.Trigger):
 class start_game_01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.show_guide_summary(entity_id=20003446, text_id=20003446, duration=5000)
-        self.set_event_ui(type=1, arg2='$02000348_BF__MAIN__11$', arg3='3000')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02000348_BF__MAIN__11$', duration=3000)
         self.spawn_monster(spawn_ids=[201,202,203,204,211,212,213,214])
         self.set_user_value(trigger_id=34808, key='cage_01', value=1)
         self.set_user_value(trigger_id=34805, key='cage_02', value=1)
@@ -169,7 +170,7 @@ class start_game_03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.show_guide_summary(entity_id=20003442, text_id=20003442, duration=5000)
         self.spawn_monster(spawn_ids=[231,232])
-        self.set_event_ui(type=1, arg2='$02000348_BF__MAIN__12$', arg3='3000')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02000348_BF__MAIN__12$', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -188,7 +189,7 @@ class start_game_03_a(trigger_api.Trigger):
 class start_game_03_b(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[8811,8810])
-        self.set_event_ui(type=1, arg2='$02000348_BF__MAIN__13$', arg3='3000')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02000348_BF__MAIN__13$', duration=3000)
         self.set_effect(trigger_ids=[7001], visible=True)
         self.set_skill(trigger_ids=[7702], enable=True)
         self.set_skill(trigger_ids=[7703], enable=True)
@@ -200,7 +201,7 @@ class start_game_03_b(trigger_api.Trigger):
 
 class start_game_05(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$02000348_BF__MAIN__14$', arg3='3000')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02000348_BF__MAIN__14$', duration=3000)
         self.spawn_monster(spawn_ids=[101,205,206,207,208]) # 촬영 감독
 
     def on_tick(self) -> trigger_api.Trigger:

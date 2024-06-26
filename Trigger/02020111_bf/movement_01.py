@@ -1,6 +1,7 @@
 """ trigger/02020111_bf/movement_01.xml """
 import trigger_api
 from System.Numerics import Vector3
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class 시작(trigger_api.Trigger):
@@ -35,7 +36,7 @@ class 조명변경(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.add_buff(box_ids=[101], skill_id=62100014, level=1)
         self.set_onetime_effect(id=1, path='BG/Common/ScreenMask/Eff_fadein_1sec.xml')
-        self.set_event_ui(type=1, arg2='$02020111_BF__MOVEMENT_01__0$', arg3='3000')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02020111_BF__MOVEMENT_01__0$', duration=3000)
         self.set_ambient_light(primary=Vector3(52,48,38))
         self.set_directional_light(diffuse_color=Vector3(0,0,0), specular_color=Vector3(206,174,84))
         self.add_buff(box_ids=[1001], skill_id=75000001, level=1)
@@ -59,7 +60,7 @@ class 페이드인(trigger_api.Trigger):
 class 유저이동(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         # self.move_user(map_id=2020111, portal_id=5)
-        self.set_event_ui(type=1, arg2='$02020111_BF__MOVEMENT_01__2$', arg3='4000')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02020111_BF__MOVEMENT_01__2$', duration=4000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=1000):

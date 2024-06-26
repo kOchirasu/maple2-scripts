@@ -22,7 +22,7 @@ class Fail(trigger_api.Trigger):
         self.play_system_sound_in_box(sound='System_PinkBeans_Arcade_Result_01')
         # 로그를 남기기 위한 행 : arg5가 트리거 전체에서 유니크한 값이 들어가야 하며, arg1은 코드에 남고 있지 않음(서바이벌일 때만 서바이벌 로그 불러옴)
         self.write_log(log_name='ThreeTwoOne_log', trigger_id=9001, event='char_event', sub_event='HyukiThreeTwoOnegameover')
-        self.set_timer(timer_id='10', seconds=10, interval=1)
+        self.set_timer(timer_id='10', seconds=10, display=True)
         self.select_camera_path(path_ids=[8011,8010], return_view=False) # 카메라 뒤로 당김
         self.arcade_three_two_one_end_game()
 

@@ -1,5 +1,6 @@
 """ trigger/02020101_bf/gimmick2.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class 대기(trigger_api.Trigger):
@@ -23,7 +24,7 @@ class 몬스터소환(trigger_api.Trigger):
 
 class 힌트(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$02020101_BF__GIMMICK2__0$', arg3='3000')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02020101_BF__GIMMICK2__0$', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.monster_dead(spawn_ids=[101]):

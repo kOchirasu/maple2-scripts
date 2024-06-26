@@ -100,7 +100,7 @@ class 게임시작(trigger_api.Trigger):
         self.widget_action(type='ScoreBoard', func='SetScore', widget_arg='0', desc='점수 강제 설정')
         # self.widget_action(type='ScoreBoard', func='AddScore', widget_arg='10', desc='점수 강제 추가')
         self.show_count_ui(text='$02000385_BF__VIP_DUNGEON_MAIN__0$', stage=1, count=3)
-        self.set_event_ui(type=0, arg2='1,5')
+        self.set_event_ui_round(rounds=[1,5])
         self.select_camera(trigger_id=302)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -111,7 +111,7 @@ class 게임시작(trigger_api.Trigger):
 class 라운드시작1(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_user_value(trigger_id=9991001, key='round1start', value=1)
-        self.set_timer(timer_id='30', seconds=30, interval=1, v_offset=80)
+        self.set_timer(timer_id='30', seconds=30, display=True, v_offset=80)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=30000):
@@ -121,7 +121,7 @@ class 라운드시작1(trigger_api.Trigger):
 class 라운드종료1(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.show_count_ui(text='$02000385_BF__VIP_DUNGEON_MAIN__1$', stage=2, count=3)
-        self.set_event_ui(type=0, arg2='2,5')
+        self.set_event_ui_round(rounds=[2,5])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -131,7 +131,7 @@ class 라운드종료1(trigger_api.Trigger):
 class 라운드시작2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_user_value(trigger_id=9991001, key='round2start', value=1)
-        self.set_timer(timer_id='30', seconds=30, interval=1, v_offset=80)
+        self.set_timer(timer_id='30', seconds=30, display=True, v_offset=80)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=30000):
@@ -141,7 +141,7 @@ class 라운드시작2(trigger_api.Trigger):
 class 라운드종료2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.show_count_ui(text='$02000385_BF__VIP_DUNGEON_MAIN__2$', stage=3, count=3)
-        self.set_event_ui(type=0, arg2='3,5')
+        self.set_event_ui_round(rounds=[3,5])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -151,7 +151,7 @@ class 라운드종료2(trigger_api.Trigger):
 class 라운드시작3(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_user_value(trigger_id=9991001, key='round3start', value=1)
-        self.set_timer(timer_id='30', seconds=30, interval=1, v_offset=80)
+        self.set_timer(timer_id='30', seconds=30, display=True, v_offset=80)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=30000):
@@ -161,7 +161,7 @@ class 라운드시작3(trigger_api.Trigger):
 class 라운드종료3(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.show_count_ui(text='$02000385_BF__VIP_DUNGEON_MAIN__3$', stage=4, count=3)
-        self.set_event_ui(type=0, arg2='4,5')
+        self.set_event_ui_round(rounds=[4,5])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -171,7 +171,7 @@ class 라운드종료3(trigger_api.Trigger):
 class 라운드시작4(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_user_value(trigger_id=9991001, key='round4start', value=1)
-        self.set_timer(timer_id='30', seconds=30, interval=1, v_offset=80)
+        self.set_timer(timer_id='30', seconds=30, display=True, v_offset=80)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=30000):
@@ -181,7 +181,7 @@ class 라운드시작4(trigger_api.Trigger):
 class 라운드종료4(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.show_count_ui(text='$02000385_BF__VIP_DUNGEON_MAIN__4$', stage=5, count=3)
-        self.set_event_ui(type=0, arg2='5,5')
+        self.set_event_ui_round(rounds=[5,5])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -191,7 +191,7 @@ class 라운드종료4(trigger_api.Trigger):
 class 라운드시작5(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_user_value(trigger_id=9991001, key='round5start', value=1)
-        self.set_timer(timer_id='30', seconds=30, interval=1, v_offset=80)
+        self.set_timer(timer_id='30', seconds=30, display=True, v_offset=80)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=30000):
@@ -201,7 +201,7 @@ class 라운드시작5(trigger_api.Trigger):
 class 게임종료(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera(trigger_id=301)
-        self.set_event_ui(type=0, arg2='0,0')
+        self.set_event_ui_round(rounds=[0,0])
         self.move_user(map_id=2000385, portal_id=2)
 
     def on_tick(self) -> trigger_api.Trigger:

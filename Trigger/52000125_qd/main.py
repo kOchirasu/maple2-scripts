@@ -1,6 +1,6 @@
 """ trigger/52000125_qd/main.xml """
 import trigger_api
-from Maple2.Server.Game.Scripting.Trigger import Align
+from Maple2.Server.Game.Scripting.Trigger import Align, BannerType
 
 
 # 노란 머리의 행방: 60100185 / 거짓말의 이유: 60100190 / 유력한 목격자: 60100195
@@ -171,7 +171,7 @@ class battle(trigger_api.Trigger):
 class battleMsg(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.play_system_sound_in_box(sound='System_ShowGuideSummary_01')
-        self.set_event_ui(type=1, arg2='$52000125_QD__MAIN__9$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$52000125_QD__MAIN__9$', duration=3000, box_ids='0')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.monster_dead(spawn_ids=[601,602,603]):

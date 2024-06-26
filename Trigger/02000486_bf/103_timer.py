@@ -1,5 +1,6 @@
 """ trigger/02000486_bf/103_timer.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class 전투시작(trigger_api.Trigger):
@@ -10,7 +11,7 @@ class 전투시작(trigger_api.Trigger):
 
 class 타이머(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_timer(timer_id='999', seconds=240, start_delay=1, interval=1)
+        self.set_timer(timer_id='999', seconds=240, auto_remove=True, display=True)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=1000):
@@ -19,7 +20,7 @@ class 타이머(trigger_api.Trigger):
 
 class 설명(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$02000486_BF__103_TIMER__0$', arg3='4000')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02000486_BF__103_TIMER__0$', duration=4000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=239000):
@@ -30,7 +31,7 @@ class 설명(trigger_api.Trigger):
 
 class 종료(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$02000486_BF__103_TIMER__1$', arg3='4000')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02000486_BF__103_TIMER__1$', duration=4000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=1000):

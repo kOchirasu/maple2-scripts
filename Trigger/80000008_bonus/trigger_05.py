@@ -28,7 +28,7 @@ class 몬스터소멸(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.destroy_monster(spawn_ids=[105])
         self.set_timer(timer_id='5', seconds=1)
-        self.set_timer(timer_id='6', seconds=1, start_delay=1)
+        self.set_timer(timer_id='6', seconds=1, auto_remove=True)
         self.set_effect(trigger_ids=[801,802,803,804,805], visible=True)
         self.set_effect(trigger_ids=[806,807,808,809,810], visible=True)
 

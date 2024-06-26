@@ -1,5 +1,6 @@
 """ trigger/52000094_qd/20002280_rp.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class 대기(trigger_api.Trigger):
@@ -93,7 +94,7 @@ class 데블린사망대기(trigger_api.Trigger):
 class 미션완료(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.destroy_monster(spawn_ids=[2101,2102,2103,2104,2105,2106,2107])
-        self.set_event_ui(type=7, arg2='$52000094_QD__20002280_RP__2$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.Fail, script='$52000094_QD__20002280_RP__2$', duration=3000, box_ids='0')
         self.set_local_camera(camera_id=302, enable=True)
 
     def on_tick(self) -> trigger_api.Trigger:

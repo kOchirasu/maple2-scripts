@@ -1,5 +1,6 @@
 """ trigger/52020024_qd/52020024_main.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class 감지(trigger_api.Trigger):
@@ -32,7 +33,7 @@ class 차전투감지1(trigger_api.Trigger):
 
 class 차전투1(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='방 안을 수색하세요', arg3='5000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='방 안을 수색하세요', duration=5000, box_ids='0')
         self.spawn_monster(spawn_ids=[101,102,103])
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -112,7 +113,7 @@ class 파편모으기(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_interact_object(trigger_ids=[10002009], state=1)
         self.add_balloon_talk(msg='중앙으로 가보자!', duration=3000)
-        self.set_event_ui(type=1, arg2='융합장치 전원 활성화.', arg3='5000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='융합장치 전원 활성화.', duration=5000, box_ids='0')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.object_interacted(interact_ids=[10002009], state=0):

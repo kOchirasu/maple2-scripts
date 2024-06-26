@@ -16,7 +16,7 @@ class Wait(trigger_api.Trigger):
 
 class CheerUpTimer_30(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_timer(timer_id='1', seconds=30, start_delay=1) # Round1 / 30sec
+        self.set_timer(timer_id='1', seconds=30, auto_remove=True) # Round1 / 30sec
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=26000):
@@ -26,7 +26,7 @@ class CheerUpTimer_30(trigger_api.Trigger):
 class CheerUpTimer_20(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         # Round3 or Jackpot / 20sec
-        self.set_timer(timer_id='1', seconds=20, start_delay=1)
+        self.set_timer(timer_id='1', seconds=20, auto_remove=True)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=16000):
@@ -35,7 +35,7 @@ class CheerUpTimer_20(trigger_api.Trigger):
 
 class CheerUpTimer_15(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_timer(timer_id='1', seconds=15, start_delay=1) # Gamble / 15sec
+        self.set_timer(timer_id='1', seconds=15, auto_remove=True) # Gamble / 15sec
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=11000):
@@ -45,7 +45,7 @@ class CheerUpTimer_15(trigger_api.Trigger):
 class CheerUpTimer_10(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         # Round4 or Round 5 / 10sec
-        self.set_timer(timer_id='1', seconds=10, start_delay=1)
+        self.set_timer(timer_id='1', seconds=10, auto_remove=True)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=6000):

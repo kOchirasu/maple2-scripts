@@ -26,7 +26,7 @@ class 사다리나타남(trigger_api.Trigger):
         self.set_ladder(trigger_ids=[202], visible=True, enable=True)
         self.set_ladder(trigger_ids=[203], visible=True, enable=True)
         self.set_ladder(trigger_ids=[204], visible=True, enable=True)
-        self.set_timer(timer_id='2', seconds=30, start_delay=1, interval=1, v_offset=-90)
+        self.set_timer(timer_id='2', seconds=30, auto_remove=True, display=True, v_offset=-90)
         self.show_guide_summary(entity_id=26300385, text_id=26300385)
 
     def on_tick(self) -> trigger_api.Trigger:

@@ -1,5 +1,6 @@
 """ trigger/99999905/buffskill.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class 시작대기중(trigger_api.Trigger):
@@ -14,7 +15,7 @@ class 시작대기중(trigger_api.Trigger):
 class 스킬랜덤(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_effect(trigger_ids=[601], visible=True)
-        self.set_event_ui(type=1, arg2='$99999905__BUFFSKILL__0$', arg3='2000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$99999905__BUFFSKILL__0$', duration=2000, box_ids='0')
 
     def on_tick(self) -> trigger_api.Trigger:
         if not self.user_detected(box_ids=[103]):

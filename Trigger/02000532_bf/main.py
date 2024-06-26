@@ -1,6 +1,6 @@
 """ trigger/02000532_bf/main.xml """
 import trigger_api
-from Maple2.Server.Game.Scripting.Trigger import Align
+from Maple2.Server.Game.Scripting.Trigger import Align, BannerType
 
 
 # 플레이어 감지
@@ -55,7 +55,7 @@ class 목표(trigger_api.Trigger):
         self.set_cinematic_ui(type=2)
         self.lock_my_pc()
         self.reset_camera(interpolation_time=1.0)
-        self.set_event_ui(type=1, arg2='$02000532_BF__MAIN__2$', arg3='3000')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02000532_BF__MAIN__2$', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3500):
@@ -66,7 +66,7 @@ class 문들어가기(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_cinematic_ui(type=0)
         self.set_cinematic_ui(type=2)
-        self.set_event_ui(type=1, arg2='$02000532_BF__MAIN__3$', arg3='3000')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02000532_BF__MAIN__3$', duration=3000)
         self.set_effect(trigger_ids=[7006], visible=True)
         self.set_effect(trigger_ids=[7007], visible=True)
         self.spawn_monster(spawn_ids=[408])
@@ -158,7 +158,7 @@ class 흑성회의반격(trigger_api.Trigger):
         self.set_mesh(trigger_ids=[3002,3003])
         self.lock_my_pc()
         self.reset_camera(interpolation_time=1.0)
-        self.set_event_ui(type=1, arg2='$02000532_BF__MAIN__15$', arg3='3000')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02000532_BF__MAIN__15$', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=1000):
@@ -217,7 +217,7 @@ class 차생성2(trigger_api.Trigger):
 
 class 엘리베이터안내(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$02000532_BF__MAIN__22$', arg3='3000')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02000532_BF__MAIN__22$', duration=3000)
         self.set_portal(portal_id=1, visible=True, enable=True, minimap_visible=True)
 
 

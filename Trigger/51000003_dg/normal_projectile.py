@@ -75,7 +75,7 @@ class Round_04(trigger_api.Trigger):
 
 class End(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        # self.set_event_ui(type=1, arg2='normal_projectile 종료', arg3='1000')
+        # self.set_event_ui_script(type=BannerType.GameOver, script='normal_projectile 종료', duration=1000)
         self.destroy_monster(spawn_ids=[301,302,303,304,305,306,307,308,309,310,311,312,351,352,353,354,355,356,357,358,359,360,361,362])
 
 

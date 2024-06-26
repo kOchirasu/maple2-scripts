@@ -1,6 +1,6 @@
 """ trigger/52020018_qd/main.xml """
 import trigger_api
-from Maple2.Server.Game.Scripting.Trigger import Align
+from Maple2.Server.Game.Scripting.Trigger import Align, BannerType
 
 
 # 트로이 여관 216호실 : 52020020
@@ -148,7 +148,7 @@ class Battle(trigger_api.Trigger):
         self.set_cinematic_ui(type=0)
         self.set_cinematic_ui(type=2)
         self.play_system_sound_in_box(sound='System_ShowGuideSummary_01')
-        self.set_event_ui(type=1, arg2='마리오네트들을 처치하고 이곳을 빠져나가자.', arg3='2000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='마리오네트들을 처치하고 이곳을 빠져나가자.', duration=2000, box_ids='0')
         self.set_onetime_effect(id=2, path='BG/Common/ScreenMask/Eff_CameraMasking_white.xml')
 
     def on_tick(self) -> trigger_api.Trigger:

@@ -1,7 +1,7 @@
 """ trigger/52010029_qd/main.xml """
 import trigger_api
 from System.Numerics import Vector3
-from Maple2.Server.Game.Scripting.Trigger import Align
+from Maple2.Server.Game.Scripting.Trigger import Align, BannerType
 
 
 """
@@ -297,7 +297,7 @@ class 차전투시작_03_1(trigger_api.Trigger):
         self.set_npc_emotion_loop(spawn_id=501, sequence_name='Stun_A', duration=16000000.0)
         self.set_cinematic_ui(type=0)
         self.set_cinematic_ui(type=2)
-        self.set_event_ui(type=1, arg2='$52010029_QD__MAIN__30$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$52010029_QD__MAIN__30$', duration=3000, box_ids='0')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.monster_dead(spawn_ids=[605,606,607,608,613,614]):
@@ -439,7 +439,7 @@ class 차전투시작_04_2(trigger_api.Trigger):
         self.set_cinematic_ui(type=0)
         self.set_cinematic_ui(type=2)
         self.reset_camera(interpolation_time=1.0)
-        self.set_event_ui(type=1, arg2='$52010029_QD__MAIN__37$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$52010029_QD__MAIN__37$', duration=3000, box_ids='0')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.monster_dead(spawn_ids=[601,602,603,604]):
@@ -536,7 +536,7 @@ class 차전투시작_02_3(trigger_api.Trigger):
         self.reset_camera(interpolation_time=1.0)
         self.set_cinematic_ui(type=0)
         self.set_cinematic_ui(type=2)
-        self.set_event_ui(type=1, arg2='$52010029_QD__MAIN__40$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$52010029_QD__MAIN__40$', duration=3000, box_ids='0')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.monster_dead(spawn_ids=[609,610,611,612,616,617]):
@@ -796,7 +796,7 @@ class 에바고르전투_04(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_cinematic_ui(type=0)
         self.set_cinematic_ui(type=2)
-        self.set_event_ui(type=1, arg2='$52010029_QD__MAIN__69$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$52010029_QD__MAIN__69$', duration=3000, box_ids='0')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.monster_dead(spawn_ids=[699]):

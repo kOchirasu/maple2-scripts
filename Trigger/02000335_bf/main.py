@@ -1,5 +1,6 @@
 """ trigger/02000335_bf/main.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 #include dungeon_common/checkusercount.py
 from dungeon_common.checkusercount import *
@@ -53,7 +54,7 @@ class 시작_02(trigger_api.Trigger):
 class 시작_03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.reset_camera(interpolation_time=1.0)
-        self.set_event_ui(type=1, arg2='$02000335_BF__MAIN__1$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02000335_BF__MAIN__1$', duration=3000, box_ids='0')
         self.set_timer(timer_id='3', seconds=3)
 
     def on_tick(self) -> trigger_api.Trigger:

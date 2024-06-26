@@ -1,5 +1,6 @@
 """ trigger/02000376_bf/01_main.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 #include dungeon_common/checkusercount.py
 from dungeon_common.checkusercount import *
@@ -86,7 +87,7 @@ class NpcPatrol01(trigger_api.Trigger):
 
 class NpcPatrol02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$02000376_BF__01_MAIN__2$', arg3='5000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02000376_BF__01_MAIN__2$', duration=5000, box_ids='0')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.user_value(key='PatrolEnd') >= 1:
@@ -295,7 +296,7 @@ class ShadowApp02(trigger_api.Trigger):
         self.destroy_monster(spawn_ids=[105,205]) # 전투
         self.spawn_monster(spawn_ids=[106,206], auto_target=False)
         self.set_effect(trigger_ids=[5000], visible=True) # 가이드 서머리 사운드 이펙트
-        self.set_event_ui(type=1, arg2='$02000376_BF__01_MAIN__10$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02000376_BF__01_MAIN__10$', duration=3000, box_ids='0')
         self.spawn_monster(spawn_ids=[911,912,913,914,915,916,917,918], auto_target=False)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -338,7 +339,7 @@ class StartPuzzle01(trigger_api.Trigger):
 class StartPuzzle02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_effect(trigger_ids=[5000], visible=True) # 가이드 서머리 사운드 이펙트
-        self.set_event_ui(type=1, arg2='$02000376_BF__01_MAIN__12$', arg3='5000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02000376_BF__01_MAIN__12$', duration=5000, box_ids='0')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):

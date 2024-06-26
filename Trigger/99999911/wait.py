@@ -10,7 +10,7 @@ class 최초(trigger_api.Trigger):
 
 class 시작(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_timer(timer_id='10', seconds=10, start_delay=1)
+        self.set_timer(timer_id='10', seconds=10, auto_remove=True)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.user_detected(box_ids=[701]):

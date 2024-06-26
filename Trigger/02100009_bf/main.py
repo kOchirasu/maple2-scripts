@@ -1,5 +1,6 @@
 """ trigger/02100009_bf/main.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class 유저감지(trigger_api.Trigger):
@@ -12,7 +13,7 @@ class 타이머설정(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_portal(portal_id=3, minimap_visible=True)
         self.set_portal(portal_id=4, visible=True, enable=True, minimap_visible=True)
-        self.set_timer(timer_id='10000', seconds=300, start_delay=1, interval=1)
+        self.set_timer(timer_id='10000', seconds=300, auto_remove=True, display=True)
 
     def on_tick(self) -> trigger_api.Trigger:
         return 끝(self.ctx)
@@ -35,7 +36,7 @@ class 성공(trigger_api.Trigger):
             return 성공_2(self.ctx)
 
     def on_exit(self) -> None:
-        self.set_event_ui(type=1, arg2='$02100009_BF__text__0$', arg3='4000')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02100009_BF__text__0$', duration=4000)
 
 
 class 성공_2(trigger_api.Trigger):
@@ -53,7 +54,7 @@ class 성공_3(trigger_api.Trigger):
         self.add_buff(box_ids=[101], skill_id=50000230, level=1, is_player=False, is_skill_set=False)
         self.destroy_monster(spawn_ids=[-1])
         self.set_achievement(trigger_id=9900, type='trigger', achieve='Find02100009')
-        self.set_event_ui(type=7, arg2='$02100009_BF__MAIN__1$', arg3='2000', arg4='0')
+        self.set_event_ui_script(type=BannerType.Fail, script='$02100009_BF__MAIN__1$', duration=2000, box_ids='0')
         self.set_achievement(trigger_id=9900, type='trigger', achieve='02100009_2')
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -65,7 +66,7 @@ class 성공_3(trigger_api.Trigger):
 class 실패(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.add_buff(box_ids=[101], skill_id=50000230, level=1, is_player=False, is_skill_set=False)
-        self.set_event_ui(type=5, arg2='$02100009_BF__MAIN__0$', arg3='2000', arg4='0')
+        self.set_event_ui_script(type=BannerType.Success, script='$02100009_BF__MAIN__0$', duration=2000, box_ids='0')
         self.destroy_monster(spawn_ids=[-1])
         self.set_portal(portal_id=3, visible=True, enable=True, minimap_visible=True)
 

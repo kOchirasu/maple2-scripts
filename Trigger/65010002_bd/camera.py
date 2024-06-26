@@ -26,7 +26,7 @@ class 카메라300(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='5', seconds=5)
         self.select_camera_path(path_ids=[300,304], return_view=False)
-        self.set_event_ui(type=1, arg2='1vs1 대결을 시작합니다.', arg3='3000')
+        self.set_event_ui_script(type=BannerType.GameOver, script='1vs1 대결을 시작합니다.', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='5'):
@@ -75,8 +75,8 @@ class 카메라303(trigger_api.Trigger):
 """
 class PvP시작(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=0, arg2='1,3')
-        self.set_event_ui(type=2, arg2='1라운드시작', arg3='1,3')
+        self.set_event_ui_round(rounds=[1,3])
+        self.set_event_ui_countdown(script='1라운드시작', round_countdown=[1,3])
         self.set_timer(timer_id='3', seconds=3)
 
     def on_tick(self) -> trigger_api.Trigger:

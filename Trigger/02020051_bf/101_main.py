@@ -1,6 +1,7 @@
 """ trigger/02020051_bf/101_main.xml """
 import trigger_api
 from System.Numerics import Vector3
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class 준비(trigger_api.Trigger):
@@ -26,7 +27,7 @@ class 포션사용(trigger_api.Trigger):
 
 class 타이머(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_timer(timer_id='999', seconds=10, start_delay=1, interval=1)
+        self.set_timer(timer_id='999', seconds=10, auto_remove=True, display=True)
         self.side_npc_talk(npc_id=11003536, illust='Neirin_surprise', script='$02020051_BF__101_MAIN__0$', duration=5684, voice='ko/Npc/00002201')
         self.remove_buff(box_id=11, skill_id=90000900)
 
@@ -136,7 +137,7 @@ class 종료(trigger_api.Trigger):
         self.set_user_value(trigger_id=106, key='Summon_monster_2', value=1)
         self.set_user_value(trigger_id=102, key='Timmer', value=1)
         self.set_user_value(trigger_id=104, key='End', value=1)
-        self.set_event_ui(type=1, arg2='$02020051_BF__101_MAIN__2$', arg3='4000')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02020051_BF__101_MAIN__2$', duration=4000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.user_value(key='Potion') >= 2:

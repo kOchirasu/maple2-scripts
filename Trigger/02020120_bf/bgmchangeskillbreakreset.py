@@ -61,7 +61,7 @@ class 스킬브레이크실패초기화처리(trigger_api.Trigger):
 
 class 스킬브레이크실패연출출력(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        # self.set_event_ui(type=1, arg2='10년은 이르다!!!', arg3='4000')
+        # self.set_event_ui_script(type=BannerType.GameOver, script='10년은 이르다!!!', duration=4000)
         pass
 
     def on_tick(self) -> trigger_api.Trigger:

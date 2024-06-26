@@ -1,5 +1,6 @@
 """ trigger/02000297_bf/main.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class 대기(trigger_api.Trigger):
@@ -42,7 +43,7 @@ class LoadingDelay02(trigger_api.Trigger):
 class BossBattle01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.play_system_sound_in_box(box_ids=[9000], sound='System_ShowGuideSummary_01')
-        self.set_event_ui(type=1, arg2='$02000297_BF__MAIN__0$', arg3='5000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02000297_BF__MAIN__0$', duration=5000, box_ids='0')
         self.set_agent(trigger_ids=[101], visible=True)
         self.set_agent(trigger_ids=[102], visible=True)
         self.set_agent(trigger_ids=[103], visible=True)

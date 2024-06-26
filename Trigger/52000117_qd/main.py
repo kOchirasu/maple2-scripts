@@ -1,6 +1,6 @@
 """ trigger/52000117_qd/main.xml """
 import trigger_api
-from Maple2.Server.Game.Scripting.Trigger import Align
+from Maple2.Server.Game.Scripting.Trigger import Align, BannerType
 
 
 # 트라이아 청사 : 60100015
@@ -194,7 +194,7 @@ class end(trigger_api.Trigger):
 class endmessage(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.play_system_sound_in_box(sound='System_ShowGuideSummary_01')
-        self.set_event_ui(type=1, arg2='$52000117_QD__MAIN__14$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$52000117_QD__MAIN__14$', duration=3000, box_ids='0')
         self.move_user(map_id=52000118)
 
     def on_tick(self) -> trigger_api.Trigger:

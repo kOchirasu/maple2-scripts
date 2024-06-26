@@ -20,7 +20,7 @@ class Wait(trigger_api.Trigger):
 class Gauge100(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_user_value(trigger_id=102, key='Gauge', value=100)
-        self.set_timer(timer_id='100100', seconds=15, start_delay=1)
+        self.set_timer(timer_id='100100', seconds=15, auto_remove=True)
         self.set_actor(trigger_id=4002, visible=True, initial_sequence='Interaction_tankskyblue_A01_100') # Up
         self.set_actor(trigger_id=4102, visible=True, initial_sequence='Interaction_tankskyblue_A01_100') # Down
 
@@ -50,7 +50,7 @@ class Gauge75(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_user_value(trigger_id=102, key='Gauge', value=75)
         self.reset_timer(timer_id='100100')
-        self.set_timer(timer_id='10075', seconds=15, start_delay=1)
+        self.set_timer(timer_id='10075', seconds=15, auto_remove=True)
         self.set_actor(trigger_id=4002, visible=True, initial_sequence='Interaction_tankskyblue_A01_75') # Up
         self.set_actor(trigger_id=4102, visible=True, initial_sequence='Interaction_tankskyblue_A01_75') # Down
 
@@ -80,7 +80,7 @@ class Gauge50(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_user_value(trigger_id=102, key='Gauge', value=50)
         self.reset_timer(timer_id='10075')
-        self.set_timer(timer_id='10050', seconds=15, start_delay=1)
+        self.set_timer(timer_id='10050', seconds=15, auto_remove=True)
         self.set_actor(trigger_id=4002, visible=True, initial_sequence='Interaction_tankskyblue_A01_50') # Up
         self.set_actor(trigger_id=4102, visible=True, initial_sequence='Interaction_tankskyblue_A01_50') # Down
 
@@ -110,7 +110,7 @@ class Gauge25(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_user_value(trigger_id=102, key='Gauge', value=25)
         self.reset_timer(timer_id='10050')
-        self.set_timer(timer_id='10025', seconds=15, start_delay=1)
+        self.set_timer(timer_id='10025', seconds=15, auto_remove=True)
         self.set_actor(trigger_id=4002, visible=True, initial_sequence='Interaction_tankskyblue_A01_25') # Up
         self.set_actor(trigger_id=4102, visible=True, initial_sequence='Interaction_tankskyblue_A01_25') # Down
 

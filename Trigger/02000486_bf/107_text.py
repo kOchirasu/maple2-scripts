@@ -1,5 +1,6 @@
 """ trigger/02000486_bf/107_text.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class 유저감지(trigger_api.Trigger):
@@ -16,7 +17,7 @@ class 알림(trigger_api.Trigger):
 
 class 텍스트(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$02000486_BF__107_TEXT__0$', arg3='4000')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02000486_BF__107_TEXT__0$', duration=4000)
 
     def on_tick(self) -> trigger_api.Trigger:
         pass

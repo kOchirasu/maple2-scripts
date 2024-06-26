@@ -1,6 +1,7 @@
 """ trigger/52000138_qd/main.xml """
 import trigger_api
 from System.Numerics import Vector3
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 # 플레이어 감지
@@ -71,7 +72,7 @@ class ready(trigger_api.Trigger):
 
 class act1_wave1(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$52000138_QD__MAIN__0$', arg3='3000', arg4='0') # 1구역 사이렌 시작
+        self.set_event_ui_script(type=BannerType.GameOver, script='$52000138_QD__MAIN__0$', duration=3000, box_ids='0') # 1구역 사이렌 시작
         self.set_actor(trigger_id=1001, visible=True, initial_sequence='sf_quest_light_A01_On')
         self.set_actor(trigger_id=1002, visible=True, initial_sequence='sf_quest_light_A01_On')
         self.set_actor(trigger_id=1003, visible=True, initial_sequence='sf_quest_light_A01_On')

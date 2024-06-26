@@ -12,7 +12,7 @@ class CannonSpawn(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_dialogue(type=1, spawn_id=190, script='$02000334_BF__WAVE__12$', time=3, arg5=1) # 보스 대사
         self.set_dialogue(type=1, spawn_id=199, script='$02000334_BF__MAIN__12$', time=3, arg5=3) # 오스칼 대사
-        self.set_timer(timer_id='3', seconds=3, interval=1)
+        self.set_timer(timer_id='3', seconds=3, display=True)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='3'):

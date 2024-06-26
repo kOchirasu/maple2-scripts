@@ -83,7 +83,7 @@ class 스폰_2_SE(trigger_api.Trigger):
 
 class 스폰_2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_timer(timer_id='1', seconds=990, start_delay=1)
+        self.set_timer(timer_id='1', seconds=990, auto_remove=True)
         self.set_onetime_effect(id=1, path='BG/Common/Sound/Eff_System_Dark_Intro_Chord_01.xml')
         self.start_combine_spawn(group_id=[501], is_start=True)
 
@@ -107,7 +107,7 @@ class 스폰_3_SE(trigger_api.Trigger):
 
 class 스폰_3(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_timer(timer_id='2', seconds=990, start_delay=1)
+        self.set_timer(timer_id='2', seconds=990, auto_remove=True)
         self.set_onetime_effect(id=1, path='BG/Common/Sound/Eff_System_Dark_Intro_Chord_01.xml')
         self.start_combine_spawn(group_id=[502], is_start=True)
 
@@ -131,7 +131,7 @@ class 스폰_4_SE(trigger_api.Trigger):
 
 class 스폰_4(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_timer(timer_id='3', seconds=990, start_delay=1)
+        self.set_timer(timer_id='3', seconds=990, auto_remove=True)
         self.set_onetime_effect(id=1, path='BG/Common/Sound/Eff_System_Dark_Intro_Chord_01.xml')
         self.start_combine_spawn(group_id=[503], is_start=True)
 

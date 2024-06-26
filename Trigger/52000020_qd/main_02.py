@@ -1,6 +1,6 @@
 """ trigger/52000020_qd/main_02.xml """
 import trigger_api
-from Maple2.Server.Game.Scripting.Trigger import Align
+from Maple2.Server.Game.Scripting.Trigger import Align, BannerType
 
 
 class idle(trigger_api.Trigger):
@@ -163,7 +163,7 @@ class battle(trigger_api.Trigger):
 class battleMsg(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.play_system_sound_in_box(sound='System_ShowGuideSummary_01')
-        self.set_event_ui(type=1, arg2='$52000020_QD__MAIN_02__13$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$52000020_QD__MAIN_02__13$', duration=3000, box_ids='0')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.monster_dead(spawn_ids=[604,605]):

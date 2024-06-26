@@ -37,9 +37,9 @@ class Setting(trigger_api.Trigger):
         if self.user_value(key='TimeEventOn') >= 0:
             return Wait(self.ctx)
         if self.object_interacted(interact_ids=[12000079], state=0):
-            self.set_timer(timer_id='10', seconds=120, start_delay=1)
+            self.set_timer(timer_id='10', seconds=120, auto_remove=True)
             # UI 표시 안함 / 황금 상자 소유권 Additional Effect 71001061 지속시간 동일
-            self.set_timer(timer_id='1', seconds=15, start_delay=1)
+            self.set_timer(timer_id='1', seconds=15, auto_remove=True)
             return TimeTrial_StartDelay(self.ctx)
 
 
@@ -58,7 +58,7 @@ class TimeTrial_Start(trigger_api.Trigger):
         if self.check_any_user_additional_effect(box_id=16100, additional_effect_id=71001271, level=1):
             # 목표 지점에 도착 성공
             self.add_buff(box_ids=[160001], skill_id=71001062, level=1, is_player=False, is_skill_set=False)
-            self.set_timer(timer_id='100', seconds=60, start_delay=1)
+            self.set_timer(timer_id='100', seconds=60, auto_remove=True)
             return TimeTrial_Success(self.ctx)
         if self.time_expired(timer_id='1'):
             # 타임 아웃 실패
@@ -85,7 +85,7 @@ class TimeTrial_TimerReset01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_effect(trigger_ids=[16201], visible=True) # Right Sound Effect
         # UI 표시 안함 / 황금 상자 소유권 Additional Effect 71001061 지속시간 동일
-        self.set_timer(timer_id='1', seconds=15, start_delay=1)
+        self.set_timer(timer_id='1', seconds=15, auto_remove=True)
         # ReStart_FootHold / 제한 시간 리셋용 오브젝트 / Additional Effect 71001061 71001271 71001281 부여  / 71001061 버프 소유자만 반응 가능
         self.set_interact_object(trigger_ids=[12000098], state=0)
 

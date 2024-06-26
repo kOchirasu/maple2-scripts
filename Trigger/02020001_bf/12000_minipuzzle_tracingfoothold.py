@@ -38,7 +38,7 @@ class Setting(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.object_interacted(interact_ids=[12000075], state=0):
             # UI 표시 안함 / 황금 상자 소유권 Additional Effect 71001021 지속시간 동일
-            self.set_timer(timer_id='1', seconds=120, start_delay=1)
+            self.set_timer(timer_id='1', seconds=120, auto_remove=True)
             return TracingFootHold_Start_Delay(self.ctx)
 
 
@@ -102,7 +102,7 @@ class TracingFootHold_Success(trigger_api.Trigger):
         self.set_mesh(trigger_ids=[12003], visible=True, fade=1.0) # FootHold03
         # RareBox / 기믹 종료 오브젝트 / Additional Effect 71001121 걸어서 71001021 제거
         self.set_interact_object(trigger_ids=[12000221], state=1)
-        self.set_timer(timer_id='2', seconds=60, start_delay=1)
+        self.set_timer(timer_id='2', seconds=60, auto_remove=True)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.object_interacted(interact_ids=[12000221], state=0):

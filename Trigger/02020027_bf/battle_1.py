@@ -1,5 +1,6 @@
 """ trigger/02020027_bf/battle_1.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class 전투시작(trigger_api.Trigger):
@@ -16,7 +17,7 @@ class 전투시작_2(trigger_api.Trigger):
 class 몬스터소환(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.spawn_monster(spawn_ids=[301,302,303,304,305,306])
-        self.set_event_ui(type=1, arg2='$02020027_BF__battle_1__0$', arg3='4000')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02020027_BF__battle_1__0$', duration=4000)
         self.set_dialogue(type=1, spawn_id=301, script='$02020027_BF__battle_1__1$', time=3)
         self.set_dialogue(type=1, spawn_id=303, script='$02020027_BF__battle_1__2$', time=3)
         self.set_dialogue(type=1, spawn_id=305, script='$02020027_BF__battle_1__3$', time=3)

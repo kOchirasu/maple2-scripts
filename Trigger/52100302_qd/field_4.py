@@ -1,5 +1,6 @@
 """ trigger/52100302_qd/field_4.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class 대기(trigger_api.Trigger):
@@ -287,84 +288,84 @@ class CableOn_21(trigger_api.Trigger):
 class CableDelay_19(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=2000):
-            self.set_event_ui(type=1, arg2='$52100302_QD__FIELD_4__0$', arg3='3000')
+            self.set_event_ui_script(type=BannerType.GameOver, script='$52100302_QD__FIELD_4__0$', duration=3000)
             return CableDelay_19_2(self.ctx)
 
 
 class CableDelay_20(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=2000):
-            self.set_event_ui(type=1, arg2='$52100302_QD__FIELD_4__1$', arg3='3000')
+            self.set_event_ui_script(type=BannerType.GameOver, script='$52100302_QD__FIELD_4__1$', duration=3000)
             return CableDelay_20_2(self.ctx)
 
 
 class CableDelay_21(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=2000):
-            self.set_event_ui(type=1, arg2='$52100302_QD__FIELD_4__2$', arg3='3000')
+            self.set_event_ui_script(type=BannerType.GameOver, script='$52100302_QD__FIELD_4__2$', duration=3000)
             return CableDelay_21_2(self.ctx)
 
 
 class CableDelay_19_2(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
-            self.set_event_ui(type=1, arg2='$52100302_QD__FIELD_4__3$', arg3='1000')
+            self.set_event_ui_script(type=BannerType.GameOver, script='$52100302_QD__FIELD_4__3$', duration=1000)
             return CableDelay_19_3(self.ctx)
 
 
 class CableDelay_20_2(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
-            self.set_event_ui(type=1, arg2='$52100302_QD__FIELD_4__4$', arg3='1000')
+            self.set_event_ui_script(type=BannerType.GameOver, script='$52100302_QD__FIELD_4__4$', duration=1000)
             return CableDelay_20_3(self.ctx)
 
 
 class CableDelay_21_2(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
-            self.set_event_ui(type=1, arg2='$52100302_QD__FIELD_4__5$', arg3='1000')
+            self.set_event_ui_script(type=BannerType.GameOver, script='$52100302_QD__FIELD_4__5$', duration=1000)
             return CableDelay_21_3(self.ctx)
 
 
 class CableDelay_19_3(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=1000):
-            self.set_event_ui(type=1, arg2='$52100302_QD__FIELD_4__6$', arg3='1000')
+            self.set_event_ui_script(type=BannerType.GameOver, script='$52100302_QD__FIELD_4__6$', duration=1000)
             return CableDelay_19_4(self.ctx)
 
 
 class CableDelay_20_3(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=1000):
-            self.set_event_ui(type=1, arg2='$52100302_QD__FIELD_4__7$', arg3='1000')
+            self.set_event_ui_script(type=BannerType.GameOver, script='$52100302_QD__FIELD_4__7$', duration=1000)
             return CableDelay_20_4(self.ctx)
 
 
 class CableDelay_21_3(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=1000):
-            self.set_event_ui(type=1, arg2='$52100302_QD__FIELD_4__8$', arg3='1000')
+            self.set_event_ui_script(type=BannerType.GameOver, script='$52100302_QD__FIELD_4__8$', duration=1000)
             return CableDelay_21_4(self.ctx)
 
 
 class CableDelay_19_4(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=1000):
-            self.set_event_ui(type=1, arg2='$52100302_QD__FIELD_4__9$', arg3='1000')
+            self.set_event_ui_script(type=BannerType.GameOver, script='$52100302_QD__FIELD_4__9$', duration=1000)
             return CableDelay_19_5(self.ctx)
 
 
 class CableDelay_20_4(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=1000):
-            self.set_event_ui(type=1, arg2='$52100302_QD__FIELD_4__10$', arg3='1000')
+            self.set_event_ui_script(type=BannerType.GameOver, script='$52100302_QD__FIELD_4__10$', duration=1000)
             return CableDelay_20_5(self.ctx)
 
 
 class CableDelay_21_4(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=1000):
-            self.set_event_ui(type=1, arg2='$52100302_QD__FIELD_4__11$', arg3='1000')
+            self.set_event_ui_script(type=BannerType.GameOver, script='$52100302_QD__FIELD_4__11$', duration=1000)
             return CableDelay_21_5(self.ctx)
 
 

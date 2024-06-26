@@ -1,5 +1,6 @@
 """ trigger/02000332_bf/barricade.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class 대기(trigger_api.Trigger):
@@ -13,7 +14,7 @@ class 대기(trigger_api.Trigger):
 
 class 카운트(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$02000384_BF__BARRICADE__0$', arg3='3000')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02000384_BF__BARRICADE__0$', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=30000):

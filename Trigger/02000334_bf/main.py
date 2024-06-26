@@ -1,5 +1,6 @@
 """ trigger/02000334_bf/main.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 #include dungeon_common/checkusercount.py
 from dungeon_common.checkusercount import *
@@ -110,7 +111,7 @@ class 단계_시작02_1(trigger_api.Trigger):
 
 class 단계_시작03_1(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=0, arg2='1,4')
+        self.set_event_ui_round(rounds=[1,4])
         self.show_count_ui(text='$02000334_BF__MAIN__2$', stage=1, count=5)
         self.set_timer(timer_id='4', seconds=4)
 
@@ -140,7 +141,7 @@ class 단계_타이머1(trigger_api.Trigger):
         self.set_effect(trigger_ids=[90022], visible=True) # 점프 뛰는 소리 ON
         self.spawn_monster(spawn_ids=[160], auto_target=False) # 웨이브 가이드
         self.spawn_monster(spawn_ids=[150], auto_target=False)
-        self.set_timer(timer_id='60', seconds=60, interval=1)
+        self.set_timer(timer_id='60', seconds=60, display=True)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='60'):
@@ -181,7 +182,7 @@ class 단계_시작2(trigger_api.Trigger):
         self.spawn_monster(spawn_ids=[204,205]) # 성벽 지키는 NPC 리필
         self.set_dialogue(type=1, spawn_id=199, script='$02000334_BF__MAIN__8$', time=3) # 오스칼 대사
         self.set_mesh(trigger_ids=[6000,6001,6002,6003,6004,6005,6006,6007,6008,6009,6010,6011,6012,6013,6014,6015,6016], interval=250, fade=1.0) # 가림막 해제
-        self.set_event_ui(type=0, arg2='2,4')
+        self.set_event_ui_round(rounds=[2,4])
         self.show_count_ui(text='$02000334_BF__MAIN__2$', stage=2, count=5)
         self.set_timer(timer_id='6', seconds=6)
 
@@ -198,7 +199,7 @@ class 단계_타이머2(trigger_api.Trigger):
         self.set_effect(trigger_ids=[90022], visible=True) # 점프 뛰는 소리 ON
         self.select_camera(trigger_id=8000) # 사이드뷰 카메라
         self.spawn_monster(spawn_ids=[150,151], auto_target=False) # 1,2 차 웨이브 몬스터 작동 장치
-        self.set_timer(timer_id='60', seconds=60, interval=1)
+        self.set_timer(timer_id='60', seconds=60, display=True)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='60'):
@@ -234,7 +235,7 @@ class 단계_준비3(trigger_api.Trigger):
 class 단계_시작3(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.spawn_monster(spawn_ids=[206,207]) # 성벽 지키는 NPC 리필
-        self.set_event_ui(type=0, arg2='3,4')
+        self.set_event_ui_round(rounds=[3,4])
         self.show_count_ui(text='$02000334_BF__MAIN__2$', stage=3, count=5)
         self.set_timer(timer_id='6', seconds=6)
 
@@ -250,7 +251,7 @@ class 단계_타이머3(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_effect(trigger_ids=[90022], visible=True) # 점프 뛰는 소리 ON
         self.spawn_monster(spawn_ids=[150,151,152], auto_target=False) # 1,2,3차 웨이브 몬스터 작동 장치
-        self.set_timer(timer_id='60', seconds=60, interval=1)
+        self.set_timer(timer_id='60', seconds=60, display=True)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='60'):
@@ -296,7 +297,7 @@ class 단계_시작4(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.destroy_monster(spawn_ids=[101,102,103,104,105,106,107,108,111,112,113,114,115,131,132,133,134,135,150,151,152,991,992,993,994,995,996,997,998])
         self.move_npc(spawn_id=190, patrol_name='MS2PatrolData_2999') # 보스 등장
-        self.set_event_ui(type=0, arg2='4,4')
+        self.set_event_ui_round(rounds=[4,4])
         self.show_count_ui(text='$02000334_BF__MAIN__2$', stage=4, count=5)
         self.set_timer(timer_id='6', seconds=6)
         self.set_dialogue(type=1, spawn_id=190, script='$02000334_BF__WAVE__2$', time=3) # 보스 대사
@@ -315,7 +316,7 @@ class 단계_시작4(trigger_api.Trigger):
 class 단계_타이머4(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_effect(trigger_ids=[90022], visible=True) # 점프 뛰는 소리 ON
-        self.set_timer(timer_id='150', seconds=150, interval=1)
+        self.set_timer(timer_id='150', seconds=150, display=True)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.monster_dead(spawn_ids=[999]):
@@ -333,8 +334,8 @@ class 단계_타이머4(trigger_api.Trigger):
 class 게임오버(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.destroy_monster(spawn_ids=[101,102,103,104,105,106,107,108,111,112,113,114,115,131,132,133,134,135,150,151,152,190,991,992,993,994,995,996,997,998])
-        self.set_event_ui(type=5, arg3='3000')
-        self.set_event_ui(type=0, arg2='0,0')
+        self.set_event_ui_script(type=BannerType.Success, duration=3000)
+        self.set_event_ui_round(rounds=[0,0])
         self.set_timer(timer_id='3', seconds=3)
         self.set_effect(trigger_ids=[98031])
 
@@ -365,8 +366,8 @@ class 게임오버_이벤트(trigger_api.Trigger):
 
 class 게임오버_강퇴(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_timer(timer_id='5', seconds=5, interval=1)
-        self.set_event_ui(type=1, arg2='$02000334_BF__MAIN__14$', arg3='5000')
+        self.set_timer(timer_id='5', seconds=5, display=True)
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02000334_BF__MAIN__14$', duration=5000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='5'):
@@ -428,9 +429,9 @@ class 클리어_보상(trigger_api.Trigger):
         self.set_portal(portal_id=10, visible=True, enable=True)
         self.play_system_sound_in_box(sound='System_ShowGuideSummary_01')
         self.show_guide_summary(entity_id=103, text_id=40009) # 포탈로 이동하세요
-        # self.set_event_ui(type=1, arg2='$02000334_BF__MAIN__17$', arg3='10000')
+        # self.set_event_ui_script(type=BannerType.GameOver, script='$02000334_BF__MAIN__17$', duration=10000)
         self.move_npc(spawn_id=199, patrol_name='MS2PatrolData_2015') # 오스칼 장소 이동
-        self.set_timer(timer_id='10', seconds=10, interval=1)
+        self.set_timer(timer_id='10', seconds=10, display=True)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.user_detected(box_ids=[90099]):

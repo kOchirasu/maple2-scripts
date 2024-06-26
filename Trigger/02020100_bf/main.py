@@ -1,5 +1,6 @@
 """ trigger/02020100_bf/main.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class 대기(trigger_api.Trigger):
@@ -107,7 +108,7 @@ class 씨앗체험(trigger_api.Trigger):
 
 class 씨앗체험_씨앗들기(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$02020100_BF__MAIN__0$', arg3='5000')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02020100_BF__MAIN__0$', duration=5000)
         self.set_user_value(trigger_id=99990005, key='Seed0start', value=1)
         # self.set_interact_object(trigger_ids=[10002115], state=1)
         # self.set_mesh(trigger_ids=[1301], visible=True)
@@ -226,7 +227,7 @@ class 씨앗2_전투(trigger_api.Trigger):
         self.set_agent(trigger_ids=[9027])
         self.set_agent(trigger_ids=[9028])
         self.set_agent(trigger_ids=[9029])
-        self.set_event_ui(type=1, arg2='$02020100_BF__MAIN__1$', arg3='5000')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02020100_BF__MAIN__1$', duration=5000)
         self.spawn_monster(spawn_ids=[111,112,113,114,115,116], auto_target=False)
         self.set_mesh(trigger_ids=[1211,1212,1213,1214,1215,1216,1217,1218,1219,1220])
         self.set_interact_object(trigger_ids=[10002113], state=1)

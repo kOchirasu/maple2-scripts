@@ -1,5 +1,6 @@
 """ trigger/02020061_bf/main.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class 대기(trigger_api.Trigger):
@@ -40,7 +41,7 @@ class 유저카운트(trigger_api.Trigger):
 class 딜레이(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_achievement(trigger_id=9002, type='trigger', achieve='corps_battle')
-        self.set_event_ui(type=1, arg2='$02020061_BF__MAIN__0$', arg3='5000')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02020061_BF__MAIN__0$', duration=5000)
         self.select_camera(trigger_id=999)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -50,7 +51,7 @@ class 딜레이(trigger_api.Trigger):
 
 class 방폭(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$02020061_BF__MAIN__1$', arg3='10000')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02020061_BF__MAIN__1$', duration=10000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=10000):
@@ -74,9 +75,9 @@ class 시작(trigger_api.Trigger):
         self.reset_camera(interpolation_time=1.0)
         self.set_effect(trigger_ids=[2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016])
         self.set_mesh(trigger_ids=[1001,1002,1003,1004,1005,1006,1007,1008,1009,1010,1011,1012,1013,1014,1015,1016,1017,1018,1019,1020,1021,1022,1023,1024,1025,1026,1027,1028,1029,1030,1031,1032,1033,1034,1035,1036,1037,1038,1039,1040,1041,1042,1043,1044,1045,1046,1047,1048])
-        self.set_event_ui(type=0, arg2='1,3')
-        self.set_event_ui(type=1, arg2='$02020061_BF__MAIN__2$', arg3='5000')
-        self.set_timer(timer_id='1', seconds=180, start_delay=1, interval=1, v_offset=60) # <1라운드 게임 플레이 타임 설정>
+        self.set_event_ui_round(rounds=[1,3])
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02020061_BF__MAIN__2$', duration=5000)
+        self.set_timer(timer_id='1', seconds=180, auto_remove=True, display=True, v_offset=60) # <1라운드 게임 플레이 타임 설정>
         self.shadow_expedition_open_boss_gauge(max_gauge_point=800)
         self.set_user_value(trigger_id=99990002, key='SpawnStart', value=1)
         self.set_actor(trigger_id=1901, initial_sequence='Idle_A') # <연출용 액터>
@@ -94,12 +95,12 @@ class 시작(trigger_api.Trigger):
 class 오브젝트페이즈(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.give_reward_content(reward_id=31000001)
-        self.set_event_ui(type=1, arg2='$02020061_BF__MAIN__3$', arg3='5000')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02020061_BF__MAIN__3$', duration=5000)
         self.shadow_expedition_close_boss_gauge()
-        self.set_event_ui(type=0, arg2='2,3')
+        self.set_event_ui_round(rounds=[2,3])
         self.reset_timer(timer_id='1')
         self.set_user_value(trigger_id=99990003, key='ObjectPhase', value=1)
-        self.set_timer(timer_id='2', seconds=180, start_delay=1, interval=1, v_offset=60) # <2라운드 게임 플레이 타임 설정>
+        self.set_timer(timer_id='2', seconds=180, auto_remove=True, display=True, v_offset=60) # <2라운드 게임 플레이 타임 설정>
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.user_value(key='ObjectClear') >= 1:
@@ -114,11 +115,11 @@ class 보스페이즈(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.give_reward_content(reward_id=31000002)
         self.destroy_monster(spawn_ids=[-1])
-        self.set_event_ui(type=1, arg2='$02020061_BF__MAIN__4$', arg3='5000')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02020061_BF__MAIN__4$', duration=5000)
         self.reset_timer(timer_id='2')
-        self.set_event_ui(type=0, arg2='3,3')
+        self.set_event_ui_round(rounds=[3,3])
         self.set_user_value(trigger_id=99990008, key='BossPhase', value=1)
-        self.set_timer(timer_id='3', seconds=180, start_delay=1, interval=1, v_offset=60) # <3라운드 게임 플레이 타임 설정>
+        self.set_timer(timer_id='3', seconds=180, auto_remove=True, display=True, v_offset=60) # <3라운드 게임 플레이 타임 설정>
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.user_value(key='BossClear') >= 1:

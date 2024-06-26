@@ -1,6 +1,6 @@
 """ trigger/99999913/01_survival.xml """
 import trigger_api
-from Maple2.Server.Game.Scripting.Trigger import FieldGame
+from Maple2.Server.Game.Scripting.Trigger import BannerType, FieldGame
 
 
 class Setting(trigger_api.Trigger):
@@ -31,8 +31,8 @@ class Setting(trigger_api.Trigger):
 
 class Wait01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_timer(timer_id='1', seconds=60, start_delay=1, interval=1, v_offset=-80) # test용 수정 가능 지점
-        self.set_event_ui(type=1, arg2='잠시 기다려주세요.\\n잠시 후 경기 시작점이 결정됩니다.', arg3='4000', arg4='0')
+        self.set_timer(timer_id='1', seconds=60, auto_remove=True, display=True, v_offset=-80) # test용 수정 가능 지점
+        self.set_event_ui_script(type=BannerType.GameOver, script='잠시 기다려주세요.\\n잠시 후 경기 시작점이 결정됩니다.', duration=4000, box_ids='0')
         self.write_log(log_name='Survival', event='Waiting_Start') # 서바이벌 대기 시작
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -65,7 +65,7 @@ class CheckTheNumberOfPlayers(trigger_api.Trigger):
 class StartPositionRandomPick(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.reset_timer(timer_id='1')
-        self.set_event_ui(type=1, arg2='시작점으로 이동합니다.', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='시작점으로 이동합니다.', duration=3000, box_ids='0')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.random_condition(weight=12.5):
@@ -185,7 +185,7 @@ class PCRemap08_SouthEast(trigger_api.Trigger):
 
 class PVPReady(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='space 키를 누르면  수레에 탈 수 있습니다.\\nspace 키를 다시 누르면 수레에서 내립니다.', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='space 키를 누르면  수레에 탈 수 있습니다.\\nspace 키를 다시 누르면 수레에서 내립니다.', duration=3000, box_ids='0')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):
@@ -195,7 +195,7 @@ class PVPReady(trigger_api.Trigger):
 class PVPStart(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.play_system_sound_in_box(sound='System_ShowGuideSummary_01')
-        self.set_event_ui(type=1, arg2='경기를 곧 시작합니다!\\n경기 시작과 함께 수레가 출발합니다!', arg3='4000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='경기를 곧 시작합니다!\\n경기 시작과 함께 수레가 출발합니다!', duration=4000, box_ids='0')
         self.create_field_game(type=FieldGame.MapleSurvival)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -261,7 +261,7 @@ class Quit(trigger_api.Trigger):
 # 인원 미만으로 인한 경기 취소
 class GameCancel01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='참가자 부족으로 인해 경기를 취소합니다.', arg3='4000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='참가자 부족으로 인해 경기를 취소합니다.', duration=4000, box_ids='0')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):
@@ -270,7 +270,7 @@ class GameCancel01(trigger_api.Trigger):
 
 class GameCancel02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='잠시 후 원래 있던 곳으로 돌아갑니다.', arg3='4000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='잠시 후 원래 있던 곳으로 돌아갑니다.', duration=4000, box_ids='0')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=6000):

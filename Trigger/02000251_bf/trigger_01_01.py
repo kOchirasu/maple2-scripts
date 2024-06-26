@@ -27,7 +27,7 @@ class 몹생성(trigger_api.Trigger):
 class 통과딜레이(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='3', seconds=3)
-        # self.set_event_ui(type=7, arg2='$02000251_BF__TRIGGER_01_01__0$', arg3='3000', arg4='0')
+        # self.set_event_ui_script(type=BannerType.Fail, script='$02000251_BF__TRIGGER_01_01__0$', duration=3000, box_ids='0')
         self.set_achievement(trigger_id=1000, type='trigger', achieve='goldenTower')
         # self.create_item(spawn_ids=[9001], trigger_id=998)
         self.dungeon_clear()

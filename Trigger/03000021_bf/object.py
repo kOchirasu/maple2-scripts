@@ -1,5 +1,6 @@
 """ trigger/03000021_bf/object.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class 대기(trigger_api.Trigger):
@@ -22,7 +23,7 @@ class 몬스터생성(trigger_api.Trigger):
             return 몬스터생성(self.ctx)
         if self.monster_dead(spawn_ids=[2001]):
             self.hide_guide_summary(entity_id=23000004)
-            self.set_event_ui(type=7, arg3='2000', arg4='0')
+            self.set_event_ui_script(type=BannerType.Fail, duration=2000, box_ids='0')
             return 상자확률(self.ctx)
 
 

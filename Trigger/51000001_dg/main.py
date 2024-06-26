@@ -1,5 +1,6 @@
 """ trigger/51000001_dg/main.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class 대기(trigger_api.Trigger):
@@ -119,8 +120,8 @@ class 라운드대기1(trigger_api.Trigger):
         # timeScoreRate : 게임시간에 따른 점수 획득 양
         # roundDuration : 라운드 제한 시간(ms),타이머와 시간을 맞춘다
         self.arcade_spring_farm_start_round(ui_duration=3000, round=1, time_score_type='remain', time_score_rate=500, round_duration=120000)
-        self.set_timer(timer_id='100001', seconds=120, start_delay=1, interval=1, v_offset=-30, type='TR')
-        self.set_event_ui(type=0, arg2='1,5,1', arg4='120')
+        self.set_timer(timer_id='100001', seconds=120, auto_remove=True, display=True, v_offset=-30, type='TR')
+        self.set_event_ui_round(rounds=[1,5,1], v_offset=120)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -175,11 +176,11 @@ class 라운드카메라2(trigger_api.Trigger):
 
 class 라운드대기2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_timer(timer_id='100002', seconds=120, start_delay=1, interval=1, v_offset=-30, type='TR')
+        self.set_timer(timer_id='100002', seconds=120, auto_remove=True, display=True, v_offset=-30, type='TR')
         self.set_cube(trigger_ids=[5201,5202,5203,5204,5205,5206,5207,5208,5209], random_count=5, is_visible=True)
         self.arcade_spring_farm_spawn_monster(spawn_ids=[1101,1102,1103,1104], score=5000)
         self.arcade_spring_farm_start_round(ui_duration=3000, round=2, time_score_type='remain', time_score_rate=500, round_duration=120000)
-        self.set_event_ui(type=0, arg2='2,5,1', arg4='120')
+        self.set_event_ui_round(rounds=[2,5,1], v_offset=120)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -237,11 +238,11 @@ class 라운드카메라3(trigger_api.Trigger):
 
 class 라운드대기3(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_timer(timer_id='100003', seconds=120, start_delay=1, interval=1, v_offset=-30, type='TR')
+        self.set_timer(timer_id='100003', seconds=120, auto_remove=True, display=True, v_offset=-30, type='TR')
         self.set_cube(trigger_ids=[5301,5302,5303,5304,5305,5306,5307,5308,5309,5310,5311], random_count=6, is_visible=True)
         self.arcade_spring_farm_spawn_monster(spawn_ids=[1201,1202,1203,1204,1205,1206,1207], score=5000)
         self.arcade_spring_farm_start_round(ui_duration=3000, round=3, time_score_type='remain', time_score_rate=500, round_duration=120000)
-        self.set_event_ui(type=0, arg2='3,5,1', arg4='120')
+        self.set_event_ui_round(rounds=[3,5,1], v_offset=120)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -299,10 +300,10 @@ class 라운드카메라4(trigger_api.Trigger):
 class 라운드대기4(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_cube(trigger_ids=[5401,5402,5403,5404,5405,5406,5407,5408,5409,5410,5411,5412,5413,5414], random_count=7, is_visible=True)
-        self.set_timer(timer_id='100004', seconds=120, start_delay=1, interval=1, v_offset=-30, type='TR')
+        self.set_timer(timer_id='100004', seconds=120, auto_remove=True, display=True, v_offset=-30, type='TR')
         self.arcade_spring_farm_spawn_monster(spawn_ids=[1301,1302,1303,1304,1305,1306,1307,1308], score=5000)
         self.arcade_spring_farm_start_round(ui_duration=3000, round=4, time_score_type='remain', time_score_rate=500, round_duration=120000)
-        self.set_event_ui(type=0, arg2='4,5,1', arg4='120')
+        self.set_event_ui_round(rounds=[4,5,1], v_offset=120)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -360,10 +361,10 @@ class 라운드카메라5(trigger_api.Trigger):
 class 라운드대기5(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_cube(trigger_ids=[5501,5502,5503,5504,5505,5506,5507,5508,5509,5510,5511,5512], random_count=6, is_visible=True)
-        self.set_timer(timer_id='100005', seconds=120, start_delay=1, interval=1, v_offset=-30, type='TR')
+        self.set_timer(timer_id='100005', seconds=120, auto_remove=True, display=True, v_offset=-30, type='TR')
         self.arcade_spring_farm_spawn_monster(spawn_ids=[1401,1402,1403,1404,1405], score=5000)
         self.arcade_spring_farm_start_round(ui_duration=3000, round=5, time_score_type='remain', time_score_rate=500, round_duration=120000)
-        self.set_event_ui(type=0, arg2='5,5,1', arg4='120')
+        self.set_event_ui_round(rounds=[5,5,1], v_offset=120)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -421,10 +422,10 @@ class 라운드카메라6(trigger_api.Trigger):
 class 라운드대기6(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_cube(trigger_ids=[5601,5602,5603,5604,5605,5606,5607,5608,5609,5610,5611,5612,5613,5614,5615,5616,5617,5618,5619,5620,5621], random_count=10, is_visible=True)
-        self.set_timer(timer_id='100006', seconds=120, start_delay=1, interval=1, v_offset=-30, type='TR')
+        self.set_timer(timer_id='100006', seconds=120, auto_remove=True, display=True, v_offset=-30, type='TR')
         self.arcade_spring_farm_spawn_monster(spawn_ids=[1501,1502,1503,1504,1505,1506,1507,1508,1509,1510], score=5000)
         self.arcade_spring_farm_start_round(ui_duration=3000, round=6, time_score_type='remain', time_score_rate=500, round_duration=120000)
-        self.set_event_ui(type=0, arg2='6,10,6', arg4='120')
+        self.set_event_ui_round(rounds=[6,10,6], v_offset=120)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -482,10 +483,10 @@ class 라운드카메라7(trigger_api.Trigger):
 class 라운드대기7(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_cube(trigger_ids=[5701,5702,5703,5704,5705,5706,5707,5708,5709,5710,5711,5712,5713,5714,5715,5716,5717,5718,5719,5720,5721], random_count=12, is_visible=True)
-        self.set_timer(timer_id='100007', seconds=120, start_delay=1, interval=1, v_offset=-30, type='TR')
+        self.set_timer(timer_id='100007', seconds=120, auto_remove=True, display=True, v_offset=-30, type='TR')
         self.arcade_spring_farm_spawn_monster(spawn_ids=[1601,1602,1603,1604,1605,1606,1607,1608,1609,1610], score=5000)
         self.arcade_spring_farm_start_round(ui_duration=3000, round=7, time_score_type='remain', time_score_rate=500, round_duration=120000)
-        self.set_event_ui(type=0, arg2='7,10,6', arg4='120')
+        self.set_event_ui_round(rounds=[7,10,6], v_offset=120)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -543,10 +544,10 @@ class 라운드카메라8(trigger_api.Trigger):
 class 라운드대기8(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_cube(trigger_ids=[5801,5802,5803,5804,5805,5806,5807,5808,5809,5810,5811,5812,5813,5814,5815,5816,5817,5818,5819,5820,5821,5822], random_count=12, is_visible=True)
-        self.set_timer(timer_id='100008', seconds=120, start_delay=1, interval=1, v_offset=-30, type='TR')
+        self.set_timer(timer_id='100008', seconds=120, auto_remove=True, display=True, v_offset=-30, type='TR')
         self.arcade_spring_farm_spawn_monster(spawn_ids=[1701,1702,1703,1704,1705,1706,1707,1708,1709,1710,1711], score=5000)
         self.arcade_spring_farm_start_round(ui_duration=3000, round=8, time_score_type='remain', time_score_rate=500, round_duration=120000)
-        self.set_event_ui(type=0, arg2='8,10,6', arg4='120')
+        self.set_event_ui_round(rounds=[8,10,6], v_offset=120)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -604,10 +605,10 @@ class 라운드카메라9(trigger_api.Trigger):
 class 라운드대기9(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_cube(trigger_ids=[5901,5902,5903,5904,5905,5906,5907,5908,5909,5910,5911,5912,5913,5914,5915], random_count=8, is_visible=True)
-        self.set_timer(timer_id='100009', seconds=120, start_delay=1, interval=1, v_offset=-30, type='TR')
+        self.set_timer(timer_id='100009', seconds=120, auto_remove=True, display=True, v_offset=-30, type='TR')
         self.arcade_spring_farm_spawn_monster(spawn_ids=[1901,1902,1903,1904,1905,1906,1907,1908,1909,1910,1911,1912,1913,1914,1915], score=5000)
         self.arcade_spring_farm_start_round(ui_duration=3000, round=9, time_score_type='remain', time_score_rate=500, round_duration=120000)
-        self.set_event_ui(type=0, arg2='9,10,6', arg4='120')
+        self.set_event_ui_round(rounds=[9,10,6], v_offset=120)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -665,11 +666,11 @@ class 라운드카메라10(trigger_api.Trigger):
 class 라운드대기10(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_cube(trigger_ids=[51001,51002,51003,51004,51005,51006,51007,51008,51009,51010,51011,51012,51013,51014,51015,51016,51017,51018,51019,51020,51021,51022,51023,51024], random_count=6, is_visible=True)
-        self.set_timer(timer_id='100010', seconds=120, start_delay=1, interval=1, v_offset=-30, type='TR')
+        self.set_timer(timer_id='100010', seconds=120, auto_remove=True, display=True, v_offset=-30, type='TR')
         self.arcade_spring_farm_spawn_monster(spawn_ids=[2001], score=10000)
         self.arcade_spring_farm_spawn_monster(spawn_ids=[2002,2003,2004,2005], score=5000)
         self.arcade_spring_farm_start_round(ui_duration=3000, round=10, time_score_type='remain', time_score_rate=500, round_duration=120000)
-        self.set_event_ui(type=0, arg2='10,10,6', arg4='120')
+        self.set_event_ui_round(rounds=[10,10,6], v_offset=120)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -693,7 +694,7 @@ class 라운드종료10(trigger_api.Trigger):
         self.set_achievement(trigger_id=199, type='trigger', achieve='springfarm_clear')
         self.arcade_spring_farm_clear_round(round=10)
         self.reset_timer(timer_id='100010')
-        self.set_event_ui(type=7, arg3='2000', arg4='0')
+        self.set_event_ui_script(type=BannerType.Fail, duration=2000, box_ids='0')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):

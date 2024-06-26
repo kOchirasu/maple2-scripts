@@ -1,6 +1,6 @@
 """ trigger/63000041_cs/main.xml """
 import trigger_api
-from Maple2.Server.Game.Scripting.Trigger import Align
+from Maple2.Server.Game.Scripting.Trigger import Align, BannerType
 
 
 """
@@ -796,7 +796,7 @@ class scene_11_4(trigger_api.Trigger):
 
 class scene_12_4(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$63000041_CS__MAIN__48$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$63000041_CS__MAIN__48$', duration=3000, box_ids='0')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=500):

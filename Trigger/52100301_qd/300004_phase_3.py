@@ -1,5 +1,6 @@
 """ trigger/52100301_qd/300004_phase_3.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class 대기(trigger_api.Trigger):
@@ -70,7 +71,7 @@ class 포탑_생성(trigger_api.Trigger):
 
 class 가이드(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$52100301_QD__300004_PHASE_3__2$', arg3='4000')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$52100301_QD__300004_PHASE_3__2$', duration=4000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=12000):

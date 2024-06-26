@@ -1,5 +1,6 @@
 """ trigger/99999949/07_detectliftableobject.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class Wait(trigger_api.Trigger):
@@ -31,7 +32,7 @@ class Ready01(trigger_api.Trigger):
 
 class Ready02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$99999949__07_DETECTLIFTABLEOBJECT__0$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$99999949__07_DETECTLIFTABLEOBJECT__0$', duration=3000, box_ids='0')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -51,7 +52,7 @@ class QuizRandom01(trigger_api.Trigger):
 
 class AnswerIsWood01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$99999949__07_DETECTLIFTABLEOBJECT__1$', arg3='2000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$99999949__07_DETECTLIFTABLEOBJECT__1$', duration=2000, box_ids='0')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.detect_liftable_object(box_ids=[9062], item_id=0):
@@ -74,7 +75,7 @@ class CheckAnswerWood01(trigger_api.Trigger):
 
 class RightAnswerWood01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$99999949__07_DETECTLIFTABLEOBJECT__2$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$99999949__07_DETECTLIFTABLEOBJECT__2$', duration=3000, box_ids='0')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3500):
@@ -83,7 +84,7 @@ class RightAnswerWood01(trigger_api.Trigger):
 
 class WrongAnswerWood01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$99999949__07_DETECTLIFTABLEOBJECT__3$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$99999949__07_DETECTLIFTABLEOBJECT__3$', duration=3000, box_ids='0')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3500):
@@ -92,7 +93,7 @@ class WrongAnswerWood01(trigger_api.Trigger):
 
 class AnswerIsRock01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$99999949__07_DETECTLIFTABLEOBJECT__4$', arg3='2000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$99999949__07_DETECTLIFTABLEOBJECT__4$', duration=2000, box_ids='0')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.detect_liftable_object(box_ids=[9062], item_id=0):
@@ -115,7 +116,7 @@ class CheckAnswerRock01(trigger_api.Trigger):
 
 class RightAnswerRock01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$99999949__07_DETECTLIFTABLEOBJECT__5$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$99999949__07_DETECTLIFTABLEOBJECT__5$', duration=3000, box_ids='0')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3500):
@@ -124,7 +125,7 @@ class RightAnswerRock01(trigger_api.Trigger):
 
 class WrongAnswerRock01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$99999949__07_DETECTLIFTABLEOBJECT__6$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$99999949__07_DETECTLIFTABLEOBJECT__6$', duration=3000, box_ids='0')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3500):

@@ -1,5 +1,6 @@
 """ trigger/02020141_bf/interactmesh10014100.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class 최초시작(trigger_api.Trigger):
@@ -71,7 +72,7 @@ class 탈것등장_성공(trigger_api.Trigger):
 
 class 탈것_등장(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$02020141_BF__INTERACTMESH_PHASE_3_INTERECT_01__0$', arg3='5000') # 거대 로봇탈것 등장을 알리는 메시지 출력
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02020141_BF__INTERACTMESH_PHASE_3_INTERECT_01__0$', duration=5000) # 거대 로봇탈것 등장을 알리는 메시지 출력
         # arg2="0" 노말 상태 (툴벤치에서 상태 입력)      arg2="1" 반응가능 상태 (툴벤치에서 상태 입력)      arg2="2" 반응완료 상태 (actor일 경우 메시가 보이지 않는다.)
         self.set_interact_object(trigger_ids=[10003154], state=1)
         # 탑승 거대 아르케온 등장(연출용) : 리젠 애니메이션 출력용 몬스터 리젠 애니만 나오고 바로 제거하기

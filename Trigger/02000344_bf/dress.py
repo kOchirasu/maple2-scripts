@@ -1,5 +1,6 @@
 """ trigger/02000344_bf/dress.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 """
@@ -28,7 +29,7 @@ class ready(trigger_api.Trigger):
 
 class start(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$02000344_BF__DRESS__0$', arg3='3000')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02000344_BF__DRESS__0$', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):

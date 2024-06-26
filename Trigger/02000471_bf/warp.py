@@ -1,5 +1,6 @@
 """ trigger/02000471_bf/warp.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class idle(trigger_api.Trigger):
@@ -27,7 +28,7 @@ class warp_1st(trigger_api.Trigger):
 class warp_1(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.move_random_user(map_id=2000471, portal_id=11, box_id=720, count=1)
-        self.set_event_ui(type=1, arg2='$02000471_BF__WARP__0$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02000471_BF__WARP__0$', duration=3000, box_ids='0')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.user_value(key='Warp') >= 2:
@@ -37,7 +38,7 @@ class warp_1(trigger_api.Trigger):
 class warp_2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.move_random_user(map_id=2000471, portal_id=12, box_id=720, count=1)
-        self.set_event_ui(type=1, arg2='$02000471_BF__WARP__0$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02000471_BF__WARP__0$', duration=3000, box_ids='0')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.user_value(key='Warp') >= 2:
@@ -47,7 +48,7 @@ class warp_2(trigger_api.Trigger):
 class warp_3(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.move_random_user(map_id=2000471, portal_id=13, box_id=720, count=1)
-        self.set_event_ui(type=1, arg2='$02000471_BF__WARP__0$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02000471_BF__WARP__0$', duration=3000, box_ids='0')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.user_value(key='Warp') >= 2:
@@ -57,7 +58,7 @@ class warp_3(trigger_api.Trigger):
 class warp_4(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.move_random_user(map_id=2000471, portal_id=14, box_id=720, count=1)
-        self.set_event_ui(type=1, arg2='$02000471_BF__WARP__0$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02000471_BF__WARP__0$', duration=3000, box_ids='0')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.user_value(key='Warp') >= 2:
@@ -67,7 +68,7 @@ class warp_4(trigger_api.Trigger):
 class warp_5(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.move_random_user(map_id=2000471, portal_id=15, box_id=720, count=1)
-        self.set_event_ui(type=1, arg2='$02000471_BF__WARP__0$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02000471_BF__WARP__0$', duration=3000, box_ids='0')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.user_value(key='Warp') >= 2:
@@ -77,7 +78,7 @@ class warp_5(trigger_api.Trigger):
 class warp_6(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.move_random_user(map_id=2000471, portal_id=16, box_id=720, count=1)
-        self.set_event_ui(type=1, arg2='$02000471_BF__WARP__0$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02000471_BF__WARP__0$', duration=3000, box_ids='0')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.user_value(key='Warp') >= 2:
@@ -103,37 +104,37 @@ class warp_2nd(trigger_api.Trigger):
 class warp2_1(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.move_random_user(map_id=2000471, portal_id=11, box_id=720, count=2)
-        self.set_event_ui(type=1, arg2='$02000471_BF__WARP__0$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02000471_BF__WARP__0$', duration=3000, box_ids='0')
 
 
 class warp2_2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.move_random_user(map_id=2000471, portal_id=12, box_id=720, count=2)
-        self.set_event_ui(type=1, arg2='$02000471_BF__WARP__0$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02000471_BF__WARP__0$', duration=3000, box_ids='0')
 
 
 class warp2_3(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.move_random_user(map_id=2000471, portal_id=13, box_id=720, count=2)
-        self.set_event_ui(type=1, arg2='$02000471_BF__WARP__0$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02000471_BF__WARP__0$', duration=3000, box_ids='0')
 
 
 class warp2_4(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.move_random_user(map_id=2000471, portal_id=14, box_id=720, count=2)
-        self.set_event_ui(type=1, arg2='$02000471_BF__WARP__0$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02000471_BF__WARP__0$', duration=3000, box_ids='0')
 
 
 class warp2_5(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.move_random_user(map_id=2000471, portal_id=15, box_id=720, count=2)
-        self.set_event_ui(type=1, arg2='$02000471_BF__WARP__0$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02000471_BF__WARP__0$', duration=3000, box_ids='0')
 
 
 class warp2_6(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.move_random_user(map_id=2000471, portal_id=16, box_id=720, count=2)
-        self.set_event_ui(type=1, arg2='$02000471_BF__WARP__0$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02000471_BF__WARP__0$', duration=3000, box_ids='0')
 
 
 initial_state = idle

@@ -87,7 +87,7 @@ class Start_05(trigger_api.Trigger):
 """
 class Start_06(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='동료들이 있는 쪽으로 가서 무슨 일인지 알아보자.', arg3='3000')
+        self.set_event_ui_script(type=BannerType.GameOver, script='동료들이 있는 쪽으로 가서 무슨 일인지 알아보자.', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.quest_user_detected(box_ids=[702], quest_ids=[20002233], quest_states=[2]):

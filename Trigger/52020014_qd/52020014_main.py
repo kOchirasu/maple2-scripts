@@ -1,5 +1,6 @@
 """ trigger/52020014_qd/52020014_main.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class 감지(trigger_api.Trigger):
@@ -135,7 +136,7 @@ class 이공간1차전투(trigger_api.Trigger):
         self.spawn_monster(spawn_ids=[121])
         self.spawn_monster(spawn_ids=[122])
         self.spawn_monster(spawn_ids=[123])
-        self.set_event_ui(type=1, arg2='에고 웨폰을 모두 처치하고 레버를 작동시키세요.', arg3='5000')
+        self.set_event_ui_script(type=BannerType.GameOver, script='에고 웨폰을 모두 처치하고 레버를 작동시키세요.', duration=5000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.user_detected(box_ids=[906]):

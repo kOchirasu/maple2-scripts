@@ -1,5 +1,6 @@
 """ trigger/52100301_qd/3000061_phase_5_interect_01.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class 대기(trigger_api.Trigger):
@@ -13,7 +14,7 @@ class 대기(trigger_api.Trigger):
 
 class 시작(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$52100301_QD__3000061_PHASE_5_INTERECT_01__0$', arg3='4000')
+        self.set_event_ui_script(type=BannerType.GameOver, script='$52100301_QD__3000061_PHASE_5_INTERECT_01__0$', duration=4000)
         self.spawn_monster(spawn_ids=[999], auto_target=False) # 탑승 아르케온 등장(연출용)
 
     def on_tick(self) -> trigger_api.Trigger:
