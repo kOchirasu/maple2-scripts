@@ -19,7 +19,7 @@ class 대기(trigger_api.Trigger):
 
 class 세팅(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='잠시 후 경기가 시작됩니다.', duration=5000)
+        self.set_event_ui_script(type=BannerType.Text, script='잠시 후 경기가 시작됩니다.', duration=5000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):
@@ -29,7 +29,7 @@ class 세팅(trigger_api.Trigger):
 class 시작(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_dungeon_variable(var_id=1, value=1)
-        self.set_event_ui_script(type=BannerType.GameOver, script='경기 시작!\\n당신은 B팀입니다.', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='경기 시작!\\n당신은 B팀입니다.', duration=3000)
         self.set_user_value(trigger_id=99990002, key='Team2Battle', value=1)
         self.set_user_value(trigger_id=99990003, key='Start', value=1)
         self.set_user_value(trigger_id=99990004, key='Start', value=1)
@@ -43,7 +43,7 @@ class 시작(trigger_api.Trigger):
 
 class 메시지1(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='검은 군단을 해치우고 자원을 획득하세요.\\n획득한 자원을 20개 모아서 보스를 불러내세요.\\n한번에 최대 9개의 자원을 들 수 있습니다.', duration=4000)
+        self.set_event_ui_script(type=BannerType.Text, script='검은 군단을 해치우고 자원을 획득하세요.\\n획득한 자원을 20개 모아서 보스를 불러내세요.\\n한번에 최대 9개의 자원을 들 수 있습니다.', duration=4000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.dungeon_variable(var_id=2) == 1:
@@ -54,7 +54,7 @@ class 메시지1(trigger_api.Trigger):
 
 class A팀승리(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='A팀이 승리했습니다!', duration=4000)
+        self.set_event_ui_script(type=BannerType.Text, script='A팀이 승리했습니다!', duration=4000)
 
     def on_tick(self) -> trigger_api.Trigger:
         return 종료(self.ctx)
@@ -62,7 +62,7 @@ class A팀승리(trigger_api.Trigger):
 
 class B팀승리(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='B팀이 승리했습니다!', duration=4000)
+        self.set_event_ui_script(type=BannerType.Text, script='B팀이 승리했습니다!', duration=4000)
 
     def on_tick(self) -> trigger_api.Trigger:
         return 종료(self.ctx)

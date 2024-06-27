@@ -11,7 +11,7 @@ class 대기(trigger_api.Trigger):
 
 class 메시지1(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='B팀의 보스가 등장했습니다!', duration=4000)
+        self.set_event_ui_script(type=BannerType.Text, script='B팀의 보스가 등장했습니다!', duration=4000)
 
     def on_tick(self) -> trigger_api.Trigger:
         return 종료(self.ctx)

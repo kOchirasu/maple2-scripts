@@ -30,21 +30,21 @@ class DungeonStart(trigger_api.Trigger):
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=2000):
-            self.set_event_ui_script(type=BannerType.GameOver, script='$02000325_BF__MAIN__0$', duration=4000, box_ids='0')
+            self.set_event_ui_script(type=BannerType.Text, script='$02000325_BF__MAIN__0$', duration=4000, box_ids=['0'])
             return 어나운스02(self.ctx)
 
 
 class 어나운스02(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3500):
-            self.set_event_ui_script(type=BannerType.GameOver, script='$02000325_BF__MAIN__1$', duration=3500, box_ids='0')
+            self.set_event_ui_script(type=BannerType.Text, script='$02000325_BF__MAIN__1$', duration=3500, box_ids=['0'])
             return 어나운스03(self.ctx)
 
 
 class 어나운스03(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3500):
-            self.set_event_ui_script(type=BannerType.GameOver, script='$02000325_BF__MAIN__2$', duration=3500, box_ids='0')
+            self.set_event_ui_script(type=BannerType.Text, script='$02000325_BF__MAIN__2$', duration=3500, box_ids=['0'])
             return 라운드반응체크1(self.ctx)
 
 
@@ -339,7 +339,7 @@ class 라운드대기2(trigger_api.Trigger):
 class 어나운스04(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
-            self.set_event_ui_script(type=BannerType.GameOver, script='$02000325_BF__MAIN__4$', duration=3500, box_ids='0')
+            self.set_event_ui_script(type=BannerType.Text, script='$02000325_BF__MAIN__4$', duration=3500, box_ids=['0'])
             return 라운드반응체크2(self.ctx)
 
 
@@ -355,7 +355,7 @@ class 라운드반응체크2(trigger_api.Trigger):
 
 class 어나운스04_2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000325_BF__MAIN__5$', duration=3500, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000325_BF__MAIN__5$', duration=3500, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -793,7 +793,7 @@ class 라운드대기3(trigger_api.Trigger):
 class 어나운스05(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
-            self.set_event_ui_script(type=BannerType.GameOver, script='$02000325_BF__MAIN__7$', duration=3500, box_ids='0')
+            self.set_event_ui_script(type=BannerType.Text, script='$02000325_BF__MAIN__7$', duration=3500, box_ids=['0'])
             return 라운드반응체크3(self.ctx)
 
 
@@ -811,7 +811,7 @@ class 라운드반응체크3(trigger_api.Trigger):
 class 어나운스05_2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='4', seconds=4)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000325_BF__MAIN__8$', duration=3500, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000325_BF__MAIN__8$', duration=3500, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):

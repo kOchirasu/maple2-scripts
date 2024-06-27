@@ -31,7 +31,7 @@ class 스위치준비(trigger_api.Trigger):
 
 class 스위치켜기(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        # self.set_event_ui_script(type=BannerType.GameOver, script='$02000331_BF__Seeker01__810$', duration=3000, box_ids='0')
+        # self.set_event_ui_script(type=BannerType.Text, script='$02000331_BF__Seeker01__810$', duration=3000, box_ids=['0'])
         self.set_effect(trigger_ids=[7771], visible=True) # UI  메시지 알림 사운드
         self.set_interact_object(trigger_ids=[10000801], state=0) # 외다리 생성하는 레버01 나타남
         self.set_interact_object(trigger_ids=[10000801], state=1) # 외다리 생성하는 레버01 나타남
@@ -59,7 +59,7 @@ class 외다리재생성(trigger_api.Trigger):
 
 class 이동안내(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        # self.set_event_ui_script(type=BannerType.GameOver, script='$02000331_BF__Seeker01__811$', duration=3000, box_ids='0')
+        # self.set_event_ui_script(type=BannerType.Text, script='$02000331_BF__Seeker01__811$', duration=3000, box_ids=['0'])
         self.set_effect(trigger_ids=[7771], visible=True) # UI  메시지 알림 사운드
         self.set_mesh(trigger_ids=[90008]) # 9th barrier OFF
         self.set_random_mesh(trigger_ids=[10040,10041,10042,10043,10044], visible=True, start_delay=5, interval=150, fade=150) # 3rd bridge ON

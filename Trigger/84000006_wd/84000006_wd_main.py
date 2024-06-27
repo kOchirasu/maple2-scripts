@@ -177,7 +177,7 @@ class GameGuide05(trigger_api.Trigger):
 class GameGuide06(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         # 카운트다운UI: 지금부터 음식을 훔쳐먹으며 시간을 벌자!
-        self.set_event_ui_countdown(script='$84000006_WD__84000006_WD_MAIN__10$', round_countdown=[0,3], box_ids='0')
+        self.set_event_ui_countdown(script='$84000006_WD__84000006_WD_MAIN__10$', round_countdown=[0,3], box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -216,7 +216,7 @@ class Pinata_Fight2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='3', seconds=60, display=True) # 타이머3 설정 : 전투 페이즈 60초
         # 이벤트UI : 무지개 달팽이를 던져 악령을 공격하세요!
-        self.set_event_ui_script(type=BannerType.GameOver, script='$84000006_WD__84000006_WD_MAIN__13$', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='$84000006_WD__84000006_WD_MAIN__13$', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.monster_dead(spawn_ids=[201]):
@@ -261,8 +261,8 @@ class Pinata_Revive(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_ambient_light(primary=Vector3(255,255,255)) # 조명 원상 복구
         self.set_user_value(trigger_id=1004, key='Interaction', value=2) # UV발사: IntObj OFF
-        self.set_event_ui_script(type=BannerType.Bonus, script='$84000006_WD__84000006_WD_MAIN__16$', duration=3000, box_ids='9001') # 승리UI
-        self.set_event_ui_script(type=BannerType.Draw, script='$84000006_WD__84000006_WD_MAIN__17$', duration=3000, box_ids='!9001') # 패배UI
+        self.set_event_ui_script(type=BannerType.Winner, script='$84000006_WD__84000006_WD_MAIN__16$', duration=3000, box_ids=['9001']) # 승리UI
+        self.set_event_ui_script(type=BannerType.Lose, script='$84000006_WD__84000006_WD_MAIN__17$', duration=3000, box_ids=['!9001']) # 패배UI
         self.spawn_monster(spawn_ids=[101], auto_target=False) # NPC 레인보우 피냐타 리젠
         self.spawn_monster(spawn_ids=[103], auto_target=False) # NPC 콘대르 리젠
         self.set_effect(trigger_ids=[3001], visible=True) # NPC 레인보우 피냐타 이펙트
@@ -281,8 +281,8 @@ class Pinata_Revive2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_ambient_light(primary=Vector3(255,255,255)) # 조명 원상 복구
         self.set_user_value(trigger_id=1004, key='Interaction', value=2) # UV발사: IntObj OFF
-        self.set_event_ui_script(type=BannerType.Bonus, script='$84000006_WD__84000006_WD_MAIN__20$', duration=3000, box_ids='9002') # 승리 UI
-        self.set_event_ui_script(type=BannerType.Draw, script='$84000006_WD__84000006_WD_MAIN__21$', duration=3000, box_ids='!9002') # 패배 UI
+        self.set_event_ui_script(type=BannerType.Winner, script='$84000006_WD__84000006_WD_MAIN__20$', duration=3000, box_ids=['9002']) # 승리 UI
+        self.set_event_ui_script(type=BannerType.Lose, script='$84000006_WD__84000006_WD_MAIN__21$', duration=3000, box_ids=['!9002']) # 패배 UI
         self.spawn_monster(spawn_ids=[101], auto_target=False) # NPC 레인보우 피냐타 리젠
         self.spawn_monster(spawn_ids=[103], auto_target=False) # NPC 콘대르 리젠
         self.set_effect(trigger_ids=[3001], visible=True) # NPC 레인보우 피냐타 이펙트
@@ -315,7 +315,7 @@ class Finale(trigger_api.Trigger):
         self.set_portal(portal_id=10002, visible=True, enable=True, minimap_visible=True) # 결혼식장 복귀 포탈 설정
         self.set_user_value(trigger_id=1001, key='Conder', value=1) # 콘대르 대사 셋 변경
         self.add_buff(box_ids=[9002], skill_id=99940042, level=1, is_player=False) # 불꽃놀이 스킬셋 제공
-        self.set_event_ui_script(type=BannerType.GameOver, script='$84000006_WD__84000006_WD_MAIN__24$', duration=3000) # UI 팝업 : 잠시 후 애프터파티가 종료됩니다
+        self.set_event_ui_script(type=BannerType.Text, script='$84000006_WD__84000006_WD_MAIN__24$', duration=3000) # UI 팝업 : 잠시 후 애프터파티가 종료됩니다
         # 타이머5 설정 : 60초. 현재는 테스트 때문에 10초
         self.set_timer(timer_id='5', seconds=150, display=True)
         # NPC 레인보우 피냐타: 남은 시간,\n친구들과 재밌게 보내세요!

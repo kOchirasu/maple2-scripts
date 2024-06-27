@@ -34,7 +34,7 @@ class 출입문부시기(trigger_api.Trigger):
 
 class 출입문부시기2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000533_BF__MAIN__1$', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000533_BF__MAIN__1$', duration=3000)
         self.spawn_monster(spawn_ids=[508])
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -108,7 +108,7 @@ class 문열기게임(trigger_api.Trigger):
 
 class 문열기시작2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000533_BF__MAIN__8$', duration=4000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000533_BF__MAIN__8$', duration=4000)
         self.lock_my_pc(is_lock=True)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -137,7 +137,7 @@ class 게임로직종료및실패(trigger_api.Trigger):
 
 class 게임로직종료(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000533_BF__MAIN__9$', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000533_BF__MAIN__9$', duration=3000)
         self.lock_my_pc()
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -147,7 +147,7 @@ class 게임로직종료(trigger_api.Trigger):
 
 class 실패게임로직종료(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000533_BF__MAIN__10$', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000533_BF__MAIN__10$', duration=3000)
         self.lock_my_pc()
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -172,7 +172,7 @@ class 문부시기안내(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_cinematic_ui(type=0)
         self.set_cinematic_ui(type=2)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000533_BF__MAIN__12$', duration=5000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000533_BF__MAIN__12$', duration=5000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.monster_dead(spawn_ids=[507]):

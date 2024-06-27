@@ -96,7 +96,7 @@ class 데보라크사망대기(trigger_api.Trigger):
 class 미션완료(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.destroy_monster(spawn_ids=[2101,2102,2103,2104,2105,2106,2107,2108,2109])
-        self.set_event_ui_script(type=BannerType.Fail, script='$52000093_QD__20002281_RP__2$', duration=3000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Success, script='$52000093_QD__20002281_RP__2$', duration=3000, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):

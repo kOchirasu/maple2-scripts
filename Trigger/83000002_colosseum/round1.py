@@ -41,7 +41,7 @@ class 라운드조건체크(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.dungeon_round() == 1:
             self.side_npc_talk(npc_id=11004288, illust='nagi_normal', script='$83000002_COLOSSEUM__ROUND1__0$', duration=5000)
-            # self.set_event_ui_script(type=BannerType.GameOver, script='첫 번째 상대가 곧 출현합니다. 전투 준비를 하세요!!', duration=3000)
+            # self.set_event_ui_script(type=BannerType.Text, script='첫 번째 상대가 곧 출현합니다. 전투 준비를 하세요!!', duration=3000)
             return 라운드대기(self.ctx)
         self.debug_string(value='던전 요구 아이템 점수를 달성 못해 실패 처리 됩니다.')
         return FailRound(self.ctx)
@@ -87,7 +87,7 @@ class 카운트(trigger_api.Trigger):
 """
 class 카운트2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='2', duration=1000)
+        self.set_event_ui_script(type=BannerType.Text, script='2', duration=1000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=1000):
@@ -97,7 +97,7 @@ class 카운트2(trigger_api.Trigger):
 """
 class 카운트3(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='1', duration=1000)
+        self.set_event_ui_script(type=BannerType.Text, script='1', duration=1000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=2000):
@@ -127,19 +127,19 @@ class 스폰대사(trigger_api.Trigger):
             self.set_npc_duel_hp_bar(spawn_id=101)
             return ClearRoundDelay(self.ctx)
         if self.time_expired(timer_id='LimitTimer'):
-            # self.set_event_ui_script(type=BannerType.GameOver, script='경기시간을 초과했습니다. 도전에 실패 하였습니다. 전투를 종료합니다.', duration=3000)
+            # self.set_event_ui_script(type=BannerType.Text, script='경기시간을 초과했습니다. 도전에 실패 하였습니다. 전투를 종료합니다.', duration=3000)
             self.side_npc_talk(npc_id=11004288, illust='nagi_switchon', script='$83000002_COLOSSEUM__ROUND1__4$', duration=3000)
             self.destroy_monster(spawn_ids=[101])
             self.set_npc_duel_hp_bar(spawn_id=101)
             return FailRoundDelay(self.ctx)
         if self.user_detected(box_ids=[902]):
-            # self.set_event_ui_script(type=BannerType.GameOver, script='경기장을 이탈했습니다. 전투가 종료됩니다. 다시 도전해 주세요.', duration=3000)
+            # self.set_event_ui_script(type=BannerType.Text, script='경기장을 이탈했습니다. 전투가 종료됩니다. 다시 도전해 주세요.', duration=3000)
             self.side_npc_talk(npc_id=11004288, illust='nagi_switchon', script='$83000002_COLOSSEUM__ROUND1__5$', duration=3000)
             self.destroy_monster(spawn_ids=[101])
             self.set_npc_duel_hp_bar(spawn_id=101)
             return FailRoundDelay(self.ctx)
         if not self.user_detected(box_ids=[904]):
-            # self.set_event_ui_script(type=BannerType.GameOver, script='패배했습니다. 전투가 종료됩니다.', duration=3000)
+            # self.set_event_ui_script(type=BannerType.Text, script='패배했습니다. 전투가 종료됩니다.', duration=3000)
             self.side_npc_talk(npc_id=11004288, illust='nagi_switchon', script='$83000002_COLOSSEUM__ROUND1__6$', duration=3000)
             self.destroy_monster(spawn_ids=[101])
             self.set_npc_duel_hp_bar(spawn_id=101)
@@ -155,7 +155,7 @@ class ClearRoundDelay(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=2000):
             self.add_buff(box_ids=[904], skill_id=69000503, level=1, is_player=False, is_skill_set=False)
-            self.set_event_ui_script(type=BannerType.Bonus, script='$83000002_COLOSSEUM__ROUND1__7$', duration=3000)
+            self.set_event_ui_script(type=BannerType.Winner, script='$83000002_COLOSSEUM__ROUND1__7$', duration=3000)
             return ClearRound(self.ctx)
 
 
@@ -166,13 +166,13 @@ class FailRoundDelay(trigger_api.Trigger):
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
-            self.set_event_ui_script(type=BannerType.Success, script='$83000002_COLOSSEUM__ROUND1__8$', duration=3000)
+            self.set_event_ui_script(type=BannerType.Fail, script='$83000002_COLOSSEUM__ROUND1__8$', duration=3000)
             return FailRound(self.ctx)
 
 
 class ClearRound(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        # self.set_event_ui_script(type=BannerType.Fail, script='SUCCESS', duration=3000)
+        # self.set_event_ui_script(type=BannerType.Success, script='SUCCESS', duration=3000)
         pass
 
     def on_tick(self) -> trigger_api.Trigger:

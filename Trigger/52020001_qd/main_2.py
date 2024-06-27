@@ -15,7 +15,7 @@ class 잠시기다림_1(trigger_api.Trigger):
             return 타이머시작(self.ctx)
 
     def on_exit(self) -> None:
-        self.set_event_ui_script(type=BannerType.GameOver, script='폭격이 더욱 거세집니다. 서둘러 이동하세요!', duration=4000)
+        self.set_event_ui_script(type=BannerType.Text, script='폭격이 더욱 거세집니다. 서둘러 이동하세요!', duration=4000)
 
 
 class 타이머시작(trigger_api.Trigger):
@@ -164,7 +164,7 @@ class 실패(trigger_api.Trigger):
         self.set_effect(trigger_ids=[10092], visible=True)
         self.set_mesh(trigger_ids=[80000], visible=True)
         self.destroy_monster(spawn_ids=[-1])
-        self.set_event_ui_script(type=BannerType.GameOver, script='미션에 실패하였습니다. 다시 재도전 해보세요.', duration=4000)
+        self.set_event_ui_script(type=BannerType.Text, script='미션에 실패하였습니다. 다시 재도전 해보세요.', duration=4000)
         self.move_user(map_id=52020001, portal_id=99)
         self.set_portal(portal_id=14, visible=True, enable=True)
 

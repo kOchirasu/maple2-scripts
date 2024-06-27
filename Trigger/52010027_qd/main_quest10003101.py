@@ -155,7 +155,7 @@ class 전투시작02(trigger_api.Trigger):
 class 전투시작03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.spawn_monster(spawn_ids=[802])
-        self.set_event_ui_script(type=BannerType.GameOver, script='$52010027_QD__MAIN_QUEST10003101__12$', duration=3000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$52010027_QD__MAIN_QUEST10003101__12$', duration=3000, box_ids=['0'])
         self.add_balloon_talk(spawn_id=802, msg='$52010027_QD__MAIN_QUEST10003101__13$', duration=3000, delay_tick=5000)
 
     def on_tick(self) -> trigger_api.Trigger:

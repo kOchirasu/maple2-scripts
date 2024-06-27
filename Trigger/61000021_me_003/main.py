@@ -151,14 +151,14 @@ class 종료(trigger_api.Trigger):
         self.end_mini_game(winner_box_id=105, game_name='oxquiz_ugc')
         self.set_effect(trigger_ids=[608], visible=True)
         self.set_event_ui_round(rounds=[0,0])
-        self.set_event_ui_script(type=BannerType.Success, script='$61000003_ME_003__MAIN__14$', duration=3000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Fail, script='$61000003_ME_003__MAIN__14$', duration=3000, box_ids=['0'])
 
 
 class 종료2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.unset_mini_game_area_for_hack() # 해킹 보안 종료
         self.set_effect(trigger_ids=[609], visible=True)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$61000003_ME_003__MAIN__15$', duration=3000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$61000003_ME_003__MAIN__15$', duration=3000, box_ids=['0'])
         self.set_timer(timer_id='6', seconds=6)
 
     def on_tick(self) -> trigger_api.Trigger:

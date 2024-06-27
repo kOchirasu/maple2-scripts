@@ -32,7 +32,7 @@ class 카메라300(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='5', seconds=5)
         self.select_camera_path(path_ids=[300,304], return_view=False)
-        self.set_event_ui_script(type=BannerType.GameOver, script='1vs1 대결을 시작합니다.', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='1vs1 대결을 시작합니다.', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='5'):

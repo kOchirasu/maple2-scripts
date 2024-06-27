@@ -50,7 +50,7 @@ class 내부진입(trigger_api.Trigger):
 
 class 발판생성(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='20초 후 발판이 사라집니다.', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='20초 후 발판이 사라집니다.', duration=3000)
         self.set_mesh(trigger_ids=[1001,1002,1003,1004,1005,1006,1007,1008,1009,1010,1011,1012,1013,1014,1015,1016,1017,1018,1019], visible=True)
         self.set_user_value(trigger_id=99990002, key='Timer', value=1)
 

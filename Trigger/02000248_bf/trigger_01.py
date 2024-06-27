@@ -36,7 +36,7 @@ class 공격(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.spawn_monster(spawn_ids=[101,102,103])
         self.set_effect(trigger_ids=[2001], visible=True)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000248_BF__TRIGGER_01__0$', duration=5000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000248_BF__TRIGGER_01__0$', duration=5000, box_ids=['0'])
         self.set_timer(timer_id='1', seconds=9)
 
     def on_tick(self) -> trigger_api.Trigger:

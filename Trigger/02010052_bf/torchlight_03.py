@@ -62,7 +62,7 @@ class burn_state_complete(trigger_api.Trigger):
         self.set_mesh(trigger_ids=[6021,6022,6023,6024,6025,6026,6027,6028,6029,6030,6031,6032], start_delay=800, interval=100, fade=8.0) # 벽 해제
         self.set_dialogue(type=1, spawn_id=9999, script='$02010052_BF__TORCHLIGHT_03__1$', time=3) # 카나 말풍선 대사
         self.hide_guide_summary(entity_id=200)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02010052_BF__TORCHLIGHT_03__2$', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02010052_BF__TORCHLIGHT_03__2$', duration=3000)
         self.set_timer(timer_id='1', seconds=1)
 
     def on_tick(self) -> trigger_api.Trigger:

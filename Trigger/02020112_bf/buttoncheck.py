@@ -89,7 +89,7 @@ class 감지_4층(trigger_api.Trigger):
         self.set_actor(trigger_id=9904, visible=True, initial_sequence='Interaction_Lapentafoothold_A01_On')
         self.add_buff(box_ids=[916], skill_id=70002105, level=1, is_skill_set=False)
         self.set_gravity(gravity=-32.0)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02020112_BF__BUTTONCHECK__0$', duration=5000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02020112_BF__BUTTONCHECK__0$', duration=5000)
         self.set_user_value(trigger_id=99990016, key='respawn', value=2) # <1층 스폰 중지>
         self.set_user_value(trigger_id=99990003, key='Timer', value=2)
         self.set_user_value(trigger_id=99990001, key='GravityRoom', value=2)

@@ -69,7 +69,7 @@ class 코드체크(trigger_api.Trigger):
 class 코드_1279(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='5', seconds=5)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000298_BF__HACK_02__0$', duration=2000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000298_BF__HACK_02__0$', duration=2000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='5'):
@@ -79,7 +79,7 @@ class 코드_1279(trigger_api.Trigger):
 class 코드_1238(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='5', seconds=5)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000298_BF__HACK_02__1$', duration=2000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000298_BF__HACK_02__1$', duration=2000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='5'):
@@ -89,7 +89,7 @@ class 코드_1238(trigger_api.Trigger):
 class 코드_1358(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='5', seconds=5)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000298_BF__HACK_02__2$', duration=2000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000298_BF__HACK_02__2$', duration=2000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='5'):
@@ -99,7 +99,7 @@ class 코드_1358(trigger_api.Trigger):
 class 코드_1489(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='5', seconds=5)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000298_BF__HACK_02__3$', duration=2000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000298_BF__HACK_02__3$', duration=2000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='5'):
@@ -109,7 +109,7 @@ class 코드_1489(trigger_api.Trigger):
 class 코드_1567(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='5', seconds=5)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000298_BF__HACK_02__4$', duration=2000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000298_BF__HACK_02__4$', duration=2000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='5'):
@@ -119,7 +119,7 @@ class 코드_1567(trigger_api.Trigger):
 class 코드_1679(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='5', seconds=5)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000298_BF__HACK_02__5$', duration=2000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000298_BF__HACK_02__5$', duration=2000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='5'):
@@ -129,7 +129,7 @@ class 코드_1679(trigger_api.Trigger):
 class 코드_2389(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='5', seconds=5)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000298_BF__HACK_02__6$', duration=2000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000298_BF__HACK_02__6$', duration=2000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='5'):
@@ -139,7 +139,7 @@ class 코드_2389(trigger_api.Trigger):
 class 코드_2347(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='5', seconds=5)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000298_BF__HACK_02__7$', duration=2000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000298_BF__HACK_02__7$', duration=2000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='5'):
@@ -149,7 +149,7 @@ class 코드_2347(trigger_api.Trigger):
 class 코드_2478(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='5', seconds=5)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000298_BF__HACK_02__8$', duration=2000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000298_BF__HACK_02__8$', duration=2000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='5'):
@@ -159,7 +159,7 @@ class 코드_2478(trigger_api.Trigger):
 class 코드_2456(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='5', seconds=5)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000298_BF__HACK_02__9$', duration=2000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000298_BF__HACK_02__9$', duration=2000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='5'):
@@ -169,7 +169,7 @@ class 코드_2456(trigger_api.Trigger):
 class 코드_2569(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='5', seconds=5)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000298_BF__HACK_02__10$', duration=2000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000298_BF__HACK_02__10$', duration=2000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='5'):
@@ -179,7 +179,7 @@ class 코드_2569(trigger_api.Trigger):
 class 코드_2678(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='5', seconds=5)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000298_BF__HACK_02__11$', duration=2000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000298_BF__HACK_02__11$', duration=2000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='5'):
@@ -189,7 +189,7 @@ class 코드_2678(trigger_api.Trigger):
 class 코드_3458(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='5', seconds=5)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000298_BF__HACK_02__12$', duration=2000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000298_BF__HACK_02__12$', duration=2000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='5'):
@@ -199,7 +199,7 @@ class 코드_3458(trigger_api.Trigger):
 class 코드_3589(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='5', seconds=5)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000298_BF__HACK_02__13$', duration=2000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000298_BF__HACK_02__13$', duration=2000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='5'):
@@ -209,7 +209,7 @@ class 코드_3589(trigger_api.Trigger):
 class 코드_3679(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='5', seconds=5)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000298_BF__HACK_02__14$', duration=2000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000298_BF__HACK_02__14$', duration=2000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='5'):
@@ -219,7 +219,7 @@ class 코드_3679(trigger_api.Trigger):
 class 코드_3789(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='5', seconds=5)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000298_BF__HACK_02__15$', duration=2000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000298_BF__HACK_02__15$', duration=2000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='5'):
@@ -229,7 +229,7 @@ class 코드_3789(trigger_api.Trigger):
 class 코드_4567(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='5', seconds=5)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000298_BF__HACK_02__16$', duration=2000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000298_BF__HACK_02__16$', duration=2000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='5'):
@@ -239,7 +239,7 @@ class 코드_4567(trigger_api.Trigger):
 class 코드_4578(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='5', seconds=5)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000298_BF__HACK_02__17$', duration=2000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000298_BF__HACK_02__17$', duration=2000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='5'):
@@ -249,7 +249,7 @@ class 코드_4578(trigger_api.Trigger):
 class 코드_4689(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='5', seconds=5)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000298_BF__HACK_02__18$', duration=2000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000298_BF__HACK_02__18$', duration=2000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='5'):
@@ -259,7 +259,7 @@ class 코드_4689(trigger_api.Trigger):
 class 코드_4789(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='5', seconds=5)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000298_BF__HACK_02__19$', duration=2000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000298_BF__HACK_02__19$', duration=2000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='5'):

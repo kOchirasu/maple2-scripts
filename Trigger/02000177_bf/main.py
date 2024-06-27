@@ -50,7 +50,7 @@ class Start(trigger_api.Trigger):
 
 class Start_02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000177_BF__MAIN__0$', duration=3000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000177_BF__MAIN__0$', duration=3000, box_ids=['0'])
         self.play_system_sound_in_box(sound='System_ShowGuideSummary_01')
         self.show_guide_summary(entity_id=20001773, text_id=20001773, duration=4000)
         self.move_npc(spawn_id=999, patrol_name='MS2PatrolData_2001')

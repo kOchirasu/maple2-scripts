@@ -74,7 +74,7 @@ class 시작_02(trigger_api.Trigger):
 class 클리어(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_portal(portal_id=4, visible=True, enable=True, minimap_visible=True) # 보상으로 연결되는 포탈 제어 (on)
-        self.set_event_ui_script(type=BannerType.Fail, script='$02000346_BF__MAIN1__1$', duration=3000)
+        self.set_event_ui_script(type=BannerType.Success, script='$02000346_BF__MAIN1__1$', duration=3000)
         self.set_mesh(trigger_ids=[6001,6002,6003,6004,6005,6006,6007,6008,6009], visible=True, fade=10.0) # 길 생성
         self.set_mesh(trigger_ids=[6010]) # 벽 삭제
         self.set_interact_object(trigger_ids=[10000791], state=1) # 보상 상태 (없음)

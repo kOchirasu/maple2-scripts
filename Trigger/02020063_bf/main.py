@@ -45,7 +45,7 @@ class 유저카운트(trigger_api.Trigger):
 class 딜레이(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_achievement(trigger_id=9002, type='trigger', achieve='corps_battle')
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02020063_BF__MAIN__0$', duration=5000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02020063_BF__MAIN__0$', duration=5000)
         self.select_camera(trigger_id=998)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -55,7 +55,7 @@ class 딜레이(trigger_api.Trigger):
 
 class 방폭(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02020063_BF__MAIN__1$', duration=10000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02020063_BF__MAIN__1$', duration=10000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=10000):
@@ -77,7 +77,7 @@ class 시작(trigger_api.Trigger):
         self.spawn_monster(spawn_ids=[801], auto_target=False) # <무적 오브젝트 생성>
         self.reset_camera(interpolation_time=1.0)
         self.set_event_ui_round(rounds=[1,3])
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02020063_BF__MAIN__2$', duration=5000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02020063_BF__MAIN__2$', duration=5000)
         self.set_user_value(trigger_id=99990002, key='Battle_1_SpawnStart', value=1) # <웨이브 시작>
         # <부활 위치 세팅, 다시 살아날때는 나무에서 살아남>
         self.enable_spawn_point_pc(spawn_id=0)
@@ -102,7 +102,7 @@ class 포탑페이즈(trigger_api.Trigger):
         self.set_user_value(trigger_id=99990003, key='Battle_2_Start', value=1) # <포탑 생성>
         self.set_user_value(trigger_id=99990005, key='Battle_2_SpawnStart', value=1)
         self.set_event_ui_round(rounds=[2,3])
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02020063_BF__MAIN__3$', duration=5000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02020063_BF__MAIN__3$', duration=5000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.user_value(key='Battle_2_Clear') >= 1:

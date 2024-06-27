@@ -232,7 +232,7 @@ class Quit02(trigger_api.Trigger):
         self.set_cinematic_ui(type=2)
         self.select_camera(trigger_id=811, enable=False)
         self.play_system_sound_in_box(sound='System_ShowGuideSummary_01')
-        self.set_event_ui_script(type=BannerType.GameOver, script='$52000037_QD__LOOKINTO_HEAVYGUNNER_08__0$', duration=3000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$52000037_QD__LOOKINTO_HEAVYGUNNER_08__0$', duration=3000, box_ids=['0'])
 
 
 class Quit(trigger_api.Trigger):

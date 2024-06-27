@@ -16,7 +16,7 @@ class 대기(trigger_api.Trigger):
 class 이동속도감소(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_dungeon_variable(var_id=811, value=0)
-        self.set_event_ui_script(type=BannerType.GameOver, script='이동속도 감소 디버프에 걸립니다.', duration=5000)
+        self.set_event_ui_script(type=BannerType.Text, script='이동속도 감소 디버프에 걸립니다.', duration=5000)
         self.add_buff(box_ids=[9001], skill_id=70002581, level=1, is_skill_set=False)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -26,7 +26,7 @@ class 이동속도감소(trigger_api.Trigger):
 class 공격력감소(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_dungeon_variable(var_id=812, value=0)
-        self.set_event_ui_script(type=BannerType.GameOver, script='공격력 감소 디버프에 걸립니다.', duration=5000)
+        self.set_event_ui_script(type=BannerType.Text, script='공격력 감소 디버프에 걸립니다.', duration=5000)
         self.add_buff(box_ids=[9001], skill_id=70002591, level=1, is_skill_set=False)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -36,7 +36,7 @@ class 공격력감소(trigger_api.Trigger):
 class 체력감소(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_dungeon_variable(var_id=813, value=0)
-        self.set_event_ui_script(type=BannerType.GameOver, script='체력 감소 디버프에 걸립니다.', duration=5000)
+        self.set_event_ui_script(type=BannerType.Text, script='체력 감소 디버프에 걸립니다.', duration=5000)
         self.add_buff(box_ids=[9001], skill_id=70002601, level=1, is_skill_set=False)
 
     def on_tick(self) -> trigger_api.Trigger:

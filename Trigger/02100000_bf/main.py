@@ -195,7 +195,7 @@ class 대기(trigger_api.Trigger):
 
 class 버프_2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02100000_BF__MAIN__2$', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02100000_BF__MAIN__2$', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.user_detected(box_ids=[105]):
@@ -204,7 +204,7 @@ class 버프_2(trigger_api.Trigger):
 
 class 바리케이트(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02100000_BF__MAIN__3$', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02100000_BF__MAIN__3$', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=30000):

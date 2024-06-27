@@ -106,7 +106,7 @@ class 중앙지역이동_2(trigger_api.Trigger):
 
 class 중앙지역이동_2_페이드인(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        # self.set_event_ui_script(type=BannerType.GameOver, script='렌듀비앙이 블루 라펜타를 폭주 시키려 합니다!!\\n추적해, 블루 라펜타를 파괴하세요!!', duration=4000)
+        # self.set_event_ui_script(type=BannerType.Text, script='렌듀비앙이 블루 라펜타를 폭주 시키려 합니다!!\\n추적해, 블루 라펜타를 파괴하세요!!', duration=4000)
         # self.set_onetime_effect(id=1, path='BG/Common/ScreenMask/Eff_fadein_1sec.xml')
         pass
 

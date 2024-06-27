@@ -694,7 +694,7 @@ class 라운드종료10(trigger_api.Trigger):
         self.set_achievement(trigger_id=199, type='trigger', achieve='springfarm_clear')
         self.arcade_spring_farm_clear_round(round=10)
         self.reset_timer(timer_id='100010')
-        self.set_event_ui_script(type=BannerType.Fail, duration=2000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Success, duration=2000, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):

@@ -106,7 +106,7 @@ class 머리를쓰자(trigger_api.Trigger):
 class 바닥을보여주자(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_effect(trigger_ids=[802], visible=True)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000535_BF__MAIN__6$', duration=5000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000535_BF__MAIN__6$', duration=5000)
         self.set_interact_object(trigger_ids=[10003136], state=1)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -215,7 +215,7 @@ class 카메라리셋시키기2(trigger_api.Trigger):
         self.set_cinematic_ui(type=2)
         self.reset_camera(interpolation_time=1.0)
         self.lock_my_pc()
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000535_BF__MAIN__27$', duration=5000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000535_BF__MAIN__27$', duration=5000)
         self.set_effect(trigger_ids=[801], visible=True)
         self.set_interact_object(trigger_ids=[10003137], state=1)
         self.add_balloon_talk(msg='$02000535_BF__MAIN__28$', duration=3500)
@@ -279,7 +279,7 @@ class 테라스몬스터생성3(trigger_api.Trigger):
 
 class 포탈생성(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000535_BF__MAIN__38$', duration=5000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000535_BF__MAIN__38$', duration=5000)
         self.set_mesh(trigger_ids=[4019])
         self.set_interact_object(trigger_ids=[10003145], state=1)
 
@@ -302,7 +302,7 @@ class 보안게임시작(trigger_api.Trigger):
 
 class 문열기시작2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000535_BF__MAIN__39$', duration=4000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000535_BF__MAIN__39$', duration=4000)
         self.lock_my_pc(is_lock=True)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -332,7 +332,7 @@ class 게임로직종료및실패(trigger_api.Trigger):
 class 게임로직종료(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_pc_emotion_loop(sequence_name='Idle_A', duration=3000.0)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000535_BF__MAIN__40$', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000535_BF__MAIN__40$', duration=3000)
         self.lock_my_pc()
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -343,7 +343,7 @@ class 게임로직종료(trigger_api.Trigger):
 class 실패게임로직종료(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_pc_emotion_loop(sequence_name='Idle_A', duration=3000.0)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000535_BF__MAIN__41$', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000535_BF__MAIN__41$', duration=3000)
         self.add_balloon_talk(msg='$02000535_BF__MAIN__42$', duration=3500)
         self.lock_my_pc()
 
@@ -356,7 +356,7 @@ class 문부시기안내(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_cinematic_ui(type=0)
         self.set_cinematic_ui(type=2)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000535_BF__MAIN__43$', duration=5000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000535_BF__MAIN__43$', duration=5000)
         self.lock_my_pc()
         self.spawn_monster(spawn_ids=[611])
 

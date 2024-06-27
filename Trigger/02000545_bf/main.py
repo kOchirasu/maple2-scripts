@@ -105,7 +105,7 @@ class 몬스터웨이브1(trigger_api.Trigger):
         self.set_cinematic_ui(type=0)
         self.set_cinematic_ui(type=2)
         self.reset_camera(interpolation_time=2.0)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000545_BF__MAIN__7$', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000545_BF__MAIN__7$', duration=3000)
         self.set_onetime_effect(id=103, enable=True, path='BG/Common/Eff_Com_Vibrate_Short.xml')
         self.spawn_monster(spawn_ids=[401,402,403,404,405])
         self.destroy_monster(spawn_ids=[602,603,604,605])
@@ -142,7 +142,7 @@ class 몬스터웨이브2시작안내(trigger_api.Trigger):
 
 class 엘리트스폰(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000545_BF__MAIN__10$', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000545_BF__MAIN__10$', duration=3000)
         self.set_onetime_effect(id=104, enable=True, path='BG/Common/Eff_Com_Vibrate_Short.xml')
         self.spawn_monster(spawn_ids=[202])
         self.set_effect(trigger_ids=[5009], visible=True)

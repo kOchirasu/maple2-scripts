@@ -56,7 +56,7 @@ class Start_03(trigger_api.Trigger):
 
 class Start_04(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02010052_BF__MAIN__6$', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02010052_BF__MAIN__6$', duration=3000)
         # self.play_system_sound_in_box(sound='System_ShowGuideSummary_01')
         # self.show_guide_summary(entity_id=20105205, text_id=20105205)
 

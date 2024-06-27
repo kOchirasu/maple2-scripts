@@ -211,7 +211,7 @@ class fadein_01(trigger_api.Trigger):
 class msg(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.play_system_sound_in_box(sound='System_ShowGuideSummary_01')
-        self.set_event_ui_script(type=BannerType.GameOver, script='$52000119_QD__MAIN3__14$', duration=3000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$52000119_QD__MAIN3__14$', duration=3000, box_ids=['0'])
         self.add_balloon_talk(spawn_id=999, msg='$52000119_QD__MAIN3__15$', duration=2000)
 
     def on_tick(self) -> trigger_api.Trigger:

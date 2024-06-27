@@ -80,7 +80,7 @@ class WaitForEnterUser(trigger_api.Trigger):
 class GameRuleNotice(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         # 숨바꼭질 게임룰 설명 시간
-        self.set_event_ui_script(type=BannerType.GameOver, script='$61000023_ME__61000023_MAIN__1$', duration=10000)
+        self.set_event_ui_script(type=BannerType.Text, script='$61000023_ME__61000023_MAIN__1$', duration=10000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.user_value(key='DivideIntoTeams') >= 1:
@@ -152,7 +152,7 @@ class TeamMatchResult(trigger_api.Trigger):
 class GameExitNotice(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         # 숨바꼭질 게임종료 설명 시간
-        self.set_event_ui_script(type=BannerType.GameOver, script='$61000023_ME__61000023_MAIN__4$', duration=10000)
+        self.set_event_ui_script(type=BannerType.Text, script='$61000023_ME__61000023_MAIN__4$', duration=10000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.user_value(key='End') >= 1:
@@ -163,7 +163,7 @@ class GameExitNotice(trigger_api.Trigger):
 class ShortOfUser(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         # 방폭 진행 시간 단위
-        self.set_event_ui_script(type=BannerType.GameOver, script='$61000023_ME__61000023_MAIN__5$', duration=10000)
+        self.set_event_ui_script(type=BannerType.Text, script='$61000023_ME__61000023_MAIN__5$', duration=10000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.user_value(key='End') >= 1:

@@ -23,7 +23,7 @@ class 대기(trigger_api.Trigger):
 
 class 어나운스0(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$61000010_ME__main__0$', duration=3000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$61000010_ME__main__0$', duration=3000, box_ids=['0'])
         self.set_achievement(trigger_id=101, type='trigger', achieve='ShanghaiRunnersStart')
         # self.set_local_camera(camera_id=302)
         # self.reset_camera(interpolation_time=3.0)
@@ -60,8 +60,8 @@ class 시작(trigger_api.Trigger):
 
 class 경기종료(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.Bonus, script='$61000006_ME__TRIGGER_03__2$', duration=5000, box_ids='401')
-        self.set_event_ui_script(type=BannerType.Text, script='$61000006_ME__TRIGGER_03__3$', duration=5000, box_ids='!401')
+        self.set_event_ui_script(type=BannerType.Winner, script='$61000006_ME__TRIGGER_03__2$', duration=5000, box_ids=['401'])
+        self.set_event_ui_script(type=BannerType.Bonus, script='$61000006_ME__TRIGGER_03__3$', duration=5000, box_ids=['!401'])
         # self.add_buff(box_ids=[199], skill_id=70000019, level=1)
 
     def on_tick(self) -> trigger_api.Trigger:

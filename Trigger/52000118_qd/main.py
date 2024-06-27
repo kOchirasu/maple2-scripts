@@ -298,7 +298,7 @@ class fadein_a(trigger_api.Trigger):
 
 class end(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$52000118_QD__MAIN__24$', duration=3000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$52000118_QD__MAIN__24$', duration=3000, box_ids=['0'])
         self.set_cinematic_ui(type=0)
         self.set_cinematic_ui(type=2)
 

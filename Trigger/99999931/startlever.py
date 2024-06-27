@@ -44,7 +44,7 @@ class 이동(trigger_api.Trigger):
 class 게임준비(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='11', seconds=3)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$99999931__STARTLEVER__0$', duration=4000)
+        self.set_event_ui_script(type=BannerType.Text, script='$99999931__STARTLEVER__0$', duration=4000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='11'):

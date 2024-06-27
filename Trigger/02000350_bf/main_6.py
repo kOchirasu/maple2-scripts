@@ -29,7 +29,7 @@ class 시작대기(trigger_api.Trigger):
 
 class 라운드26(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000350_BF__MAIN_6__0$', duration=4000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000350_BF__MAIN_6__0$', duration=4000, box_ids=['0'])
         self.dark_stream_spawn_monster(spawn_ids=[126001], score=2200000)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -138,7 +138,7 @@ class 라운드30(trigger_api.Trigger):
 class 성공(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_event_ui_round(rounds=[0,0])
-        self.set_event_ui_script(type=BannerType.Fail, script='$02000350_BF__MAIN_6__1$', duration=3000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Success, script='$02000350_BF__MAIN_6__1$', duration=3000, box_ids=['0'])
         self.set_timer(timer_id='5', seconds=5)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -148,7 +148,7 @@ class 성공(trigger_api.Trigger):
 
 class 포털생성(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000350_BF__MAIN_6__2$', duration=2500, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000350_BF__MAIN_6__2$', duration=2500, box_ids=['0'])
         self.set_portal(portal_id=3, visible=True, enable=True, minimap_visible=True)
 
 

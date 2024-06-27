@@ -20,7 +20,7 @@ class 대기_02(trigger_api.Trigger):
 
 class 시작(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000347_BF__MAIN1__5$', duration=5000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000347_BF__MAIN1__5$', duration=5000, box_ids=['0'])
 
 
 initial_state = 대기

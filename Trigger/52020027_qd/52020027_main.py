@@ -88,7 +88,7 @@ class 보스전종료(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.destroy_monster(spawn_ids=[-1])
         self.set_achievement(trigger_id=904, achieve='KritiasScrimmage')
-        self.set_event_ui_script(type=BannerType.GameOver, script='연출들어갈 예정입니다', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='연출들어갈 예정입니다', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):

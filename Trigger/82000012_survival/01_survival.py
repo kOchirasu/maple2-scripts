@@ -438,7 +438,7 @@ class GameCancel(trigger_api.Trigger):
 
 class ReadyToKickOut(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$82000012_survival__01_SURVIVAL__18$', duration=4000, box_ids='0') # 잠시 후 원래 있던 곳으로 돌아갑니다.
+        self.set_event_ui_script(type=BannerType.Text, script='$82000012_survival__01_SURVIVAL__18$', duration=4000, box_ids=['0']) # 잠시 후 원래 있던 곳으로 돌아갑니다.
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):

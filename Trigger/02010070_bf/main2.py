@@ -29,7 +29,7 @@ class 대기시간안내01(trigger_api.Trigger):
 
 class 대기시간02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02010070_BF__MAIN__4$', duration=5000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$02010070_BF__MAIN__4$', duration=5000, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.user_detected(box_ids=[999983]):

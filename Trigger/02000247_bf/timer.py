@@ -26,7 +26,7 @@ class 초재기1(trigger_api.Trigger):
 class 초재기2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='99', seconds=5)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000247_BF__TIMER__0$', duration=3000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000247_BF__TIMER__0$', duration=3000, box_ids=['0'])
         self.set_effect(trigger_ids=[2001], visible=True)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -37,7 +37,7 @@ class 초재기2(trigger_api.Trigger):
 class 딜레이(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='99', seconds=5)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000247_BF__TIMER__1$', duration=3000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000247_BF__TIMER__1$', duration=3000, box_ids=['0'])
         self.set_effect(trigger_ids=[2002], visible=True)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -47,7 +47,7 @@ class 딜레이(trigger_api.Trigger):
 
 class 초재기3(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000247_BF__TIMER__2$', duration=5000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000247_BF__TIMER__2$', duration=5000, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='99'):

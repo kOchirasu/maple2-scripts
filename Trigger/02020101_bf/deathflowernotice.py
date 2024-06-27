@@ -13,7 +13,7 @@ class 대기(trigger_api.Trigger):
 
 class 경고(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02020101_BF__DEATHFLOWERNOTICE__0$', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02020101_BF__DEATHFLOWERNOTICE__0$', duration=3000)
         self.set_user_value(trigger_id=900005, key='notice', value=0)
 
     def on_tick(self) -> trigger_api.Trigger:

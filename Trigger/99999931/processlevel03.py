@@ -15,7 +15,7 @@ class 레버당기기(trigger_api.Trigger):
 class 카운트다운1(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='31', seconds=1)
-        self.set_event_ui_script(type=BannerType.GameOver, script='3', duration=1000)
+        self.set_event_ui_script(type=BannerType.Text, script='3', duration=1000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='31'):
@@ -25,7 +25,7 @@ class 카운트다운1(trigger_api.Trigger):
 class 카운트다운2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='32', seconds=1)
-        self.set_event_ui_script(type=BannerType.GameOver, script='2', duration=1000)
+        self.set_event_ui_script(type=BannerType.Text, script='2', duration=1000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='32'):
@@ -35,7 +35,7 @@ class 카운트다운2(trigger_api.Trigger):
 class 카운트다운3(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='33', seconds=1)
-        self.set_event_ui_script(type=BannerType.GameOver, script='1', duration=1000)
+        self.set_event_ui_script(type=BannerType.Text, script='1', duration=1000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='33'):

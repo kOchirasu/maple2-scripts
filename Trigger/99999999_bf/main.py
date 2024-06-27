@@ -56,7 +56,7 @@ class 카메라리셋(trigger_api.Trigger):
 class ready(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.visible_my_pc(is_visible=True)
-        self.set_event_ui_script(type=BannerType.GameOver, script='까마득한 성채를 따라 내려가야 합니다.\\n몰려오는 어둠을 조심하세요.', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='까마득한 성채를 따라 내려가야 합니다.\\n몰려오는 어둠을 조심하세요.', duration=3000)
         self.spawn_monster(spawn_ids=[101,1011,1012,1013,1014,1017,1018,1019], auto_target=False)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -117,7 +117,7 @@ class 시작703(trigger_api.Trigger):
 
 class 진행703(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='어둠의 샘이 당신의 존재를 눈치챘습니다.\\n생명을 탐하는 검은 화살이 당신을 뒤쫓습니다.', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='어둠의 샘이 당신의 존재를 눈치챘습니다.\\n생명을 탐하는 검은 화살이 당신을 뒤쫓습니다.', duration=3000)
         self.spawn_monster(spawn_ids=[109])
         self.spawn_monster(spawn_ids=[103,1031,1032,1033,1034])
 

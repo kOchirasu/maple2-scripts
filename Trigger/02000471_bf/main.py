@@ -152,7 +152,7 @@ class boss(trigger_api.Trigger):
         self.set_cinematic_ui(type=0)
         self.set_cinematic_ui(type=2)
         self.reset_camera()
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000471_BF__MAIN__0$', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000471_BF__MAIN__0$', duration=3000)
         self.set_onetime_effect(id=1, path='BG/Common/ScreenMask/Eff_fadein_1sec.xml')
 
     def on_tick(self) -> trigger_api.Trigger:

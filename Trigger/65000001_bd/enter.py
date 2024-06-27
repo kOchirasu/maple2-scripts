@@ -31,7 +31,7 @@ class 어나운스0(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='6', seconds=6)
         self.play_system_sound_in_box(sound='BD_Enter_00')
-        self.set_event_ui_script(type=BannerType.GameOver, script='$65000001_BD__ENTER__0$', duration=6000, box_ids='101')
+        self.set_event_ui_script(type=BannerType.Text, script='$65000001_BD__ENTER__0$', duration=6000, box_ids=['101'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='6'):
@@ -42,7 +42,7 @@ class 어나운스1(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='3', seconds=3)
         self.play_system_sound_in_box(sound='BD_Enter_01')
-        self.set_event_ui_script(type=BannerType.GameOver, script='$65000001_BD__ENTER__1$', duration=3000, box_ids='101')
+        self.set_event_ui_script(type=BannerType.Text, script='$65000001_BD__ENTER__1$', duration=3000, box_ids=['101'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='3'):
@@ -74,7 +74,7 @@ class 비김(trigger_api.Trigger):
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='3'):
-            self.set_event_ui_script(type=BannerType.Success, script='$65000001_BD__ENTER__2$', duration=3000, box_ids='0')
+            self.set_event_ui_script(type=BannerType.Fail, script='$65000001_BD__ENTER__2$', duration=3000, box_ids=['0'])
             return 완료(self.ctx)
 
 
@@ -82,7 +82,7 @@ class 게임종료(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='6', seconds=6)
         self.set_event_ui_round(rounds=[0,0])
-        self.set_event_ui_script(type=BannerType.Bonus, script='$65000001_BD__ENTER__3$', duration=5000, box_ids='102')
+        self.set_event_ui_script(type=BannerType.Winner, script='$65000001_BD__ENTER__3$', duration=5000, box_ids=['102'])
         self.add_buff(box_ids=[102], skill_id=70000063, level=1)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -95,8 +95,8 @@ class 보상(trigger_api.Trigger):
         self.set_timer(timer_id='15', seconds=15)
         self.play_system_sound_in_box(box_ids=[102], sound='BD_Enter_04')
         self.play_system_sound_in_box(box_ids=[103], sound='BD_Enter_05')
-        self.set_event_ui_script(type=BannerType.Bonus, script='$65000001_BD__ENTER__4$', duration=5000, box_ids='102')
-        self.set_event_ui_script(type=BannerType.Text, script='$65000001_BD__ENTER__5$', duration=5000, box_ids='!102')
+        self.set_event_ui_script(type=BannerType.Winner, script='$65000001_BD__ENTER__4$', duration=5000, box_ids=['102'])
+        self.set_event_ui_script(type=BannerType.Bonus, script='$65000001_BD__ENTER__5$', duration=5000, box_ids=['!102'])
         self.create_item(spawn_ids=[9001,9002,9003])
         self.create_item(spawn_ids=[9004], trigger_id=104)
 

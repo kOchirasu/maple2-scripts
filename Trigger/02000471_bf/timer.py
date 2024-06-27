@@ -15,7 +15,7 @@ class idle(trigger_api.Trigger):
 class start(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='Timer', seconds=420, auto_remove=True, display=True)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000471_BF__TIMER__0$', duration=5000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000471_BF__TIMER__0$', duration=5000, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='Timer'):

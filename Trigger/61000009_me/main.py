@@ -88,7 +88,7 @@ class start_02(trigger_api.Trigger):
 
 class Round_Talk1(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000374_BF__MAIN__0$', duration=5000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000374_BF__MAIN__0$', duration=5000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.monster_dead(spawn_ids=[101]):
@@ -110,7 +110,7 @@ class Round_Talk_01_1(trigger_api.Trigger):
 
 class Round_Talk_02_1(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000374_BF__MAIN__1$', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000374_BF__MAIN__1$', duration=3000)
         self.set_dialogue(type=1, spawn_id=110, script='$02000374_BF__MAIN__1$', time=3)
         self.move_npc(spawn_id=110, patrol_name='MS2PatrolData_2001')
 
@@ -123,7 +123,7 @@ class Round_Talk_02_1(trigger_api.Trigger):
 
 class Round_Talk_03_1(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000374_BF__MAIN__2$', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000374_BF__MAIN__2$', duration=3000)
         self.set_dialogue(type=1, spawn_id=110, script='$02000374_BF__MAIN__2$', time=3)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -141,7 +141,7 @@ class Round_Talk_04_1(trigger_api.Trigger):
 
 class Round2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000374_BF__MAIN__3$', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000374_BF__MAIN__3$', duration=3000)
         self.set_dialogue(type=1, spawn_id=110, script='$02000374_BF__MAIN__3$', time=3)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -151,7 +151,7 @@ class Round2(trigger_api.Trigger):
 
 class Round_Talk_00_2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000374_BF__MAIN__26$', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000374_BF__MAIN__26$', duration=3000)
         self.set_dialogue(type=1, spawn_id=110, script='$02000374_BF__MAIN__27$', time=3)
         self.move_npc(spawn_id=110, patrol_name='MS2PatrolData_2002')
 
@@ -167,7 +167,7 @@ class Round_Talk_01_2(trigger_api.Trigger):
         self.set_effect(trigger_ids=[7801], visible=True)
         self.set_effect(trigger_ids=[7802], visible=True)
         # self.set_effect(trigger_ids=[7803], visible=True)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000374_BF__MAIN__28$', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000374_BF__MAIN__28$', duration=3000)
         self.set_dialogue(type=1, spawn_id=110, script='$02000374_BF__MAIN__29$', time=3)
         # self.set_dialogue(type=1, spawn_id=110, script='$02000374_BF__MAIN__4$', time=3, arg5=1)
 
@@ -198,7 +198,7 @@ class Round_Talk_01_2(trigger_api.Trigger):
 class Round_Talk_02_2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.move_npc(spawn_id=110, patrol_name='MS2PatrolData_2003')
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000374_BF__MAIN__5$', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000374_BF__MAIN__5$', duration=3000)
         self.set_dialogue(type=1, spawn_id=110, script='$02000374_BF__MAIN__5$', time=3, arg5=1)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -208,7 +208,7 @@ class Round_Talk_02_2(trigger_api.Trigger):
 
 class Round_Talk_03_2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000374_BF__MAIN__6$', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000374_BF__MAIN__6$', duration=3000)
         self.set_dialogue(type=1, spawn_id=110, script='$02000374_BF__MAIN__6$', time=3)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -228,7 +228,7 @@ class Round_Spawn_Random2(trigger_api.Trigger):
 
 class Round_Spawn_A2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000374_BF__MAIN__7$', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000374_BF__MAIN__7$', duration=3000)
         self.set_dialogue(type=1, spawn_id=110, script='$02000374_BF__MAIN__7$', time=3) # 카모칸
         self.set_user_value(trigger_id=2037402, key='2Round_A', value=1) # 파모칸 소환 장치
 
@@ -243,7 +243,7 @@ class Round_Spawn_A2(trigger_api.Trigger):
 class Round_Spawn_B2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.move_npc(spawn_id=110, patrol_name='MS2PatrolData_2004')
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000374_BF__MAIN__8$', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000374_BF__MAIN__8$', duration=3000)
         self.set_dialogue(type=1, spawn_id=110, script='$02000374_BF__MAIN__8$', time=3)
         self.set_user_value(trigger_id=2037403, key='2Round_B', value=1) # 캡틴 아구스 소환 장치
 
@@ -258,7 +258,7 @@ class Round_Spawn_B2(trigger_api.Trigger):
 class Round_Spawn_C2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.move_npc(spawn_id=110, patrol_name='MS2PatrolData_2005')
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000374_BF__MAIN__9$', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000374_BF__MAIN__9$', duration=3000)
         self.set_dialogue(type=1, spawn_id=110, script='$02000374_BF__MAIN__9$', time=3)
         self.set_user_value(trigger_id=2037404, key='2Round_C', value=1) # 데블린 치프  소환 장치
 
@@ -272,7 +272,7 @@ class Round_Spawn_C2(trigger_api.Trigger):
 
 class Round_Spawn_A_02_Ready2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000374_BF__MAIN__10$', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000374_BF__MAIN__10$', duration=3000)
         self.set_dialogue(type=1, spawn_id=110, script='$02000374_BF__MAIN__10$', time=3, arg5=1)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -282,7 +282,7 @@ class Round_Spawn_A_02_Ready2(trigger_api.Trigger):
 
 class Round_Spawn_B_02_Ready2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000374_BF__MAIN__13$', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000374_BF__MAIN__13$', duration=3000)
         self.set_dialogue(type=1, spawn_id=110, script='$02000374_BF__MAIN__13$', time=3, arg5=1)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -292,7 +292,7 @@ class Round_Spawn_B_02_Ready2(trigger_api.Trigger):
 
 class Round_Spawn_C_02_Ready2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000374_BF__MAIN__16$', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000374_BF__MAIN__16$', duration=3000)
         self.set_dialogue(type=1, spawn_id=110, script='$02000374_BF__MAIN__16$', time=3, arg5=1)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -334,7 +334,7 @@ class Round_Spawn_A_C_02_2(trigger_api.Trigger):
 
 class Round_Spawn_A_B_C2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000374_BF__MAIN__11$', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000374_BF__MAIN__11$', duration=3000)
         self.set_dialogue(type=1, spawn_id=110, script='$02000374_BF__MAIN__11$', time=3, arg5=1)
         self.set_user_value(trigger_id=2037404, key='2Round_C', value=1) # 데블린 치프  소환 장치
 
@@ -345,7 +345,7 @@ class Round_Spawn_A_B_C2(trigger_api.Trigger):
 
 class Round_Spawn_A_C_B2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000374_BF__MAIN__12$', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000374_BF__MAIN__12$', duration=3000)
         self.set_dialogue(type=1, spawn_id=110, script='$02000374_BF__MAIN__12$', time=3, arg5=1)
         self.set_user_value(trigger_id=2037403, key='2Round_B', value=1) # 캡틴 모크  소환 장치
 
@@ -388,7 +388,7 @@ class Round_Spawn_B_C_02_2(trigger_api.Trigger):
 
 class Round_Spawn_B_A_C2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000374_BF__MAIN__14$', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000374_BF__MAIN__14$', duration=3000)
         self.set_dialogue(type=1, spawn_id=110, script='$02000374_BF__MAIN__14$', time=3, arg5=1)
         self.set_user_value(trigger_id=2037404, key='2Round_C', value=1) # 데블린 치프  소환 장치
 
@@ -399,7 +399,7 @@ class Round_Spawn_B_A_C2(trigger_api.Trigger):
 
 class Round_Spawn_B_C_A2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000374_BF__MAIN__15$', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000374_BF__MAIN__15$', duration=3000)
         self.set_dialogue(type=1, spawn_id=110, script='$02000374_BF__MAIN__15$', time=3, arg5=1)
         self.set_user_value(trigger_id=2037402, key='2Round_A', value=1) # 파모칸 소환 장치
 
@@ -442,7 +442,7 @@ class Round_Spawn_C_B_02_2(trigger_api.Trigger):
 
 class Round_Spawn_C_A_B2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000374_BF__MAIN__18$', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000374_BF__MAIN__18$', duration=3000)
         self.set_dialogue(type=1, spawn_id=110, script='$02000374_BF__MAIN__18$', time=3, arg5=1)
         self.set_user_value(trigger_id=2037403, key='2Round_B', value=1) # 캡틴 모크  소환 장치
 
@@ -453,7 +453,7 @@ class Round_Spawn_C_A_B2(trigger_api.Trigger):
 
 class Round_Spawn_C_B_A2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000374_BF__MAIN__17$', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000374_BF__MAIN__17$', duration=3000)
         self.set_dialogue(type=1, spawn_id=110, script='$02000374_BF__MAIN__17$', time=3, arg5=1)
         self.set_user_value(trigger_id=2037402, key='2Round_A', value=1) # 파모칸 소환 장치
 
@@ -476,7 +476,7 @@ class Round_Ready3(trigger_api.Trigger):
 
 class Round_Talk01_3(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000374_BF__MAIN__19$', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000374_BF__MAIN__19$', duration=3000)
         self.set_dialogue(type=1, spawn_id=110, script='$02000374_BF__MAIN__19$', time=2)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -487,7 +487,7 @@ class Round_Talk01_3(trigger_api.Trigger):
 class Round_Talk02_3(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_event_ui_round(rounds=[3,3])
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000374_BF__MAIN__20$', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000374_BF__MAIN__20$', duration=3000)
         self.set_dialogue(type=1, spawn_id=110, script='$02000374_BF__MAIN__20$', time=2)
         self.set_user_value(trigger_id=2037405, key='3Round_Effect', value=1) # 3라운드 연출 장치
 
@@ -498,7 +498,7 @@ class Round_Talk02_3(trigger_api.Trigger):
 
 class Round_Talk03_3(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000374_BF__MAIN__21$', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000374_BF__MAIN__21$', duration=3000)
         self.set_dialogue(type=1, spawn_id=110, script='$02000374_BF__MAIN__21$', time=2)
         self.set_effect(trigger_ids=[7206], visible=True)
 
@@ -520,7 +520,7 @@ class Round_Talk04_3(trigger_api.Trigger):
 class Round_Talk05_3(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.destroy_monster(spawn_ids=[199])
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000374_BF__MAIN__31$', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000374_BF__MAIN__31$', duration=3000)
         self.set_dialogue(type=1, spawn_id=110, script='$02000374_BF__MAIN__32$', time=2, arg5=1)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -530,7 +530,7 @@ class Round_Talk05_3(trigger_api.Trigger):
 
 class Round_Talk06_3(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000374_BF__MAIN__22$', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000374_BF__MAIN__22$', duration=3000)
         self.set_dialogue(type=1, spawn_id=110, script='$02000374_BF__MAIN__22$', time=2)
         self.set_effect(trigger_ids=[7205], visible=True)
 
@@ -542,7 +542,7 @@ class Round_Talk06_3(trigger_api.Trigger):
 
 class Round_Talk07_3(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        # self.set_event_ui_script(type=BannerType.GameOver, script='$02000374_BF__MAIN__23$', duration=3000)
+        # self.set_event_ui_script(type=BannerType.Text, script='$02000374_BF__MAIN__23$', duration=3000)
         self.set_dialogue(type=1, spawn_id=110, script='$02000374_BF__MAIN__23$', time=2)
         self.spawn_monster(spawn_ids=[105], auto_target=False) # 둔둔
 
@@ -556,7 +556,7 @@ class Clear(trigger_api.Trigger):
         self.move_user(map_id=61000009, portal_id=6)
         self.set_actor(trigger_id=4002, visible=True, initial_sequence='Opened_A')
         self.move_npc(spawn_id=110, patrol_name='MS2PatrolData_2999')
-        self.set_event_ui_script(type=BannerType.Fail, script='$02000374_BF__MAIN__33$', duration=3000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Success, script='$02000374_BF__MAIN__33$', duration=3000, box_ids=['0'])
         self.set_dialogue(type=1, spawn_id=110, script='$02000374_BF__MAIN__24$', time=2, arg5=1)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -567,7 +567,7 @@ class Clear(trigger_api.Trigger):
 class End(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_actor(trigger_id=4002, visible=True, initial_sequence='Closed_A')
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000374_BF__MAIN__34$', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000374_BF__MAIN__34$', duration=3000)
         self.set_dialogue(type=1, spawn_id=110, script='$02000374_BF__MAIN__35$', time=2)
         self.set_effect(trigger_ids=[4102], visible=True)
 

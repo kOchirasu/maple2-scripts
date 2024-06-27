@@ -99,7 +99,7 @@ class 멘트0(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='1', seconds=5)
         # 로그에서 해당 이벤트에 참여한 사람을 체크하기 위한 명령어 / 1=미니게임 이름, 2=타겟박스 id
-        self.set_event_ui_script(type=BannerType.GameOver, script='$61000002_ME_002__MASSIVE01__0$', duration=6000)
+        self.set_event_ui_script(type=BannerType.Text, script='$61000002_ME_002__MASSIVE01__0$', duration=6000)
         # 트로피 / 1=타겟박스 id, 2=achieveType, 3=code에 들어갈 값
         # self.set_achievement(trigger_id=301, type='trigger', achieve='finalsurvivor_start')
         # self.set_achievement(trigger_id=301, type='trigger', achieve='dailyquest_start')
@@ -115,7 +115,7 @@ class 멘트0(trigger_api.Trigger):
 class 멘트1(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='1', seconds=4)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$66000001_GD__MASSIVE01__0$', duration=4000)
+        self.set_event_ui_script(type=BannerType.Text, script='$66000001_GD__MASSIVE01__0$', duration=4000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='1'):
@@ -128,7 +128,7 @@ class 멘트1(trigger_api.Trigger):
 class 멘트2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='1', seconds=5)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$61000002_ME_002__MASSIVE01__2$', duration=6000)
+        self.set_event_ui_script(type=BannerType.Text, script='$61000002_ME_002__MASSIVE01__2$', duration=6000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='1'):
@@ -343,9 +343,9 @@ class 보상단계(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='1', seconds=7)
         self.set_event_ui_round(rounds=[0,0])
-        self.set_event_ui_script(type=BannerType.Bonus, script='$61000002_ME_002__MASSIVE01__7$', duration=7000, box_ids='301')
+        self.set_event_ui_script(type=BannerType.Winner, script='$61000002_ME_002__MASSIVE01__7$', duration=7000, box_ids=['301'])
         # 로그에서 해당 이벤트에서 우승한 사람을 체크하기 위한 명령어 / 1=미니게임 이름, 2=타겟박스 id
-        self.set_event_ui_script(type=BannerType.Text, script='$61000002_ME_002__MASSIVE01__8$', duration=7000, box_ids='!301')
+        self.set_event_ui_script(type=BannerType.Bonus, script='$61000002_ME_002__MASSIVE01__8$', duration=7000, box_ids=['!301'])
         # 트로피 / 1=타겟박스 id, 2=achieveType, 3=code에 들어갈 값
         # self.set_achievement(trigger_id=301, type='trigger', achieve='finalsurvivor_win')
 
@@ -386,8 +386,8 @@ class 버프걸기(trigger_api.Trigger):
 class 돈벼락(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='1', seconds=15)
-        self.set_event_ui_script(type=BannerType.Bonus, script='$61000002_ME_002__MASSIVE01__11$', duration=5000, box_ids='301')
-        self.set_event_ui_script(type=BannerType.Text, script='$61000002_ME_002__MASSIVE01__12$', duration=5000, box_ids='!301')
+        self.set_event_ui_script(type=BannerType.Winner, script='$61000002_ME_002__MASSIVE01__11$', duration=5000, box_ids=['301'])
+        self.set_event_ui_script(type=BannerType.Bonus, script='$61000002_ME_002__MASSIVE01__12$', duration=5000, box_ids=['!301'])
         self.create_item(spawn_ids=[1001,1002,1003,1004,1005,1006,1007,1008,1009,1010,1011,1012,1013,1014,1015,1016,1017,1018,1019,1020,1021,1022,1023,1024,1025,1026,1027,1028,1029,1030,1031,1032,1033,1034,1035,1036,1037,1038,1039,1040,1041,1042,1043,1044,1045,1046,1047,1048,1049,1050,1051,1052,1053,1054,1055,1056,1057,1058,1059,1060,1061,1062,1063,1064,1065,1066,1067,1068,1069,1070,1071,1072,1073,1074,1075,1076,1077,1078,1079,1080,1081,1082,1083,1084,1085,1086,1087,1088,1089,1090,1091,1092,1093,1094,1095,1096,1097,1098,1099,1100,1101,1102,1103,1104,1105,1106,1107,1108,1109,1110,1111,1112,1113,1114,1115,1116,1117,1118,1119,1120,1121,1122,1123,1124,1125,1126,1127,1128,1129,1130,1131,1132,1133,1134,1135,1136,1137,1138,1139,1140,1141,1142,1143,1144,1145,1146,1147,1148,1149,1150,1151,1152,1153,1154,1155,1156,1157,1158,1159,1160,1161,1163,1164,1165,1166,1167,1168,1169,1170,1171,1172,1173,1174,1175,1176,1177,1178,1179,1180,1181])
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -453,7 +453,7 @@ class 실패(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.unset_mini_game_area_for_hack() # 해킹 보안 종료
         self.set_event_ui_round(rounds=[0,0])
-        self.set_event_ui_script(type=BannerType.Success, script='$61000002_ME_002__MASSIVE01__13$', duration=5000)
+        self.set_event_ui_script(type=BannerType.Fail, script='$61000002_ME_002__MASSIVE01__13$', duration=5000)
         self.set_mesh(trigger_ids=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100], visible=True)
         self.set_portal(portal_id=777, enable=True)
         self.set_mesh(trigger_ids=[201,202,203,204,205], visible=True)
@@ -494,7 +494,7 @@ class 실패계단보이기2(trigger_api.Trigger):
 
 class 유저이동(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$61000007_ME__MAINPROCESS_SPRINGBEACH__23$', duration=5000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$61000007_ME__MAINPROCESS_SPRINGBEACH__23$', duration=5000, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=120000):

@@ -14,7 +14,7 @@ class 입장(trigger_api.Trigger):
 
 class 대기(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$61000005_ME__WAIT__0$', duration=5000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$61000005_ME__WAIT__0$', duration=5000, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.count_users(box_id=196) >= 20:
@@ -27,7 +27,7 @@ class 대기(trigger_api.Trigger):
 
 class 시작(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$61000005_ME__WAIT__1$', duration=3000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$61000005_ME__WAIT__1$', duration=3000, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):

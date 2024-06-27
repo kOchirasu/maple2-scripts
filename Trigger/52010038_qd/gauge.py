@@ -40,7 +40,7 @@ class 성공(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.side_npc_talk(npc_id=11003536, illust='Neirin_normal', duration=6000, script='$52010038_QD__gauge__3$', voice='ko/Npc/00002107')
         self.set_achievement(trigger_id=199, type='trigger', achieve='skyfortress_takeoff')
-        self.set_event_ui_script(type=BannerType.Fail, script='$52010038_QD__GAUGE__0$', duration=2500)
+        self.set_event_ui_script(type=BannerType.Success, script='$52010038_QD__GAUGE__0$', duration=2500)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=6000):
@@ -49,7 +49,7 @@ class 성공(trigger_api.Trigger):
 
 class 실패(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.Success, script='$52010038_QD__GAUGE__1$', duration=2500)
+        self.set_event_ui_script(type=BannerType.Fail, script='$52010038_QD__GAUGE__1$', duration=2500)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=2000):

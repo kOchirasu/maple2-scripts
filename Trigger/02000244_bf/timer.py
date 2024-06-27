@@ -36,7 +36,7 @@ class 시작(trigger_api.Trigger):
 class 목소리(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_effect(trigger_ids=[2001], visible=True)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000244_BF__TIMER__0$', duration=5000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000244_BF__TIMER__0$', duration=5000, box_ids=['0'])
 
 
 initial_state = 대기

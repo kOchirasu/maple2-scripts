@@ -70,7 +70,7 @@ class 랜덤E(trigger_api.Trigger):
 
 class 시작(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$80000014_bonus__main__0$', duration=5000)
+        self.set_event_ui_script(type=BannerType.Text, script='$80000014_bonus__main__0$', duration=5000)
         self.score_board_create(type='ScoreBoardTopCenter')
         self.score_board_set_score(score=0)
         self.spawn_item_range(range_ids=[9001,9002,9003,9004,9005,9006,9007,9008,9009,9010,9011,9012,9013,9014,9015,9016,9017,9018,9019], random_pick_count=10)
@@ -106,12 +106,12 @@ class 정산(trigger_api.Trigger):
             self.debug_string(value='18000 이상')
             self.set_achievement(trigger_id=199, type='trigger', achieve='HighScoreTreasureMap01')
             self.set_achievement(trigger_id=199, type='trigger', achieve='TimerunTreasureMap01')
-            # self.set_event_ui_script(type=BannerType.Fail, script='미션 성공! 참 잘했어요!', duration=2500)
+            # self.set_event_ui_script(type=BannerType.Success, script='미션 성공! 참 잘했어요!', duration=2500)
             return 반응대기(self.ctx)
         if self.score_board_score() < 18000:
             self.debug_string(value='18000 미만')
             self.set_achievement(trigger_id=199, type='trigger', achieve='TimerunTreasureMap01')
-            # self.set_event_ui_script(type=BannerType.Fail, script='미션 성공!', duration=2500)
+            # self.set_event_ui_script(type=BannerType.Success, script='미션 성공!', duration=2500)
             return 반응대기(self.ctx)
         if self.wait_tick(wait_tick=500):
             return 반응대기(self.ctx)

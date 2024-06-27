@@ -334,7 +334,7 @@ class 단계_타이머4(trigger_api.Trigger):
 class 게임오버(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.destroy_monster(spawn_ids=[101,102,103,104,105,106,107,108,111,112,113,114,115,131,132,133,134,135,150,151,152,190,991,992,993,994,995,996,997,998])
-        self.set_event_ui_script(type=BannerType.Success, duration=3000)
+        self.set_event_ui_script(type=BannerType.Fail, duration=3000)
         self.set_event_ui_round(rounds=[0,0])
         self.set_timer(timer_id='3', seconds=3)
         self.set_effect(trigger_ids=[98031])
@@ -367,7 +367,7 @@ class 게임오버_이벤트(trigger_api.Trigger):
 class 게임오버_강퇴(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='5', seconds=5, display=True)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000334_BF__MAIN__14$', duration=5000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000334_BF__MAIN__14$', duration=5000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='5'):
@@ -429,7 +429,7 @@ class 클리어_보상(trigger_api.Trigger):
         self.set_portal(portal_id=10, visible=True, enable=True)
         self.play_system_sound_in_box(sound='System_ShowGuideSummary_01')
         self.show_guide_summary(entity_id=103, text_id=40009) # 포탈로 이동하세요
-        # self.set_event_ui_script(type=BannerType.GameOver, script='$02000334_BF__MAIN__17$', duration=10000)
+        # self.set_event_ui_script(type=BannerType.Text, script='$02000334_BF__MAIN__17$', duration=10000)
         self.move_npc(spawn_id=199, patrol_name='MS2PatrolData_2015') # 오스칼 장소 이동
         self.set_timer(timer_id='10', seconds=10, display=True)
 

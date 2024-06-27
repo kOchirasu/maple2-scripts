@@ -106,7 +106,7 @@ class 게임설정(trigger_api.Trigger):
 class 조건체크몬스터스폰1(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.destroy_monster(spawn_ids=[110])
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000543_BF__MAIN__6$', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000543_BF__MAIN__6$', duration=3000)
         self.set_onetime_effect(id=104, enable=True, path='BG/Common/Eff_Com_Vibrate_Short.xml')
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -137,7 +137,7 @@ class 단계가기전1_2(trigger_api.Trigger):
 
 class 단계가기전2_2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000543_BF__MAIN__7$', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000543_BF__MAIN__7$', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=1000):
@@ -189,7 +189,7 @@ class 단계시작전2_3(trigger_api.Trigger):
 
 class 단계3(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000543_BF__MAIN__9$', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000543_BF__MAIN__9$', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -218,7 +218,7 @@ class 응접실문대기(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_ambient_light(primary=Vector3(201,38,70))
         self.set_onetime_effect(id=106, enable=True, path='BG/Common/Eff_Com_Vibrate_Short.xml')
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000543_BF__MAIN__11$', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000543_BF__MAIN__11$', duration=3000)
         self.destroy_monster(spawn_ids=[106,107])
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -252,7 +252,7 @@ class 응접실문열기11(trigger_api.Trigger):
 
 class 응접실문열기31(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000543_BF__MAIN__14$', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000543_BF__MAIN__14$', duration=3000)
         self.destroy_monster(spawn_ids=[111,112])
         self.set_effect(trigger_ids=[3004])
         self.set_effect(trigger_ids=[3005])

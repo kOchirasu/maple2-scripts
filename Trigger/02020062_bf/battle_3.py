@@ -79,7 +79,7 @@ class 보스소환3(trigger_api.Trigger):
 
 class 보스_무적페이즈(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02020062_BF__BATTLE_3__2$', duration=5000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02020062_BF__BATTLE_3__2$', duration=5000)
         self.spawn_monster(spawn_ids=[711,712,713], auto_target=False)
         self.spawn_monster(spawn_ids=[811,812,821,822,831,832], auto_target=False)
         self.set_user_value(trigger_id=99990009, key='BossObjectStart', value=1)

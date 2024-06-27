@@ -32,7 +32,7 @@ class 어나운스0(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='6', seconds=6)
         self.play_system_sound_in_box(sound='BD_PVP_00')
-        self.set_event_ui_script(type=BannerType.GameOver, script='$65000002_BD__PVP__0$', duration=6000)
+        self.set_event_ui_script(type=BannerType.Text, script='$65000002_BD__PVP__0$', duration=6000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='6'):
@@ -43,7 +43,7 @@ class 어나운스1(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='6', seconds=6)
         self.play_system_sound_in_box(sound='BD_PVP_01')
-        self.set_event_ui_script(type=BannerType.GameOver, script='$65000002_BD__PVP__1$', duration=6000)
+        self.set_event_ui_script(type=BannerType.Text, script='$65000002_BD__PVP__1$', duration=6000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='6'):
@@ -54,7 +54,7 @@ class 어나운스2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='6', seconds=6)
         self.play_system_sound_in_box(sound='BD_PVP_02')
-        self.set_event_ui_script(type=BannerType.GameOver, script='$65000002_BD__PVP__2$', duration=6000, box_ids='101')
+        self.set_event_ui_script(type=BannerType.Text, script='$65000002_BD__PVP__2$', duration=6000, box_ids=['101'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='6'):
@@ -65,7 +65,7 @@ class 어나운스3(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='3', seconds=3)
         self.play_system_sound_in_box(sound='BD_PVP_03')
-        self.set_event_ui_script(type=BannerType.GameOver, script='$65000002_BD__PVP__3$', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='$65000002_BD__PVP__3$', duration=3000)
         self.set_effect(trigger_ids=[601], visible=True)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -98,7 +98,7 @@ class 경기종료(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='4', seconds=4)
         self.play_system_sound_in_box(sound='BD_PVP_04')
-        self.set_event_ui_script(type=BannerType.GameOver, script='$65000002_BD__PVP__4$', duration=3000, box_ids='101')
+        self.set_event_ui_script(type=BannerType.Text, script='$65000002_BD__PVP__4$', duration=3000, box_ids=['101'])
         self.set_effect(trigger_ids=[602], visible=True)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -112,7 +112,7 @@ class 비김(trigger_api.Trigger):
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='3'):
-            self.set_event_ui_script(type=BannerType.Success, script='$65000002_BD__PVP__5$', duration=3000, box_ids='0')
+            self.set_event_ui_script(type=BannerType.Fail, script='$65000002_BD__PVP__5$', duration=3000, box_ids=['0'])
             return 완료(self.ctx)
 
 

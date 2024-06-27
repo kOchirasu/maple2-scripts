@@ -110,7 +110,7 @@ class 엘리베이터_도착(trigger_api.Trigger):
 
 class 아르케온_탈것_생성(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02020301_BF__300006_PHASE_5__4$', duration=4000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02020301_BF__300006_PHASE_5__4$', duration=4000)
         self.set_user_value(trigger_id=3000061, key='Phase_5_Interect_01', value=1) # 아르케온 탈것 페이즈로 이동
         self.set_user_value(trigger_id=3000062, key='Phase_5_Interect_02', value=1)
         self.set_user_value(trigger_id=3000063, key='Phase_5_Interect_03', value=1)

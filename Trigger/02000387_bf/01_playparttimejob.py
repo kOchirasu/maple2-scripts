@@ -158,7 +158,7 @@ class MartOpen(trigger_api.Trigger):
         self.set_actor(trigger_id=4001, visible=True, initial_sequence='ry_functobj_door_E01_on') # RevolvingDoor
         self.set_actor(trigger_id=4002, visible=True, initial_sequence='ry_functobj_door_E01_on') # RevolvingDoor
         self.set_actor(trigger_id=4003, visible=True, initial_sequence='ry_functobj_door_E01_on') # RevolvingDoor
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000387_BF__01_PLAYPARTTIMEJOB__4$', duration=3000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000387_BF__01_PLAYPARTTIMEJOB__4$', duration=3000, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -168,7 +168,7 @@ class MartOpen(trigger_api.Trigger):
 class R01Start(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_effect(trigger_ids=[5000], visible=True) # GuideUI
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000387_BF__01_PLAYPARTTIMEJOB__5$', duration=3000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000387_BF__01_PLAYPARTTIMEJOB__5$', duration=3000, box_ids=['0'])
         self.set_event_ui_round(rounds=[1,3]) # Round1
         self.set_effect(trigger_ids=[5105], visible=True) # DownArrow
         self.set_effect(trigger_ids=[5106], visible=True) # DownArrow
@@ -264,7 +264,7 @@ class R02StartDelay01(trigger_api.Trigger):
 class R02Start(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_effect(trigger_ids=[5000], visible=True) # GuideUI
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000387_BF__01_PLAYPARTTIMEJOB__6$', duration=3000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000387_BF__01_PLAYPARTTIMEJOB__6$', duration=3000, box_ids=['0'])
         self.set_event_ui_round(rounds=[2,3]) # Round2
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -442,7 +442,7 @@ class R03StartDelay01(trigger_api.Trigger):
 class R03Start(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_effect(trigger_ids=[5000], visible=True) # GuideUI
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000387_BF__01_PLAYPARTTIMEJOB__7$', duration=3000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000387_BF__01_PLAYPARTTIMEJOB__7$', duration=3000, box_ids=['0'])
         self.set_event_ui_round(rounds=[3,3]) # Round3
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -728,7 +728,7 @@ class Quit(trigger_api.Trigger):
 
 class PCLeave01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000387_BF__01_PLAYPARTTIMEJOB__10$', duration=5000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000387_BF__01_PLAYPARTTIMEJOB__10$', duration=5000, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=10000):

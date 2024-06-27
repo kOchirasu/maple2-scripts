@@ -171,7 +171,7 @@ class 차웨이브1(trigger_api.Trigger):
 class 차웨이브실패1(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_effect(trigger_ids=[613], visible=True)
-        self.set_event_ui_script(type=BannerType.Success, script='$02000066_BF__MAIN__7$', duration=3000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Fail, script='$02000066_BF__MAIN__7$', duration=3000, box_ids=['0'])
         self.destroy_monster(spawn_ids=[900])
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -279,7 +279,7 @@ class 차웨이브2(trigger_api.Trigger):
 
 class 차웨이브실패2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.Success, script='$02000066_BF__MAIN__11$', duration=3000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Fail, script='$02000066_BF__MAIN__11$', duration=3000, box_ids=['0'])
         self.destroy_monster(spawn_ids=[901])
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -387,7 +387,7 @@ class 차웨이브3(trigger_api.Trigger):
 
 class 차웨이브실패3(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.Success, script='$02000066_BF__MAIN__15$', duration=3000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Fail, script='$02000066_BF__MAIN__15$', duration=3000, box_ids=['0'])
         self.destroy_monster(spawn_ids=[902])
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -397,7 +397,7 @@ class 차웨이브실패3(trigger_api.Trigger):
 
 class 차웨이브성공3(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.Fail, script='$02000066_BF__MAIN__33$', duration=3000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Success, script='$02000066_BF__MAIN__33$', duration=3000, box_ids=['0'])
         self.set_event_ui_round(rounds=[0,0])
         self.set_effect(trigger_ids=[6003], visible=True)
         self.show_guide_summary(entity_id=20000662, text_id=20000662)
@@ -521,7 +521,7 @@ class 완료(trigger_api.Trigger):
 class 분기점01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_effect(trigger_ids=[612], visible=True)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000066_BF__MAIN__22$', duration=10000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000066_BF__MAIN__22$', duration=10000)
         self.spawn_monster(spawn_ids=[903], auto_target=False)
         self.set_portal(portal_id=1, visible=True, enable=True, minimap_visible=True)
         self.set_portal(portal_id=2, visible=True, enable=True, minimap_visible=True)
@@ -564,7 +564,7 @@ class 차웨이브4(trigger_api.Trigger):
 """
 class 차웨이브실패4(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.Success, script='$02000066_BF__MAIN__24$', duration=3000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Fail, script='$02000066_BF__MAIN__24$', duration=3000, box_ids=['0'])
         self.set_timer(timer_id='3', seconds=3)
         self.destroy_monster(spawn_ids=[904])
 
@@ -593,7 +593,7 @@ class 차웨이브성공4(trigger_api.Trigger):
 """
 class 차어나운스01_5(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000066_BF__MAIN__26$', duration=7000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000066_BF__MAIN__26$', duration=7000, box_ids=['0'])
         self.set_timer(timer_id='10', seconds=10)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -631,7 +631,7 @@ class 차웨이브5(trigger_api.Trigger):
 """
 class 차웨이브실패5(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.Success, script='$02000066_BF__MAIN__28$', duration=5000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Fail, script='$02000066_BF__MAIN__28$', duration=5000, box_ids=['0'])
         self.set_timer(timer_id='3', seconds=3)
         self.destroy_monster(spawn_ids=[905])
 
@@ -660,7 +660,7 @@ class 차웨이브성공5(trigger_api.Trigger):
 """
 class 차어나운스01_6(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000066_BF__MAIN__30$', duration=7000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000066_BF__MAIN__30$', duration=7000, box_ids=['0'])
         self.set_timer(timer_id='10', seconds=10)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -743,7 +743,7 @@ class 차웨이브6(trigger_api.Trigger):
 """
 class 차웨이브실패6(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.Success, script='$02000066_BF__MAIN__32$', duration=3000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Fail, script='$02000066_BF__MAIN__32$', duration=3000, box_ids=['0'])
         self.set_timer(timer_id='3', seconds=3)
         self.destroy_monster(spawn_ids=[906])
 
@@ -867,7 +867,7 @@ class 차승리연출종료6(trigger_api.Trigger):
 class 분기점03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_effect(trigger_ids=[612], visible=True)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000066_BF__MAIN__39$', duration=10000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000066_BF__MAIN__39$', duration=10000)
         self.spawn_monster(spawn_ids=[907], auto_target=False)
         self.set_portal(portal_id=1, visible=True, enable=True, minimap_visible=True)
         self.set_portal(portal_id=2, visible=True, enable=True, minimap_visible=True)

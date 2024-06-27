@@ -137,7 +137,7 @@ class 종료(trigger_api.Trigger):
         self.set_user_value(trigger_id=106, key='Summon_monster_2', value=1)
         self.set_user_value(trigger_id=102, key='Timmer', value=1)
         self.set_user_value(trigger_id=104, key='End', value=1)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02020051_BF__101_MAIN__2$', duration=4000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02020051_BF__101_MAIN__2$', duration=4000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.user_value(key='Potion') >= 2:

@@ -136,7 +136,7 @@ class 이공간1차전투(trigger_api.Trigger):
         self.spawn_monster(spawn_ids=[121])
         self.spawn_monster(spawn_ids=[122])
         self.spawn_monster(spawn_ids=[123])
-        self.set_event_ui_script(type=BannerType.GameOver, script='에고 웨폰을 모두 처치하고 레버를 작동시키세요.', duration=5000)
+        self.set_event_ui_script(type=BannerType.Text, script='에고 웨폰을 모두 처치하고 레버를 작동시키세요.', duration=5000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.user_detected(box_ids=[906]):

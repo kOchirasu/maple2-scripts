@@ -14,7 +14,7 @@ class 대기(trigger_api.Trigger):
 
 class 시작(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$52100301_QD__3000061_PHASE_5_INTERECT_01__0$', duration=4000)
+        self.set_event_ui_script(type=BannerType.Text, script='$52100301_QD__3000061_PHASE_5_INTERECT_01__0$', duration=4000)
         self.spawn_monster(spawn_ids=[999], auto_target=False) # 탑승 아르케온 등장(연출용)
 
     def on_tick(self) -> trigger_api.Trigger:

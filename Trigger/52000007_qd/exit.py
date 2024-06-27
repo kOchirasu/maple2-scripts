@@ -23,7 +23,7 @@ class 초5(trigger_api.Trigger):
 class 초30(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='300', seconds=300)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$52000007_QD__EXIT__0$', duration=4000)
+        self.set_event_ui_script(type=BannerType.Text, script='$52000007_QD__EXIT__0$', duration=4000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='300'):

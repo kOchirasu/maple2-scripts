@@ -78,7 +78,7 @@ class 추가대사_3(trigger_api.Trigger):
 
 class 추가대사_4(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02020065_BF__BATTLE_2__3$', duration=5000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02020065_BF__BATTLE_2__3$', duration=5000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.user_value(key='Battle_2_Start') >= 0:

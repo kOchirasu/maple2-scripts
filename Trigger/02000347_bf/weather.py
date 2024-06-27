@@ -27,11 +27,11 @@ class 비내림(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_effect(trigger_ids=[600], visible=True)
         self.set_timer(timer_id='30', seconds=30)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000347_BF__MAIN1__4$', duration=2000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000347_BF__MAIN1__4$', duration=2000, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='30'):
-            self.set_event_ui_script(type=BannerType.GameOver, script='$02000347_BF__MAIN1__3$', duration=2000, box_ids='0')
+            self.set_event_ui_script(type=BannerType.Text, script='$02000347_BF__MAIN1__3$', duration=2000, box_ids=['0'])
             return 시작(self.ctx)
         if self.monster_dead(spawn_ids=[101]):
             self.set_effect(trigger_ids=[600])

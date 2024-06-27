@@ -28,7 +28,7 @@ class ready(trigger_api.Trigger):
 
 class start(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000348_BF__DRESS__0$', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000348_BF__DRESS__0$', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):

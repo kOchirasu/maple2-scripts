@@ -88,7 +88,7 @@ class 시작조건체크(trigger_api.Trigger):
 class 어나운스0(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.play_system_sound_in_box(sound='ME_Trigger_01_00')
-        self.set_event_ui_script(type=BannerType.GameOver, script='$61000004_ME__TRIGGER_01__0$', duration=4000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$61000004_ME__TRIGGER_01__0$', duration=4000, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):
@@ -130,11 +130,11 @@ class 경기종료(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         # self.set_achievement(trigger_id=102, type='trigger', achieve='escape_win')
         # self.mini_game_camera_direction(box_id=102, camera_id=901)
-        self.set_event_ui_script(type=BannerType.Bonus, script='$61000004_ME__TRIGGER_01__2$', duration=5000, box_ids='102')
-        self.set_event_ui_script(type=BannerType.Draw, script='$61000004_ME__TRIGGER_01__3$', duration=5000, box_ids='!102')
+        self.set_event_ui_script(type=BannerType.Winner, script='$61000004_ME__TRIGGER_01__2$', duration=5000, box_ids=['102'])
+        self.set_event_ui_script(type=BannerType.Lose, script='$61000004_ME__TRIGGER_01__3$', duration=5000, box_ids=['!102'])
         self.add_buff(box_ids=[102], skill_id=70000132, level=1)
         self.add_buff(box_ids=[102], skill_id=70000019, level=1) # 에레브의 축복 버프 걸어줌
-        # self.set_event_ui_script(type=BannerType.Success, script='$61000004_ME__TRIGGER_01__2$', duration=3000, box_ids='0')
+        # self.set_event_ui_script(type=BannerType.Fail, script='$61000004_ME__TRIGGER_01__2$', duration=3000, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=6000):

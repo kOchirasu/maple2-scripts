@@ -24,7 +24,7 @@ class 대기(trigger_api.Trigger):
 class 어나운스0(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.play_system_sound_in_box(sound='ME_Trigger_03_00')
-        self.set_event_ui_script(type=BannerType.GameOver, script='$61000006_ME__TRIGGER_03__0$', duration=4000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$61000006_ME__TRIGGER_03__0$', duration=4000, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):
@@ -63,10 +63,10 @@ class 경기종료(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_achievement(trigger_id=401, type='trigger', achieve='crazyrunner_win')
         # self.mini_game_camera_direction(box_id=401, camera_id=301)
-        self.set_event_ui_script(type=BannerType.Bonus, script='$61000006_ME__TRIGGER_03__2$', duration=5000, box_ids='401')
-        self.set_event_ui_script(type=BannerType.Text, script='$61000006_ME__TRIGGER_03__3$', duration=5000, box_ids='!401')
+        self.set_event_ui_script(type=BannerType.Winner, script='$61000006_ME__TRIGGER_03__2$', duration=5000, box_ids=['401'])
+        self.set_event_ui_script(type=BannerType.Bonus, script='$61000006_ME__TRIGGER_03__3$', duration=5000, box_ids=['!401'])
         self.add_buff(box_ids=[401], skill_id=70000019, level=1)
-        # self.set_event_ui_script(type=BannerType.Success, script='$61000004_ME__TRIGGER_01__2$', duration=3000, box_ids='0')
+        # self.set_event_ui_script(type=BannerType.Fail, script='$61000004_ME__TRIGGER_01__2$', duration=3000, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=6000):

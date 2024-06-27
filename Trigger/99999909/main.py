@@ -58,7 +58,7 @@ class start(trigger_api.Trigger):
 
 class start_02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.Success, script='$02000066_BF__MAIN__11$', duration=3000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Fail, script='$02000066_BF__MAIN__11$', duration=3000, box_ids=['0'])
 
 
 initial_state = idle

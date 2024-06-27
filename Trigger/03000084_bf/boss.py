@@ -23,7 +23,7 @@ class 보스등장(trigger_api.Trigger):
         if self.monster_dead(spawn_ids=[2001]):
             self.hide_guide_summary(entity_id=23000001)
             self.set_interact_object(trigger_ids=[11000009], state=1)
-            self.set_event_ui_script(type=BannerType.Fail, duration=2000, box_ids='0')
+            self.set_event_ui_script(type=BannerType.Success, duration=2000, box_ids=['0'])
             return 종료(self.ctx)
 
 

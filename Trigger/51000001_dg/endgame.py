@@ -12,7 +12,7 @@ class 종료(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_event_ui_round(rounds=[0,0])
         self.select_camera(trigger_id=344)
-        # self.set_event_ui_script(type=BannerType.Success, script='게임 오버', duration=2000, box_ids='0')
+        # self.set_event_ui_script(type=BannerType.Fail, script='게임 오버', duration=2000, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=2000):

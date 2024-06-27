@@ -26,7 +26,7 @@ class 칸막이대기시작(trigger_api.Trigger):
 
 class 칸막이대기알림(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02020140_BF__BARRICADE__0$', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02020140_BF__BARRICADE__0$', duration=3000)
         self.dungeon_enable_give_up(is_enable=True)
 
     def on_tick(self) -> trigger_api.Trigger:

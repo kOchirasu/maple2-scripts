@@ -50,7 +50,7 @@ class 성공(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.destroy_monster(spawn_ids=[-1])
         self.set_achievement(trigger_id=9900, type='trigger', achieve='Find02100000')
-        self.set_event_ui_script(type=BannerType.Fail, script='$02100000_BF__TIMER__1$', duration=2000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Success, script='$02100000_BF__TIMER__1$', duration=2000, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):
@@ -60,7 +60,7 @@ class 성공(trigger_api.Trigger):
 
 class 실패(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.Success, script='$02100000_BF__TIMER__0$', duration=2000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Fail, script='$02100000_BF__TIMER__0$', duration=2000, box_ids=['0'])
         self.destroy_monster(spawn_ids=[-1])
 
     def on_tick(self) -> trigger_api.Trigger:

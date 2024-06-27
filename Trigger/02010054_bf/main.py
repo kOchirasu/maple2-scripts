@@ -133,7 +133,7 @@ class 반응대기01(trigger_api.Trigger):
 class 반응대기02(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.object_interacted(interact_ids=[10000860,10000861], state=0):
-            self.set_event_ui_script(type=BannerType.GameOver, script='$02010054_BF__MAIN__1$', duration=5000, box_ids='0')
+            self.set_event_ui_script(type=BannerType.Text, script='$02010054_BF__MAIN__1$', duration=5000, box_ids=['0'])
             self.set_interact_object(trigger_ids=[10000858], state=1)
             return 반응대기03(self.ctx)
 

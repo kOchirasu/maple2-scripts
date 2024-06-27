@@ -26,7 +26,7 @@ class 체력조건_1(trigger_api.Trigger):
 
 class 알림_1(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='에너지가 50%충전 되었습니다.', duration=4000)
+        self.set_event_ui_script(type=BannerType.Text, script='에너지가 50%충전 되었습니다.', duration=4000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=1000):
@@ -50,7 +50,7 @@ class 체력조건_2(trigger_api.Trigger):
 
 class 알림_5(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='에너지가 100%충전 되었습니다.', duration=4000)
+        self.set_event_ui_script(type=BannerType.Text, script='에너지가 100%충전 되었습니다.', duration=4000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=2000):
@@ -59,7 +59,7 @@ class 알림_5(trigger_api.Trigger):
 
 class 알림_6(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='곧 최대 출력으로 돌진 합니다.', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='곧 최대 출력으로 돌진 합니다.', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):

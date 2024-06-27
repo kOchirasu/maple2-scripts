@@ -15,7 +15,7 @@ class 대기(trigger_api.Trigger):
 
 class 트로피(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000384_BF__BARRICADE__0$', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000384_BF__BARRICADE__0$', duration=3000)
         self.set_achievement(type='trigger', achieve='meetfirroth')
 
     def on_tick(self) -> trigger_api.Trigger:

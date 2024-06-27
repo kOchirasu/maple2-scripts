@@ -17,7 +17,7 @@ class 알림(trigger_api.Trigger):
 
 class 텍스트(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000486_BF__107_TEXT__0$', duration=4000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000486_BF__107_TEXT__0$', duration=4000)
 
     def on_tick(self) -> trigger_api.Trigger:
         pass

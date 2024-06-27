@@ -49,7 +49,7 @@ class DungeonStart(trigger_api.Trigger):
 
 class Start(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000351_BF__MAIN__0$', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000351_BF__MAIN__0$', duration=3000)
         self.select_camera_path(path_ids=[80003])
         self.set_mesh(trigger_ids=[6900], fade=10.0)
 

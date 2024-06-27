@@ -188,7 +188,7 @@ class MissionFail(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.reset_timer(timer_id='10000')
         self.set_portal(portal_id=1) # 입구 포탈
-        self.set_event_ui_script(type=BannerType.Success, script='$02100001_BF__01_MAINMISSION__4$', duration=3000)
+        self.set_event_ui_script(type=BannerType.Fail, script='$02100001_BF__01_MAINMISSION__4$', duration=3000)
         self.set_interact_object(trigger_ids=[10001234], state=2) # Red
         self.set_interact_object(trigger_ids=[10001235], state=2) # Blue
         self.set_interact_object(trigger_ids=[10001236], state=2) # Grey
@@ -276,7 +276,7 @@ class MissionComplete(trigger_api.Trigger):
         self.set_portal(portal_id=1) # 입구 포탈
         self.set_achievement(trigger_id=9902, type='trigger', achieve='Find02100001')
         self.set_achievement(trigger_id=9902, type='trigger', achieve='guildraid_clear_1') # CN 스탬프 이벤트 전용
-        self.set_event_ui_script(type=BannerType.Fail, script='$02100001_BF__01_MAINMISSION__6$', duration=3000)
+        self.set_event_ui_script(type=BannerType.Success, script='$02100001_BF__01_MAINMISSION__6$', duration=3000)
         self.set_user_value(trigger_id=99, key='MissionComplete', value=1)
 
     def on_tick(self) -> trigger_api.Trigger:

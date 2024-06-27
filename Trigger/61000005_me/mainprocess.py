@@ -55,7 +55,7 @@ class 퍼즐대기중(trigger_api.Trigger):
 class 시작대기멘트1(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='1', seconds=5)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$61000005_ME__MAINPROCESS__0$', duration=4500)
+        self.set_event_ui_script(type=BannerType.Text, script='$61000005_ME__MAINPROCESS__0$', duration=4500)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='1'):
@@ -66,7 +66,7 @@ class 시작대기멘트2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='1', seconds=5) # arg2는 시간 (초)
         # arg1=1인 경우 최대 3줄, arg3는 시간(1/1000초)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$61000005_ME__MAINPROCESS__1$', duration=4500)
+        self.set_event_ui_script(type=BannerType.Text, script='$61000005_ME__MAINPROCESS__1$', duration=4500)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='1'):
@@ -76,7 +76,7 @@ class 시작대기멘트2(trigger_api.Trigger):
 class 시작대기멘트3(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='1', seconds=5)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$61000005_ME__MAINPROCESS__2$', duration=4500)
+        self.set_event_ui_script(type=BannerType.Text, script='$61000005_ME__MAINPROCESS__2$', duration=4500)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='1'):
@@ -86,7 +86,7 @@ class 시작대기멘트3(trigger_api.Trigger):
 class 시작대기멘트4(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='1', seconds=5)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$61000005_ME__MAINPROCESS__3$', duration=4500)
+        self.set_event_ui_script(type=BannerType.Text, script='$61000005_ME__MAINPROCESS__3$', duration=4500)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='1'):
@@ -96,7 +96,7 @@ class 시작대기멘트4(trigger_api.Trigger):
 class 시작대기멘트5(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='1', seconds=5)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$61000005_ME__MAINPROCESS__4$', duration=4500)
+        self.set_event_ui_script(type=BannerType.Text, script='$61000005_ME__MAINPROCESS__4$', duration=4500)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='1'):
@@ -129,7 +129,7 @@ class 시작대기(trigger_api.Trigger):
         self.set_portal(portal_id=118)
         # 202 스폰 포인트의 NPC(문 안의 퍼즈룬)를 리젠시킨다. 타겟지정 안 한다(arg2=0)
         self.spawn_monster(spawn_ids=[202], auto_target=False)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$61000005_ME__MAINPROCESS__5$', duration=4500)
+        self.set_event_ui_script(type=BannerType.Text, script='$61000005_ME__MAINPROCESS__5$', duration=4500)
         self.set_timer(timer_id='1', seconds=5)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -281,7 +281,7 @@ class 보상단계(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='1', seconds=7)
         self.set_event_ui_round(rounds=[0,0]) # 이벤트 UI 사라짐
-        self.set_event_ui_script(type=BannerType.GameOver, script='$61000005_ME__MAINPROCESS__9$', duration=5000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$61000005_ME__MAINPROCESS__9$', duration=5000, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='1'):
@@ -292,7 +292,7 @@ class 돈벼락(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='1', seconds=15)
         self.set_event_ui_round(rounds=[0,0])
-        self.set_event_ui_script(type=BannerType.GameOver, script='$61000005_ME__MAINPROCESS__10$', duration=5000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$61000005_ME__MAINPROCESS__10$', duration=5000, box_ids=['0'])
         self.add_buff(box_ids=[197,198,199], skill_id=70000020, level=1)
         self.create_item(spawn_ids=[1001,1002,1003,1004,1005,1006,1007,1008,1009,1010,1011,1012,1013,1014,1015,1016,1017,1018,1019,1020,1021,1022,1023,1024,1025,1026,1027,1028,1029,1030,1031,1032,1033,1034,1035,1036,1037,1038,1039,1040,1041,1042,1043,1044,1045,1046,1047,1048,1049,1050,1051,1052,1053,1054,1055,1056,1057,1058,1059,1060,1061,1062,1063,1064,1065,1066,1067,1068,1069,1070,1071,1072,1073,1074,1075])
 
@@ -306,7 +306,7 @@ class 모두실패(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='1', seconds=7)
         self.set_event_ui_round(rounds=[0,0])
-        self.set_event_ui_script(type=BannerType.Success, script='$61000005_ME__MAINPROCESS__11$', duration=5000)
+        self.set_event_ui_script(type=BannerType.Fail, script='$61000005_ME__MAINPROCESS__11$', duration=5000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='1'):
@@ -317,7 +317,7 @@ class 모두실패(trigger_api.Trigger):
 class 퍼즐종료처리(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_event_ui_round(rounds=[0,0])
-        self.set_event_ui_script(type=BannerType.GameOver, script='$61000005_ME__MAINPROCESS__12$', duration=5000)
+        self.set_event_ui_script(type=BannerType.Text, script='$61000005_ME__MAINPROCESS__12$', duration=5000)
         self.set_mesh(trigger_ids=[101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176], visible=True) # 퍼즐 큐브를 모두 보인다
         self.set_mesh(trigger_ids=[211,212]) # 닫힌 문을 가린다
         self.set_mesh(trigger_ids=[401,402,403,404,405,406,407,408,409,410,411,412,413,414,415,416,417,418,419,420,421,422,423,424,425,426,427,428,429,430,431,432,433,434,435,436]) # 퍼즐 펜스 모두 가린다

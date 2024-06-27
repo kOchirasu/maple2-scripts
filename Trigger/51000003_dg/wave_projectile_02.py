@@ -435,7 +435,7 @@ class Round_06_Random_04(trigger_api.Trigger):
 
 class End(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        # self.set_event_ui_script(type=BannerType.GameOver, script='wave_projectile_02 종료', duration=1000)
+        # self.set_event_ui_script(type=BannerType.Text, script='wave_projectile_02 종료', duration=1000)
         pass
 
 

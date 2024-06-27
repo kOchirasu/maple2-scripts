@@ -31,7 +31,7 @@ class idle(trigger_api.Trigger):
 class ready(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_mesh(trigger_ids=[5000])
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000538_BF__MAIN__0$', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000538_BF__MAIN__0$', duration=3000)
         self.set_onetime_effect(id=102, enable=True, path='BG/Common/Eff_Com_Vibrate_Short.xml')
 
     def on_tick(self) -> trigger_api.Trigger:

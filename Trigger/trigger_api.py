@@ -5,7 +5,7 @@ clr.AddReference("Maple2.Server.Game")
 from typing import List
 from System import Array, Int32, String
 from System.Numerics import Vector3
-from Maple2.Server.Game.Scripting.Trigger import Align, FieldGame, Locale, Weather
+from Maple2.Server.Game.Scripting.Trigger import Align, FieldGame, Locale, Weather, BannerType
 
 
 class Trigger:
@@ -1408,17 +1408,17 @@ class Trigger:
         """
         self.ctx.SetEffect(Array[Int32](trigger_ids), visible, start_delay, interval)
 
-    def set_event_ui_countdown(self, round_countdown: List[int], script: str='', box_ids: str='') -> None:
+    def set_event_ui_countdown(self, round_countdown: List[int], script: str='', box_ids: List[str]=[]) -> None:
         """이벤트UI를설정한다: arg1=2
 
         Args:
             round_countdown (List[int]): _description_.
             script (str): _description_. Defaults to ''.
-            box_ids (str): _description_. Defaults to ''.
+            box_ids (List[str]): _description_. Defaults to [].
 
         Returns: None
         """
-        self.ctx.SetEventUiCountdown(script, Array[Int32](round_countdown), box_ids)
+        self.ctx.SetEventUiCountdown(script, Array[Int32](round_countdown), Array[String](box_ids))
 
     def set_event_ui_round(self, rounds: List[int], v_offset: int=0, arg3: int=0) -> None:
         """이벤트UI를설정한다: arg1=0
@@ -1432,18 +1432,18 @@ class Trigger:
         """
         self.ctx.SetEventUiRound(Array[Int32](rounds), v_offset, arg3)
 
-    def set_event_ui_script(self, type: BannerType, duration: int, script: str='', box_ids: str='') -> None:
+    def set_event_ui_script(self, type: BannerType, duration: int, script: str='', box_ids: List[str]=[]) -> None:
         """이벤트UI를설정한다: arg1=1
 
         Args:
             type (BannerType): _description_.
             duration (int): _description_.
             script (str): _description_. Defaults to ''.
-            box_ids (str): _description_. Defaults to ''.
+            box_ids (List[str]): _description_. Defaults to [].
 
         Returns: None
         """
-        self.ctx.SetEventUiScript(type, script, duration, box_ids)
+        self.ctx.SetEventUiScript(type, script, duration, Array[String](box_ids))
 
     def set_gravity(self, gravity: float) -> None:
         """SetGravity

@@ -38,7 +38,7 @@ class PortalOn(trigger_api.Trigger):
 
 class CountDown(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02100002_BF__99_BARRICADE__0$', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02100002_BF__99_BARRICADE__0$', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=30000):

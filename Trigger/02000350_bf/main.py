@@ -36,7 +36,7 @@ class 시작대기(trigger_api.Trigger):
         self.set_effect(trigger_ids=[6012], visible=True)
         self.set_effect(trigger_ids=[6013], visible=True)
         self.set_effect(trigger_ids=[6015], visible=True)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000350_BF__MAIN__0$', duration=3000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000350_BF__MAIN__0$', duration=3000, box_ids=['0'])
         self.set_timer(timer_id='3', seconds=3)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -46,7 +46,7 @@ class 시작대기(trigger_api.Trigger):
 
 class 안내02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000350_BF__MAIN__1$', duration=3000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000350_BF__MAIN__1$', duration=3000, box_ids=['0'])
         self.set_timer(timer_id='3', seconds=3)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -56,7 +56,7 @@ class 안내02(trigger_api.Trigger):
 
 class 안내03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000350_BF__MAIN__2$', duration=4000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000350_BF__MAIN__2$', duration=4000, box_ids=['0'])
         self.set_timer(timer_id='2', seconds=2)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -165,7 +165,7 @@ class 라운드대기4(trigger_api.Trigger):
         self.set_event_ui_round(rounds=[4,5,1])
         self.set_timer(timer_id='3', seconds=3)
         self.dark_stream_start_round(round=4, ui_duration=3000, damage_penalty=5)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000350_BF__MAIN__3$', duration=2000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000350_BF__MAIN__3$', duration=2000, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='3'):

@@ -21,7 +21,7 @@ class 페이드아웃(trigger_api.Trigger):
 
 class 페이드아웃_2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='곧 새로운 차원으로 당신을 안내 합니다.', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='곧 새로운 차원으로 당신을 안내 합니다.', duration=3000)
         self.set_effect(trigger_ids=[500], visible=True)
         self.set_effect(trigger_ids=[501], visible=True)
         self.set_onetime_effect(id=1, enable=True, path='BG/Common/ScreenMask/Eff_fadein_3sec.xml')
@@ -197,7 +197,7 @@ class 라운드대기4(trigger_api.Trigger):
         self.set_event_ui_round(rounds=[4,5,1])
         self.set_timer(timer_id='3', seconds=3)
         self.dark_stream_start_round(round=4, ui_duration=3000, damage_penalty=5)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000350_BF__MAIN__3$', duration=2000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000350_BF__MAIN__3$', duration=2000, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='3'):

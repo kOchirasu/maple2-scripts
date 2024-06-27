@@ -111,7 +111,7 @@ class CheckAnswer05(trigger_api.Trigger):
 class Retry01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_effect(trigger_ids=[5002], visible=True) # 가이드 서머리 사운드 이펙트
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000376_BF__04_PUZZLEMAIN__0$', duration=3000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000376_BF__04_PUZZLEMAIN__0$', duration=3000, box_ids=['0'])
         self.set_user_value(key='CorrectFirstPiece', value=0)
         self.set_user_value(key='CorrectSecondPiece', value=0)
         self.set_user_value(key='CorrectThirdPiece', value=0)

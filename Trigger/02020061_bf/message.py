@@ -5,7 +5,7 @@ from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 class 대기(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02020061_BF__MESSAGE__0$', duration=5000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02020061_BF__MESSAGE__0$', duration=5000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.user_value(key='FieldGameStart') >= 1:

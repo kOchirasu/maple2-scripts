@@ -21,7 +21,7 @@ class 대기(trigger_api.Trigger):
 class 보스_추가대사(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):
-            self.set_event_ui_script(type=BannerType.GameOver, script='$02020065_BF__BATTLE_3__0$', duration=5000)
+            self.set_event_ui_script(type=BannerType.Text, script='$02020065_BF__BATTLE_3__0$', duration=5000)
             return 보스소환(self.ctx)
 
 
@@ -40,7 +40,7 @@ class 보스소환(trigger_api.Trigger):
 
 class 보스_무적페이즈(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02020065_BF__BATTLE_3__1$', duration=5000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02020065_BF__BATTLE_3__1$', duration=5000)
         self.set_user_value(trigger_id=99990011, key='Battle3_TurretSpawn_1', value=1)
         self.set_user_value(trigger_id=99990012, key='Battle3_TurretSpawn_2', value=1)
         self.set_user_value(trigger_id=99990013, key='Battle3_TurretSpawn_3', value=1)

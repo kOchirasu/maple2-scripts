@@ -26,7 +26,7 @@ class 알림_2(trigger_api.Trigger):
             return 알림_3(self.ctx)
 
     def on_exit(self) -> None:
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02100009_BF__resurrection_2__0$', duration=4000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02100009_BF__resurrection_2__0$', duration=4000)
 
 
 class 알림_3(trigger_api.Trigger):

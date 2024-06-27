@@ -332,7 +332,7 @@ class 조작_시작(trigger_api.Trigger):
         self.set_cinematic_ui(type=0)
         self.set_cinematic_ui(type=2)
         self.set_onetime_effect(id=2, path='BG/Common/ScreenMask/Eff_fadein_1sec.xml') # 페이드 아웃 끔
-        self.set_event_ui_script(type=BannerType.GameOver, script='$52010056_QD__EventSection__17$', duration=3000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$52010056_QD__EventSection__17$', duration=3000, box_ids=['0'])
         self.set_quest_accept(quest_id=91000053)
         self.set_visible_ui(ui_names=['UpperHudDialog','MessengerBrowser','ExpBar','GroupMessengerBrowser','QuestGuideDialog','MinimapDialog','AdPushDialog','SnowmanEventDialog'])
 
@@ -722,7 +722,7 @@ class 크림슨발록군단생성_A(trigger_api.Trigger):
         self.spawn_monster(spawn_ids=[722]) # 크림슨 스피어1: 11003816
         self.spawn_monster(spawn_ids=[723]) # 크림슨 스피어1: 11003816
         self.spawn_monster(spawn_ids=[724]) # 크림슨 스피어1: 11003816
-        self.set_event_ui_script(type=BannerType.GameOver, script='$52010056_QD__EventSection__40$', duration=3000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$52010056_QD__EventSection__40$', duration=3000, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -819,7 +819,7 @@ class 크림슨발록군단생성_D(trigger_api.Trigger):
         self.spawn_monster(spawn_ids=[722]) # 크림슨 스피어1: 11003816
         self.spawn_monster(spawn_ids=[723]) # 크림슨 스피어1: 11003816
         self.spawn_monster(spawn_ids=[724]) # 크림슨 스피어1: 11003816
-        self.set_event_ui_script(type=BannerType.GameOver, script='$52010056_QD__EventSection__41$', duration=3000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$52010056_QD__EventSection__41$', duration=3000, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=1000):

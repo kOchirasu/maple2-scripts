@@ -65,7 +65,7 @@ class 조작_시작(trigger_api.Trigger):
         self.set_cinematic_ui(type=2)
         self.reset_camera(interpolation_time=1.0)
         self.remove_buff(box_id=2001, skill_id=70000107)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$52010056_QD__EventSection_B__1$', duration=3000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$52010056_QD__EventSection_B__1$', duration=3000, box_ids=['0'])
 
     def on_exit(self) -> None:
         self.play_system_sound_in_box(sound='System_ShowGuideSummary_01')

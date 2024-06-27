@@ -28,7 +28,7 @@ class PvP(trigger_api.Trigger):
 class 어나운스0(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='2', seconds=2)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$99999905__PVP__0$', duration=2000)
+        self.set_event_ui_script(type=BannerType.Text, script='$99999905__PVP__0$', duration=2000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='2'):
@@ -38,7 +38,7 @@ class 어나운스0(trigger_api.Trigger):
 class 어나운스1(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='4', seconds=4)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$99999905__PVP__1$', duration=4000)
+        self.set_event_ui_script(type=BannerType.Text, script='$99999905__PVP__1$', duration=4000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='4'):
@@ -48,7 +48,7 @@ class 어나운스1(trigger_api.Trigger):
 class 어나운스2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='2', seconds=2)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$99999905__PVP__2$', duration=2000)
+        self.set_event_ui_script(type=BannerType.Text, script='$99999905__PVP__2$', duration=2000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='2'):

@@ -68,7 +68,7 @@ class 전투시작(trigger_api.Trigger):
         self.set_cinematic_ui(type=0)
         self.set_cinematic_ui(type=2)
         self.reset_camera(interpolation_time=1.0)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000536_BF__MAIN__4$', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000536_BF__MAIN__4$', duration=3000)
         self.spawn_monster(spawn_ids=[101], auto_target=False)
         self.destroy_monster(spawn_ids=[102])
 
@@ -109,7 +109,7 @@ class 몬스터사망체크(trigger_api.Trigger):
 """
 class 금고찾기(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000536_BF__MAIN__7$', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000536_BF__MAIN__7$', duration=3000)
         self.set_interact_object(trigger_ids=[10003147], state=1)
         self.destroy_monster(spawn_ids=[201,202,203,204,301,302,303,304,401,402,403,404])
 

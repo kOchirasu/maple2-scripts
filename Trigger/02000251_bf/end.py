@@ -10,7 +10,7 @@ class 대기(trigger_api.Trigger):
 class 어나운스1(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='1', seconds=7)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000251_BF__END__0$', duration=5000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000251_BF__END__0$', duration=5000, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='1'):
@@ -20,7 +20,7 @@ class 어나운스1(trigger_api.Trigger):
 class 어나운스2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='1', seconds=7)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000251_BF__END__1$', duration=5000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000251_BF__END__1$', duration=5000, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='1'):
@@ -30,7 +30,7 @@ class 어나운스2(trigger_api.Trigger):
 class 어나운스3(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='1', seconds=7)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000251_BF__END__2$', duration=5000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000251_BF__END__2$', duration=5000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='1'):

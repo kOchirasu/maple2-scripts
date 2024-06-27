@@ -141,7 +141,7 @@ class eventscene_end(trigger_api.Trigger):
         self.set_cinematic_ui(type=0)
         self.set_cinematic_ui(type=3)
         self.play_system_sound_in_box(sound='System_ShowGuideSummary_01')
-        self.set_event_ui_script(type=BannerType.GameOver, script='$52000119_QD__MAIN__10$', duration=1000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$52000119_QD__MAIN__10$', duration=1000, box_ids=['0'])
         self.set_effect(trigger_ids=[5001], visible=True)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -320,7 +320,7 @@ class fadein_04(trigger_api.Trigger):
 class bossmsg(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.play_system_sound_in_box(sound='System_ShowGuideSummary_01')
-        self.set_event_ui_script(type=BannerType.GameOver, script='$52000119_QD__MAIN__22$', duration=3000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$52000119_QD__MAIN__22$', duration=3000, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.monster_dead(spawn_ids=[997]):

@@ -51,7 +51,7 @@ class ToWall02(trigger_api.Trigger):
         self.set_mesh(trigger_ids=[3200]) # CurtainBarrier
         self.set_mesh(trigger_ids=[3201,3202], fade=3.0) # CurtainOpen
         self.set_portal(portal_id=10, visible=True, enable=True) # ToWall
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000396_BF__04_RANDOMPORTAL__0$', duration=2000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000396_BF__04_RANDOMPORTAL__0$', duration=2000, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=2000):
@@ -96,7 +96,7 @@ class ToRoom01(trigger_api.Trigger):
 
 class ToRoom02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$52100052_QD__04_RANDOMPORTAL__1$', duration=2000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$52100052_QD__04_RANDOMPORTAL__1$', duration=2000, box_ids=['0'])
         self.set_portal(portal_id=20, visible=True, enable=True) # ToRoom
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -142,7 +142,7 @@ class ToTower01(trigger_api.Trigger):
 
 class ToTower02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$52100052_QD__04_RANDOMPORTAL__3$', duration=2000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$52100052_QD__04_RANDOMPORTAL__3$', duration=2000, box_ids=['0'])
         self.set_mesh(trigger_ids=[3300]) # ToTowerDoorBarrier
         self.set_effect(trigger_ids=[5000], visible=True) # DoorOpen
         self.set_actor(trigger_id=4000, visible=True, initial_sequence='Opened') # NextMap

@@ -15,7 +15,7 @@ class 시작대기중(trigger_api.Trigger):
 class 스킬랜덤(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_effect(trigger_ids=[601], visible=True)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$99999905__BUFFSKILL__0$', duration=2000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$99999905__BUFFSKILL__0$', duration=2000, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if not self.user_detected(box_ids=[103]):

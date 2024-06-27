@@ -157,7 +157,7 @@ class 전투페이즈_1(trigger_api.Trigger):
             return 전투종료(self.ctx)
 
     def on_exit(self) -> None:
-        self.set_event_ui_script(type=BannerType.GameOver, script='미카엘이 조종하는 마리오네트 무리들을 처치하세요.', duration=4000)
+        self.set_event_ui_script(type=BannerType.Text, script='미카엘이 조종하는 마리오네트 무리들을 처치하세요.', duration=4000)
         self.shadow_expedition_open_boss_gauge(max_gauge_point=300, title='몬스터 처치 달성')
         self.set_user_value(trigger_id=901, key='respawn_phase_1', value=1)
         self.set_user_value(trigger_id=902, key='respawn_phase_1', value=1)

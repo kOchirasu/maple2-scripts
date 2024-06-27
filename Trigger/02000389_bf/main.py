@@ -110,7 +110,7 @@ class scene_01(trigger_api.Trigger):
 class scene_02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.spawn_monster(spawn_ids=[206,207,208,209], auto_target=False)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000389_BF__MAIN__5$', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000389_BF__MAIN__5$', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.monster_dead(spawn_ids=[206,207,208,209]):

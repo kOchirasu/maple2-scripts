@@ -23,7 +23,7 @@ class 몬스터생성(trigger_api.Trigger):
             return 몬스터생성(self.ctx)
         if self.monster_dead(spawn_ids=[2001]):
             self.hide_guide_summary(entity_id=23000004)
-            self.set_event_ui_script(type=BannerType.Fail, duration=2000, box_ids='0')
+            self.set_event_ui_script(type=BannerType.Success, duration=2000, box_ids=['0'])
             return 상자확률(self.ctx)
 
 

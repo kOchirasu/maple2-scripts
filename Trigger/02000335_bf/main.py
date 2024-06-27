@@ -54,7 +54,7 @@ class 시작_02(trigger_api.Trigger):
 class 시작_03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.reset_camera(interpolation_time=1.0)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000335_BF__MAIN__1$', duration=3000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000335_BF__MAIN__1$', duration=3000, box_ids=['0'])
         self.set_timer(timer_id='3', seconds=3)
 
     def on_tick(self) -> trigger_api.Trigger:

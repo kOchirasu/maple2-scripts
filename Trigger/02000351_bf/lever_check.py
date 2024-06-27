@@ -67,7 +67,7 @@ class 열림_끝(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         # self.select_camera(trigger_id=8002, enable=False) # 연출 카메라
         self.set_timer(timer_id='3', seconds=3)
-        # self.set_event_ui_script(type=BannerType.GameOver, script='관문이 개방되었습니다. \\n다음 지역으로 이동하십시오.', duration=3000)
+        # self.set_event_ui_script(type=BannerType.Text, script='관문이 개방되었습니다. \\n다음 지역으로 이동하십시오.', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='3'):

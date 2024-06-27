@@ -8,8 +8,8 @@ class 재생버튼(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         # arg1은 상태그룹의 ID, arg2 상태그룹에 포함되는 상태이름들, arg3 0이면 순서대로 1이면 상태그룹을 랜덤하게 섞는다.
         # self.set_state(id=1, states=['퍼즐패턴10','퍼즐패턴11','퍼즐패턴12','퍼즐패턴13','퍼즐패턴14','퍼즐패턴15','퍼즐패턴16','퍼즐패턴17','퍼즐패턴18','퍼즐패턴19','퍼즐패턴20','퍼즐패턴21','퍼즐패턴22','퍼즐패턴23','퍼즐패턴24','퍼즐패턴25','퍼즐패턴26','퍼즐패턴27','퍼즐패턴28','퍼즐패턴29','퍼즐패턴30','퍼즐패턴31','퍼즐패턴32','퍼즐패턴33','퍼즐패턴34','퍼즐패턴35','퍼즐패턴36','퍼즐패턴37','퍼즐패턴38','퍼즐패턴39','퍼즐패턴40','퍼즐패턴41','퍼즐패턴42','퍼즐패턴43','퍼즐패턴44'], randomize=True)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$99999900__MASSIVE00__0$', duration=3000)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$99999900__MASSIVE00__1$', duration=5000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$99999900__MASSIVE00__0$', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='$99999900__MASSIVE00__1$', duration=5000, box_ids=['0'])
         self.set_timer(timer_id='1001', seconds=7)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -73,7 +73,7 @@ class 모든패턴랜덤시작(trigger_api.Trigger):
 class 퍼즐단계대기(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='1005', seconds=5)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$99999900__MASSIVE00__5$', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='$99999900__MASSIVE00__5$', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='1005'):
@@ -114,7 +114,7 @@ class 퍼즐단계정리(trigger_api.Trigger):
 
 class 퍼즐단계종료(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$99999900__MASSIVE00__6$', duration=1000)
+        self.set_event_ui_script(type=BannerType.Text, script='$99999900__MASSIVE00__6$', duration=1000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if not self.user_detected(box_ids=[901]):
@@ -123,7 +123,7 @@ class 퍼즐단계종료(trigger_api.Trigger):
 
 class 중지버튼(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$99999900__MASSIVE00__7$', duration=5000)
+        self.set_event_ui_script(type=BannerType.Text, script='$99999900__MASSIVE00__7$', duration=5000)
         self.set_timer(timer_id='1000', seconds=3)
 
     def on_tick(self) -> trigger_api.Trigger:

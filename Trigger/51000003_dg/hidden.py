@@ -11,7 +11,7 @@ class Start(trigger_api.Trigger):
 class Hidden_ready_01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_portal(portal_id=99) # 임시 히든포탈
-        self.set_event_ui_script(type=BannerType.GameOver, script='$51000003_DG__HIDDEN__0$', duration=4000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$51000003_DG__HIDDEN__0$', duration=4000, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):
@@ -20,7 +20,7 @@ class Hidden_ready_01(trigger_api.Trigger):
 
 class Hidden_ready_02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$51000003_DG__HIDDEN__1$', duration=4000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$51000003_DG__HIDDEN__1$', duration=4000, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):

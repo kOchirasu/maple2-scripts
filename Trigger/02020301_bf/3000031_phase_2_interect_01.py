@@ -24,7 +24,7 @@ class 시작(trigger_api.Trigger):
 
 class 인터렉트_설정(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02020301_BF__3000031_PHASE_2_INTERECT_01__2$', duration=4000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02020301_BF__3000031_PHASE_2_INTERECT_01__2$', duration=4000)
         self.spawn_monster(spawn_ids=[999], auto_target=False) # 탑승 아르케온 등장(연출용)
 
     def on_tick(self) -> trigger_api.Trigger:

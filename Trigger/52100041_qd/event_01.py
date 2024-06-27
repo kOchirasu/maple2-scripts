@@ -11,7 +11,7 @@ class idle(trigger_api.Trigger):
 
 class Ready(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$52100041_QD__EVENT_01__0$', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='$52100041_QD__EVENT_01__0$', duration=3000)
 
 
 initial_state = idle

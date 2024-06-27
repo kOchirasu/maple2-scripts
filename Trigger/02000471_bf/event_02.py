@@ -110,7 +110,7 @@ class scene_07(trigger_api.Trigger):
         self.spawn_monster(spawn_ids=[130,131,132,133,134,135,136], auto_target=False)
         self.spawn_monster(spawn_ids=[150,151,152,153,154,155,156], auto_target=False)
         self.reset_camera()
-        # self.set_event_ui_script(type=BannerType.GameOver, script='$02000471_BF__EVENT_02__4$', duration=5000)
+        # self.set_event_ui_script(type=BannerType.Text, script='$02000471_BF__EVENT_02__4$', duration=5000)
         self.set_onetime_effect(id=1, path='BG/Common/ScreenMask/Eff_fadein_1sec.xml')
         self.set_cinematic_ui(type=0)
         self.set_cinematic_ui(type=2)
@@ -123,7 +123,7 @@ class scene_07(trigger_api.Trigger):
 
 class scene_08(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000471_BF__EVENT_02__9$', duration=5000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000471_BF__EVENT_02__9$', duration=5000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.monster_dead(spawn_ids=[106,105,116,115]):

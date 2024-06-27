@@ -17,7 +17,7 @@ class 게임종료(trigger_api.Trigger):
 class 종료안내(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='1', seconds=3)
-        self.set_event_ui_script(type=BannerType.Success, duration=3000)
+        self.set_event_ui_script(type=BannerType.Fail, duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='1'):

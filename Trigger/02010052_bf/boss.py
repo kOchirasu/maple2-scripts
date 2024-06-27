@@ -77,7 +77,7 @@ class burn_state_01(trigger_api.Trigger):
         self.set_mesh(trigger_ids=[600003], start_delay=800, interval=100) # 벽 해제
         self.set_effect(trigger_ids=[7910], visible=True) # 카나 텔레포트
         self.destroy_monster(spawn_ids=[995]) # 카나 사라짐 (995)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02010052_BF__BOSS__1$', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02010052_BF__BOSS__1$', duration=3000)
         self.set_effect(trigger_ids=[7031], visible=True) # 횃불에 불이 붙는 이펙트
         self.set_timer(timer_id='1', seconds=1)
 
@@ -134,7 +134,7 @@ class burn_state_02(trigger_api.Trigger):
         self.set_mesh(trigger_ids=[600004], start_delay=800, interval=100) # 벽 해제
         self.set_effect(trigger_ids=[7911], visible=True) # 카나 텔레포트
         self.destroy_monster(spawn_ids=[996]) # 카나 사라짐 (995)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02010052_BF__BOSS__3$', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02010052_BF__BOSS__3$', duration=3000)
         self.set_effect(trigger_ids=[7032], visible=True) # 횃불에 불이 붙는 이펙트
         self.set_timer(timer_id='1', seconds=1)
 
@@ -191,7 +191,7 @@ class burn_state_03(trigger_api.Trigger):
         self.set_mesh(trigger_ids=[600005], start_delay=800, interval=100) # 벽 해제
         self.set_effect(trigger_ids=[7912], visible=True) # 카나 텔레포트
         self.destroy_monster(spawn_ids=[997]) # 카나 사라짐 (995)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02010052_BF__BOSS__5$', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02010052_BF__BOSS__5$', duration=3000)
         self.set_effect(trigger_ids=[7033], visible=True) # 횃불에 불이 붙는 이펙트
         self.set_timer(timer_id='1', seconds=1)
 
@@ -272,7 +272,7 @@ class burn_state_04(trigger_api.Trigger):
 class Boss_battle_01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_mesh(trigger_ids=[6701,6702,6703,6704,6705,6706,6707,6708,6709,6710,6711,6712,6713,6714,6715,6716,6717,6718,6719,6720,6721,6722,6723,6724,6725,6726,6727,6728,6729,6730,6731,6732,6733,6734,6735,6736,6737,6738,6739,6740,6741,6742,6743,6744,6745,6746,6747,6748,6749,6750,6751,6752,6753,6754,6755,6756,6757,6758,6759,6760,6761,6762,6763,6764,6765,6766,6767,6768,6769,6770,6771,6772,6773,6774,6775,6776,6777,6778,6779,6780,6781,6782,6783,6784,6785,6786,6787,6788,6789,6790,6791,6792,6793,6794,6795,6796,6797,6798,6799], start_delay=80, interval=50) # 벽 해제
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02010052_BF__BOSS__7$', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02010052_BF__BOSS__7$', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.count_users(box_id=723) >= 1:
@@ -316,7 +316,7 @@ class Clear_01(trigger_api.Trigger):
 
 class Clear(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        # self.set_event_ui_script(type=BannerType.Fail, script='미션 성공!', duration=3000, box_ids='0')
+        # self.set_event_ui_script(type=BannerType.Success, script='미션 성공!', duration=3000, box_ids=['0'])
         # self.show_guide_summary(entity_id=112, text_id=40009) # 포탈을 타세요
         pass
 

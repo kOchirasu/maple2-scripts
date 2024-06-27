@@ -79,7 +79,7 @@ class FirstPhaseChase01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.destroy_monster(spawn_ids=[101])
         self.play_system_sound_in_box(sound='System_ShowGuideSummary_01')
-        self.set_event_ui_script(type=BannerType.GameOver, script='$52000066_QD__CHASE01__1$', duration=3000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$52000066_QD__CHASE01__1$', duration=3000, box_ids=['0'])
         self.set_ladder(trigger_ids=[1000], visible=True, enable=True) # LadderEnterance
         self.set_ladder(trigger_ids=[1001], visible=True, enable=True) # LadderEnterance
         self.set_ladder(trigger_ids=[1002], visible=True, enable=True) # LadderEnterance

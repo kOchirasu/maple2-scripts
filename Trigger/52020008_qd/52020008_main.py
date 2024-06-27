@@ -280,7 +280,7 @@ class 연출종료(trigger_api.Trigger):
 
 class NPC생성(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='세리하를 추적하세요.', duration=5000)
+        self.set_event_ui_script(type=BannerType.Text, script='세리하를 추적하세요.', duration=5000)
         self.spawn_monster(spawn_ids=[211,212,213,214,215,216,217])
 
     def on_tick(self) -> trigger_api.Trigger:

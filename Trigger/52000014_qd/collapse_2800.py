@@ -36,7 +36,7 @@ class 대기(trigger_api.Trigger):
 
 class 무너짐경고01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$52000014_QD__COLLAPSE_2800__0$', duration=4000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$52000014_QD__COLLAPSE_2800__0$', duration=4000, box_ids=['0'])
         self.set_effect(trigger_ids=[12800], visible=True) # Vibrate Short
         self.set_effect(trigger_ids=[22800], visible=True) # Vibrate Sound
         self.set_random_mesh(trigger_ids=[2850,2851,2852,2853,2854,2855], start_delay=6, fade=300) # 첫 번째, 아래, 6

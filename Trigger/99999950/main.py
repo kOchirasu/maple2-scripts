@@ -15,7 +15,7 @@ class 시작대기(trigger_api.Trigger):
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='2'):
-            self.set_event_ui_script(type=BannerType.GameOver, script='$99999950__MAIN__0$', duration=2000, box_ids='0')
+            self.set_event_ui_script(type=BannerType.Text, script='$99999950__MAIN__0$', duration=2000, box_ids=['0'])
             return 라운드1(self.ctx)
 
 
@@ -43,7 +43,7 @@ class 라운드대기2(trigger_api.Trigger):
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='2'):
-            self.set_event_ui_script(type=BannerType.GameOver, script='$99999950__MAIN__1$', duration=2000, box_ids='0')
+            self.set_event_ui_script(type=BannerType.Text, script='$99999950__MAIN__1$', duration=2000, box_ids=['0'])
             return 라운드2(self.ctx)
 
 
@@ -71,7 +71,7 @@ class 라운드대기3(trigger_api.Trigger):
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='2'):
-            self.set_event_ui_script(type=BannerType.GameOver, script='$99999950__MAIN__2$', duration=2000, box_ids='0')
+            self.set_event_ui_script(type=BannerType.Text, script='$99999950__MAIN__2$', duration=2000, box_ids=['0'])
             return 라운드3(self.ctx)
 
 
@@ -99,7 +99,7 @@ class 라운드대기4(trigger_api.Trigger):
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='2'):
-            self.set_event_ui_script(type=BannerType.GameOver, script='$99999950__MAIN__3$', duration=2000, box_ids='0')
+            self.set_event_ui_script(type=BannerType.Text, script='$99999950__MAIN__3$', duration=2000, box_ids=['0'])
             return 라운드4(self.ctx)
 
 
@@ -136,7 +136,7 @@ class 라운드대기5(trigger_api.Trigger):
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='2'):
-            self.set_event_ui_script(type=BannerType.GameOver, script='$99999950__MAIN__4$', duration=2000, box_ids='0')
+            self.set_event_ui_script(type=BannerType.Text, script='$99999950__MAIN__4$', duration=2000, box_ids=['0'])
             return 라운드5(self.ctx)
 
 

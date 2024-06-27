@@ -33,7 +33,7 @@ class Wait(trigger_api.Trigger):
 
 class Guide01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000387_BF__10_RANDOMPORTAL__0$', duration=3000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000387_BF__10_RANDOMPORTAL__0$', duration=3000, box_ids=['0'])
         self.set_effect(trigger_ids=[5001], visible=True) # FrontDoorStep
         self.set_effect(trigger_ids=[5002], visible=True) # FrontDoorStep
         self.set_effect(trigger_ids=[5003], visible=True) # FrontDoorStep
@@ -238,7 +238,7 @@ class CheckMemeberAgain(trigger_api.Trigger):
 
 class EndGame01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000387_BF__10_RANDOMPORTAL__1$', duration=3000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000387_BF__10_RANDOMPORTAL__1$', duration=3000, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):

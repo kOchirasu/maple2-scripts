@@ -26,7 +26,7 @@ class 포탈활성화(trigger_api.Trigger):
         self.set_portal(portal_id=11, visible=True, enable=True, minimap_visible=True)
         # self.set_effect(trigger_ids=[8101,8102,8103,8104,8105], visible=True) # 최초 시작 지점에 나오는 화살표 표시
         self.dungeon_enable_give_up(is_enable=True)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02020140_BF__BARRICADE__0$', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02020140_BF__BARRICADE__0$', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.dungeon_timeout():

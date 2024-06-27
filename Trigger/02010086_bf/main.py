@@ -48,7 +48,7 @@ class DungeonStart(trigger_api.Trigger):
 class 시작_03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[80003])
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02010086_BF__MAIN__0$', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02010086_BF__MAIN__0$', duration=3000)
         self.set_actor(trigger_id=1001, visible=True, initial_sequence='Opened')
         self.set_mesh(trigger_ids=[1002], fade=10.0) # 벽 해제
         self.set_timer(timer_id='1', seconds=1)

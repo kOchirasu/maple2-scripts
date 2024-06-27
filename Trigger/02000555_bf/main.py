@@ -52,7 +52,7 @@ class 스테이지1_시작(trigger_api.Trigger):
 
 class 스테이지1_추가등장대기01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000535_BF__MAIN__37$', duration=5000) # 시작안내문
+        self.set_event_ui_script(type=BannerType.Text, script='$02000535_BF__MAIN__37$', duration=5000) # 시작안내문
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.user_value(key='MonsterMany') <= 6:
@@ -216,7 +216,7 @@ class 스테이지3문파괴대기_스테이지4몬스터등장(trigger_api.Trig
         self.set_user_value(key='MonsterMany', value=0)
         # 그외 나머지 몬스터는 AI_SignalSummon.xml 에서 소환함
         self.spawn_monster(spawn_ids=[4001])
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000535_BF__MAIN__36$', duration=5000) # 앞으로더가세요 안내문
+        self.set_event_ui_script(type=BannerType.Text, script='$02000535_BF__MAIN__36$', duration=5000) # 앞으로더가세요 안내문
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=2470):
@@ -310,7 +310,7 @@ class 스테이지5_완료(trigger_api.Trigger):
 class 보안게임준비중(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         # 금고로 가는 입구를 발견했습니다.\n안으로 들어가 당신의 능력을 증명하세요!
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000535_BF__MAIN__38$', duration=5000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000535_BF__MAIN__38$', duration=5000)
         self.set_interact_object(trigger_ids=[10003145], state=1)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -333,7 +333,7 @@ class 보안게임시작(trigger_api.Trigger):
 class 문열기시작2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         # [보안 시스템 동작]\n관리자 검증 코드를 입력해주세요.\n3번 실패 시, 시스템이 잠깁니다.
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000535_BF__MAIN__39$', duration=4000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000535_BF__MAIN__39$', duration=4000)
         self.lock_my_pc(is_lock=True)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -365,7 +365,7 @@ class 게임로직종료(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_pc_emotion_loop(sequence_name='Idle_A', duration=3000.0)
         # 인증이 완료 되었습니다.\n금고 포탈이 활성화됩니다
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000535_BF__MAIN__40$', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000535_BF__MAIN__40$', duration=3000)
         self.lock_my_pc()
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -377,7 +377,7 @@ class 실패게임로직종료(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_pc_emotion_loop(sequence_name='Idle_A', duration=3000.0)
         # 인증이 실패하였습니다.\n시스템이 잠깁니다.
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000535_BF__MAIN__41$', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000535_BF__MAIN__41$', duration=3000)
         self.add_balloon_talk(msg='$02000535_BF__MAIN__42$', duration=3500) # 에잇! 실패하다니…
         self.lock_my_pc()
 
@@ -390,7 +390,7 @@ class 문파괴안내(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_cinematic_ui(type=0)
         self.set_cinematic_ui(type=2)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000535_BF__MAIN__43$', duration=7000) # 금고 문을 파괴하여 포탈을 활성화시키세요.
+        self.set_event_ui_script(type=BannerType.Text, script='$02000535_BF__MAIN__43$', duration=7000) # 금고 문을 파괴하여 포탈을 활성화시키세요.
         self.lock_my_pc()
         self.spawn_monster(spawn_ids=[611])
 

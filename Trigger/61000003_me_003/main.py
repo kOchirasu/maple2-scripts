@@ -54,7 +54,7 @@ class 시작준비(trigger_api.Trigger):
 class 안내01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_effect(trigger_ids=[601], visible=True)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$61000003_ME_003__MAIN__0$', duration=5000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$61000003_ME_003__MAIN__0$', duration=5000, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=6000):
@@ -64,7 +64,7 @@ class 안내01(trigger_api.Trigger):
 class 안내02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_effect(trigger_ids=[602], visible=True)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$61000003_ME_003__MAIN__1$', duration=4000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$61000003_ME_003__MAIN__1$', duration=4000, box_ids=['0'])
         self.set_timer(timer_id='5', seconds=5)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -76,7 +76,7 @@ class 안내03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_effect(trigger_ids=[603], visible=True)
         # self.play_system_sound_in_box(box_ids=[105], sound='System_Quiz_Ready_01')
-        self.set_event_ui_script(type=BannerType.GameOver, script='$61000003_ME_003__MAIN__2$', duration=4000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$61000003_ME_003__MAIN__2$', duration=4000, box_ids=['0'])
         self.set_timer(timer_id='5', seconds=5)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -181,7 +181,7 @@ class 문제2준비(trigger_api.Trigger):
         # self.play_system_sound_in_box(box_ids=[105], sound='System_Quiz_Ready_01')
         self.set_timer(timer_id='2', seconds=2)
         self.move_user(map_id=61000003, portal_id=99, box_id=104)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$61000003_ME_003__MAIN__3$', duration=2000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$61000003_ME_003__MAIN__3$', duration=2000, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='2'):
@@ -279,7 +279,7 @@ class 문제3준비(trigger_api.Trigger):
         # self.play_system_sound_in_box(box_ids=[105], sound='System_Quiz_Ready_01')
         self.set_timer(timer_id='2', seconds=2)
         self.move_user(map_id=61000003, portal_id=99, box_id=104)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$61000003_ME_003__MAIN__4$', duration=2000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$61000003_ME_003__MAIN__4$', duration=2000, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='2'):
@@ -377,7 +377,7 @@ class 문제4준비(trigger_api.Trigger):
         # self.play_system_sound_in_box(box_ids=[105], sound='System_Quiz_Ready_01')
         self.set_timer(timer_id='2', seconds=2)
         self.move_user(map_id=61000003, portal_id=99, box_id=104)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$61000003_ME_003__MAIN__5$', duration=2000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$61000003_ME_003__MAIN__5$', duration=2000, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='2'):
@@ -475,7 +475,7 @@ class 문제5준비(trigger_api.Trigger):
         # self.play_system_sound_in_box(box_ids=[105], sound='System_Quiz_Ready_01')
         self.set_timer(timer_id='2', seconds=2)
         self.move_user(map_id=61000003, portal_id=99, box_id=104)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$61000003_ME_003__MAIN__6$', duration=2000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$61000003_ME_003__MAIN__6$', duration=2000, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='2'):
@@ -573,7 +573,7 @@ class 문제6준비(trigger_api.Trigger):
         # self.play_system_sound_in_box(box_ids=[105], sound='System_Quiz_Ready_01')
         self.set_timer(timer_id='2', seconds=2)
         self.move_user(map_id=61000003, portal_id=99, box_id=104)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$61000003_ME_003__MAIN__7$', duration=2000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$61000003_ME_003__MAIN__7$', duration=2000, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='2'):
@@ -671,7 +671,7 @@ class 문제7준비(trigger_api.Trigger):
         # self.play_system_sound_in_box(box_ids=[105], sound='System_Quiz_Ready_01')
         self.set_timer(timer_id='2', seconds=2)
         self.move_user(map_id=61000003, portal_id=99, box_id=104)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$61000003_ME_003__MAIN__8$', duration=2000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$61000003_ME_003__MAIN__8$', duration=2000, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='2'):
@@ -769,7 +769,7 @@ class 문제8준비(trigger_api.Trigger):
         # self.play_system_sound_in_box(box_ids=[105], sound='System_Quiz_Ready_01')
         self.set_timer(timer_id='2', seconds=2)
         self.move_user(map_id=61000003, portal_id=99, box_id=104)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$61000003_ME_003__MAIN__9$', duration=2000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$61000003_ME_003__MAIN__9$', duration=2000, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='2'):
@@ -867,7 +867,7 @@ class 문제9준비(trigger_api.Trigger):
         # self.play_system_sound_in_box(box_ids=[105], sound='System_Quiz_Ready_01')
         self.set_timer(timer_id='2', seconds=2)
         self.move_user(map_id=61000003, portal_id=99, box_id=104)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$61000003_ME_003__MAIN__10$', duration=2000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$61000003_ME_003__MAIN__10$', duration=2000, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='2'):
@@ -965,7 +965,7 @@ class 문제10준비(trigger_api.Trigger):
         # self.play_system_sound_in_box(box_ids=[105], sound='System_Quiz_Ready_01')
         self.set_timer(timer_id='2', seconds=2)
         self.move_user(map_id=61000003, portal_id=99, box_id=104)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$61000003_ME_003__MAIN__11$', duration=2000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$61000003_ME_003__MAIN__11$', duration=2000, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='2'):
@@ -1085,8 +1085,8 @@ class 성공(trigger_api.Trigger):
 
 class 우승자카메라연출(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.Bonus, script='$61000003_ME_003__MAIN__12$', duration=5000, box_ids='105')
-        self.set_event_ui_script(type=BannerType.Draw, script='$61000003_ME_003__MAIN__13$', duration=5000, box_ids='!105')
+        self.set_event_ui_script(type=BannerType.Winner, script='$61000003_ME_003__MAIN__12$', duration=5000, box_ids=['105'])
+        self.set_event_ui_script(type=BannerType.Lose, script='$61000003_ME_003__MAIN__13$', duration=5000, box_ids=['!105'])
         self.mini_game_camera_direction(box_id=105, camera_id=301)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -1114,7 +1114,7 @@ class 종료(trigger_api.Trigger):
         self.end_mini_game(winner_box_id=105, game_name='oxquiz')
         self.set_effect(trigger_ids=[608], visible=True)
         self.set_event_ui_round(rounds=[0,0])
-        self.set_event_ui_script(type=BannerType.Success, script='$61000003_ME_003__MAIN__14$', duration=3000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Fail, script='$61000003_ME_003__MAIN__14$', duration=3000, box_ids=['0'])
         self.set_timer(timer_id='3', seconds=3)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -1126,7 +1126,7 @@ class 종료2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.unset_mini_game_area_for_hack() # 해킹 보안 종료
         self.set_effect(trigger_ids=[609], visible=True)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$61000003_ME_003__MAIN__15$', duration=3000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$61000003_ME_003__MAIN__15$', duration=3000, box_ids=['0'])
         self.set_timer(timer_id='6', seconds=6)
 
     def on_tick(self) -> trigger_api.Trigger:

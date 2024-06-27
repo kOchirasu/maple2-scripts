@@ -26,7 +26,7 @@ class 딜레이01(trigger_api.Trigger):
 class 무너짐01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='3', seconds=2)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$52000014_QD__COLLAPSE_2000__0$', duration=4000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$52000014_QD__COLLAPSE_2000__0$', duration=4000, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='3'):

@@ -114,7 +114,7 @@ class 두번째연출전투준비1(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_onetime_effect(id=5, path='BG/Common/ScreenMask/Eff_fadein_1sec.xml')
         self.spawn_monster(spawn_ids=[601], auto_target=False) # 몬스터 하렌
-        self.set_event_ui_script(type=BannerType.GameOver, script='하렌을 처치하세요!', duration=2000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='하렌을 처치하세요!', duration=2000, box_ids=['0'])
         self.add_balloon_talk(spawn_id=601, msg='숨통을 끊어주마.', duration=3000, delay_tick=3000)
 
     def on_tick(self) -> trigger_api.Trigger:

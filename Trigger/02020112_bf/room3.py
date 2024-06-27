@@ -14,7 +14,7 @@ class 대기(trigger_api.Trigger):
 
 class 시작(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02020112_BF__ROOM3__0$', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02020112_BF__ROOM3__0$', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.user_value(key='EliteDead') >= 1:
@@ -32,7 +32,7 @@ class 격리(trigger_api.Trigger):
         self.spawn_monster(spawn_ids=[181], auto_target=False)
         self.spawn_monster(spawn_ids=[182], auto_target=False)
         self.spawn_monster(spawn_ids=[183], auto_target=False)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02020112_BF__ROOM3__1$', duration=5000, box_ids='932')
+        self.set_event_ui_script(type=BannerType.Text, script='$02020112_BF__ROOM3__1$', duration=5000, box_ids=['932'])
         self.add_buff(box_ids=[941], skill_id=70002106, level=1, is_skill_set=False)
 
     def on_tick(self) -> trigger_api.Trigger:

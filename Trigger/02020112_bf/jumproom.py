@@ -44,7 +44,7 @@ class 성공(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         # <재접속 유저를 위해 버프 지속적으로 쏴주기 캔슬>
         self.set_user_value(trigger_id=99990021, key='Reconnect', value=2)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02020112_BF__JUMPROOM__0$', duration=5000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02020112_BF__JUMPROOM__0$', duration=5000)
         self.set_gravity(gravity=0.0)
         self.set_effect(trigger_ids=[8005])
         self.set_effect(trigger_ids=[8006])

@@ -225,7 +225,7 @@ class 첫번째연출_조디대사06(trigger_api.Trigger):
         self.set_pc_emotion_loop(sequence_name='Idle_A', duration=1000.0)
         self.add_cinematic_talk(npc_id=11003344, msg='$52010026_QD__MAIN__19$', duration=3000)
         self.add_cinematic_talk(npc_id=0, msg='$52010026_QD__MAIN__20$', duration=3000)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$52010026_QD__MAIN__21$', duration=8000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$52010026_QD__MAIN__21$', duration=8000, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=6000):
@@ -297,7 +297,7 @@ class 두번째연출_피치전투01(trigger_api.Trigger):
         self.set_onetime_effect(id=2, path='BG/Common/ScreenMask/Eff_fadein_1sec.xml')
         self.add_balloon_talk(spawn_id=1000, msg='$52010026_QD__MAIN__24$', duration=1000)
         self.play_system_sound_in_box(sound='System_ShowGuideSummary_01')
-        self.set_event_ui_script(type=BannerType.GameOver, script='$52010026_QD__MAIN__25$', duration=2000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$52010026_QD__MAIN__25$', duration=2000, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=1000):
@@ -445,7 +445,7 @@ class 세번째연출_대사01(trigger_api.Trigger):
         self.set_npc_emotion_sequence(spawn_id=1000, sequence_name='ChatUP_A')
         self.add_balloon_talk(spawn_id=1000, msg='$52010026_QD__MAIN__33$', duration=2000, delay_tick=2000)
         self.play_system_sound_in_box(sound='System_ShowGuideSummary_01')
-        self.set_event_ui_script(type=BannerType.GameOver, script='$52010026_QD__MAIN__34$', duration=2000, box_ids='4000')
+        self.set_event_ui_script(type=BannerType.Text, script='$52010026_QD__MAIN__34$', duration=2000, box_ids=['4000'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=6000):
@@ -534,7 +534,7 @@ class 다섯번째연출_엘리트몬스터대사(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_onetime_effect(id=7, path='BG/Common/ScreenMask/Eff_fadein_1sec.xml')
         self.play_system_sound_in_box(sound='System_ShowGuideSummary_01')
-        self.set_event_ui_script(type=BannerType.GameOver, script='$52010026_QD__MAIN__38$', duration=2000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$52010026_QD__MAIN__38$', duration=2000, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=1000):

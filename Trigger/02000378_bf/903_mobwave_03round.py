@@ -23,7 +23,7 @@ class Ready(trigger_api.Trigger):
 class FirstWaveStart(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_effect(trigger_ids=[5000], visible=True) # 가이드 서머리 사운드 이펙트
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000378_BF__903_MOBWAVE_03ROUND__0$', duration=6000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000378_BF__903_MOBWAVE_03ROUND__0$', duration=6000, box_ids=['0'])
         self.set_user_value(key='WaveTime', value=1) # 웨이브 진행 순서 기억
         self.set_effect(trigger_ids=[5103], visible=True) # 03Round_ShadowApp
         self.spawn_monster(spawn_ids=[90300,90302,90304], auto_target=False) # ,90306,90308
@@ -801,7 +801,7 @@ class NpcDownPenaltyStart(trigger_api.Trigger):
         self.destroy_monster(spawn_ids=[1003]) # 수호대상 틴차이
         self.spawn_monster(spawn_ids=[1103], auto_target=False) # 쓰러진 틴차이
         self.set_effect(trigger_ids=[5000], visible=True) # 가이드 서머리 사운드 이펙트
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000378_BF__903_MOBWAVE_03ROUND__1$', duration=4000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000378_BF__903_MOBWAVE_03ROUND__1$', duration=4000, box_ids=['0'])
         self.set_dialogue(type=1, spawn_id=1103, script='$02000378_BF__903_MOBWAVE_03ROUND__2$', time=4, arg5=4) # 틴차이
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -819,7 +819,7 @@ class ReturnToWave(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_user_value(key='PenaltyFinish', value=0)
         self.set_effect(trigger_ids=[5000], visible=True) # 가이드 서머리 사운드 이펙트
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000378_BF__903_MOBWAVE_03ROUND__3$', duration=4000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000378_BF__903_MOBWAVE_03ROUND__3$', duration=4000, box_ids=['0'])
         self.destroy_monster(spawn_ids=[1103]) # 쓰러진 틴차이
         self.spawn_monster(spawn_ids=[1003], auto_target=False) # 수호대상 틴차이
         self.remove_balloon_talk(spawn_id=1103)

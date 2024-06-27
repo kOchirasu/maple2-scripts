@@ -78,7 +78,7 @@ class 카메라연출03(trigger_api.Trigger):
 
 class 무너짐02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$52000014_QD__COLLAPSE_2900__1$', duration=4000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$52000014_QD__COLLAPSE_2900__1$', duration=4000, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.user_detected(box_ids=[9002]):
@@ -116,7 +116,7 @@ class 반응안내01(trigger_api.Trigger):
         self.set_timer(timer_id='20', seconds=4)
         self.set_effect(trigger_ids=[12902], visible=True) # Vibrate Short
         self.set_effect(trigger_ids=[22902], visible=True) # Vibrate Sound
-        self.set_event_ui_script(type=BannerType.GameOver, script='$52000014_QD__COLLAPSE_2900__2$', duration=4000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$52000014_QD__COLLAPSE_2900__2$', duration=4000, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='20'):
@@ -125,7 +125,7 @@ class 반응안내01(trigger_api.Trigger):
 
 class 줍기안내01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$52000014_QD__COLLAPSE_2900__3$', duration=4000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$52000014_QD__COLLAPSE_2900__3$', duration=4000, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.quest_user_detected(box_ids=[9004], quest_ids=[50001250], quest_states=[2]):

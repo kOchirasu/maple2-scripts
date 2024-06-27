@@ -91,7 +91,7 @@ class 인트로_종료(trigger_api.Trigger):
 
 class 알림(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='시간이 얼마 없습니다.\\n폭격을 일삼는 에고웨폰들을 처치하며 크리티아스로 침투하세요.', duration=4000)
+        self.set_event_ui_script(type=BannerType.Text, script='시간이 얼마 없습니다.\\n폭격을 일삼는 에고웨폰들을 처치하며 크리티아스로 침투하세요.', duration=4000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=1000):
@@ -400,7 +400,7 @@ class 실패(trigger_api.Trigger):
         self.set_effect(trigger_ids=[10092], visible=True)
         self.set_mesh(trigger_ids=[80000], visible=True)
         self.destroy_monster(spawn_ids=[-1])
-        self.set_event_ui_script(type=BannerType.GameOver, script='미션에 실패하였습니다. 다시 재도전 해보세요.', duration=4000)
+        self.set_event_ui_script(type=BannerType.Text, script='미션에 실패하였습니다. 다시 재도전 해보세요.', duration=4000)
         self.move_user(map_id=52020001, portal_id=99)
         self.set_portal(portal_id=14, visible=True, enable=True)
 

@@ -48,7 +48,7 @@ class 유저카운트(trigger_api.Trigger):
 class 딜레이(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_achievement(trigger_id=9002, type='trigger', achieve='corps_battle')
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02020062_BF__MAIN__0$', duration=5000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02020062_BF__MAIN__0$', duration=5000)
         self.select_camera(trigger_id=999)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -58,7 +58,7 @@ class 딜레이(trigger_api.Trigger):
 
 class 방폭(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02020062_BF__MAIN__1$', duration=10000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02020062_BF__MAIN__1$', duration=10000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=10000):
@@ -81,7 +81,7 @@ class 시작(trigger_api.Trigger):
         self.set_mesh(trigger_ids=[1101,1102,1103,1104,1105,1106,1107,1108,1109,1110,1111,1112,1113,1114,1115,1116,1117,1118,1119,1120,1121,1122,1123,1124,1125,1126,1127,1128,1129,1130,1131,1132,1133,1134,1135,1136,1137,1138,1139,1140,1141,1142,1143,1144,1145,1146,1147,1148]) # <가두기 트리거 메쉬 제거>
         self.reset_camera(interpolation_time=1.0)
         self.set_event_ui_round(rounds=[1,3])
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02020062_BF__MAIN__2$', duration=5000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02020062_BF__MAIN__2$', duration=5000)
         self.set_timer(timer_id='1', seconds=180, auto_remove=True, display=True, v_offset=60) # 군단전 제한시간
         self.shadow_expedition_open_boss_gauge(max_gauge_point=750)
         self.set_user_value(trigger_id=99990002, key='SpawnStart', value=1)
@@ -100,7 +100,7 @@ class 시작(trigger_api.Trigger):
 class 오브젝트페이즈(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.give_reward_content(reward_id=31000001)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02020062_BF__MAIN__3$', duration=5000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02020062_BF__MAIN__3$', duration=5000)
         self.shadow_expedition_close_boss_gauge()
         self.set_event_ui_round(rounds=[2,3])
         self.reset_timer(timer_id='1')
@@ -124,7 +124,7 @@ class 보스페이즈(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.give_reward_content(reward_id=31000002)
         self.destroy_monster(spawn_ids=[-1])
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02020062_BF__MAIN__4$', duration=5000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02020062_BF__MAIN__4$', duration=5000)
         self.reset_timer(timer_id='2')
         self.set_event_ui_round(rounds=[3,3])
         self.set_user_value(trigger_id=99990008, key='BossPhase', value=1)

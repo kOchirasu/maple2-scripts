@@ -20,7 +20,7 @@ class 시작조건체크(trigger_api.Trigger):
 
 class 어나운스0(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$99999911__MAIN__0$', duration=4000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$99999911__MAIN__0$', duration=4000, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):

@@ -33,7 +33,7 @@ class 안전장치_활성화(trigger_api.Trigger):
 
 class 안전장치_작동(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02020112_BF__SAFEZONE1__0$', duration=5000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02020112_BF__SAFEZONE1__0$', duration=5000)
         self.set_user_value(trigger_id=99990002, key='Safe', value=1)
 
 

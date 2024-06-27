@@ -274,7 +274,7 @@ class ship_02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_interact_object(trigger_ids=[10001097], state=1)
         self.set_interact_object(trigger_ids=[10001098], state=1)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000441_BF__MAIN__18$', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000441_BF__MAIN__18$', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.object_interacted(interact_ids=[10001097], state=0):

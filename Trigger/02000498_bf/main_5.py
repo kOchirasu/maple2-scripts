@@ -30,7 +30,7 @@ class 시작대기(trigger_api.Trigger):
 
 class 라운드21(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000350_BF__MAIN_5__0$', duration=4000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000350_BF__MAIN_5__0$', duration=4000, box_ids=['0'])
         self.dark_stream_spawn_monster(spawn_ids=[121001], score=110000)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -88,7 +88,7 @@ class 라운드대기24(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_event_ui_round(rounds=[24,25,21])
         self.dark_stream_start_round(round=24, ui_duration=3000, damage_penalty=100)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000350_BF__MAIN_5__1$', duration=2000, box_ids='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000350_BF__MAIN_5__1$', duration=2000, box_ids=['0'])
         self.set_timer(timer_id='3', seconds=3)
 
     def on_tick(self) -> trigger_api.Trigger:

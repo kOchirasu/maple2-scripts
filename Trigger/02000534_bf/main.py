@@ -41,7 +41,7 @@ class idle(trigger_api.Trigger):
 class start(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_portal(portal_id=2)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000534_BF__MAIN__0$', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000534_BF__MAIN__0$', duration=3000)
         self.set_portal(portal_id=2)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -400,7 +400,7 @@ class 업그레이드시작(trigger_api.Trigger):
         self.set_timer(timer_id='1', seconds=15, display=True)
         self.spawn_monster(spawn_ids=[9901,9902,9903,9904], auto_target=False)
         self.add_balloon_talk(spawn_id=507, msg='$02000534_BF__MAIN__35$', duration=3500, delay_tick=500)
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000534_BF__MAIN__36$', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000534_BF__MAIN__36$', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=15000):
@@ -448,7 +448,7 @@ class 포탈생성(trigger_api.Trigger):
 
 class 포탈생성2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.GameOver, script='$02000534_BF__MAIN__40$', duration=3000)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000534_BF__MAIN__40$', duration=3000)
         self.set_portal(portal_id=2, visible=True, enable=True, minimap_visible=True)
 
 
