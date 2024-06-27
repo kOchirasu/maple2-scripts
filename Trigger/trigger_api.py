@@ -1590,17 +1590,17 @@ class Trigger:
         """
         self.ctx.SetOnetimeEffect(id, enable, path)
 
-    def set_pc_emotion_loop(self, sequence_name: str, duration: float=0.0, arg3: bool=False) -> None:
+    def set_pc_emotion_loop(self, sequence_name: str, duration: float=0.0, loop: bool=False) -> None:
         """SetPcEmotionLoop
 
         Args:
             sequence_name (str): _description_.
             duration (float): _description_. Defaults to 0.0.
-            arg3 (bool): _description_. Defaults to False.
+            loop (bool): _description_. Defaults to False.
 
         Returns: None
         """
-        self.ctx.SetPcEmotionLoop(sequence_name, duration, arg3)
+        self.ctx.SetPcEmotionLoop(sequence_name, duration, loop)
 
     def set_pc_emotion_sequence(self, sequence_names: List[str]) -> None:
         """SetPcEmotionSequence

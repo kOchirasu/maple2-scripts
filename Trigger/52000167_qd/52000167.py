@@ -179,7 +179,7 @@ class 홀슈타트등장04(trigger_api.Trigger):
 class 수련장이동01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_onetime_effect(id=1, enable=True, path='BG/Common/ScreenMask/Eff_CameraMasking_SlowFade.xml')
-        self.set_pc_emotion_loop(sequence_name='Attack_Idle_A', duration=100000.0, arg3=True)
+        self.set_pc_emotion_loop(sequence_name='Attack_Idle_A', duration=100000.0, loop=True)
         self.set_cinematic_ui(type=1)
 
     def on_tick(self) -> trigger_api.Trigger:
