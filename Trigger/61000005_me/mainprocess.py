@@ -13,7 +13,7 @@ class 입장(trigger_api.Trigger):
 class 퍼즐대기중(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         # arg1은 상태그룹의 ID, arg2 상태그룹에 포함되는 상태이름들, arg3 0이면 순서대로 1이면 상태그룹을 랜덤하게 섞는다.
-        self.set_state(id=1, states=['퍼즐패턴1','퍼즐패턴2','퍼즐패턴3'], randomize=True)
+        self.set_state(id=1, states=[퍼즐패턴1,퍼즐패턴2,퍼즐패턴3], randomize=True)
         self.set_mesh(trigger_ids=[101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176], visible=True) # 퍼즐 큐브를 모두 보인다(arg2=1)
         self.set_mesh(trigger_ids=[201,202,203,204,205,206,207,208], visible=True) # 순간 이동 발판이 보인다 (arg2=1)
         self.set_mesh(trigger_ids=[211,212], visible=True) # 닫힌 문이 보인다 (arg2=1)
@@ -108,7 +108,7 @@ class 시작대기(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         # 퍼즐 대기에서 패턴을 섞을 경우 섞이지 않는 경우가 있어서 여기에서 퍼즐 패턴을 한번 더 섞어줌
         # arg1은 상태그룹의 ID, arg2 상태그룹에 포함되는 상태이름들, arg3 0이면 순서대로 1이면 상태그룹을 랜덤하게 섞는다.
-        self.set_state(id=1, states=['퍼즐패턴1','퍼즐패턴2','퍼즐패턴3'], randomize=True)
+        self.set_state(id=1, states=[퍼즐패턴1,퍼즐패턴2,퍼즐패턴3], randomize=True)
         # 퍼즐 패턴 섞기 종료
         self.set_mesh(trigger_ids=[201,202,203,204,205,206,207,208]) # 순간 이동 발판이 사라진다
         # 순간 이동 포털을 안 보이게 하고 동작 안하게 한다

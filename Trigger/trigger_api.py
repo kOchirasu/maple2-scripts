@@ -3,7 +3,7 @@ clr.AddReference("System.Numerics")
 clr.AddReference("Maple2.Server.Game")
 
 from typing import List
-from System import Array, Int32, String
+from System import Array, Int32, String, Object
 from System.Numerics import Vector3
 from Maple2.Server.Game.Scripting.Trigger import Align, FieldGame, Locale, Weather, BannerType
 
@@ -1751,17 +1751,17 @@ class Trigger:
         """
         self.ctx.SetSound(trigger_id, enable)
 
-    def set_state(self, id: int, states: List[str], randomize: bool=False) -> None:
+    def set_state(self, id: int, states: List['Trigger'], randomize: bool=False) -> None:
         """상태를설정한다
 
         Args:
             id (int): _description_.
-            states (List[str]): _description_.
+            states (List['Trigger']): _description_.
             randomize (bool): _description_. Defaults to False.
 
         Returns: None
         """
-        self.ctx.SetState(id, Array[String](states), randomize)
+        self.ctx.SetState(id, Array[Object](states), randomize)
 
     def set_time_scale(self, enable: bool=False, start_scale: float=0.0, end_scale: float=0.0, duration: float=0.0, interpolator: int=0) -> None:
         """SetTimeScale
