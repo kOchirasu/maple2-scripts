@@ -1,5 +1,6 @@
 """ trigger/52000064_qd/90000650.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class 시작대기(trigger_api.Trigger):
@@ -36,7 +37,7 @@ class 완료대기(trigger_api.Trigger):
 class 완료(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.create_item(spawn_ids=[9011,9012,9013,9014,9015])
-        self.set_event_ui(type=7, arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.Success, duration=3000, box_ids=['0'])
         self.set_achievement(trigger_id=199, type='trigger', achieve='ArrivedFlyBalloon')
 
     def on_tick(self) -> trigger_api.Trigger:

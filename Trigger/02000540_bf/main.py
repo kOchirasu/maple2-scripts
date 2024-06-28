@@ -1,6 +1,7 @@
 """ trigger/02000540_bf/main.xml """
 import trigger_api
 from System.Numerics import Vector3
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 # 플레이어 감지
@@ -48,7 +49,7 @@ class ready(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_portal(portal_id=2)
         self.set_effect(trigger_ids=[8000], visible=True)
-        self.set_event_ui(type=1, arg2='$02000540_BF__MAIN__0$', arg3='3000')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000540_BF__MAIN__0$', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.user_detected(box_ids=[708], job_code=0):
@@ -79,7 +80,7 @@ class 전투판으로이동하면2(trigger_api.Trigger):
 
 class 첫번째오브젝트조사(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$02000540_BF__MAIN__5$', arg3='3000')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000540_BF__MAIN__5$', duration=3000)
         self.set_interact_object(trigger_ids=[10003138], state=1)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -91,7 +92,7 @@ class 첫번째불켰음(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_effect(trigger_ids=[8001], visible=True)
         self.set_onetime_effect(id=101, enable=True, path='BG/Common/Eff_Com_Vibrate_Short.xml')
-        self.set_event_ui(type=1, arg2='$02000540_BF__MAIN__6$', arg3='3000')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000540_BF__MAIN__6$', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.user_detected(box_ids=[704], job_code=0):
@@ -121,7 +122,7 @@ class 두번째전투판으로이동하면(trigger_api.Trigger):
 
 class 두번째오브젝트조사(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$02000540_BF__MAIN__9$', arg3='3000')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000540_BF__MAIN__9$', duration=3000)
         self.set_interact_object(trigger_ids=[10003139], state=1)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -133,7 +134,7 @@ class 세번째전투판체크(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_effect(trigger_ids=[8002], visible=True)
         self.set_onetime_effect(id=102, enable=True, path='BG/Common/Eff_Com_Vibrate_Short.xml')
-        self.set_event_ui(type=1, arg2='$02000540_BF__MAIN__10$', arg3='3000')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000540_BF__MAIN__10$', duration=3000)
         self.set_effect(trigger_ids=[8005], visible=True)
         self.set_effect(trigger_ids=[8006], visible=True)
         self.set_portal(portal_id=6002, visible=True)
@@ -167,7 +168,7 @@ class 세번째전투판으로이동하면(trigger_api.Trigger):
 
 class 세번째오브젝트조사(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$02000540_BF__MAIN__13$', arg3='3000')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000540_BF__MAIN__13$', duration=3000)
         self.set_interact_object(trigger_ids=[10003140], state=1)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -179,7 +180,7 @@ class 네번째전투판체크(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_effect(trigger_ids=[8003], visible=True)
         self.set_onetime_effect(id=103, enable=True, path='BG/Common/Eff_Com_Vibrate_Short.xml')
-        self.set_event_ui(type=1, arg2='$02000540_BF__MAIN__14$', arg3='3000')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000540_BF__MAIN__14$', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.user_detected(box_ids=[706], job_code=0):
@@ -208,7 +209,7 @@ class 네번째전투판으로이동하면(trigger_api.Trigger):
 
 class 네번째오브젝트조사(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$02000540_BF__MAIN__16$', arg3='3000')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000540_BF__MAIN__16$', duration=3000)
         self.set_interact_object(trigger_ids=[10003141], state=1)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -220,7 +221,7 @@ class 보스전투판완성시키기(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_effect(trigger_ids=[8004], visible=True)
         self.set_onetime_effect(id=104, enable=True, path='BG/Common/Eff_Com_Vibrate_Short.xml')
-        self.set_event_ui(type=1, arg2='$02000540_BF__MAIN__17$', arg3='3000')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000540_BF__MAIN__17$', duration=3000)
         self.set_ambient_light(primary=Vector3(237,225,255))
         self.set_directional_light(diffuse_color=Vector3(232,212,127), specular_color=Vector3(140,140,140))
         self.set_portal(portal_id=6004, visible=True)

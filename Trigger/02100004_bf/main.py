@@ -1,5 +1,6 @@
 """ trigger/02100004_bf/main.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class 대기(trigger_api.Trigger):
@@ -16,7 +17,7 @@ class 대기(trigger_api.Trigger):
 
 class CheckUser10_GuildRaid(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_timer(timer_id='99', seconds=30, start_delay=1)
+        self.set_timer(timer_id='99', seconds=30, auto_remove=True)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.count_users(box_id=199) >= 10:
@@ -101,8 +102,8 @@ class 라운드1(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_effect(trigger_ids=[601])
         self.move_random_user(map_id=2100004, portal_id=99, box_id=101, count=1)
-        self.set_event_ui(type=0, arg2='1,10')
-        self.set_timer(timer_id='1', seconds=20, start_delay=1, interval=1)
+        self.set_event_ui_round(rounds=[1,10])
+        self.set_timer(timer_id='1', seconds=20, auto_remove=True, display=True)
 
     def on_tick(self) -> trigger_api.Trigger:
         if not self.npc_detected(box_id=199, spawn_ids=[0]):
@@ -128,9 +129,9 @@ class 라운드시작2(trigger_api.Trigger):
 class 라운드2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_effect(trigger_ids=[601])
-        self.set_timer(timer_id='2', seconds=20, start_delay=1, interval=1)
+        self.set_timer(timer_id='2', seconds=20, auto_remove=True, display=True)
         self.move_random_user(map_id=2100004, portal_id=99, box_id=101, count=1)
-        self.set_event_ui(type=0, arg2='2,10')
+        self.set_event_ui_round(rounds=[2,10])
 
     def on_tick(self) -> trigger_api.Trigger:
         if not self.npc_detected(box_id=199, spawn_ids=[0]):
@@ -156,9 +157,9 @@ class 라운드시작3(trigger_api.Trigger):
 class 라운드3(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_effect(trigger_ids=[601])
-        self.set_timer(timer_id='3', seconds=20, start_delay=1, interval=1)
+        self.set_timer(timer_id='3', seconds=20, auto_remove=True, display=True)
         self.move_random_user(map_id=2100004, portal_id=99, box_id=101, count=1)
-        self.set_event_ui(type=0, arg2='3,10')
+        self.set_event_ui_round(rounds=[3,10])
 
     def on_tick(self) -> trigger_api.Trigger:
         if not self.npc_detected(box_id=199, spawn_ids=[0]):
@@ -184,9 +185,9 @@ class 라운드시작4(trigger_api.Trigger):
 class 라운드4(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_effect(trigger_ids=[601])
-        self.set_timer(timer_id='4', seconds=20, start_delay=1, interval=1)
+        self.set_timer(timer_id='4', seconds=20, auto_remove=True, display=True)
         self.move_random_user(map_id=2100004, portal_id=99, box_id=101, count=1)
-        self.set_event_ui(type=0, arg2='4,10')
+        self.set_event_ui_round(rounds=[4,10])
 
     def on_tick(self) -> trigger_api.Trigger:
         if not self.npc_detected(box_id=199, spawn_ids=[0]):
@@ -212,9 +213,9 @@ class 라운드시작5(trigger_api.Trigger):
 class 라운드5(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_effect(trigger_ids=[601])
-        self.set_timer(timer_id='5', seconds=20, start_delay=1, interval=1)
+        self.set_timer(timer_id='5', seconds=20, auto_remove=True, display=True)
         self.move_random_user(map_id=2100004, portal_id=99, box_id=101, count=1)
-        self.set_event_ui(type=0, arg2='5,10')
+        self.set_event_ui_round(rounds=[5,10])
 
     def on_tick(self) -> trigger_api.Trigger:
         if not self.npc_detected(box_id=199, spawn_ids=[0]):
@@ -240,9 +241,9 @@ class 라운드시작6(trigger_api.Trigger):
 class 라운드6(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_effect(trigger_ids=[601])
-        self.set_timer(timer_id='6', seconds=20, start_delay=1, interval=1)
+        self.set_timer(timer_id='6', seconds=20, auto_remove=True, display=True)
         self.move_random_user(map_id=2100004, portal_id=99, box_id=101, count=1)
-        self.set_event_ui(type=0, arg2='6,10')
+        self.set_event_ui_round(rounds=[6,10])
 
     def on_tick(self) -> trigger_api.Trigger:
         if not self.npc_detected(box_id=199, spawn_ids=[0]):
@@ -268,9 +269,9 @@ class 라운드시작7(trigger_api.Trigger):
 class 라운드7(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_effect(trigger_ids=[601])
-        self.set_timer(timer_id='7', seconds=20, start_delay=1, interval=1)
+        self.set_timer(timer_id='7', seconds=20, auto_remove=True, display=True)
         self.move_random_user(map_id=2100004, portal_id=99, box_id=101, count=1)
-        self.set_event_ui(type=0, arg2='7,10')
+        self.set_event_ui_round(rounds=[7,10])
 
     def on_tick(self) -> trigger_api.Trigger:
         if not self.npc_detected(box_id=199, spawn_ids=[0]):
@@ -296,9 +297,9 @@ class 라운드시작8(trigger_api.Trigger):
 class 라운드8(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_effect(trigger_ids=[601])
-        self.set_timer(timer_id='8', seconds=20, start_delay=1, interval=1)
+        self.set_timer(timer_id='8', seconds=20, auto_remove=True, display=True)
         self.move_random_user(map_id=2100004, portal_id=99, box_id=101, count=1)
-        self.set_event_ui(type=0, arg2='8,10')
+        self.set_event_ui_round(rounds=[8,10])
 
     def on_tick(self) -> trigger_api.Trigger:
         if not self.npc_detected(box_id=199, spawn_ids=[0]):
@@ -324,9 +325,9 @@ class 라운드시작9(trigger_api.Trigger):
 class 라운드9(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_effect(trigger_ids=[601])
-        self.set_timer(timer_id='9', seconds=20, start_delay=1, interval=1)
+        self.set_timer(timer_id='9', seconds=20, auto_remove=True, display=True)
         self.move_random_user(map_id=2100004, portal_id=99, box_id=101, count=1)
-        self.set_event_ui(type=0, arg2='9,10')
+        self.set_event_ui_round(rounds=[9,10])
 
     def on_tick(self) -> trigger_api.Trigger:
         if not self.npc_detected(box_id=199, spawn_ids=[0]):
@@ -352,9 +353,9 @@ class 라운드시작10(trigger_api.Trigger):
 class 라운드10(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_effect(trigger_ids=[601])
-        self.set_timer(timer_id='10', seconds=150, start_delay=1, interval=1)
+        self.set_timer(timer_id='10', seconds=150, auto_remove=True, display=True)
         self.move_random_user(map_id=2100004, portal_id=99, box_id=101, count=1)
-        self.set_event_ui(type=0, arg2='10,10')
+        self.set_event_ui_round(rounds=[10,10])
         self.set_user_value(trigger_id=999995, key='LastRoundStart', value=1) # 트로피 전용
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -365,7 +366,7 @@ class 라운드10(trigger_api.Trigger):
             return 실패(self.ctx)
 
     def on_exit(self) -> None:
-        self.set_event_ui(type=0, arg2='0,0')
+        self.set_event_ui_round(rounds=[0,0])
         self.set_user_value(trigger_id=999995, key='LastRoundEnd', value=1) # 트로피 전용
 
 
@@ -374,7 +375,7 @@ class 성공(trigger_api.Trigger):
         self.set_user_value(trigger_id=999993, key='BattleEnd', value=1)
         self.destroy_monster(spawn_ids=[-1])
         self.set_achievement(trigger_id=9900, type='trigger', achieve='Find02100004')
-        self.set_event_ui(type=7, arg2='$02000251_BF__TRIGGER_01_01__0$', arg3='2000', arg4='0')
+        self.set_event_ui_script(type=BannerType.Success, script='$02000251_BF__TRIGGER_01_01__0$', duration=2000, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=2000):
@@ -384,7 +385,7 @@ class 성공(trigger_api.Trigger):
 
 class 실패(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=5, arg2='$02100004_BF__MAIN__11$', arg3='2000', arg4='0')
+        self.set_event_ui_script(type=BannerType.Fail, script='$02100004_BF__MAIN__11$', duration=2000, box_ids=['0'])
         self.set_user_value(trigger_id=999993, key='BattleEnd', value=1)
         self.destroy_monster(spawn_ids=[-1])
 

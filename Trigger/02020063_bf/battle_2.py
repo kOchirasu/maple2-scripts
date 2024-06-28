@@ -1,5 +1,6 @@
 """ trigger/02020063_bf/battle_2.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class 대기(trigger_api.Trigger):
@@ -78,7 +79,7 @@ class 추가대사_3(trigger_api.Trigger):
 
 class 추가대사_4(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$02020063_BF__BATTLE_2__3$', arg3='5000')
+        self.set_event_ui_script(type=BannerType.Text, script='$02020063_BF__BATTLE_2__3$', duration=5000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.user_value(key='Battle_2_Start') >= 0:

@@ -1,5 +1,6 @@
 """ trigger/02000498_bf/main.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class 대기(trigger_api.Trigger):
@@ -60,7 +61,7 @@ class 시작연출(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_effect(trigger_ids=[6011], visible=True)
         self.set_effect(trigger_ids=[6012], visible=True)
-        self.set_event_ui(type=1, arg2='다크스크림의 새로운 차원의 틈으로 진입 했습니다.', arg3='3000')
+        self.set_event_ui_script(type=BannerType.Text, script='다크스크림의 새로운 차원의 틈으로 진입 했습니다.', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.user_detected(box_ids=[100002]):
@@ -91,7 +92,7 @@ class 시작연출_4(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_effect(trigger_ids=[6021], visible=True)
         self.set_effect(trigger_ids=[6024], visible=True)
-        self.set_event_ui(type=1, arg2='더 가까이 다가가십시오.', arg3='3000')
+        self.set_event_ui_script(type=BannerType.Text, script='더 가까이 다가가십시오.', duration=3000)
         self.set_effect(trigger_ids=[500])
         self.set_effect(trigger_ids=[501])
 

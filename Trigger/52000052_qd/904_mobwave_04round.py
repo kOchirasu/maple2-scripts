@@ -1,5 +1,6 @@
 """ trigger/52000052_qd/904_mobwave_04round.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class Wait(trigger_api.Trigger):
@@ -22,7 +23,7 @@ class Ready(trigger_api.Trigger):
 class FirstWaveStart(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_effect(trigger_ids=[5000], visible=True) # 가이드 서머리 사운드 이펙트
-        self.set_event_ui(type=1, arg2='$52000052_QD__901_MOBWAVE_01ROUND__0$', arg3='6000', arg4='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$52000052_QD__901_MOBWAVE_01ROUND__0$', duration=6000, box_ids=['0'])
         self.set_user_value(key='WaveTime', value=1) # 웨이브 진행 순서 기억
         self.set_effect(trigger_ids=[5104], visible=True) # 04Round_ShadowApp
 
@@ -785,7 +786,7 @@ class NpcDownPenaltyStart(trigger_api.Trigger):
         self.destroy_monster(spawn_ids=[1004]) # 수호대상 틴차이
         self.spawn_monster(spawn_ids=[1104], auto_target=False) # 쓰러진 틴차이
         self.set_effect(trigger_ids=[5000], visible=True) # 가이드 서머리 사운드 이펙트
-        self.set_event_ui(type=1, arg2='$52000052_QD__901_MOBWAVE_01ROUND__1$', arg3='4000', arg4='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$52000052_QD__901_MOBWAVE_01ROUND__1$', duration=4000, box_ids=['0'])
         self.set_dialogue(type=1, spawn_id=1104, script='$52000052_QD__901_MOBWAVE_01ROUND__2$', time=4, arg5=4) # 틴차이
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -803,7 +804,7 @@ class ReturnToWave(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_user_value(key='PenaltyFinish', value=0)
         self.set_effect(trigger_ids=[5000], visible=True) # 가이드 서머리 사운드 이펙트
-        self.set_event_ui(type=1, arg2='$52000052_QD__901_MOBWAVE_01ROUND__3$', arg3='4000', arg4='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$52000052_QD__901_MOBWAVE_01ROUND__3$', duration=4000, box_ids=['0'])
         self.destroy_monster(spawn_ids=[1104]) # 쓰러진 틴차이
         self.spawn_monster(spawn_ids=[1004], auto_target=False) # 수호대상 틴차이
         self.remove_balloon_talk(spawn_id=1104)

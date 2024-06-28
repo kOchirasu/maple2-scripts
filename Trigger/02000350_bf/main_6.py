@@ -1,5 +1,6 @@
 """ trigger/02000350_bf/main_6.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class 대기(trigger_api.Trigger):
@@ -22,13 +23,13 @@ class 시작대기(trigger_api.Trigger):
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='3'):
-            self.set_event_ui(type=0, arg2='26,30,26')
+            self.set_event_ui_round(rounds=[26,30,26])
             return 라운드26(self.ctx)
 
 
 class 라운드26(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$02000350_BF__MAIN_6__0$', arg3='4000', arg4='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000350_BF__MAIN_6__0$', duration=4000, box_ids=['0'])
         self.dark_stream_spawn_monster(spawn_ids=[126001], score=2200000)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -46,7 +47,7 @@ class 라운드대기27(trigger_api.Trigger):
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='3'):
-            self.set_event_ui(type=0, arg2='27,30,26')
+            self.set_event_ui_round(rounds=[27,30,26])
             return 라운드27(self.ctx)
 
 
@@ -69,7 +70,7 @@ class 라운드대기28(trigger_api.Trigger):
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='3'):
-            self.set_event_ui(type=0, arg2='28,30,26')
+            self.set_event_ui_round(rounds=[28,30,26])
             return 라운드28(self.ctx)
 
 
@@ -92,7 +93,7 @@ class 라운드대기29(trigger_api.Trigger):
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='3'):
-            self.set_event_ui(type=0, arg2='29,30,26')
+            self.set_event_ui_round(rounds=[29,30,26])
             return 라운드29(self.ctx)
 
 
@@ -115,7 +116,7 @@ class 라운드대기30(trigger_api.Trigger):
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='3'):
-            self.set_event_ui(type=0, arg2='30,30,26')
+            self.set_event_ui_round(rounds=[30,30,26])
             return 라운드30(self.ctx)
 
 
@@ -136,8 +137,8 @@ class 라운드30(trigger_api.Trigger):
 
 class 성공(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=0, arg2='0,0')
-        self.set_event_ui(type=7, arg2='$02000350_BF__MAIN_6__1$', arg3='3000', arg4='0')
+        self.set_event_ui_round(rounds=[0,0])
+        self.set_event_ui_script(type=BannerType.Success, script='$02000350_BF__MAIN_6__1$', duration=3000, box_ids=['0'])
         self.set_timer(timer_id='5', seconds=5)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -147,7 +148,7 @@ class 성공(trigger_api.Trigger):
 
 class 포털생성(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$02000350_BF__MAIN_6__2$', arg3='2500', arg4='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000350_BF__MAIN_6__2$', duration=2500, box_ids=['0'])
         self.set_portal(portal_id=3, visible=True, enable=True, minimap_visible=True)
 
 

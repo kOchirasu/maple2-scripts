@@ -18,7 +18,7 @@ class 소환준비(trigger_api.Trigger):
 class 몬스터등장(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_user_value(trigger_id=900005, key='Lapenta_Attack_Guide', value=1)
-        # self.set_event_ui(type=1, arg2='$02020111_BF__SUMMON_01__0$', arg3='3000')
+        # self.set_event_ui_script(type=BannerType.Text, script='$02020111_BF__SUMMON_01__0$', duration=3000)
         self.spawn_monster(spawn_ids=[111,112,113,114])
 
     def on_tick(self) -> trigger_api.Trigger:

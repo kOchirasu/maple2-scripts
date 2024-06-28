@@ -107,7 +107,7 @@ class Round_06(trigger_api.Trigger):
 
 class End(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        # self.set_event_ui(type=1, arg2='cannon_projectile 종료', arg3='1000')
+        # self.set_event_ui_script(type=BannerType.Text, script='cannon_projectile 종료', duration=1000)
         self.destroy_monster(spawn_ids=[101,102,103,104,105,106,107,108,111,112,113,114,115,116,117,118])
 
 

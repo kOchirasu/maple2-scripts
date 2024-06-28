@@ -1,5 +1,6 @@
 """ trigger/03000036_bf/chest.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class 대기(trigger_api.Trigger):
@@ -71,7 +72,7 @@ class 차웨이브시작3(trigger_api.Trigger):
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.monster_dead(spawn_ids=[3001]):
-            self.set_event_ui(type=7, arg3='2000', arg4='0')
+            self.set_event_ui_script(type=BannerType.Success, duration=2000, box_ids=['0'])
             return 상자확률(self.ctx)
 
 

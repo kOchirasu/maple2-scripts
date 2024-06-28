@@ -1,5 +1,6 @@
 """ trigger/02000345_bf/main.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 #include dungeon_common/checkusercount.py
 from dungeon_common.checkusercount import *
@@ -140,7 +141,7 @@ class start_game(trigger_api.Trigger):
 
 class start_game_01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$02000345_BF__MAIN__11$', arg3='3000')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000345_BF__MAIN__11$', duration=3000)
         self.spawn_monster(spawn_ids=[189])
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -196,7 +197,7 @@ class start_game_04(trigger_api.Trigger):
 
 class start_game_05(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$02000345_BF__MAIN__18$', arg3='3000')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000345_BF__MAIN__18$', duration=3000)
         self.spawn_monster(spawn_ids=[201,202,203,204,205,206,207,208,209,210])
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -250,7 +251,7 @@ class 대기_03(trigger_api.Trigger):
 
 class 오브젝티브_01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$02000345_BF__MAIN1__2$', arg3='10000')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000345_BF__MAIN1__2$', duration=10000)
         self.set_timer(timer_id='10', seconds=10)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -304,7 +305,7 @@ class 시작_02(trigger_api.Trigger):
 class 클리어(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_portal(portal_id=4, visible=True, enable=True, minimap_visible=True) # 보상으로 연결되는 포탈 제어 (on)
-        self.set_event_ui(type=7, arg2='$02000345_BF__MAIN1__1$', arg3='3000')
+        self.set_event_ui_script(type=BannerType.Success, script='$02000345_BF__MAIN1__1$', duration=3000)
         self.set_mesh(trigger_ids=[6001,6002,6003,6004,6005,6006,6007,6008,6009], visible=True, fade=10.0) # 길 생성
         self.set_mesh(trigger_ids=[6010]) # 벽 삭제
         self.set_interact_object(trigger_ids=[10000791], state=1) # 보상 상태 (없음)

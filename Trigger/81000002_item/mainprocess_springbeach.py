@@ -1,5 +1,6 @@
 """ trigger/81000002_item/mainprocess_springbeach.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class 대기(trigger_api.Trigger):
@@ -26,7 +27,7 @@ class 준비멘트1(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='11', seconds=6)
         self.play_system_sound_in_box(sound='ME_Mainprocess_Springbeach_00')
-        self.set_event_ui(type=1, arg2='$61000007_ME__MAINPROCESS_SPRINGBEACH__0$', arg3='5000')
+        self.set_event_ui_script(type=BannerType.Text, script='$61000007_ME__MAINPROCESS_SPRINGBEACH__0$', duration=5000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='11'):
@@ -37,7 +38,7 @@ class 준비멘트2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='12', seconds=4)
         self.play_system_sound_in_box(sound='ME_Mainprocess_Springbeach_01')
-        self.set_event_ui(type=1, arg2='$61000007_ME__MAINPROCESS_SPRINGBEACH__1$', arg3='3000')
+        self.set_event_ui_script(type=BannerType.Text, script='$61000007_ME__MAINPROCESS_SPRINGBEACH__1$', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='12'):
@@ -64,7 +65,7 @@ class 시작멘트1(trigger_api.Trigger):
         self.start_mini_game(is_show_result_ui=False, box_id=301, round=5, game_name='UserMassive_Springbeach')
         self.set_mini_game_area_for_hack(box_id=301) # 해킹 보안용 시작 box 설정
         self.set_timer(timer_id='13', seconds=5)
-        self.set_event_ui(type=1, arg2='$61000007_ME__MAINPROCESS_SPRINGBEACH__2$', arg3='4000')
+        self.set_event_ui_script(type=BannerType.Text, script='$61000007_ME__MAINPROCESS_SPRINGBEACH__2$', duration=4000)
         # 로그에서 해당 이벤트에 참여한 사람을 체크하기 위한 명령어 / 1=미니게임 이름, 2=타겟박스 id
         self.play_system_sound_in_box(sound='ME_Mainprocess_Springbeach_02')
         # 트로피 / 1=타겟박스 id, 2=achieveType, 3=code에 들어갈 값
@@ -81,7 +82,7 @@ class 시작멘트1(trigger_api.Trigger):
 class 시작멘트2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='14', seconds=5)
-        self.set_event_ui(type=1, arg2='$61000007_ME__MAINPROCESS_SPRINGBEACH__3$', arg3='5500')
+        self.set_event_ui_script(type=BannerType.Text, script='$61000007_ME__MAINPROCESS_SPRINGBEACH__3$', duration=5500)
         self.play_system_sound_in_box(sound='ME_Mainprocess_Springbeach_03')
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -93,7 +94,7 @@ class 시작멘트3(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.play_system_sound_in_box(sound='ME_Mainprocess_Springbeach_04')
         self.set_timer(timer_id='15', seconds=5)
-        self.set_event_ui(type=1, arg2='$61000007_ME__MAINPROCESS_SPRINGBEACH__4$', arg3='5500')
+        self.set_event_ui_script(type=BannerType.Text, script='$61000007_ME__MAINPROCESS_SPRINGBEACH__4$', duration=5500)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='15'):
@@ -106,7 +107,7 @@ class 라운드1(trigger_api.Trigger):
         self.start_mini_game_round(box_id=301, round=1)
         self.set_timer(timer_id='16', seconds=4)
         self.play_system_sound_in_box(sound='ME_Mainprocess_Springbeach_05')
-        self.set_event_ui(type=1, arg2='$61000007_ME__MAINPROCESS_SPRINGBEACH__5$', arg3='3000')
+        self.set_event_ui_script(type=BannerType.Text, script='$61000007_ME__MAINPROCESS_SPRINGBEACH__5$', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='16'):
@@ -116,7 +117,7 @@ class 라운드1(trigger_api.Trigger):
 class 게임시작1(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='17', seconds=6)
-        self.set_event_ui(type=0, arg2='1,5')
+        self.set_event_ui_round(rounds=[1,5])
         self.show_count_ui(text='$61000007_ME__MAINPROCESS_SPRINGBEACH__6$', stage=1, count=5)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -305,7 +306,7 @@ class 라운드2(trigger_api.Trigger):
         self.start_mini_game_round(box_id=301, round=2)
         self.set_timer(timer_id='21', seconds=4)
         self.play_system_sound_in_box(sound='ME_Mainprocess_Springbeach_07')
-        self.set_event_ui(type=1, arg2='$61000007_ME__MAINPROCESS_SPRINGBEACH__7$', arg3='3000')
+        self.set_event_ui_script(type=BannerType.Text, script='$61000007_ME__MAINPROCESS_SPRINGBEACH__7$', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='21'):
@@ -315,7 +316,7 @@ class 라운드2(trigger_api.Trigger):
 class 게임시작2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='22', seconds=6)
-        self.set_event_ui(type=0, arg2='2,5')
+        self.set_event_ui_round(rounds=[2,5])
         self.show_count_ui(text='$61000007_ME__MAINPROCESS_SPRINGBEACH__8$', stage=2, count=5)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -504,7 +505,7 @@ class 라운드3(trigger_api.Trigger):
         self.start_mini_game_round(box_id=301, round=3)
         self.set_timer(timer_id='25', seconds=4)
         self.play_system_sound_in_box(sound='ME_Mainprocess_Springbeach_09')
-        self.set_event_ui(type=1, arg2='$61000007_ME__MAINPROCESS_SPRINGBEACH__9$', arg3='3000')
+        self.set_event_ui_script(type=BannerType.Text, script='$61000007_ME__MAINPROCESS_SPRINGBEACH__9$', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='25'):
@@ -514,7 +515,7 @@ class 라운드3(trigger_api.Trigger):
 class 게임시작3(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='26', seconds=6)
-        self.set_event_ui(type=0, arg2='3,5')
+        self.set_event_ui_round(rounds=[3,5])
         self.show_count_ui(text='$61000007_ME__MAINPROCESS_SPRINGBEACH__10$', stage=3, count=5)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -703,7 +704,7 @@ class 라운드4(trigger_api.Trigger):
         self.start_mini_game_round(box_id=301, round=4)
         self.set_timer(timer_id='29', seconds=4)
         self.play_system_sound_in_box(sound='ME_Mainprocess_Springbeach_11')
-        self.set_event_ui(type=1, arg2='$61000007_ME__MAINPROCESS_SPRINGBEACH__11$', arg3='3000')
+        self.set_event_ui_script(type=BannerType.Text, script='$61000007_ME__MAINPROCESS_SPRINGBEACH__11$', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='29'):
@@ -713,7 +714,7 @@ class 라운드4(trigger_api.Trigger):
 class 게임시작4(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='30', seconds=6)
-        self.set_event_ui(type=0, arg2='4,5')
+        self.set_event_ui_round(rounds=[4,5])
         self.show_count_ui(text='$61000007_ME__MAINPROCESS_SPRINGBEACH__12$', stage=4, count=5)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -902,7 +903,7 @@ class 라운드5(trigger_api.Trigger):
         self.start_mini_game_round(box_id=301, round=5)
         self.set_timer(timer_id='33', seconds=4)
         self.play_system_sound_in_box(sound='ME_Mainprocess_Springbeach_13')
-        self.set_event_ui(type=1, arg2='$61000007_ME__MAINPROCESS_SPRINGBEACH__13$', arg3='3000')
+        self.set_event_ui_script(type=BannerType.Text, script='$61000007_ME__MAINPROCESS_SPRINGBEACH__13$', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='33'):
@@ -912,7 +913,7 @@ class 라운드5(trigger_api.Trigger):
 class 게임시작5(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='34', seconds=6)
-        self.set_event_ui(type=0, arg2='5,5')
+        self.set_event_ui_round(rounds=[5,5])
         self.show_count_ui(text='$61000007_ME__MAINPROCESS_SPRINGBEACH__14$', stage=5, count=5)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -1068,8 +1069,8 @@ class 우승자카메라연출(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.mini_game_camera_direction(box_id=301, camera_id=9001)
         self.play_system_sound_in_box(box_ids=[301], sound='ME_Mainprocess_Springbeach_15')
-        self.set_event_ui(type=3, arg2='$61000007_ME__MAINPROCESS_SPRINGBEACH__15$', arg3='5000', arg4='301')
-        self.set_event_ui(type=4, arg2='$61000007_ME__MAINPROCESS_SPRINGBEACH__16$', arg3='5000', arg4='303,304,305,306')
+        self.set_event_ui_script(type=BannerType.Winner, script='$61000007_ME__MAINPROCESS_SPRINGBEACH__15$', duration=5000, box_ids=['301'])
+        self.set_event_ui_script(type=BannerType.Lose, script='$61000007_ME__MAINPROCESS_SPRINGBEACH__16$', duration=5000, box_ids=['303','304','305','306'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=6000):
@@ -1079,8 +1080,8 @@ class 우승자카메라연출(trigger_api.Trigger):
 
 class 보상단계(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        # self.set_event_ui(type=3, arg2='$61000007_ME__MAINPROCESS_SPRINGBEACH__17$', arg3='5000', arg4='301')
-        # self.set_event_ui(type=4, arg2='$61000007_ME__MAINPROCESS_SPRINGBEACH__18$', arg3='5000', arg4='303,304,305,306')
+        # self.set_event_ui_script(type=BannerType.Winner, script='$61000007_ME__MAINPROCESS_SPRINGBEACH__17$', duration=5000, box_ids=['301'])
+        # self.set_event_ui_script(type=BannerType.Lose, script='$61000007_ME__MAINPROCESS_SPRINGBEACH__18$', duration=5000, box_ids=['303','304','305','306'])
         self.add_buff(box_ids=[301], skill_id=70000132, level=1)
         self.add_buff(box_ids=[301], skill_id=70000019, level=1) # 에레브의 축복
         # 로그에서 해당 이벤트에서 우승한 사람을 체크하기 위한 명령어 / 1=미니게임 이름, 2=타겟박스 id
@@ -1109,7 +1110,7 @@ class 모두탈락(trigger_api.Trigger):
 class 탈락멘트(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='40', seconds=6)
-        self.set_event_ui(type=5, arg2='$61000007_ME__MAINPROCESS_SPRINGBEACH__21$', arg3='5000')
+        self.set_event_ui_script(type=BannerType.Fail, script='$61000007_ME__MAINPROCESS_SPRINGBEACH__21$', duration=5000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='40'):
@@ -1124,7 +1125,7 @@ class 다리등장(trigger_api.Trigger):
         self.set_mesh(trigger_ids=[601,602,603,604,605,606,607,608,609,610,611,612,613,614,615,616,617,618,619,620,621,622,623,624], visible=True)
         self.set_mesh(trigger_ids=[651,652,653,654,655,656,657,658,659,660,661,662,663,664,665,666,667,668,669,670,671,672,673,674,675,676,677])
         self.set_mesh(trigger_ids=[701,702,703,704,705,706,707,708,709,710,711,712,713,714,715,716,717,718,719,720,721,722,723,724,725,726,727,728,729,730,731,732,733,734,735,736,737,738,739,740,741,742,743,744,745,746,747,748,749,750,751,752,753,754,755,756,757,758,759,760,761,762,763,764,765,766,767,768,769,770,771,772,773,774,775,776,777,778,779,780,781,782,783,784,785,786,787,788,789,790,791,792,793,794,795,796,797,798,799,800,801,802,803,804,805,806,807,808,809,810,811,812,813,814,815,816,817,818,819,820,821,822,823,824,825,826,827,828,829,830,831,832])
-        self.set_event_ui(type=1, arg2='$61000007_ME__MAINPROCESS_SPRINGBEACH__22$', arg3='10000')
+        self.set_event_ui_script(type=BannerType.Text, script='$61000007_ME__MAINPROCESS_SPRINGBEACH__22$', duration=10000)
         self.play_system_sound_in_box(sound='ME_Mainprocess_Springbeach_22')
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -1134,7 +1135,7 @@ class 다리등장(trigger_api.Trigger):
 
 class 유저이동(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$61000007_ME__MAINPROCESS_SPRINGBEACH__23$', arg3='5000', arg4='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$61000007_ME__MAINPROCESS_SPRINGBEACH__23$', duration=5000, box_ids=['0'])
         self.play_system_sound_in_box(sound='ME_Mainprocess_Springbeach_23')
 
     def on_tick(self) -> trigger_api.Trigger:

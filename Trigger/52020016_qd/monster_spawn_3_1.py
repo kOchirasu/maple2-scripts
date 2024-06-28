@@ -175,7 +175,7 @@ class 마지막전투_2(trigger_api.Trigger):
 """
 class 타이머시작(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_timer(timer_id='115', seconds=30, start_delay=1)
+        self.set_timer(timer_id='115', seconds=30, auto_remove=True)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=15000):

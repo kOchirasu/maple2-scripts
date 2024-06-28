@@ -1,5 +1,6 @@
 """ trigger/02100000_bf/main.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class Wait(trigger_api.Trigger):
@@ -13,7 +14,7 @@ class Wait(trigger_api.Trigger):
 
 class CheckUser10_GuildRaid(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_timer(timer_id='1', seconds=30, start_delay=1) # 최대 30초 대기
+        self.set_timer(timer_id='1', seconds=30, auto_remove=True) # 최대 30초 대기
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.count_users(box_id=101) >= 10:
@@ -194,7 +195,7 @@ class 대기(trigger_api.Trigger):
 
 class 버프_2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$02100000_BF__MAIN__2$', arg3='3000')
+        self.set_event_ui_script(type=BannerType.Text, script='$02100000_BF__MAIN__2$', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.user_detected(box_ids=[105]):
@@ -203,7 +204,7 @@ class 버프_2(trigger_api.Trigger):
 
 class 바리케이트(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$02100000_BF__MAIN__3$', arg3='3000')
+        self.set_event_ui_script(type=BannerType.Text, script='$02100000_BF__MAIN__3$', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=30000):

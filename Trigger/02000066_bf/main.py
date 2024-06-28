@@ -1,6 +1,6 @@
 """ trigger/02000066_bf/main.xml """
 import trigger_api
-from Maple2.Server.Game.Scripting.Trigger import Align
+from Maple2.Server.Game.Scripting.Trigger import Align, BannerType
 
 #include dungeon_common/checkusercount.py
 from dungeon_common.checkusercount import *
@@ -105,7 +105,7 @@ class 차어나운스03_1(trigger_api.Trigger):
         self.select_camera(trigger_id=300, enable=False)
         self.set_cinematic_ui(type=0)
         self.set_cinematic_ui(type=2)
-        self.set_event_ui(type=0, arg2='1,3')
+        self.set_event_ui_round(rounds=[1,3])
         self.show_count_ui(text='$02000066_BF__MAIN__6$', stage=1, count=5)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -115,7 +115,7 @@ class 차어나운스03_1(trigger_api.Trigger):
 
 class 차웨이브1(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_timer(timer_id='120', seconds=120, interval=1)
+        self.set_timer(timer_id='120', seconds=120, display=True)
         self.spawn_monster(spawn_ids=[900], auto_target=False)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -171,7 +171,7 @@ class 차웨이브1(trigger_api.Trigger):
 class 차웨이브실패1(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_effect(trigger_ids=[613], visible=True)
-        self.set_event_ui(type=5, arg2='$02000066_BF__MAIN__7$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.Fail, script='$02000066_BF__MAIN__7$', duration=3000, box_ids=['0'])
         self.destroy_monster(spawn_ids=[900])
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -212,7 +212,7 @@ class 차어나운스01_2(trigger_api.Trigger):
 
 class 차어나운스02_2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=0, arg2='2,3')
+        self.set_event_ui_round(rounds=[2,3])
         self.show_count_ui(text='$02000066_BF__MAIN__10$', stage=2, count=5)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -224,7 +224,7 @@ class 차어나운스02_2(trigger_api.Trigger):
 
 class 차웨이브2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_timer(timer_id='120', seconds=120, interval=1)
+        self.set_timer(timer_id='120', seconds=120, display=True)
         self.spawn_monster(spawn_ids=[901], auto_target=False)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -279,7 +279,7 @@ class 차웨이브2(trigger_api.Trigger):
 
 class 차웨이브실패2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=5, arg2='$02000066_BF__MAIN__11$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.Fail, script='$02000066_BF__MAIN__11$', duration=3000, box_ids=['0'])
         self.destroy_monster(spawn_ids=[901])
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -320,7 +320,7 @@ class 차어나운스01_3(trigger_api.Trigger):
 
 class 차어나운스02_3(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=0, arg2='3,3')
+        self.set_event_ui_round(rounds=[3,3])
         self.show_count_ui(text='$02000066_BF__MAIN__14$', stage=3, count=5)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -332,7 +332,7 @@ class 차어나운스02_3(trigger_api.Trigger):
 
 class 차웨이브3(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_timer(timer_id='120', seconds=120, interval=1)
+        self.set_timer(timer_id='120', seconds=120, display=True)
         self.spawn_monster(spawn_ids=[902], auto_target=False)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -387,7 +387,7 @@ class 차웨이브3(trigger_api.Trigger):
 
 class 차웨이브실패3(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=5, arg2='$02000066_BF__MAIN__15$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.Fail, script='$02000066_BF__MAIN__15$', duration=3000, box_ids=['0'])
         self.destroy_monster(spawn_ids=[902])
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -397,8 +397,8 @@ class 차웨이브실패3(trigger_api.Trigger):
 
 class 차웨이브성공3(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=7, arg2='$02000066_BF__MAIN__33$', arg3='3000', arg4='0')
-        self.set_event_ui(type=0, arg2='0,0')
+        self.set_event_ui_script(type=BannerType.Success, script='$02000066_BF__MAIN__33$', duration=3000, box_ids=['0'])
+        self.set_event_ui_round(rounds=[0,0])
         self.set_effect(trigger_ids=[6003], visible=True)
         self.show_guide_summary(entity_id=20000662, text_id=20000662)
         self.play_system_sound_in_box(sound='System_ShowGuideSummary_01')
@@ -521,11 +521,11 @@ class 완료(trigger_api.Trigger):
 class 분기점01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_effect(trigger_ids=[612], visible=True)
-        self.set_event_ui(type=1, arg2='$02000066_BF__MAIN__22$', arg3='10000')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000066_BF__MAIN__22$', duration=10000)
         self.spawn_monster(spawn_ids=[903], auto_target=False)
         self.set_portal(portal_id=1, visible=True, enable=True, minimap_visible=True)
         self.set_portal(portal_id=2, visible=True, enable=True, minimap_visible=True)
-        self.set_timer(timer_id='60', seconds=60, interval=1)
+        self.set_timer(timer_id='60', seconds=60, display=True)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='60'):
@@ -538,8 +538,8 @@ class 분기점01(trigger_api.Trigger):
 """
 class 차어나운스01_4(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=0, arg2='4,6')
-        self.set_event_ui(type=2, arg2='$02000066_BF__MAIN__23$', arg3='4,5')
+        self.set_event_ui_round(rounds=[4,6])
+        self.set_event_ui_countdown(script='$02000066_BF__MAIN__23$', round_countdown=[4,5])
         self.set_timer(timer_id='6', seconds=6)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -550,7 +550,7 @@ class 차어나운스01_4(trigger_api.Trigger):
 """
 class 차웨이브4(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_timer(timer_id='120', seconds=120, interval=1)
+        self.set_timer(timer_id='120', seconds=120, display=True)
         self.spawn_monster(spawn_ids=[99], auto_target=False)
         self.spawn_monster(spawn_ids=[904], auto_target=False)
 
@@ -564,7 +564,7 @@ class 차웨이브4(trigger_api.Trigger):
 """
 class 차웨이브실패4(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=5, arg2='$02000066_BF__MAIN__24$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.Fail, script='$02000066_BF__MAIN__24$', duration=3000, box_ids=['0'])
         self.set_timer(timer_id='3', seconds=3)
         self.destroy_monster(spawn_ids=[904])
 
@@ -593,7 +593,7 @@ class 차웨이브성공4(trigger_api.Trigger):
 """
 class 차어나운스01_5(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$02000066_BF__MAIN__26$', arg3='7000', arg4='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000066_BF__MAIN__26$', duration=7000, box_ids=['0'])
         self.set_timer(timer_id='10', seconds=10)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -606,8 +606,8 @@ class 차어나운스01_5(trigger_api.Trigger):
 """
 class 차어나운스02_5(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=0, arg2='5,6')
-        self.set_event_ui(type=2, arg2='$02000066_BF__MAIN__27$', arg3='5,5')
+        self.set_event_ui_round(rounds=[5,6])
+        self.set_event_ui_countdown(script='$02000066_BF__MAIN__27$', round_countdown=[5,5])
         self.set_timer(timer_id='6', seconds=6)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -618,7 +618,7 @@ class 차어나운스02_5(trigger_api.Trigger):
 """
 class 차웨이브5(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_timer(timer_id='120', seconds=120, interval=1)
+        self.set_timer(timer_id='120', seconds=120, display=True)
         self.spawn_monster(spawn_ids=[905], auto_target=False)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -631,7 +631,7 @@ class 차웨이브5(trigger_api.Trigger):
 """
 class 차웨이브실패5(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=5, arg2='$02000066_BF__MAIN__28$', arg3='5000', arg4='0')
+        self.set_event_ui_script(type=BannerType.Fail, script='$02000066_BF__MAIN__28$', duration=5000, box_ids=['0'])
         self.set_timer(timer_id='3', seconds=3)
         self.destroy_monster(spawn_ids=[905])
 
@@ -660,7 +660,7 @@ class 차웨이브성공5(trigger_api.Trigger):
 """
 class 차어나운스01_6(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$02000066_BF__MAIN__30$', arg3='7000', arg4='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000066_BF__MAIN__30$', duration=7000, box_ids=['0'])
         self.set_timer(timer_id='10', seconds=10)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -673,8 +673,8 @@ class 차어나운스01_6(trigger_api.Trigger):
 """
 class 차어나운스02_6(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=0, arg2='6,6')
-        self.set_event_ui(type=2, arg2='$02000066_BF__MAIN__31$', arg3='6,5')
+        self.set_event_ui_round(rounds=[6,6])
+        self.set_event_ui_countdown(script='$02000066_BF__MAIN__31$', round_countdown=[6,5])
         self.set_timer(timer_id='6', seconds=6)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -687,7 +687,7 @@ class 차어나운스02_6(trigger_api.Trigger):
 """
 class 차웨이브6(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_timer(timer_id='120', seconds=120, interval=1)
+        self.set_timer(timer_id='120', seconds=120, display=True)
         self.spawn_monster(spawn_ids=[906], auto_target=False)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -743,7 +743,7 @@ class 차웨이브6(trigger_api.Trigger):
 """
 class 차웨이브실패6(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=5, arg2='$02000066_BF__MAIN__32$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.Fail, script='$02000066_BF__MAIN__32$', duration=3000, box_ids=['0'])
         self.set_timer(timer_id='3', seconds=3)
         self.destroy_monster(spawn_ids=[906])
 
@@ -867,11 +867,11 @@ class 차승리연출종료6(trigger_api.Trigger):
 class 분기점03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_effect(trigger_ids=[612], visible=True)
-        self.set_event_ui(type=1, arg2='$02000066_BF__MAIN__39$', arg3='10000')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000066_BF__MAIN__39$', duration=10000)
         self.spawn_monster(spawn_ids=[907], auto_target=False)
         self.set_portal(portal_id=1, visible=True, enable=True, minimap_visible=True)
         self.set_portal(portal_id=2, visible=True, enable=True, minimap_visible=True)
-        self.set_timer(timer_id='60', seconds=60, interval=1)
+        self.set_timer(timer_id='60', seconds=60, display=True)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='60'):

@@ -20,7 +20,7 @@ class 전투_1라운드세팅(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.dungeon_reset_time(seconds=300)
         self.show_round_ui(round=1, duration=3000)
-        self.set_event_ui(type=0, arg2='1,5')
+        self.set_event_ui_round(rounds=[1,5])
         self.set_npc_emotion_loop(spawn_id=101, sequence_name='Talk_B', duration=4800.0)
         self.side_npc_talk(npc_id=24100001, illust='Neirin_normal', duration=5000, script='$02020019_BF__02020019_battle__0$', voice='ko/Npc/00002116')
 
@@ -59,7 +59,7 @@ class 전투_1라운드종료(trigger_api.Trigger):
 class 전투_2라운드세팅(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.show_round_ui(round=2, duration=3000)
-        self.set_event_ui(type=0, arg2='2,5')
+        self.set_event_ui_round(rounds=[2,5])
         self.set_npc_emotion_loop(spawn_id=101, sequence_name='Talk_B', duration=4800.0)
         self.side_npc_talk(npc_id=24100001, illust='Neirin_normal', duration=5000, script='$02020019_BF__02020019_battle__1$', voice='ko/Npc/00002121')
 
@@ -102,7 +102,7 @@ class 전투_2라운드종료(trigger_api.Trigger):
 class 전투_3라운드세팅(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.show_round_ui(round=3, duration=3000)
-        self.set_event_ui(type=0, arg2='3,5')
+        self.set_event_ui_round(rounds=[3,5])
         self.set_npc_emotion_loop(spawn_id=101, sequence_name='Talk_B', duration=4800.0)
         self.side_npc_talk(npc_id=24100001, illust='Neirin_normal', duration=5000, script='$02020019_BF__02020019_battle__2$', voice='ko/Npc/00002241')
 
@@ -158,7 +158,7 @@ class 전투_3라운드종료(trigger_api.Trigger):
 class 전투_4라운드세팅(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.show_round_ui(round=4, duration=3000)
-        self.set_event_ui(type=0, arg2='4,5')
+        self.set_event_ui_round(rounds=[4,5])
         self.set_npc_emotion_loop(spawn_id=101, sequence_name='Talk_B', duration=4800.0)
         self.side_npc_talk(npc_id=24100001, illust='Neirin_normal', duration=5000, script='$02020019_BF__02020019_battle__4$', voice='ko/Npc/00002242')
 
@@ -217,7 +217,7 @@ class 전투_4라운드종료(trigger_api.Trigger):
 class 전투_5라운드세팅(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.show_round_ui(round=5, duration=3000)
-        self.set_event_ui(type=0, arg2='5,5')
+        self.set_event_ui_round(rounds=[5,5])
         self.set_npc_emotion_loop(spawn_id=101, sequence_name='Talk_B', duration=4800.0)
         self.side_npc_talk(npc_id=24100001, illust='Neirin_normal', duration=5000, script='$02020019_BF__02020019_battle__7$', voice='ko/Npc/00002122')
 
@@ -282,7 +282,7 @@ class 전투_종료(trigger_api.Trigger):
         self.dungeon_set_end_time()
         self.dungeon_close_timer()
         self.set_ai_extra_data(key='Autofire', value=0) # <대포 쏘기 중지 AI에 신호쏴주기>
-        self.set_event_ui(type=0, arg2='0,0')
+        self.set_event_ui_round(rounds=[0,0])
         self.init_npc_rotation(spawn_ids=[102,103])
         self.destroy_monster(spawn_ids=[201])
         self.destroy_monster(spawn_ids=[211])

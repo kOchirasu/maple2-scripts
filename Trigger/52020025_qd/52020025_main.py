@@ -1,5 +1,6 @@
 """ trigger/52020025_qd/52020025_main.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class 감지(trigger_api.Trigger):
@@ -87,7 +88,7 @@ class 달리기시작(trigger_api.Trigger):
         self.set_local_camera(camera_id=511, enable=True)
         self.move_user_path(patrol_name='MS2PatrolData_PCrun')
         self.move_npc(spawn_id=102, patrol_name='MS2PatrolData_Bossrun')
-        self.set_event_ui(type=1, arg2='무서운 몬스터로부터 도망치세요', arg3='4000', arg4='0')
+        self.set_event_ui_script(type=BannerType.Text, script='무서운 몬스터로부터 도망치세요', duration=4000, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.user_detected(box_ids=[902]):

@@ -10,7 +10,7 @@ class idle(trigger_api.Trigger):
 
 class respawn_timer1(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_timer(timer_id='respawntimer1', seconds=120, start_delay=1)
+        self.set_timer(timer_id='respawntimer1', seconds=120, auto_remove=True)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.user_value(key='respawn') >= 2:
@@ -33,7 +33,7 @@ class respawn1(trigger_api.Trigger):
 
 class respawn_timer2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_timer(timer_id='respawntimer2', seconds=120, start_delay=1)
+        self.set_timer(timer_id='respawntimer2', seconds=120, auto_remove=True)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.user_value(key='respawn') >= 2:
@@ -56,7 +56,7 @@ class respawn2(trigger_api.Trigger):
 
 class respawn_timer3(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_timer(timer_id='respawntimer3', seconds=120, start_delay=1)
+        self.set_timer(timer_id='respawntimer3', seconds=120, auto_remove=True)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.user_value(key='respawn') >= 2:
@@ -79,7 +79,7 @@ class respawn3(trigger_api.Trigger):
 
 class respawn_timer4(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_timer(timer_id='respawntimer4', seconds=120, start_delay=1)
+        self.set_timer(timer_id='respawntimer4', seconds=120, auto_remove=True)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.user_value(key='respawn') >= 2:
@@ -102,7 +102,7 @@ class respawn4(trigger_api.Trigger):
 
 class respawn_timer5(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_timer(timer_id='respawntimer5', seconds=120, start_delay=1)
+        self.set_timer(timer_id='respawntimer5', seconds=120, auto_remove=True)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.user_value(key='respawn') >= 2:

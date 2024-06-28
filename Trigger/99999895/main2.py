@@ -1,5 +1,6 @@
 """ trigger/99999895/main2.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class 대기(trigger_api.Trigger):
@@ -16,7 +17,7 @@ class 딜레이(trigger_api.Trigger):
 
 class 몬스터스폰대기1(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='첫 번째 상대가 곧 출현합니다. 전투 준비를 하세요!!', arg3='3000')
+        self.set_event_ui_script(type=BannerType.Text, script='첫 번째 상대가 곧 출현합니다. 전투 준비를 하세요!!', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -25,7 +26,7 @@ class 몬스터스폰대기1(trigger_api.Trigger):
 
 class 카운트1_1(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='3', arg3='1000')
+        self.set_event_ui_script(type=BannerType.Text, script='3', duration=1000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=1000):
@@ -34,7 +35,7 @@ class 카운트1_1(trigger_api.Trigger):
 
 class 카운트1_2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='2', arg3='1000')
+        self.set_event_ui_script(type=BannerType.Text, script='2', duration=1000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=1000):
@@ -43,7 +44,7 @@ class 카운트1_2(trigger_api.Trigger):
 
 class 카운트1_3(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='1', arg3='1000')
+        self.set_event_ui_script(type=BannerType.Text, script='1', duration=1000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=2000):
@@ -52,7 +53,7 @@ class 카운트1_3(trigger_api.Trigger):
 
 class 몬스터스폰1(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='시작!!', arg3='1000')
+        self.set_event_ui_script(type=BannerType.Text, script='시작!!', duration=1000)
         self.spawn_monster(spawn_ids=[201], auto_target=False)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -72,7 +73,7 @@ class 스폰대사1(trigger_api.Trigger):
 
 class 몬스터스폰대기2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='첫 전투에서 승리하셨습니다. 잠시만 기다려주세요 다음전투가 기다리고 있습니다!!', arg3='5000')
+        self.set_event_ui_script(type=BannerType.Text, script='첫 전투에서 승리하셨습니다. 잠시만 기다려주세요 다음전투가 기다리고 있습니다!!', duration=5000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):
@@ -81,7 +82,7 @@ class 몬스터스폰대기2(trigger_api.Trigger):
 
 class 카운트2_1(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='3', arg3='1000')
+        self.set_event_ui_script(type=BannerType.Text, script='3', duration=1000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=1000):
@@ -90,7 +91,7 @@ class 카운트2_1(trigger_api.Trigger):
 
 class 카운트2_2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='2', arg3='1000')
+        self.set_event_ui_script(type=BannerType.Text, script='2', duration=1000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=1000):
@@ -99,7 +100,7 @@ class 카운트2_2(trigger_api.Trigger):
 
 class 카운트2_3(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='1', arg3='1000')
+        self.set_event_ui_script(type=BannerType.Text, script='1', duration=1000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=2000):
@@ -108,7 +109,7 @@ class 카운트2_3(trigger_api.Trigger):
 
 class 몬스터스폰2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='시작!!', arg3='1000')
+        self.set_event_ui_script(type=BannerType.Text, script='시작!!', duration=1000)
         self.spawn_monster(spawn_ids=[202], auto_target=False)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -128,7 +129,7 @@ class 스폰대사2(trigger_api.Trigger):
 
 class 몬스터스폰대기3(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='두 번째 전투에서 승리하셨습니다. 잠시만 기다려주세요 마지막 전투가 기다리고 있습니다!!', arg3='5000')
+        self.set_event_ui_script(type=BannerType.Text, script='두 번째 전투에서 승리하셨습니다. 잠시만 기다려주세요 마지막 전투가 기다리고 있습니다!!', duration=5000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):
@@ -137,7 +138,7 @@ class 몬스터스폰대기3(trigger_api.Trigger):
 
 class 카운트3_1(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='3', arg3='1000')
+        self.set_event_ui_script(type=BannerType.Text, script='3', duration=1000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=1000):
@@ -146,7 +147,7 @@ class 카운트3_1(trigger_api.Trigger):
 
 class 카운트3_2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='2', arg3='1000')
+        self.set_event_ui_script(type=BannerType.Text, script='2', duration=1000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=1000):
@@ -155,7 +156,7 @@ class 카운트3_2(trigger_api.Trigger):
 
 class 카운트3_3(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='1', arg3='1000')
+        self.set_event_ui_script(type=BannerType.Text, script='1', duration=1000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=2000):
@@ -164,7 +165,7 @@ class 카운트3_3(trigger_api.Trigger):
 
 class 몬스터스폰3(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='시작!!', arg3='1000')
+        self.set_event_ui_script(type=BannerType.Text, script='시작!!', duration=1000)
         self.spawn_monster(spawn_ids=[203], auto_target=False)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -190,7 +191,7 @@ class 대사(trigger_api.Trigger):
 
 class 종료(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=7, arg2='SUCCESS', arg3='3000')
+        self.set_event_ui_script(type=BannerType.Success, script='SUCCESS', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -199,7 +200,7 @@ class 종료(trigger_api.Trigger):
 
 class 안내(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='곧 다시 전투가 시작됩니다. 준비하세요!!', arg3='3000')
+        self.set_event_ui_script(type=BannerType.Text, script='곧 다시 전투가 시작됩니다. 준비하세요!!', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):

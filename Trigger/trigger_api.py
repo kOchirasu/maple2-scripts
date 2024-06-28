@@ -3,9 +3,9 @@ clr.AddReference("System.Numerics")
 clr.AddReference("Maple2.Server.Game")
 
 from typing import List
-from System import Array, Int32, String
+from System import Array, Int32, String, Object
 from System.Numerics import Vector3
-from Maple2.Server.Game.Scripting.Trigger import Align, FieldGame, Locale, Weather
+from Maple2.Server.Game.Scripting.Trigger import Align, FieldGame, Locale, Weather, BannerType
 
 
 class Trigger:
@@ -1408,18 +1408,42 @@ class Trigger:
         """
         self.ctx.SetEffect(Array[Int32](trigger_ids), visible, start_delay, interval)
 
-    def set_event_ui(self, type: int, arg2: str='', arg3: str='', arg4: str='') -> None:
-        """이벤트UI를설정한다
+    def set_event_ui_countdown(self, round_countdown: List[int], script: str='', box_ids: List[str]=[]) -> None:
+        """이벤트UI를설정한다: arg1=2
 
         Args:
-            type (int): _description_.
-            arg2 (str): _description_. Defaults to ''.
-            arg3 (str): _description_. Defaults to ''.
-            arg4 (str): _description_. Defaults to ''.
+            round_countdown (List[int]): _description_.
+            script (str): _description_. Defaults to ''.
+            box_ids (List[str]): _description_. Defaults to [].
 
         Returns: None
         """
-        self.ctx.SetEventUi(type, arg2, arg3, arg4)
+        self.ctx.SetEventUiCountdown(script, Array[Int32](round_countdown), Array[String](box_ids))
+
+    def set_event_ui_round(self, rounds: List[int], v_offset: int=0, arg3: int=0) -> None:
+        """이벤트UI를설정한다: arg1=0
+
+        Args:
+            rounds (List[int]): _description_.
+            v_offset (int): _description_. Defaults to 0.
+            arg3 (int): _description_. Defaults to 0.
+
+        Returns: None
+        """
+        self.ctx.SetEventUiRound(Array[Int32](rounds), v_offset, arg3)
+
+    def set_event_ui_script(self, type: BannerType, duration: int, script: str='', box_ids: List[str]=[]) -> None:
+        """이벤트UI를설정한다: arg1=1
+
+        Args:
+            type (BannerType): _description_.
+            duration (int): _description_.
+            script (str): _description_. Defaults to ''.
+            box_ids (List[str]): _description_. Defaults to [].
+
+        Returns: None
+        """
+        self.ctx.SetEventUiScript(type, script, duration, Array[String](box_ids))
 
     def set_gravity(self, gravity: float) -> None:
         """SetGravity
@@ -1566,17 +1590,17 @@ class Trigger:
         """
         self.ctx.SetOnetimeEffect(id, enable, path)
 
-    def set_pc_emotion_loop(self, sequence_name: str, duration: float=0.0, arg3: bool=False) -> None:
+    def set_pc_emotion_loop(self, sequence_name: str, duration: float=0.0, loop: bool=False) -> None:
         """SetPcEmotionLoop
 
         Args:
             sequence_name (str): _description_.
             duration (float): _description_. Defaults to 0.0.
-            arg3 (bool): _description_. Defaults to False.
+            loop (bool): _description_. Defaults to False.
 
         Returns: None
         """
-        self.ctx.SetPcEmotionLoop(sequence_name, duration, arg3)
+        self.ctx.SetPcEmotionLoop(sequence_name, duration, loop)
 
     def set_pc_emotion_sequence(self, sequence_names: List[str]) -> None:
         """SetPcEmotionSequence
@@ -1727,17 +1751,17 @@ class Trigger:
         """
         self.ctx.SetSound(trigger_id, enable)
 
-    def set_state(self, id: int, states: List['Trigger']=[], randomize: bool=False) -> None:
+    def set_state(self, id: int, states: List['Trigger'], randomize: bool=False) -> None:
         """상태를설정한다
 
         Args:
             id (int): _description_.
-            states (List['Trigger']): _description_. Defaults to [].
+            states (List['Trigger']): _description_.
             randomize (bool): _description_. Defaults to False.
 
         Returns: None
         """
-        self.ctx.SetState(id, Array[...](states), randomize)
+        self.ctx.SetState(id, Array[Object](states), randomize)
 
     def set_time_scale(self, enable: bool=False, start_scale: float=0.0, end_scale: float=0.0, duration: float=0.0, interpolator: int=0) -> None:
         """SetTimeScale
@@ -1753,21 +1777,21 @@ class Trigger:
         """
         self.ctx.SetTimeScale(enable, start_scale, end_scale, duration, interpolator)
 
-    def set_timer(self, timer_id: str='', seconds: int=0, start_delay: int=0, interval: int=0, v_offset: int=0, type: str='', desc: str='') -> None:
+    def set_timer(self, timer_id: str='', seconds: int=0, auto_remove: bool=False, display: bool=False, v_offset: int=0, type: str='', desc: str='') -> None:
         """타이머를설정한다
 
         Args:
             timer_id (str): _description_. Defaults to ''.
             seconds (int): _description_. Defaults to 0.
-            start_delay (int): _description_. Defaults to 0.
-            interval (int): _description_. Defaults to 0.
+            auto_remove (bool): _description_. Defaults to False.
+            display (bool): _description_. Defaults to False.
             v_offset (int): _description_. Defaults to 0.
             type (str): _description_. Defaults to ''.
             desc (str): _description_. Defaults to ''.
 
         Returns: None
         """
-        self.ctx.SetTimer(timer_id, seconds, start_delay, interval, v_offset, type, desc)
+        self.ctx.SetTimer(timer_id, seconds, auto_remove, display, v_offset, type, desc)
 
     def set_user_value(self, key: str, value: int, trigger_id: int=0) -> None:
         """SetUserValue

@@ -5,7 +5,7 @@ import trigger_api
 class 시작_타이머설정(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         # 5분 타이머. 기념촬영장은 맥시멈 5분만 돌아가도록 한다. 포털을 사용할 수 없기 때문에 시간에 제한을 둔다.
-        self.set_timer(timer_id='4000', seconds=300, start_delay=1)
+        self.set_timer(timer_id='4000', seconds=300, auto_remove=True)
         self.set_portal(portal_id=10001)
 
     def on_tick(self) -> trigger_api.Trigger:

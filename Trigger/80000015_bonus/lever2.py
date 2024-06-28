@@ -1,5 +1,6 @@
 """ trigger/80000015_bonus/lever2.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class 대기(trigger_api.Trigger):
@@ -23,7 +24,7 @@ class 반응대기(trigger_api.Trigger):
 
 class 안내(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$80000015_bonus__lever2__0$', arg3='2000', arg4='102')
+        self.set_event_ui_script(type=BannerType.Text, script='$80000015_bonus__lever2__0$', duration=2000, box_ids=['102'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.object_interacted(interact_ids=[10001315], state=0):

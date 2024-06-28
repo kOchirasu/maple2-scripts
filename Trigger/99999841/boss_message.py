@@ -1,5 +1,6 @@
 """ trigger/99999841/boss_message.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class 대기(trigger_api.Trigger):
@@ -10,7 +11,7 @@ class 대기(trigger_api.Trigger):
 
 class 메시지1(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='A팀의 보스가 등장했습니다!', arg3='4000')
+        self.set_event_ui_script(type=BannerType.Text, script='A팀의 보스가 등장했습니다!', duration=4000)
 
     def on_tick(self) -> trigger_api.Trigger:
         return 종료(self.ctx)

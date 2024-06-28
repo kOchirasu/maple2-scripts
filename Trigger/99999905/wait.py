@@ -1,11 +1,12 @@
 """ trigger/99999905/wait.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class 시간표확인(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='10', seconds=10)
-        self.set_event_ui(type=1, arg2='$99999905__WAIT__0$', arg3='5000', arg4='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$99999905__WAIT__0$', duration=5000, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.count_users(box_id=101) >= 10:

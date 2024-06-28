@@ -4,7 +4,7 @@ import trigger_api
 
 class 시작(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_timer(timer_id='60', seconds=180, start_delay=1, interval=1, v_offset=-90)
+        self.set_timer(timer_id='60', seconds=180, auto_remove=True, display=True, v_offset=-90)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.user_detected(box_ids=[302]):

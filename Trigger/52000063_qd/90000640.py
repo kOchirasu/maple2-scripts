@@ -130,7 +130,7 @@ class 카운트(trigger_api.Trigger):
         self.select_camera(trigger_id=304, enable=False)
         self.set_cinematic_ui(type=0)
         self.set_cinematic_ui(type=2)
-        # self.set_event_ui(type=0, arg2='0,0')
+        # self.set_event_ui_round(rounds=[0,0])
         self.show_count_ui(text='$52000063_QD__90000640__6$', stage=1, count=3)
 
     def on_tick(self) -> trigger_api.Trigger:

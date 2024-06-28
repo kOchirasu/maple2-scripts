@@ -1,5 +1,6 @@
 """ trigger/02000353_bf/main.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 #include dungeon_common/checkusercount.py
 from dungeon_common.checkusercount import *
@@ -86,7 +87,7 @@ class 시작_05(trigger_api.Trigger):
 
 class 관문_01_개방전(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$02000353_BF__MAIN__2$', arg3='2000')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000353_BF__MAIN__2$', duration=2000)
         self.set_timer(timer_id='2', seconds=2)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -176,7 +177,7 @@ class 관문_02_시작(trigger_api.Trigger):
         self.play_system_sound_in_box(sound='System_Space_PopUp_01')
         self.select_camera(trigger_id=8001, enable=False)
         self.show_guide_summary(entity_id=103, text_id=40011) # 다음 지역으로 이동하세요
-        # self.set_event_ui(type=1, arg2='다음 지역으로 이동하세요.', arg3='2000')
+        # self.set_event_ui_script(type=BannerType.Text, script='다음 지역으로 이동하세요.', duration=2000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.count_users(box_id=703) >= 1:
@@ -210,7 +211,7 @@ class 관문_02_시작_02(trigger_api.Trigger):
 
 class 관문_02_개방전(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$02000353_BF__MAIN__3$', arg3='2000')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000353_BF__MAIN__3$', duration=2000)
         self.set_timer(timer_id='1', seconds=1)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -291,7 +292,7 @@ class 관문_03_시작_02(trigger_api.Trigger):
 
 class 관문_03_개방전(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$02000353_BF__MAIN__4$', arg3='2000')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000353_BF__MAIN__4$', duration=2000)
         self.set_timer(timer_id='1', seconds=1)
 
     def on_tick(self) -> trigger_api.Trigger:

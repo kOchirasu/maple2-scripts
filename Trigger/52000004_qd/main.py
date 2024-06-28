@@ -1,5 +1,6 @@
 """ trigger/52000004_qd/main.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class 대기(trigger_api.Trigger):
@@ -144,10 +145,10 @@ class 미션성공(trigger_api.Trigger):
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.quest_user_detected(box_ids=[199], quest_ids=[10001852], quest_states=[2]):
-            self.set_event_ui(type=7, arg2='$52000004_QD__MAIN__5$', arg3='3000', arg4='0')
+            self.set_event_ui_script(type=BannerType.Success, script='$52000004_QD__MAIN__5$', duration=3000, box_ids=['0'])
             return 포털생성(self.ctx)
         if self.quest_user_detected(box_ids=[199], quest_ids=[10001851], quest_states=[2]):
-            self.set_event_ui(type=7, arg2='$52000004_QD__MAIN__6$', arg3='3000', arg4='0')
+            self.set_event_ui_script(type=BannerType.Success, script='$52000004_QD__MAIN__6$', duration=3000, box_ids=['0'])
             return 포털생성(self.ctx)
         if self.time_expired(timer_id='3'):
             return 포털생성(self.ctx)

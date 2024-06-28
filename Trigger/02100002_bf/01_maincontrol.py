@@ -1,5 +1,6 @@
 """ trigger/02100002_bf/01_maincontrol.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 #include dungeon_common/checkuser10_guildraid.py
 from dungeon_common.checkuser10_guildraid import *
@@ -211,7 +212,7 @@ class Guide01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_user_value(trigger_id=99, key='PortalOn', value=1)
         self.play_system_sound_in_box(sound='System_ShowGuideSummary_01')
-        self.set_event_ui(type=1, arg2='$02100002_BF__01_MAINCONTROL__5$', arg3='5000')
+        self.set_event_ui_script(type=BannerType.Text, script='$02100002_BF__01_MAINCONTROL__5$', duration=5000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):
@@ -222,7 +223,7 @@ class Guide01(trigger_api.Trigger):
 class Guide02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.play_system_sound_in_box(sound='System_ShowGuideSummary_01')
-        self.set_event_ui(type=1, arg2='$02100002_BF__01_MAINCONTROL__6$', arg3='3000') # 공장 가동하기
+        self.set_event_ui_script(type=BannerType.Text, script='$02100002_BF__01_MAINCONTROL__6$', duration=3000) # 공장 가동하기
         self.set_interact_object(trigger_ids=[10001239], state=1)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -233,7 +234,7 @@ class Guide02(trigger_api.Trigger):
 class Guide03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.play_system_sound_in_box(sound='GuildRaid_RainbowSlimeFactory_MachineOn_01')
-        self.set_event_ui(type=1, arg2='$02100002_BF__01_MAINCONTROL__7$', arg3='2000')
+        self.set_event_ui_script(type=BannerType.Text, script='$02100002_BF__01_MAINCONTROL__7$', duration=2000)
         self.set_interact_object(trigger_ids=[10001239], state=0) # 슬라임 생성 신호
         self.set_user_value(trigger_id=11, key='ActivateTank', value=1)
         self.set_user_value(trigger_id=12, key='ActivateTank', value=1)
@@ -256,7 +257,7 @@ class TimmerStart(trigger_api.Trigger):
         self.set_user_value(trigger_id=99, key='MissionStart', value=1)
         self.play_system_sound_in_box(sound='System_ShowGuideSummary_01') # 제한 시간 10분
         # 임시 테스트용 데이터 세팅 가능 지점
-        self.set_timer(timer_id='10000', seconds=600, start_delay=1, interval=1)
+        self.set_timer(timer_id='10000', seconds=600, auto_remove=True, display=True)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=60000):
@@ -266,7 +267,7 @@ class TimmerStart(trigger_api.Trigger):
 class EnableCheckOutput(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.play_system_sound_in_box(sound='System_ShowGuideSummary_01')
-        self.set_event_ui(type=1, arg2='$02100002_BF__01_MAINCONTROL__8$', arg3='3000') # 결과 출력하기 반응 오브젝트
+        self.set_event_ui_script(type=BannerType.Text, script='$02100002_BF__01_MAINCONTROL__8$', duration=3000) # 결과 출력하기 반응 오브젝트
         self.set_interact_object(trigger_ids=[10001240], state=1)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -388,7 +389,7 @@ class DungeonSuccess(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.dungeon_clear()
         self.set_achievement(trigger_id=9902, type='trigger', achieve='Find02100002')
-        self.set_event_ui(type=7, arg2='$02100002_BF__01_MAINCONTROL__10$', arg3='3000')
+        self.set_event_ui_script(type=BannerType.Success, script='$02100002_BF__01_MAINCONTROL__10$', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=2000):
@@ -398,7 +399,7 @@ class DungeonSuccess(trigger_api.Trigger):
 class MissionFail(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.reset_timer(timer_id='10000')
-        self.set_event_ui(type=5, arg2='$02100002_BF__01_MAINCONTROL__9$', arg3='3000')
+        self.set_event_ui_script(type=BannerType.Fail, script='$02100002_BF__01_MAINCONTROL__9$', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3500):

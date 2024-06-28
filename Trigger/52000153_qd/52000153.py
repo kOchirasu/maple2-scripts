@@ -49,7 +49,7 @@ class 영상재생_end02(trigger_api.Trigger):
 class 전경씬01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_onetime_effect(id=1, path='BG/Common/ScreenMask/Eff_CameraMasking_FastFadeIn.xml')
-        self.set_pc_emotion_loop(sequence_name='Sword_Attack_Idle_A', duration=10000.0, arg3=True)
+        self.set_pc_emotion_loop(sequence_name='Sword_Attack_Idle_A', duration=10000.0, loop=True)
         self.select_camera_path(path_ids=[4000,4001], return_view=False)
         self.set_cinematic_ui(type=1)
 
@@ -80,7 +80,7 @@ class Quit01(trigger_api.Trigger):
 class Skip_1(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_cinematic_ui(type=4)
-        self.set_pc_emotion_loop(sequence_name='Sword_Attack_Idle_A', duration=1.0, arg3=True)
+        self.set_pc_emotion_loop(sequence_name='Sword_Attack_Idle_A', duration=1.0, loop=True)
         self.set_onetime_effect(id=1, path='BG/Common/ScreenMask/Eff_CameraMasking_FastFadeIn.xml')
         self.set_onetime_effect(id=2, path='BG/Common/ScreenMask/Eff_CameraMasking_SlowFade.xml')
 

@@ -13,7 +13,7 @@ class 시작(trigger_api.Trigger):
 
 class 타이머(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_timer(timer_id='990', seconds=600, start_delay=1, interval=1)
+        self.set_timer(timer_id='990', seconds=600, auto_remove=True, display=True)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=600000):

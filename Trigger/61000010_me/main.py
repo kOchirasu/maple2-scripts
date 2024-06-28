@@ -1,5 +1,6 @@
 """ trigger/61000010_me/main.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class 입장(trigger_api.Trigger):
@@ -22,7 +23,7 @@ class 대기(trigger_api.Trigger):
 
 class 어나운스0(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$61000010_ME__main__0$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$61000010_ME__main__0$', duration=3000, box_ids=['0'])
         self.set_achievement(trigger_id=101, type='trigger', achieve='ShanghaiRunnersStart')
         # self.set_local_camera(camera_id=302)
         # self.reset_camera(interpolation_time=3.0)
@@ -43,7 +44,7 @@ class 어나운스1(trigger_api.Trigger):
 
 class 시작(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_timer(timer_id='99', seconds=190, interval=1)
+        self.set_timer(timer_id='99', seconds=190, display=True)
         self.set_mesh(trigger_ids=[3000,3001,3002,3003])
         self.set_user_value(trigger_id=999111, key='gameStart', value=1)
         self.start_mini_game(box_id=199, round=1, game_name='shanghairunner')
@@ -59,8 +60,8 @@ class 시작(trigger_api.Trigger):
 
 class 경기종료(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=3, arg2='$61000006_ME__TRIGGER_03__2$', arg3='5000', arg4='401')
-        self.set_event_ui(type=6, arg2='$61000006_ME__TRIGGER_03__3$', arg3='5000', arg4='!401')
+        self.set_event_ui_script(type=BannerType.Winner, script='$61000006_ME__TRIGGER_03__2$', duration=5000, box_ids=['401'])
+        self.set_event_ui_script(type=BannerType.Bonus, script='$61000006_ME__TRIGGER_03__3$', duration=5000, box_ids=['!401'])
         # self.add_buff(box_ids=[199], skill_id=70000019, level=1)
 
     def on_tick(self) -> trigger_api.Trigger:

@@ -1,5 +1,6 @@
 """ trigger/02000375_bf/move.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class 대기(trigger_api.Trigger):
@@ -16,7 +17,7 @@ class 대기(trigger_api.Trigger):
 class 이동(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_breakable(trigger_ids=[7000,7001,7002,7003,7004,7005,7006,7007,7008,7009,7010,7011,7012,7013,7014,7015,7016,7017,7018,7019,7020,7021,7022,7023], enable=True)
-        self.set_event_ui(type=1, arg2='$02000375_BF__move__0$', arg3='3000')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000375_BF__move__0$', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=60000):

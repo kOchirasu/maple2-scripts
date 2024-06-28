@@ -1,5 +1,6 @@
 """ trigger/02100001_bf/99_barricade.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class Wait(trigger_api.Trigger):
@@ -38,7 +39,7 @@ class CageDoorOpen(trigger_api.Trigger):
 class CountDown(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.play_system_sound_in_box(sound='System_ShowGuideSummary_01')
-        self.set_event_ui(type=1, arg2='$02100001_BF__99_BARRICADE__0$', arg3='3000')
+        self.set_event_ui_script(type=BannerType.Text, script='$02100001_BF__99_BARRICADE__0$', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=30000):

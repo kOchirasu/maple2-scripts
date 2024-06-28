@@ -1,5 +1,6 @@
 """ trigger/02100009_bf/barricade.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class Wait(trigger_api.Trigger):
@@ -13,7 +14,7 @@ class Wait(trigger_api.Trigger):
 
 class CheckUser10_GuildRaid(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_timer(timer_id='1', seconds=30, start_delay=1) # 최대 30초 대기
+        self.set_timer(timer_id='1', seconds=30, auto_remove=True) # 최대 30초 대기
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.count_users(box_id=102) >= 10:
@@ -124,7 +125,7 @@ class 유저감지(trigger_api.Trigger):
 
 class 카운트(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$02100009_BF__BARRICADE__2$', arg3='3000')
+        self.set_event_ui_script(type=BannerType.Text, script='$02100009_BF__BARRICADE__2$', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=30000):

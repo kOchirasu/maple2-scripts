@@ -1,5 +1,6 @@
 """ trigger/02020112_bf/safezone1.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class 대기(trigger_api.Trigger):
@@ -32,7 +33,7 @@ class 안전장치_활성화(trigger_api.Trigger):
 
 class 안전장치_작동(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$02020112_BF__SAFEZONE1__0$', arg3='5000')
+        self.set_event_ui_script(type=BannerType.Text, script='$02020112_BF__SAFEZONE1__0$', duration=5000)
         self.set_user_value(trigger_id=99990002, key='Safe', value=1)
 
 

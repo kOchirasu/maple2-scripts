@@ -1,5 +1,6 @@
 """ trigger/02020112_bf/respawn.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class 대기(trigger_api.Trigger):
@@ -16,7 +17,7 @@ class 대기(trigger_api.Trigger):
 
 class 스폰시작(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$02020112_BF__RESPAWN__0$', arg3='5000')
+        self.set_event_ui_script(type=BannerType.Text, script='$02020112_BF__RESPAWN__0$', duration=5000)
         self.spawn_monster(spawn_ids=[141,142,143,144], auto_target=False)
 
     def on_tick(self) -> trigger_api.Trigger:

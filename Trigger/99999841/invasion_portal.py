@@ -10,7 +10,7 @@ class 대기(trigger_api.Trigger):
 
 class 포탈열림(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_timer(timer_id='1', seconds=30, start_delay=1)
+        self.set_timer(timer_id='1', seconds=30, auto_remove=True)
         self.set_interact_object(trigger_ids=[10002184], state=1)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -37,7 +37,7 @@ class 유저이동(trigger_api.Trigger):
 class 포탈닫힘(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_user_value(trigger_id=99990010, key='PCmove', value=0)
-        self.set_timer(timer_id='2', seconds=60, start_delay=1)
+        self.set_timer(timer_id='2', seconds=60, auto_remove=True)
         self.set_interact_object(trigger_ids=[10002184], state=2)
 
     def on_tick(self) -> trigger_api.Trigger:

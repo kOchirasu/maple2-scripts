@@ -1,5 +1,6 @@
 """ trigger/02010052_bf/torchlight_01.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class idle(trigger_api.Trigger):
@@ -18,7 +19,7 @@ class idle(trigger_api.Trigger):
 class burn_state(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_mesh(trigger_ids=[6001,6002,6003,6004,6005,6006,6007,6008,6009,6010,6011,6012], start_delay=800, interval=100) # 벽 해제
-        self.set_event_ui(type=1, arg2='$02010052_BF__TORCHLIGHT_01__0$', arg3='3000')
+        self.set_event_ui_script(type=BannerType.Text, script='$02010052_BF__TORCHLIGHT_01__0$', duration=3000)
         self.set_effect(trigger_ids=[7001], visible=True) # 횃불에 불이 붙는 이펙트
         self.set_timer(timer_id='1', seconds=1)
 

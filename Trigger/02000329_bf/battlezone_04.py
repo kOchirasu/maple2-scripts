@@ -19,7 +19,7 @@ class 애플몽키소환(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.play_system_sound_in_box(sound='System_ShowGuideSummary_01')
         self.show_guide_summary(entity_id=101, text_id=20000030) # 닭장을 부수세요
-        # self.set_event_ui(type=1, arg2='닭장을 공격하여 닭을 구출하세요', arg3='3000')
+        # self.set_event_ui_script(type=BannerType.Text, script='닭장을 공격하여 닭을 구출하세요', duration=3000)
         self.spawn_monster(spawn_ids=[704], auto_target=False)
         self.set_effect(trigger_ids=[6609,6610], visible=True)
 
@@ -36,7 +36,7 @@ class 섹터개방(trigger_api.Trigger):
         self.set_timer(timer_id='3', seconds=3)
         self.play_system_sound_in_box(sound='System_ShowGuideSummary_01')
         self.show_guide_summary(entity_id=102, text_id=40011) # 다음 지역으로 이동하세요
-        # self.set_event_ui(type=1, arg2='$02000329_BF__BATTLEZONE_04__0$', arg3='3000')
+        # self.set_event_ui_script(type=BannerType.Text, script='$02000329_BF__BATTLEZONE_04__0$', duration=3000)
         self.set_mesh(trigger_ids=[19994])
         self.set_mesh(trigger_ids=[1531,1532,1533,1534,1535,1536,1537,1538,1539,1540], fade=10.0)
 

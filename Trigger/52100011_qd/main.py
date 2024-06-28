@@ -1,6 +1,6 @@
 """ trigger/52100011_qd/main.xml """
 import trigger_api
-from Maple2.Server.Game.Scripting.Trigger import Align
+from Maple2.Server.Game.Scripting.Trigger import Align, BannerType
 
 #include dungeon_common/checkusercount.py
 from dungeon_common.checkusercount import *
@@ -258,7 +258,7 @@ class ship_01(trigger_api.Trigger):
 
 class ship_02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$52100011_QD__MAIN__19$', arg3='3000')
+        self.set_event_ui_script(type=BannerType.Text, script='$52100011_QD__MAIN__19$', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.object_interacted(interact_ids=[10002055], state=0):

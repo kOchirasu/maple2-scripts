@@ -35,7 +35,7 @@ class 전경씬01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_scene_skip(state=Skip_1, action='nextState')
         self.set_onetime_effect(id=1, path='BG/Common/ScreenMask/Eff_CameraMasking_FastFadeIn.xml')
-        self.set_pc_emotion_loop(sequence_name='Push_A', duration=10000.0, arg3=True)
+        self.set_pc_emotion_loop(sequence_name='Push_A', duration=10000.0, loop=True)
         self.set_npc_emotion_loop(spawn_id=402, sequence_name='Attack_Idle_A', duration=1000000.0)
         self.set_npc_emotion_loop(spawn_id=403, sequence_name='Dead_A', duration=800000.0)
         self.set_npc_emotion_loop(spawn_id=404, sequence_name='Dead_A', duration=800000.0)

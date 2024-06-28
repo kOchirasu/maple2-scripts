@@ -4,7 +4,7 @@ import trigger_api
 
 class 시작(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_timer(timer_id='60', seconds=175, start_delay=1, desc='wait.xml 시작 타이머 설정')
+        self.set_timer(timer_id='60', seconds=175, auto_remove=True, desc='wait.xml 시작 타이머 설정')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.user_detected(box_ids=[402]):

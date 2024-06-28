@@ -119,7 +119,7 @@ class 게임시작_대기(trigger_api.Trigger):
         # lifeCount : 최대 사망 횟수
         self.arcade_three_two_one2_start_game(life_count=5, init_score=10000)
         # # 셋둘하나는 1라운드 내에서 무한루핑이므로 라운드 ui를 표시하지 않아 이 행을 넣지 않음
-        self.set_event_ui(type=0, arg2='1,1', arg4='120')
+        self.set_event_ui_round(rounds=[1,1], v_offset=120)
         self.set_user_value(trigger_id=4001, key='Fail', value=1) # Fail Event on
         self.add_balloon_talk(msg='$51000005_DG__51000005_MAIN__4$', duration=3000) # PC : 내가 이길 거야!
         # 시작 효과음 / 레디-고! 안 들어간 무음성 02100322

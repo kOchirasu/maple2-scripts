@@ -360,7 +360,7 @@ class phase_b_scene_05(trigger_api.Trigger):
 
 class phase_b_scene_06(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_timer(timer_id='81', seconds=81, start_delay=1, interval=1)
+        self.set_timer(timer_id='81', seconds=81, auto_remove=True, display=True)
         self.show_guide_summary(entity_id=25200993, text_id=25200993)
         self.spawn_monster(spawn_ids=[208])
 
@@ -791,7 +791,7 @@ class phase_c_16(trigger_api.Trigger):
         self.destroy_monster(spawn_ids=[103])
         self.set_cinematic_ui(type=0)
         self.set_cinematic_ui(type=2)
-        self.set_timer(timer_id='82', seconds=82, start_delay=1, interval=1)
+        self.set_timer(timer_id='82', seconds=82, auto_remove=True, display=True)
         self.reset_camera()
         self.set_local_camera(camera_id=8023, enable=True) # LocalTargetCamera
         self.set_onetime_effect(id=1, path='BG/Common/ScreenMask/Eff_fadein_1sec.xml')
@@ -921,7 +921,7 @@ class phase_b_skip_5(trigger_api.Trigger):
         self.destroy_monster(spawn_ids=[103])
         self.set_cinematic_ui(type=0)
         self.set_cinematic_ui(type=2)
-        self.set_timer(timer_id='82', seconds=82, start_delay=1, interval=1)
+        self.set_timer(timer_id='82', seconds=82, auto_remove=True, display=True)
         self.reset_camera()
         self.set_local_camera(camera_id=8023, enable=True) # LocalTargetCamera
         self.set_onetime_effect(id=1, path='BG/Common/ScreenMask/Eff_fadein_1sec.xml')

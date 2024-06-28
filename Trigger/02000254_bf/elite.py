@@ -116,7 +116,7 @@ class 클리어3(trigger_api.Trigger):
         self.destroy_monster(spawn_ids=[105])
         self.set_cinematic_ui(type=0)
         self.set_cinematic_ui(type=2)
-        # self.set_event_ui(type=7, arg2='$02000254_BF__ELITE__1$', arg3='3000', arg4='0')
+        # self.set_event_ui_script(type=BannerType.Success, script='$02000254_BF__ELITE__1$', duration=3000, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='3'):

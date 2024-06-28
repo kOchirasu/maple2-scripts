@@ -1,5 +1,6 @@
 """ trigger/02000396_bf/01_enterthehall.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class Wait(trigger_api.Trigger):
@@ -234,7 +235,7 @@ class FindWayOut01(trigger_api.Trigger):
 class Quit(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.play_system_sound_in_box(sound='System_ShowGuideSummary_01')
-        self.set_event_ui(type=1, arg2='$02000396_BF__01_ENTERTHEHALL__8$', arg3='4000', arg4='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000396_BF__01_ENTERTHEHALL__8$', duration=4000, box_ids=['0'])
         self.set_user_value(trigger_id=4, key='SearchStart', value=1)
 
     def on_tick(self) -> trigger_api.Trigger:

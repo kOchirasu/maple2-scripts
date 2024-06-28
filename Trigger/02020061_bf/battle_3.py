@@ -1,5 +1,6 @@
 """ trigger/02020061_bf/battle_3.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class 대기(trigger_api.Trigger):
@@ -123,7 +124,7 @@ class 보스소환6(trigger_api.Trigger):
 
 class 보스_무적페이즈(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$02020061_BF__BATTLE_3__1$', arg3='5000')
+        self.set_event_ui_script(type=BannerType.Text, script='$02020061_BF__BATTLE_3__1$', duration=5000)
         self.spawn_monster(spawn_ids=[711,712,713,714], auto_target=False)
         self.set_user_value(trigger_id=99990009, key='BossObjectStart', value=1)
         self.set_user_value(trigger_id=99990010, key='BossObjectStart', value=1)

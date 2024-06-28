@@ -164,7 +164,7 @@ class Round_02_Random_04(trigger_api.Trigger):
 
 class End(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        # self.set_event_ui(type=1, arg2='wave_projectile_05 종료', arg3='1000')
+        # self.set_event_ui_script(type=BannerType.Text, script='wave_projectile_05 종료', duration=1000)
         pass
 
 

@@ -1,5 +1,6 @@
 """ trigger/51000003_dg/hidden.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 # 여기서 부터 시작
@@ -10,7 +11,7 @@ class Start(trigger_api.Trigger):
 class Hidden_ready_01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_portal(portal_id=99) # 임시 히든포탈
-        self.set_event_ui(type=1, arg2='$51000003_DG__HIDDEN__0$', arg3='4000', arg4='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$51000003_DG__HIDDEN__0$', duration=4000, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):
@@ -19,7 +20,7 @@ class Hidden_ready_01(trigger_api.Trigger):
 
 class Hidden_ready_02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$51000003_DG__HIDDEN__1$', arg3='4000', arg4='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$51000003_DG__HIDDEN__1$', duration=4000, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):
@@ -28,7 +29,7 @@ class Hidden_ready_02(trigger_api.Trigger):
 
 class Hidden_ready_03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=0, arg2='6,6', arg3='0', arg4='0')
+        self.set_event_ui_round(rounds=[6,6])
         self.select_camera(trigger_id=8002)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -53,7 +54,7 @@ class Hidden_Start(trigger_api.Trigger):
         self.set_user_value(trigger_id=991106, key='Round_06', value=1)
         self.set_user_value(trigger_id=991107, key='Round_06', value=1)
         self.set_user_value(trigger_id=991108, key='Round_06', value=1)
-        self.set_timer(timer_id='150', seconds=150, interval=1)
+        self.set_timer(timer_id='150', seconds=150, display=True)
 
 
 initial_state = Start

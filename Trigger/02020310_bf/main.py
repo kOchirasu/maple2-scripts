@@ -1,6 +1,6 @@
 """ trigger/02020310_bf/main.xml """
 import trigger_api
-from Maple2.Server.Game.Scripting.Trigger import Align
+from Maple2.Server.Game.Scripting.Trigger import Align, BannerType
 
 
 class 대기(trigger_api.Trigger):
@@ -217,84 +217,84 @@ class CableOn_01(trigger_api.Trigger):
 class CableDelay_01_1(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=2000):
-            self.set_event_ui(type=1, arg2='$02020310_BF__MAIN__3$', arg3='3000')
+            self.set_event_ui_script(type=BannerType.Text, script='$02020310_BF__MAIN__3$', duration=3000)
             return CableDelay_02_1(self.ctx)
 
 
 class CableDelay_01_2(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=2000):
-            self.set_event_ui(type=1, arg2='$02020310_BF__MAIN__4$', arg3='3000')
+            self.set_event_ui_script(type=BannerType.Text, script='$02020310_BF__MAIN__4$', duration=3000)
             return CableDelay_02_2(self.ctx)
 
 
 class CableDelay_01_3(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=2000):
-            self.set_event_ui(type=1, arg2='$02020310_BF__MAIN__5$', arg3='3000')
+            self.set_event_ui_script(type=BannerType.Text, script='$02020310_BF__MAIN__5$', duration=3000)
             return CableDelay_02_3(self.ctx)
 
 
 class CableDelay_02_1(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
-            self.set_event_ui(type=1, arg2='$02020310_BF__MAIN__6$', arg3='1000')
+            self.set_event_ui_script(type=BannerType.Text, script='$02020310_BF__MAIN__6$', duration=1000)
             return CableDelay_03_1(self.ctx)
 
 
 class CableDelay_02_2(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
-            self.set_event_ui(type=1, arg2='$02020310_BF__MAIN__7$', arg3='1000')
+            self.set_event_ui_script(type=BannerType.Text, script='$02020310_BF__MAIN__7$', duration=1000)
             return CableDelay_03_2(self.ctx)
 
 
 class CableDelay_02_3(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
-            self.set_event_ui(type=1, arg2='$02020310_BF__MAIN__8$', arg3='1000')
+            self.set_event_ui_script(type=BannerType.Text, script='$02020310_BF__MAIN__8$', duration=1000)
             return CableDelay_03_3(self.ctx)
 
 
 class CableDelay_03_1(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=1000):
-            self.set_event_ui(type=1, arg2='$02020310_BF__MAIN__9$', arg3='1000')
+            self.set_event_ui_script(type=BannerType.Text, script='$02020310_BF__MAIN__9$', duration=1000)
             return CableDelay_04_1(self.ctx)
 
 
 class CableDelay_03_2(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=1000):
-            self.set_event_ui(type=1, arg2='$02020310_BF__MAIN__10$', arg3='1000')
+            self.set_event_ui_script(type=BannerType.Text, script='$02020310_BF__MAIN__10$', duration=1000)
             return CableDelay_04_2(self.ctx)
 
 
 class CableDelay_03_3(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=1000):
-            self.set_event_ui(type=1, arg2='$02020310_BF__MAIN__11$', arg3='1000')
+            self.set_event_ui_script(type=BannerType.Text, script='$02020310_BF__MAIN__11$', duration=1000)
             return CableDelay_04_3(self.ctx)
 
 
 class CableDelay_04_1(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=1000):
-            self.set_event_ui(type=1, arg2='$02020310_BF__MAIN__12$', arg3='1000')
+            self.set_event_ui_script(type=BannerType.Text, script='$02020310_BF__MAIN__12$', duration=1000)
             return CableDelay_05_1(self.ctx)
 
 
 class CableDelay_04_2(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=1000):
-            self.set_event_ui(type=1, arg2='$02020310_BF__MAIN__13$', arg3='1000')
+            self.set_event_ui_script(type=BannerType.Text, script='$02020310_BF__MAIN__13$', duration=1000)
             return CableDelay_05_2(self.ctx)
 
 
 class CableDelay_04_3(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=1000):
-            self.set_event_ui(type=1, arg2='$02020310_BF__MAIN__14$', arg3='1000')
+            self.set_event_ui_script(type=BannerType.Text, script='$02020310_BF__MAIN__14$', duration=1000)
             return CableDelay_05_3(self.ctx)
 
 
@@ -302,7 +302,7 @@ class CableDelay_05_1(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=1000):
             self.set_breakable(trigger_ids=[1001], enable=True)
-            self.set_event_ui(type=1, arg2='$02020310_BF__MAIN__15$', arg3='5000')
+            self.set_event_ui_script(type=BannerType.Text, script='$02020310_BF__MAIN__15$', duration=5000)
             return CableOff_01(self.ctx)
 
 
@@ -310,7 +310,7 @@ class CableDelay_05_2(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=1000):
             self.set_breakable(trigger_ids=[1002], enable=True)
-            self.set_event_ui(type=1, arg2='$02020310_BF__MAIN__16$', arg3='5000')
+            self.set_event_ui_script(type=BannerType.Text, script='$02020310_BF__MAIN__16$', duration=5000)
             return CableOff_02(self.ctx)
 
 
@@ -318,7 +318,7 @@ class CableDelay_05_3(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=1000):
             self.set_breakable(trigger_ids=[1003], enable=True)
-            self.set_event_ui(type=1, arg2='$02020310_BF__MAIN__17$', arg3='5000')
+            self.set_event_ui_script(type=BannerType.Text, script='$02020310_BF__MAIN__17$', duration=5000)
             return CableOff_03(self.ctx)
 
 

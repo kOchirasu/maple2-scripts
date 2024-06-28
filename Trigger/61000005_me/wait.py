@@ -1,10 +1,11 @@
 """ trigger/61000005_me/wait.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class 입장(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_timer(timer_id='90', seconds=90, start_delay=1)
+        self.set_timer(timer_id='90', seconds=90, auto_remove=True)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.user_detected(box_ids=[196]):
@@ -13,7 +14,7 @@ class 입장(trigger_api.Trigger):
 
 class 대기(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$61000005_ME__WAIT__0$', arg3='5000', arg4='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$61000005_ME__WAIT__0$', duration=5000, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.count_users(box_id=196) >= 20:
@@ -26,7 +27,7 @@ class 대기(trigger_api.Trigger):
 
 class 시작(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$61000005_ME__WAIT__1$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$61000005_ME__WAIT__1$', duration=3000, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):

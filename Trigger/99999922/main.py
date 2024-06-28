@@ -1,5 +1,6 @@
 """ trigger/99999922/main.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class 대기(trigger_api.Trigger):
@@ -103,7 +104,7 @@ class 연출끝_1(trigger_api.Trigger):
 
 class 돌사운드_1(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='자경대장 오스칼과 함께 몬스터들을 처치하세요.', arg3='4000')
+        self.set_event_ui_script(type=BannerType.Text, script='자경대장 오스칼과 함께 몬스터들을 처치하세요.', duration=4000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=2000):
@@ -170,7 +171,7 @@ class 몬스터사망_1(trigger_api.Trigger):
             return 번째구역통로오픈3(self.ctx)
 
     def on_exit(self) -> None:
-        self.set_event_ui(type=1, arg2='다리를 건너 마지막 몬스터를 처치하세요!', arg3='4000')
+        self.set_event_ui_script(type=BannerType.Text, script='다리를 건너 마지막 몬스터를 처치하세요!', duration=4000)
 
 
 class 번째구역통로오픈3(trigger_api.Trigger):
@@ -291,7 +292,7 @@ class 연출끝_2(trigger_api.Trigger):
             return 레버생성_1_완료(self.ctx)
 
     def on_exit(self) -> None:
-        self.set_event_ui(type=1, arg2='생성된 스위치를 작동시키세요!', arg3='4000')
+        self.set_event_ui_script(type=BannerType.Text, script='생성된 스위치를 작동시키세요!', duration=4000)
 
 
 class 레버생성_1_완료(trigger_api.Trigger):

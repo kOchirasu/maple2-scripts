@@ -1,6 +1,6 @@
 """ trigger/52000126_qd/main.xml """
 import trigger_api
-from Maple2.Server.Game.Scripting.Trigger import Align
+from Maple2.Server.Game.Scripting.Trigger import Align, BannerType
 
 
 # 이름 없는 부랑자 (11000213) 퀘스트 / 이름 없는 부랑자(11003209) 연출
@@ -164,7 +164,7 @@ class battle(trigger_api.Trigger):
 class battleMsg(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.play_system_sound_in_box(sound='System_ShowGuideSummary_01')
-        self.set_event_ui(type=1, arg2='$52000126_QD__MAIN__8$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$52000126_QD__MAIN__8$', duration=3000, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.monster_dead(spawn_ids=[601,602,603]):

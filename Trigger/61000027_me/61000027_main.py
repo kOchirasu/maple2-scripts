@@ -1,6 +1,6 @@
 """ trigger/61000027_me/61000027_main.xml """
 import trigger_api
-from Maple2.Server.Game.Scripting.Trigger import FieldGame, Locale
+from Maple2.Server.Game.Scripting.Trigger import FieldGame, Locale, BannerType
 
 
 # None
@@ -69,7 +69,7 @@ class StateNone(trigger_api.Trigger):
 class WaitForEnterUser(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         # 숨바꼭질 플레이어 입장 대기 시간
-        self.set_timer(timer_id='1', seconds=60, start_delay=1, interval=1)
+        self.set_timer(timer_id='1', seconds=60, auto_remove=True, display=True)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.user_value(key='GameRuleNotice') >= 1:
@@ -88,7 +88,7 @@ class WaitForEnterUser(trigger_api.Trigger):
 class GameRuleNotice(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         # 숨바꼭질 게임룰 설명 시간
-        self.set_event_ui(type=1, arg2='$61000023_ME__61000023_MAIN__1$', arg3='10000')
+        self.set_event_ui_script(type=BannerType.Text, script='$61000023_ME__61000023_MAIN__1$', duration=10000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.user_value(key='DivideIntoTeams') >= 1:
@@ -121,7 +121,7 @@ class MoveGameArea(trigger_api.Trigger):
 class BeInHidingTeams(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         # 사물팀 숨는 소요 시간
-        self.set_timer(timer_id='1', seconds=30, start_delay=1, interval=1)
+        self.set_timer(timer_id='1', seconds=30, auto_remove=True, display=True)
         self.field_game_message(custom=1, type='SetEventUI', arg1=True, script='$61000023_ME__61000023_MAIN__2$', duration=30000)
         self.field_game_message(custom=2, type='SetEventUI', arg1=True, script='$61000023_ME__61000023_MAIN__3$', duration=30000)
 
@@ -139,7 +139,7 @@ class BeInHidingTeams(trigger_api.Trigger):
 class LookingForATeams(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         # 술래팀 사물찾는데 소요 시간
-        self.set_timer(timer_id='1', seconds=150, start_delay=1, interval=1)
+        self.set_timer(timer_id='1', seconds=150, auto_remove=True, display=True)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.user_value(key='TeamMatchResult') >= 1:
@@ -160,7 +160,7 @@ class TeamMatchResult(trigger_api.Trigger):
 class GameExitNotice(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         # 숨바꼭질 게임종료 설명 시간
-        self.set_event_ui(type=1, arg2='$61000023_ME__61000023_MAIN__4$', arg3='10000')
+        self.set_event_ui_script(type=BannerType.Text, script='$61000023_ME__61000023_MAIN__4$', duration=10000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.user_value(key='End') >= 1:
@@ -171,7 +171,7 @@ class GameExitNotice(trigger_api.Trigger):
 class ShortOfUser(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         # 방폭 진행 시간 단위
-        self.set_event_ui(type=1, arg2='$61000023_ME__61000023_MAIN__5$', arg3='10000')
+        self.set_event_ui_script(type=BannerType.Text, script='$61000023_ME__61000023_MAIN__5$', duration=10000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.user_value(key='End') >= 1:

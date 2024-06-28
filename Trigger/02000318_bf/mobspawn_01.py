@@ -1,5 +1,6 @@
 """ trigger/02000318_bf/mobspawn_01.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 #include dungeon_common/checkusercount.py
 from dungeon_common.checkusercount import *
@@ -56,7 +57,7 @@ class CameraWalk02(trigger_api.Trigger):
         self.set_cinematic_ui(type=0)
         self.set_cinematic_ui(type=2)
         self.play_system_sound_in_box(box_ids=[102], sound='System_ShowGuideSummary_01')
-        self.set_event_ui(type=1, arg2='$02000318_BF__MOBSPAWN_01__0$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000318_BF__MOBSPAWN_01__0$', duration=3000, box_ids=['0'])
         self.set_mesh(trigger_ids=[3000]) # EnteranceBarrier
         self.set_random_mesh(trigger_ids=[3100,3101,3102,3103,3104,3105,3106,3107,3108,3109,3110,3111,3112,3113,3114,3115,3116,3117,3118,3119,3120,3121,3122,3123,3124,3125,3126,3127,3128], start_delay=29, interval=500, fade=30) # EnteranceBarrier
 

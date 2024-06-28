@@ -1,5 +1,6 @@
 """ trigger/02000537_bf/main.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 """
@@ -35,7 +36,7 @@ class idle(trigger_api.Trigger):
 # 첫번째 발판
 class ready(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$02000537_BF__MAIN__0$', arg3='3000')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000537_BF__MAIN__0$', duration=3000)
         self.spawn_monster(spawn_ids=[101,1011,1012,1013,1014,1017,1018,1019], auto_target=False)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -96,7 +97,7 @@ class 시작703(trigger_api.Trigger):
 
 class 진행703(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$02000537_BF__MAIN__3$', arg3='3000')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000537_BF__MAIN__3$', duration=3000)
         self.spawn_monster(spawn_ids=[109])
         self.spawn_monster(spawn_ids=[103,1031,1032,1033,1034])
 

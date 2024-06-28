@@ -62,7 +62,7 @@ class 열림_끝(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.show_guide_summary(entity_id=113, text_id=40011) # 스위치를 정지하세요
         self.select_camera(trigger_id=8001, enable=False) # 연출 카메라
-        # self.set_event_ui(type=1, arg2='관문이 개방되었습니다. \\n다음 지역으로 이동할 수 있습니다.', arg3='3000')
+        # self.set_event_ui_script(type=BannerType.Text, script='관문이 개방되었습니다. \\n다음 지역으로 이동할 수 있습니다.', duration=3000)
 
 
 initial_state = 닫힘상태

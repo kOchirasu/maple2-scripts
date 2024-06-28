@@ -1,5 +1,6 @@
 """ trigger/02000241_bf/timer.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 #include dungeon_common/checkusercount.py
 from dungeon_common.checkusercount import *
@@ -27,7 +28,7 @@ class 어나운스0(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='88', seconds=5)
         self.set_effect(trigger_ids=[2001], visible=True)
-        self.set_event_ui(type=1, arg2='$02000241_BF__TIMER__0$', arg3='5000', arg4='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000241_BF__TIMER__0$', duration=5000, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='88'):
@@ -38,7 +39,7 @@ class 어나운스1(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='88', seconds=5)
         self.set_effect(trigger_ids=[2002], visible=True)
-        self.set_event_ui(type=1, arg2='$02000241_BF__TIMER__1$', arg3='5000', arg4='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000241_BF__TIMER__1$', duration=5000, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='88'):
@@ -49,7 +50,7 @@ class 어나운스1(trigger_api.Trigger):
 class 어나운스2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='88', seconds=5)
-        self.set_event_ui(type=1, arg2='$02000241_BF__TIMER__2$', arg3='5000', arg4='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000241_BF__TIMER__2$', duration=5000, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='88'):
@@ -92,7 +93,7 @@ class 시작0(trigger_api.Trigger):
 class 시작(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_cinematic_ui(type=0)
-        self.set_event_ui(type=1, arg2='$02000241_BF__TIMER__4$', arg3='5000', arg4='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000241_BF__TIMER__4$', duration=5000, box_ids=['0'])
         self.set_mesh(trigger_ids=[709,710])
         self.set_timer(timer_id='44', seconds=6)
 

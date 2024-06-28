@@ -31,7 +31,7 @@ class Setting(trigger_api.Trigger):
 class ChatchUpNpc(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         # UI 표시 안함 / NPC AI에서 스폰시킨 InteractObject 의 LifeTime
-        self.set_timer(timer_id='1', seconds=30, start_delay=1)
+        self.set_timer(timer_id='1', seconds=30, auto_remove=True)
         # 동일 맵에 스포너가 있으면 대상 npc의 위치를 보정해서 교체되는 npc를 스폰 시켜줌
         self.change_monster(from_spawn_id=17101, to_spawn_id=17102)
 

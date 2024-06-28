@@ -1,5 +1,6 @@
 """ trigger/02010054_bf/guide_01.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class 반응대기(trigger_api.Trigger):
@@ -126,7 +127,7 @@ class 가이드04종료(trigger_api.Trigger):
 class 감지대기02(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.user_detected(box_ids=[110]):
-            self.set_event_ui(type=1, arg2='$02010054_BF__GUIDE_01__0$', arg3='5000', arg4='0')
+            self.set_event_ui_script(type=BannerType.Text, script='$02010054_BF__GUIDE_01__0$', duration=5000, box_ids=['0'])
             return 종료(self.ctx)
 
 

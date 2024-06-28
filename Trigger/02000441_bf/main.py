@@ -1,5 +1,6 @@
 """ trigger/02000441_bf/main.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 # 플레이어 감지
@@ -273,7 +274,7 @@ class ship_02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_interact_object(trigger_ids=[10001097], state=1)
         self.set_interact_object(trigger_ids=[10001098], state=1)
-        self.set_event_ui(type=1, arg2='$02000441_BF__MAIN__18$', arg3='3000')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000441_BF__MAIN__18$', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.object_interacted(interact_ids=[10001097], state=0):

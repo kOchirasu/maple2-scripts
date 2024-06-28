@@ -1,6 +1,6 @@
 """ trigger/52020028_qd/main30000328.xml """
 import trigger_api
-from Maple2.Server.Game.Scripting.Trigger import Align
+from Maple2.Server.Game.Scripting.Trigger import Align, BannerType
 
 
 # 아크로폴리스 수호자 처치 퀘스트를 받고 입장
@@ -180,7 +180,7 @@ class 아르케온등장4(trigger_api.Trigger):
         self.set_cinematic_ui(type=2)
         self.reset_camera()
         self.play_system_sound_in_box(sound='System_ShowGuideSummary_01')
-        self.set_event_ui(type=1, arg2='수호자 아르케온을 처치하세요.', arg3='2000', arg4='0')
+        self.set_event_ui_script(type=BannerType.Text, script='수호자 아르케온을 처치하세요.', duration=2000, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.monster_dead(spawn_ids=[101]):

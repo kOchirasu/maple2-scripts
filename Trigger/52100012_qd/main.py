@@ -1,6 +1,6 @@
 """ trigger/52100012_qd/main.xml """
 import trigger_api
-from Maple2.Server.Game.Scripting.Trigger import Align
+from Maple2.Server.Game.Scripting.Trigger import Align, BannerType
 
 
 # 플레이어 감지
@@ -110,7 +110,7 @@ class scene_01(trigger_api.Trigger):
 class scene_02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.spawn_monster(spawn_ids=[206,207,208,209], auto_target=False)
-        self.set_event_ui(type=1, arg2='$52100012_QD__MAIN__5$', arg3='3000')
+        self.set_event_ui_script(type=BannerType.Text, script='$52100012_QD__MAIN__5$', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.monster_dead(spawn_ids=[206,207,208,209]):

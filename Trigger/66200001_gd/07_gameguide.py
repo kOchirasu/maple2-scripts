@@ -10,7 +10,7 @@ class Wait(trigger_api.Trigger):
 
 class GameGuide_20(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_timer(timer_id='1', seconds=19, start_delay=1) # 20sec
+        self.set_timer(timer_id='1', seconds=19, auto_remove=True) # 20sec
 
     def on_tick(self) -> trigger_api.Trigger:
         return NormalGameGuide_01(self.ctx)

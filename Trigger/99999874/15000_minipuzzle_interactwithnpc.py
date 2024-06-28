@@ -59,7 +59,7 @@ class InteractWithNpc_NpcTypeA_Setting(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.object_interacted(interact_ids=[12000078], state=0):
             # UI 표시 안함 / 황금 상자 소유권 Additional Effect 71001051 지속시간 동일
-            self.set_timer(timer_id='1', seconds=90, start_delay=1)
+            self.set_timer(timer_id='1', seconds=90, auto_remove=True)
             return InteractWithNpc_NpcTypeA_NpcSpawn(self.ctx)
         if self.user_value(key='TimeEventOn') >= 0:
             return Wait(self.ctx)
@@ -90,7 +90,7 @@ class InteractWithNpc_NpcTypeA_NpcChange(trigger_api.Trigger):
         self.set_mesh(trigger_ids=[15101])
         self.set_mesh(trigger_ids=[15102]) # InvisibleBlock_Inside
         self.add_buff(box_ids=[150001], skill_id=71001052, level=1, is_player=False, is_skill_set=False)
-        self.set_timer(timer_id='10', seconds=60, start_delay=1)
+        self.set_timer(timer_id='10', seconds=60, auto_remove=True)
         self.set_user_value(trigger_id=151001, key='NPCKill', value=1)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -116,7 +116,7 @@ class InteractWithNpc_NpcTypeB_Setting(trigger_api.Trigger):
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.object_interacted(interact_ids=[12000093], state=0):
-            self.set_timer(timer_id='1', seconds=90, start_delay=1)
+            self.set_timer(timer_id='1', seconds=90, auto_remove=True)
             return InteractWithNpc_NpcTypeB_NpcSpawn(self.ctx)
         if self.user_value(key='TimeEventOn') >= 0:
             return Wait(self.ctx)
@@ -147,7 +147,7 @@ class InteractWithNpc_NpcTypeB_NpcChange(trigger_api.Trigger):
         self.set_mesh(trigger_ids=[15101])
         self.set_mesh(trigger_ids=[15102]) # InvisibleBlock_Inside
         self.add_buff(box_ids=[150001], skill_id=71001052, level=1, is_player=False, is_skill_set=False)
-        self.set_timer(timer_id='10', seconds=60, start_delay=1)
+        self.set_timer(timer_id='10', seconds=60, auto_remove=True)
         self.set_user_value(trigger_id=151001, key='NPCKill', value=1)
 
     def on_tick(self) -> trigger_api.Trigger:

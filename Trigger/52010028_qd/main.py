@@ -1,6 +1,6 @@
 """ trigger/52010028_qd/main.xml """
 import trigger_api
-from Maple2.Server.Game.Scripting.Trigger import Align
+from Maple2.Server.Game.Scripting.Trigger import Align, BannerType
 
 
 # 흘러내린 시간의 틈 : 52010028
@@ -126,7 +126,7 @@ class 이제가자(trigger_api.Trigger):
         self.set_cinematic_ui(type=0)
         self.set_cinematic_ui(type=2)
         self.play_system_sound_in_box(sound='System_ShowGuideSummary_01')
-        self.set_event_ui(type=1, arg2='$52010028_QD__MAIN__8$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$52010028_QD__MAIN__8$', duration=3000, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=6000):
@@ -136,7 +136,7 @@ class 이제가자(trigger_api.Trigger):
 class idle(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.play_system_sound_in_box(sound='System_ShowGuideSummary_01')
-        self.set_event_ui(type=1, arg2='$52010028_QD__MAIN__35$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$52010028_QD__MAIN__35$', duration=3000, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.user_detected(box_ids=[2001]):
@@ -316,7 +316,7 @@ class 전투메시지(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.reset_camera(interpolation_time=0.5)
         self.play_system_sound_in_box(sound='System_ShowGuideSummary_01')
-        self.set_event_ui(type=1, arg2='$52010028_QD__MAIN__23$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$52010028_QD__MAIN__23$', duration=3000, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=2000):

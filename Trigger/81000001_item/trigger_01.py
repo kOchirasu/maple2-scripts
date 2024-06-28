@@ -1,10 +1,11 @@
 """ trigger/81000001_item/trigger_01.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class 대기(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_timer(timer_id='59', seconds=180, start_delay=1, interval=1, v_offset=-90)
+        self.set_timer(timer_id='59', seconds=180, auto_remove=True, display=True, v_offset=-90)
         self.set_portal(portal_id=1, visible=True, enable=True, minimap_visible=True)
         self.set_mesh(trigger_ids=[301,302,303], visible=True)
         self.set_mesh(trigger_ids=[3101,3102,3201,3202,3301,3302,3401,3402,3403,3404])
@@ -87,7 +88,7 @@ class 시작조건체크(trigger_api.Trigger):
 class 어나운스0(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.play_system_sound_in_box(sound='ME_Trigger_01_00')
-        self.set_event_ui(type=1, arg2='$61000004_ME__TRIGGER_01__0$', arg3='4000', arg4='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$61000004_ME__TRIGGER_01__0$', duration=4000, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):
@@ -118,7 +119,7 @@ class 어나운스1(trigger_api.Trigger):
 class 시작(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_user_value(trigger_id=999111, key='gameStart', value=1)
-        self.set_timer(timer_id='180', seconds=180, interval=1)
+        self.set_timer(timer_id='180', seconds=180, display=True)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='180'):
@@ -129,11 +130,11 @@ class 경기종료(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         # self.set_achievement(trigger_id=102, type='trigger', achieve='escape_win')
         # self.mini_game_camera_direction(box_id=102, camera_id=901)
-        self.set_event_ui(type=3, arg2='$61000004_ME__TRIGGER_01__2$', arg3='5000', arg4='102')
-        self.set_event_ui(type=4, arg2='$61000004_ME__TRIGGER_01__3$', arg3='5000', arg4='!102')
+        self.set_event_ui_script(type=BannerType.Winner, script='$61000004_ME__TRIGGER_01__2$', duration=5000, box_ids=['102'])
+        self.set_event_ui_script(type=BannerType.Lose, script='$61000004_ME__TRIGGER_01__3$', duration=5000, box_ids=['!102'])
         self.add_buff(box_ids=[102], skill_id=70000132, level=1)
         self.add_buff(box_ids=[102], skill_id=70000019, level=1) # 에레브의 축복 버프 걸어줌
-        # self.set_event_ui(type=5, arg2='$61000004_ME__TRIGGER_01__2$', arg3='3000', arg4='0')
+        # self.set_event_ui_script(type=BannerType.Fail, script='$61000004_ME__TRIGGER_01__2$', duration=3000, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=6000):

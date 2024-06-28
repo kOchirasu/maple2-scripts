@@ -1,5 +1,6 @@
 """ trigger/02000290_bf/main.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 #include dungeon_common/checkusercount.py
 from dungeon_common.checkusercount import *
@@ -69,7 +70,7 @@ class 준비(trigger_api.Trigger):
         self.set_cinematic_ui(type=0)
         self.set_cinematic_ui(type=2)
         self.set_effect(trigger_ids=[5000], visible=True) # GuideUI
-        self.set_event_ui(type=1, arg2='$02000290_BF__MAIN__4$', arg3='5000', arg4='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000290_BF__MAIN__4$', duration=5000, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):

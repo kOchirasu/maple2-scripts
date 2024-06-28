@@ -1,5 +1,6 @@
 """ trigger/52020001_qd/main_4.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class 차감지2(trigger_api.Trigger):
@@ -130,7 +131,7 @@ class 카메라연출(trigger_api.Trigger):
 
 class 알림(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='출력이 부족해 크리티아스로 진입할 수 없습니다.', arg3='4000')
+        self.set_event_ui_script(type=BannerType.Text, script='출력이 부족해 크리티아스로 진입할 수 없습니다.', duration=4000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=2000):
@@ -139,7 +140,7 @@ class 알림(trigger_api.Trigger):
 
 class 알림_2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='적들을 처치하면 에너지를 충전할 수 있습니다.\\n제한시간 내에 100%충전해, 크리티아스로 진입하세요!', arg3='4000')
+        self.set_event_ui_script(type=BannerType.Text, script='적들을 처치하면 에너지를 충전할 수 있습니다.\\n제한시간 내에 100%충전해, 크리티아스로 진입하세요!', duration=4000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=1000):
@@ -148,7 +149,7 @@ class 알림_2(trigger_api.Trigger):
 
 class 타이머시작(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_timer(timer_id='110', seconds=360, start_delay=1, interval=1, v_offset=80)
+        self.set_timer(timer_id='110', seconds=360, auto_remove=True, display=True, v_offset=80)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=100):
@@ -190,7 +191,7 @@ class 실패(trigger_api.Trigger):
         self.set_effect(trigger_ids=[10092], visible=True)
         self.set_mesh(trigger_ids=[80000], visible=True)
         self.destroy_monster(spawn_ids=[-1])
-        self.set_event_ui(type=1, arg2='미션에 실패하였습니다. 다시 재도전 해보세요.', arg3='4000')
+        self.set_event_ui_script(type=BannerType.Text, script='미션에 실패하였습니다. 다시 재도전 해보세요.', duration=4000)
         self.move_user(map_id=52020001, portal_id=99)
         self.set_portal(portal_id=14, visible=True, enable=True)
 

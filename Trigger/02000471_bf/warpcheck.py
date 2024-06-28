@@ -1,5 +1,6 @@
 """ trigger/02000471_bf/warpcheck.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class idle(trigger_api.Trigger):
@@ -32,7 +33,7 @@ class warp_1st(trigger_api.Trigger):
         self.set_interact_object(trigger_ids=[10002106], state=1)
         self.set_interact_object(trigger_ids=[10002107], state=1)
         self.set_mesh(trigger_ids=[1207,1208], visible=True)
-        self.set_event_ui(type=1, arg2='$02000471_BF__WARPCHECK__0$', arg3='5000', arg4='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000471_BF__WARPCHECK__0$', duration=5000, box_ids=['0'])
         self.add_buff(box_ids=[720], skill_id=70002061, level=1, is_player=False, is_skill_set=False)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -51,7 +52,7 @@ class warp_cancel(trigger_api.Trigger):
         self.set_interact_object(trigger_ids=[10002106], state=0)
         self.set_interact_object(trigger_ids=[10002107], state=0)
         self.set_mesh(trigger_ids=[1207,1208])
-        self.set_event_ui(type=1, arg2='$02000471_BF__WARPCHECK__1$', arg3='5000', arg4='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000471_BF__WARPCHECK__1$', duration=5000, box_ids=['0'])
         self.add_buff(box_ids=[720], skill_id=70002062, level=1, is_player=False, is_skill_set=False)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -81,7 +82,7 @@ class warp_2nd(trigger_api.Trigger):
         self.set_interact_object(trigger_ids=[10002106], state=1)
         self.set_interact_object(trigger_ids=[10002107], state=1)
         self.set_mesh(trigger_ids=[1207,1208], visible=True, fade=10.0)
-        self.set_event_ui(type=1, arg2='$02000471_BF__WARPCHECK__0$', arg3='5000', arg4='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000471_BF__WARPCHECK__0$', duration=5000, box_ids=['0'])
         self.add_buff(box_ids=[720], skill_id=70002061, level=1, is_player=False, is_skill_set=False)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -100,7 +101,7 @@ class warp2_cancel(trigger_api.Trigger):
         self.set_interact_object(trigger_ids=[10002106], state=0)
         self.set_interact_object(trigger_ids=[10002107], state=0)
         self.set_mesh(trigger_ids=[1207,1208])
-        self.set_event_ui(type=1, arg2='$02000471_BF__WARPCHECK__1$', arg3='5000', arg4='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000471_BF__WARPCHECK__1$', duration=5000, box_ids=['0'])
         self.add_buff(box_ids=[720], skill_id=70002062, level=1, is_player=False, is_skill_set=False)
 
     def on_tick(self) -> trigger_api.Trigger:

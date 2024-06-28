@@ -93,7 +93,7 @@ class Start(trigger_api.Trigger):
 
 class Step_01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        # self.set_event_ui(type=0, arg2='1,25', arg3='0', arg4='0') # 라운드 표기
+        # self.set_event_ui_round(rounds=[1,25]) # 라운드 표기
         self.set_user_value(trigger_id=991107, key='Round_01', value=1) # normal LV1
         self.arcade_boom_boom_ocean_start_round(round=1, round_duration=1500, time_score_rate=1033) # 20초
         # [02100216] System_Fruit_Throw_Loop_01 (과일 날라 다니는 효과음, 루핑)
@@ -108,7 +108,7 @@ class Step_01(trigger_api.Trigger):
 
 class Step_02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        # self.set_event_ui(type=0, arg2='2,25', arg3='0', arg4='0') # 라운드 표기
+        # self.set_event_ui_round(rounds=[2,25]) # 라운드 표기
         self.set_user_value(trigger_id=991107, key='Round_02', value=1) # normal LV2
         self.arcade_boom_boom_ocean_clear_round(round=1)
         self.arcade_boom_boom_ocean_start_round(round=2, round_duration=20000, time_score_rate=1033)
@@ -122,7 +122,7 @@ class Step_02(trigger_api.Trigger):
 
 class Step_03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        # self.set_event_ui(type=0, arg2='3,25', arg3='0', arg4='0') # 라운드 표기
+        # self.set_event_ui_round(rounds=[3,25]) # 라운드 표기
         self.set_user_value(trigger_id=991111, key='Round_01', value=1) # item_01
         self.set_user_value(trigger_id=991107, key='Round_03', value=1) # normal LV3
         self.arcade_boom_boom_ocean_clear_round(round=2)
@@ -140,7 +140,7 @@ class Step_03(trigger_api.Trigger):
 
 class Step_04(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        # self.set_event_ui(type=0, arg2='4,25', arg3='0', arg4='0') # 라운드 표기
+        # self.set_event_ui_round(rounds=[4,25]) # 라운드 표기
         self.select_camera_path(path_ids=[8002,8003], return_view=False) # 카메라 뒤로 당김
         self.set_effect(trigger_ids=[7999], visible=True) # 카메라 사운드
         self.set_user_value(trigger_id=991120, key='Round_01', value=1) # wave3 LV1
@@ -162,7 +162,7 @@ class Step_05(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.arcade_boom_boom_ocean_clear_round(round=4)
         self.arcade_boom_boom_ocean_start_round(round=5, round_duration=20000, time_score_rate=1550)
-        # self.set_event_ui(type=0, arg2='5,25', arg3='0', arg4='0') # 라운드 표기
+        # self.set_event_ui_round(rounds=[5,25]) # 라운드 표기
         self.set_user_value(trigger_id=991104, key='Round_01', value=1) # wave LV1
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -176,7 +176,7 @@ class Step_06(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.arcade_boom_boom_ocean_clear_round(round=5)
         self.arcade_boom_boom_ocean_start_round(round=6, round_duration=20000, time_score_rate=1550)
-        # self.set_event_ui(type=0, arg2='6,25', arg3='0', arg4='0') # 라운드 표기
+        # self.set_event_ui_round(rounds=[6,25]) # 라운드 표기
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=20000):
@@ -189,7 +189,7 @@ class Step_07(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.arcade_boom_boom_ocean_clear_round(round=6)
         self.arcade_boom_boom_ocean_start_round(round=7, round_duration=20000, time_score_rate=2067)
-        # self.set_event_ui(type=0, arg2='7,25', arg3='0', arg4='0') # 라운드 표기
+        # self.set_event_ui_round(rounds=[7,25]) # 라운드 표기
         self.set_user_value(trigger_id=991105, key='Round_00', value=1) # wave2 LV0
         self.set_user_value(trigger_id=991102, key='Treasure_box', value=1) # 보물상자 스폰 스위치 ON
 
@@ -204,7 +204,7 @@ class Step_08(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.arcade_boom_boom_ocean_clear_round(round=7)
         self.arcade_boom_boom_ocean_start_round(round=8, round_duration=20000, time_score_rate=2067)
-        # self.set_event_ui(type=0, arg2='8,25', arg3='0', arg4='0') # 라운드 표기
+        # self.set_event_ui_round(rounds=[8,25]) # 라운드 표기
         self.set_user_value(trigger_id=991121, key='Round_01', value=1) # wave4 LV1
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -218,7 +218,7 @@ class Step_09(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.arcade_boom_boom_ocean_clear_round(round=8)
         self.arcade_boom_boom_ocean_start_round(round=9, round_duration=20000, time_score_rate=2067)
-        # self.set_event_ui(type=0, arg2='9,25', arg3='0', arg4='0') # 라운드 표기
+        # self.set_event_ui_round(rounds=[9,25]) # 라운드 표기
         self.set_user_value(trigger_id=991122, key='Round_01', value=1) # wave5 LV1
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -235,7 +235,7 @@ class Step_10(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.arcade_boom_boom_ocean_clear_round(round=9)
         self.arcade_boom_boom_ocean_start_round(round=10, round_duration=20000, time_score_rate=2583)
-        # self.set_event_ui(type=0, arg2='10,25', arg3='0', arg4='0') # 라운드 표기
+        # self.set_event_ui_round(rounds=[10,25]) # 라운드 표기
         self.set_effect(trigger_ids=[7999], visible=True) # 카메라 사운드
         self.select_camera_path(path_ids=[8003,8004], return_view=False) # 카메라 뒤로 당김
         self.set_user_value(trigger_id=991106, key='Round_01', value=1) # cannon LV 1
@@ -249,7 +249,7 @@ class Step_11(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.arcade_boom_boom_ocean_clear_round(round=10)
         self.arcade_boom_boom_ocean_start_round(round=11, round_duration=20000, time_score_rate=2583)
-        # self.set_event_ui(type=0, arg2='11,25', arg3='0', arg4='0') # 라운드 표기
+        # self.set_event_ui_round(rounds=[11,25]) # 라운드 표기
         self.set_user_value(trigger_id=991106, key='Round_02', value=1) # cannon LV 2
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -263,7 +263,7 @@ class Step_12(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.arcade_boom_boom_ocean_clear_round(round=11)
         self.arcade_boom_boom_ocean_start_round(round=12, round_duration=20000, time_score_rate=2583)
-        # self.set_event_ui(type=0, arg2='12,25', arg3='0', arg4='0') # 라운드 표기
+        # self.set_event_ui_round(rounds=[12,25]) # 라운드 표기
         self.set_user_value(trigger_id=991106, key='Round_03', value=1) # cannon LV 3
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -277,7 +277,7 @@ class Step_13(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.arcade_boom_boom_ocean_clear_round(round=12)
         self.arcade_boom_boom_ocean_start_round(round=13, round_duration=20000, time_score_rate=3100)
-        # self.set_event_ui(type=0, arg2='13,25', arg3='0', arg4='0') # 라운드 표기
+        # self.set_event_ui_round(rounds=[13,25]) # 라운드 표기
         self.set_user_value(trigger_id=991106, key='Round_04', value=1) # cannon LV 4
         self.set_user_value(trigger_id=991105, key='Round_01', value=1) # wave2 LV1
 
@@ -292,7 +292,7 @@ class Step_14(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.arcade_boom_boom_ocean_clear_round(round=13)
         self.arcade_boom_boom_ocean_start_round(round=14, round_duration=20000, time_score_rate=3100)
-        # self.set_event_ui(type=0, arg2='14,25', arg3='0', arg4='0') # 라운드 표기
+        # self.set_event_ui_round(rounds=[14,25]) # 라운드 표기
         self.set_user_value(trigger_id=991123, key='Round_01', value=1) # normal2 LV1
         self.set_user_value(trigger_id=991108, key='Round_03', value=1) # fog
 
@@ -307,7 +307,7 @@ class Step_15(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.arcade_boom_boom_ocean_clear_round(round=14)
         self.arcade_boom_boom_ocean_start_round(round=15, round_duration=20000, time_score_rate=3100)
-        # self.set_event_ui(type=0, arg2='15,25', arg3='0', arg4='0') # 라운드 표기
+        # self.set_event_ui_round(rounds=[15,25]) # 라운드 표기
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=20000):
@@ -323,7 +323,7 @@ class Step_16(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.arcade_boom_boom_ocean_clear_round(round=15)
         self.arcade_boom_boom_ocean_start_round(round=16, round_duration=20000, time_score_rate=1350)
-        # self.set_event_ui(type=0, arg2='16,25', arg3='0', arg4='0') # 라운드 표기
+        # self.set_event_ui_round(rounds=[16,25]) # 라운드 표기
         self.set_user_value(trigger_id=991123, key='Round_02', value=1) # normal2 LV2
         self.set_user_value(trigger_id=991105, key='Round_02', value=1) # wave2 LV2
 
@@ -338,7 +338,7 @@ class Step_17(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.arcade_boom_boom_ocean_clear_round(round=16)
         self.arcade_boom_boom_ocean_start_round(round=17, round_duration=20000, time_score_rate=1350)
-        # self.set_event_ui(type=0, arg2='17,25', arg3='0', arg4='0') # 라운드 표기
+        # self.set_event_ui_round(rounds=[17,25]) # 라운드 표기
         self.set_user_value(trigger_id=991106, key='Round_05', value=1) # cannon LV 5
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -352,7 +352,7 @@ class Step_18(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.arcade_boom_boom_ocean_clear_round(round=17)
         self.arcade_boom_boom_ocean_start_round(round=18, round_duration=20000, time_score_rate=1350)
-        # self.set_event_ui(type=0, arg2='18,25', arg3='0', arg4='0') # 라운드 표기
+        # self.set_event_ui_round(rounds=[18,25]) # 라운드 표기
         self.set_user_value(trigger_id=991123, key='Round_03', value=1) # normal2 LV3
         self.set_user_value(trigger_id=991122, key='Round_02', value=1) # wave5 LV1
 
@@ -367,7 +367,7 @@ class Step_19(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.arcade_boom_boom_ocean_clear_round(round=18)
         self.arcade_boom_boom_ocean_start_round(round=19, round_duration=20000, time_score_rate=1125)
-        # self.set_event_ui(type=0, arg2='18,25', arg3='0', arg4='0') # 라운드 표기
+        # self.set_event_ui_round(rounds=[18,25]) # 라운드 표기
         self.set_user_value(trigger_id=991107, key='Round_06', value=1) # normal LV4
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -381,7 +381,7 @@ class Step_20(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.arcade_boom_boom_ocean_clear_round(round=19)
         self.arcade_boom_boom_ocean_start_round(round=20, round_duration=20000, time_score_rate=1125)
-        # self.set_event_ui(type=0, arg2='20,25', arg3='0', arg4='0') # 라운드 표기
+        # self.set_event_ui_round(rounds=[20,25]) # 라운드 표기
         self.set_user_value(trigger_id=991123, key='Round_04', value=1) # normal2 LV4
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -395,7 +395,7 @@ class Step_21(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.arcade_boom_boom_ocean_clear_round(round=20)
         self.arcade_boom_boom_ocean_start_round(round=21, round_duration=20000, time_score_rate=1125)
-        # self.set_event_ui(type=0, arg2='21,25', arg3='0', arg4='0') # 라운드 표기
+        # self.set_event_ui_round(rounds=[21,25]) # 라운드 표기
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=20000):
@@ -408,7 +408,7 @@ class Step_22(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.arcade_boom_boom_ocean_clear_round(round=21)
         self.arcade_boom_boom_ocean_start_round(round=22, round_duration=20000, time_score_rate=900)
-        # self.set_event_ui(type=0, arg2='22,25', arg3='0', arg4='0') # 라운드 표기
+        # self.set_event_ui_round(rounds=[22,25]) # 라운드 표기
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=20000):
@@ -421,7 +421,7 @@ class Step_23(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.arcade_boom_boom_ocean_clear_round(round=22)
         self.arcade_boom_boom_ocean_start_round(round=23, round_duration=20000, time_score_rate=900)
-        # self.set_event_ui(type=0, arg2='23,25', arg3='0', arg4='0') # 라운드 표기
+        # self.set_event_ui_round(rounds=[23,25]) # 라운드 표기
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=20000):
@@ -434,7 +434,7 @@ class Step_24(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.arcade_boom_boom_ocean_clear_round(round=23)
         self.arcade_boom_boom_ocean_start_round(round=24, round_duration=20000, time_score_rate=900)
-        # self.set_event_ui(type=0, arg2='24,25', arg3='0', arg4='0') # 라운드 표기
+        # self.set_event_ui_round(rounds=[24,25]) # 라운드 표기
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=20000):
@@ -447,7 +447,7 @@ class Step_25(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.arcade_boom_boom_ocean_clear_round(round=24)
         self.arcade_boom_boom_ocean_start_round(round=25, round_duration=20000, time_score_rate=562)
-        # self.set_event_ui(type=0, arg2='25,25', arg3='0', arg4='0') # 라운드 표기
+        # self.set_event_ui_round(rounds=[25,25]) # 라운드 표기
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=120000):

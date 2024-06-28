@@ -1,5 +1,6 @@
 """ trigger/52000014_qd/collapse_2900.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class 대기(trigger_api.Trigger):
@@ -77,7 +78,7 @@ class 카메라연출03(trigger_api.Trigger):
 
 class 무너짐02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$52000014_QD__COLLAPSE_2900__1$', arg3='4000', arg4='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$52000014_QD__COLLAPSE_2900__1$', duration=4000, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.user_detected(box_ids=[9002]):
@@ -115,7 +116,7 @@ class 반응안내01(trigger_api.Trigger):
         self.set_timer(timer_id='20', seconds=4)
         self.set_effect(trigger_ids=[12902], visible=True) # Vibrate Short
         self.set_effect(trigger_ids=[22902], visible=True) # Vibrate Sound
-        self.set_event_ui(type=1, arg2='$52000014_QD__COLLAPSE_2900__2$', arg3='4000', arg4='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$52000014_QD__COLLAPSE_2900__2$', duration=4000, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='20'):
@@ -124,7 +125,7 @@ class 반응안내01(trigger_api.Trigger):
 
 class 줍기안내01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$52000014_QD__COLLAPSE_2900__3$', arg3='4000', arg4='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$52000014_QD__COLLAPSE_2900__3$', duration=4000, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.quest_user_detected(box_ids=[9004], quest_ids=[50001250], quest_states=[2]):

@@ -1,5 +1,6 @@
 """ trigger/52020026_qd/52020026_main.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class 감지(trigger_api.Trigger):
@@ -68,7 +69,7 @@ class 층1(trigger_api.Trigger):
 
 class 층레버활성1(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='레버를 작동시켜 계단을 완성하세요.', arg3='5000')
+        self.set_event_ui_script(type=BannerType.Text, script='레버를 작동시켜 계단을 완성하세요.', duration=5000)
         self.set_interact_object(trigger_ids=[10001320], state=1)
 
     def on_tick(self) -> trigger_api.Trigger:

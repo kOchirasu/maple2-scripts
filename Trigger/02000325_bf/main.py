@@ -1,5 +1,6 @@
 """ trigger/02000325_bf/main.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 #include dungeon_common/checkusercount.py
 from dungeon_common.checkusercount import *
@@ -29,21 +30,21 @@ class DungeonStart(trigger_api.Trigger):
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=2000):
-            self.set_event_ui(type=1, arg2='$02000325_BF__MAIN__0$', arg3='4000', arg4='0')
+            self.set_event_ui_script(type=BannerType.Text, script='$02000325_BF__MAIN__0$', duration=4000, box_ids=['0'])
             return 어나운스02(self.ctx)
 
 
 class 어나운스02(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3500):
-            self.set_event_ui(type=1, arg2='$02000325_BF__MAIN__1$', arg3='3500', arg4='0')
+            self.set_event_ui_script(type=BannerType.Text, script='$02000325_BF__MAIN__1$', duration=3500, box_ids=['0'])
             return 어나운스03(self.ctx)
 
 
 class 어나운스03(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3500):
-            self.set_event_ui(type=1, arg2='$02000325_BF__MAIN__2$', arg3='3500', arg4='0')
+            self.set_event_ui_script(type=BannerType.Text, script='$02000325_BF__MAIN__2$', duration=3500, box_ids=['0'])
             return 라운드반응체크1(self.ctx)
 
 
@@ -70,7 +71,7 @@ class 라운드카운트1(trigger_api.Trigger):
         self.set_effect(trigger_ids=[612], visible=True)
         self.set_interact_object(trigger_ids=[10000739], state=1)
         self.set_interact_object(trigger_ids=[10000740], state=1)
-        self.set_event_ui(type=0, arg2='1,3')
+        self.set_event_ui_round(rounds=[1,3])
         self.show_count_ui(text='$02000325_BF__MAIN__3$', stage=1, count=3)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -338,7 +339,7 @@ class 라운드대기2(trigger_api.Trigger):
 class 어나운스04(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
-            self.set_event_ui(type=1, arg2='$02000325_BF__MAIN__4$', arg3='3500', arg4='0')
+            self.set_event_ui_script(type=BannerType.Text, script='$02000325_BF__MAIN__4$', duration=3500, box_ids=['0'])
             return 라운드반응체크2(self.ctx)
 
 
@@ -354,7 +355,7 @@ class 라운드반응체크2(trigger_api.Trigger):
 
 class 어나운스04_2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$02000325_BF__MAIN__5$', arg3='3500', arg4='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000325_BF__MAIN__5$', duration=3500, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -366,7 +367,7 @@ class 라운드카운트2(trigger_api.Trigger):
         self.set_effect(trigger_ids=[602], visible=True)
         self.set_effect(trigger_ids=[612], visible=True)
         self.set_interact_object(trigger_ids=[10000740], state=1)
-        self.set_event_ui(type=0, arg2='2,3')
+        self.set_event_ui_round(rounds=[2,3])
         self.show_count_ui(text='$02000325_BF__MAIN__6$', stage=2, count=3)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -792,7 +793,7 @@ class 라운드대기3(trigger_api.Trigger):
 class 어나운스05(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
-            self.set_event_ui(type=1, arg2='$02000325_BF__MAIN__7$', arg3='3500', arg4='0')
+            self.set_event_ui_script(type=BannerType.Text, script='$02000325_BF__MAIN__7$', duration=3500, box_ids=['0'])
             return 라운드반응체크3(self.ctx)
 
 
@@ -810,7 +811,7 @@ class 라운드반응체크3(trigger_api.Trigger):
 class 어나운스05_2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='4', seconds=4)
-        self.set_event_ui(type=1, arg2='$02000325_BF__MAIN__8$', arg3='3500', arg4='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000325_BF__MAIN__8$', duration=3500, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -822,7 +823,7 @@ class 라운드카운트3(trigger_api.Trigger):
         self.set_effect(trigger_ids=[602], visible=True)
         self.set_effect(trigger_ids=[612])
         # self.set_mesh(trigger_ids=[3000,3001,3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013,3014,3015,3016,3017,3018,3019,3020,3021,3022], interval=200, fade=2.0)
-        self.set_event_ui(type=0, arg2='3,3')
+        self.set_event_ui_round(rounds=[3,3])
         self.show_count_ui(text='$02000325_BF__MAIN__9$', stage=3, count=3)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -1257,7 +1258,7 @@ class 포털생성(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=2000):
             self.set_portal(portal_id=2, visible=True, enable=True, minimap_visible=True)
-            self.set_event_ui(type=0, arg2='0,0')
+            self.set_event_ui_round(rounds=[0,0])
             self.dungeon_clear()
             return 종료(self.ctx)
 

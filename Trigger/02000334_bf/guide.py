@@ -21,7 +21,7 @@ class 차타이머1(trigger_api.Trigger):
 
 class 가이드_01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        # self.set_event_ui(type=1, arg2='$02000334_BF__GUIDE__0$', arg3='3000')
+        # self.set_event_ui_script(type=BannerType.Text, script='$02000334_BF__GUIDE__0$', duration=3000)
         self.play_system_sound_in_box(sound='System_ShowGuideSummary_01')
         self.show_guide_summary(entity_id=101, text_id=20000010) # 폭탄을 던지세요
         self.set_effect(trigger_ids=[90021], visible=True) # 이벤트 UI 에 맞는 사운드

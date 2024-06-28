@@ -1,6 +1,6 @@
 """ trigger/82000006_survival/01_survival.xml """
 import trigger_api
-from Maple2.Server.Game.Scripting.Trigger import FieldGame
+from Maple2.Server.Game.Scripting.Trigger import FieldGame, BannerType
 
 
 class Setting(trigger_api.Trigger):
@@ -31,7 +31,7 @@ class Setting(trigger_api.Trigger):
 class Wait_Talk01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         # test용 수정 가능 지점 arg2="60" / arg2="5"
-        self.set_timer(timer_id='1', seconds=90, start_delay=1, interval=1, v_offset=-80)
+        self.set_timer(timer_id='1', seconds=90, auto_remove=True, display=True, v_offset=-80)
         self.side_npc_talk(npc_id=23500110, illust='Mushking_normal', duration=4000, script='$82000012_survival__01_SURVIVAL__0$')
         self.write_log(log_name='Survival', event='Waiting_Start') # 서바이벌 대기 시작
 
@@ -436,7 +436,7 @@ class GameCancel(trigger_api.Trigger):
 
 class ReadyToKickOut(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$82000012_survival__01_SURVIVAL__18$', arg3='4000', arg4='0') # 잠시 후 원래 있던 곳으로 돌아갑니다.
+        self.set_event_ui_script(type=BannerType.Text, script='$82000012_survival__01_SURVIVAL__18$', duration=4000, box_ids=['0']) # 잠시 후 원래 있던 곳으로 돌아갑니다.
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):

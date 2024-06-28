@@ -1,5 +1,6 @@
 """ trigger/02000335_bf/boss.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class 대기(trigger_api.Trigger):
@@ -58,7 +59,7 @@ class 화물문_개방_종료(trigger_api.Trigger):
 
 class 보스등장연출_00(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$02000335_BF__BOSS__0$', arg3='3000')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000335_BF__BOSS__0$', duration=3000)
         # BG\Common\Eff_Com_ObjectShake.xml
         self.set_effect(trigger_ids=[6921], visible=True)
         self.set_timer(timer_id='3', seconds=3)

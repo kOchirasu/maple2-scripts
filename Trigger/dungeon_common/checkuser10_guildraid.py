@@ -4,7 +4,7 @@ import trigger_api
 
 class CheckUser10_GuildRaid(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_timer(timer_id='1', seconds=30, start_delay=1) # 최대 30초 대기
+        self.set_timer(timer_id='1', seconds=30, auto_remove=True) # 최대 30초 대기
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.count_users(box_id=9900) >= 10:

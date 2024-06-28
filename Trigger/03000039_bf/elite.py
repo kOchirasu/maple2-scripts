@@ -1,5 +1,6 @@
 """ trigger/03000039_bf/elite.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class 대기(trigger_api.Trigger):
@@ -22,7 +23,7 @@ class 엘리트등장(trigger_api.Trigger):
             return 엘리트등장(self.ctx)
         if self.monster_dead(spawn_ids=[1001,1002,1003]):
             self.hide_guide_summary(entity_id=23000002)
-            self.set_event_ui(type=7, arg3='2000', arg4='0')
+            self.set_event_ui_script(type=BannerType.Success, duration=2000, box_ids=['0'])
             return 상자확률(self.ctx)
 
 

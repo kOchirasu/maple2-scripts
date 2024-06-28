@@ -1,5 +1,6 @@
 """ trigger/02000329_bf/01_main.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 #include dungeon_common/checkusercount.py
 from dungeon_common.checkusercount import *
@@ -51,7 +52,7 @@ class scene_02(trigger_api.Trigger):
         self.set_cinematic_ui(type=2)
         self.set_cinematic_ui(type=7)
         self.select_camera_path(path_ids=[80005])
-        self.set_event_ui(type=1, arg2='$02000329_BF__01_MAIN__1$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000329_BF__01_MAIN__1$', duration=3000, box_ids=['0'])
         self.spawn_monster(spawn_ids=[2001,2002,2003,2004,2005], auto_target=False)
         self.set_mesh(trigger_ids=[10000,11001,11002,11003,19999])
 

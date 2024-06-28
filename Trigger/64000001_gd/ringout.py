@@ -13,7 +13,7 @@ class 대기(trigger_api.Trigger):
 
 class 링아웃(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        # self.set_event_ui(type=1, arg2='링아웃', arg3='2000')
+        # self.set_event_ui_script(type=BannerType.Text, script='링아웃', duration=2000)
         self.set_timer(timer_id='3', seconds=3)
 
     def on_tick(self) -> trigger_api.Trigger:

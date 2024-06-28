@@ -10,7 +10,7 @@ class 신호대기(trigger_api.Trigger):
 
 class 시작(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_timer(timer_id='1', seconds=20, start_delay=1, interval=1)
+        self.set_timer(timer_id='1', seconds=20, auto_remove=True, display=True)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='1'):

@@ -1,5 +1,6 @@
 """ trigger/02000350_bf/main_5.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class 대기(trigger_api.Trigger):
@@ -18,7 +19,7 @@ class 대기(trigger_api.Trigger):
 
 class 시작대기(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=0, arg2='21,25,21')
+        self.set_event_ui_round(rounds=[21,25,21])
         self.set_timer(timer_id='3', seconds=3)
         self.dark_stream_start_round(round=21, ui_duration=3000, damage_penalty=100)
 
@@ -29,7 +30,7 @@ class 시작대기(trigger_api.Trigger):
 
 class 라운드21(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$02000350_BF__MAIN_5__0$', arg3='4000', arg4='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000350_BF__MAIN_5__0$', duration=4000, box_ids=['0'])
         self.dark_stream_spawn_monster(spawn_ids=[121001], score=110000)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -41,7 +42,7 @@ class 라운드21(trigger_api.Trigger):
 
 class 라운드대기22(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=0, arg2='22,25,21')
+        self.set_event_ui_round(rounds=[22,25,21])
         self.dark_stream_start_round(round=22, ui_duration=3000, damage_penalty=100)
         self.set_timer(timer_id='3', seconds=3)
 
@@ -64,7 +65,7 @@ class 라운드22(trigger_api.Trigger):
 class 라운드대기23(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='3', seconds=3)
-        self.set_event_ui(type=0, arg2='23,25,21')
+        self.set_event_ui_round(rounds=[23,25,21])
         self.dark_stream_start_round(round=23, ui_duration=3000, damage_penalty=100)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -85,9 +86,9 @@ class 라운드23(trigger_api.Trigger):
 
 class 라운드대기24(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=0, arg2='24,25,21')
+        self.set_event_ui_round(rounds=[24,25,21])
         self.dark_stream_start_round(round=24, ui_duration=3000, damage_penalty=100)
-        self.set_event_ui(type=1, arg2='$02000350_BF__MAIN_5__1$', arg3='2000', arg4='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$02000350_BF__MAIN_5__1$', duration=2000, box_ids=['0'])
         self.set_timer(timer_id='3', seconds=3)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -97,7 +98,7 @@ class 라운드대기24(trigger_api.Trigger):
 
 class 라운드24(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_timer(timer_id='30', seconds=30, start_delay=1, interval=1, v_offset=80)
+        self.set_timer(timer_id='30', seconds=30, auto_remove=True, display=True, v_offset=80)
         self.spawn_monster(spawn_ids=[124099], auto_target=False)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -111,7 +112,7 @@ class 라운드24(trigger_api.Trigger):
 
 class 라운드대기25(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=0, arg2='25,25,21')
+        self.set_event_ui_round(rounds=[25,25,21])
         self.set_effect(trigger_ids=[6501], visible=True)
         self.set_effect(trigger_ids=[6502], visible=True)
         self.dark_stream_start_round(round=25, ui_duration=3000, damage_penalty=100)

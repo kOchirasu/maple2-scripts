@@ -1,5 +1,6 @@
 """ trigger/52020030_qd/main30000335.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 # 투르카와 전투
@@ -306,7 +307,7 @@ class 투르카공격준비05(trigger_api.Trigger):
         self.set_onetime_effect(id=4, path='BG/Common/ScreenMask/Eff_fadein_1sec.xml')
         self.set_onetime_effect(id=300, path='BG/Common/Eff_Com_Vibrate_Short.xml')
         self.play_system_sound_in_box(sound='System_ShowGuideSummary_01')
-        self.set_event_ui(type=1, arg2='투르카의 부하들을 처치하세요.', arg3='2000', arg4='0')
+        self.set_event_ui_script(type=BannerType.Text, script='투르카의 부하들을 처치하세요.', duration=2000, box_ids=['0'])
         self.set_cinematic_ui(type=0)
         self.set_cinematic_ui(type=2)
         self.spawn_monster(spawn_ids=[103], auto_target=False)

@@ -1,6 +1,6 @@
 """ trigger/52010027_qd/main.xml """
 import trigger_api
-from Maple2.Server.Game.Scripting.Trigger import Align
+from Maple2.Server.Game.Scripting.Trigger import Align, BannerType
 
 
 # 바람의 골짜기 : 52010027
@@ -246,7 +246,7 @@ class 연출_습격현장_전투준비_02(trigger_api.Trigger):
 
 class 차_전투1(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$52010027_QD__MAIN__22$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$52010027_QD__MAIN__22$', duration=3000, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.monster_dead(spawn_ids=[601,602,603,604,605,606]):
@@ -309,7 +309,7 @@ class 차_전투2(trigger_api.Trigger):
         self.reset_camera()
         self.set_cinematic_ui(type=0)
         self.set_cinematic_ui(type=2)
-        self.set_event_ui(type=1, arg2='$52010027_QD__MAIN__25$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$52010027_QD__MAIN__25$', duration=3000, box_ids=['0'])
         self.spawn_monster(spawn_ids=[701]) # 악당Mob_1
         self.spawn_monster(spawn_ids=[702]) # 악당Mob_2
         self.spawn_monster(spawn_ids=[703]) # 악당Mob_3
@@ -541,7 +541,7 @@ class 페리온으로02(trigger_api.Trigger):
 
 class 페리온으로03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$52010027_QD__MAIN__55$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$52010027_QD__MAIN__55$', duration=3000, box_ids=['0'])
 
 
 initial_state = idle

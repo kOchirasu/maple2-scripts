@@ -1,5 +1,6 @@
 """ trigger/02000471_bf/timer.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class idle(trigger_api.Trigger):
@@ -13,8 +14,8 @@ class idle(trigger_api.Trigger):
 
 class start(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_timer(timer_id='Timer', seconds=420, start_delay=1, interval=1)
-        self.set_event_ui(type=1, arg2='$02000471_BF__TIMER__0$', arg3='5000', arg4='0')
+        self.set_timer(timer_id='Timer', seconds=420, auto_remove=True, display=True)
+        self.set_event_ui_script(type=BannerType.Text, script='$02000471_BF__TIMER__0$', duration=5000, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='Timer'):

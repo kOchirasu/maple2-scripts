@@ -62,7 +62,7 @@ class 부상병발생(trigger_api.Trigger):
 
 class 차폭탄방어2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_timer(timer_id='99', seconds=60, start_delay=1, interval=1, v_offset=80)
+        self.set_timer(timer_id='99', seconds=60, auto_remove=True, display=True, v_offset=80)
         self.set_user_value(trigger_id=992003, key='bombStart', value=1)
         self.set_cinematic_ui(type=1)
         self.set_cinematic_ui(type=3)

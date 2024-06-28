@@ -1,5 +1,6 @@
 """ trigger/02000290_bf/main_2.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class 대기(trigger_api.Trigger):
@@ -217,7 +218,7 @@ class 공주구출(trigger_api.Trigger):
 
 class 완료(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=7, arg2='$02000290_BF__MAIN_2__2$', arg3='3000', arg4='0')
+        self.set_event_ui_script(type=BannerType.Success, script='$02000290_BF__MAIN_2__2$', duration=3000, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):

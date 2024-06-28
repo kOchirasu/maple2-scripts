@@ -1,10 +1,11 @@
 """ trigger/81000003_item/trigger_03.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class 입장(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_timer(timer_id='59', seconds=180, start_delay=1, interval=1, v_offset=-90, desc='wait.xml 시작 타이머 설정 UI') # 3분 후 시작
+        self.set_timer(timer_id='59', seconds=180, auto_remove=True, display=True, v_offset=-90, desc='wait.xml 시작 타이머 설정 UI') # 3분 후 시작
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.user_detected(box_ids=[402]):
@@ -29,7 +30,7 @@ class 대기(trigger_api.Trigger):
 class 어나운스0(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.play_system_sound_in_box(sound='ME_Trigger_03_00')
-        self.set_event_ui(type=1, arg2='$61000006_ME__TRIGGER_03__0$', arg3='4000', arg4='0')
+        self.set_event_ui_script(type=BannerType.Text, script='$61000006_ME__TRIGGER_03__0$', duration=4000, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):
@@ -48,7 +49,7 @@ class 어나운스1(trigger_api.Trigger):
 class 시작(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_user_value(trigger_id=999111, key='gameStart', value=1)
-        self.set_timer(timer_id='160', seconds=160, interval=1, desc='trigger_03.xml 시작 타이머 설정')
+        self.set_timer(timer_id='160', seconds=160, display=True, desc='trigger_03.xml 시작 타이머 설정')
         self.set_mesh(trigger_ids=[501,502,503,504,505,506,507,508,509])
         self.set_interact_object(trigger_ids=[10000224], state=1)
         self.set_interact_object(trigger_ids=[10000214], state=1)
@@ -68,10 +69,10 @@ class 경기종료(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         # self.set_achievement(trigger_id=401, type='trigger', achieve='crazyrunner_win')
         # self.mini_game_camera_direction(box_id=401, camera_id=301)
-        self.set_event_ui(type=3, arg2='$61000006_ME__TRIGGER_03__2$', arg3='5000', arg4='401')
-        self.set_event_ui(type=4, arg2='$61000006_ME__TRIGGER_03__3$', arg3='5000', arg4='!401')
+        self.set_event_ui_script(type=BannerType.Winner, script='$61000006_ME__TRIGGER_03__2$', duration=5000, box_ids=['401'])
+        self.set_event_ui_script(type=BannerType.Lose, script='$61000006_ME__TRIGGER_03__3$', duration=5000, box_ids=['!401'])
         self.add_buff(box_ids=[401], skill_id=70000132, level=1)
-        # self.set_event_ui(type=5, arg2='$61000004_ME__TRIGGER_01__2$', arg3='3000', arg4='0')
+        # self.set_event_ui_script(type=BannerType.Fail, script='$61000004_ME__TRIGGER_01__2$', duration=3000, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=6000):

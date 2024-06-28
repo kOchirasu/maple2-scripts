@@ -1,5 +1,6 @@
 """ trigger/02020061_bf/object1.xml """
 import trigger_api
+from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 
 class 대기(trigger_api.Trigger):
@@ -28,7 +29,7 @@ class 레버1_체크(trigger_api.Trigger):
 
 class 레버1_안내멘트(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui(type=1, arg2='$02020061_BF__OBJECT1__0$', arg3='5000', arg4='9011')
+        self.set_event_ui_script(type=BannerType.Text, script='$02020061_BF__OBJECT1__0$', duration=5000, box_ids=['9011'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.user_value(key='ObjectStart') >= 0:
@@ -41,7 +42,7 @@ class 레버1_발동(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_effect(trigger_ids=[5001], visible=True)
         self.set_interact_object(trigger_ids=[12000084], state=1)
-        self.set_event_ui(type=1, arg2='$02020061_BF__OBJECT1__1$', arg3='5000', arg4='9011')
+        self.set_event_ui_script(type=BannerType.Text, script='$02020061_BF__OBJECT1__1$', duration=5000, box_ids=['9011'])
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.user_value(key='ObjectStart') >= 0:
