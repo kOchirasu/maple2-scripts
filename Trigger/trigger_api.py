@@ -1395,11 +1395,11 @@ class Trigger:
         """
         self.ctx.SetDirectionalLight(diffuse_color, specular_color)
 
-    def set_effect(self, trigger_ids: List[int], visible: bool=False, start_delay: int=0, interval: int=0) -> None:
+    def set_effect(self, trigger_ids: List[int]=[], visible: bool=False, start_delay: int=0, interval: int=0) -> None:
         """이펙트를설정한다
 
         Args:
-            trigger_ids (List[int]): _description_.
+            trigger_ids (List[int]): _description_. Defaults to [].
             visible (bool): _description_. Defaults to False.
             start_delay (int): _description_. Defaults to 0.
             interval (int): _description_. Defaults to 0.
