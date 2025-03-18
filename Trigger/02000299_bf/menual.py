@@ -16,7 +16,7 @@ class 안내시작(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_effect(trigger_ids=[604], visible=True)
         self.select_camera(trigger_id=301)
-        self.add_buff(box_ids=[104], skill_id=70000107, level=1, is_player=False, is_skill_set=False)
+        self.add_buff(box_ids=[104], skill_id=70000107, level=1, ignore_player=False, is_skill_set=False)
         self.show_guide_summary(entity_id=20003011, text_id=20003011, duration=2500)
         self.play_system_sound_in_box(sound='System_ShowGuideSummary_01')
 
@@ -63,7 +63,7 @@ class 안내03(trigger_api.Trigger):
 
 class 안내04(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_buff(box_ids=[104], skill_id=70000107, level=1, is_player=False, is_skill_set=False)
+        self.add_buff(box_ids=[104], skill_id=70000107, level=1, ignore_player=False, is_skill_set=False)
         self.set_interact_object(trigger_ids=[10000496,10000497,10000498,10000499], state=0)
         self.set_effect(trigger_ids=[604], visible=True)
         self.select_camera(trigger_id=301)

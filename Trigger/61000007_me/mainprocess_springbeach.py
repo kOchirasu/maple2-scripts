@@ -1111,7 +1111,7 @@ class 모두탈락(trigger_api.Trigger):
 class 탈락멘트(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='40', seconds=6)
-        self.set_event_ui_script(type=BannerType.Fail, script='$61000007_ME__MAINPROCESS_SPRINGBEACH__21$', duration=5000)
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000007_ME__MAINPROCESS_SPRINGBEACH__21$', duration=5000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='40'):

@@ -219,7 +219,7 @@ class AreaOpen(trigger_api.Trigger):
         self.set_sound(trigger_id=20000, enable=True) # BGM Intro
         self.play_system_sound_in_box(sound='System_ShowGuideSummary_01')
         self.set_user_value(trigger_id=4, key='InvincibleOff', value=1)
-        self.add_buff(box_ids=[9000], skill_id=71000053, level=1, is_player=False, is_skill_set=False) # 31초 무적
+        self.add_buff(box_ids=[9000], skill_id=71000053, level=1, ignore_player=False, is_skill_set=False) # 31초 무적
         self.set_effect(trigger_ids=[4000,4100,4200,4300,4400,4500,4600,4700,4800]) # SafeZone Barrier Effect
         self.set_mesh(trigger_ids=[3000,3001,3002,3003,3004,3005,3006,3007], start_delay=1000, fade=2.0) # Barrier Center
         self.set_mesh(trigger_ids=[3100,3101,3102,3103,3104,3105,3106,3107], start_delay=1000, fade=2.0) # Barrier_North

@@ -63,7 +63,7 @@ class 암전대기(trigger_api.Trigger):
 
 class 암전(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_buff(box_ids=[701], skill_id=49200003, level=1, is_player=False, is_skill_set=False)
+        self.add_buff(box_ids=[701], skill_id=49200003, level=1, ignore_player=False, is_skill_set=False)
         self.set_onetime_effect(id=1, enable=True, path='BG/Common/ScreenMask/Eff_fadein_1sec.xml')
 
     def on_tick(self) -> trigger_api.Trigger:

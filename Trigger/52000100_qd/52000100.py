@@ -315,12 +315,12 @@ class 케이틀린대련03_c(trigger_api.Trigger):
 
 class 케이틀린대련04(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_buff(box_ids=[9003], skill_id=70000109, level=1, is_player=False, is_skill_set=False) # 초생회
+        self.add_buff(box_ids=[9003], skill_id=70000109, level=1, ignore_player=False, is_skill_set=False) # 초생회
         self.set_sound(trigger_id=9006, enable=True) # 케이틀린 대련 브금
         self.destroy_monster(spawn_ids=[203])
         self.spawn_monster(spawn_ids=[500], auto_target=False) # 케이틀린
         self.show_guide_summary(entity_id=25201007, text_id=25201007, duration=5000)
-        self.add_buff(box_ids=[9001], skill_id=99910231, level=1, is_player=False, is_skill_set=False)
+        self.add_buff(box_ids=[9001], skill_id=99910231, level=1, ignore_player=False, is_skill_set=False)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=2000):

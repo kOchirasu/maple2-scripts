@@ -5,7 +5,7 @@ import trigger_api
 class 분기검사01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_gravity(gravity=-39.0)
-        # self.add_buff(box_ids=[9002], skill_id=70000107, level=1, is_player=False, is_skill_set=False)
+        # self.add_buff(box_ids=[9002], skill_id=70000107, level=1, ignore_player=False, is_skill_set=False)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.quest_user_detected(box_ids=[9001], quest_ids=[50100570], quest_states=[3]):

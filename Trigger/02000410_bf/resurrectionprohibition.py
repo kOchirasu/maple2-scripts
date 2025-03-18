@@ -32,7 +32,7 @@ class 지금부터부활불가처리(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         # 이때 부활불가 버프 부여하기
         # 여기서 맵 안에 있는 모든 플레이어에게 부활불가 디버프 부여함
-        self.add_buff(box_ids=[750], skill_id=70000073, level=1, is_player=False)
+        self.add_buff(box_ids=[750], skill_id=70000073, level=1, ignore_player=False)
         # arg1 = "트리거박스ID", arg2 = "애디셔널코드", arg3 = "애디셔널레벨", arg4 = "타겟이 플레이어로 하려면 0, 타겟이 몬스터로 하려면 1설정"
         # 부활불가 되었고 이제 파티가 전멸되면 게임오버 된다는 내여을 시스템메시지를 통해서 알려줌, 참고로 파티원전멸 체크 트리거는 ClearCheck.xml 이것임
         self.show_guide_summary(entity_id=20041001, text_id=20041001)

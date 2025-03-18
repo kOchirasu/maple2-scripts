@@ -74,7 +74,7 @@ class 카메라이동(trigger_api.Trigger):
 class 연출종료(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_scene_skip() # Missing State: State
-        self.add_buff(box_ids=[199], skill_id=70000109, level=1, is_player=False, is_skill_set=False) # 초생회
+        self.add_buff(box_ids=[199], skill_id=70000109, level=1, ignore_player=False, is_skill_set=False) # 초생회
         self.select_camera(trigger_id=301, enable=False)
         self.set_cinematic_ui(type=0)
         self.set_cinematic_ui(type=2)
@@ -174,7 +174,7 @@ class 지원군연출(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_cinematic_ui(type=1)
         self.set_cinematic_ui(type=3)
-        self.add_buff(box_ids=[199], skill_id=70000107, level=1, is_player=False, is_skill_set=False)
+        self.add_buff(box_ids=[199], skill_id=70000107, level=1, ignore_player=False, is_skill_set=False)
         self.select_camera(trigger_id=305)
         self.set_dialogue(type=1, spawn_id=1004, script='$52000069_QD__TRIA_BUNKER__3$', time=4)
         self.set_dialogue(type=1, spawn_id=1005, script='$52000069_QD__TRIA_BUNKER__4$', time=4)

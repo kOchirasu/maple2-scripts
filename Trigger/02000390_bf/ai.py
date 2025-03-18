@@ -16,7 +16,7 @@ class IsDungeonRoomReady(trigger_api.Trigger):
 
 class idle(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_buff(box_ids=[701], skill_id=99910120, level=1, is_player=False, is_skill_set=False)
+        self.add_buff(box_ids=[701], skill_id=99910120, level=1, ignore_player=False, is_skill_set=False)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.user_value(key='Ground') >= 1:
@@ -30,7 +30,7 @@ class idle(trigger_api.Trigger):
 
 class buff_01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_buff(box_ids=[701], skill_id=99910120, level=1, is_player=False, is_skill_set=False)
+        self.add_buff(box_ids=[701], skill_id=99910120, level=1, ignore_player=False, is_skill_set=False)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.user_value(key='Ground') >= 1:
@@ -44,7 +44,7 @@ class buff_01(trigger_api.Trigger):
 
 class questIdle(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_buff(box_ids=[701], skill_id=99910120, level=1, is_player=False, is_skill_set=False)
+        self.add_buff(box_ids=[701], skill_id=99910120, level=1, ignore_player=False, is_skill_set=False)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.quest_user_detected(box_ids=[701], quest_ids=[50001518], quest_states=[1]):
@@ -62,7 +62,7 @@ class questIdle(trigger_api.Trigger):
 
 class questIdle_buff_01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_buff(box_ids=[701], skill_id=99910120, level=1, is_player=False, is_skill_set=False)
+        self.add_buff(box_ids=[701], skill_id=99910120, level=1, ignore_player=False, is_skill_set=False)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.quest_user_detected(box_ids=[701], quest_ids=[50001518], quest_states=[1]):

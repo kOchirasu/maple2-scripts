@@ -30,7 +30,7 @@ class 몬스터소멸(trigger_api.Trigger):
 
 class Ending(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_buff(box_ids=[701], skill_id=49200003, level=1, is_player=False, is_skill_set=False)
+        self.add_buff(box_ids=[701], skill_id=49200003, level=1, ignore_player=False, is_skill_set=False)
         self.remove_buff(box_id=701, skill_id=99910120)
         self.set_effect(trigger_ids=[7001], visible=True)
         self.set_onetime_effect(id=1, enable=True, path='BG/Common/ScreenMask/Eff_fadein_1sec.xml')

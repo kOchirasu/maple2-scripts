@@ -4,7 +4,7 @@ import trigger_api
 
 class Setting(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_buff(box_ids=[9000], skill_id=70001101, level=1, is_player=False, is_skill_set=False) # 변신 탈 것 해제용 버프
+        self.add_buff(box_ids=[9000], skill_id=70001101, level=1, ignore_player=False, is_skill_set=False) # 변신 탈 것 해제용 버프
         self.set_gravity(gravity=0.0)
         self.remove_buff(box_id=9000, skill_id=71000075)
         self.remove_buff(box_id=9000, skill_id=71000052)
@@ -688,7 +688,7 @@ class ExtraEvent01_Fast(trigger_api.Trigger):
         self.write_log(log_name='Survival', event='MokumEvent_01') # 모쿰 이벤트 로그 1
         self.play_system_sound_in_box(sound='System_Mokum_Completion_01')
         self.side_npc_talk_bottom(npc_id=21001019, illust='MushroomRichPorter_normal', duration=8000, script='$82000002_survival__16_ExtraEvent__6$')
-        self.add_buff(box_ids=[9000], skill_id=71000075, level=1, is_player=False, is_skill_set=False)
+        self.add_buff(box_ids=[9000], skill_id=71000075, level=1, ignore_player=False, is_skill_set=False)
         self.set_gravity(gravity=30.0)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -702,7 +702,7 @@ class ExtraEvent02_MapHack(trigger_api.Trigger):
         self.remove_buff(box_id=9000, skill_id=71000052)
         self.play_system_sound_in_box(sound='System_Mokum_Completion_01')
         self.side_npc_talk_bottom(npc_id=21001019, illust='MushroomRichPorter_normal', duration=8000, script='$82000002_survival__16_ExtraEvent__7$')
-        self.add_buff(box_ids=[9000], skill_id=71000052, level=2, is_player=False, is_skill_set=False)
+        self.add_buff(box_ids=[9000], skill_id=71000052, level=2, ignore_player=False, is_skill_set=False)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.user_value(key='ExtraEventOff') >= 1:
@@ -729,7 +729,7 @@ class ExtraEvent04_SkillCoolDownTimeReduce(trigger_api.Trigger):
         self.write_log(log_name='Survival', event='MokumEvent_04') # 모쿰 이벤트 로그 4
         self.play_system_sound_in_box(sound='System_Mokum_Completion_01')
         self.side_npc_talk_bottom(npc_id=21001019, illust='MushroomRichPorter_normal', duration=8000, script='$82000002_survival__16_ExtraEvent__9$')
-        self.add_buff(box_ids=[9000], skill_id=71000076, level=1, is_player=False, is_skill_set=False)
+        self.add_buff(box_ids=[9000], skill_id=71000076, level=1, ignore_player=False, is_skill_set=False)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.user_value(key='ExtraEventOff') >= 1:

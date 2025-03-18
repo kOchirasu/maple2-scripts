@@ -67,7 +67,7 @@ class 폭발저주디버프제거잠시대기(trigger_api.Trigger):
 class 폭발저주디버프제거(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         # 50001413은 보스한테 걸린 폭발 저주 디버프 제거해주는 애디셔널임, MS2TriggerBox  ID = 601 트리거 박스 크기는 1셋트 3개 전투판과 스타팅 지점까지 포함되는 넓은 범위임
-        self.add_buff(box_ids=[601], skill_id=50001413, level=1, is_player=False)
+        self.add_buff(box_ids=[601], skill_id=50001413, level=1, ignore_player=False)
         # 50001413 레벨1: 이 애디셔널에서 폭발 저주 디버프 뿐만 아니라 각종 SP 0 상태이상 공격력 저하 상태이상 즉 모든 상태이상 다 제거해줌
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -78,7 +78,7 @@ class 폭발저주디버프제거(trigger_api.Trigger):
 class 폭발저주디버프제거하고종료(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         # 50001413은 보스한테 걸린 폭발 저주 디버프 제거해주는 애디셔널임, MS2TriggerBox  ID = 601 트리거 박스 크기는 1셋트 3개 전투판과 스타팅 지점까지 포함되는 넓은 범위임
-        self.add_buff(box_ids=[601], skill_id=50001413, level=1, is_player=False)
+        self.add_buff(box_ids=[601], skill_id=50001413, level=1, ignore_player=False)
         # 50001413 레벨1: 이 애디셔널에서 폭발 저주 디버프 뿐만 아니라 각종 SP 0 상태이상 공격력 저하 상태이상 즉 모든 상태이상 다 제거해줌
 
     def on_tick(self) -> trigger_api.Trigger:

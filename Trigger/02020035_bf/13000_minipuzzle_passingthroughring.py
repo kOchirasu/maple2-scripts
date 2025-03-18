@@ -139,7 +139,7 @@ class PassingThroughRing_Play03_Delay(trigger_api.Trigger):
 # 퍼즐 성공 후 종료
 class PassingThroughRing_Success(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_buff(box_ids=[130001], skill_id=71001032, level=1, is_player=False, is_skill_set=False)
+        self.add_buff(box_ids=[130001], skill_id=71001032, level=1, ignore_player=False, is_skill_set=False)
         # UI 표시 안함 / 황금 상자 소유권 Additional Effect 71001031 지속시간 동일
         self.set_timer(timer_id='10', seconds=61, auto_remove=True)
         self.set_effect(trigger_ids=[13200], visible=True) # Success Sound Effect

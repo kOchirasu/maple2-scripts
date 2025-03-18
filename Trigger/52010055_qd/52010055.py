@@ -414,7 +414,7 @@ class 공습준비연출4(trigger_api.Trigger):
 class 공습준비(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_mesh(trigger_ids=[30000])
-        self.add_buff(box_ids=[9002], skill_id=99910311, level=1, is_player=False, is_skill_set=False)
+        self.add_buff(box_ids=[9002], skill_id=99910311, level=1, ignore_player=False, is_skill_set=False)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=1000):

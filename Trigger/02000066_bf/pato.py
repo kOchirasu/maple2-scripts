@@ -10,7 +10,7 @@ class 시작(trigger_api.Trigger):
 
 class 연출시작(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_buff(box_ids=[103], skill_id=70000107, level=1, is_player=False, is_skill_set=False)
+        self.add_buff(box_ids=[103], skill_id=70000107, level=1, ignore_player=False, is_skill_set=False)
         self.select_camera(trigger_id=301)
         self.set_cinematic_ui(type=1)
         self.set_cinematic_ui(type=3)

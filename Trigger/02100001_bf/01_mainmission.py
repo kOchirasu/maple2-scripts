@@ -188,7 +188,7 @@ class MissionFail(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.reset_timer(timer_id='10000')
         self.set_portal(portal_id=1) # 입구 포탈
-        self.set_event_ui_script(type=BannerType.Fail, script='$02100001_BF__01_MAINMISSION__4$', duration=3000)
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02100001_BF__01_MAINMISSION__4$', duration=3000)
         self.set_interact_object(trigger_ids=[10001234], state=2) # Red
         self.set_interact_object(trigger_ids=[10001235], state=2) # Blue
         self.set_interact_object(trigger_ids=[10001236], state=2) # Grey

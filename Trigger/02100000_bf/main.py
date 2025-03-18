@@ -106,8 +106,8 @@ class CloseCaptionSetting(trigger_api.Trigger):
 
 class 대기(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_buff(box_ids=[101], skill_id=70000133, level=1, is_player=False, is_skill_set=False)
-        self.add_buff(box_ids=[101], skill_id=70000133, level=1, is_player=False)
+        self.add_buff(box_ids=[101], skill_id=70000133, level=1, ignore_player=False, is_skill_set=False)
+        self.add_buff(box_ids=[101], skill_id=70000133, level=1, ignore_player=False)
         self.set_effect(trigger_ids=[8001])
         self.set_effect(trigger_ids=[8002])
         self.set_effect(trigger_ids=[8003])

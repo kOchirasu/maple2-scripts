@@ -63,7 +63,7 @@ class MusicChange(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         # 종료 후 펀타임을 위해 전부 스테이지 밖으로 킥
         self.move_user(map_id=84000007, portal_id=1, box_id=9000)
-        self.add_buff(box_ids=[9000], skill_id=99940042, level=1, is_player=False, is_skill_set=False) # 불꽃놀이 스킬셋 제공
+        self.add_buff(box_ids=[9000], skill_id=99940042, level=1, ignore_player=False, is_skill_set=False) # 불꽃놀이 스킬셋 제공
         self.set_sound(trigger_id=30000, enable=True) # Silence
         self.set_effect(trigger_ids=[8000], visible=True) # Scratch
 
@@ -3130,7 +3130,7 @@ class FailAll(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.end_mini_game(winner_box_id=9001, game_name='WDdancedancestop')
         self.set_event_ui_round(rounds=[0,0])
-        self.set_event_ui_script(type=BannerType.Fail, script='$61000008_ME__01_MASSIVEMAIN__28$', duration=5000) # Voice 02000969
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000008_ME__01_MASSIVEMAIN__28$', duration=5000) # Voice 02000969
         self.play_system_sound_in_box(box_ids=[9000], sound='DJDD_Ending_02')
         self.set_mesh(trigger_ids=[8900,8901,8902,8903,8904,8905,8906,8907,8908,8909,8910,8911,8912,8913,8914], start_delay=400) # Barrier
         self.set_user_value(trigger_id=4, key='BannerCheckIn', value=1)
@@ -3180,7 +3180,7 @@ class LeaveAll(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         # 종료 후 펀타임을 위해 전부 스테이지 밖으로 킥
         self.move_user(map_id=84000007, portal_id=3, box_id=9001)
-        self.add_buff(box_ids=[9000], skill_id=99940042, level=1, is_player=False, is_skill_set=False) # 도입부부터 폭죽 터트리고 놀 수 있게 변경
+        self.add_buff(box_ids=[9000], skill_id=99940042, level=1, ignore_player=False, is_skill_set=False) # 도입부부터 폭죽 터트리고 놀 수 있게 변경
         self.set_local_camera(camera_id=910) # LocalTargetCamera
         # self.unset_mini_game_area_for_hack() # 해킹 보안 종료
         self.set_sound(trigger_id=40000) # Game

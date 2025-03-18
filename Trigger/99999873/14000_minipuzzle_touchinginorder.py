@@ -193,7 +193,7 @@ class TouchingInNumericalOrder_End(trigger_api.Trigger):
 class TouchingInNumericalOrder_Success(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='10', seconds=61, auto_remove=True)
-        self.add_buff(box_ids=[140001], skill_id=71001042, level=1, is_player=False, is_skill_set=False)
+        self.add_buff(box_ids=[140001], skill_id=71001042, level=1, ignore_player=False, is_skill_set=False)
         self.set_effect(trigger_ids=[14200], visible=True) # Success Sound Effect
         # RareBox / 기믹 종료 오브젝트 / Additional Effect 71001141 걸어서 71001041 제거
         self.set_interact_object(trigger_ids=[12000069], state=1)

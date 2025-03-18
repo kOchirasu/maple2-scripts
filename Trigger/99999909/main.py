@@ -20,7 +20,7 @@ class idle(trigger_api.Trigger):
 
 class main(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_buff(box_ids=[701], skill_id=99910080, level=1, is_player=False, is_skill_set=False)
+        self.add_buff(box_ids=[701], skill_id=99910080, level=1, ignore_player=False, is_skill_set=False)
         self.create_item(spawn_ids=[201,202,203,204,205,206,207,208,209,210,211,212,213,214,215,216,217,218,219,220])
         self.create_item(spawn_ids=[221,222,223,224,225,226,227,228,229,230,231,232,233,234,235,236,237,238,239,240])
         self.create_item(spawn_ids=[241,242,243,244,245,246,247,248,249,250,251,252,253,254,255,256,257,258,259,260])
@@ -58,7 +58,7 @@ class start(trigger_api.Trigger):
 
 class start_02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.Fail, script='$02000066_BF__MAIN__11$', duration=3000, box_ids=['0'])
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02000066_BF__MAIN__11$', duration=3000, box_ids=['0'])
 
 
 initial_state = idle

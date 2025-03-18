@@ -3094,7 +3094,7 @@ class FailAll(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.end_mini_game(winner_box_id=9001, game_name='christmasdancedancestop')
         self.set_event_ui_round(rounds=[0,0])
-        self.set_event_ui_script(type=BannerType.Fail, script='$61000008_ME__01_MASSIVEMAIN__28$', duration=5000) # Voice 02000969
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000008_ME__01_MASSIVEMAIN__28$', duration=5000) # Voice 02000969
         self.play_system_sound_in_box(box_ids=[9000], sound='DJDD_Ending_02')
         self.set_mesh(trigger_ids=[8900,8901,8902,8903,8904,8905,8906,8907,8908,8909,8910,8911,8912,8913,8914], start_delay=400) # Barrier
         self.set_user_value(trigger_id=4, key='BannerCheckIn', value=1)

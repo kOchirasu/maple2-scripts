@@ -24,7 +24,7 @@ class DungeonStart(trigger_api.Trigger):
         self.show_guide_summary(entity_id=20000991, text_id=20000991, duration=5000)
         self.select_camera(trigger_id=301)
         self.spawn_monster(spawn_ids=[1001,1002,1003,1004,1005,1006,1007,2000], auto_target=False)
-        self.add_buff(box_ids=[199], skill_id=70000107, level=1, is_player=False, is_skill_set=False)
+        self.add_buff(box_ids=[199], skill_id=70000107, level=1, ignore_player=False, is_skill_set=False)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):

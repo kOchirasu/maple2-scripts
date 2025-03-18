@@ -86,8 +86,8 @@ class 버프부여(trigger_api.Trigger):
         self.set_visible_ui(ui_names=['MessengerBrowser','GroupMessengerBrowser','HighlightGameMenu'])
         self.visible_my_pc(is_visible=True) # 유저 투명 처리
         self.destroy_monster(spawn_ids=[2002])
-        self.add_buff(box_ids=[101], skill_id=99910280, level=1, is_player=False) # 벨라 변신
-        self.add_buff(box_ids=[101], skill_id=99910280, level=1, is_player=False, is_skill_set=False) # 벨라 변신
+        self.add_buff(box_ids=[101], skill_id=99910280, level=1, ignore_player=False) # 벨라 변신
+        self.add_buff(box_ids=[101], skill_id=99910280, level=1, ignore_player=False, is_skill_set=False) # 벨라 변신
         self.show_guide_summary(entity_id=25201503, text_id=25201503, duration=10000)
 
     def on_tick(self) -> trigger_api.Trigger:

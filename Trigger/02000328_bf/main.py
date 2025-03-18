@@ -54,7 +54,7 @@ class DungeonStart(trigger_api.Trigger):
 
 class 하층시작(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_buff(box_ids=[999998], skill_id=70000107, level=1, is_player=False, is_skill_set=False)
+        self.add_buff(box_ids=[999998], skill_id=70000107, level=1, ignore_player=False, is_skill_set=False)
         self.show_guide_summary(entity_id=20003285, text_id=20003285, duration=5000)
         self.play_system_sound_in_box(sound='System_ShowGuideSummary_01')
         self.select_camera(trigger_id=60000)
@@ -145,7 +145,7 @@ class 보스소환(trigger_api.Trigger):
         self.hide_guide_summary(entity_id=20003282)
         self.show_guide_summary(entity_id=20003283, text_id=20003283, duration=5000)
         self.play_system_sound_in_box(sound='System_ShowGuideSummary_01')
-        self.add_buff(box_ids=[999998], skill_id=70000107, level=1, is_player=False, is_skill_set=False)
+        self.add_buff(box_ids=[999998], skill_id=70000107, level=1, ignore_player=False, is_skill_set=False)
         self.select_camera(trigger_id=60003)
         self.spawn_monster(spawn_ids=[1501])
 

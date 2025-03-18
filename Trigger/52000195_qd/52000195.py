@@ -73,8 +73,8 @@ class CameraEffect03_5(trigger_api.Trigger):
         self.destroy_monster(spawn_ids=[204])
         self.visible_my_pc(is_visible=True) # 유저 투명 처리 품
         self.set_visible_ui(ui_names=['MessengerBrowser','GroupMessengerBrowser','HighlightGameMenu'])
-        self.add_buff(box_ids=[2001], skill_id=99910402, level=1, is_player=False) # 에레브 변신
-        self.add_buff(box_ids=[2001], skill_id=99910402, level=1, is_player=False, is_skill_set=False) # 에레브 변신
+        self.add_buff(box_ids=[2001], skill_id=99910402, level=1, ignore_player=False) # 에레브 변신
+        self.add_buff(box_ids=[2001], skill_id=99910402, level=1, ignore_player=False, is_skill_set=False) # 에레브 변신
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=1000):
@@ -111,8 +111,8 @@ class Skip_1(trigger_api.Trigger):
         self.destroy_monster(spawn_ids=[204])
         self.visible_my_pc(is_visible=True) # 유저 투명 처리 품
         self.set_visible_ui(ui_names=['MessengerBrowser','GroupMessengerBrowser','HighlightGameMenu'])
-        self.add_buff(box_ids=[2001], skill_id=99910402, level=1, is_player=False) # 에레브 변신
-        self.add_buff(box_ids=[2001], skill_id=99910402, level=1, is_player=False, is_skill_set=False) # 에레브 변신
+        self.add_buff(box_ids=[2001], skill_id=99910402, level=1, ignore_player=False) # 에레브 변신
+        self.add_buff(box_ids=[2001], skill_id=99910402, level=1, ignore_player=False, is_skill_set=False) # 에레브 변신
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=1000):

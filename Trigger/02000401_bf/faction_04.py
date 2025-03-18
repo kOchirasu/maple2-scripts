@@ -22,7 +22,7 @@ class 인원수체크(trigger_api.Trigger):
         self.destroy_monster(spawn_ids=[2902])
         # self.set_cinematic_ui(type=1)
         # self.set_cinematic_ui(type=3)
-        self.add_buff(box_ids=[199], skill_id=70000107, level=1, is_player=False, is_skill_set=False)
+        self.add_buff(box_ids=[199], skill_id=70000107, level=1, ignore_player=False, is_skill_set=False)
         self.select_camera(trigger_id=303)
         self.spawn_monster(spawn_ids=[1300])
         self.spawn_monster(spawn_ids=[1301,1302,1303,1304,1305], auto_target=False)

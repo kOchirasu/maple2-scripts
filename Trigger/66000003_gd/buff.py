@@ -11,7 +11,7 @@ class 대기(trigger_api.Trigger):
 class 버프(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='1', seconds=1)
-        self.add_buff(box_ids=[102], skill_id=70000040, level=1, is_player=False)
+        self.add_buff(box_ids=[102], skill_id=70000040, level=1, ignore_player=False)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='1'):

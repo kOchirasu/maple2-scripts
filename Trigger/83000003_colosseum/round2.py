@@ -141,7 +141,7 @@ class ClearRoundDelay(trigger_api.Trigger):
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=2000):
-            self.add_buff(box_ids=[904], skill_id=69000503, level=1, is_player=False, is_skill_set=False)
+            self.add_buff(box_ids=[904], skill_id=69000503, level=1, ignore_player=False, is_skill_set=False)
             self.set_event_ui_script(type=BannerType.Winner, script='$83000002_COLOSSEUM__ROUND2__8$', duration=3000)
             return ClearRound(self.ctx)
 
@@ -153,8 +153,8 @@ class FailRoundDelay(trigger_api.Trigger):
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
-            # self.add_buff(box_ids=[904], skill_id=69000505, level=1, is_player=False, is_skill_set=False)
-            self.set_event_ui_script(type=BannerType.Fail, script='$83000002_COLOSSEUM__ROUND2__9$', duration=3000)
+            # self.add_buff(box_ids=[904], skill_id=69000505, level=1, ignore_player=False, is_skill_set=False)
+            self.set_event_ui_script(type=BannerType.GameOver, script='$83000002_COLOSSEUM__ROUND2__9$', duration=3000)
             return FailRound(self.ctx)
 
 

@@ -70,7 +70,7 @@ class 비김(trigger_api.Trigger):
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='3'):
-            self.set_event_ui_script(type=BannerType.Fail, script='$65000001_BD__ENTER__2$', duration=3000, box_ids=['0'])
+            self.set_event_ui_script(type=BannerType.GameOver, script='$65000001_BD__ENTER__2$', duration=3000, box_ids=['0'])
             return 완료(self.ctx)
 
 

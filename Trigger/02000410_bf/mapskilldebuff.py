@@ -61,7 +61,7 @@ class 스킬끄기(trigger_api.Trigger):
         # 던전실패 하거나 던전성공 하거나 어쨌든 끝나면 혹시 몸에 걸려있는 지옥의 불 시리즈 디버프를 제거해 주기 위해 아래 애디셔널을 걸어줌
         self.set_skill(trigger_ids=[666])
         # 지옥의 불 디버프 제거해주는 애디샤날던 던전 끝나면 걸어주기, MS2TriggerBox   TriggerObjectID = 750,   750은 스타팅 지점 전투판 다  포함되는 범위
-        self.add_buff(box_ids=[750], skill_id=50004524, level=1, is_player=False)
+        self.add_buff(box_ids=[750], skill_id=50004524, level=1, ignore_player=False)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):

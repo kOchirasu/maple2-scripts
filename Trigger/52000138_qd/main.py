@@ -59,8 +59,8 @@ class ready(trigger_api.Trigger):
         self.set_onetime_effect(id=2, enable=True, path='BG/Common/Sound/Eff_ Object_Train_alert.xml')
         self.set_ambient_light(primary=Vector3(0,0,0))
         self.set_ambient_light(primary=Vector3(1,1,1))
-        self.add_buff(box_ids=[701], skill_id=99910230, level=1, is_player=False) # 레논 변신
-        self.add_buff(box_ids=[701], skill_id=99910230, level=1, is_player=False, is_skill_set=False) # 레논 변신
+        self.add_buff(box_ids=[701], skill_id=99910230, level=1, ignore_player=False) # 레논 변신
+        self.add_buff(box_ids=[701], skill_id=99910230, level=1, ignore_player=False, is_skill_set=False) # 레논 변신
         # 다크윈드 대원 101번 소환
         # self.spawn_monster(spawn_ids=[101,102,103,104,105,122])
         self.spawn_monster(spawn_ids=[101])

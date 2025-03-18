@@ -57,7 +57,7 @@ class TimeTrial_Start(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.check_any_user_additional_effect(box_id=16100, additional_effect_id=71001271, level=1):
             # 목표 지점에 도착 성공
-            self.add_buff(box_ids=[160001], skill_id=71001062, level=1, is_player=False, is_skill_set=False)
+            self.add_buff(box_ids=[160001], skill_id=71001062, level=1, ignore_player=False, is_skill_set=False)
             self.set_timer(timer_id='100', seconds=60, auto_remove=True)
             return TimeTrial_Success(self.ctx)
         if self.time_expired(timer_id='1'):

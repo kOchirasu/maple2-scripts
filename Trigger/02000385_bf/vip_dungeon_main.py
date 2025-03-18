@@ -52,7 +52,7 @@ class 캐릭터선택대기(trigger_api.Trigger):
 class 천둥선택(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_effect(trigger_ids=[601], visible=True)
-        self.add_buff(box_ids=[199], skill_id=99910090, level=1, is_player=False, is_skill_set=False)
+        self.add_buff(box_ids=[199], skill_id=99910090, level=1, ignore_player=False, is_skill_set=False)
         self.select_camera(trigger_id=311)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -63,7 +63,7 @@ class 천둥선택(trigger_api.Trigger):
 class 알론선택(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_effect(trigger_ids=[602], visible=True)
-        self.add_buff(box_ids=[199], skill_id=99910100, level=1, is_player=False, is_skill_set=False)
+        self.add_buff(box_ids=[199], skill_id=99910100, level=1, ignore_player=False, is_skill_set=False)
         self.select_camera(trigger_id=312)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -74,7 +74,7 @@ class 알론선택(trigger_api.Trigger):
 class 오스칼선택(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_effect(trigger_ids=[603], visible=True)
-        self.add_buff(box_ids=[199], skill_id=99910110, level=1, is_player=False, is_skill_set=False)
+        self.add_buff(box_ids=[199], skill_id=99910110, level=1, ignore_player=False, is_skill_set=False)
         self.select_camera(trigger_id=313)
 
     def on_tick(self) -> trigger_api.Trigger:

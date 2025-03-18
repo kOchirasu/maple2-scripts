@@ -36,7 +36,7 @@ class 영상준비_01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_cinematic_ui(type=1)
         self.set_cinematic_ui(type=4)
-        self.add_buff(box_ids=[701], skill_id=70000124, level=1, is_player=False, is_skill_set=False)
+        self.add_buff(box_ids=[701], skill_id=70000124, level=1, ignore_player=False, is_skill_set=False)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=1000):
@@ -142,7 +142,7 @@ class 단계별이동_01(trigger_api.Trigger):
         self.set_onetime_effect(id=1, enable=True, path='BG/Common/ScreenMask/Eff_fadein_1sec.xml')
         self.set_cinematic_ui(type=1)
         self.set_cinematic_ui(type=3)
-        self.add_buff(box_ids=[701], skill_id=70000124, level=1, is_player=False, is_skill_set=False)
+        self.add_buff(box_ids=[701], skill_id=70000124, level=1, ignore_player=False, is_skill_set=False)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=1000):
@@ -227,7 +227,7 @@ class 퀘스트1진행_01(trigger_api.Trigger):
         self.hide_guide_summary(entity_id=25201421)
         self.show_guide_summary(entity_id=25201422, text_id=25201422)
         self.set_effect(trigger_ids=[5001,5002,5003,5004,5005,5006,5007,5008,5009,5010,5011,5012,5013,5014,5015,5016,5017,5018,5019,5020,5021,5022,5023,5024,5025], visible=True)
-        self.add_buff(box_ids=[701], skill_id=70000124, level=1, is_player=False, is_skill_set=False)
+        self.add_buff(box_ids=[701], skill_id=70000124, level=1, ignore_player=False, is_skill_set=False)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.quest_user_detected(box_ids=[702], quest_ids=[40002720], quest_states=[2]):

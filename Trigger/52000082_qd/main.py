@@ -10,7 +10,7 @@ class mapskill(trigger_api.Trigger):
 
 class mapskill_start(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_buff(box_ids=[701], skill_id=70000114, level=1, is_player=False, is_skill_set=False)
+        self.add_buff(box_ids=[701], skill_id=70000114, level=1, ignore_player=False, is_skill_set=False)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=1000):

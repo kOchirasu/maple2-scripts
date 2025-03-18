@@ -456,7 +456,7 @@ class 피치탈출(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.move_npc(spawn_id=1000, patrol_name='MS2PatrolData_3002')
         self.add_balloon_talk(spawn_id=1000, msg='$52010026_QD__MAIN__42$', duration=2000)
-        self.add_buff(box_ids=[2101], skill_id=70000123, level=1, is_player=False, is_skill_set=False)
+        self.add_buff(box_ids=[2101], skill_id=70000123, level=1, ignore_player=False, is_skill_set=False)
         self.set_effect(trigger_ids=[5101], visible=True)
 
     def on_tick(self) -> trigger_api.Trigger:

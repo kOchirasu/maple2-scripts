@@ -32,10 +32,10 @@ class 스킬랜덤(trigger_api.Trigger):
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.random_condition(weight=80.0):
-            self.add_buff(box_ids=[199], skill_id=70000008, level=1, is_player=False, is_skill_set=False)
+            self.add_buff(box_ids=[199], skill_id=70000008, level=1, ignore_player=False, is_skill_set=False)
             return 종료(self.ctx)
         if self.random_condition(weight=20.0):
-            self.add_buff(box_ids=[199], skill_id=70000009, level=1, is_player=False, is_skill_set=False)
+            self.add_buff(box_ids=[199], skill_id=70000009, level=1, ignore_player=False, is_skill_set=False)
             return 종료(self.ctx)
 
 

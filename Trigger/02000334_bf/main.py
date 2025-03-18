@@ -334,7 +334,7 @@ class 단계_타이머4(trigger_api.Trigger):
 class 게임오버(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.destroy_monster(spawn_ids=[101,102,103,104,105,106,107,108,111,112,113,114,115,131,132,133,134,135,150,151,152,190,991,992,993,994,995,996,997,998])
-        self.set_event_ui_script(type=BannerType.Fail, duration=3000)
+        self.set_event_ui_script(type=BannerType.GameOver, duration=3000)
         self.set_event_ui_round(rounds=[0,0])
         self.set_timer(timer_id='3', seconds=3)
         self.set_effect(trigger_ids=[98031])

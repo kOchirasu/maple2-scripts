@@ -19,8 +19,8 @@ class 연출준비_A(trigger_api.Trigger):
         self.set_cinematic_ui(type=1)
         self.set_cinematic_ui(type=3)
         self.set_cinematic_ui(type=4)
-        self.add_buff(box_ids=[2001], skill_id=70000085, level=1, is_player=False) # 연출용 무적 버프
-        self.add_buff(box_ids=[2001], skill_id=70000085, level=1, is_player=False, is_skill_set=False) # 연출용 무적 버프
+        self.add_buff(box_ids=[2001], skill_id=70000085, level=1, ignore_player=False) # 연출용 무적 버프
+        self.add_buff(box_ids=[2001], skill_id=70000085, level=1, ignore_player=False, is_skill_set=False) # 연출용 무적 버프
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=500):

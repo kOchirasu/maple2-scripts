@@ -20,7 +20,7 @@ class 탱크준비(trigger_api.Trigger):
         self.set_cinematic_ui(type=1)
         self.set_cinematic_ui(type=3)
         self.destroy_monster(spawn_ids=[2903])
-        self.add_buff(box_ids=[199], skill_id=70000107, level=1, is_player=False, is_skill_set=False)
+        self.add_buff(box_ids=[199], skill_id=70000107, level=1, ignore_player=False, is_skill_set=False)
         self.show_guide_summary(entity_id=20040103, text_id=20040103, duration=3500)
         self.play_system_sound_in_box(sound='System_ShowGuideSummary_01')
         self.select_camera(trigger_id=302)

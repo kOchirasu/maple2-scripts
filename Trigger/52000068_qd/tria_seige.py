@@ -243,7 +243,7 @@ class Skip_1(trigger_api.Trigger):
 
 class 연출종료(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_buff(box_ids=[199], skill_id=70000109, level=1, is_player=False, is_skill_set=False) # 초생회
+        self.add_buff(box_ids=[199], skill_id=70000109, level=1, ignore_player=False, is_skill_set=False) # 초생회
         self.select_camera(trigger_id=304, enable=False)
         # self.reset_camera()
         self.set_cinematic_ui(type=0)
@@ -269,7 +269,7 @@ class 임무01(trigger_api.Trigger):
         self.set_interact_object(trigger_ids=[10001074], state=1)
         self.set_interact_object(trigger_ids=[10001075], state=1)
         self.set_interact_object(trigger_ids=[10001076], state=1)
-        self.add_buff(box_ids=[199], skill_id=70000107, level=1, is_player=False, is_skill_set=False)
+        self.add_buff(box_ids=[199], skill_id=70000107, level=1, ignore_player=False, is_skill_set=False)
         self.select_camera(trigger_id=305)
         self.set_dialogue(type=2, spawn_id=11000064, script='$52000068_QD__TRIA_SEIGE__5$', time=4)
         self.set_scene_skip(state=임무01반응대기)
@@ -292,7 +292,7 @@ class 임무01반응대기(trigger_api.Trigger):
         if self.object_interacted(interact_ids=[10001074,10001075,10001076], state=2):
             self.set_dialogue(type=1, spawn_id=1001, script='$52000068_QD__TRIA_SEIGE__6$', time=4)
             self.create_item(spawn_ids=[9000,9001,9002,9003,9004,9005,9006,9007,9008,9009,9010,9011,9012])
-            self.add_buff(box_ids=[199], skill_id=70000058, level=1, is_player=False, is_skill_set=False) # 이속증가
+            self.add_buff(box_ids=[199], skill_id=70000058, level=1, ignore_player=False, is_skill_set=False) # 이속증가
             return 임무02대기(self.ctx)
 
 
@@ -321,7 +321,7 @@ class 임무02(trigger_api.Trigger):
         self.set_agent(trigger_ids=[8017], visible=True)
         self.set_agent(trigger_ids=[8018], visible=True)
         self.set_agent(trigger_ids=[8019], visible=True)
-        self.add_buff(box_ids=[199], skill_id=70000107, level=1, is_player=False, is_skill_set=False)
+        self.add_buff(box_ids=[199], skill_id=70000107, level=1, ignore_player=False, is_skill_set=False)
         self.select_camera(trigger_id=306)
         self.set_dialogue(type=2, spawn_id=11001838, script='$52000068_QD__TRIA_SEIGE__7$', time=4)
         self.spawn_monster(spawn_ids=[1101,1102,1103,1104], auto_target=False, delay=6000)
@@ -397,7 +397,7 @@ class 임무02종료(trigger_api.Trigger):
         self.set_cinematic_ui(type=1)
         self.set_cinematic_ui(type=3)
         self.select_camera(trigger_id=309)
-        self.add_buff(box_ids=[199], skill_id=70000107, level=1, is_player=False, is_skill_set=False)
+        self.add_buff(box_ids=[199], skill_id=70000107, level=1, ignore_player=False, is_skill_set=False)
         self.destroy_monster(spawn_ids=[2001])
         self.spawn_monster(spawn_ids=[2004], auto_target=False)
 
