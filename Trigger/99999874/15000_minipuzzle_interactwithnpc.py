@@ -89,7 +89,7 @@ class InteractWithNpc_NpcTypeA_NpcChange(trigger_api.Trigger):
         # InvisibleBlock_Enterance
         self.set_mesh(trigger_ids=[15101])
         self.set_mesh(trigger_ids=[15102]) # InvisibleBlock_Inside
-        self.add_buff(box_ids=[150001], skill_id=71001052, level=1, is_player=False, is_skill_set=False)
+        self.add_buff(box_ids=[150001], skill_id=71001052, level=1, ignore_player=False, is_skill_set=False)
         self.set_timer(timer_id='10', seconds=60, auto_remove=True)
         self.set_user_value(trigger_id=151001, key='NPCKill', value=1)
 
@@ -146,7 +146,7 @@ class InteractWithNpc_NpcTypeB_NpcChange(trigger_api.Trigger):
         # InvisibleBlock_Enterance
         self.set_mesh(trigger_ids=[15101])
         self.set_mesh(trigger_ids=[15102]) # InvisibleBlock_Inside
-        self.add_buff(box_ids=[150001], skill_id=71001052, level=1, is_player=False, is_skill_set=False)
+        self.add_buff(box_ids=[150001], skill_id=71001052, level=1, ignore_player=False, is_skill_set=False)
         self.set_timer(timer_id='10', seconds=60, auto_remove=True)
         self.set_user_value(trigger_id=151001, key='NPCKill', value=1)
 

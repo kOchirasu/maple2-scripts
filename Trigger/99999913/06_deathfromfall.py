@@ -16,7 +16,7 @@ class WaitSomeoneFall(trigger_api.Trigger):
 
 class KillSomeoneFall(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_buff(box_ids=[9100], skill_id=70001061, level=1, is_player=False, is_skill_set=False) # 추락사
+        self.add_buff(box_ids=[9100], skill_id=70001061, level=1, ignore_player=False, is_skill_set=False) # 추락사
 
     def on_tick(self) -> trigger_api.Trigger:
         if not self.user_detected(box_ids=[9100]):

@@ -42,7 +42,7 @@ class 난이도체크(trigger_api.Trigger):
 class 퀘스트던전(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         # self.set_timer(timer_id='1', seconds=300, display=True)
-        self.add_buff(box_ids=[101], skill_id=70000118, level=1, is_player=False, is_skill_set=False)
+        self.add_buff(box_ids=[101], skill_id=70000118, level=1, ignore_player=False, is_skill_set=False)
         self.spawn_monster(spawn_ids=[2299], auto_target=False)
 
     def on_tick(self) -> trigger_api.Trigger:

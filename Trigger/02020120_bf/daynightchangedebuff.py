@@ -60,7 +60,7 @@ class 낮시간으로변화하기(trigger_api.Trigger):
 class 낮시간으로변화하기_맵초기화(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         # 레벨2: 시야 효과 8초 이상, 낮으로 변하면서 필터 이펙트 시야효과 애디녀설 부여하기, MS2TriggerBox   TriggerObjectID = 299,   299는 모든 전투판 범위임,  arg3 는 애디셔널 레벨임
-        self.add_buff(box_ids=[299], skill_id=50004547, level=2, is_player=False)
+        self.add_buff(box_ids=[299], skill_id=50004547, level=2, ignore_player=False)
         # 스킬브레이크 실패하여 보스의 신호를 받아서 던전 리셋할때 사용하는 변수
         self.set_user_value(key='DungeonReset', value=0)
         # DayNightChange 변수 0으로 초기하 하여 위쪽 단계 "낮밤변환신호대기" 에서 대기 상태가 되도록 하기
@@ -106,7 +106,7 @@ class 밤시간으로변화하기(trigger_api.Trigger):
 class 디버프모조리제거(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         # 태양빛 달빛 각종 저주 디버프 전부 제거하기, MS2TriggerBox   TriggerObjectID = 299,   299는 모든 전투판 범위임,  arg3 는 애디셔널 레벨임
-        self.add_buff(box_ids=[299], skill_id=50005315, level=1, is_player=False)
+        self.add_buff(box_ids=[299], skill_id=50005315, level=1, ignore_player=False)
         # DayNightChange 변수 0으로 초기하 하여 위쪽 단계 "낮밤변환신호대기" 에서 대기 상태가 되도록 하기
         self.set_user_value(key='DayNightChange', value=0)
 

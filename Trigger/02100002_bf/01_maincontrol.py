@@ -399,7 +399,7 @@ class DungeonSuccess(trigger_api.Trigger):
 class MissionFail(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.reset_timer(timer_id='10000')
-        self.set_event_ui_script(type=BannerType.Fail, script='$02100002_BF__01_MAINCONTROL__9$', duration=3000)
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02100002_BF__01_MAINCONTROL__9$', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3500):

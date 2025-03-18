@@ -18,7 +18,7 @@ class 트리거시작(trigger_api.Trigger):
 class 드랍지점회복(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         # MS2TriggerBox   TriggerObjectID = 102, 이 트리거 박스 안의 플레이어에게 애디셔널 50000554(레벨1) 회복 버프 부여하기, 이 맵은 추락하면서 시작하는데 추락 대미지에 의해 죽을 수있기 때문에 시작하자마자 무조건 HP회복 버프 부여함
-        self.add_buff(box_ids=[102], skill_id=50000554, level=1, is_player=False, is_skill_set=False)
+        self.add_buff(box_ids=[102], skill_id=50000554, level=1, ignore_player=False, is_skill_set=False)
         # arg4 =1 이면 타겟이 npc로 변경 / arg1이 스폰 포인트 ID가 된다.       arg5 =1 이면 박스 외에 모든 맵/ 0은 박스 안
 
     def on_tick(self) -> trigger_api.Trigger:

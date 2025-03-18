@@ -285,7 +285,7 @@ class AreaOpen(trigger_api.Trigger):
         self.set_user_value(trigger_id=10, key='BattleRidingOnCount', value=1)
         self.play_system_sound_in_box(sound='System_ShowGuideSummary_01')
         self.set_user_value(trigger_id=4, key='InvincibleOff', value=1)
-        self.add_buff(box_ids=[9000], skill_id=71000053, level=1, is_player=False, is_skill_set=False) # 31초 무적 버프
+        self.add_buff(box_ids=[9000], skill_id=71000053, level=1, ignore_player=False, is_skill_set=False) # 31초 무적 버프
         # test용 수정 가능 지점 : 무적 버프 없이 게임하려면 주석 처리
         self.set_effect(trigger_ids=[4000,4100,4200,4300,4400,4500,4600,4700,4800]) # SafeZone Barrier Effect
         self.set_mesh(trigger_ids=[3000,3001,3002,3003,3004,3005,3006,3007], start_delay=1000, fade=1.0) # Barrier Center
@@ -359,7 +359,7 @@ class ReadyToKickOut(trigger_api.Trigger):
 
 class GameEnd(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_buff(box_ids=[9000], skill_id=70001101, level=1, is_player=False, is_skill_set=False) # 변신 탈 것 해제용 버프
+        self.add_buff(box_ids=[9000], skill_id=70001101, level=1, ignore_player=False, is_skill_set=False) # 변신 탈 것 해제용 버프
         # 우승자 카메라 (LocalTargetCamera 호출) 연출 시, 비석 상태인 유저의 위치 기준으로 우승자가 멀리 있어도 우승자가 보이도록 워포그 해제
         self.sight_range(range=3)
 

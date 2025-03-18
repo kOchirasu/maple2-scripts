@@ -19,7 +19,7 @@ class 준비(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_cinematic_ui(type=1)
         self.set_cinematic_ui(type=3)
-        self.add_buff(box_ids=[199], skill_id=70000109, level=1, is_player=False, is_skill_set=False)
+        self.add_buff(box_ids=[199], skill_id=70000109, level=1, ignore_player=False, is_skill_set=False)
         self.spawn_monster(spawn_ids=[1805,1806], auto_target=False)
         self.spawn_monster(spawn_ids=[1201], auto_target=False)
         self.spawn_npc_range(range_ids=[1001,1002,1003,1004,1005,1006,1007,1008])

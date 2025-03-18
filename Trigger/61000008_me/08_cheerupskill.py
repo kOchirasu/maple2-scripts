@@ -54,7 +54,7 @@ class CheerUpTimer_10(trigger_api.Trigger):
 
 class GiveCheerUp(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_buff(box_ids=[9001], skill_id=70000086, level=1, is_player=False, is_skill_set=False) # 할 수 있어 버프
+        self.add_buff(box_ids=[9001], skill_id=70000086, level=1, ignore_player=False, is_skill_set=False) # 할 수 있어 버프
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='1'):

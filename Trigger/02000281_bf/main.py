@@ -26,7 +26,7 @@ class DungeonStart(trigger_api.Trigger):
         self.spawn_monster(spawn_ids=[1001,1002,1003,1004,1005,1006,1007,1008,1009,1010,1011,1012,1013,1014,1015], auto_target=False)
         self.set_interact_object(trigger_ids=[10000414], state=1)
         self.select_camera(trigger_id=3001)
-        self.add_buff(box_ids=[199], skill_id=70000107, level=1, is_player=False, is_skill_set=False)
+        self.add_buff(box_ids=[199], skill_id=70000107, level=1, ignore_player=False, is_skill_set=False)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=1500):

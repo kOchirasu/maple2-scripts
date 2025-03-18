@@ -116,7 +116,7 @@ class GameGuide01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.reset_camera(interpolation_time=1.0) # 카메라 강제 리셋
         # 훔쳐먹기 페이즈: 텅빈 스킬셋. 장난감은 사용 가능
-        self.add_buff(box_ids=[9002], skill_id=99940044, level=1, is_player=False)
+        self.add_buff(box_ids=[9002], skill_id=99940044, level=1, ignore_player=False)
         self.set_cinematic_ui(type=0) # 연출용 화면 보정 off
         self.set_cinematic_ui(type=2) # 연출용 화면 보정 off
         self.visible_my_pc(is_visible=True) # 연출 후 PC 재노출
@@ -314,7 +314,7 @@ class Finale(trigger_api.Trigger):
         self.set_portal(portal_id=10001) # 결혼식장 복귀 포탈 설정
         self.set_portal(portal_id=10002, visible=True, enable=True, minimap_visible=True) # 결혼식장 복귀 포탈 설정
         self.set_user_value(trigger_id=1001, key='Conder', value=1) # 콘대르 대사 셋 변경
-        self.add_buff(box_ids=[9002], skill_id=99940042, level=1, is_player=False) # 불꽃놀이 스킬셋 제공
+        self.add_buff(box_ids=[9002], skill_id=99940042, level=1, ignore_player=False) # 불꽃놀이 스킬셋 제공
         self.set_event_ui_script(type=BannerType.Text, script='$84000006_WD__84000006_WD_MAIN__24$', duration=3000) # UI 팝업 : 잠시 후 애프터파티가 종료됩니다
         # 타이머5 설정 : 60초. 현재는 테스트 때문에 10초
         self.set_timer(timer_id='5', seconds=150, display=True)

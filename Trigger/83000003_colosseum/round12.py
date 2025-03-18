@@ -160,7 +160,7 @@ class ClearRoundDelay(trigger_api.Trigger):
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=2000):
-            self.add_buff(box_ids=[904], skill_id=69000503, level=1, is_player=False, is_skill_set=False)
+            self.add_buff(box_ids=[904], skill_id=69000503, level=1, ignore_player=False, is_skill_set=False)
             self.set_event_ui_script(type=BannerType.Winner, script='$83000003_COLOSSEUM__ROUND12__8$', duration=3000)
             return ClearRound(self.ctx)
 
@@ -172,7 +172,7 @@ class FailRoundDelay(trigger_api.Trigger):
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
-            self.set_event_ui_script(type=BannerType.Fail, script='$83000003_COLOSSEUM__ROUND12__9$', duration=3000)
+            self.set_event_ui_script(type=BannerType.GameOver, script='$83000003_COLOSSEUM__ROUND12__9$', duration=3000)
             return FailRound(self.ctx)
 
 
@@ -184,7 +184,7 @@ class ClearRound(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
             self.move_user_to_pos(pos=Vector3(300,-225,1500), rot=Vector3(0,0,270))
-            # self.add_buff(box_ids=[904], skill_id=69000505, level=1, is_player=False, is_skill_set=False)
+            # self.add_buff(box_ids=[904], skill_id=69000505, level=1, ignore_player=False, is_skill_set=False)
             self.side_npc_talk(npc_id=11004288, illust='nagi_normal', script='$83000003_COLOSSEUM__ROUND12__10$', duration=3000)
             self.set_user_value(trigger_id=900001, key='StartRound12', value=2)
             return 이동대기(self.ctx)

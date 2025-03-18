@@ -49,7 +49,7 @@ class 성공(trigger_api.Trigger):
 
 class 실패(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.Fail, script='$52010038_QD__GAUGE__1$', duration=2500)
+        self.set_event_ui_script(type=BannerType.GameOver, script='$52010038_QD__GAUGE__1$', duration=2500)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=2000):

@@ -39,20 +39,20 @@ class Trigger:
         """
         self.ctx.AddBalloonTalk(spawn_id, msg, duration, delay_tick, npc_id)
 
-    def add_buff(self, box_ids: List[int], skill_id: int, level: int, is_player: bool=True, is_skill_set: bool=True, feature: str='') -> None:
+    def add_buff(self, box_ids: List[int], skill_id: int, level: int, ignore_player: bool=True, is_skill_set: bool=True, feature: str='') -> None:
         """버프를걸어준다
 
         Args:
             box_ids (List[int]): _description_.
             skill_id (int): _description_.
             level (int): _description_.
-            is_player (bool): _description_. Defaults to True.
+            ignore_player (bool): _description_. Defaults to True.
             is_skill_set (bool): _description_. Defaults to True.
             feature (str): _description_. Defaults to ''.
 
         Returns: None
         """
-        self.ctx.AddBuff(Array[Int32](box_ids), skill_id, level, is_player, is_skill_set, feature)
+        self.ctx.AddBuff(Array[Int32](box_ids), skill_id, level, ignore_player, is_skill_set, feature)
 
     def add_cinematic_talk(self, npc_id: int, illust_id: str='', msg: str='', duration: int=0, align: Align=Align.Top, delay_tick: int=0) -> None:
         """AddCinematicTalk
@@ -534,11 +534,11 @@ class Trigger:
         """
         self.ctx.DestroyMonster(Array[Int32](spawn_ids), arg2)
 
-    def dungeon_clear(self, ui_type: str='None') -> None:
+    def dungeon_clear(self, ui_type: str='') -> None:
         """DungeonClear
 
         Args:
-            ui_type (str): _description_. Defaults to 'None'.
+            ui_type (str): _description_. Defaults to ''.
 
         Returns: None
         """

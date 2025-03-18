@@ -195,8 +195,8 @@ class scene_05(trigger_api.Trigger):
 
 class scene_06(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_buff(box_ids=[701], skill_id=71000007, level=1, is_player=False, is_skill_set=False)
-        self.add_buff(box_ids=[701], skill_id=71000008, level=1, is_player=False, is_skill_set=False)
+        self.add_buff(box_ids=[701], skill_id=71000007, level=1, ignore_player=False, is_skill_set=False)
+        self.add_buff(box_ids=[701], skill_id=71000008, level=1, ignore_player=False, is_skill_set=False)
         self.set_npc_emotion_loop(spawn_id=101, sequence_name='Attack_Idle_A', duration=3000.0)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -344,8 +344,8 @@ class phase_b_scene_05(trigger_api.Trigger):
         self.set_visible_breakable_object(trigger_ids=[2201,2202,2203,2204,2205,2206,2207,2208,2209,2210,2211,2212,2213,2214,2215,2216,2217,2218,2219,2220])
         self.set_visible_breakable_object(trigger_ids=[2221,2222,2223,2224,2225,2226,2227,2228,2229,2230,2231,2232,2233,2234,2235,2236,2237,2238,2239,2240])
         self.set_visible_breakable_object(trigger_ids=[2251,2252,2253,2254,2255,2256,2257,2258,2259,2260,2261,2262,2263,2264,2265,2266,2267,2268,2269,2270])
-        self.add_buff(box_ids=[701], skill_id=71000007, level=1, is_player=False, is_skill_set=False)
-        self.add_buff(box_ids=[701], skill_id=71000008, level=1, is_player=False, is_skill_set=False)
+        self.add_buff(box_ids=[701], skill_id=71000007, level=1, ignore_player=False, is_skill_set=False)
+        self.add_buff(box_ids=[701], skill_id=71000008, level=1, ignore_player=False, is_skill_set=False)
         self.set_mesh(trigger_ids=[3001,3003,3004], visible=True)
         self.move_user(map_id=52000099, portal_id=3)
         self.reset_camera()
@@ -787,7 +787,7 @@ class phase_c_16(trigger_api.Trigger):
         self.spawn_monster(spawn_ids=[201,202,205,204])
         self.spawn_monster(spawn_ids=[211,212,215,214])
         self.spawn_monster(spawn_ids=[215,216,217,218])
-        self.add_buff(box_ids=[701], skill_id=99910180, level=1, is_player=False, is_skill_set=False)
+        self.add_buff(box_ids=[701], skill_id=99910180, level=1, ignore_player=False, is_skill_set=False)
         self.destroy_monster(spawn_ids=[103])
         self.set_cinematic_ui(type=0)
         self.set_cinematic_ui(type=2)
@@ -917,7 +917,7 @@ class phase_b_skip_5(trigger_api.Trigger):
         self.spawn_monster(spawn_ids=[201,202,205,204])
         self.spawn_monster(spawn_ids=[211,212,215,214])
         self.spawn_monster(spawn_ids=[215,216,217,218])
-        self.add_buff(box_ids=[701], skill_id=99910180, level=1, is_player=False, is_skill_set=False)
+        self.add_buff(box_ids=[701], skill_id=99910180, level=1, ignore_player=False, is_skill_set=False)
         self.destroy_monster(spawn_ids=[103])
         self.set_cinematic_ui(type=0)
         self.set_cinematic_ui(type=2)

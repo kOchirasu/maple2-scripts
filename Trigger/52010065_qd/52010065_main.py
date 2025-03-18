@@ -26,8 +26,8 @@ class 준비_02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[8001], return_view=False)
         self.set_visible_ui(ui_names=['MessengerBrowser','GroupMessengerBrowser'])
-        self.add_buff(box_ids=[701], skill_id=99910320, level=1, is_player=False) # 검마 변신
-        self.add_buff(box_ids=[701], skill_id=99910320, level=1, is_player=False, is_skill_set=False) # 검마 변신
+        self.add_buff(box_ids=[701], skill_id=99910320, level=1, ignore_player=False) # 검마 변신
+        self.add_buff(box_ids=[701], skill_id=99910320, level=1, ignore_player=False, is_skill_set=False) # 검마 변신
         self.spawn_monster(spawn_ids=[101], auto_target=False) # 발록
         self.set_mesh(trigger_ids=[4001,4002,4003,4004,4005,4006,4007,4008,4009,4010,4011,4012,4013,4014,4015,4016,4017,4018,4019,4020,4021,4022,4023,4024,4025,4026], visible=True)
 

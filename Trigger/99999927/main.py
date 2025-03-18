@@ -11,7 +11,7 @@ class idle(trigger_api.Trigger):
 
 class ready(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_buff(box_ids=[701], skill_id=99910120, level=1, is_player=False, is_skill_set=False)
+        self.add_buff(box_ids=[701], skill_id=99910120, level=1, ignore_player=False, is_skill_set=False)
         self.set_gravity(gravity=-25.0)
         self.spawn_monster(spawn_ids=[201])
 

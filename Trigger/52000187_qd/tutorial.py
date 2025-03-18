@@ -84,7 +84,7 @@ class 모쿰이동(trigger_api.Trigger):
         self.move_npc(spawn_id=102, patrol_name='MS2PatrolData_mokum_0')
         self.add_balloon_talk(spawn_id=102, msg='$52000187_QD__TUTORIAL__5$')
         self.side_npc_talk(npc_id=29000403, illust='Mushking_normal', duration=4000, script='$52000187_QD__TUTORIAL__6$')
-        self.add_buff(box_ids=[99999], skill_id=71000077, level=1, is_player=False, is_skill_set=False)
+        self.add_buff(box_ids=[99999], skill_id=71000077, level=1, ignore_player=False, is_skill_set=False)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.widget_value(type='Guide', name='IsTriggerEvent') == 551:

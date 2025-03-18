@@ -31,7 +31,7 @@ class 연출시작(trigger_api.Trigger):
 class 타이틀(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.move_user(map_id=52000093, portal_id=99)
-        self.add_buff(box_ids=[9100], skill_id=99910190, level=1, is_player=False, is_skill_set=False)
+        self.add_buff(box_ids=[9100], skill_id=99910190, level=1, ignore_player=False, is_skill_set=False)
         self.set_cinematic_ui(type=9, script='$52000093_QD__20002281_RP__0$')
 
     def on_tick(self) -> trigger_api.Trigger:

@@ -78,8 +78,8 @@ class PvP(trigger_api.Trigger):
         # 길드 경험치 지급 / boxID="타겟박스id", 0이면 맵전체, type="GuildGainExp의 id" 2가 매시브이벤트
         self.set_achievement(trigger_id=101, type='trigger', achieve='dailyquest_start')
         self.give_guild_exp(type=2)
-        self.add_buff(box_ids=[101], skill_id=70000088, level=1, is_player=False, is_skill_set=False)
-        self.add_buff(box_ids=[101], skill_id=70000089, level=1, is_player=False, is_skill_set=False)
+        self.add_buff(box_ids=[101], skill_id=70000088, level=1, ignore_player=False, is_skill_set=False)
+        self.add_buff(box_ids=[101], skill_id=70000089, level=1, ignore_player=False, is_skill_set=False)
         self.set_timer(timer_id='1', seconds=1)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -112,7 +112,7 @@ class 비김(trigger_api.Trigger):
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='3'):
-            self.set_event_ui_script(type=BannerType.Fail, script='$65000002_BD__PVP__5$', duration=3000, box_ids=['0'])
+            self.set_event_ui_script(type=BannerType.GameOver, script='$65000002_BD__PVP__5$', duration=3000, box_ids=['0'])
             return 완료(self.ctx)
 
 

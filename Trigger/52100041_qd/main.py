@@ -43,7 +43,7 @@ class Ready(trigger_api.Trigger):
         self.select_camera_path(path_ids=[8100,8101,8102], return_view=False)
         self.set_ambient_light(primary=Vector3(120,120,120))
         self.set_directional_light(diffuse_color=Vector3(10,10,10))
-        self.add_buff(box_ids=[701], skill_id=71000009, level=1, is_player=False, is_skill_set=False)
+        self.add_buff(box_ids=[701], skill_id=71000009, level=1, ignore_player=False, is_skill_set=False)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=10000):

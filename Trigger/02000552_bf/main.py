@@ -101,9 +101,9 @@ class 작아짐제거(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         # 702는 첫번째 전투판 영역, 701는 두번째 전투판 영역
         # 플레이어가 진공청소기 공격 받아서 작아졌는데, 흡수 안되는 이상한 버그가 있어서 만약을 위한 장치로 작아짐 걸렸으면, 여기서 풀어주도록 함
-        self.add_buff(box_ids=[702], skill_id=50001556, level=1, is_player=False, is_skill_set=False)
+        self.add_buff(box_ids=[702], skill_id=50001556, level=1, ignore_player=False, is_skill_set=False)
         # 플레이어가 진공청소기 공격 받아서 작아졌는데, 흡수 안되는 이상한 버그가 있어서 만약을 위한 장치로 작아짐 걸렸으면, 여기서 풀어주도록 함
-        self.add_buff(box_ids=[701], skill_id=50001556, level=1, is_player=False, is_skill_set=False)
+        self.add_buff(box_ids=[701], skill_id=50001556, level=1, ignore_player=False, is_skill_set=False)
         self.set_user_value(key='SmallRemove', value=0) # SmallRemove변수 0으로 초기 셋팅
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -119,9 +119,9 @@ class 다음이동포탈등장(trigger_api.Trigger):
         self.set_portal(portal_id=20, visible=True, enable=True, minimap_visible=True)
         # 702는 첫번째 전투판 영역, 701는 두번째 전투판 영역
         # 플레이어가 진공청소기 공격 받아서 작아졌는데, 흡수 안되는 이상한 버그가 있어서 만약을 위한 장치로 작아짐 걸렸으면, 여기서 풀어주도록 함
-        self.add_buff(box_ids=[702], skill_id=50001556, level=1, is_player=False, is_skill_set=False)
+        self.add_buff(box_ids=[702], skill_id=50001556, level=1, ignore_player=False, is_skill_set=False)
         # 플레이어가 진공청소기 공격 받아서 작아졌는데, 흡수 안되는 이상한 버그가 있어서 만약을 위한 장치로 작아짐 걸렸으면, 여기서 풀어주도록 함
-        self.add_buff(box_ids=[701], skill_id=50001556, level=1, is_player=False, is_skill_set=False)
+        self.add_buff(box_ids=[701], skill_id=50001556, level=1, ignore_player=False, is_skill_set=False)
         self.set_user_value(key='NextPortal', value=0) # NextPortal변수 0으로 초기 셋팅
         # SmallRemove변수 0으로 초기 셋팅, 혹시 모르니 만약을 위한 장치
         self.set_user_value(key='SmallRemove', value=0)
@@ -149,9 +149,9 @@ class 게임오버(trigger_api.Trigger):
         # 701 는 두번째 전투판 영역, 702는 첫번째 전투판 영역, 블랙빈 죽여 클리어 했는데도, 대미지 필드 때문에 죽는 안타까운 상황이 생길 수 있어서 블랙빈 죽이면 바로 플레이어에게 8초간 무적버프 걸어서 죽지 않게 해줌
         self.dungeon_enable_give_up()
         # 플레이어에게 무적 버프 & 진공청소기 흡수에 의한 소인화 디버프 제거, 혹시 바닥 RYB 대미지에맞아서 클리어 했는데 죽는 경우를 막기 위해
-        self.add_buff(box_ids=[701], skill_id=50000266, level=1, is_player=False, is_skill_set=False)
+        self.add_buff(box_ids=[701], skill_id=50000266, level=1, ignore_player=False, is_skill_set=False)
         # 플레이어에게 무적 버프 & 진공청소기 흡수에 의한 소인화 디버프 제거, 혹시 바닥 RYB 대미지에맞아서 클리어 했는데 죽는 경우를 막기 위해
-        self.add_buff(box_ids=[702], skill_id=50000266, level=1, is_player=False, is_skill_set=False)
+        self.add_buff(box_ids=[702], skill_id=50000266, level=1, ignore_player=False, is_skill_set=False)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -162,9 +162,9 @@ class 종료딜레이(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         # 701 는 두번째 전투판 영역, 702는 첫번째 전투판 영역, 블랙빈 죽여 클리어 했는데도, 대미지 필드 때문에 죽는 안타까운 상황이 생길 수 있어서 블랙빈 죽이면 바로 플레이어에게 8초간 무적버프 걸어서 죽지 않게 해줌
         # 플레이어에게 무적 버프 & 진공청소기 흡수에 의한 소인화 디버프 제거, 혹시 바닥 RYB 대미지에맞아서 클리어 했는데 죽는 경우를 막기 위해
-        self.add_buff(box_ids=[701], skill_id=50000266, level=1, is_player=False, is_skill_set=False)
+        self.add_buff(box_ids=[701], skill_id=50000266, level=1, ignore_player=False, is_skill_set=False)
         # 플레이어에게 무적 버프 & 진공청소기 흡수에 의한 소인화 디버프 제거, 혹시 바닥 RYB 대미지에맞아서 클리어 했는데 죽는 경우를 막기 위해
-        self.add_buff(box_ids=[702], skill_id=50000266, level=1, is_player=False, is_skill_set=False)
+        self.add_buff(box_ids=[702], skill_id=50000266, level=1, ignore_player=False, is_skill_set=False)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):

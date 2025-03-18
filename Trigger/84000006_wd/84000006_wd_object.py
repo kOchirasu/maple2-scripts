@@ -44,11 +44,11 @@ class Over50(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.object_interacted(interact_ids=[10001442], state=2) and self.object_interacted(interact_ids=[10001443], state=2) and self.object_interacted(interact_ids=[10001444], state=2) and self.object_interacted(interact_ids=[10001445], state=2):
             # 종료조건: 시간경과 or 전부훔쳐먹음
-            self.add_buff(box_ids=[9002], skill_id=99940046, level=1, is_player=False) # 달팽이 스킬셋 50인용 제공
+            self.add_buff(box_ids=[9002], skill_id=99940046, level=1, ignore_player=False) # 달팽이 스킬셋 50인용 제공
             self.set_user_value(trigger_id=1001, key='Steal', value=1) # 전투 페이즈2 이동 UV발사
             return Standby(self.ctx)
         if self.time_expired(timer_id='2'):
-            self.add_buff(box_ids=[9002], skill_id=99940046, level=1, is_player=False) # 달팽이 스킬셋 50인용 제공
+            self.add_buff(box_ids=[9002], skill_id=99940046, level=1, ignore_player=False) # 달팽이 스킬셋 50인용 제공
             self.set_user_value(trigger_id=1001, key='Steal', value=1) # 전투 페이즈2 이동 UV발사
             return Standby(self.ctx)
 
@@ -70,11 +70,11 @@ class Over30(trigger_api.Trigger):
         all_of: 테스트용 1개
         """
         if self.object_interacted(interact_ids=[10001442], state=2) and self.object_interacted(interact_ids=[10001443], state=2) and self.object_interacted(interact_ids=[10001445], state=2):
-            self.add_buff(box_ids=[9002], skill_id=99940045, level=1, is_player=False) # 달팽이 스킬셋 30Up 제공
+            self.add_buff(box_ids=[9002], skill_id=99940045, level=1, ignore_player=False) # 달팽이 스킬셋 30Up 제공
             self.set_user_value(trigger_id=1001, key='Steal', value=1) # 전투 페이즈2 이동 UV발사
             return Standby(self.ctx)
         if self.time_expired(timer_id='2'):
-            self.add_buff(box_ids=[9002], skill_id=99940045, level=1, is_player=False) # 달팽이 스킬셋 30Up 제공
+            self.add_buff(box_ids=[9002], skill_id=99940045, level=1, ignore_player=False) # 달팽이 스킬셋 30Up 제공
             self.set_user_value(trigger_id=1001, key='Steal', value=1) # 전투 페이즈2 이동 UV발사
             return Standby(self.ctx)
 
@@ -98,11 +98,11 @@ class Under30(trigger_api.Trigger):
         all_of: 테스트용 꼬다리 1개
         """
         if self.object_interacted(interact_ids=[10001442], state=2) and self.object_interacted(interact_ids=[10001445], state=2):
-            self.add_buff(box_ids=[9002], skill_id=99940043, level=1, is_player=False) # 달팽이 스킬셋 30Under 제공
+            self.add_buff(box_ids=[9002], skill_id=99940043, level=1, ignore_player=False) # 달팽이 스킬셋 30Under 제공
             self.set_user_value(trigger_id=1001, key='Steal', value=1) # 전투 페이즈2 이동 UV발사
             return Standby(self.ctx)
         if self.time_expired(timer_id='2'):
-            self.add_buff(box_ids=[9002], skill_id=99940043, level=1, is_player=False) # 달팽이 스킬셋 제공
+            self.add_buff(box_ids=[9002], skill_id=99940043, level=1, ignore_player=False) # 달팽이 스킬셋 제공
             self.set_user_value(trigger_id=1001, key='Steal', value=1) # 전투 페이즈2 이동 UV발사
             return Standby(self.ctx)
 

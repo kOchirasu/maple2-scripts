@@ -24,7 +24,7 @@ class 보스등장(trigger_api.Trigger):
         self.show_guide_summary(entity_id=20003140, text_id=20003140, duration=4000)
         self.play_system_sound_in_box(sound='System_ShowGuideSummary_01')
         self.select_camera(trigger_id=301)
-        self.add_buff(box_ids=[102], skill_id=70000107, level=1, is_player=False, is_skill_set=False)
+        self.add_buff(box_ids=[102], skill_id=70000107, level=1, ignore_player=False, is_skill_set=False)
         self.spawn_monster(spawn_ids=[99], auto_target=False)
         self.set_skip(state=종료체크)
 

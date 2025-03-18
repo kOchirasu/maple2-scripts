@@ -124,7 +124,7 @@ class Skip_1(trigger_api.Trigger):
 # ########################그림자의침략 플레이 진행########################
 class 그림자의침략09(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_buff(box_ids=[10011], skill_id=70000109, level=1, is_player=False, is_skill_set=False) # 초생회
+        self.add_buff(box_ids=[10011], skill_id=70000109, level=1, ignore_player=False, is_skill_set=False) # 초생회
         self.set_cinematic_ui(type=0)
         self.set_cinematic_ui(type=2)
         self.reset_camera(interpolation_time=0.5)

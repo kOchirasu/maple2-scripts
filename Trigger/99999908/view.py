@@ -11,7 +11,7 @@ class idle(trigger_api.Trigger):
 
 class buff_01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_buff(box_ids=[701], skill_id=99910221, level=1, is_player=False, is_skill_set=False)
+        self.add_buff(box_ids=[701], skill_id=99910221, level=1, ignore_player=False, is_skill_set=False)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=1000):
@@ -20,7 +20,7 @@ class buff_01(trigger_api.Trigger):
 
 class buff_02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_buff(box_ids=[701], skill_id=99910221, level=1, is_player=False, is_skill_set=False)
+        self.add_buff(box_ids=[701], skill_id=99910221, level=1, ignore_player=False, is_skill_set=False)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=500):
@@ -29,7 +29,7 @@ class buff_02(trigger_api.Trigger):
 
 class buff_03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_buff(box_ids=[701], skill_id=99910221, level=1, is_player=False, is_skill_set=False)
+        self.add_buff(box_ids=[701], skill_id=99910221, level=1, ignore_player=False, is_skill_set=False)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=500):
@@ -38,7 +38,7 @@ class buff_03(trigger_api.Trigger):
 
 class buff_04(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_buff(box_ids=[701], skill_id=99910221, level=1, is_player=False, is_skill_set=False)
+        self.add_buff(box_ids=[701], skill_id=99910221, level=1, ignore_player=False, is_skill_set=False)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=500):
@@ -49,7 +49,7 @@ class buff_05(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.destroy_monster(spawn_ids=[101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120])
         self.spawn_npc_range(range_ids=[101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120], random_pick_count=3, score=100)
-        self.add_buff(box_ids=[701], skill_id=99910221, level=1, is_player=False, is_skill_set=False)
+        self.add_buff(box_ids=[701], skill_id=99910221, level=1, ignore_player=False, is_skill_set=False)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=500):

@@ -306,7 +306,7 @@ class 모두실패(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='1', seconds=7)
         self.set_event_ui_round(rounds=[0,0])
-        self.set_event_ui_script(type=BannerType.Fail, script='$61000005_ME__MAINPROCESS__11$', duration=5000)
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000005_ME__MAINPROCESS__11$', duration=5000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='1'):

@@ -20,7 +20,7 @@ class 잠시대기(trigger_api.Trigger):
         self.set_cinematic_ui(type=1)
         self.set_cinematic_ui(type=3)
         self.select_camera_path(path_ids=[8001], return_view=False)
-        self.add_buff(box_ids=[701], skill_id=70000124, level=1, is_player=False, is_skill_set=False)
+        self.add_buff(box_ids=[701], skill_id=70000124, level=1, ignore_player=False, is_skill_set=False)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=2000):

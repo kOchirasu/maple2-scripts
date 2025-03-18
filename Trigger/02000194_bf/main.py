@@ -40,7 +40,7 @@ class 던전시작(trigger_api.Trigger):
         self.set_interact_object(trigger_ids=[10001057], state=1)
         self.spawn_monster(spawn_ids=[1001,1002,1003,1004,2000], auto_target=False)
         self.select_camera(trigger_id=301)
-        self.add_buff(box_ids=[101], skill_id=70000107, level=1, is_player=False, is_skill_set=False)
+        self.add_buff(box_ids=[101], skill_id=70000107, level=1, ignore_player=False, is_skill_set=False)
         self.set_skip(state=시작)
 
     def on_tick(self) -> trigger_api.Trigger:

@@ -385,7 +385,7 @@ class 성공(trigger_api.Trigger):
 
 class 실패(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.set_event_ui_script(type=BannerType.Fail, script='$02100004_BF__MAIN__11$', duration=2000, box_ids=['0'])
+        self.set_event_ui_script(type=BannerType.GameOver, script='$02100004_BF__MAIN__11$', duration=2000, box_ids=['0'])
         self.set_user_value(trigger_id=999993, key='BattleEnd', value=1)
         self.destroy_monster(spawn_ids=[-1])
 

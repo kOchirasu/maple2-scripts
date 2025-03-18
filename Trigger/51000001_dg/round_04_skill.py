@@ -65,12 +65,12 @@ class 스킬랜덤(trigger_api.Trigger):
             return 종료(self.ctx)
         """
         if self.random_condition(weight=20.0): # 소형화 사용 안함
-            self.add_buff(box_ids=[199], skill_id=49179081, level=1, is_player=False, is_skill_set=False)
+            self.add_buff(box_ids=[199], skill_id=49179081, level=1, ignore_player=False, is_skill_set=False)
             return 대기시간(self.ctx)
         """
         if self.random_condition(weight=40.0):
             # 이속증가
-            self.add_buff(box_ids=[199], skill_id=49179051, level=1, is_player=False, is_skill_set=False)
+            self.add_buff(box_ids=[199], skill_id=49179051, level=1, ignore_player=False, is_skill_set=False)
             return 대기시간(self.ctx)
         if self.random_condition(weight=30.0):
             # 무적 20
@@ -78,11 +78,11 @@ class 스킬랜덤(trigger_api.Trigger):
             return 대기시간(self.ctx)
         if self.random_condition(weight=15.0):
             # 이속감소 10
-            self.add_buff(box_ids=[199], skill_id=49179061, level=1, is_player=False, is_skill_set=False)
+            self.add_buff(box_ids=[199], skill_id=49179061, level=1, ignore_player=False, is_skill_set=False)
             return 대기시간(self.ctx)
         if self.random_condition(weight=15.0):
             # 혼란 10
-            self.add_buff(box_ids=[199], skill_id=49179071, level=1, is_player=False, is_skill_set=False)
+            self.add_buff(box_ids=[199], skill_id=49179071, level=1, ignore_player=False, is_skill_set=False)
             return 대기시간(self.ctx)
 
 

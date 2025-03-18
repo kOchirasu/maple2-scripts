@@ -250,7 +250,7 @@ class 종료(trigger_api.Trigger):
         self.end_mini_game(winner_box_id=105, game_name='oxquiz_ugc', is_only_winner=True)
         self.set_effect(trigger_ids=[608], visible=True)
         self.set_event_ui_round(rounds=[0,0])
-        self.set_event_ui_script(type=BannerType.Fail, script='$61000011_ME__GAME_END_BY_ALL_RETIRED$', duration=3000, box_ids=['0'])
+        self.set_event_ui_script(type=BannerType.GameOver, script='$61000011_ME__GAME_END_BY_ALL_RETIRED$', duration=3000, box_ids=['0'])
         self.set_timer(timer_id='3', seconds=3)
 
     def on_tick(self) -> trigger_api.Trigger:

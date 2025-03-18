@@ -532,7 +532,7 @@ class MelodyQuizPattern20(trigger_api.Trigger):
 # 퍼즐 성공 후 종료
 class EndMelodyQuiz_Success(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_buff(box_ids=[11901], skill_id=71001012, level=1, is_player=False, is_skill_set=False)
+        self.add_buff(box_ids=[11901], skill_id=71001012, level=1, ignore_player=False, is_skill_set=False)
         self.set_effect(trigger_ids=[11300], visible=True) # Success Sound Effect
         # RareBox 맵 별로 유니크하도록 변경해야 하는 값
         self.set_interact_object(trigger_ids=[12000203], state=1)

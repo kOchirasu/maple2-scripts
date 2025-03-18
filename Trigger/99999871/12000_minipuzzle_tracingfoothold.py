@@ -95,7 +95,7 @@ class TracingFootHold_Play02_Delay(trigger_api.Trigger):
 # 퍼즐 성공 후 종료
 class TracingFootHold_Success(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_buff(box_ids=[120001], skill_id=71001022, level=1, is_player=False, is_skill_set=False)
+        self.add_buff(box_ids=[120001], skill_id=71001022, level=1, ignore_player=False, is_skill_set=False)
         self.set_effect(trigger_ids=[12100], visible=True) # Success Sound Effect
         self.set_mesh(trigger_ids=[12003], visible=True, fade=1.0) # FootHold03
         # RareBox / 기믹 종료 오브젝트 / Additional Effect 71001121 걸어서 71001021 제거

@@ -44,7 +44,7 @@ class 카메라이동후UI노출(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_cinematic_ui(type=0)
         self.set_cinematic_ui(type=2)
-        self.add_buff(box_ids=[199], skill_id=70000107, level=1, is_player=False, is_skill_set=False)
+        self.add_buff(box_ids=[199], skill_id=70000107, level=1, ignore_player=False, is_skill_set=False)
         self.show_guide_summary(entity_id=20002991, text_id=20002991, duration=5000)
         self.play_system_sound_in_box(sound='System_ShowGuideSummary_01')
 

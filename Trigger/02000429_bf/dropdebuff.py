@@ -19,7 +19,7 @@ class 드랍어뷰징디버프_작동시작(trigger_api.Trigger):
 class 전투판에떨어지면디버프걸기(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         # MS2TriggerBox   TriggerObjectID = 780, 이 트리거 박스 안에 있는 플레이어 Sp 0 상태이상 걸리게 하기
-        self.add_buff(box_ids=[780], skill_id=50000512, level=1, is_player=False, is_skill_set=False)
+        self.add_buff(box_ids=[780], skill_id=50000512, level=1, ignore_player=False, is_skill_set=False)
         # 50000512 레벨1 이 SP 0 10초 동안 상태이상
 
     def on_tick(self) -> trigger_api.Trigger:
