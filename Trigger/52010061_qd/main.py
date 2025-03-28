@@ -43,7 +43,7 @@ class 칼리브해안전경_02(trigger_api.Trigger):
 
 class 칼리브해안전경_03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.show_caption(type='VerticalCaption', title='$52010061_QD__main__0$', align=Align.Center | Align.Left, duration=2800, scale=2.0)
+        self.show_caption(type='VerticalCaption', title='$52010061_QD__main__0$', align=Align.CenterLeft, duration=2800, scale=2.0)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=1800):

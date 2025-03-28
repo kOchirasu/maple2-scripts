@@ -30,7 +30,7 @@ class Wait02(trigger_api.Trigger):
 
 class Wait03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.show_caption(type='VerticalCaption', title='$52000109_QD__52000109__0$', desc='$52000109_QD__52000109__1$', align=Align.Bottom | Align.Left, duration=6000, scale=2.5)
+        self.show_caption(type='VerticalCaption', title='$52000109_QD__52000109__0$', desc='$52000109_QD__52000109__1$', align=Align.BottomLeft, duration=6000, scale=2.5)
         self.set_onetime_effect(id=40, enable=True, path='BG/Common/Eff_Com_Vibrate_Short.xml')
         self.move_user(map_id=52000109, portal_id=10)
 
@@ -238,7 +238,7 @@ class 라딘등장씬03(trigger_api.Trigger):
 class 라딘등장씬04(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.face_emotion(spawn_id=200, emotion_name='hello_Cait')
-        self.show_caption(type='NameCaption', title='$52000109_QD__52000109__16$', desc='$52000109_QD__52000109__17$', align=Align.Center, offset_rate_x=-0.15, offset_rate_y=0.15, duration=10000, scale=2.0)
+        self.show_caption(type='NameCaption', title='$52000109_QD__52000109__16$', desc='$52000109_QD__52000109__17$', offset_rate_x=-0.15, offset_rate_y=0.15, duration=10000, scale=2.0)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=7000):
@@ -315,7 +315,7 @@ class 라딘대화씬03(trigger_api.Trigger):
 
 class 라딘대화씬04(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.show_caption(type='VerticalCaption', title='$52000109_QD__52000109__18$', desc='$52000109_QD__52000109__19$', align=Align.Bottom | Align.Left, duration=10000, scale=2.5)
+        self.show_caption(type='VerticalCaption', title='$52000109_QD__52000109__18$', desc='$52000109_QD__52000109__19$', align=Align.BottomLeft, duration=10000, scale=2.5)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=10000):

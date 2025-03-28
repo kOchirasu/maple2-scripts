@@ -51,7 +51,7 @@ class EventScene_02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_cinematic_ui(type=1)
         self.set_cinematic_ui(type=3)
-        self.add_cinematic_talk(npc_id=11003723, msg='오호……. 핑계라도 대고 싶으신 겁니까?', duration=3000, illust_id='Nelf_normal', align=Align.Center)
+        self.add_cinematic_talk(npc_id=11003723, msg='오호……. 핑계라도 대고 싶으신 겁니까?', duration=3000, illust_id='Nelf_normal')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -60,7 +60,7 @@ class EventScene_02(trigger_api.Trigger):
 
 class EventScene_03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003724, msg='실망입니다. $MyPCName$님.', duration=3000, illust_id='Jordy_normal', align=Align.Center)
+        self.add_cinematic_talk(npc_id=11003724, msg='실망입니다. $MyPCName$님.', duration=3000, illust_id='Jordy_normal')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -69,7 +69,7 @@ class EventScene_03(trigger_api.Trigger):
 
 class EventScene_04(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003724, msg='그렇게 믿고 의지했는데…….', duration=3000, illust_id='Jordy_normal', align=Align.Center)
+        self.add_cinematic_talk(npc_id=11003724, msg='그렇게 믿고 의지했는데…….', duration=3000, illust_id='Jordy_normal')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -78,7 +78,7 @@ class EventScene_04(trigger_api.Trigger):
 
 class EventScene_05(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003724, msg='절 버리고 가셨으니 평생 $MyPCName$님을 저주 할 겁니다.', duration=3000, illust_id='Jordy_normal', align=Align.Center)
+        self.add_cinematic_talk(npc_id=11003724, msg='절 버리고 가셨으니 평생 $MyPCName$님을 저주 할 겁니다.', duration=3000, illust_id='Jordy_normal')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):

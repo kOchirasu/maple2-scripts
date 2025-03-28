@@ -172,7 +172,7 @@ class 연출페이즈2대사05b스킵(trigger_api.Trigger):
 class 연출페이즈2대사06(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[15102,15103], return_view=False)
-        self.add_cinematic_talk(npc_id=11000075, illust_id='Ereb_serious', msg='$52000068_QD__TRIA_SEIGE_MOVIE_02__6$', duration=7000, align=Align.Center)
+        self.add_cinematic_talk(npc_id=11000075, illust_id='Ereb_serious', msg='$52000068_QD__TRIA_SEIGE_MOVIE_02__6$', duration=7000)
         self.set_skip(state=연출페이즈2대사06스킵)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -193,7 +193,7 @@ class 연출페이즈2대사07(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[15104,15105], return_view=False)
         self.move_npc(spawn_id=13000, patrol_name='MS2PatrolData_top_ereb_go') # 에레브 이동
-        self.add_cinematic_talk(npc_id=11000075, illust_id='Ereb_serious', msg='$52000068_QD__TRIA_SEIGE_MOVIE_02__7$', duration=7000, align=Align.Center)
+        self.add_cinematic_talk(npc_id=11000075, illust_id='Ereb_serious', msg='$52000068_QD__TRIA_SEIGE_MOVIE_02__7$', duration=7000)
         self.set_skip(state=연출페이즈2대사07스킵)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -213,7 +213,7 @@ class 연출페이즈2대사07스킵(trigger_api.Trigger):
 class 연출페이즈2대사08(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[15106], return_view=False)
-        self.add_cinematic_talk(npc_id=11000075, illust_id='Ereb_sad', msg='$52000068_QD__TRIA_SEIGE_MOVIE_02__8$', duration=7000, align=Align.Center)
+        self.add_cinematic_talk(npc_id=11000075, illust_id='Ereb_sad', msg='$52000068_QD__TRIA_SEIGE_MOVIE_02__8$', duration=7000)
         self.set_skip(state=연출페이즈2대사08스킵)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -233,7 +233,7 @@ class 연출페이즈2대사08스킵(trigger_api.Trigger):
 class 연출페이즈2대사09(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[15107,15108], return_view=False)
-        self.add_cinematic_talk(npc_id=11000075, illust_id='Ereb_closeEye', msg='$52000068_QD__TRIA_SEIGE_MOVIE_02__9$', duration=7000, align=Align.Center)
+        self.add_cinematic_talk(npc_id=11000075, illust_id='Ereb_closeEye', msg='$52000068_QD__TRIA_SEIGE_MOVIE_02__9$', duration=7000)
         self.set_skip(state=연출페이즈2대사09스킵)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -252,7 +252,7 @@ class 연출페이즈2대사09스킵(trigger_api.Trigger):
 
 class 연출페이즈2대사10(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11000075, illust_id='Ereb_serious', msg='$52000068_QD__TRIA_SEIGE_MOVIE_02__10$', duration=7000, align=Align.Center)
+        self.add_cinematic_talk(npc_id=11000075, illust_id='Ereb_serious', msg='$52000068_QD__TRIA_SEIGE_MOVIE_02__10$', duration=7000)
         self.set_skip(state=연출페이즈2대사10스킵)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -272,7 +272,7 @@ class 연출페이즈2대사10스킵(trigger_api.Trigger):
 class 연출페이즈2대사11(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[15109], return_view=False)
-        self.add_cinematic_talk(npc_id=11000075, illust_id='Ereb_closeEye', msg='$52000068_QD__TRIA_SEIGE_MOVIE_02__11$', duration=7000, align=Align.Center)
+        self.add_cinematic_talk(npc_id=11000075, illust_id='Ereb_closeEye', msg='$52000068_QD__TRIA_SEIGE_MOVIE_02__11$', duration=7000)
         self.set_skip(state=연출페이즈2대사11스킵)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -312,7 +312,7 @@ class 연출페이즈2대사12스킵(trigger_api.Trigger):
 class 연출페이즈2대사13(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[15111,15112], return_view=False)
-        self.add_cinematic_talk(npc_id=11000075, illust_id='Ereb_serious', msg='$52000068_QD__TRIA_SEIGE_MOVIE_02__12$', duration=7000, align=Align.Center)
+        self.add_cinematic_talk(npc_id=11000075, illust_id='Ereb_serious', msg='$52000068_QD__TRIA_SEIGE_MOVIE_02__12$', duration=7000)
         self.set_skip(state=연출페이즈2대사13스킵)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -331,7 +331,7 @@ class 연출페이즈2대사13스킵(trigger_api.Trigger):
 
 class 연출페이즈2대사14(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11000075, illust_id='Ereb_serious', msg='$52000068_QD__TRIA_SEIGE_MOVIE_02__13$', duration=7000, align=Align.Center)
+        self.add_cinematic_talk(npc_id=11000075, illust_id='Ereb_serious', msg='$52000068_QD__TRIA_SEIGE_MOVIE_02__13$', duration=7000)
         self.set_skip(state=연출페이즈2대사14스킵)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -352,7 +352,7 @@ class 연출페이즈2대사15(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[15113,15114], return_view=False)
         self.move_npc(spawn_id=13000, patrol_name='MS2PatrolData_top_ereb_back') # 에레브 이동
-        self.add_cinematic_talk(npc_id=11000075, illust_id='Ereb_closeEye', msg='$52000068_QD__TRIA_SEIGE_MOVIE_02__14$', duration=7000, align=Align.Center)
+        self.add_cinematic_talk(npc_id=11000075, illust_id='Ereb_closeEye', msg='$52000068_QD__TRIA_SEIGE_MOVIE_02__14$', duration=7000)
         self.set_skip(state=연출페이즈2대사15스킵)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -371,7 +371,7 @@ class 연출페이즈2대사15스킵(trigger_api.Trigger):
 
 class 연출페이즈2대사16(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11000075, illust_id='Ereb_closeEye', msg='$52000068_QD__TRIA_SEIGE_MOVIE_02__15$', duration=7000, align=Align.Center)
+        self.add_cinematic_talk(npc_id=11000075, illust_id='Ereb_closeEye', msg='$52000068_QD__TRIA_SEIGE_MOVIE_02__15$', duration=7000)
         self.set_skip(state=연출페이즈2대사16스킵)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -391,7 +391,7 @@ class 연출페이즈2대사16스킵(trigger_api.Trigger):
 class 연출페이즈2대사17(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[15115,15116], return_view=False)
-        self.add_cinematic_talk(npc_id=11000075, illust_id='Ereb_serious', msg='$52000068_QD__TRIA_SEIGE_MOVIE_02__16$', duration=7000, align=Align.Center)
+        self.add_cinematic_talk(npc_id=11000075, illust_id='Ereb_serious', msg='$52000068_QD__TRIA_SEIGE_MOVIE_02__16$', duration=7000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):

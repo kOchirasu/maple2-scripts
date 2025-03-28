@@ -114,7 +114,7 @@ class TalkStart(trigger_api.Trigger):
 
 class CinematicTalk01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003512, msg='$02100001_BF__01_MAINMISSION__2$', duration=5000, align=Align.Center, illust_id='0')
+        self.add_cinematic_talk(npc_id=11003512, msg='$02100001_BF__01_MAINMISSION__2$', duration=5000, illust_id='0')
         self.set_skip(state=CinematicTalk01Skip)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -133,7 +133,7 @@ class CinematicTalk01Skip(trigger_api.Trigger):
 
 class CinematicTalk02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003512, msg='$02100001_BF__01_MAINMISSION__3$', duration=5000, align=Align.Center, illust_id='0')
+        self.add_cinematic_talk(npc_id=11003512, msg='$02100001_BF__01_MAINMISSION__3$', duration=5000, illust_id='0')
         self.set_skip(state=CinematicTalk02Skip)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -223,7 +223,7 @@ class BadEndingStart(trigger_api.Trigger):
 
 class BadEndingTalk01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003517, msg='$02100001_BF__01_MAINMISSION__5$', duration=5000, align=Align.Center, illust_id='0')
+        self.add_cinematic_talk(npc_id=11003517, msg='$02100001_BF__01_MAINMISSION__5$', duration=5000, illust_id='0')
         self.set_skip(state=BadEndingTalk01Skip)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -298,7 +298,7 @@ class HappyEndingStart(trigger_api.Trigger):
 
 class HappyEndingTalk01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003512, msg='$02100001_BF__01_MAINMISSION__7$', duration=5000, align=Align.Center, illust_id='0')
+        self.add_cinematic_talk(npc_id=11003512, msg='$02100001_BF__01_MAINMISSION__7$', duration=5000, illust_id='0')
         self.set_skip(state=HappyEndingTalk01Skip)
 
     def on_tick(self) -> trigger_api.Trigger:

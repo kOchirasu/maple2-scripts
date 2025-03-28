@@ -29,7 +29,7 @@ class scene_01(trigger_api.Trigger):
         self.spawn_monster(spawn_ids=[201]) # 연출 제타 (11003207)
         self.move_user(map_id=52000125, portal_id=6001)
         self.set_npc_emotion_sequence(spawn_id=102, sequence_name='Clap_A')
-        self.add_cinematic_talk(npc_id=11003205, msg='$52000125_QD__MAIN_01__0$', duration=3000, align=Align.Center)
+        self.add_cinematic_talk(npc_id=11003205, msg='$52000125_QD__MAIN_01__0$', duration=3000)
         self.set_scene_skip(state=scene_08, action='exit')
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -40,7 +40,7 @@ class scene_01(trigger_api.Trigger):
 class scene_02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_npc_emotion_sequence(spawn_id=102, sequence_name='ChatUp')
-        self.add_cinematic_talk(npc_id=11003205, msg='$52000125_QD__MAIN_01__1$', duration=1000, align=Align.Center)
+        self.add_cinematic_talk(npc_id=11003205, msg='$52000125_QD__MAIN_01__1$', duration=1000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=1000):
@@ -49,7 +49,7 @@ class scene_02(trigger_api.Trigger):
 
 class scene_03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003208, msg='$52000125_QD__MAIN_01__2$', duration=2000, align=Align.Center)
+        self.add_cinematic_talk(npc_id=11003208, msg='$52000125_QD__MAIN_01__2$', duration=2000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=2000):
@@ -59,7 +59,7 @@ class scene_03(trigger_api.Trigger):
 class scene_04(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[4003], return_view=False)
-        self.add_cinematic_talk(npc_id=11003205, msg='$52000125_QD__MAIN_01__3$', duration=3000, align=Align.Center)
+        self.add_cinematic_talk(npc_id=11003205, msg='$52000125_QD__MAIN_01__3$', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):

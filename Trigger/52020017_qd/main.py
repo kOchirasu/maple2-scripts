@@ -124,7 +124,7 @@ class Event_A_06(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.reset_camera(interpolation_time=2.0)
         self.set_onetime_effect(id=1, enable=True, path='BG/Common/ScreenMask/Eff_fadein_1sec.xml')
-        self.add_cinematic_talk(npc_id=11003624, msg='자, 그럼 극을 시작해볼까?', duration=2800, illust_id='RobotMaidBrownHair_normal', align=Align.Center)
+        self.add_cinematic_talk(npc_id=11003624, msg='자, 그럼 극을 시작해볼까?', duration=2800, illust_id='RobotMaidBrownHair_normal')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):

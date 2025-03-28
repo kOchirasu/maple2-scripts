@@ -68,7 +68,7 @@ class narration02(trigger_api.Trigger):
         self.set_cinematic_ui(type=1)
         self.set_cinematic_ui(type=3)
         self.select_camera_path(path_ids=[1,2], return_view=False)
-        self.show_caption(type='VerticalCaption', title='$52100102_QD__MAIN__1$', desc='$52100102_QD__MAIN__2$', align=Align.Bottom | Align.Left, duration=3000, scale=2.5)
+        self.show_caption(type='VerticalCaption', title='$52100102_QD__MAIN__1$', desc='$52100102_QD__MAIN__2$', align=Align.BottomLeft, duration=3000, scale=2.5)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -133,7 +133,7 @@ class 투르카등장(trigger_api.Trigger):
 class 투르카대사소개(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_onetime_effect(id=1, path='BG/Common/ScreenMask/Eff_fadein_1sec.xml')
-        self.show_caption(type='VerticalCaption', title='$52100102_QD__MAIN__7$', desc='$52100102_QD__MAIN__8$', align=Align.Bottom | Align.Left, duration=3000, scale=2.5)
+        self.show_caption(type='VerticalCaption', title='$52100102_QD__MAIN__7$', desc='$52100102_QD__MAIN__8$', align=Align.BottomLeft, duration=3000, scale=2.5)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=1000):

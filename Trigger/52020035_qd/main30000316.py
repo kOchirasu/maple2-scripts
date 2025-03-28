@@ -39,7 +39,7 @@ class 라딘이야기01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_onetime_effect(id=1, path='BG/Common/ScreenMask/Eff_fadein_1sec.xml')
         self.set_scene_skip(state=Skip01, action='exit')
-        self.show_caption(type='VerticalCaption', title='라딘의 막사', desc='$MyPCName$$pp:가,이$ 떠난 직후', align=Align.Center | Align.Left, duration=4000, scale=2.0)
+        self.show_caption(type='VerticalCaption', title='라딘의 막사', desc='$MyPCName$$pp:가,이$ 떠난 직후', align=Align.CenterLeft, duration=4000, scale=2.0)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=2000):

@@ -45,7 +45,7 @@ class 웰컴문구1(trigger_api.Trigger):
         self.set_pc_emotion_loop(sequence_name='Emotion_Bloompicnic_A', duration=7000.0)
         self.spawn_monster(spawn_ids=[9999], auto_target=False) # 구르는 천둥:11003390
         self.face_emotion(emotion_name='Trigger_disappoint')
-        self.show_caption(type='VerticalCaption', title='$52010028_QD__MAIN__0$', desc='$52010028_QD__MAIN__1$', align=Align.Center | Align.Left, duration=3000, scale=2.0)
+        self.show_caption(type='VerticalCaption', title='$52010028_QD__MAIN__0$', desc='$52010028_QD__MAIN__1$', align=Align.CenterLeft, duration=3000, scale=2.0)
         self.add_cinematic_talk(npc_id=0, msg='$52010028_QD__MAIN__2$', duration=3000)
         self.set_onetime_effect(id=301, enable=True, path='BG/Common/Eff_Com_Vibrate_Short.xml')
         self.set_onetime_effect(id=401, enable=True, path='BG/sound/Eff_DevilPortal_01.xml')
@@ -200,7 +200,7 @@ class 연출_02_1(trigger_api.Trigger):
         self.set_npc_emotion_sequence(spawn_id=201, sequence_name='Attack_02_D')
         self.set_effect(trigger_ids=[5001], visible=True)
         self.add_cinematic_talk(npc_id=0, msg='$52010028_QD__MAIN__13$', duration=3000)
-        self.show_caption(type='VerticalCaption', title='$52010028_QD__MAIN__14$', desc='$52010028_QD__MAIN__15$', align=Align.Center | Align.Left, duration=3000, scale=2.0)
+        self.show_caption(type='VerticalCaption', title='$52010028_QD__MAIN__14$', desc='$52010028_QD__MAIN__15$', align=Align.CenterLeft, duration=3000, scale=2.0)
         self.add_cinematic_talk(npc_id=11003390, msg='$52010028_QD__MAIN__16$', duration=3000, illust_id='0', align=Align.Left)
         self.add_cinematic_talk(npc_id=11003387, msg='$52010028_QD__MAIN__17$', duration=2000)
         self.add_cinematic_talk(npc_id=11003390, msg='$52010028_QD__MAIN__18$', duration=3000)

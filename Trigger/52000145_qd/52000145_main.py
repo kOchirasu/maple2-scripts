@@ -376,7 +376,7 @@ class 오스칼등장_09(trigger_api.Trigger):
 
 class 오스칼등장_10(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003189, msg='$52000145_QD__52000145_MAIN__14$', duration=4000, illust_id='Hastur_normal', align=Align.Center)
+        self.add_cinematic_talk(npc_id=11003189, msg='$52000145_QD__52000145_MAIN__14$', duration=4000, illust_id='Hastur_normal')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):
@@ -394,7 +394,7 @@ class 오스칼등장_11(trigger_api.Trigger):
 
 class 오스칼등장_12(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003189, msg='$52000145_QD__52000145_MAIN__16$', duration=3500, illust_id='Hastur_normal', align=Align.Center)
+        self.add_cinematic_talk(npc_id=11003189, msg='$52000145_QD__52000145_MAIN__16$', duration=3500, illust_id='Hastur_normal')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3500):
@@ -414,7 +414,7 @@ class 오스칼등장_13(trigger_api.Trigger):
 
 class 오스칼등장_14(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003189, msg='$52000145_QD__52000145_MAIN__20$', duration=3000, illust_id='Hastur_normal', align=Align.Center)
+        self.add_cinematic_talk(npc_id=11003189, msg='$52000145_QD__52000145_MAIN__20$', duration=3000, illust_id='Hastur_normal')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3500):
@@ -432,7 +432,7 @@ class 오스칼등장_15(trigger_api.Trigger):
 
 class 오스칼등장_16(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003189, msg='$52000145_QD__52000145_MAIN__22$', duration=3000, illust_id='Hastur_normal', align=Align.Center)
+        self.add_cinematic_talk(npc_id=11003189, msg='$52000145_QD__52000145_MAIN__22$', duration=3000, illust_id='Hastur_normal')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3500):
@@ -452,7 +452,7 @@ class 오스칼등장_17(trigger_api.Trigger):
 
 class 오스칼등장_18(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003189, msg='$52000145_QD__52000145_MAIN__26$', duration=3000, illust_id='Hastur_normal', align=Align.Center)
+        self.add_cinematic_talk(npc_id=11003189, msg='$52000145_QD__52000145_MAIN__26$', duration=3000, illust_id='Hastur_normal')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3500):
@@ -470,7 +470,7 @@ class 오스칼등장_19(trigger_api.Trigger):
 
 class 오스칼등장_20(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003189, msg='$52000145_QD__52000145_MAIN__28$', duration=3500, illust_id='Hastur_normal', align=Align.Center)
+        self.add_cinematic_talk(npc_id=11003189, msg='$52000145_QD__52000145_MAIN__28$', duration=3500, illust_id='Hastur_normal')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3500):

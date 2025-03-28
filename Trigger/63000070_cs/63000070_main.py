@@ -203,7 +203,7 @@ class scene1_robottroops(trigger_api.Trigger):
 class scene1_ladygoback5(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.move_npc(spawn_id=101, patrol_name='Patrol_lady_backward_03')
-        self.add_cinematic_talk(npc_id=11004289, illust_id='Rue_Halloween', align=Align.Center, msg='$63000070_CS__63000070_MAIN__8$', duration=3000) # 그 전에 목숨을 잃게 될 테니까!
+        self.add_cinematic_talk(npc_id=11004289, illust_id='Rue_Halloween', msg='$63000070_CS__63000070_MAIN__8$', duration=3000) # 그 전에 목숨을 잃게 될 테니까!
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):

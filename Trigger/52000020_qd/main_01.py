@@ -55,7 +55,7 @@ class scene_01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[4001,4002], return_view=False)
         self.set_npc_emotion_sequence(spawn_id=301, sequence_name='Bore_C')
-        self.add_cinematic_talk(npc_id=29000266, msg='$52000020_QD__MAIN_01__0$', duration=3709, align=Align.Center)
+        self.add_cinematic_talk(npc_id=29000266, msg='$52000020_QD__MAIN_01__0$', duration=3709)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -64,7 +64,7 @@ class scene_01(trigger_api.Trigger):
 
 class scene_02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003193, msg='$52000020_QD__MAIN_01__1$', duration=3369, align=Align.Center)
+        self.add_cinematic_talk(npc_id=11003193, msg='$52000020_QD__MAIN_01__1$', duration=3369)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -73,7 +73,7 @@ class scene_02(trigger_api.Trigger):
 
 class scene_03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003193, msg='$52000020_QD__MAIN_01__2$', duration=2000, align=Align.Center)
+        self.add_cinematic_talk(npc_id=11003193, msg='$52000020_QD__MAIN_01__2$', duration=2000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):

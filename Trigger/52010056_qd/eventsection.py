@@ -113,7 +113,7 @@ class 인트로_지역소개(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_cinematic_ui(type=1)
         self.set_cinematic_ui(type=3)
-        self.show_caption(type='VerticalCaption', title='$52010056_QD__EventSection__54$', desc='$52010056_QD__EventSection__0$', align=Align.Bottom | Align.Left, duration=3500, scale=1.0)
+        self.show_caption(type='VerticalCaption', title='$52010056_QD__EventSection__54$', desc='$52010056_QD__EventSection__0$', align=Align.BottomLeft, duration=3500, scale=1.0)
         self.set_scene_skip(state=시작연출_준비, action='nextState') # 크림슨 발록 연출 스킵
         # 트리스탄 등장 연출로 이동
 
@@ -237,7 +237,7 @@ class 시작연출_지역소개(trigger_api.Trigger):
         self.set_cinematic_ui(type=1)
         self.set_cinematic_ui(type=3)
         self.set_onetime_effect(id=1, path='BG/Common/ScreenMask/Eff_fadein_1sec.xml') # 페이드 아웃 끔
-        self.show_caption(type='VerticalCaption', title='$52010056_QD__EventSection__12$', align=Align.Bottom | Align.Left, duration=3500, scale=1.0)
+        self.show_caption(type='VerticalCaption', title='$52010056_QD__EventSection__12$', align=Align.BottomLeft, duration=3500, scale=1.0)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=100):
@@ -300,7 +300,7 @@ class 트리스탄_대사A(trigger_api.Trigger):
 
 class 트리스탄_대사B(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003812, msg='$52010056_QD__EventSection__16$', duration=2800, illust_id='Tristan_normal', align=Align.Center)
+        self.add_cinematic_talk(npc_id=11003812, msg='$52010056_QD__EventSection__16$', duration=2800, illust_id='Tristan_normal')
         self.set_onetime_effect(id=2, enable=True, path='BG/Common/ScreenMask/Eff_fadein_1sec.xml') # 페이드 아웃 켬
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -476,7 +476,7 @@ class 크림슨발록분노(trigger_api.Trigger):
 
 class 트리스탄대사_A(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003812, msg='$52010056_QD__EventSection__23$', duration=2800, illust_id='Tristan_normal', align=Align.Center)
+        self.add_cinematic_talk(npc_id=11003812, msg='$52010056_QD__EventSection__23$', duration=2800, illust_id='Tristan_normal')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -485,7 +485,7 @@ class 트리스탄대사_A(trigger_api.Trigger):
 
 class 트리스탄대사_B(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003812, msg='$52010056_QD__EventSection__24$', duration=2800, illust_id='Tristan_normal', align=Align.Center)
+        self.add_cinematic_talk(npc_id=11003812, msg='$52010056_QD__EventSection__24$', duration=2800, illust_id='Tristan_normal')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -495,7 +495,7 @@ class 트리스탄대사_B(trigger_api.Trigger):
 class 크림슨발록대사_A(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[4011], return_view=False)
-        self.add_cinematic_talk(npc_id=11003817, msg='$52010056_QD__EventSection__25$', duration=2800, illust_id='balrog_normal', align=Align.Center)
+        self.add_cinematic_talk(npc_id=11003817, msg='$52010056_QD__EventSection__25$', duration=2800, illust_id='balrog_normal')
         self.set_effect(trigger_ids=[5011], visible=True) # 몸체 이펙트
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -557,7 +557,7 @@ class 인페르녹의혼_흡수연출_E(trigger_api.Trigger):
 
 class 인페르녹의혼_흡수연출_F(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003812, msg='$52010056_QD__EventSection__30$', duration=2800, illust_id='Tristan_normal', align=Align.Center)
+        self.add_cinematic_talk(npc_id=11003812, msg='$52010056_QD__EventSection__30$', duration=2800, illust_id='Tristan_normal')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -566,7 +566,7 @@ class 인페르녹의혼_흡수연출_F(trigger_api.Trigger):
 
 class 인페르녹의혼_흡수연출_G(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003821, msg='$52010056_QD__EventSection__31$', duration=2800, align=Align.Center)
+        self.add_cinematic_talk(npc_id=11003821, msg='$52010056_QD__EventSection__31$', duration=2800)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -575,7 +575,7 @@ class 인페르녹의혼_흡수연출_G(trigger_api.Trigger):
 
 class 인페르녹의혼_흡수연출_H(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003821, msg='$52010056_QD__EventSection__32$', duration=2800, align=Align.Center)
+        self.add_cinematic_talk(npc_id=11003821, msg='$52010056_QD__EventSection__32$', duration=2800)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -584,7 +584,7 @@ class 인페르녹의혼_흡수연출_H(trigger_api.Trigger):
 
 class 인페르녹의혼_흡수연출_I(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003812, msg='$52010056_QD__EventSection__33$', duration=2800, illust_id='Tristan_normal', align=Align.Center)
+        self.add_cinematic_talk(npc_id=11003812, msg='$52010056_QD__EventSection__33$', duration=2800, illust_id='Tristan_normal')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -602,7 +602,7 @@ class 인페르녹의혼_흡수연출_J(trigger_api.Trigger):
 
 class 인페르녹의혼_흡수연출_K(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003812, msg='$52010056_QD__EventSection__35$', duration=2800, illust_id='Tristan_normal', align=Align.Center)
+        self.add_cinematic_talk(npc_id=11003812, msg='$52010056_QD__EventSection__35$', duration=2800, illust_id='Tristan_normal')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -1038,7 +1038,7 @@ class 크림슨발록_대사_G(trigger_api.Trigger):
 
 class 트리스탄_대사_H(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003812, msg='$52010056_QD__EventSection__44$', duration=2800, illust_id='Tristan_normal', align=Align.Center)
+        self.add_cinematic_talk(npc_id=11003812, msg='$52010056_QD__EventSection__44$', duration=2800, illust_id='Tristan_normal')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -1056,7 +1056,7 @@ class 크림슨발록_대사_I(trigger_api.Trigger):
 
 class 트리스탄_대사D(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003812, msg='$52010056_QD__EventSection__46$', duration=2800, illust_id='Tristan_normal', align=Align.Center)
+        self.add_cinematic_talk(npc_id=11003812, msg='$52010056_QD__EventSection__46$', duration=2800, illust_id='Tristan_normal')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -1065,7 +1065,7 @@ class 트리스탄_대사D(trigger_api.Trigger):
 
 class 트리스탄_대사E(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003812, msg='$52010056_QD__EventSection__47$', duration=2800, illust_id='Tristan_normal', align=Align.Center)
+        self.add_cinematic_talk(npc_id=11003812, msg='$52010056_QD__EventSection__47$', duration=2800, illust_id='Tristan_normal')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -1314,7 +1314,7 @@ class 바닥이펙트_R(trigger_api.Trigger):
 
 class 크림슨발록_대사_L(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003817, msg='$52010056_QD__EventSection__50$', duration=2800, illust_id='balrog_normal', align=Align.Center)
+        self.add_cinematic_talk(npc_id=11003817, msg='$52010056_QD__EventSection__50$', duration=2800, illust_id='balrog_normal')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=2000):
@@ -1406,7 +1406,7 @@ class 마지막연출_온(trigger_api.Trigger):
 
 class 트리스탄_대사F(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003812, msg='$52010056_QD__EventSection__51$', duration=2800, illust_id='Tristan_normal', align=Align.Center)
+        self.add_cinematic_talk(npc_id=11003812, msg='$52010056_QD__EventSection__51$', duration=2800, illust_id='Tristan_normal')
         self.set_scene_skip() # Missing State: State
 
     def on_tick(self) -> trigger_api.Trigger:

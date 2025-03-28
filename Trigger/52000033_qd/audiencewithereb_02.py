@@ -57,7 +57,7 @@ class ErebTalk_02(trigger_api.Trigger):
 
 class Erebintroduce(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.show_caption(scale=2.3, type='NameCaption', title='$52000033_QD__AUDIENCEWITHEREB_02__18$', desc='$52000033_QD__AUDIENCEWITHEREB_02__19$', align=Align.Center | Align.Left, offset_rate_x=-0.15, duration=3000)
+        self.show_caption(scale=2.3, type='NameCaption', title='$52000033_QD__AUDIENCEWITHEREB_02__18$', desc='$52000033_QD__AUDIENCEWITHEREB_02__19$', align=Align.CenterLeft, offset_rate_x=-0.15, duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -98,7 +98,7 @@ class Kaltalk_02(trigger_api.Trigger):
 
 class kaltroduce(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.show_caption(scale=2.3, type='NameCaption', title='$52000033_QD__AUDIENCEWITHEREB_02__20$', desc='$52000033_QD__AUDIENCEWITHEREB_02__21$', align=Align.Center | Align.Left, offset_rate_x=-0.15, duration=3000)
+        self.show_caption(scale=2.3, type='NameCaption', title='$52000033_QD__AUDIENCEWITHEREB_02__20$', desc='$52000033_QD__AUDIENCEWITHEREB_02__21$', align=Align.CenterLeft, offset_rate_x=-0.15, duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -118,7 +118,7 @@ class talk_01(trigger_api.Trigger):
 
 class talk_02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11001666, illust_id='Fray_serious', msg='$52000033_QD__AUDIENCEWITHEREB_02__9$', duration=3000, delay_tick=3, align=Align.Center)
+        self.add_cinematic_talk(npc_id=11001666, illust_id='Fray_serious', msg='$52000033_QD__AUDIENCEWITHEREB_02__9$', duration=3000, delay_tick=3)
         self.add_cinematic_talk(npc_id=11001663, illust_id='Ereb_closeEye', msg='$52000033_QD__AUDIENCEWITHEREB_02__10$', duration=1000, align=Align.Left) # 에레브
         self.add_cinematic_talk(npc_id=11001665, illust_id='Karl_normal', msg='$52000033_QD__AUDIENCEWITHEREB_02__11$', duration=1000, align=Align.Right) # 칼
 

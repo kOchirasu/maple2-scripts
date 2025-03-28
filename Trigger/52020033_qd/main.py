@@ -110,7 +110,7 @@ class 소개_준비(trigger_api.Trigger):
 class 소개_세로줌인01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[8000,8001], return_view=False)
-        self.show_caption(type='NameCaption', title='$map:52020033$', desc='크리티아스 정찰 임무 지원 중', align=Align.Center | Align.Left, offset_rate_x=-0.05, offset_rate_y=0.15, duration=12000, scale=2.0)
+        self.show_caption(type='NameCaption', title='$map:52020033$', desc='크리티아스 정찰 임무 지원 중', align=Align.CenterLeft, offset_rate_x=-0.05, offset_rate_y=0.15, duration=12000, scale=2.0)
         self.set_scene_skip(state=소개_스킵완료, action='nextState') # setsceneskip 1 set
         # setsceneskip set
         # setsceneskip set

@@ -216,7 +216,7 @@ class 카트반이동(trigger_api.Trigger):
 class 의미심장(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_onetime_effect(id=4, enable=True, path='BG/Common/ScreenMask/Eff_fadein_1sec.xml')
-        self.add_cinematic_talk(npc_id=11001024, msg='$52000073_QD__MAIN__14$', duration=3000, align=Align.Center)
+        self.add_cinematic_talk(npc_id=11001024, msg='$52000073_QD__MAIN__14$', duration=3000)
         self.set_scene_skip() # Missing State: State
 
     def on_tick(self) -> trigger_api.Trigger:

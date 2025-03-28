@@ -83,7 +83,7 @@ class 카메라연출_02(trigger_api.Trigger):
 
 class 카메라연출_03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.show_caption(type='VerticalCaption', title='$52000139_QD__MAIN__22$', desc='$52000139_QD__MAIN__23$', align=Align.Bottom | Align.Left, duration=4000, scale=2.5)
+        self.show_caption(type='VerticalCaption', title='$52000139_QD__MAIN__22$', desc='$52000139_QD__MAIN__23$', align=Align.BottomLeft, duration=4000, scale=2.5)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):

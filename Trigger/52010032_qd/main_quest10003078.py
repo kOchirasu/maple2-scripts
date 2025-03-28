@@ -39,7 +39,7 @@ class 무르파고스이동01(trigger_api.Trigger):
         self.move_user_path(patrol_name='MS2PatrolData_3005')
         self.move_npc(spawn_id=301, patrol_name='MS2PatrolData_3003')
         self.move_npc(spawn_id=302, patrol_name='MS2PatrolData_3004')
-        self.show_caption(type='VerticalCaption', title='$52010032_QD__MAIN_QUEST10003078__0$', desc='$52010032_QD__MAIN_QUEST10003078__1$', align=Align.Center | Align.Left, duration=3000, scale=2.0)
+        self.show_caption(type='VerticalCaption', title='$52010032_QD__MAIN_QUEST10003078__0$', desc='$52010032_QD__MAIN_QUEST10003078__1$', align=Align.CenterLeft, duration=3000, scale=2.0)
         self.add_balloon_talk(spawn_id=301, msg='$52010032_QD__MAIN_QUEST10003078__2$', duration=2000, delay_tick=1000)
         self.add_balloon_talk(spawn_id=302, msg='$52010032_QD__MAIN_QUEST10003078__3$', duration=2000, delay_tick=2000)
 

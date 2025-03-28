@@ -105,7 +105,7 @@ class 리엔전경씬02(trigger_api.Trigger):
 
 class 리엔전경씬03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.show_caption(type='VerticalCaption', title='$52000104_QD__52000104__0$', desc='$52000104_QD__52000104__1$', align=Align.Bottom | Align.Left, duration=7000, scale=2.5)
+        self.show_caption(type='VerticalCaption', title='$52000104_QD__52000104__0$', desc='$52000104_QD__52000104__1$', align=Align.BottomLeft, duration=7000, scale=2.5)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):
@@ -202,7 +202,7 @@ class 리린과대화03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[1006,1007], return_view=False)
         self.face_emotion(spawn_id=200, emotion_name='hello_Cait')
-        self.show_caption(type='NameCaption', title='$52000104_QD__52000104__3$', desc='$52000104_QD__52000104__4$', align=Align.Center, offset_rate_x=-0.15, offset_rate_y=0.15, duration=10000, scale=2.0)
+        self.show_caption(type='NameCaption', title='$52000104_QD__52000104__3$', desc='$52000104_QD__52000104__4$', offset_rate_x=-0.15, offset_rate_y=0.15, duration=10000, scale=2.0)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=6000):
@@ -358,7 +358,7 @@ class 할아버지등장씬03(trigger_api.Trigger):
 
 class 할아버지등장씬04(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.show_caption(type='NameCaption', title='$52000104_QD__52000104__7$', desc='$52000104_QD__52000104__8$', align=Align.Center, offset_rate_x=-0.15, offset_rate_y=0.15, duration=10000, scale=2.0)
+        self.show_caption(type='NameCaption', title='$52000104_QD__52000104__7$', desc='$52000104_QD__52000104__8$', offset_rate_x=-0.15, offset_rate_y=0.15, duration=10000, scale=2.0)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):

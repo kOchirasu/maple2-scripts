@@ -621,7 +621,7 @@ class 아시모프와대화03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_scene_skip(state=Skip_4, action='nextState')
         self.select_camera_path(path_ids=[4028], return_view=False)
-        self.show_caption(type='NameCaption', title='$52000100_QD__52000100__16$', desc='$52000100_QD__52000100__17$', align=Align.Center, offset_rate_x=-0.05, offset_rate_y=0.15, duration=10000, scale=2.0)
+        self.show_caption(type='NameCaption', title='$52000100_QD__52000100__16$', desc='$52000100_QD__52000100__17$', offset_rate_x=-0.05, offset_rate_y=0.15, duration=10000, scale=2.0)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=7000):

@@ -88,7 +88,7 @@ class 대화시작(trigger_api.Trigger):
         self.set_effect(trigger_ids=[401])
         self.set_timer(timer_id='1', seconds=6)
         # self.set_effect(trigger_ids=[601], visible=True)
-        self.add_cinematic_talk(npc_id=11000074, illust_id='Karl_closeEye', msg='$02000254_BF__SCENE01__0$', duration=6000, align=Align.Center)
+        self.add_cinematic_talk(npc_id=11000074, illust_id='Karl_closeEye', msg='$02000254_BF__SCENE01__0$', duration=6000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='1'):
@@ -121,7 +121,7 @@ class 칼대사1(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='1', seconds=5)
         # self.set_effect(trigger_ids=[604], visible=True)
-        self.add_cinematic_talk(npc_id=11000074, illust_id='Karl_closeEye', msg='$02000254_BF__SCENE01__3$', duration=5000, align=Align.Center)
+        self.add_cinematic_talk(npc_id=11000074, illust_id='Karl_closeEye', msg='$02000254_BF__SCENE01__3$', duration=5000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='1'):
@@ -132,7 +132,7 @@ class 칼대사2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_timer(timer_id='1', seconds=5)
         # self.set_effect(trigger_ids=[605], visible=True)
-        self.add_cinematic_talk(npc_id=11000074, illust_id='Karl_closeEye', msg='$02000254_BF__SCENE01__4$', duration=5000, align=Align.Center)
+        self.add_cinematic_talk(npc_id=11000074, illust_id='Karl_closeEye', msg='$02000254_BF__SCENE01__4$', duration=5000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='1'):

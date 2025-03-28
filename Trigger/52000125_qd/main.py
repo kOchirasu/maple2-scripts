@@ -68,7 +68,7 @@ class scene_01(trigger_api.Trigger):
 class scene_02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_npc_emotion_sequence(spawn_id=101, sequence_name='Talk_A')
-        self.add_cinematic_talk(npc_id=11003205, msg='$52000125_QD__MAIN__0$', duration=3000, align=Align.Center)
+        self.add_cinematic_talk(npc_id=11003205, msg='$52000125_QD__MAIN__0$', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -106,7 +106,7 @@ class scene_05(trigger_api.Trigger):
 
 class scene_06(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003205, msg='$52000125_QD__MAIN__4$', duration=3000, align=Align.Center)
+        self.add_cinematic_talk(npc_id=11003205, msg='$52000125_QD__MAIN__4$', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -126,7 +126,7 @@ class scene_07(trigger_api.Trigger):
 class scene_08(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[4009], return_view=False)
-        self.add_cinematic_talk(npc_id=11003205, msg='$52000125_QD__MAIN__6$', duration=3000, align=Align.Center)
+        self.add_cinematic_talk(npc_id=11003205, msg='$52000125_QD__MAIN__6$', duration=3000)
         self.set_scene_skip() # Missing State: State
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -238,7 +238,7 @@ class thanks(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[4007], return_view=False)
         self.set_npc_emotion_sequence(spawn_id=101, sequence_name='Clap_A')
-        self.add_cinematic_talk(npc_id=11003205, msg='$52000125_QD__MAIN__12$', duration=2000, align=Align.Center)
+        self.add_cinematic_talk(npc_id=11003205, msg='$52000125_QD__MAIN__12$', duration=2000)
         self.set_scene_skip() # Missing State: State
 
     def on_tick(self) -> trigger_api.Trigger:

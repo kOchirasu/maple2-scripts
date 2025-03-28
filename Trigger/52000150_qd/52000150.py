@@ -68,7 +68,7 @@ class 차원의숲전경씬02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_onetime_effect(id=3, path='BG/Common/ScreenMask/Eff_CameraMasking_FadeInOut1sec.xml')
         self.select_camera_path(path_ids=[1002,1003], return_view=False)
-        self.show_caption(type='VerticalCaption', title='$52000150_QD__52000150__8$', desc='$52000150_QD__52000150__9$', align=Align.Bottom | Align.Left, duration=5500, scale=2.5)
+        self.show_caption(type='VerticalCaption', title='$52000150_QD__52000150__8$', desc='$52000150_QD__52000150__9$', align=Align.BottomLeft, duration=5500, scale=2.5)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=6000):

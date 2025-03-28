@@ -35,7 +35,7 @@ class start(trigger_api.Trigger):
         self.set_scene_skip(state=전투시작, action='nextState')
         self.select_camera_path(path_ids=[7000,7003], return_view=False)
         self.set_onetime_effect(id=1, path='BG/Common/ScreenMask/Eff_fadein_1sec.xml')
-        self.show_caption(type='VerticalCaption', title='$02000536_BF__MAIN__0$', desc='$02000536_BF__MAIN__1$', align=Align.Center | Align.Right, duration=3000, scale=2.0)
+        self.show_caption(type='VerticalCaption', title='$02000536_BF__MAIN__0$', desc='$02000536_BF__MAIN__1$', align=Align.CenterRight, duration=3000, scale=2.0)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -46,7 +46,7 @@ class 하렌인사(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[7003,7001], return_view=False)
         self.set_npc_emotion_loop(spawn_id=102, sequence_name='Bore_A', duration=5000.0)
-        self.add_cinematic_talk(npc_id=23300001, msg='$02000536_BF__MAIN__2$', align=Align.Center, duration=4000)
+        self.add_cinematic_talk(npc_id=23300001, msg='$02000536_BF__MAIN__2$', duration=4000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4500):
@@ -56,7 +56,7 @@ class 하렌인사(trigger_api.Trigger):
 class 하렌인사2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_npc_emotion_sequence(spawn_id=102, sequence_name='Attack_01_E,Attack_01_B')
-        self.add_cinematic_talk(npc_id=23300001, msg='$02000536_BF__MAIN__3$', align=Align.Center, duration=4000)
+        self.add_cinematic_talk(npc_id=23300001, msg='$02000536_BF__MAIN__3$', duration=4000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):

@@ -116,7 +116,7 @@ class 커닝시티전경씬02(trigger_api.Trigger):
 
 class 커닝시티전경씬03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.show_caption(type='VerticalCaption', title='$52000111_QD__52000111__0$', desc='$52000111_QD__52000111__1$', align=Align.Bottom | Align.Left, duration=7000, scale=2.5)
+        self.show_caption(type='VerticalCaption', title='$52000111_QD__52000111__0$', desc='$52000111_QD__52000111__1$', align=Align.BottomLeft, duration=7000, scale=2.5)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):
@@ -297,7 +297,7 @@ class 쉐도우클로등장씬09(trigger_api.Trigger):
 class 쉐도우클로등장씬11(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[1022,1023], return_view=False)
-        self.show_caption(type='NameCaption', title='$52000111_QD__52000111__5$', desc='$52000111_QD__52000111__6$', align=Align.Center, offset_rate_x=-0.15, offset_rate_y=0.15, duration=10000, scale=2.0)
+        self.show_caption(type='NameCaption', title='$52000111_QD__52000111__5$', desc='$52000111_QD__52000111__6$', offset_rate_x=-0.15, offset_rate_y=0.15, duration=10000, scale=2.0)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=7000):

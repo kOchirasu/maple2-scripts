@@ -47,7 +47,7 @@ class CameraEffect03_3(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[4002], return_view=False)
         self.move_user_path(patrol_name='MS2PatrolData_3001')
-        self.show_caption(type='VerticalCaption', title='$52000202_QD__52000202__0$', align=Align.Bottom | Align.Left, duration=5000, scale=2.5)
+        self.show_caption(type='VerticalCaption', title='$52000202_QD__52000202__0$', align=Align.BottomLeft, duration=5000, scale=2.5)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):

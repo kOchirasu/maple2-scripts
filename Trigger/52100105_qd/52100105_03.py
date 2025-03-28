@@ -185,7 +185,7 @@ class 투르카도망1(trigger_api.Trigger):
         self.set_npc_emotion_loop(spawn_id=500, sequence_name='Attack_Idle_A', duration=5333.0)
         self.set_npc_emotion_loop(spawn_id=400, sequence_name='Damg_A', duration=5333.0)
         self.select_camera(trigger_id=706)
-        self.add_cinematic_talk(npc_id=11004430, illust_id='Turka_Broken_Hood', msg='$52100105_QD__52100105_03__5$', duration=4000, align=Align.Center)
+        self.add_cinematic_talk(npc_id=11004430, illust_id='Turka_Broken_Hood', msg='$52100105_QD__52100105_03__5$', duration=4000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=1000):
@@ -214,7 +214,7 @@ class 투르카도망4(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera(trigger_id=707)
         self.destroy_monster(spawn_ids=[500], arg2=False)
-        self.add_cinematic_talk(npc_id=11004430, illust_id='Turka_Broken_Hood', msg='$52100105_QD__52100105_03__6$', duration=5000, align=Align.Center)
+        self.add_cinematic_talk(npc_id=11004430, illust_id='Turka_Broken_Hood', msg='$52100105_QD__52100105_03__6$', duration=5000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):

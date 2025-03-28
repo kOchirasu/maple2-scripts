@@ -55,7 +55,7 @@ class 연구실전경씬02(trigger_api.Trigger):
         self.select_camera_path(path_ids=[4000,4001,4002], return_view=False)
         self.move_npc(spawn_id=400, patrol_name='MS2PatrolData_isha')
         self.move_user_path(patrol_name='MS2PatrolData_pc')
-        self.show_caption(type='VerticalCaption', title='$52000164_QD__52000164__0$', desc='$52000164_QD__52000164__1$', align=Align.Bottom | Align.Left, duration=5000, scale=2.5)
+        self.show_caption(type='VerticalCaption', title='$52000164_QD__52000164__0$', desc='$52000164_QD__52000164__1$', align=Align.BottomLeft, duration=5000, scale=2.5)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=7000):

@@ -35,7 +35,7 @@ class 리엔전경_01(trigger_api.Trigger):
 class 리엔전경_02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[4001,4002], return_view=False)
-        self.show_caption(type='VerticalCaption', title='$52000161_QD__52000161__0$', desc='$52000161_QD__52000161__1$', align=Align.Bottom | Align.Left, duration=3000, scale=2.5)
+        self.show_caption(type='VerticalCaption', title='$52000161_QD__52000161__0$', desc='$52000161_QD__52000161__1$', align=Align.BottomLeft, duration=3000, scale=2.5)
         self.move_npc(spawn_id=101, patrol_name='MS2PatrolData_3001')
         self.move_user_path(patrol_name='MS2PatrolData_3002')
 
