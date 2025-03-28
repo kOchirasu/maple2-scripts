@@ -124,7 +124,7 @@ class 빅스소개_02(trigger_api.Trigger):
 
 class 빅스소개_03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.show_caption(type='VerticalCaption', title='$52000128_QD__52000128_MAIN__1$', desc='$52000128_QD__52000128_MAIN__2$', align=Align.Bottom | Align.Left, duration=3000, scale=2.5)
+        self.show_caption(type='VerticalCaption', title='$52000128_QD__52000128_MAIN__1$', desc='$52000128_QD__52000128_MAIN__2$', align=Align.BottomLeft, duration=3000, scale=2.5)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3500):
@@ -154,7 +154,7 @@ class 제시소개_02(trigger_api.Trigger):
 
 class 제시소개_03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.show_caption(type='VerticalCaption', title='$52000128_QD__52000128_MAIN__4$', desc='$52000128_QD__52000128_MAIN__5$', align=Align.Bottom | Align.Left, duration=3000, scale=2.5)
+        self.show_caption(type='VerticalCaption', title='$52000128_QD__52000128_MAIN__4$', desc='$52000128_QD__52000128_MAIN__5$', align=Align.BottomLeft, duration=3000, scale=2.5)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3500):
@@ -193,7 +193,7 @@ class 카일소개_03(trigger_api.Trigger):
 
 class 카일소개_04(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.show_caption(type='VerticalCaption', title='$52000128_QD__52000128_MAIN__7$', desc='$52000128_QD__52000128_MAIN__8$', align=Align.Bottom | Align.Left, duration=3000, scale=2.5)
+        self.show_caption(type='VerticalCaption', title='$52000128_QD__52000128_MAIN__7$', desc='$52000128_QD__52000128_MAIN__8$', align=Align.BottomLeft, duration=3000, scale=2.5)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3500):

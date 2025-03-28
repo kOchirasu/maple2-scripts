@@ -74,7 +74,7 @@ class LeadersTalk_Manovich01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_npc_emotion_sequence(spawn_id=101, sequence_name='Talk_A')
         # align = 일러스트 위치 : (left/ center/ right) 3가지 지원 (생략 시 center)
-        self.add_cinematic_talk(npc_id=11003221, msg='$52000120_QD__01_HENESYSDEFENSE__0$', duration=5000, align=Align.Center, illust_id='Manovich_normal')
+        self.add_cinematic_talk(npc_id=11003221, msg='$52000120_QD__01_HENESYSDEFENSE__0$', duration=5000, illust_id='Manovich_normal')
         # illustID = 표시할 일러스트의 npc id, 일러스트를 표시하기 싫으면 0으로 기입
         # 씬스킵으로 바로 전투 시작
         # self.set_scene_skip(state=OskhalTalk04Skip, action='exit')
@@ -101,7 +101,7 @@ class LeadersTalk_Osckal01(trigger_api.Trigger):
         self.move_user_path(patrol_name='MS2PatrolData_1000')
         self.move_npc(spawn_id=201, patrol_name='MS2PatrolData_201')
         # align = 일러스트 위치 : (left/ center/ right) 3가지 지원 (생략 시 center)
-        self.add_cinematic_talk(npc_id=11003319, msg='$52000120_QD__01_HENESYSDEFENSE__1$', duration=4000, align=Align.Center, illust_id='Oskhal_normal')
+        self.add_cinematic_talk(npc_id=11003319, msg='$52000120_QD__01_HENESYSDEFENSE__1$', duration=4000, illust_id='Oskhal_normal')
         # illustID = 표시할 일러스트의 npc id, 일러스트를 표시하기 싫으면 0으로 기입
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -169,7 +169,7 @@ class CameraChange03(trigger_api.Trigger):
 
 class PCTalk01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=0, msg='$52000120_QD__01_HENESYSDEFENSE__3$', duration=4000, align=Align.Center, illust_id='0')
+        self.add_cinematic_talk(npc_id=0, msg='$52000120_QD__01_HENESYSDEFENSE__3$', duration=4000, illust_id='0')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -189,7 +189,7 @@ class ManovichTalk01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_npc_emotion_sequence(spawn_id=101, sequence_name='Talk_A')
         # align = 일러스트 위치 : (left/ center/ right) 3가지 지원 (생략 시 center)
-        self.add_cinematic_talk(npc_id=11003221, msg='$52000120_QD__01_HENESYSDEFENSE__4$', duration=5000, align=Align.Center, illust_id='Manovich_normal')
+        self.add_cinematic_talk(npc_id=11003221, msg='$52000120_QD__01_HENESYSDEFENSE__4$', duration=5000, illust_id='Manovich_normal')
         # illustID = 표시할 일러스트의 npc id, 일러스트를 표시하기 싫으면 0으로 기입
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -210,7 +210,7 @@ class ManovichTalk01Skip(trigger_api.Trigger):
 class PCTalk02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_pc_emotion_loop(sequence_name='Talk_A', duration=4000.0)
-        self.add_cinematic_talk(npc_id=0, msg='$52000120_QD__01_HENESYSDEFENSE__5$', duration=4000, align=Align.Center, illust_id='0')
+        self.add_cinematic_talk(npc_id=0, msg='$52000120_QD__01_HENESYSDEFENSE__5$', duration=4000, illust_id='0')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -230,7 +230,7 @@ class ManovichTalk02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_npc_emotion_sequence(spawn_id=101, sequence_name='Bore_A')
         # align = 일러스트 위치 : (left/ center/ right) 3가지 지원 (생략 시 center)
-        self.add_cinematic_talk(npc_id=11003221, msg='$52000120_QD__01_HENESYSDEFENSE__6$', duration=4000, align=Align.Center, illust_id='Manovich_normal')
+        self.add_cinematic_talk(npc_id=11003221, msg='$52000120_QD__01_HENESYSDEFENSE__6$', duration=4000, illust_id='Manovich_normal')
         # illustID = 표시할 일러스트의 npc id, 일러스트를 표시하기 싫으면 0으로 기입
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -250,7 +250,7 @@ class OskhalTalk02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_npc_emotion_sequence(spawn_id=201, sequence_name='Talk_A')
         # align = 일러스트 위치 : (left/ center/ right) 3가지 지원 (생략 시 center)
-        self.add_cinematic_talk(npc_id=11003319, msg='$52000120_QD__01_HENESYSDEFENSE__7$', duration=5000, align=Align.Center, illust_id='Oskhal_normal')
+        self.add_cinematic_talk(npc_id=11003319, msg='$52000120_QD__01_HENESYSDEFENSE__7$', duration=5000, illust_id='Oskhal_normal')
         # illustID = 표시할 일러스트의 npc id, 일러스트를 표시하기 싫으면 0으로 기입
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -291,7 +291,7 @@ class CameraChange06(trigger_api.Trigger):
 class OskhalTalk03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         # align = 일러스트 위치 : (left/ center/ right) 3가지 지원 (생략 시 center)
-        self.add_cinematic_talk(npc_id=11003319, msg='$52000120_QD__01_HENESYSDEFENSE__8$', duration=4000, align=Align.Center, illust_id='Oskhal_serious')
+        self.add_cinematic_talk(npc_id=11003319, msg='$52000120_QD__01_HENESYSDEFENSE__8$', duration=4000, illust_id='Oskhal_serious')
         # illustID = 표시할 일러스트의 npc id, 일러스트를 표시하기 싫으면 0으로 기입
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -310,7 +310,7 @@ class OskhalTalk03Skip(trigger_api.Trigger):
 class OskhalTalk04(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         # align = 일러스트 위치 : (left/ center/ right) 3가지 지원 (생략 시 center)
-        self.add_cinematic_talk(npc_id=11003319, msg='$52000120_QD__01_HENESYSDEFENSE__9$', duration=5000, align=Align.Center, illust_id='Oskhal_normal')
+        self.add_cinematic_talk(npc_id=11003319, msg='$52000120_QD__01_HENESYSDEFENSE__9$', duration=5000, illust_id='Oskhal_normal')
         # illustID = 표시할 일러스트의 npc id, 일러스트를 표시하기 싫으면 0으로 기입
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -456,7 +456,7 @@ class BattleOnTheWallGuide01(trigger_api.Trigger):
         self.destroy_monster(spawn_ids=[202,210,211,212,213,214,215])
         self.spawn_monster(spawn_ids=[203,220,221,222,223,224,225], auto_target=False)
         # align = 일러스트 위치 : (left/ center/ right) 3가지 지원 (생략 시 center)
-        self.add_cinematic_talk(npc_id=11003319, msg='$52000120_QD__01_HENESYSDEFENSE__10$', duration=5000, align=Align.Center, illust_id='Oskhal_normal')
+        self.add_cinematic_talk(npc_id=11003319, msg='$52000120_QD__01_HENESYSDEFENSE__10$', duration=5000, illust_id='Oskhal_normal')
         # illustID = 표시할 일러스트의 npc id, 일러스트를 표시하기 싫으면 0으로 기입
         self.set_scene_skip(state=BattleOnTheWallGuide01Skip)
 
@@ -481,7 +481,7 @@ class BattleOnTheWallGuide02(trigger_api.Trigger):
         self.spawn_monster(spawn_ids=[903,904], auto_target=False) # Battle_Mob
         self.set_npc_emotion_sequence(spawn_id=102, sequence_name='Talk_A')
         # align = 일러스트 위치 : (left/ center/ right) 3가지 지원 (생략 시 center)
-        self.add_cinematic_talk(npc_id=11003221, msg='$52000120_QD__01_HENESYSDEFENSE__11$', duration=4000, align=Align.Center, illust_id='Manovich_normal')
+        self.add_cinematic_talk(npc_id=11003221, msg='$52000120_QD__01_HENESYSDEFENSE__11$', duration=4000, illust_id='Manovich_normal')
         # illustID = 표시할 일러스트의 npc id, 일러스트를 표시하기 싫으면 0으로 기입
         self.set_scene_skip(state=BattleOnTheWallGuide02Skip)
 
@@ -551,7 +551,7 @@ class CallingBackUp01(trigger_api.Trigger):
         self.set_cinematic_ui(type=1)
         self.set_cinematic_ui(type=3)
         # align = 일러스트 위치 : (left/ center/ right) 3가지 지원 (생략 시 center)
-        self.add_cinematic_talk(npc_id=11003319, msg='$52000120_QD__01_HENESYSDEFENSE__12$', duration=5000, align=Align.Center, illust_id='Oskhal_normal')
+        self.add_cinematic_talk(npc_id=11003319, msg='$52000120_QD__01_HENESYSDEFENSE__12$', duration=5000, illust_id='Oskhal_normal')
         # illustID = 표시할 일러스트의 npc id, 일러스트를 표시하기 싫으면 0으로 기입
         # 씬스킵으로 바로 전투 시작
         self.set_scene_skip(state=PCVolunteer05CSkip, action='nextState')
@@ -615,7 +615,7 @@ class PCVolunteer04(trigger_api.Trigger):
 class PCVolunteer05(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_pc_emotion_loop(sequence_name='Talk_A', duration=4000.0)
-        self.add_cinematic_talk(npc_id=0, msg='$52000120_QD__01_HENESYSDEFENSE__13$', duration=4000, align=Align.Center, illust_id='0')
+        self.add_cinematic_talk(npc_id=0, msg='$52000120_QD__01_HENESYSDEFENSE__13$', duration=4000, illust_id='0')
         # self.set_scene_skip(state=Battle01End01Skip, action='exit')
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -762,7 +762,7 @@ class Battle01End01(trigger_api.Trigger):
         self.set_cinematic_ui(type=1)
         self.set_cinematic_ui(type=3)
         # align = 일러스트 위치 : (left/ center/ right) 3가지 지원 (생략 시 center)
-        self.add_cinematic_talk(npc_id=11003319, msg='$52000120_QD__01_HENESYSDEFENSE__14$', duration=5000, align=Align.Center, illust_id='Oskhal_normal')
+        self.add_cinematic_talk(npc_id=11003319, msg='$52000120_QD__01_HENESYSDEFENSE__14$', duration=5000, illust_id='Oskhal_normal')
         # illustID = 표시할 일러스트의 npc id, 일러스트를 표시하기 싫으면 0으로 기입
         self.set_scene_skip(state=Battle01End01Skip)
 
@@ -833,7 +833,7 @@ class Battle02End01(trigger_api.Trigger):
         self.set_cinematic_ui(type=1)
         self.set_cinematic_ui(type=3)
         # align = 일러스트 위치 : (left/ center/ right) 3가지 지원 (생략 시 center)
-        self.add_cinematic_talk(npc_id=11003319, msg='$52000120_QD__01_HENESYSDEFENSE__15$', duration=5000, align=Align.Center, illust_id='Oskhal_normal')
+        self.add_cinematic_talk(npc_id=11003319, msg='$52000120_QD__01_HENESYSDEFENSE__15$', duration=5000, illust_id='Oskhal_normal')
         # illustID = 표시할 일러스트의 npc id, 일러스트를 표시하기 싫으면 0으로 기입
         self.set_scene_skip(state=Battle02End01Skip)
 
@@ -966,7 +966,7 @@ class TurkaTalk01(trigger_api.Trigger):
         self.set_effect(trigger_ids=[5000], visible=True) # DarkCloud
         self.set_effect(trigger_ids=[5001], visible=True) # DarkCloud
         # align = 일러스트 위치 : (left/ center/ right) 3가지 지원 (생략 시 center)
-        self.add_cinematic_talk(npc_id=11003226, msg='$52000120_QD__01_HENESYSDEFENSE__16$', duration=5000, align=Align.Center, illust_id='0')
+        self.add_cinematic_talk(npc_id=11003226, msg='$52000120_QD__01_HENESYSDEFENSE__16$', duration=5000, illust_id='0')
         # illustID = 표시할 일러스트의 npc id, 일러스트를 표시하기 싫으면 0으로 기입
         self.set_scene_skip(state=ManovichTalk03_CSkip, action='exit')
 
@@ -1017,7 +1017,7 @@ class TurkaTalk02(trigger_api.Trigger):
         self.set_cinematic_ui(type=1)
         self.set_cinematic_ui(type=3)
         # align = 일러스트 위치 : (left/ center/ right) 3가지 지원 (생략 시 center)
-        self.add_cinematic_talk(npc_id=11003226, msg='$52000120_QD__01_HENESYSDEFENSE__17$', duration=4000, align=Align.Center, illust_id='Turka_normal')
+        self.add_cinematic_talk(npc_id=11003226, msg='$52000120_QD__01_HENESYSDEFENSE__17$', duration=4000, illust_id='Turka_normal')
         # illustID = 표시할 일러스트의 npc id, 일러스트를 표시하기 싫으면 0으로 기입
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -1265,7 +1265,7 @@ class ManovichTalk03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_npc_emotion_sequence(spawn_id=101, sequence_name='Bore_A')
         # align = 일러스트 위치 : (left/ center/ right) 3가지 지원 (생략 시 center)
-        self.add_cinematic_talk(npc_id=11003221, msg='$52000120_QD__01_HENESYSDEFENSE__18$', duration=4000, align=Align.Center, illust_id='Manovich_normal')
+        self.add_cinematic_talk(npc_id=11003221, msg='$52000120_QD__01_HENESYSDEFENSE__18$', duration=4000, illust_id='Manovich_normal')
         # illustID = 표시할 일러스트의 npc id, 일러스트를 표시하기 싫으면 0으로 기입
 
     def on_tick(self) -> trigger_api.Trigger:

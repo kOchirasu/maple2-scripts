@@ -112,7 +112,7 @@ class 전경스케치03(trigger_api.Trigger):
 class 전경스케치04(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[8003], return_view=False)
-        self.add_cinematic_talk(npc_id=11003254, illust_id='Caitlyn_normal', msg='$52000133_QD__MAIN__1$', duration=3000, align=Align.Center)
+        self.add_cinematic_talk(npc_id=11003254, illust_id='Caitlyn_normal', msg='$52000133_QD__MAIN__1$', duration=3000)
         # # 전경스킵을 위해 추가한 스킵 설정. 전체 스킵 개발 시 삭제해도 됨
         self.set_skip(state=케이틀린첫만남_스킵완료)
 
@@ -148,7 +148,7 @@ class 전경스케치06(trigger_api.Trigger):
 
 class 전경스케치07(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.show_caption(type='NameCaption', title='$52000133_QD__MAIN__3$', desc='$52000133_QD__MAIN__4$', align=Align.Center | Align.Right, offset_rate_x=-0.05, offset_rate_y=0.15, duration=10000, scale=2.0)
+        self.show_caption(type='NameCaption', title='$52000133_QD__MAIN__3$', desc='$52000133_QD__MAIN__4$', align=Align.CenterRight, offset_rate_x=-0.05, offset_rate_y=0.15, duration=10000, scale=2.0)
         self.set_npc_emotion_loop(spawn_id=101, sequence_name='Bore_B', duration=4000.0)
         # # 전경스킵을 위해 추가한 스킵 설정. 전체 스킵 개발 시 삭제해도 됨
         self.set_skip(state=케이틀린첫만남_스킵완료)
@@ -354,7 +354,7 @@ class 아노스대사01_skip(trigger_api.Trigger):
 
 class PC대사03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=0, illust_id='0', msg='$52000133_QD__MAIN__12$', align=Align.Center, duration=3000)
+        self.add_cinematic_talk(npc_id=0, illust_id='0', msg='$52000133_QD__MAIN__12$', duration=3000)
         self.set_pc_emotion_loop(sequence_name='Emotion_Hello_A', duration=2000.0)
         # self.set_skip(state=예민한아노스_스킵완료)
 

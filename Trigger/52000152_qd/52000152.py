@@ -53,7 +53,7 @@ class 묘지전경씬02_1(trigger_api.Trigger):
 class 묘지전경씬02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[4002,4003,4004,4005], return_view=False)
-        self.show_caption(type='VerticalCaption', title='$52000152_QD__52000152__0$', desc='$52000152_QD__52000152__1$', align=Align.Bottom | Align.Left, duration=5000, scale=2.5)
+        self.show_caption(type='VerticalCaption', title='$52000152_QD__52000152__0$', desc='$52000152_QD__52000152__1$', align=Align.BottomLeft, duration=5000, scale=2.5)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=7000):

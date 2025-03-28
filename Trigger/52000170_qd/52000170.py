@@ -52,7 +52,7 @@ class 경기장전경씬02_1(trigger_api.Trigger):
 
 class 경기장전경씬02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.show_caption(type='VerticalCaption', title='$52000170_QD__52000170__0$', desc='$52000170_QD__52000170__1$', align=Align.Bottom | Align.Left, duration=5000, scale=2.5)
+        self.show_caption(type='VerticalCaption', title='$52000170_QD__52000170__0$', desc='$52000170_QD__52000170__1$', align=Align.BottomLeft, duration=5000, scale=2.5)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):

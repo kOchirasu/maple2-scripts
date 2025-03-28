@@ -156,7 +156,7 @@ class 로베와전투_05(trigger_api.Trigger):
         self.spawn_monster(spawn_ids=[105], auto_target=False)
         self.spawn_monster(spawn_ids=[106], auto_target=False)
         self.spawn_monster(spawn_ids=[107], auto_target=False)
-        self.add_cinematic_talk(npc_id=11003404, msg='$52000143_QD__52000143_MAIN__9$', duration=2500, align=Align.Center)
+        self.add_cinematic_talk(npc_id=11003404, msg='$52000143_QD__52000143_MAIN__9$', duration=2500)
         self.move_user(map_id=52000143, portal_id=99)
         self.select_camera_path(path_ids=[8002], return_view=False)
 
@@ -207,9 +207,9 @@ class 자대화_04_3(trigger_api.Trigger):
 
 class 자대화_05_3(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003404, msg='$52000143_QD__52000143_MAIN__11$', duration=3000, illust_id='Alon_normal', align=Align.Center)
-        self.add_cinematic_talk(npc_id=11003404, msg='$52000143_QD__52000143_MAIN__12$', duration=2500, illust_id='Alon_normal', align=Align.Center)
-        self.add_cinematic_talk(npc_id=11003404, msg='$52000143_QD__52000143_MAIN__13$', duration=3000, illust_id='Alon_normal', align=Align.Center)
+        self.add_cinematic_talk(npc_id=11003404, msg='$52000143_QD__52000143_MAIN__11$', duration=3000, illust_id='Alon_normal')
+        self.add_cinematic_talk(npc_id=11003404, msg='$52000143_QD__52000143_MAIN__12$', duration=2500, illust_id='Alon_normal')
+        self.add_cinematic_talk(npc_id=11003404, msg='$52000143_QD__52000143_MAIN__13$', duration=3000, illust_id='Alon_normal')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=9000):
@@ -227,9 +227,9 @@ class 자대화_06_3(trigger_api.Trigger):
 
 class 자대화_07_3(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003404, msg='$52000143_QD__52000143_MAIN__15$', duration=3000, illust_id='Alon_normal', align=Align.Center)
-        self.add_cinematic_talk(npc_id=11003404, msg='$52000143_QD__52000143_MAIN__16$', duration=3000, illust_id='Alon_normal', align=Align.Center)
-        self.add_cinematic_talk(npc_id=11003404, msg='$52000143_QD__52000143_MAIN__17$', duration=3000, illust_id='Alon_normal', align=Align.Center)
+        self.add_cinematic_talk(npc_id=11003404, msg='$52000143_QD__52000143_MAIN__15$', duration=3000, illust_id='Alon_normal')
+        self.add_cinematic_talk(npc_id=11003404, msg='$52000143_QD__52000143_MAIN__16$', duration=3000, illust_id='Alon_normal')
+        self.add_cinematic_talk(npc_id=11003404, msg='$52000143_QD__52000143_MAIN__17$', duration=3000, illust_id='Alon_normal')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=10000):
@@ -256,9 +256,9 @@ class 자대화_09_3(trigger_api.Trigger):
 
 class 자대화_10_3(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003404, msg='$52000143_QD__52000143_MAIN__20$', duration=3000, illust_id='Alon_normal', align=Align.Center)
-        self.add_cinematic_talk(npc_id=11003404, msg='$52000143_QD__52000143_MAIN__21$', duration=2500, illust_id='Alon_normal', align=Align.Center)
-        self.add_cinematic_talk(npc_id=11003404, msg='$52000143_QD__52000143_MAIN__22$', duration=3000, illust_id='Alon_normal', align=Align.Center)
+        self.add_cinematic_talk(npc_id=11003404, msg='$52000143_QD__52000143_MAIN__20$', duration=3000, illust_id='Alon_normal')
+        self.add_cinematic_talk(npc_id=11003404, msg='$52000143_QD__52000143_MAIN__21$', duration=2500, illust_id='Alon_normal')
+        self.add_cinematic_talk(npc_id=11003404, msg='$52000143_QD__52000143_MAIN__22$', duration=3000, illust_id='Alon_normal')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=9000):

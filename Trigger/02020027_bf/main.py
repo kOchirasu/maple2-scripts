@@ -39,7 +39,7 @@ class 카메라_시작(trigger_api.Trigger):
 class 카메라_캡션(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[5001,5002], return_view=False)
-        self.show_caption(type='VerticalCaption', title='$02020027_BF__main__2$', desc='$02020027_BF__main__3$', align=Align.Center | Align.Left, duration=4000, scale=2.0)
+        self.show_caption(type='VerticalCaption', title='$02020027_BF__main__2$', desc='$02020027_BF__main__3$', align=Align.CenterLeft, duration=4000, scale=2.0)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):

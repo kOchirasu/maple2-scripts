@@ -37,7 +37,7 @@ class ready(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         # self.select_camera_path(path_ids=[4002], return_view=False)
         self.set_scene_skip(state=Skip_1, action='nextState')
-        self.show_caption(type='VerticalCaption', title='$52010029_QD__MAIN__0$', desc='$52010029_QD__MAIN__1$', align=Align.Center | Align.Right, duration=3000, scale=2.0)
+        self.show_caption(type='VerticalCaption', title='$52010029_QD__MAIN__0$', desc='$52010029_QD__MAIN__1$', align=Align.CenterRight, duration=3000, scale=2.0)
         self.add_cinematic_talk(npc_id=0, msg='$52010029_QD__MAIN__2$', duration=3000)
         self.add_cinematic_talk(npc_id=0, msg='$52010029_QD__MAIN__3$', duration=3000)
         self.select_camera_path(path_ids=[4018,4003,4002,4019], return_view=False)
@@ -125,7 +125,7 @@ class 차전투시작_몬스터스폰_black1(trigger_api.Trigger):
         self.set_effect(trigger_ids=[5001], visible=True)
         self.set_effect(trigger_ids=[5002], visible=True)
         self.select_camera_path(path_ids=[4008], return_view=False)
-        self.show_caption(type='VerticalCaption', title='$52010029_QD__MAIN__11$', desc='$52010029_QD__MAIN__12$', align=Align.Center | Align.Left, duration=3000, scale=2.0)
+        self.show_caption(type='VerticalCaption', title='$52010029_QD__MAIN__11$', desc='$52010029_QD__MAIN__12$', align=Align.CenterLeft, duration=3000, scale=2.0)
         self.add_cinematic_talk(npc_id=11003392, msg='$52010029_QD__MAIN__13$', duration=3000)
         self.set_onetime_effect(id=101, enable=True, path='BG/Common/Eff_Com_Vibrate_Short.xml')
         self.set_effect(trigger_ids=[5001], visible=True)
@@ -170,7 +170,7 @@ class 시작_괴롭힘당하는바야르_03(trigger_api.Trigger):
         self.select_camera_path(path_ids=[4007], return_view=False)
         self.move_npc(spawn_id=701, patrol_name='MS2PatrolData_3001')
         self.add_cinematic_talk(npc_id=11003431, msg='$52010029_QD__MAIN__20$', duration=3000)
-        self.show_caption(type='VerticalCaption', title='$52010029_QD__MAIN__21$', desc='$52010029_QD__MAIN__22$', align=Align.Center | Align.Left, duration=3000, scale=2.0)
+        self.show_caption(type='VerticalCaption', title='$52010029_QD__MAIN__21$', desc='$52010029_QD__MAIN__22$', align=Align.CenterLeft, duration=3000, scale=2.0)
         self.add_cinematic_talk(npc_id=11003431, msg='$52010029_QD__MAIN__23$', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:

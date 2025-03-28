@@ -42,7 +42,7 @@ class 이도공간전경_01(trigger_api.Trigger):
 
 class 이도공간전경_02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.show_caption(type='VerticalCaption', title='$52000173_QD__52000173__0$', align=Align.Bottom | Align.Left, duration=3000, scale=2.5)
+        self.show_caption(type='VerticalCaption', title='$52000173_QD__52000173__0$', align=Align.BottomLeft, duration=3000, scale=2.5)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):

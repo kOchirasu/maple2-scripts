@@ -334,9 +334,9 @@ class scene_01_3(trigger_api.Trigger):
         self.select_camera_path(path_ids=[8011,8012], return_view=False)
         # Eff_Object_Fireburning_01
         self.set_effect(trigger_ids=[7307], visible=True)
-        self.add_cinematic_talk(npc_id=11001851, msg='$63000041_CS__MAIN__23$', duration=4000, align=Align.Center)
+        self.add_cinematic_talk(npc_id=11001851, msg='$63000041_CS__MAIN__23$', duration=4000)
         self.set_onetime_effect(id=1966, enable=True, path='BG/Common/Sound/Eff_Madria_Tutorial_01_00001966.xml')
-        self.show_caption(scale=2.3, type='NameCaption', title='$63000041_CS__MAIN__56$', desc='$63000041_CS__MAIN__57$', align=Align.Center | Align.Left, offset_rate_x=-0.15, duration=4000)
+        self.show_caption(scale=2.3, type='NameCaption', title='$63000041_CS__MAIN__56$', desc='$63000041_CS__MAIN__57$', align=Align.CenterLeft, offset_rate_x=-0.15, duration=4000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=8000):
@@ -345,7 +345,7 @@ class scene_01_3(trigger_api.Trigger):
 
 class scene_02_3(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11001851, msg='$63000041_CS__MAIN__24$', duration=8000, align=Align.Center)
+        self.add_cinematic_talk(npc_id=11001851, msg='$63000041_CS__MAIN__24$', duration=8000)
         self.set_onetime_effect(id=1967, enable=True, path='BG/Common/Sound/Eff_Madria_Tutorial_02_00001967.xml')
         self.set_pc_emotion_loop(sequence_name='Attack_Idle_A', duration=10000.0)
         self.set_npc_emotion_loop(spawn_id=102, sequence_name='Attack_Idle_A', duration=10000.0)
@@ -360,7 +360,7 @@ class scene_03_3(trigger_api.Trigger):
         self.select_camera_path(path_ids=[8013], return_view=False)
         # Eff_Object_Madria_Magic_Regen_01
         self.set_effect(trigger_ids=[7309], visible=True)
-        self.add_cinematic_talk(npc_id=11001851, msg='$63000041_CS__MAIN__25$', duration=3000, align=Align.Center)
+        self.add_cinematic_talk(npc_id=11001851, msg='$63000041_CS__MAIN__25$', duration=3000)
         self.set_onetime_effect(id=1968, enable=True, path='BG/Common/Sound/Eff_Madria_Tutorial_03_00001968.xml')
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -432,7 +432,7 @@ class scene_06_a3(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[8016,8021], return_view=False)
         # self.select_camera_path(path_ids=[8024], return_view=False)
-        self.add_cinematic_talk(npc_id=11001851, msg='$63000041_CS__MAIN__28$', duration=8000, align=Align.Center)
+        self.add_cinematic_talk(npc_id=11001851, msg='$63000041_CS__MAIN__28$', duration=8000)
         self.set_onetime_effect(id=1969, enable=True, path='BG/Common/Sound/Eff_Madria_Tutorial_04_00001969.xml')
         self.add_balloon_talk(spawn_id=666, msg='$63000041_CS__MAIN__29$', duration=8000)
 
@@ -447,7 +447,7 @@ class scene_06_b3(trigger_api.Trigger):
         self.set_effect(trigger_ids=[7003], visible=True)
         # Eff_Object_Madria_Pc_Magic_On_01
         self.set_effect(trigger_ids=[7310], visible=True)
-        self.add_cinematic_talk(npc_id=11001851, msg='$63000041_CS__MAIN__30$', duration=5000, align=Align.Center)
+        self.add_cinematic_talk(npc_id=11001851, msg='$63000041_CS__MAIN__30$', duration=5000)
         self.add_balloon_talk(spawn_id=666, msg='$63000041_CS__MAIN__31$', duration=5000)
         self.set_onetime_effect(id=1970, enable=True, path='BG/Common/Sound/Eff_Madria_Tutorial_05_00001970.xml')
 
@@ -485,7 +485,7 @@ class scene_06_3(trigger_api.Trigger):
         self.set_effect(trigger_ids=[7003])
         self.set_effect(trigger_ids=[7004])
         self.set_effect(trigger_ids=[7309])
-        self.add_cinematic_talk(npc_id=11001851, msg='$63000041_CS__MAIN__32$', duration=5000, align=Align.Center)
+        self.add_cinematic_talk(npc_id=11001851, msg='$63000041_CS__MAIN__32$', duration=5000)
         self.add_balloon_talk(spawn_id=666, msg='$63000041_CS__MAIN__33$', duration=5000)
         self.set_onetime_effect(id=1971, enable=True, path='BG/Common/Sound/Eff_Madria_Tutorial_06_00001971.xml')
 
@@ -503,7 +503,7 @@ class scene_07_3(trigger_api.Trigger):
 class scene_08_3(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[8017], return_view=False)
-        self.add_cinematic_talk(npc_id=11001851, msg='$63000041_CS__MAIN__34$', duration=7500, align=Align.Center)
+        self.add_cinematic_talk(npc_id=11001851, msg='$63000041_CS__MAIN__34$', duration=7500)
         self.add_balloon_talk(spawn_id=666, msg='$63000041_CS__MAIN__35$', duration=7500, delay_tick=500)
         self.set_onetime_effect(id=1972, enable=True, path='BG/Common/Sound/Eff_Madria_Tutorial_07_00001972.xml')
 
@@ -536,7 +536,7 @@ class scene_10_3(trigger_api.Trigger):
 class scene_11_3(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[8025], return_view=False)
-        self.add_cinematic_talk(npc_id=11001852, msg='$63000041_CS__MAIN__36$', duration=5000, align=Align.Center)
+        self.add_cinematic_talk(npc_id=11001852, msg='$63000041_CS__MAIN__36$', duration=5000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):
@@ -545,7 +545,7 @@ class scene_11_3(trigger_api.Trigger):
 
 class scene_12_3(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11001851, msg='$63000041_CS__MAIN__37$', duration=8000, align=Align.Center)
+        self.add_cinematic_talk(npc_id=11001851, msg='$63000041_CS__MAIN__37$', duration=8000)
         self.set_onetime_effect(id=1973, enable=True, path='BG/Common/Sound/Eff_Madria_Tutorial_08_00001973.xml')
         self.move_npc(spawn_id=666, patrol_name='MS2PatrolData_6663')
 
@@ -556,7 +556,7 @@ class scene_12_3(trigger_api.Trigger):
 
 class scene_13_3(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11001852, msg='$63000041_CS__MAIN__38$', duration=5000, align=Align.Center)
+        self.add_cinematic_talk(npc_id=11001852, msg='$63000041_CS__MAIN__38$', duration=5000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):
@@ -565,7 +565,7 @@ class scene_13_3(trigger_api.Trigger):
 
 class scene_14_3(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11001851, msg='$63000041_CS__MAIN__39$', duration=4000, align=Align.Center)
+        self.add_cinematic_talk(npc_id=11001851, msg='$63000041_CS__MAIN__39$', duration=4000)
         self.set_onetime_effect(id=1974, enable=True, path='BG/Common/Sound/Eff_Madria_Tutorial_09_00001974.xml')
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -576,7 +576,7 @@ class scene_14_3(trigger_api.Trigger):
 class scene_15_3(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_npc_emotion_sequence(spawn_id=888, sequence_name='Talk_A')
-        self.add_cinematic_talk(npc_id=11001852, msg='$63000041_CS__MAIN__40$', duration=8000, align=Align.Center)
+        self.add_cinematic_talk(npc_id=11001852, msg='$63000041_CS__MAIN__40$', duration=8000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=8000):
@@ -585,7 +585,7 @@ class scene_15_3(trigger_api.Trigger):
 
 class scene_16_3(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11001851, msg='$63000041_CS__MAIN__41$', duration=6000, align=Align.Center)
+        self.add_cinematic_talk(npc_id=11001851, msg='$63000041_CS__MAIN__41$', duration=6000)
         self.set_onetime_effect(id=1975, enable=True, path='BG/Common/Sound/Eff_Madria_Tutorial_10_00001975.xml')
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -596,7 +596,7 @@ class scene_16_3(trigger_api.Trigger):
 class scene_17_3(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[8020], return_view=False)
-        self.add_cinematic_talk(npc_id=11001852, msg='$63000041_CS__MAIN__42$', duration=5000, align=Align.Center)
+        self.add_cinematic_talk(npc_id=11001852, msg='$63000041_CS__MAIN__42$', duration=5000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):
@@ -606,7 +606,7 @@ class scene_17_3(trigger_api.Trigger):
 class scene_18_3(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.move_npc(spawn_id=666, patrol_name='MS2PatrolData_6664')
-        self.add_cinematic_talk(npc_id=11001851, msg='$63000041_CS__MAIN__43$', duration=6000, align=Align.Center)
+        self.add_cinematic_talk(npc_id=11001851, msg='$63000041_CS__MAIN__43$', duration=6000)
         self.set_onetime_effect(id=1976, enable=True, path='BG/Common/Sound/Eff_Madria_Tutorial_11_00001976.xml')
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -626,7 +626,7 @@ class scene_19_3(trigger_api.Trigger):
 
 class scene_20_3(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11001851, msg='$63000041_CS__MAIN__44$', duration=5000, align=Align.Center)
+        self.add_cinematic_talk(npc_id=11001851, msg='$63000041_CS__MAIN__44$', duration=5000)
         self.set_onetime_effect(id=1977, enable=True, path='BG/Common/Sound/Eff_Madria_Tutorial_12_00001977.xml')
         self.move_npc(spawn_id=888, patrol_name='MS2PatrolData_8801')
         self.select_camera_path(path_ids=[8022], return_view=False)

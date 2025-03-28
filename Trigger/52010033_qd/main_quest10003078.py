@@ -45,7 +45,7 @@ class 나메드들어옴(trigger_api.Trigger):
         self.spawn_monster(spawn_ids=[201]) # 나메드:
         self.select_camera_path(path_ids=[4002,4001], return_view=False)
         self.set_npc_emotion_sequence(spawn_id=201, sequence_name='Talk_A')
-        self.show_caption(type='VerticalCaption', title='$52010033_QD__MAIN_QUEST10003078__3$', desc='$52010033_QD__MAIN_QUEST10003078__4$', align=Align.Center | Align.Left, duration=5000, scale=2.0)
+        self.show_caption(type='VerticalCaption', title='$52010033_QD__MAIN_QUEST10003078__3$', desc='$52010033_QD__MAIN_QUEST10003078__4$', align=Align.CenterLeft, duration=5000, scale=2.0)
         self.add_cinematic_talk(npc_id=11003389, msg='$52010033_QD__MAIN_QUEST10003078__5$', duration=5000)
         self.add_cinematic_talk(npc_id=11003389, msg='$52010033_QD__MAIN_QUEST10003078__6$', duration=4500)
         self.add_cinematic_talk(npc_id=11003420, msg='$52010033_QD__MAIN_QUEST10003078__7$', duration=2000)

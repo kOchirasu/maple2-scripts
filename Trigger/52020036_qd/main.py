@@ -110,7 +110,7 @@ class 피그밍그부족의제단원경신1(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_quest_accept(quest_id=91000047)
         self.set_onetime_effect(id=1, path='BG/Common/ScreenMask/Eff_CameraMasking_FastFadeIn.xml')
-        self.show_caption(type='VerticalCaption', title='$52020036_QD__MAIN__0$', desc='$52020036_QD__MAIN__1$', align=Align.Bottom | Align.Left, duration=7000, scale=2.5)
+        self.show_caption(type='VerticalCaption', title='$52020036_QD__MAIN__0$', desc='$52020036_QD__MAIN__1$', align=Align.BottomLeft, duration=7000, scale=2.5)
         self.set_cinematic_ui(type=1)
         self.set_cinematic_ui(type=3)
         self.select_camera_path(path_ids=[3000,3001], return_view=False)

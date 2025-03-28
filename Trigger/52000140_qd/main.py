@@ -82,7 +82,7 @@ class 삼자대화_01(trigger_api.Trigger):
 
 class 삼자대화_02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003328, msg='$52000140_QD__MAIN__1$', duration=3000, align=Align.Center)
+        self.add_cinematic_talk(npc_id=11003328, msg='$52000140_QD__MAIN__1$', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -269,8 +269,8 @@ class 차삼자대화_03_2(trigger_api.Trigger):
 
 class 차삼자대화_04_2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003328, msg='$52000140_QD__MAIN__15$', duration=2500, align=Align.Center)
-        self.add_cinematic_talk(npc_id=11003328, msg='$52000140_QD__MAIN__16$', duration=2500, align=Align.Center)
+        self.add_cinematic_talk(npc_id=11003328, msg='$52000140_QD__MAIN__15$', duration=2500)
+        self.add_cinematic_talk(npc_id=11003328, msg='$52000140_QD__MAIN__16$', duration=2500)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5200):
@@ -289,7 +289,7 @@ class 차삼자대화_05_2(trigger_api.Trigger):
 
 class 차삼자대화_06_2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003328, msg='$52000140_QD__MAIN__19$', duration=2500, align=Align.Center)
+        self.add_cinematic_talk(npc_id=11003328, msg='$52000140_QD__MAIN__19$', duration=2500)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -307,7 +307,7 @@ class 차삼자대화_07_2(trigger_api.Trigger):
 
 class 차삼자대화_08_2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003328, msg='$52000140_QD__MAIN__21$', duration=2000, align=Align.Center)
+        self.add_cinematic_talk(npc_id=11003328, msg='$52000140_QD__MAIN__21$', duration=2000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=2300):
@@ -383,7 +383,7 @@ class 차삼자대화_02_3(trigger_api.Trigger):
 class 차삼자대화_03_3(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[8006], return_view=False)
-        self.add_cinematic_talk(npc_id=11003328, msg='$52000140_QD__MAIN__25$', duration=2000, align=Align.Center)
+        self.add_cinematic_talk(npc_id=11003328, msg='$52000140_QD__MAIN__25$', duration=2000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=2200):

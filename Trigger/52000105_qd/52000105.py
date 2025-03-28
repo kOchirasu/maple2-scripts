@@ -329,7 +329,7 @@ class 떠나는할아버지06(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_cinematic_ui(type=1)
         self.set_cinematic_ui(type=3)
-        self.show_caption(type='VerticalCaption', title='$52000105_QD__52000105__4$', desc='$52000105_QD__52000105__5$', align=Align.Bottom | Align.Left, duration=10000, scale=2.5)
+        self.show_caption(type='VerticalCaption', title='$52000105_QD__52000105__4$', desc='$52000105_QD__52000105__5$', align=Align.BottomLeft, duration=10000, scale=2.5)
         self.set_scene_skip() # Missing State: State
 
     def on_tick(self) -> trigger_api.Trigger:

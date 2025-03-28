@@ -153,7 +153,7 @@ class praytalk_02(trigger_api.Trigger):
 
 class pray(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.show_caption(scale=2.5, type='NameCaption', title='$63000042_CS__WAKEUP02__11$', desc='$63000042_CS__WAKEUP02__12$', align=Align.Center | Align.Right, offset_rate_x=0.5, duration=4000)
+        self.show_caption(scale=2.5, type='NameCaption', title='$63000042_CS__WAKEUP02__11$', desc='$63000042_CS__WAKEUP02__12$', align=Align.CenterRight, offset_rate_x=0.5, duration=4000)
         self.select_camera_path(path_ids=[502,503], return_view=False)
         self.set_scene_skip() # Missing State: State
 

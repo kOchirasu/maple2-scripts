@@ -100,7 +100,7 @@ class 저멀리발록_02(trigger_api.Trigger):
 
 class 발록검마인사_01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003819, msg='$52010065_QD__52010065_main__0$', duration=3000, illust_id='balrog_normal', align=Align.Center)
+        self.add_cinematic_talk(npc_id=11003819, msg='$52010065_QD__52010065_main__0$', duration=3000, illust_id='balrog_normal')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3500):
@@ -118,7 +118,7 @@ class 발록검마인사_02(trigger_api.Trigger):
 
 class 발록검마인사_03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003819, msg='$52010065_QD__52010065_main__2$', duration=3000, illust_id='balrog_normal', align=Align.Center)
+        self.add_cinematic_talk(npc_id=11003819, msg='$52010065_QD__52010065_main__2$', duration=3000, illust_id='balrog_normal')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3500):

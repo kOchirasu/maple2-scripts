@@ -86,7 +86,7 @@ class 대사04(trigger_api.Trigger):
 """
 class 대사05(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003533, illust_id='Bliche_normal', msg='$52010039_QD__52010039__5$', duration=3000, align=Align.Center)
+        self.add_cinematic_talk(npc_id=11003533, illust_id='Bliche_normal', msg='$52010039_QD__52010039__5$', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -106,7 +106,7 @@ class 대사06(trigger_api.Trigger):
 """
 class 대사07(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003533, illust_id='Bliche_normal', msg='$52010039_QD__52010039__7$', duration=3000, align=Align.Center)
+        self.add_cinematic_talk(npc_id=11003533, illust_id='Bliche_normal', msg='$52010039_QD__52010039__7$', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -140,7 +140,7 @@ class 연출종료03(trigger_api.Trigger):
 class 스카이포트리스전경씬03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_onetime_effect(id=1, path='BG/Common/ScreenMask/Eff_CameraMasking_FastFadeIn.xml')
-        self.show_caption(type='VerticalCaption', title='$52010039_QD__52010039__8$', desc='$52010039_QD__52010039__9$', align=Align.Bottom | Align.Left, duration=7000, scale=2.5)
+        self.show_caption(type='VerticalCaption', title='$52010039_QD__52010039__8$', desc='$52010039_QD__52010039__9$', align=Align.BottomLeft, duration=7000, scale=2.5)
         self.select_camera_path(path_ids=[1002,1003], return_view=False)
         self.set_scene_skip(state=Skip_1, action='exit')
 

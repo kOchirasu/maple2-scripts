@@ -92,7 +92,7 @@ class 에델슈타인전경씬02(trigger_api.Trigger):
 
 class 에델슈타인전경씬03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.show_caption(type='VerticalCaption', title='$52000107_QD__52000107__0$', desc='$52000107_QD__52000107__1$', align=Align.Bottom | Align.Left, duration=7000, scale=2.5)
+        self.show_caption(type='VerticalCaption', title='$52000107_QD__52000107__0$', desc='$52000107_QD__52000107__1$', align=Align.BottomLeft, duration=7000, scale=2.5)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):
@@ -203,7 +203,7 @@ class 아이샤등장씬04(trigger_api.Trigger):
 class 아이샤등장씬05(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.face_emotion(spawn_id=200, emotion_name='hello_Cait')
-        self.show_caption(type='NameCaption', title='$52000107_QD__52000107__4$', desc='$52000107_QD__52000107__5$', align=Align.Center, offset_rate_x=-0.15, offset_rate_y=0.15, duration=10000, scale=2.0)
+        self.show_caption(type='NameCaption', title='$52000107_QD__52000107__4$', desc='$52000107_QD__52000107__5$', offset_rate_x=-0.15, offset_rate_y=0.15, duration=10000, scale=2.0)
         self.set_scene_skip() # Missing State: State
 
     def on_tick(self) -> trigger_api.Trigger:

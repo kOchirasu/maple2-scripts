@@ -42,7 +42,7 @@ class 제단보여주기(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[4005,4001], return_view=False)
         self.set_onetime_effect(id=1, path='BG/Common/ScreenMask/Eff_fadein_1sec.xml')
-        self.show_caption(type='VerticalCaption', title='천공의 제단', desc='천공의 심장의 보관소', align=Align.Center | Align.Left, duration=4000, scale=2.0)
+        self.show_caption(type='VerticalCaption', title='천공의 제단', desc='천공의 심장의 보관소', align=Align.CenterLeft, duration=4000, scale=2.0)
         self.set_scene_skip(state=끝, action='exit')
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -182,7 +182,7 @@ class 하렌발견02(trigger_api.Trigger):
 class 하렌발견03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[4010], return_view=False)
-        self.show_caption(type='VerticalCaption', title='하렌', desc='흑성회의 제 3 간부', align=Align.Center | Align.Left, duration=4000, scale=2.0)
+        self.show_caption(type='VerticalCaption', title='하렌', desc='흑성회의 제 3 간부', align=Align.CenterLeft, duration=4000, scale=2.0)
         self.set_npc_emotion_sequence(spawn_id=101, sequence_name='Bore_A')
         self.add_cinematic_talk(npc_id=11003756, msg='...이렇게 만나다니 우연이네.', duration=3000)
         self.add_cinematic_talk(npc_id=11003756, msg='혼자 이것저것 하기 힘들지? 후후.', duration=3000)

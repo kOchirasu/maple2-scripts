@@ -48,7 +48,7 @@ class Camera_Work_01(trigger_api.Trigger):
 
 class ShowCaption(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.show_caption(type='VerticalCaption', title='$map:52020019$', desc='$npcName:11003614$의 두 번째 시험장.', align=Align.Bottom | Align.Left, duration=2000, scale=1.5)
+        self.show_caption(type='VerticalCaption', title='$map:52020019$', desc='$npcName:11003614$의 두 번째 시험장.', align=Align.BottomLeft, duration=2000, scale=1.5)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -115,7 +115,7 @@ class EventScene_05(trigger_api.Trigger):
 class EventScene_06(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_onetime_effect(id=1, enable=True, path='BG/Common/ScreenMask/Eff_fadein_1sec.xml')
-        self.add_cinematic_talk(npc_id=11003598, msg='제 이름은 $npcName:11003598$.', duration=2500, illust_id='Michael_normal', align=Align.Center)
+        self.add_cinematic_talk(npc_id=11003598, msg='제 이름은 $npcName:11003598$.', duration=2500, illust_id='Michael_normal')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -124,8 +124,8 @@ class EventScene_06(trigger_api.Trigger):
 
 class EventScene_07(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003598, msg='크리티아스 제 3기사. 몽환의 $npcName:11003598$입니다.', duration=3000, illust_id='Michael_normal', align=Align.Center)
-        self.show_caption(type='NameCaption', title='$npcName:11003598$', desc='몽환의 기사', align=Align.Center | Align.Left, offset_rate_x=0.05, offset_rate_y=0.15, duration=3000, scale=2.0)
+        self.add_cinematic_talk(npc_id=11003598, msg='크리티아스 제 3기사. 몽환의 $npcName:11003598$입니다.', duration=3000, illust_id='Michael_normal')
+        self.show_caption(type='NameCaption', title='$npcName:11003598$', desc='몽환의 기사', align=Align.CenterLeft, offset_rate_x=0.05, offset_rate_y=0.15, duration=3000, scale=2.0)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3500):
@@ -158,7 +158,7 @@ class EventScene_10(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_onetime_effect(id=3, enable=True, path='BG/Common/ScreenMask/Eff_fadein_1sec.xml')
         self.set_npc_emotion_sequence(spawn_id=102, sequence_name='Emotion_B')
-        self.add_cinematic_talk(npc_id=11003598, msg='자, 그럼 당신의 실력을 확인해보도록 하죠.', duration=3000, illust_id='Michael_normal', align=Align.Center)
+        self.add_cinematic_talk(npc_id=11003598, msg='자, 그럼 당신의 실력을 확인해보도록 하죠.', duration=3000, illust_id='Michael_normal')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=1500):

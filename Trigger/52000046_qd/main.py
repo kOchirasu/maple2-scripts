@@ -44,7 +44,7 @@ class scene_01(trigger_api.Trigger):
 
 class scene_02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.show_caption(scale=2.3, type='NameCaption', title='$52000046_QD__MAIN__1$', desc='$52000046_QD__MAIN__2$', align=Align.Center | Align.Left, offset_rate_x=-0.15, duration=4000)
+        self.show_caption(scale=2.3, type='NameCaption', title='$52000046_QD__MAIN__1$', desc='$52000046_QD__MAIN__2$', align=Align.CenterLeft, offset_rate_x=-0.15, duration=4000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):

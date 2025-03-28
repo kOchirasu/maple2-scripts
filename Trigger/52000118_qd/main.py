@@ -41,7 +41,7 @@ class suspiciousmask(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[4001,4002,4003], return_view=False)
         self.set_npc_emotion_sequence(spawn_id=101, sequence_name='Talk_A')
-        self.add_cinematic_talk(npc_id=11003167, msg='$52000118_QD__MAIN__0$', duration=3000, align=Align.Center)
+        self.add_cinematic_talk(npc_id=11003167, msg='$52000118_QD__MAIN__0$', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):

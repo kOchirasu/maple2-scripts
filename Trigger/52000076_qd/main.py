@@ -700,7 +700,7 @@ class EveEnter04(trigger_api.Trigger):
 class EveTalk01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera(trigger_id=314)
-        self.add_cinematic_talk(npc_id=11000523, illust_id='Eve_serious', msg='$52000076_QD__MAIN__4$', duration=5000, align=Align.Center)
+        self.add_cinematic_talk(npc_id=11000523, illust_id='Eve_serious', msg='$52000076_QD__MAIN__4$', duration=5000)
         self.set_npc_emotion_sequence(spawn_id=1400, sequence_name='Talk_A')
         # self.set_skip(state=EveTalk01Skip)
 
@@ -722,7 +722,7 @@ class EveTalk01Skip(trigger_api.Trigger):
 
 class EveTalk02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11000523, illust_id='Eve_serious', msg='$52000076_QD__MAIN__5$', duration=5000, align=Align.Center)
+        self.add_cinematic_talk(npc_id=11000523, illust_id='Eve_serious', msg='$52000076_QD__MAIN__5$', duration=5000)
         self.set_npc_emotion_sequence(spawn_id=1400, sequence_name='Talk_A')
         # self.set_skip(state=EveTalk02Skip)
 
@@ -894,7 +894,7 @@ class EveWalkFront01(trigger_api.Trigger):
 class EveTalk10(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_npc_emotion_sequence(spawn_id=1400, sequence_name='Talk_A')
-        self.add_cinematic_talk(npc_id=11000523, illust_id='Eve_serious', msg='$52000076_QD__MAIN__11$', duration=5000, align=Align.Center)
+        self.add_cinematic_talk(npc_id=11000523, illust_id='Eve_serious', msg='$52000076_QD__MAIN__11$', duration=5000)
         # self.set_skip(state=EveTalk10Skip)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -918,7 +918,7 @@ class EveTalk10Skip(trigger_api.Trigger):
 class EveTalk11(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_npc_emotion_sequence(spawn_id=1400, sequence_name='Talk_A')
-        self.add_cinematic_talk(npc_id=11000523, illust_id='Eve_serious', msg='$52000076_QD__MAIN__12$', duration=7000, align=Align.Center)
+        self.add_cinematic_talk(npc_id=11000523, illust_id='Eve_serious', msg='$52000076_QD__MAIN__12$', duration=7000)
         # self.set_skip(state=EveTalk11Skip)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -1280,7 +1280,7 @@ class LennonTalk31Skip(trigger_api.Trigger):
 class EveTalk20(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_npc_emotion_sequence(spawn_id=1410, sequence_name='Talk_A')
-        self.add_cinematic_talk(npc_id=11000523, illust_id='Eve_serious', msg='$52000076_QD__MAIN__25$', duration=6000, align=Align.Center)
+        self.add_cinematic_talk(npc_id=11000523, illust_id='Eve_serious', msg='$52000076_QD__MAIN__25$', duration=6000)
         # self.set_skip(state=EveTalk20Skip)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -1302,7 +1302,7 @@ class EveTalk20Skip(trigger_api.Trigger):
 class EveTalk21(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_npc_emotion_sequence(spawn_id=1410, sequence_name='Talk_A')
-        self.add_cinematic_talk(npc_id=11000523, illust_id='Eve_serious', msg='$52000076_QD__MAIN__26$', duration=6000, align=Align.Center)
+        self.add_cinematic_talk(npc_id=11000523, illust_id='Eve_serious', msg='$52000076_QD__MAIN__26$', duration=6000)
         # self.set_skip(state=EveTalk21Skip)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -1346,7 +1346,7 @@ class LennonTalk40Skip(trigger_api.Trigger):
 class EveTalk30(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_npc_emotion_sequence(spawn_id=1410, sequence_name='Talk_A')
-        self.add_cinematic_talk(npc_id=11000523, illust_id='Eve_serious', msg='$52000076_QD__MAIN__28$', duration=3000, align=Align.Center)
+        self.add_cinematic_talk(npc_id=11000523, illust_id='Eve_serious', msg='$52000076_QD__MAIN__28$', duration=3000)
         # self.set_skip(state=EveTalk30Skip)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -1368,7 +1368,7 @@ class EveTalk30Skip(trigger_api.Trigger):
 
 class EveTalk31(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11000523, illust_id='Eve_serious', msg='$52000076_QD__MAIN__29$', duration=5000, align=Align.Center)
+        self.add_cinematic_talk(npc_id=11000523, illust_id='Eve_serious', msg='$52000076_QD__MAIN__29$', duration=5000)
         # self.set_skip(state=EveTalk31Skip)
 
     def on_tick(self) -> trigger_api.Trigger:

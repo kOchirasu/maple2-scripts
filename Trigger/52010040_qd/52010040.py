@@ -30,7 +30,7 @@ class 도입부연출01(trigger_api.Trigger):
 
 class 도입부연출02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.show_caption(type='VerticalCaption', title='$52010040_QD__52010040__0$', desc='$52010040_QD__52010040__1$', align=Align.Bottom | Align.Left, duration=7000, scale=2.5)
+        self.show_caption(type='VerticalCaption', title='$52010040_QD__52010040__0$', desc='$52010040_QD__52010040__1$', align=Align.BottomLeft, duration=7000, scale=2.5)
         self.set_onetime_effect(id=1, path='BG/Common/ScreenMask/Eff_CameraMasking_FastFadeIn.xml')
         self.select_camera_path(path_ids=[2000,2001,2002], return_view=False)
 

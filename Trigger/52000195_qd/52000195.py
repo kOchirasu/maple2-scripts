@@ -51,7 +51,7 @@ class CameraEffect03(trigger_api.Trigger):
 class CameraEffect03_3(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[4004], return_view=False)
-        self.show_caption(type='VerticalCaption', title='$52000195_QD__52000195__0$', align=Align.Bottom | Align.Left, duration=5000, scale=2.5)
+        self.show_caption(type='VerticalCaption', title='$52000195_QD__52000195__0$', align=Align.BottomLeft, duration=5000, scale=2.5)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):

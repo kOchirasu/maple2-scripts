@@ -84,7 +84,7 @@ class 원경카메라03(trigger_api.Trigger):
 
 class 프레이대사(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11000064, illust_id='Lennon_closeEye', msg='$52000068_QD__TRIA_SEIGE_MOVIE__0$', duration=5000, align=Align.Center)
+        self.add_cinematic_talk(npc_id=11000064, illust_id='Lennon_closeEye', msg='$52000068_QD__TRIA_SEIGE_MOVIE__0$', duration=5000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):

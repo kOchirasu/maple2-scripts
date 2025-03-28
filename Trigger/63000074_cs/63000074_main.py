@@ -69,7 +69,7 @@ class Evelyn_monologue_01(trigger_api.Trigger):
         self.set_cinematic_ui(type=1)
         self.set_cinematic_ui(type=3)
         # 아~ 정말. 맘에 드는 게 하나도 없어.\n어릴 때가 편했는데… 그렇지, 보?
-        self.add_cinematic_talk(npc_id=11004354, msg='$63000074_CS__63000074_MAIN__1$', duration=4000, illust_id='Evelyn_normal', align=Align.Center)
+        self.add_cinematic_talk(npc_id=11004354, msg='$63000074_CS__63000074_MAIN__1$', duration=4000, illust_id='Evelyn_normal')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):

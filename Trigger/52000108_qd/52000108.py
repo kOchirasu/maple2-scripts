@@ -391,7 +391,7 @@ class 저항군로봇퀘스트12_b(trigger_api.Trigger):
 
 class 저항군로봇퀘스트12_c(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.show_caption(type='NameCaption', title='$52000108_QD__52000108__19$', align=Align.Center, offset_rate_x=-0.15, offset_rate_y=0.15, duration=3500, scale=2.0)
+        self.show_caption(type='NameCaption', title='$52000108_QD__52000108__19$', offset_rate_x=-0.15, offset_rate_y=0.15, duration=3500, scale=2.0)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4100):
@@ -401,7 +401,7 @@ class 저항군로봇퀘스트12_c(trigger_api.Trigger):
 class 저항군로봇퀘스트13(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[2022,2023], return_view=False)
-        self.show_caption(type='NameCaption', title='$52000108_QD__52000108__20$', align=Align.Center, offset_rate_x=-0.15, offset_rate_y=0.15, duration=3500, scale=2.0)
+        self.show_caption(type='NameCaption', title='$52000108_QD__52000108__20$', offset_rate_x=-0.15, offset_rate_y=0.15, duration=3500, scale=2.0)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4100):
@@ -412,7 +412,7 @@ class 저항군로봇퀘스트14(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_npc_emotion_sequence(spawn_id=202, sequence_name='Bore_B')
         self.select_camera_path(path_ids=[2024,2025], return_view=False)
-        self.show_caption(type='NameCaption', title='$52000108_QD__52000108__22$', align=Align.Center, offset_rate_x=-0.15, offset_rate_y=0.15, duration=3500, scale=2.0)
+        self.show_caption(type='NameCaption', title='$52000108_QD__52000108__22$', offset_rate_x=-0.15, offset_rate_y=0.15, duration=3500, scale=2.0)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4100):
@@ -423,7 +423,7 @@ class 저항군로봇퀘스트15(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.move_user(map_id=52000108, portal_id=11)
         self.select_camera_path(path_ids=[2026,2027], return_view=False)
-        self.show_caption(type='NameCaption', title='$52000108_QD__52000108__24$', desc='$52000108_QD__52000108__25$', align=Align.Top | Align.Center, duration=4000, scale=3.0)
+        self.show_caption(type='NameCaption', title='$52000108_QD__52000108__24$', desc='$52000108_QD__52000108__25$', align=Align.TopCenter, duration=4000, scale=3.0)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4100):

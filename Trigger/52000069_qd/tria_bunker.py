@@ -103,7 +103,7 @@ class 프레이대사01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera(trigger_id=303)
         self.set_npc_emotion_sequence(spawn_id=2003, sequence_name='Bore_A')
-        self.add_cinematic_talk(npc_id=11000119, illust_id='Fray_serious', msg='$52000069_QD__TRIA_BUNKER__2$', duration=4000, align=Align.Center)
+        self.add_cinematic_talk(npc_id=11000119, illust_id='Fray_serious', msg='$52000069_QD__TRIA_BUNKER__2$', duration=4000)
         self.set_scene_skip(state=대사스킵용01)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -278,7 +278,7 @@ class 에레브대사03(trigger_api.Trigger):
 class 에레브대사04(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_sound(trigger_id=90000) # TriaAttack
-        self.add_cinematic_talk(npc_id=11000075, illust_id='Ereb_surprise', msg='$52000069_QD__TRIA_BUNKER__8$', duration=4000, align=Align.Center)
+        self.add_cinematic_talk(npc_id=11000075, illust_id='Ereb_surprise', msg='$52000069_QD__TRIA_BUNKER__8$', duration=4000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):
@@ -383,7 +383,7 @@ class 마드리아오버숄더(trigger_api.Trigger):
 
 class 마드리아공격(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11000075, illust_id='Ereb_serious', msg='$52000069_QD__TRIA_BUNKER__10$', duration=3000, align=Align.Center)
+        self.add_cinematic_talk(npc_id=11000075, illust_id='Ereb_serious', msg='$52000069_QD__TRIA_BUNKER__10$', duration=3000)
         self.select_camera(trigger_id=311)
 
     def on_tick(self) -> trigger_api.Trigger:

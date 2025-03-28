@@ -522,7 +522,7 @@ class 다섯번째연출_엘리트몬스터(trigger_api.Trigger):
         self.set_onetime_effect(id=103, enable=True, path='BG/Common/Eff_Com_Vibrate_Short.xml')
         self.set_onetime_effect(id=997, enable=True, path='BG/sound/Eff_BossRegen_01.xml')
         self.spawn_monster(spawn_ids=[131])
-        self.show_caption(scale=2.3, type='NameCaption', title='$52010026_QD__MAIN__50$', desc='$52010026_QD__MAIN__51$', align=Align.Center | Align.Left, offset_rate_x=-0.15, duration=4000)
+        self.show_caption(scale=2.3, type='NameCaption', title='$52010026_QD__MAIN__50$', desc='$52010026_QD__MAIN__51$', align=Align.CenterLeft, offset_rate_x=-0.15, duration=4000)
         self.set_onetime_effect(id=103, path='BG/Common/Eff_Com_Vibrate_Short.xml')
 
     def on_tick(self) -> trigger_api.Trigger:

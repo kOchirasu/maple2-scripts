@@ -81,7 +81,7 @@ class 연출시작(trigger_api.Trigger):
 class 차어나운스01_1(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_effect(visible=True)
-        self.add_cinematic_talk(npc_id=11000032, illust_id='Anos_serious', msg='$02000066_BF__MAIN__4$', duration=5000, align=Align.Center)
+        self.add_cinematic_talk(npc_id=11000032, illust_id='Anos_serious', msg='$02000066_BF__MAIN__4$', duration=5000)
         self.set_skip(state=차어나운스03_1)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -91,7 +91,7 @@ class 차어나운스01_1(trigger_api.Trigger):
 
 class 차어나운스02_1(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11000032, illust_id='Anos_serious', msg='$02000066_BF__MAIN__5$', duration=5000, align=Align.Center)
+        self.add_cinematic_talk(npc_id=11000032, illust_id='Anos_serious', msg='$02000066_BF__MAIN__5$', duration=5000)
         self.set_skip(state=차어나운스03_1)
 
     def on_tick(self) -> trigger_api.Trigger:

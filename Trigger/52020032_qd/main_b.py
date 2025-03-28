@@ -114,7 +114,7 @@ class Event_C_03(trigger_api.Trigger):
         self.set_cinematic_ui(type=1)
         self.set_cinematic_ui(type=3)
         self.set_pc_emotion_loop(sequence_name='Down_Idle_A', duration=90000.0)
-        self.add_cinematic_talk(npc_id=11003620, msg='그럼 편안한 죽음 되시길.', duration=2800, illust_id='Michael_normal', align=Align.Center)
+        self.add_cinematic_talk(npc_id=11003620, msg='그럼 편안한 죽음 되시길.', duration=2800, illust_id='Michael_normal')
         self.destroy_monster(spawn_ids=[401])
         self.set_actor(trigger_id=8002, initial_sequence='Idle_A')
 
@@ -144,7 +144,7 @@ class Event_C_05(trigger_api.Trigger):
 
 class Event_C_06(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003622, msg='$npcName:11003620$놈!', duration=2800, illust_id='Turka_normal', align=Align.Center)
+        self.add_cinematic_talk(npc_id=11003622, msg='$npcName:11003620$놈!', duration=2800, illust_id='Turka_normal')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=2000):
@@ -155,7 +155,7 @@ class Event_C_07(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_effect(trigger_ids=[5002], visible=True)
         self.spawn_monster(spawn_ids=[501]) # 투르카
-        self.add_cinematic_talk(npc_id=11003622, msg='감히 날 배신하다니!', duration=2800, illust_id='Turka_normal', align=Align.Center)
+        self.add_cinematic_talk(npc_id=11003622, msg='감히 날 배신하다니!', duration=2800, illust_id='Turka_normal')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -165,7 +165,7 @@ class Event_C_07(trigger_api.Trigger):
 class Event_C_08(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_onetime_effect(id=3, path='BG/Common/ScreenMask/Eff_fadein_1sec.xml')
-        self.add_cinematic_talk(npc_id=11003622, msg='배신의 대가는 톡톡히 치르게 해주겠다.', illust_id='Turka_normal', align=Align.Center)
+        self.add_cinematic_talk(npc_id=11003622, msg='배신의 대가는 톡톡히 치르게 해주겠다.', illust_id='Turka_normal')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -174,7 +174,7 @@ class Event_C_08(trigger_api.Trigger):
 
 class Event_C_09(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003622, msg='.......', duration=1800, illust_id='0', align=Align.Center)
+        self.add_cinematic_talk(npc_id=11003622, msg='.......', duration=1800, illust_id='0')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=2000):
@@ -183,7 +183,7 @@ class Event_C_09(trigger_api.Trigger):
 
 class Event_C_10(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003622, msg='이렇게 된 이상 그 계획을 빨리 진행해야겠군.', duration=2800, illust_id='0', align=Align.Center)
+        self.add_cinematic_talk(npc_id=11003622, msg='이렇게 된 이상 그 계획을 빨리 진행해야겠군.', duration=2800, illust_id='0')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):

@@ -192,7 +192,7 @@ class thank(trigger_api.Trigger):
 
 class endready(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.show_caption(scale=2.3, type='NameCaption', title='$52000116_QD__MAIN__8$', desc='$52000116_QD__MAIN__9$', align=Align.Center | Align.Left, offset_rate_x=-0.15, duration=4000)
+        self.show_caption(scale=2.3, type='NameCaption', title='$52000116_QD__MAIN__8$', desc='$52000116_QD__MAIN__9$', align=Align.CenterLeft, offset_rate_x=-0.15, duration=4000)
         self.set_scene_skip() # Missing State: State
 
     def on_tick(self) -> trigger_api.Trigger:

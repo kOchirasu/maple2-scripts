@@ -84,7 +84,7 @@ class ImprisonDarkAnos02(trigger_api.Trigger):
 class AsimovTalk01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         # align = 일러스트 위치 : (left/ center/ right) 3가지 지원 (생략 시 center)
-        self.add_cinematic_talk(npc_id=11003283, msg='$52000137_QD__ACT01__0$', duration=5000, align=Align.Center, illust_id='0')
+        self.add_cinematic_talk(npc_id=11003283, msg='$52000137_QD__ACT01__0$', duration=5000, illust_id='0')
         # illustID = 표시할 일러스트의 npc id, 일러스트를 표시하기 싫으면 0으로 기입
         self.set_scene_skip(state=DarkAnosTalk01CSkip, action='nextState')
         self.set_skip(state=AsimovTalk01Skip)
@@ -134,7 +134,7 @@ class AnosTruning02(trigger_api.Trigger):
 class AnosTalk01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         # align = 일러스트 위치 : (left/ center/ right) 3가지 지원 (생략 시 center)
-        self.add_cinematic_talk(npc_id=11003289, msg='$52000137_QD__ACT01__1$', duration=4000, align=Align.Center, illust_id='0')
+        self.add_cinematic_talk(npc_id=11003289, msg='$52000137_QD__ACT01__1$', duration=4000, illust_id='0')
         # illustID = 표시할 일러스트의 npc id, 일러스트를 표시하기 싫으면 0으로 기입
         self.set_skip(state=AnosTalk01Skip)
 
@@ -173,7 +173,7 @@ class CameraChange01(trigger_api.Trigger):
 class PCTalk01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_pc_emotion_loop(sequence_name='Talk_A', duration=4000.0)
-        self.add_cinematic_talk(npc_id=0, msg='$52000137_QD__ACT01__2$', duration=4000, align=Align.Center, illust_id='0')
+        self.add_cinematic_talk(npc_id=0, msg='$52000137_QD__ACT01__2$', duration=4000, illust_id='0')
         self.set_skip(state=PCTalk01Skip)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -194,7 +194,7 @@ class PCTalk01Skip(trigger_api.Trigger):
 class AsimovTalk02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         # align = 일러스트 위치 : (left/ center/ right) 3가지 지원 (생략 시 center)
-        self.add_cinematic_talk(npc_id=11003283, msg='$52000137_QD__ACT01__3$', duration=4000, align=Align.Center, illust_id='Asimov_normal')
+        self.add_cinematic_talk(npc_id=11003283, msg='$52000137_QD__ACT01__3$', duration=4000, illust_id='Asimov_normal')
         # illustID = 표시할 일러스트의 npc id, 일러스트를 표시하기 싫으면 0으로 기입
         self.destroy_monster(spawn_ids=[102])
         self.spawn_monster(spawn_ids=[103], auto_target=False)
@@ -217,7 +217,7 @@ class AsimovTalk02Skip(trigger_api.Trigger):
 class AsimovTalk03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         # align = 일러스트 위치 : (left/ center/ right) 3가지 지원 (생략 시 center)
-        self.add_cinematic_talk(npc_id=11003283, msg='$52000137_QD__ACT01__4$', duration=5000, align=Align.Center, illust_id='Asimov_normal')
+        self.add_cinematic_talk(npc_id=11003283, msg='$52000137_QD__ACT01__4$', duration=5000, illust_id='Asimov_normal')
         # illustID = 표시할 일러스트의 npc id, 일러스트를 표시하기 싫으면 0으로 기입
         self.set_skip(state=AsimovTalk03Skip)
 
@@ -255,7 +255,7 @@ class CameraChange03(trigger_api.Trigger):
 
 class PCTalk02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=0, msg='$52000137_QD__ACT01__5$', duration=5000, align=Align.Center, illust_id='0')
+        self.add_cinematic_talk(npc_id=0, msg='$52000137_QD__ACT01__5$', duration=5000, illust_id='0')
         self.set_skip(state=PCTalk02Skip)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -287,7 +287,7 @@ class DarkAnosTalk01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_npc_emotion_sequence(spawn_id=104, sequence_name='Attack_Idle_A,Attack_Idle_A') # 1533
         # align = 일러스트 위치 : (left/ center/ right) 3가지 지원 (생략 시 center)
-        self.add_cinematic_talk(npc_id=11003285, msg='$52000137_QD__ACT01__6$', duration=3000, align=Align.Center, illust_id='Patos_normal')
+        self.add_cinematic_talk(npc_id=11003285, msg='$52000137_QD__ACT01__6$', duration=3000, illust_id='Patos_normal')
         # illustID = 표시할 일러스트의 npc id, 일러스트를 표시하기 싫으면 0으로 기입
         self.set_skip(state=DarkAnosTalk01Skip)
 
@@ -373,7 +373,7 @@ class CameraChange07(trigger_api.Trigger):
 class AsimovTalk04(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         # align = 일러스트 위치 : (left/ center/ right) 3가지 지원 (생략 시 center)
-        self.add_cinematic_talk(npc_id=11003283, msg='$52000137_QD__ACT01__8$', duration=5000, align=Align.Center, illust_id='Asimov_normal')
+        self.add_cinematic_talk(npc_id=11003283, msg='$52000137_QD__ACT01__8$', duration=5000, illust_id='Asimov_normal')
         # illustID = 표시할 일러스트의 npc id, 일러스트를 표시하기 싫으면 0으로 기입
         self.set_skip(state=AsimovTalk04Skip)
 
@@ -444,7 +444,7 @@ class DarkAnosApproach02(trigger_api.Trigger):
 class DarkAnosTalk02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         # align = 일러스트 위치 : (left/ center/ right) 3가지 지원 (생략 시 center)
-        self.add_cinematic_talk(npc_id=11003285, msg='$52000137_QD__ACT01__9$', duration=5000, align=Align.Center, illust_id='Patos_normal')
+        self.add_cinematic_talk(npc_id=11003285, msg='$52000137_QD__ACT01__9$', duration=5000, illust_id='Patos_normal')
         # illustID = 표시할 일러스트의 npc id, 일러스트를 표시하기 싫으면 0으로 기입
         self.set_skip(state=DarkAnosTalk02Skip)
 
@@ -465,7 +465,7 @@ class DarkAnosTalk02Skip(trigger_api.Trigger):
 class PCTalk03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_pc_emotion_loop(sequence_name='Talk_A', duration=4000.0)
-        self.add_cinematic_talk(npc_id=0, msg='$52000137_QD__ACT01__10$', duration=5000, align=Align.Center, illust_id='0')
+        self.add_cinematic_talk(npc_id=0, msg='$52000137_QD__ACT01__10$', duration=5000, illust_id='0')
         self.set_scene_skip() # Missing State: State
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -486,7 +486,7 @@ class PCTalk03Skip(trigger_api.Trigger):
 class DarkAnosTalk03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         # align = 일러스트 위치 : (left/ center/ right) 3가지 지원 (생략 시 center)
-        self.add_cinematic_talk(npc_id=11003285, msg='$52000137_QD__ACT01__11$', duration=4000, align=Align.Center, illust_id='Patos_normal')
+        self.add_cinematic_talk(npc_id=11003285, msg='$52000137_QD__ACT01__11$', duration=4000, illust_id='Patos_normal')
         # illustID = 표시할 일러스트의 npc id, 일러스트를 표시하기 싫으면 0으로 기입
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -696,7 +696,7 @@ class KanduraTalk01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.move_npc(spawn_id=301, patrol_name='MS2PatrolData_302')
         # align = 일러스트 위치 : (left/ center/ right) 3가지 지원 (생략 시 center)
-        self.add_cinematic_talk(npc_id=11003287, msg='$52000137_QD__ACT01__15$', duration=4000, align=Align.Center, illust_id='Kandura_normal')
+        self.add_cinematic_talk(npc_id=11003287, msg='$52000137_QD__ACT01__15$', duration=4000, illust_id='Kandura_normal')
         # illustID = 표시할 일러스트의 npc id, 일러스트를 표시하기 싫으면 0으로 기입
         self.set_scene_skip(state=ShowCaption04Skip, action='exit')
         self.set_skip(state=KanduraTalk01Skip)
@@ -717,7 +717,7 @@ class KanduraTalk01Skip(trigger_api.Trigger):
 
 class PCTalk04(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=0, msg='$52000137_QD__ACT01__16$', duration=4000, align=Align.Center, illust_id='0')
+        self.add_cinematic_talk(npc_id=0, msg='$52000137_QD__ACT01__16$', duration=4000, illust_id='0')
         self.set_skip(state=PCTalk04Skip)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -747,7 +747,7 @@ class KanduraMoveToDarkAnos01(trigger_api.Trigger):
 class KanduraTalk02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         # align = 일러스트 위치 : (left/ center/ right) 3가지 지원 (생략 시 center)
-        self.add_cinematic_talk(npc_id=11003287, msg='$52000137_QD__ACT01__17$', duration=4000, align=Align.Center, illust_id='Kandura_normal')
+        self.add_cinematic_talk(npc_id=11003287, msg='$52000137_QD__ACT01__17$', duration=4000, illust_id='Kandura_normal')
         # illustID = 표시할 일러스트의 npc id, 일러스트를 표시하기 싫으면 0으로 기입
         self.set_skip(state=KanduraTalk02Skip)
 

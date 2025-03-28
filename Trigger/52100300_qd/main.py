@@ -66,7 +66,7 @@ class 연출시작_3(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_onetime_effect(id=3, path='BG/Common/ScreenMask/Eff_fadein_1sec.xml')
         self.select_camera_path(path_ids=[4001,4002], return_view=False)
-        self.show_caption(type='VerticalCaption', title='$52100300_QD__MAIN__12$', align=Align.Bottom | Align.Left, duration=3000, scale=2.5)
+        self.show_caption(type='VerticalCaption', title='$52100300_QD__MAIN__12$', align=Align.BottomLeft, duration=3000, scale=2.5)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):

@@ -267,7 +267,7 @@ class 리엔을떠나다08(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_cinematic_ui(type=1)
         self.set_cinematic_ui(type=3)
-        self.show_caption(type='VerticalCaption', title='$52000106_QD__52000106__7$', desc='$52000106_QD__52000106__8$', align=Align.Bottom | Align.Left, duration=10000, scale=2.5)
+        self.show_caption(type='VerticalCaption', title='$52000106_QD__52000106__7$', desc='$52000106_QD__52000106__8$', align=Align.BottomLeft, duration=10000, scale=2.5)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):

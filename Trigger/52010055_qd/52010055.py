@@ -121,7 +121,7 @@ class 함교비춤1(trigger_api.Trigger):
         self.select_camera_path(path_ids=[4002,4003], return_view=False)
         self.set_npc_emotion_sequence(spawn_id=2, sequence_name='Talk_A')
         self.add_cinematic_talk(npc_id=11003536, illust_id='Neirin_surprise', msg='$52010055_QD__52010055__3$', duration=3000, align=Align.Left)
-        self.add_cinematic_talk(npc_id=11003682, illust_id='Bliche_closeEye', msg='$52010055_QD__52010055__4$', duration=4000, align=Align.Center)
+        self.add_cinematic_talk(npc_id=11003682, illust_id='Bliche_closeEye', msg='$52010055_QD__52010055__4$', duration=4000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=7000):

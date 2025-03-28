@@ -176,7 +176,7 @@ class scene_10(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.move_npc(spawn_id=302, patrol_name='MS2PatrolData_3002')
         self.select_camera_path(path_ids=[4007,4008], return_view=False)
-        self.add_cinematic_talk(npc_id=11003196, illust_id='Katvan_normal', msg='$52000124_QD__MAIN_01__9$', duration=3000, align=Align.Center)
+        self.add_cinematic_talk(npc_id=11003196, illust_id='Katvan_normal', msg='$52000124_QD__MAIN_01__9$', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=2000):
