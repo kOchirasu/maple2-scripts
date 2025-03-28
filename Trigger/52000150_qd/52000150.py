@@ -68,7 +68,7 @@ class 차원의숲전경씬02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_onetime_effect(id=3, path='BG/Common/ScreenMask/Eff_CameraMasking_FadeInOut1sec.xml')
         self.select_camera_path(path_ids=[1002,1003], return_view=False)
-        self.show_caption(type='VerticalCaption', title='$52000150_QD__52000150__8$', desc='$52000150_QD__52000150__9$', align=Align.BottomLeft, duration=5500, scale=2.5)
+        self.show_caption(type='VerticalCaption', title='$52000150_QD__52000150__8$', desc='$52000150_QD__52000150__9$', align=Align.bottomLeft, duration=5500, scale=2.5)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=6000):
@@ -156,7 +156,7 @@ class 결계흑화연출03(trigger_api.Trigger):
         self.select_camera_path(path_ids=[3001,3000], return_view=False)
         self.set_npc_emotion_sequence(spawn_id=201, sequence_name='Traped_A,Traped_Idle')
         self.set_cinematic_ui(type=3)
-        self.add_cinematic_talk(npc_id=11003439, msg='$52000150_QD__52000150__1$', duration=4000, align=Align.Right) # 호르헤 대사
+        self.add_cinematic_talk(npc_id=11003439, msg='$52000150_QD__52000150__1$', duration=4000, align=Align.right) # 호르헤 대사
         # ########################크윽…! 에너지 역류…? 결계를 거부하는 건가…!!########################
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -178,7 +178,7 @@ class 결계흑화연출04(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_npc_emotion_sequence(spawn_id=202, sequence_name='Bore_A')
         self.select_camera_path(path_ids=[3002,3003], return_view=False)
-        self.add_cinematic_talk(npc_id=11003442, msg='$52000150_QD__52000150__2$', duration=5000, align=Align.Right) # 케이틀린 대사
+        self.add_cinematic_talk(npc_id=11003442, msg='$52000150_QD__52000150__2$', duration=5000, align=Align.right) # 케이틀린 대사
         # ########################이건… 이건 아노스 선생님의 의지가 아냐!!########################
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -191,7 +191,7 @@ class 결계흑화연출05(trigger_api.Trigger):
         self.set_npc_emotion_loop(spawn_id=202, sequence_name='Attack_Idle_A', duration=999999.0)
         self.set_effect(trigger_ids=[2606], visible=True)
         self.select_camera_path(path_ids=[3004,3005], return_view=False)
-        self.add_cinematic_talk(npc_id=11003442, msg='$52000150_QD__52000150__3$', duration=5000, align=Align.Right) # 케이틀린 대사
+        self.add_cinematic_talk(npc_id=11003442, msg='$52000150_QD__52000150__3$', duration=5000, align=Align.right) # 케이틀린 대사
         # ########################선생님!! 정신 차리세요, 선생님!!!!########################
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -222,7 +222,7 @@ class 결계흑화연출07(trigger_api.Trigger):
         self.set_effect(trigger_ids=[2500,2501,2502,2503,2504], visible=True, start_delay=400, interval=200) # #####2번 지역 리젠 알림#####
         self.set_effect(trigger_ids=[2600,2601,2602,2603,2604], visible=True, start_delay=600, interval=200) # #####2번 지역 리젠 알림#####
         self.select_camera_path(path_ids=[3008,3009,3010], return_view=False)
-        self.add_cinematic_talk(npc_id=11003442, msg='$52000150_QD__52000150__4$', duration=4000, align=Align.Right) # 케이틀린 대사
+        self.add_cinematic_talk(npc_id=11003442, msg='$52000150_QD__52000150__4$', duration=4000, align=Align.right) # 케이틀린 대사
         # ########################…아노스 선생님,선생님은 반드시 제가 지키겠어요.########################
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -237,7 +237,7 @@ class 결계흑화연출08(trigger_api.Trigger):
         self.set_effect(trigger_ids=[2400,2401,2402,2403,2404], visible=True, start_delay=200, interval=200) # #####1번 지역 리젠 알림#####
         self.set_effect(trigger_ids=[2500,2501,2502,2503,2504], visible=True, start_delay=400, interval=200) # #####2번 지역 리젠 알림#####
         self.set_effect(trigger_ids=[2600,2601,2602,2603,2604], visible=True, start_delay=600, interval=200) # #####2번 지역 리젠 알림#####
-        self.add_cinematic_talk(npc_id=11003442, msg='$52000150_QD__52000150__5$', duration=4000, align=Align.Right) # 케이틀린 대사
+        self.add_cinematic_talk(npc_id=11003442, msg='$52000150_QD__52000150__5$', duration=4000, align=Align.right) # 케이틀린 대사
         # ########################…어떤 대가를 치루더라도…당신 만큼은…########################
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -253,7 +253,7 @@ class 결계흑화연출09(trigger_api.Trigger):
         self.set_effect(trigger_ids=[2500,2501,2502,2503,2504], visible=True, start_delay=400, interval=200) # #####2번 지역 리젠 알림#####
         self.set_effect(trigger_ids=[2600,2601,2602,2603,2604], visible=True, start_delay=600, interval=200) # #####2번 지역 리젠 알림#####
         self.select_camera_path(path_ids=[3011,3012], return_view=False)
-        self.add_cinematic_talk(npc_id=11003442, msg='$52000150_QD__52000150__6$', duration=4000, align=Align.Right) # 케이틀린 대사
+        self.add_cinematic_talk(npc_id=11003442, msg='$52000150_QD__52000150__6$', duration=4000, align=Align.right) # 케이틀린 대사
         # ########################…호르헤 선생님! 잠시만 참을 수 있겠죠?! 이 몬스터들을 쓸어버리고 선생님을 진정 시킬게요!!########################
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -269,7 +269,7 @@ class 결계흑화연출10(trigger_api.Trigger):
         self.set_effect(trigger_ids=[2500,2501,2502,2503,2504], visible=True, start_delay=400, interval=200) # #####2번 지역 리젠 알림#####
         self.set_effect(trigger_ids=[2600,2601,2602,2603,2604], visible=True, start_delay=600, interval=200) # #####2번 지역 리젠 알림#####
         self.select_camera_path(path_ids=[3013], return_view=False)
-        self.add_cinematic_talk(npc_id=11003442, msg='$52000150_QD__52000150__7$', duration=4000, align=Align.Right) # 케이틀린 대사
+        self.add_cinematic_talk(npc_id=11003442, msg='$52000150_QD__52000150__7$', duration=4000, align=Align.right) # 케이틀린 대사
         # ########################MyPcName!! 어서 준비해!########################
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -365,7 +365,7 @@ class 아노스흑화전대사01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_scene_skip(state=아노스흑화09, action='exit')
         self.select_camera_path(path_ids=[3005], return_view=False)
-        self.add_cinematic_talk(npc_id=11003440, msg='$52000150_QD__52000150__11$', duration=4000, align=Align.Right) # 아노스 대사
+        self.add_cinematic_talk(npc_id=11003440, msg='$52000150_QD__52000150__11$', duration=4000, align=Align.right) # 아노스 대사
         # #######################아노스#윽… 여긴…어디죠…? 케이틀린… 플레이어이름… 그리고… 호르헤.###scriptkey:0713175511006310####################
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -376,7 +376,7 @@ class 아노스흑화전대사01(trigger_api.Trigger):
 class 아노스흑화전대사02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         # self.select_camera_path(path_ids=[3002], return_view=False)
-        self.add_cinematic_talk(npc_id=11003442, illust_id='Caitlyn_serious', msg='$52000150_QD__52000150__12$', duration=3000, align=Align.Right) # 케이틀린 대사
+        self.add_cinematic_talk(npc_id=11003442, illust_id='Caitlyn_serious', msg='$52000150_QD__52000150__12$', duration=3000, align=Align.right) # 케이틀린 대사
         # #######################케이틀린#…선생님…\n이제 괜찮아요. 저희가 지켜드릴게요…#scriptkey:0713175511006311#######################
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -387,7 +387,7 @@ class 아노스흑화전대사02(trigger_api.Trigger):
 class 아노스흑화전대사03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[6000,6001], return_view=False)
-        self.add_cinematic_talk(npc_id=11003440, msg='$52000150_QD__52000150__13$', duration=3000, align=Align.Right) # 아노스 대사
+        self.add_cinematic_talk(npc_id=11003440, msg='$52000150_QD__52000150__13$', duration=3000, align=Align.right) # 아노스 대사
         # #######################아노스#윽…!\n으으…으아아!!###scriptkey:없음####################
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -398,7 +398,7 @@ class 아노스흑화전대사03(trigger_api.Trigger):
 class 아노스흑화전대사04(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         # self.select_camera_path(path_ids=[3002], return_view=False)
-        self.add_cinematic_talk(npc_id=11003442, illust_id='Caitlyn_serious', msg='$52000150_QD__52000150__14$', duration=3000, align=Align.Right) # 케이틀린 대사
+        self.add_cinematic_talk(npc_id=11003442, illust_id='Caitlyn_serious', msg='$52000150_QD__52000150__14$', duration=3000, align=Align.right) # 케이틀린 대사
         # #######################케이틀린#…선생님?!#scriptkey:0713175511006314#######################
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -409,7 +409,7 @@ class 아노스흑화전대사04(trigger_api.Trigger):
 class 아노스흑화전대사05(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         # self.select_camera_path(path_ids=[3001], return_view=False)
-        self.add_cinematic_talk(npc_id=11003438, illust_id='Horrhe_normal', msg='$52000150_QD__52000150__15$', duration=3000, align=Align.Left) # 호르헤 대사
+        self.add_cinematic_talk(npc_id=11003438, illust_id='Horrhe_normal', msg='$52000150_QD__52000150__15$', duration=3000, align=Align.left) # 호르헤 대사
         # #######################호르헤#$아노스?!\n대체 무슨 일이…?#scriptkey:0713175511006315#######################
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -420,7 +420,7 @@ class 아노스흑화전대사05(trigger_api.Trigger):
 class 아노스흑화전대사06(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[6000], return_view=False)
-        self.add_cinematic_talk(npc_id=11003440, msg='$52000150_QD__52000150__16$', duration=3000, align=Align.Right) # 아노스 대사
+        self.add_cinematic_talk(npc_id=11003440, msg='$52000150_QD__52000150__16$', duration=3000, align=Align.right) # 아노스 대사
         # #######################아노스#윽…!\n으으…으아아!!###scriptkey:0713175511006316####################
 
     def on_tick(self) -> trigger_api.Trigger:

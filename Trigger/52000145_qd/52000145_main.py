@@ -85,7 +85,7 @@ class 시작_02(trigger_api.Trigger):
 
 class 하스터숙면_01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=0, msg='$52000145_QD__52000145_MAIN__1$', duration=3000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, msg='$52000145_QD__52000145_MAIN__1$', duration=3000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3500):
@@ -94,7 +94,7 @@ class 하스터숙면_01(trigger_api.Trigger):
 
 class 하스터숙면_02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=0, msg='$52000145_QD__52000145_MAIN__2$', duration=3000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, msg='$52000145_QD__52000145_MAIN__2$', duration=3000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3500):
@@ -114,7 +114,7 @@ class 하스터숙면_04(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_scene_skip(state=퀘스트1수락_01, action='nextState')
         self.set_pc_emotion_loop(sequence_name='Talk_A', duration=3000.0)
-        self.add_cinematic_talk(npc_id=0, msg='$52000145_QD__52000145_MAIN__3$', duration=3000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, msg='$52000145_QD__52000145_MAIN__3$', duration=3000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3500):
@@ -123,7 +123,7 @@ class 하스터숙면_04(trigger_api.Trigger):
 
 class 하스터숙면_05(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003189, msg='$52000145_QD__52000145_MAIN__4$', duration=3000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003189, msg='$52000145_QD__52000145_MAIN__4$', duration=3000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -133,8 +133,8 @@ class 하스터숙면_05(trigger_api.Trigger):
 class 하스터숙면_06(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.face_emotion(emotion_name='Think_A')
-        self.add_cinematic_talk(npc_id=0, msg='$52000145_QD__52000145_MAIN__5$', duration=3000, align=Align.Right)
-        # self.add_cinematic_talk(npc_id=0, msg='$52000145_QD__52000145_MAIN__6$', duration=3000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, msg='$52000145_QD__52000145_MAIN__5$', duration=3000, align=Align.right)
+        # self.add_cinematic_talk(npc_id=0, msg='$52000145_QD__52000145_MAIN__6$', duration=3000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3500):
@@ -300,7 +300,7 @@ class 오스칼등장_03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_scene_skip(state=마무리, action='exit')
         self.face_emotion(emotion_name='Think_A')
-        self.add_cinematic_talk(npc_id=0, msg='$52000145_QD__52000145_MAIN__7$', duration=3000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, msg='$52000145_QD__52000145_MAIN__7$', duration=3000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -309,7 +309,7 @@ class 오스칼등장_03(trigger_api.Trigger):
 
 class 오스칼등장_04(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003189, msg='$52000145_QD__52000145_MAIN__8$', duration=3000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003189, msg='$52000145_QD__52000145_MAIN__8$', duration=3000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -318,8 +318,8 @@ class 오스칼등장_04(trigger_api.Trigger):
 
 class 오스칼등장_05(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=0, msg='$52000145_QD__52000145_MAIN__9$', duration=3000, align=Align.Right)
-        self.add_cinematic_talk(npc_id=0, msg='$52000145_QD__52000145_MAIN__10$', duration=2500, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, msg='$52000145_QD__52000145_MAIN__9$', duration=3000, align=Align.right)
+        self.add_cinematic_talk(npc_id=0, msg='$52000145_QD__52000145_MAIN__10$', duration=2500, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=6000):
@@ -328,7 +328,7 @@ class 오스칼등장_05(trigger_api.Trigger):
 
 class 오스칼등장_06(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003189, msg='$52000145_QD__52000145_MAIN__11$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003189, msg='$52000145_QD__52000145_MAIN__11$', duration=4000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5485):
@@ -346,7 +346,7 @@ class 오스칼등장_07(trigger_api.Trigger):
 
 class 오스칼등장_08(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003380, msg='$52000145_QD__52000145_MAIN__12$', duration=3000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003380, msg='$52000145_QD__52000145_MAIN__12$', duration=3000, align=Align.left)
         self.destroy_monster(spawn_ids=[101])
         self.spawn_monster(spawn_ids=[102], auto_target=False)
         self.set_npc_emotion_loop(spawn_id=102, sequence_name='Sit_Down_A', duration=70000.0)
@@ -358,7 +358,7 @@ class 오스칼등장_08(trigger_api.Trigger):
 
 class 오스칼등장_08_1(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003189, msg='$52000145_QD__52000145_MAIN__13$', duration=2500, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003189, msg='$52000145_QD__52000145_MAIN__13$', duration=2500, align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -385,7 +385,7 @@ class 오스칼등장_10(trigger_api.Trigger):
 
 class 오스칼등장_11(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003380, msg='$52000145_QD__52000145_MAIN__15$', duration=3000, illust_id='Oskhal_normal', align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003380, msg='$52000145_QD__52000145_MAIN__15$', duration=3000, illust_id='Oskhal_normal', align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3500):
@@ -403,9 +403,9 @@ class 오스칼등장_12(trigger_api.Trigger):
 
 class 오스칼등장_13(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003380, msg='$52000145_QD__52000145_MAIN__17$', duration=2500, illust_id='Oskhal_normal', align=Align.Left)
-        self.add_cinematic_talk(npc_id=11003380, msg='$52000145_QD__52000145_MAIN__18$', duration=3500, illust_id='Oskhal_normal', align=Align.Left)
-        self.add_cinematic_talk(npc_id=11003380, msg='$52000145_QD__52000145_MAIN__19$', duration=3000, illust_id='Oskhal_normal', align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003380, msg='$52000145_QD__52000145_MAIN__17$', duration=2500, illust_id='Oskhal_normal', align=Align.left)
+        self.add_cinematic_talk(npc_id=11003380, msg='$52000145_QD__52000145_MAIN__18$', duration=3500, illust_id='Oskhal_normal', align=Align.left)
+        self.add_cinematic_talk(npc_id=11003380, msg='$52000145_QD__52000145_MAIN__19$', duration=3000, illust_id='Oskhal_normal', align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=9500):
@@ -423,7 +423,7 @@ class 오스칼등장_14(trigger_api.Trigger):
 
 class 오스칼등장_15(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003380, msg='$52000145_QD__52000145_MAIN__21$', duration=3500, illust_id='Oskhal_normal', align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003380, msg='$52000145_QD__52000145_MAIN__21$', duration=3500, illust_id='Oskhal_normal', align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5172):
@@ -441,9 +441,9 @@ class 오스칼등장_16(trigger_api.Trigger):
 
 class 오스칼등장_17(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003380, msg='$52000145_QD__52000145_MAIN__23$', duration=2500, illust_id='Oskhal_normal', align=Align.Left)
-        self.add_cinematic_talk(npc_id=11003380, msg='$52000145_QD__52000145_MAIN__24$', duration=3500, illust_id='Oskhal_normal', align=Align.Left)
-        self.add_cinematic_talk(npc_id=11003380, msg='$52000145_QD__52000145_MAIN__25$', duration=2500, illust_id='Oskhal_normal', align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003380, msg='$52000145_QD__52000145_MAIN__23$', duration=2500, illust_id='Oskhal_normal', align=Align.left)
+        self.add_cinematic_talk(npc_id=11003380, msg='$52000145_QD__52000145_MAIN__24$', duration=3500, illust_id='Oskhal_normal', align=Align.left)
+        self.add_cinematic_talk(npc_id=11003380, msg='$52000145_QD__52000145_MAIN__25$', duration=2500, illust_id='Oskhal_normal', align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=9742):
@@ -461,7 +461,7 @@ class 오스칼등장_18(trigger_api.Trigger):
 
 class 오스칼등장_19(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003380, msg='$52000145_QD__52000145_MAIN__27$', duration=3000, illust_id='Oskhal_normal', align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003380, msg='$52000145_QD__52000145_MAIN__27$', duration=3000, illust_id='Oskhal_normal', align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3631):
@@ -480,7 +480,7 @@ class 오스칼등장_20(trigger_api.Trigger):
 class 오스칼등장_21(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.face_emotion()
-        self.add_cinematic_talk(npc_id=0, msg='$52000145_QD__52000145_MAIN__29$', duration=2500, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, msg='$52000145_QD__52000145_MAIN__29$', duration=2500, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):

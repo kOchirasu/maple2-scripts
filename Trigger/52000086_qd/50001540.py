@@ -77,7 +77,7 @@ class 연출시작(trigger_api.Trigger):
 class 에르다대사01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera(trigger_id=302)
-        self.add_cinematic_talk(npc_id=11003069, illust_id='SnowQueen_normal', msg='$52000086_QD__50001540__0$', align=Align.Right, duration=3000)
+        self.add_cinematic_talk(npc_id=11003069, illust_id='SnowQueen_normal', msg='$52000086_QD__50001540__0$', align=Align.right, duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -86,7 +86,7 @@ class 에르다대사01(trigger_api.Trigger):
 
 class 에르다대사02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003069, illust_id='SnowQueen_normal', msg='$52000086_QD__50001540__1$', align=Align.Right, duration=4000)
+        self.add_cinematic_talk(npc_id=11003069, illust_id='SnowQueen_normal', msg='$52000086_QD__50001540__1$', align=Align.right, duration=4000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -96,7 +96,7 @@ class 에르다대사02(trigger_api.Trigger):
 class 설눈이대사01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera(trigger_id=303)
-        self.add_cinematic_talk(npc_id=11003068, illust_id='Seolnunyi_normal', msg='$52000086_QD__50001540__2$', align=Align.Right, duration=4000)
+        self.add_cinematic_talk(npc_id=11003068, illust_id='Seolnunyi_normal', msg='$52000086_QD__50001540__2$', align=Align.right, duration=4000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -106,7 +106,7 @@ class 설눈이대사01(trigger_api.Trigger):
 class 비에른대사01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera(trigger_id=304)
-        self.add_cinematic_talk(npc_id=11003075, illust_id='SnowKing_normal', msg='$52000086_QD__50001540__3$', align=Align.Left, duration=4000)
+        self.add_cinematic_talk(npc_id=11003075, illust_id='SnowKing_normal', msg='$52000086_QD__50001540__3$', align=Align.left, duration=4000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -117,7 +117,7 @@ class 설눈이대사02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera(trigger_id=305)
         self.move_npc(spawn_id=1001, patrol_name='MS2PatrolData_1001A')
-        self.add_cinematic_talk(npc_id=11003068, illust_id='Seolnunyi_normal', msg='$52000086_QD__50001540__4$', align=Align.Right, duration=4000)
+        self.add_cinematic_talk(npc_id=11003068, illust_id='Seolnunyi_normal', msg='$52000086_QD__50001540__4$', align=Align.right, duration=4000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -126,7 +126,7 @@ class 설눈이대사02(trigger_api.Trigger):
 
 class 비에른방향전환(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003068, illust_id='Seolnunyi_normal', msg='$52000086_QD__50001540__5$', align=Align.Right, duration=2000)
+        self.add_cinematic_talk(npc_id=11003068, illust_id='Seolnunyi_normal', msg='$52000086_QD__50001540__5$', align=Align.right, duration=2000)
         self.move_npc(spawn_id=1003, patrol_name='MS2PatrolData_1003A')
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -139,7 +139,7 @@ class 비에른공격(trigger_api.Trigger):
         self.select_camera(trigger_id=306)
         self.set_npc_emotion_sequence(spawn_id=1003, sequence_name='Attack_01_D')
         self.set_onetime_effect(id=1, enable=True, path='BG/Common/ScreenMask/Eff_WhiteFlash.xml')
-        self.add_cinematic_talk(npc_id=11003068, illust_id='Seolnunyi_normal', msg='$52000086_QD__50001540__6$', align=Align.Right, duration=1000)
+        self.add_cinematic_talk(npc_id=11003068, illust_id='Seolnunyi_normal', msg='$52000086_QD__50001540__6$', align=Align.right, duration=1000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=300):
@@ -159,7 +159,7 @@ class 설눈이스턴(trigger_api.Trigger):
 class 에르다대사03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera(trigger_id=302)
-        self.add_cinematic_talk(npc_id=11003069, illust_id='SnowQueen_normal', msg='$52000086_QD__50001540__7$', align=Align.Right, duration=2500)
+        self.add_cinematic_talk(npc_id=11003069, illust_id='SnowQueen_normal', msg='$52000086_QD__50001540__7$', align=Align.right, duration=2500)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=2500):
@@ -169,8 +169,8 @@ class 에르다대사03(trigger_api.Trigger):
 class 비에른대사02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera(trigger_id=307)
-        self.add_cinematic_talk(npc_id=11003075, illust_id='SnowKing_normal', msg='$52000086_QD__50001540__8$', align=Align.Left, duration=4000)
-        self.add_cinematic_talk(npc_id=11003068, illust_id='Seolnunyi_normal', msg='$52000086_QD__50001540__9$', align=Align.Right, duration=3000)
+        self.add_cinematic_talk(npc_id=11003075, illust_id='SnowKing_normal', msg='$52000086_QD__50001540__8$', align=Align.left, duration=4000)
+        self.add_cinematic_talk(npc_id=11003068, illust_id='Seolnunyi_normal', msg='$52000086_QD__50001540__9$', align=Align.right, duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -181,7 +181,7 @@ class 비에른대사03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera(trigger_id=308)
         self.move_npc(spawn_id=1003, patrol_name='MS2PatrolData_1003B')
-        self.add_cinematic_talk(npc_id=11003075, illust_id='SnowKing_normal', msg='$52000086_QD__50001540__10$', align=Align.Left, duration=3000)
+        self.add_cinematic_talk(npc_id=11003075, illust_id='SnowKing_normal', msg='$52000086_QD__50001540__10$', align=Align.left, duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -192,7 +192,7 @@ class 에르다대사04(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera(trigger_id=309)
         self.move_npc(spawn_id=1002, patrol_name='MS2PatrolData_1002A')
-        self.add_cinematic_talk(npc_id=11003069, illust_id='SnowQueen_normal', msg='$52000086_QD__50001540__11$', align=Align.Right, duration=3000)
+        self.add_cinematic_talk(npc_id=11003069, illust_id='SnowQueen_normal', msg='$52000086_QD__50001540__11$', align=Align.right, duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -203,7 +203,7 @@ class 에르다대사05(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera(trigger_id=310)
         self.set_npc_emotion_loop(spawn_id=1002, sequence_name='AttackReady_01_A', duration=1000000000000.0)
-        self.add_cinematic_talk(npc_id=11003069, illust_id='SnowQueen_normal', msg='$52000086_QD__50001540__12$', align=Align.Right, duration=4000)
+        self.add_cinematic_talk(npc_id=11003069, illust_id='SnowQueen_normal', msg='$52000086_QD__50001540__12$', align=Align.right, duration=4000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -298,7 +298,7 @@ class 차연출시작2(trigger_api.Trigger):
 
 class 비에른대사04(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003075, illust_id='SnowKing_normal', msg='$52000086_QD__50001540__13$', align=Align.Left, duration=4000)
+        self.add_cinematic_talk(npc_id=11003075, illust_id='SnowKing_normal', msg='$52000086_QD__50001540__13$', align=Align.left, duration=4000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -309,7 +309,7 @@ class 비에른대사05(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera(trigger_id=312)
         self.move_npc(spawn_id=1006, patrol_name='MS2PatrolData_1006A')
-        self.add_cinematic_talk(npc_id=11003075, illust_id='SnowKing_normal', msg='$52000086_QD__50001540__14$', align=Align.Left, duration=5000)
+        self.add_cinematic_talk(npc_id=11003075, illust_id='SnowKing_normal', msg='$52000086_QD__50001540__14$', align=Align.left, duration=5000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):

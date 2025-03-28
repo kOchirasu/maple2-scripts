@@ -105,7 +105,7 @@ class 리엔전경씬02(trigger_api.Trigger):
 
 class 리엔전경씬03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.show_caption(type='VerticalCaption', title='$52000104_QD__52000104__0$', desc='$52000104_QD__52000104__1$', align=Align.BottomLeft, duration=7000, scale=2.5)
+        self.show_caption(type='VerticalCaption', title='$52000104_QD__52000104__0$', desc='$52000104_QD__52000104__1$', align=Align.bottomLeft, duration=7000, scale=2.5)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):
@@ -349,7 +349,7 @@ class 할아버지등장씬02(trigger_api.Trigger):
 
 class 할아버지등장씬03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003175, illust_id='Ten_normal', msg='$52000104_QD__52000104__6$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003175, illust_id='Ten_normal', msg='$52000104_QD__52000104__6$', duration=4000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):

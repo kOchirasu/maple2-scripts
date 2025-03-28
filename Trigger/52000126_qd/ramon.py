@@ -65,7 +65,7 @@ class camera_03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_onetime_effect(id=1, enable=True, path='BG/Common/Sound/Eff_System_Dark_Intro_Chord_01.xml')
         self.set_npc_emotion_sequence(spawn_id=101, sequence_name='Bore_A')
-        self.add_cinematic_talk(npc_id=11003209, msg='$52000126_QD__RAMON__0$', duration=2000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003209, msg='$52000126_QD__RAMON__0$', duration=2000, align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):

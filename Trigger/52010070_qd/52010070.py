@@ -213,9 +213,9 @@ class 에레브흑화_04(trigger_api.Trigger):
         self.set_onetime_effect(id=3, path='BG/Common/ScreenMask/Eff_fadein_1sec.xml')
         self.move_user(map_id=52010070, portal_id=6001)
         self.move_npc(spawn_id=104, patrol_name='MS2PatrolData_3001')
-        self.add_cinematic_talk(npc_id=11004128, align=Align.Left, illust_id='Ishura_normal', msg='$52010070_QD__52010070__0$', duration=4000)
-        self.add_cinematic_talk(npc_id=11004191, align=Align.Left, illust_id='11004022', msg='$52010070_QD__52010070__1$', duration=4000)
-        self.add_cinematic_talk(npc_id=11004128, align=Align.Left, illust_id='Ishura_normal', msg='$52010070_QD__52010070__2$', duration=3000)
+        self.add_cinematic_talk(npc_id=11004128, align=Align.left, illust_id='Ishura_normal', msg='$52010070_QD__52010070__0$', duration=4000)
+        self.add_cinematic_talk(npc_id=11004191, align=Align.left, illust_id='11004022', msg='$52010070_QD__52010070__1$', duration=4000)
+        self.add_cinematic_talk(npc_id=11004128, align=Align.left, illust_id='Ishura_normal', msg='$52010070_QD__52010070__2$', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=11000):

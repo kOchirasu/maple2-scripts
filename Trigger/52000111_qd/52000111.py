@@ -116,7 +116,7 @@ class 커닝시티전경씬02(trigger_api.Trigger):
 
 class 커닝시티전경씬03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.show_caption(type='VerticalCaption', title='$52000111_QD__52000111__0$', desc='$52000111_QD__52000111__1$', align=Align.BottomLeft, duration=7000, scale=2.5)
+        self.show_caption(type='VerticalCaption', title='$52000111_QD__52000111__0$', desc='$52000111_QD__52000111__1$', align=Align.bottomLeft, duration=7000, scale=2.5)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):

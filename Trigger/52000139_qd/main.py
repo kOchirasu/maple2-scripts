@@ -83,7 +83,7 @@ class 카메라연출_02(trigger_api.Trigger):
 
 class 카메라연출_03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.show_caption(type='VerticalCaption', title='$52000139_QD__MAIN__22$', desc='$52000139_QD__MAIN__23$', align=Align.BottomLeft, duration=4000, scale=2.5)
+        self.show_caption(type='VerticalCaption', title='$52000139_QD__MAIN__22$', desc='$52000139_QD__MAIN__23$', align=Align.bottomLeft, duration=4000, scale=2.5)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):
@@ -124,7 +124,7 @@ class 밝은화면전환_01(trigger_api.Trigger):
 class 기사와대화_00(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_scene_skip(state=퀘스트수락_01, action='nextState')
-        self.add_cinematic_talk(npc_id=11003320, msg='$52000139_QD__MAIN__0$', duration=2500, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003320, msg='$52000139_QD__MAIN__0$', duration=2500, align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -142,8 +142,8 @@ class 기사와대화_01(trigger_api.Trigger):
 
 class 기사와대화_02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003320, msg='$52000139_QD__MAIN__2$', duration=2500, align=Align.Left)
-        self.add_cinematic_talk(npc_id=11003320, msg='$52000139_QD__MAIN__3$', duration=2500, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003320, msg='$52000139_QD__MAIN__2$', duration=2500, align=Align.left)
+        self.add_cinematic_talk(npc_id=11003320, msg='$52000139_QD__MAIN__3$', duration=2500, align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5500):
@@ -162,7 +162,7 @@ class 기사와대화_03(trigger_api.Trigger):
 
 class 기사와대화_04(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003320, msg='$52000139_QD__MAIN__6$', duration=3000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003320, msg='$52000139_QD__MAIN__6$', duration=3000, align=Align.left)
         self.move_npc(spawn_id=102, patrol_name='MS2PatrolData_2002')
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -183,7 +183,7 @@ class 기사와대화_06(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.move_npc(spawn_id=101, patrol_name='MS2PatrolData_2003')
         self.move_user_path(patrol_name='MS2PatrolData_2004')
-        self.add_cinematic_talk(npc_id=11003321, msg='$52000139_QD__MAIN__8$', duration=3000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003321, msg='$52000139_QD__MAIN__8$', duration=3000, align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -192,7 +192,7 @@ class 기사와대화_06(trigger_api.Trigger):
 
 class 기사와대화_07(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003320, msg='$52000139_QD__MAIN__9$', duration=2500, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003320, msg='$52000139_QD__MAIN__9$', duration=2500, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -202,8 +202,8 @@ class 기사와대화_07(trigger_api.Trigger):
 """
 class 기사와대화_08(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003321, msg='$52000139_QD__MAIN__10$', duration=2500, align=Align.Left)
-        self.add_cinematic_talk(npc_id=11003321, msg='$52000139_QD__MAIN__11$', duration=2500, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003321, msg='$52000139_QD__MAIN__10$', duration=2500, align=Align.left)
+        self.add_cinematic_talk(npc_id=11003321, msg='$52000139_QD__MAIN__11$', duration=2500, align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5772):

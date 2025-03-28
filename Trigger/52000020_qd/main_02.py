@@ -72,7 +72,7 @@ class scene_02(trigger_api.Trigger):
 class scene_03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_npc_emotion_sequence(spawn_id=302, sequence_name='Talk_A')
-        self.add_cinematic_talk(npc_id=29000266, msg='$52000020_QD__MAIN_02__1$', duration=2000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=29000266, msg='$52000020_QD__MAIN_02__1$', duration=2000, align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):

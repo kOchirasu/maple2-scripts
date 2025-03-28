@@ -68,7 +68,7 @@ class 크림슨발록대사01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_onetime_effect(id=2, path='BG/Common/ScreenMask/Eff_CameraMasking_FastFadeIn.xml')
         self.set_effect(trigger_ids=[6003], visible=True)
-        self.add_cinematic_talk(npc_id=11003835, msg='$52010062_QD__main__0$', duration=7000, align=Align.Right) # 2003
+        self.add_cinematic_talk(npc_id=11003835, msg='$52010062_QD__main__0$', duration=7000, align=Align.right) # 2003
         self.select_camera_path(path_ids=[4002,4003], return_view=False)
         self.set_cinematic_ui(type=3)
 
@@ -80,7 +80,7 @@ class 크림슨발록대사01(trigger_api.Trigger):
 class 크림슨발록대사02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_effect(trigger_ids=[6001], visible=True)
-        self.add_cinematic_talk(npc_id=11003833, msg='$52010062_QD__main__1$', duration=5000, align=Align.Right) # 2001
+        self.add_cinematic_talk(npc_id=11003833, msg='$52010062_QD__main__1$', duration=5000, align=Align.right) # 2001
         self.select_camera_path(path_ids=[4004,4005], return_view=False)
         self.set_npc_emotion_sequence(spawn_id=2001, sequence_name='Attack_01_C,Attack_Idle_A')
 
@@ -92,7 +92,7 @@ class 크림슨발록대사02(trigger_api.Trigger):
 class 크림슨발록대사03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_effect(trigger_ids=[6002], visible=True)
-        self.add_cinematic_talk(npc_id=11003834, msg='$52010062_QD__main__2$', duration=5000, align=Align.Right) # 2002
+        self.add_cinematic_talk(npc_id=11003834, msg='$52010062_QD__main__2$', duration=5000, align=Align.right) # 2002
         self.select_camera_path(path_ids=[4006,4007], return_view=False)
         self.set_npc_emotion_sequence(spawn_id=2002, sequence_name='Attack_01_B,Attack_Idle_A')
 
@@ -104,7 +104,7 @@ class 크림슨발록대사03(trigger_api.Trigger):
 class 크림슨발록대사04(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_effect(trigger_ids=[6001,6002,6003], visible=True)
-        self.add_cinematic_talk(npc_id=11003793, msg='$52010062_QD__main__3$', duration=4000, align=Align.Right) # 원경 스케치 시작,인페르녹깨어나는장면 준비
+        self.add_cinematic_talk(npc_id=11003793, msg='$52010062_QD__main__3$', duration=4000, align=Align.right) # 원경 스케치 시작,인페르녹깨어나는장면 준비
         # &lt;font size='50'&gt;아니…그분의 손에 들어갈 테지…&lt;/font&gt;
         self.select_camera_path(path_ids=[4008,4009,4013,4014], return_view=False)
 
@@ -203,7 +203,7 @@ class 인페르녹대사00(trigger_api.Trigger):
 class 인페르녹대사01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[4021], return_view=False)
-        self.add_cinematic_talk(npc_id=11003831, illust_id='infernog_nomal', msg='$52010062_QD__main__4$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003831, illust_id='infernog_nomal', msg='$52010062_QD__main__4$', duration=4000, align=Align.right)
         self.set_effect(trigger_ids=[6011]) # 폭주이펙트 off
         self.set_cinematic_ui(type=3)
 
@@ -214,7 +214,7 @@ class 인페르녹대사01(trigger_api.Trigger):
 
 class 인페르녹대사02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003831, illust_id='infernog_nomal', msg='$52010062_QD__main__5$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003831, illust_id='infernog_nomal', msg='$52010062_QD__main__5$', duration=4000, align=Align.right)
         self.set_npc_emotion_sequence(spawn_id=2000, sequence_name='Attack_01_B')
         self.set_effect(trigger_ids=[6000], visible=True) # 화면흔들림 on
         self.set_effect(trigger_ids=[6011], visible=True) # 폭주이펙트 on
@@ -226,7 +226,7 @@ class 인페르녹대사02(trigger_api.Trigger):
 
 class 부하대사01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003834, msg='$52010062_QD__main__6$', duration=4000, align=Align.Right) # 2002
+        self.add_cinematic_talk(npc_id=11003834, msg='$52010062_QD__main__6$', duration=4000, align=Align.right) # 2002
         self.set_effect(trigger_ids=[6000]) # 화면흔들림 off
         self.set_effect(trigger_ids=[6011]) # 폭주이펙트 on
         self.select_camera_path(path_ids=[4006,4007], return_view=False)
@@ -239,7 +239,7 @@ class 부하대사01(trigger_api.Trigger):
 
 class 부하대사02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003835, msg='$52010062_QD__main__7$', duration=4000, align=Align.Right) # 2003
+        self.add_cinematic_talk(npc_id=11003835, msg='$52010062_QD__main__7$', duration=4000, align=Align.right) # 2003
         self.select_camera_path(path_ids=[4002,4003], return_view=False)
         self.set_npc_emotion_sequence(spawn_id=2003, sequence_name='Attack_01_B,Attack_Idle_A')
 
@@ -250,7 +250,7 @@ class 부하대사02(trigger_api.Trigger):
 
 class 부하대사03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003833, msg='$52010062_QD__main__8$', duration=4000, align=Align.Right) # 2001
+        self.add_cinematic_talk(npc_id=11003833, msg='$52010062_QD__main__8$', duration=4000, align=Align.right) # 2001
         self.select_camera_path(path_ids=[4004,4005], return_view=False)
         self.set_npc_emotion_sequence(spawn_id=2001, sequence_name='Attack_01_C,Attack_Idle_A')
 
@@ -262,7 +262,7 @@ class 부하대사03(trigger_api.Trigger):
 class 인페르녹대사03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[4013,4012], return_view=False)
-        self.add_cinematic_talk(npc_id=11003831, illust_id='infernog_nomal', msg='$52010062_QD__main__9$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003831, illust_id='infernog_nomal', msg='$52010062_QD__main__9$', duration=4000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -272,7 +272,7 @@ class 인페르녹대사03(trigger_api.Trigger):
 class 인페르녹대사04(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[4021], return_view=False)
-        self.add_cinematic_talk(npc_id=11003831, illust_id='infernog_nomal', msg='$52010062_QD__main__10$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003831, illust_id='infernog_nomal', msg='$52010062_QD__main__10$', duration=4000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -282,7 +282,7 @@ class 인페르녹대사04(trigger_api.Trigger):
 class 인페르녹대사05(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[4021,4022], return_view=False)
-        self.add_cinematic_talk(npc_id=11003831, illust_id='infernog_nomal', msg='$52010062_QD__main__11$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003831, illust_id='infernog_nomal', msg='$52010062_QD__main__11$', duration=4000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -293,7 +293,7 @@ class 인페르녹대사06(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[4022,4023], return_view=False)
         self.set_onetime_effect(id=6, enable=True, path='BG/Common/ScreenMask/Eff_CameraMasking_SlowFade.xml')
-        self.add_cinematic_talk(npc_id=11003831, illust_id='infernog_nomal', msg='$52010062_QD__main__12$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003831, illust_id='infernog_nomal', msg='$52010062_QD__main__12$', duration=4000, align=Align.right)
         # Missing State: State,  setsceneskip 1 close
         self.set_scene_skip()
         # setsceneskip 1 close

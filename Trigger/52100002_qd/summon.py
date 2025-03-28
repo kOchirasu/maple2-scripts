@@ -28,7 +28,7 @@ class 소환(trigger_api.Trigger):
         self.select_camera(trigger_id=300)
         self.spawn_monster(spawn_ids=[2002], auto_target=False)
         self.set_effect(trigger_ids=[602], visible=True)
-        self.add_cinematic_talk(npc_id=11003889, illust_id='Firis_normal', msg='$02000392_BF__SUMMON__0$', align=Align.Left, duration=2000)
+        self.add_cinematic_talk(npc_id=11003889, illust_id='Firis_normal', msg='$02000392_BF__SUMMON__0$', align=Align.left, duration=2000)
         self.set_skip(state=죽음대기)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -47,7 +47,7 @@ class 퀘스트소환(trigger_api.Trigger):
         self.select_camera(trigger_id=300)
         self.spawn_monster(spawn_ids=[2102], auto_target=False)
         self.set_effect(trigger_ids=[602], visible=True)
-        self.add_cinematic_talk(npc_id=11003889, illust_id='Firis_normal', msg='$02000392_BF__SUMMON__0$', align=Align.Left, duration=2000)
+        self.add_cinematic_talk(npc_id=11003889, illust_id='Firis_normal', msg='$02000392_BF__SUMMON__0$', align=Align.left, duration=2000)
         self.set_skip(state=퀘스트죽음대기)
 
     def on_tick(self) -> trigger_api.Trigger:

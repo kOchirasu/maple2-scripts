@@ -64,7 +64,7 @@ class 카메라이동(trigger_api.Trigger):
         self.set_cinematic_ui(type=1)
         self.set_cinematic_ui(type=3)
         self.select_camera(trigger_id=301)
-        self.add_cinematic_talk(npc_id=11000064, illust_id='Lennon_normal', msg='$52000069_QD__TRIA_BUNKER__0$', duration=9195, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11000064, illust_id='Lennon_normal', msg='$52000069_QD__TRIA_BUNKER__0$', duration=9195, align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):

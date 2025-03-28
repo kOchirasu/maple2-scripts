@@ -293,7 +293,7 @@ class Quit01(trigger_api.Trigger):
 
 class 트라이아도서관01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.show_caption(type='VerticalCaption', title='$52000115_QD__52000115__1$', desc='$52000115_QD__52000115__2$', align=Align.BottomLeft, duration=10000, scale=2.5)
+        self.show_caption(type='VerticalCaption', title='$52000115_QD__52000115__1$', desc='$52000115_QD__52000115__2$', align=Align.bottomLeft, duration=10000, scale=2.5)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -307,7 +307,7 @@ class 트라이아도서관02(trigger_api.Trigger):
 
 class 버서커리스항구01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.show_caption(type='VerticalCaption', title='$52000115_QD__52000115__3$', desc='$52000115_QD__52000115__4$', align=Align.BottomLeft, duration=10000, scale=2.5)
+        self.show_caption(type='VerticalCaption', title='$52000115_QD__52000115__3$', desc='$52000115_QD__52000115__4$', align=Align.bottomLeft, duration=10000, scale=2.5)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):

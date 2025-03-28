@@ -100,7 +100,7 @@ class 아노스등장02(trigger_api.Trigger):
         self.select_camera_path(path_ids=[4000,4001], return_view=False)
         self.set_cinematic_ui(type=1)
         self.set_cinematic_ui(type=3)
-        self.add_cinematic_talk(npc_id=11003148, illust_id='Anos_normal', msg='$52000100_QD__52000100__0$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003148, illust_id='Anos_normal', msg='$52000100_QD__52000100__0$', duration=4000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):
@@ -110,7 +110,7 @@ class 아노스등장02(trigger_api.Trigger):
 class 아노스등장03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[4002], return_view=False)
-        self.show_caption(type='NameCaption', title='$52000100_QD__52000100__1$', desc='$52000100_QD__52000100__2$', align=Align.Center, offset_rate_x=-0.05, offset_rate_y=0.15, duration=10000, scale=2.0)
+        self.show_caption(type='NameCaption', title='$52000100_QD__52000100__1$', desc='$52000100_QD__52000100__2$', offset_rate_x=-0.05, offset_rate_y=0.15, duration=10000, scale=2.0)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=7000):
@@ -248,7 +248,7 @@ class 케이틀린대련02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_scene_skip(state=Skip_2, action='nextState')
         self.face_emotion(spawn_id=200, emotion_name='UpSet')
-        self.add_cinematic_talk(npc_id=11003146, illust_id='Caitlyn_normal', msg='$52000100_QD__52000100__3$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003146, illust_id='Caitlyn_normal', msg='$52000100_QD__52000100__3$', duration=4000, align=Align.right)
         self.set_onetime_effect(id=3000950, enable=True, path='BG/Common/Sound/Eff_Caitlyn_IntroQuest_03000950.xml')
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -258,7 +258,7 @@ class 케이틀린대련02(trigger_api.Trigger):
 
 class 케이틀린대련03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003146, illust_id='Caitlyn_normal', msg='$52000100_QD__52000100__4$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003146, illust_id='Caitlyn_normal', msg='$52000100_QD__52000100__4$', duration=4000, align=Align.right)
         self.set_onetime_effect(id=3000951, enable=True, path='BG/Common/Sound/Eff_Caitlyn_IntroQuest_03000951.xml')
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -268,7 +268,7 @@ class 케이틀린대련03(trigger_api.Trigger):
 
 class 케이틀린대련03_b(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003146, illust_id='Caitlyn_normal', msg='$52000100_QD__52000100__5$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003146, illust_id='Caitlyn_normal', msg='$52000100_QD__52000100__5$', duration=4000, align=Align.right)
         self.set_onetime_effect(id=3000952, enable=True, path='BG/Common/Sound/Eff_Caitlyn_IntroQuest_03000952.xml')
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -452,7 +452,7 @@ class 대련종료씬시작09_b(trigger_api.Trigger):
         self.move_npc(spawn_id=501, patrol_name='MS2PatrolData_caitRun2')
         self.set_cinematic_ui(type=3)
         self.select_camera_path(path_ids=[4015], return_view=False)
-        self.add_cinematic_talk(npc_id=11003147, msg='$52000100_QD__52000100__6$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003147, msg='$52000100_QD__52000100__6$', duration=4000, align=Align.right)
         self.set_onetime_effect(id=3000964, enable=True, path='BG/Common/Sound/Eff_Caitlyn_IntroQuest_03000964.xml')
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -463,7 +463,7 @@ class 대련종료씬시작09_b(trigger_api.Trigger):
 class 대련종료씬시작10(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[4016], return_view=False)
-        self.add_cinematic_talk(npc_id=11003147, msg='$52000100_QD__52000100__7$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003147, msg='$52000100_QD__52000100__7$', duration=4000, align=Align.right)
         self.set_onetime_effect(id=3000965, enable=True, path='BG/Common/Sound/Eff_Caitlyn_IntroQuest_03000965.xml')
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -474,7 +474,7 @@ class 대련종료씬시작10(trigger_api.Trigger):
 class 대련종료씬시작11(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[4017], return_view=False)
-        self.add_cinematic_talk(npc_id=11003148, msg='$52000100_QD__52000100__8$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003148, msg='$52000100_QD__52000100__8$', duration=4000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):
@@ -485,7 +485,7 @@ class 대련종료씬시작12(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.face_emotion(spawn_id=200, emotion_name='Surprised')
         self.select_camera_path(path_ids=[4018], return_view=False)
-        self.add_cinematic_talk(npc_id=11003148, msg='$52000100_QD__52000100__9$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003148, msg='$52000100_QD__52000100__9$', duration=4000, align=Align.right)
         self.set_effect(trigger_ids=[902], visible=True)
         self.set_effect(trigger_ids=[903], visible=True)
         self.set_effect(trigger_ids=[904], visible=True)
@@ -510,7 +510,7 @@ class 대련종료씬시작14(trigger_api.Trigger):
 class 대련종료씬시작15(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[4020,4021], return_view=False)
-        self.add_cinematic_talk(npc_id=11003147, msg='$52000100_QD__52000100__10$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003147, msg='$52000100_QD__52000100__10$', duration=4000, align=Align.right)
         self.set_onetime_effect(id=3000966, enable=True, path='BG/Common/Sound/Eff_Caitlyn_IntroQuest_03000966.xml')
         self.move_npc(spawn_id=501, patrol_name='MS2PatrolData_caitlookBack')
 
@@ -522,7 +522,7 @@ class 대련종료씬시작15(trigger_api.Trigger):
 class 대련종료씬시작17(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[4022,4023], return_view=False)
-        self.add_cinematic_talk(npc_id=11003147, msg='$52000100_QD__52000100__11$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003147, msg='$52000100_QD__52000100__11$', duration=4000, align=Align.right)
         self.set_onetime_effect(id=3000967, enable=True, path='BG/Common/Sound/Eff_Caitlyn_IntroQuest_03000967.xml')
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -532,7 +532,7 @@ class 대련종료씬시작17(trigger_api.Trigger):
 
 class 대련종료씬시작17_b(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003147, msg='$52000100_QD__52000100__12$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003147, msg='$52000100_QD__52000100__12$', duration=4000, align=Align.right)
         self.set_onetime_effect(id=3000968, enable=True, path='BG/Common/Sound/Eff_Caitlyn_IntroQuest_03000968.xml')
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -543,7 +543,7 @@ class 대련종료씬시작17_b(trigger_api.Trigger):
 class 대련종료씬시작18(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.add_balloon_talk(msg='$52000100_QD__52000100__13$', duration=6000, delay_tick=1000)
-        self.add_cinematic_talk(npc_id=11003147, msg='$52000100_QD__52000100__14$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003147, msg='$52000100_QD__52000100__14$', duration=4000, align=Align.right)
         self.set_onetime_effect(id=3000969, enable=True, path='BG/Common/Sound/Eff_Caitlyn_IntroQuest_03000969.xml')
         self.select_camera_path(path_ids=[4024,4025], return_view=False)
         self.move_npc(spawn_id=501, patrol_name='MS2PatrolData_caitOut')

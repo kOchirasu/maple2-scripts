@@ -92,7 +92,7 @@ class 에델슈타인전경씬02(trigger_api.Trigger):
 
 class 에델슈타인전경씬03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.show_caption(type='VerticalCaption', title='$52000107_QD__52000107__0$', desc='$52000107_QD__52000107__1$', align=Align.BottomLeft, duration=7000, scale=2.5)
+        self.show_caption(type='VerticalCaption', title='$52000107_QD__52000107__0$', desc='$52000107_QD__52000107__1$', align=Align.bottomLeft, duration=7000, scale=2.5)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):
@@ -192,7 +192,7 @@ class 아이샤등장씬02(trigger_api.Trigger):
 class 아이샤등장씬04(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_cinematic_ui(type=3)
-        self.add_cinematic_talk(npc_id=11003291, illust_id='Ayesha_normal', msg='$52000107_QD__52000107__3$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003291, illust_id='Ayesha_normal', msg='$52000107_QD__52000107__3$', duration=4000, align=Align.right)
         self.set_onetime_effect(id=3000970, enable=True, path='BG/Common/Sound/Eff_Ayesha_IntroMovie_03000970.xml')
 
     def on_tick(self) -> trigger_api.Trigger:

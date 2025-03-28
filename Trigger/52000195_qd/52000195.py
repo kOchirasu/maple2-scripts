@@ -51,7 +51,7 @@ class CameraEffect03(trigger_api.Trigger):
 class CameraEffect03_3(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[4004], return_view=False)
-        self.show_caption(type='VerticalCaption', title='$52000195_QD__52000195__0$', align=Align.BottomLeft, duration=5000, scale=2.5)
+        self.show_caption(type='VerticalCaption', title='$52000195_QD__52000195__0$', align=Align.bottomLeft, duration=5000, scale=2.5)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):
@@ -93,9 +93,9 @@ class CameraEffect03_6(trigger_api.Trigger):
 class CameraEffect03_7(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_cinematic_ui(type=3)
-        self.add_cinematic_talk(npc_id=11001302, msg='$52000195_QD__52000195__1$', align=Align.Left, illust_id='Ereb_surprise', duration=3000)
-        self.add_cinematic_talk(npc_id=11001302, msg='$52000195_QD__52000195__2$', align=Align.Left, illust_id='Ereb_serious', duration=3000)
-        self.add_cinematic_talk(npc_id=11001302, msg='$52000195_QD__52000195__3$', align=Align.Left, illust_id='Ereb_serious', duration=3000)
+        self.add_cinematic_talk(npc_id=11001302, msg='$52000195_QD__52000195__1$', align=Align.left, illust_id='Ereb_surprise', duration=3000)
+        self.add_cinematic_talk(npc_id=11001302, msg='$52000195_QD__52000195__2$', align=Align.left, illust_id='Ereb_serious', duration=3000)
+        self.add_cinematic_talk(npc_id=11001302, msg='$52000195_QD__52000195__3$', align=Align.left, illust_id='Ereb_serious', duration=3000)
         self.set_scene_skip() # Missing State: State
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -179,8 +179,8 @@ class 과거장면_06(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[4007], return_view=False)
         self.set_npc_emotion_loop(spawn_id=201, sequence_name='Talk_A', duration=8000.0)
-        self.add_cinematic_talk(npc_id=11004778, msg='$52000195_QD__52000195__5$', align=Align.Right, illust_id='Karl_normal', duration=4000)
-        self.add_cinematic_talk(npc_id=11004778, msg='$52000195_QD__52000195__6$', align=Align.Right, illust_id='Karl_normal', duration=4000)
+        self.add_cinematic_talk(npc_id=11004778, msg='$52000195_QD__52000195__5$', align=Align.right, illust_id='Karl_normal', duration=4000)
+        self.add_cinematic_talk(npc_id=11004778, msg='$52000195_QD__52000195__6$', align=Align.right, illust_id='Karl_normal', duration=4000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=8000):
@@ -191,7 +191,7 @@ class 과거장면_07(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[4008], return_view=False)
         self.set_npc_emotion_loop(spawn_id=202, sequence_name='Talk_A', duration=4000.0)
-        self.add_cinematic_talk(npc_id=11004787, msg='$52000195_QD__52000195__7$', align=Align.Right, illust_id='Baron_normal', duration=4000)
+        self.add_cinematic_talk(npc_id=11004787, msg='$52000195_QD__52000195__7$', align=Align.right, illust_id='Baron_normal', duration=4000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -211,7 +211,7 @@ class 과거장면_08(trigger_api.Trigger):
 class 과거장면_08_1(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_npc_emotion_loop(spawn_id=201, sequence_name='Talk_A', duration=4000.0)
-        self.add_cinematic_talk(npc_id=11004778, msg='$52000195_QD__52000195__8$', align=Align.Right, illust_id='Karl_normal', duration=4000)
+        self.add_cinematic_talk(npc_id=11004778, msg='$52000195_QD__52000195__8$', align=Align.right, illust_id='Karl_normal', duration=4000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):

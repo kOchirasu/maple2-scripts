@@ -54,7 +54,7 @@ class Trigger:
         """
         self.ctx.AddBuff(Array[Int32](box_ids), skill_id, level, ignore_player, is_skill_set, feature)
 
-    def add_cinematic_talk(self, npc_id: int, illust_id: str='', msg: str='', duration: int=0, align: Align=Align.Center, delay_tick: int=0) -> None:
+    def add_cinematic_talk(self, npc_id: int, illust_id: str='', msg: str='', duration: int=0, align: Align=Align.center, delay_tick: int=0) -> None:
         """AddCinematicTalk
 
         Args:
@@ -62,7 +62,7 @@ class Trigger:
             illust_id (str): _description_. Defaults to ''.
             msg (str): _description_. Defaults to ''.
             duration (int): _description_. Defaults to 0.
-            align (Align): _description_. Defaults to Align.Center.
+            align (Align): _description_. Defaults to Align.center.
             delay_tick (int): _description_. Defaults to 0.
 
         Returns: None
@@ -1211,12 +1211,12 @@ class Trigger:
         """
         self.ctx.RoomExpire()
 
-    def score_board_create(self, type: str, title: str, max_score: int=0) -> None:
+    def score_board_create(self, type: str='', title: str='', max_score: int=0) -> None:
         """ScoreBoardCreate
 
         Args:
-            type (str): _description_.
-            title (str): _description_.
+            type (str): _description_. Defaults to ''.
+            title (str): _description_. Defaults to ''.
             max_score (int): _description_. Defaults to 0.
 
         Returns: None
@@ -1369,7 +1369,7 @@ class Trigger:
         """
         self.ctx.SetCube(Array[Int32](trigger_ids), is_visible, random_count)
 
-    def set_dialogue(self, type: int, script: str, spawn_id: int=0, time: int=0, arg5: int=0, align: Align=Align.Center) -> None:
+    def set_dialogue(self, type: int, script: str, spawn_id: int=0, time: int=0, arg5: int=0, align: Align=Align.center) -> None:
         """대화를설정한다
 
         Args:
@@ -1378,7 +1378,7 @@ class Trigger:
             spawn_id (int): _description_. Defaults to 0.
             time (int): _description_. Defaults to 0.
             arg5 (int): _description_. Defaults to 0.
-            align (Align): _description_. Defaults to Align.Center.
+            align (Align): _description_. Defaults to Align.center.
 
         Returns: None
         """
@@ -1879,14 +1879,14 @@ class Trigger:
         """
         self.ctx.ShadowExpeditionOpenBossGauge(max_gauge_point, title)
 
-    def show_caption(self, type: str, title: str, desc: str='', align: Align=Align.Center, offset_rate_x: float=0.0, offset_rate_y: float=0.0, duration: int=0, scale: float=0.0) -> None:
+    def show_caption(self, type: str, title: str, desc: str='', align: Align=Align.center, offset_rate_x: float=0.0, offset_rate_y: float=0.0, duration: int=0, scale: float=0.0) -> None:
         """ShowCaption
 
         Args:
             type (str): _description_.
             title (str): _description_.
             desc (str): _description_. Defaults to ''.
-            align (Align): _description_. Defaults to Align.Center.
+            align (Align): _description_. Defaults to Align.center.
             offset_rate_x (float): _description_. Defaults to 0.0.
             offset_rate_y (float): _description_. Defaults to 0.0.
             duration (int): _description_. Defaults to 0.

@@ -54,7 +54,7 @@ class CameraEffect03_3(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[4002,4003], return_view=False)
         self.move_user_path(patrol_name='MS2PatrolData_3001')
-        self.show_caption(type='VerticalCaption', title='$52000191_QD__52000191__0$', align=Align.BottomLeft, duration=5000, scale=2.5)
+        self.show_caption(type='VerticalCaption', title='$52000191_QD__52000191__0$', align=Align.bottomLeft, duration=5000, scale=2.5)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=6000):
@@ -66,7 +66,7 @@ class 바론과첫만남_01(trigger_api.Trigger):
         self.select_camera_path(path_ids=[4004], return_view=False)
         self.set_cinematic_ui(type=3)
         self.add_cinematic_talk(npc_id=0, msg='$52000191_QD__52000191__1$', duration=5000)
-        self.add_cinematic_talk(npc_id=11004787, msg='$52000191_QD__52000191__2$', align=Align.Left, illust_id='Baron_normal', duration=4000)
+        self.add_cinematic_talk(npc_id=11004787, msg='$52000191_QD__52000191__2$', align=Align.left, illust_id='Baron_normal', duration=4000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=9000):
@@ -78,7 +78,7 @@ class 바론과첫만남_02(trigger_api.Trigger):
         self.select_camera_path(path_ids=[4005,4006], return_view=False)
         self.set_pc_emotion_loop(sequence_name='Talk_A', duration=5000.0)
         self.add_cinematic_talk(npc_id=0, msg='$52000191_QD__52000191__3$', duration=5000)
-        self.add_cinematic_talk(npc_id=11004787, msg='$52000191_QD__52000191__4$', align=Align.Left, illust_id='Baron_normal', duration=4000)
+        self.add_cinematic_talk(npc_id=11004787, msg='$52000191_QD__52000191__4$', align=Align.left, illust_id='Baron_normal', duration=4000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=9000):
@@ -89,8 +89,8 @@ class 바론과첫만남_02_02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_pc_emotion_loop(sequence_name='Talk_A', duration=5000.0)
         self.add_cinematic_talk(npc_id=0, msg='$52000191_QD__52000191__5$', duration=5000)
-        self.add_cinematic_talk(npc_id=11004787, msg='$52000191_QD__52000191__6$', align=Align.Left, illust_id='Baron_normal', duration=4000)
-        self.add_cinematic_talk(npc_id=11004787, msg='$52000191_QD__52000191__7$', align=Align.Left, illust_id='Baron_normal', duration=4000)
+        self.add_cinematic_talk(npc_id=11004787, msg='$52000191_QD__52000191__6$', align=Align.left, illust_id='Baron_normal', duration=4000)
+        self.add_cinematic_talk(npc_id=11004787, msg='$52000191_QD__52000191__7$', align=Align.left, illust_id='Baron_normal', duration=4000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=13000):
@@ -101,7 +101,7 @@ class 바론과첫만남_03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_pc_emotion_sequence(sequence_names=['Emotion_Angry_A'])
         self.add_cinematic_talk(npc_id=0, msg='$52000191_QD__52000191__8$', duration=4000)
-        self.add_cinematic_talk(npc_id=11004787, msg='$52000191_QD__52000191__9$', align=Align.Left, illust_id='Baron_normal', duration=4000)
+        self.add_cinematic_talk(npc_id=11004787, msg='$52000191_QD__52000191__9$', align=Align.left, illust_id='Baron_normal', duration=4000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=8000):

@@ -31,7 +31,7 @@ class 연출시작(trigger_api.Trigger):
 class 아크로폴리스내부확인(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_onetime_effect(id=1, path='BG/Common/ScreenMask/Eff_fadein_1sec.xml')
-        self.show_caption(type='VerticalCaption', title='아크로폴리스', desc='고대 크리티아스 지식의 안식처', align=Align.CenterLeft, duration=4000, scale=2.0)
+        self.show_caption(type='VerticalCaption', title='아크로폴리스', desc='고대 크리티아스 지식의 안식처', align=Align.centerLeft, duration=4000, scale=2.0)
         self.select_camera_path(path_ids=[4002,4003,4004], return_view=False)
         self.add_cinematic_talk(npc_id=0, msg='여기가 아크로폴리스...', duration=3000)
 
@@ -155,7 +155,7 @@ class 등장연출(trigger_api.Trigger):
         self.select_camera_path(path_ids=[4005], return_view=False)
         self.set_effect(trigger_ids=[5001], visible=True)
         self.spawn_monster(spawn_ids=[101], auto_target=False)
-        self.show_caption(type='VerticalCaption', title='아르케온', desc='아크로폴리스의 수호자', align=Align.CenterLeft, duration=4000, scale=2.0)
+        self.show_caption(type='VerticalCaption', title='아르케온', desc='아크로폴리스의 수호자', align=Align.centerLeft, duration=4000, scale=2.0)
         self.set_onetime_effect(id=1001, enable=True, path='BG/Common/Eff_Com_Vibrate_Short.xml')
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -256,7 +256,7 @@ class 이오네독백(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[4011,4008], return_view=False)
         self.set_onetime_effect(id=3, path='BG/Common/ScreenMask/Eff_fadein_1sec.xml')
-        self.show_caption(type='VerticalCaption', title='이오네', desc='크리티아스의 왕녀', align=Align.CenterLeft, duration=4000, scale=2.0)
+        self.show_caption(type='VerticalCaption', title='이오네', desc='크리티아스의 왕녀', align=Align.centerLeft, duration=4000, scale=2.0)
         self.add_cinematic_talk(npc_id=11003760, msg='그 동안 수고 했어요. 아르케온.', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:

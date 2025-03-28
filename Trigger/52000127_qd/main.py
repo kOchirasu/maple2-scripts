@@ -130,7 +130,7 @@ class scene_01(trigger_api.Trigger):
 class scene_02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.face_emotion(emotion_name='Stun')
-        self.show_caption(type='VerticalCaption', title='$52000127_QD__MAIN__12$', desc='$52000127_QD__MAIN__13$', align=Align.BottomLeft, duration=3000, scale=2.0)
+        self.show_caption(type='VerticalCaption', title='$52000127_QD__MAIN__12$', desc='$52000127_QD__MAIN__13$', align=Align.bottomLeft, duration=3000, scale=2.0)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -140,7 +140,7 @@ class scene_02(trigger_api.Trigger):
 class scene_03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.face_emotion(emotion_name='Stun')
-        self.add_cinematic_talk(npc_id=11003218, msg='$52000127_QD__MAIN__7$', duration=3000, illust_id='Jordy_normal', align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003218, msg='$52000127_QD__MAIN__7$', duration=3000, illust_id='Jordy_normal', align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -151,7 +151,7 @@ class scene_04(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[4001], return_view=False)
         self.face_emotion(emotion_name='Stun')
-        self.add_cinematic_talk(npc_id=11003218, msg='$52000127_QD__MAIN__8$', duration=3000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003218, msg='$52000127_QD__MAIN__8$', duration=3000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -161,7 +161,7 @@ class scene_04(trigger_api.Trigger):
 class scene_05(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[4001], return_view=False)
-        self.add_cinematic_talk(npc_id=11003218, msg='$52000127_QD__MAIN__9$', duration=3000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003218, msg='$52000127_QD__MAIN__9$', duration=3000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -172,7 +172,7 @@ class scene_06(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[4003], return_view=False)
         self.face_emotion(emotion_name='calm')
-        self.add_cinematic_talk(npc_id=0, msg='$52000127_QD__MAIN__10$', duration=3000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, msg='$52000127_QD__MAIN__10$', duration=3000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -183,7 +183,7 @@ class scene_07(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[4004], return_view=False)
         self.face_emotion(emotion_name='Ride_Sp_Run_005')
-        self.add_cinematic_talk(npc_id=11003218, msg='$52000127_QD__MAIN__11$', duration=3000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003218, msg='$52000127_QD__MAIN__11$', duration=3000, align=Align.right)
         self.set_scene_skip() # Missing State: State
 
     def on_tick(self) -> trigger_api.Trigger:

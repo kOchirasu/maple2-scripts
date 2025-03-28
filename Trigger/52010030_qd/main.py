@@ -84,7 +84,7 @@ class 에바고르_좌절_01(trigger_api.Trigger):
         self.set_cinematic_ui(type=1)
         self.set_cinematic_ui(type=3)
         self.select_camera_path(path_ids=[4004,4001], return_view=False) # 에바고르 정면
-        self.add_cinematic_talk(npc_id=11003391, msg='$52010030_QD__MAIN__5$', duration=3000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003391, msg='$52010030_QD__MAIN__5$', duration=3000, align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):
@@ -93,8 +93,8 @@ class 에바고르_좌절_01(trigger_api.Trigger):
 
 class 에바고르_좌절_02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003470, msg='$52010030_QD__MAIN__6$', duration=2000, align=Align.Left)
-        self.add_cinematic_talk(npc_id=11003470, msg='$52010030_QD__MAIN__7$', duration=3000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003470, msg='$52010030_QD__MAIN__6$', duration=2000, align=Align.left)
+        self.add_cinematic_talk(npc_id=11003470, msg='$52010030_QD__MAIN__7$', duration=3000, align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):
@@ -104,7 +104,7 @@ class 에바고르_좌절_02(trigger_api.Trigger):
 class 에바고르_좌절_03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_npc_emotion_loop(spawn_id=101, sequence_name='Attack_Idle_A', duration=200000.0) # 에바고르 좌절모션
-        self.add_cinematic_talk(npc_id=11003391, msg='$52010030_QD__MAIN__8$', duration=2000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003391, msg='$52010030_QD__MAIN__8$', duration=2000, align=Align.left)
         self.select_camera_path(path_ids=[4002], return_view=False) # 에바고르 얼굴 돌림
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -116,7 +116,7 @@ class 뮤테라피온_등장_01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_effect(trigger_ids=[5001], visible=True)
         # self.spawn_monster(spawn_ids=[201])
-        self.add_cinematic_talk(npc_id=11003470, msg='$52010030_QD__MAIN__9$', duration=3000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003470, msg='$52010030_QD__MAIN__9$', duration=3000, align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -127,7 +127,7 @@ class 뮤테라피온_등장_02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         # self.set_npc_emotion_sequence(spawn_id=201, sequence_name='Talk_A')
         self.select_camera_path(path_ids=[2002,4003], return_view=False) # 뮤테라 피온 줌인
-        self.add_cinematic_talk(npc_id=11003470, msg='$52010030_QD__MAIN__10$', duration=3000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003470, msg='$52010030_QD__MAIN__10$', duration=3000, align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):

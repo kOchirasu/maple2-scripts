@@ -92,7 +92,7 @@ class 파토스등장연출02_B(trigger_api.Trigger):
 class 파토스등장연출03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_cinematic_ui(type=3)
-        self.add_cinematic_talk(npc_id=11003439, illust_id='0', msg='$52000151_QD__52000151__0$', duration=4000, align=Align.Right) # 호르헤 대사
+        self.add_cinematic_talk(npc_id=11003439, illust_id='0', msg='$52000151_QD__52000151__0$', duration=4000, align=Align.right) # 호르헤 대사
         self.select_camera_path(path_ids=[7000,7001], return_view=False)
         self.set_npc_emotion_sequence(spawn_id=201, sequence_name='Bore_B') # 호르헤
         # 도대체 이건…무슨 일이죠…?!
@@ -104,7 +104,7 @@ class 파토스등장연출03(trigger_api.Trigger):
 
 class 파토스등장연출04(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003442, illust_id='0', msg='$52000151_QD__52000151__1$', duration=4000, align=Align.Right) # 케이틀린 대사
+        self.add_cinematic_talk(npc_id=11003442, illust_id='0', msg='$52000151_QD__52000151__1$', duration=4000, align=Align.right) # 케이틀린 대사
         self.select_camera_path(path_ids=[7002,7003], return_view=False) # 아노스 선생님이 두명…?!
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -114,7 +114,7 @@ class 파토스등장연출04(trigger_api.Trigger):
 
 class 파토스등장연출05(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003441, illust_id='0', msg='$52000151_QD__52000151__2$', duration=4000, align=Align.Right) # 파토스 대사
+        self.add_cinematic_talk(npc_id=11003441, illust_id='0', msg='$52000151_QD__52000151__2$', duration=4000, align=Align.right) # 파토스 대사
         self.select_camera_path(path_ids=[7004,7005], return_view=False)
         self.set_npc_emotion_sequence(spawn_id=203, sequence_name='Bore_A') # 파토스
         # 파토스다.
@@ -126,7 +126,7 @@ class 파토스등장연출05(trigger_api.Trigger):
 
 class 파토스등장연출06(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003441, illust_id='0', msg='$52000151_QD__52000151__3$', duration=4000, align=Align.Right) # 파토스 대사
+        self.add_cinematic_talk(npc_id=11003441, illust_id='0', msg='$52000151_QD__52000151__3$', duration=4000, align=Align.right) # 파토스 대사
         self.select_camera_path(path_ids=[7006,7007], return_view=False)
         # 내 이름은 파토스. 빛의 이노센트 따위와 이름을 섞고 싶지 않군.
         self.move_npc(spawn_id=203, patrol_name='MS2PatrolData_patos_come')
@@ -138,7 +138,7 @@ class 파토스등장연출06(trigger_api.Trigger):
 
 class 파토스등장연출08(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003441, illust_id='0', msg='$52000151_QD__52000151__4$', duration=4000, align=Align.Right) # 파토스 대사
+        self.add_cinematic_talk(npc_id=11003441, illust_id='0', msg='$52000151_QD__52000151__4$', duration=4000, align=Align.right) # 파토스 대사
         # 난 어둠의 이노센트다. 그래, 빛의 위선을 뚫고 나온 이 세상의 진정한 힘이지…
         self.select_camera_path(path_ids=[7008,7009], return_view=False)
 
@@ -149,7 +149,7 @@ class 파토스등장연출08(trigger_api.Trigger):
 
 class 파토스등장연출09(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003442, illust_id='0', msg='$52000151_QD__52000151__5$', duration=4000, align=Align.Right) # 파토스 대사
+        self.add_cinematic_talk(npc_id=11003442, illust_id='0', msg='$52000151_QD__52000151__5$', duration=4000, align=Align.right) # 파토스 대사
         self.select_camera_path(path_ids=[7010,7011], return_view=False) # 어둠의…이노센트?!
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -159,7 +159,7 @@ class 파토스등장연출09(trigger_api.Trigger):
 
 class 파토스등장연출10(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003439, illust_id='0', msg='$52000151_QD__52000151__6$', duration=4000, align=Align.Right) # 호르헤 대사
+        self.add_cinematic_talk(npc_id=11003439, illust_id='0', msg='$52000151_QD__52000151__6$', duration=4000, align=Align.right) # 호르헤 대사
         self.select_camera_path(path_ids=[7000,7001], return_view=False)
         self.set_npc_emotion_sequence(spawn_id=201, sequence_name='Bore_A') # 호르헤
         # 가설이 맞았군…아노스 선생은 역시 고대의 이노센트였다…
@@ -171,7 +171,7 @@ class 파토스등장연출10(trigger_api.Trigger):
 
 class 파토스등장연출12(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003439, illust_id='0', msg='$52000151_QD__52000151__7$', duration=4000, align=Align.Right) # 호르헤 대사
+        self.add_cinematic_talk(npc_id=11003439, illust_id='0', msg='$52000151_QD__52000151__7$', duration=4000, align=Align.right) # 호르헤 대사
         # 하지만 어둠의 이노센트라니…이노센트는 하나가 아니었나…?
         self.select_camera_path(path_ids=[7012,7013,7014,7015], return_view=False)
 
@@ -182,7 +182,7 @@ class 파토스등장연출12(trigger_api.Trigger):
 
 class 파토스등장연출13(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003441, illust_id='0', msg='$52000151_QD__52000151__8$', duration=4000, align=Align.Right) # 파토스 대사
+        self.add_cinematic_talk(npc_id=11003441, illust_id='0', msg='$52000151_QD__52000151__8$', duration=4000, align=Align.right) # 파토스 대사
         self.select_camera_path(path_ids=[7016,7017], return_view=False) # 훗…하나?
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -192,7 +192,7 @@ class 파토스등장연출13(trigger_api.Trigger):
 
 class 파토스등장연출14(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003441, illust_id='0', msg='$52000151_QD__52000151__9$', duration=4000, align=Align.Right) # 파토스 대사
+        self.add_cinematic_talk(npc_id=11003441, illust_id='0', msg='$52000151_QD__52000151__9$', duration=4000, align=Align.right) # 파토스 대사
         # 숫자놀이를 할 만큼 여유롭지 않지만,조금은 어울려 주도록 하지.
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -202,7 +202,7 @@ class 파토스등장연출14(trigger_api.Trigger):
 
 class 파토스등장연출15(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003441, illust_id='0', msg='$52000151_QD__52000151__10$', duration=4000, align=Align.Right) # 파토스 대사
+        self.add_cinematic_talk(npc_id=11003441, illust_id='0', msg='$52000151_QD__52000151__10$', duration=4000, align=Align.right) # 파토스 대사
         self.select_camera_path(path_ids=[7018,7019], return_view=False) # 우린 하나가 아니다.
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -212,7 +212,7 @@ class 파토스등장연출15(trigger_api.Trigger):
 
 class 파토스등장연출16(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003441, illust_id='0', msg='$52000151_QD__52000151__11$', duration=4000, align=Align.Right) # 파토스 대사
+        self.add_cinematic_talk(npc_id=11003441, illust_id='0', msg='$52000151_QD__52000151__11$', duration=4000, align=Align.right) # 파토스 대사
         # 저 녀석은 저 녀석.
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -222,7 +222,7 @@ class 파토스등장연출16(trigger_api.Trigger):
 
 class 파토스등장연출17(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003441, illust_id='0', msg='$52000151_QD__52000151__12$', duration=4000, align=Align.Right) # 파토스 대사
+        self.add_cinematic_talk(npc_id=11003441, illust_id='0', msg='$52000151_QD__52000151__12$', duration=4000, align=Align.right) # 파토스 대사
         # 나 파토스는 파토스일 뿐.
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -232,7 +232,7 @@ class 파토스등장연출17(trigger_api.Trigger):
 
 class 파토스등장연출18(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003441, illust_id='0', msg='$52000151_QD__52000151__13$', duration=4000, align=Align.Right) # 파토스 대사
+        self.add_cinematic_talk(npc_id=11003441, illust_id='0', msg='$52000151_QD__52000151__13$', duration=4000, align=Align.right) # 파토스 대사
         # 뭐…그것도 잠시 일 테지.생명의 틈만 있다면, 빛의 이노센트도 내 몸이 될 것이다.
         self.select_camera_path(path_ids=[7020,7021], return_view=False)
         self.move_npc(spawn_id=203, patrol_name='MS2PatrolData_patos_exit')
@@ -244,7 +244,7 @@ class 파토스등장연출18(trigger_api.Trigger):
 
 class 파토스등장연출19(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003441, illust_id='0', msg='$52000151_QD__52000151__14$', duration=4000, align=Align.Right) # 파토스 대사
+        self.add_cinematic_talk(npc_id=11003441, illust_id='0', msg='$52000151_QD__52000151__14$', duration=4000, align=Align.right) # 파토스 대사
         self.select_camera_path(path_ids=[7022,7023], return_view=False)
         self.move_npc(spawn_id=203, patrol_name='MS2PatrolData_patos_turn') # 크큭…빛의 이노센트여.날 거부하지 마라.
 
@@ -255,7 +255,7 @@ class 파토스등장연출19(trigger_api.Trigger):
 
 class 파토스등장연출20(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003441, illust_id='0', msg='$52000151_QD__52000151__15$', duration=4000, align=Align.Right) # 케이틀린 대사
+        self.add_cinematic_talk(npc_id=11003441, illust_id='0', msg='$52000151_QD__52000151__15$', duration=4000, align=Align.right) # 케이틀린 대사
         self.select_camera_path(path_ids=[7024,7025], return_view=False)
         self.set_npc_emotion_sequence(spawn_id=203, sequence_name='Attack_01_A') # 파토스
         # 네 모든 건…모두 내 것이다.

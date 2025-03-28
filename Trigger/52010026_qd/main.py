@@ -121,7 +121,7 @@ class 첫번째연출_조디대사02(trigger_api.Trigger):
         self.add_cinematic_talk(npc_id=11003344, msg='$52010026_QD__MAIN__7$', duration=3000)
         self.add_cinematic_talk(npc_id=11003344, msg='$52010026_QD__MAIN__8$', duration=3000)
         self.face_emotion(spawn_id=1001, emotion_name='Trigger_Talk02_A')
-        self.add_cinematic_talk(npc_id=11003344, illust_id='Peach_normal', msg='$52010026_QD__MAIN__9$', duration=3000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003344, illust_id='Peach_normal', msg='$52010026_QD__MAIN__9$', duration=3000, align=Align.right)
         self.add_cinematic_talk(npc_id=11003344, msg='$52010026_QD__MAIN__10$', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -389,7 +389,7 @@ class Skip(trigger_api.Trigger):
 class 두번째연출_잠시쉬기(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_onetime_effect(id=3, enable=True, path='BG/Common/ScreenMask/Eff_fadein_1sec.xml')
-        self.add_cinematic_talk(npc_id=11003343, illust_id='Peach_normal', align=Align.Left, msg='$52010026_QD__MAIN__29$', duration=2000)
+        self.add_cinematic_talk(npc_id=11003343, illust_id='Peach_normal', align=Align.left, msg='$52010026_QD__MAIN__29$', duration=2000)
         self.add_cinematic_talk(npc_id=11003343, msg='$52010026_QD__MAIN__30$', duration=2000)
         self.add_cinematic_talk(npc_id=0, msg='$52010026_QD__MAIN__48$', duration=2000)
 
@@ -522,7 +522,7 @@ class 다섯번째연출_엘리트몬스터(trigger_api.Trigger):
         self.set_onetime_effect(id=103, enable=True, path='BG/Common/Eff_Com_Vibrate_Short.xml')
         self.set_onetime_effect(id=997, enable=True, path='BG/sound/Eff_BossRegen_01.xml')
         self.spawn_monster(spawn_ids=[131])
-        self.show_caption(scale=2.3, type='NameCaption', title='$52010026_QD__MAIN__50$', desc='$52010026_QD__MAIN__51$', align=Align.CenterLeft, offset_rate_x=-0.15, duration=4000)
+        self.show_caption(scale=2.3, type='NameCaption', title='$52010026_QD__MAIN__50$', desc='$52010026_QD__MAIN__51$', align=Align.centerLeft, offset_rate_x=-0.15, duration=4000)
         self.set_onetime_effect(id=103, path='BG/Common/Eff_Com_Vibrate_Short.xml')
 
     def on_tick(self) -> trigger_api.Trigger:

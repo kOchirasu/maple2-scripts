@@ -41,7 +41,7 @@ class 첫진입(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[8000], return_view=False)
         self.set_onetime_effect(id=1, path='BG/Common/ScreenMask/Eff_fadein_1sec.xml')
-        self.add_cinematic_talk(npc_id=0, illust_id='0', msg='$52000136_QD__MAIN__0$', duration=3000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=0, illust_id='0', msg='$52000136_QD__MAIN__0$', duration=3000, align=Align.left)
         self.set_scene_skip(state=불안한케이틀린_스킵완료, action='nextState') # setsceneskip 1 set
         # setsceneskip 1 set
         # setsceneskip 1 set
@@ -89,7 +89,7 @@ class 케이틀린발견01(trigger_api.Trigger):
 class 케이틀린발견02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[8004], return_view=False)
-        self.add_cinematic_talk(npc_id=0, illust_id='0', msg='$52000136_QD__MAIN__4$', duration=3000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=0, illust_id='0', msg='$52000136_QD__MAIN__4$', duration=3000, align=Align.left)
         self.move_user_path(patrol_name='MS2PatrolData_PC')
         self.set_skip(state=불안한케이틀린_스킵완료) # 통스킵 위한 추가한 액션
 
@@ -135,7 +135,7 @@ class 케이틀린대사01_skip(trigger_api.Trigger):
 class PC대사01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[8005], return_view=False)
-        self.add_cinematic_talk(npc_id=0, illust_id='0', msg='$52000136_QD__MAIN__7$', duration=3000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=0, illust_id='0', msg='$52000136_QD__MAIN__7$', duration=3000, align=Align.left)
         self.set_skip(state=불안한케이틀린_스킵완료) # 통스킵 위한 추가한 액션
 
     def on_tick(self) -> trigger_api.Trigger:

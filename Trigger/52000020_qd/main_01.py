@@ -83,7 +83,7 @@ class scene_03(trigger_api.Trigger):
 class scene_04(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_npc_emotion_sequence(spawn_id=301, sequence_name='Emotion_Troubled_A')
-        self.add_cinematic_talk(npc_id=29000266, msg='$52000020_QD__MAIN_01__3$', duration=3000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=29000266, msg='$52000020_QD__MAIN_01__3$', duration=3000, align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -93,7 +93,7 @@ class scene_04(trigger_api.Trigger):
 class scene_05(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_npc_emotion_sequence(spawn_id=301, sequence_name='Bore_B')
-        self.add_cinematic_talk(npc_id=29000266, msg='$52000020_QD__MAIN_01__4$', duration=2000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=29000266, msg='$52000020_QD__MAIN_01__4$', duration=2000, align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -115,7 +115,7 @@ class scene_06(trigger_api.Trigger):
 class scene_07(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_npc_emotion_sequence(spawn_id=301, sequence_name='Emotion_Angry_A')
-        self.add_cinematic_talk(npc_id=29000266, msg='$52000020_QD__MAIN_01__8$', duration=2000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=29000266, msg='$52000020_QD__MAIN_01__8$', duration=2000, align=Align.left)
         self.add_balloon_talk(spawn_id=202, msg='$52000020_QD__MAIN_01__9$', duration=2000, delay_tick=1000)
         self.set_scene_skip() # Missing State: State
 

@@ -62,7 +62,7 @@ class Event_Start(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_cinematic_ui(type=1)
         self.set_cinematic_ui(type=3)
-        self.add_cinematic_talk(npc_id=11003624, msg='아아…. 드디어 극의 주인공을 찾은 것 같네.', duration=2800, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003624, msg='아아…. 드디어 극의 주인공을 찾은 것 같네.', duration=2800, align=Align.left)
         self.set_scene_skip(action='nextState') # Missing State: State
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -73,7 +73,7 @@ class Event_Start(trigger_api.Trigger):
 class Event_A_01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[4001], return_view=False)
-        self.add_cinematic_talk(npc_id=0, msg='!?', duration=1800, illust_id='0', align=Align.Left)
+        self.add_cinematic_talk(npc_id=0, msg='!?', duration=1800, illust_id='0', align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=2000):
@@ -83,7 +83,7 @@ class Event_A_01(trigger_api.Trigger):
 class Event_A_02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[4002,4003], return_view=False)
-        self.add_cinematic_talk(npc_id=11003624, msg='그래. 바로 너. 네가 주인공이야.', duration=2800, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003624, msg='그래. 바로 너. 네가 주인공이야.', duration=2800, align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -93,7 +93,7 @@ class Event_A_02(trigger_api.Trigger):
 class Event_A_03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.move_npc(spawn_id=101, patrol_name='MS2PatrolData_3001')
-        self.add_cinematic_talk(npc_id=11003624, msg='참, 주인공 역할을 말해주지 않았구나.', duration=2800, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003624, msg='참, 주인공 역할을 말해주지 않았구나.', duration=2800, align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -102,7 +102,7 @@ class Event_A_03(trigger_api.Trigger):
 
 class Event_A_04(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003624, msg='이 극의 주인공 역할은 말이야.', duration=1800, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003624, msg='이 극의 주인공 역할은 말이야.', duration=1800, align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=2000):
@@ -113,7 +113,7 @@ class Event_A_05(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_effect(trigger_ids=[5002], visible=True)
         self.select_camera_path(path_ids=[4004], return_view=False)
-        self.add_cinematic_talk(npc_id=11003624, msg='여기서 죽는 거야.', duration=2800, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003624, msg='여기서 죽는 거야.', duration=2800, align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):

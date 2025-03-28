@@ -84,7 +84,7 @@ class 연출_05(trigger_api.Trigger):
 class 연출_07(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[4007,4008], return_view=False)
-        self.show_caption(type='VerticalCaption', title='$83000002_COLOSSEUM__START__0$', align=Align.BottomLeft, duration=5000, scale=2.5)
+        self.show_caption(type='VerticalCaption', title='$83000002_COLOSSEUM__START__0$', align=Align.bottomLeft, duration=5000, scale=2.5)
         self.set_scene_skip() # Missing State: State
 
     def on_tick(self) -> trigger_api.Trigger:

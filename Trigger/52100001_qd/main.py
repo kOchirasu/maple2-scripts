@@ -88,7 +88,7 @@ class 카메라302(trigger_api.Trigger):
 class 부선장대사03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera(trigger_id=303)
-        self.set_dialogue(type=2, spawn_id=24003011, script='$02000391_BF__MAIN__2$', time=4, align=Align.Left)
+        self.set_dialogue(type=2, spawn_id=24003011, script='$02000391_BF__MAIN__2$', time=4, align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4858):
@@ -98,7 +98,7 @@ class 부선장대사03(trigger_api.Trigger):
 class 세이렌대사01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera(trigger_id=309)
-        self.add_cinematic_talk(npc_id=11003888, illust_id='Celine_normal', msg='$02000391_BF__MAIN__3$', align=Align.Left, duration=4000)
+        self.add_cinematic_talk(npc_id=11003888, illust_id='Celine_normal', msg='$02000391_BF__MAIN__3$', align=Align.left, duration=4000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4179):
@@ -109,7 +109,7 @@ class 카메라310(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.play_system_sound_in_box(sound='Dungeon_Siren_Harp01')
         self.set_npc_emotion_sequence(spawn_id=1098, sequence_name='Attack_01_D')
-        self.add_cinematic_talk(npc_id=11003888, illust_id='Celine_normal', msg='$02000391_BF__MAIN__4$', align=Align.Left, duration=3000)
+        self.add_cinematic_talk(npc_id=11003888, illust_id='Celine_normal', msg='$02000391_BF__MAIN__4$', align=Align.left, duration=3000)
         self.set_npc_emotion_sequence(spawn_id=1099, sequence_name='Attack_01_D')
         self.select_camera(trigger_id=310)
         self.set_effect(trigger_ids=[603], visible=True)
@@ -158,7 +158,7 @@ class 카메라305(trigger_api.Trigger):
 
 class 세이렌연주02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003888, illust_id='Celine_normal', msg='$02000391_BF__MAIN__6$', align=Align.Left, duration=5000)
+        self.add_cinematic_talk(npc_id=11003888, illust_id='Celine_normal', msg='$02000391_BF__MAIN__6$', align=Align.left, duration=5000)
         self.play_system_sound_in_box(sound='Dungeon_Siren_Harp01')
         self.set_npc_emotion_sequence(spawn_id=1098, sequence_name='Attack_01_D')
 
@@ -178,7 +178,7 @@ class 물큐브제거(trigger_api.Trigger):
 
 class 세이렌이동(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003888, illust_id='Celine_normal', msg='$02000391_BF__MAIN__7$', align=Align.Left, duration=3500)
+        self.add_cinematic_talk(npc_id=11003888, illust_id='Celine_normal', msg='$02000391_BF__MAIN__7$', align=Align.left, duration=3500)
         self.select_camera(trigger_id=306)
         self.move_npc(spawn_id=1098, patrol_name='MS2PatrolData_1098A')
 

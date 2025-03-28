@@ -63,7 +63,7 @@ class camera04(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[1006,1007], return_view=False)
         self.set_cinematic_ui(type=3)
-        self.add_cinematic_talk(npc_id=11003338, illust_id='0', msg='$52000113_QD__52000113__0$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003338, illust_id='0', msg='$52000113_QD__52000113__0$', duration=4000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):
@@ -73,7 +73,7 @@ class camera04(trigger_api.Trigger):
 class camera05(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[1008,1009], return_view=False)
-        self.add_cinematic_talk(npc_id=11003185, illust_id='0', msg='$52000113_QD__52000113__1$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003185, illust_id='0', msg='$52000113_QD__52000113__1$', duration=4000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):
@@ -83,7 +83,7 @@ class camera05(trigger_api.Trigger):
 class camera06(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[1010], return_view=False)
-        self.add_cinematic_talk(npc_id=11003185, illust_id='0', msg='$52000113_QD__52000113__2$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003185, illust_id='0', msg='$52000113_QD__52000113__2$', duration=4000, align=Align.right)
         self.move_npc(spawn_id=208, patrol_name='MS2PatrolData_Rogues_out') # 로그스들 이동
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -94,7 +94,7 @@ class camera06(trigger_api.Trigger):
 class camera07(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[1011,1012], return_view=False)
-        self.add_cinematic_talk(npc_id=11003185, illust_id='0', msg='$52000113_QD__52000113__3$', duration=5000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003185, illust_id='0', msg='$52000113_QD__52000113__3$', duration=5000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):
@@ -103,7 +103,7 @@ class camera07(trigger_api.Trigger):
 
 class camera08(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003185, illust_id='0', msg='$52000113_QD__52000113__4$', duration=5000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003185, illust_id='0', msg='$52000113_QD__52000113__4$', duration=5000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):

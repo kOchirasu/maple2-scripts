@@ -81,7 +81,7 @@ class Evelyn_monologue_02(trigger_api.Trigger):
         self.set_onetime_effect(id=1, path='BG/Common/ScreenMask/Eff_fadein_halfsec.xml') # 불켜기
         self.select_camera_path(path_ids=[8000], return_view=False)
         # …휴. 내가 이상해졌나 봐.\n어린애일 때 찾던 요정 이름이나 부르고.
-        self.add_cinematic_talk(npc_id=11004354, msg='$63000074_CS__63000074_MAIN__2$', duration=4000, illust_id='Evelyn_sad', align=Align.Right)
+        self.add_cinematic_talk(npc_id=11004354, msg='$63000074_CS__63000074_MAIN__2$', duration=4000, illust_id='Evelyn_sad', align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -92,7 +92,7 @@ class Evelyn_monologue_03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[8001], return_view=False)
         # 하지만… 쓸쓸한걸.\n너라도 있으면, 크리스마스가 슬프진 않을 텐데.
-        self.add_cinematic_talk(npc_id=11004354, msg='$63000074_CS__63000074_MAIN__3$', duration=5000, illust_id='Evelyn_sad', align=Align.Right)
+        self.add_cinematic_talk(npc_id=11004354, msg='$63000074_CS__63000074_MAIN__3$', duration=5000, illust_id='Evelyn_sad', align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):

@@ -73,8 +73,8 @@ class 크림슨발록비춤1(trigger_api.Trigger):
         self.set_mesh(trigger_ids=[10001]) # 공습용발판 지움
         self.set_scene_skip(state=게임시작, action='nextState')
         self.select_camera(trigger_id=4001)
-        self.add_cinematic_talk(npc_id=11003781, msg='$52010055_QD__52010055__0$', duration=3000, align=Align.Right)
-        self.add_cinematic_talk(npc_id=11003781, msg='$52010055_QD__52010055__1$', duration=3000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003781, msg='$52010055_QD__52010055__0$', duration=3000, align=Align.right)
+        self.add_cinematic_talk(npc_id=11003781, msg='$52010055_QD__52010055__1$', duration=3000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=6000):
@@ -83,7 +83,7 @@ class 크림슨발록비춤1(trigger_api.Trigger):
 
 class 크림슨이동(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=29000378, msg='$52010055_QD__52010055__2$', duration=3000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=29000378, msg='$52010055_QD__52010055__2$', duration=3000, align=Align.right)
         self.move_npc(spawn_id=101, patrol_name='PatrolDataBalrog_Open_101')
         self.move_npc(spawn_id=102, patrol_name='PatrolDataBalrog_Open_102')
         self.move_npc(spawn_id=103, patrol_name='PatrolDataBalrog_Open_103')
@@ -120,7 +120,7 @@ class 함교비춤1(trigger_api.Trigger):
         self.move_user(map_id=52010055, portal_id=2)
         self.select_camera_path(path_ids=[4002,4003], return_view=False)
         self.set_npc_emotion_sequence(spawn_id=2, sequence_name='Talk_A')
-        self.add_cinematic_talk(npc_id=11003536, illust_id='Neirin_surprise', msg='$52010055_QD__52010055__3$', duration=3000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003536, illust_id='Neirin_surprise', msg='$52010055_QD__52010055__3$', duration=3000, align=Align.left)
         self.add_cinematic_talk(npc_id=11003682, illust_id='Bliche_closeEye', msg='$52010055_QD__52010055__4$', duration=4000)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -132,7 +132,7 @@ class 함교비춤2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_npc_rotation(spawn_id=1, rotation=180.0)
         self.set_npc_emotion_sequence(spawn_id=1, sequence_name='Talk_A')
-        self.add_cinematic_talk(npc_id=11003533, illust_id='Bliche_normal', msg='$52010055_QD__52010055__5$', duration=3000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003533, illust_id='Bliche_normal', msg='$52010055_QD__52010055__5$', duration=3000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):
@@ -142,7 +142,7 @@ class 함교비춤2(trigger_api.Trigger):
 class 콘대르대사(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_npc_emotion_sequence(spawn_id=3, sequence_name='Talk_A')
-        self.add_cinematic_talk(npc_id=11003776, illust_id='Conder_normal', msg='$52010055_QD__52010055__6$', duration=2000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003776, illust_id='Conder_normal', msg='$52010055_QD__52010055__6$', duration=2000, align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=2000):
@@ -153,7 +153,7 @@ class 콘대르이동(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.move_npc(spawn_id=3, patrol_name='PatrolDataOpenConder0')
         self.set_npc_emotion_sequence(spawn_id=5, sequence_name='Talk_A')
-        self.add_cinematic_talk(npc_id=11003584, illust_id='Schatten_normal', msg='$52010055_QD__52010055__7$', duration=2000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003584, illust_id='Schatten_normal', msg='$52010055_QD__52010055__7$', duration=2000, align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -164,7 +164,7 @@ class 샤텐이동(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.move_npc(spawn_id=5, patrol_name='PatrolDataOpenSchatten0')
         self.set_npc_emotion_sequence(spawn_id=4, sequence_name='Talk_A')
-        self.add_cinematic_talk(npc_id=11003586, illust_id='Mason_closeEye', msg='$52010055_QD__52010055__8$', duration=3000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003586, illust_id='Mason_closeEye', msg='$52010055_QD__52010055__8$', duration=3000, align=Align.left)
         self.destroy_monster(spawn_ids=[3])
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -186,7 +186,7 @@ class 함교비춤3(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_npc_rotation(spawn_id=1, rotation=270.0)
         self.set_npc_emotion_sequence(spawn_id=1, sequence_name='Talk_A')
-        self.add_cinematic_talk(npc_id=11003533, illust_id='Bliche_normal', msg='$52010055_QD__52010055__9$', duration=3000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003533, illust_id='Bliche_normal', msg='$52010055_QD__52010055__9$', duration=3000, align=Align.right)
         self.destroy_monster(spawn_ids=[4])
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -197,10 +197,10 @@ class 함교비춤3(trigger_api.Trigger):
 class 함교비춤4(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_npc_emotion_sequence(spawn_id=2, sequence_name='Talk_A')
-        self.add_cinematic_talk(npc_id=11003536, illust_id='Neirin_surprise', msg='$52010055_QD__52010055__10$', duration=2000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003536, illust_id='Neirin_surprise', msg='$52010055_QD__52010055__10$', duration=2000, align=Align.left)
         self.set_npc_emotion_sequence(spawn_id=1, sequence_name='Talk_A')
         self.set_npc_rotation(spawn_id=1, rotation=170.0)
-        self.add_cinematic_talk(npc_id=11003533, illust_id='Bliche_normal', msg='$52010055_QD__52010055__11$', duration=3000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003533, illust_id='Bliche_normal', msg='$52010055_QD__52010055__11$', duration=3000, align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):
@@ -212,13 +212,13 @@ class 함교비춤5(trigger_api.Trigger):
         self.set_pc_emotion_sequence(sequence_names=['Emotion_Calm_A'])
         self.init_npc_rotation(spawn_ids=[1])
         self.set_npc_emotion_sequence(spawn_id=1, sequence_name='Talk_A')
-        self.add_cinematic_talk(npc_id=11003533, illust_id='Bliche_normal', msg='$52010055_QD__52010055__12$', duration=3000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003533, illust_id='Bliche_normal', msg='$52010055_QD__52010055__12$', duration=3000, align=Align.left)
         self.set_npc_emotion_sequence(spawn_id=2, sequence_name='Talk_A')
-        self.add_cinematic_talk(npc_id=11003536, illust_id='Neirin_surprise', msg='$52010055_QD__52010055__13$', duration=3000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003536, illust_id='Neirin_surprise', msg='$52010055_QD__52010055__13$', duration=3000, align=Align.right)
         self.set_npc_emotion_sequence(spawn_id=1, sequence_name='Talk_A')
-        self.add_cinematic_talk(npc_id=11003533, illust_id='Bliche_normal', msg='$52010055_QD__52010055__14$', duration=2000, align=Align.Right)
-        self.add_cinematic_talk(npc_id=11003682, illust_id='Bliche_closeEye', msg='$52010055_QD__52010055__15$', duration=2000, align=Align.Right)
-        self.add_cinematic_talk(npc_id=11003533, illust_id='Bliche_normal', msg='$52010055_QD__52010055__16$', duration=2000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003533, illust_id='Bliche_normal', msg='$52010055_QD__52010055__14$', duration=2000, align=Align.right)
+        self.add_cinematic_talk(npc_id=11003682, illust_id='Bliche_closeEye', msg='$52010055_QD__52010055__15$', duration=2000, align=Align.right)
+        self.add_cinematic_talk(npc_id=11003533, illust_id='Bliche_normal', msg='$52010055_QD__52010055__16$', duration=2000, align=Align.right)
         self.set_scene_skip() # Missing State: State
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -615,7 +615,7 @@ class 보스전연출시작(trigger_api.Trigger):
 class 보스전연출1(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_npc_emotion_sequence(spawn_id=2000, sequence_name='Attack_01_A')
-        self.add_cinematic_talk(npc_id=29000382, msg='$52010055_QD__52010055__21$', duration=3000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=29000382, msg='$52010055_QD__52010055__21$', duration=3000, align=Align.right)
         self.set_pc_emotion_sequence(sequence_names=['Emotion_Suprise_A'])
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -673,7 +673,7 @@ class 엔딩연출크림슨발록보스1(trigger_api.Trigger):
         self.select_camera(trigger_id=4006)
         self.move_user_path(patrol_name='PatrolDataEndPC0') # 유저 보스잡고 걸어감
         self.set_npc_emotion_sequence(spawn_id=2002, sequence_name='Dead_01_A')
-        self.add_cinematic_talk(npc_id=29000382, msg='$52010055_QD__52010055__22$', duration=3000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=29000382, msg='$52010055_QD__52010055__22$', duration=3000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -690,7 +690,7 @@ class 엔딩연출크림슨발록보스2(trigger_api.Trigger):
         self.set_npc_emotion_sequence(spawn_id=13, sequence_name='Attack_Idle_A,Attack_Idle_A,Attack_Idle_A,Attack_Idle_A')
         self.set_npc_emotion_sequence(spawn_id=14, sequence_name='Attack_Idle_A,Attack_Idle_A,Attack_Idle_A,Attack_Idle_A')
         self.set_npc_emotion_sequence(spawn_id=15, sequence_name='Attack_Idle_A,Attack_Idle_A,Attack_Idle_A,Attack_Idle_A')
-        self.add_cinematic_talk(npc_id=11003776, illust_id='Conder_normal', msg='$52010055_QD__52010055__23$', duration=2000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003776, illust_id='Conder_normal', msg='$52010055_QD__52010055__23$', duration=2000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=2000):
@@ -703,7 +703,7 @@ class 엔딩연출샤텐1(trigger_api.Trigger):
         self.set_npc_emotion_sequence(spawn_id=13, sequence_name='Attack_Idle_A')
         self.set_npc_emotion_sequence(spawn_id=14, sequence_name='Attack_Idle_A')
         self.set_npc_emotion_sequence(spawn_id=15, sequence_name='Attack_Idle_A')
-        self.add_cinematic_talk(npc_id=11003584, illust_id='Schatten_normal', msg='$52010055_QD__52010055__24$', duration=3000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003584, illust_id='Schatten_normal', msg='$52010055_QD__52010055__24$', duration=3000, align=Align.left)
         self.select_camera_path(path_ids=[4009,4010], return_view=False)
         self.select_camera(trigger_id=4010)
         self.set_npc_emotion_sequence(spawn_id=15, sequence_name='Attack_Idle_A,Attack_01_A')
@@ -715,7 +715,7 @@ class 엔딩연출샤텐1(trigger_api.Trigger):
 
 class 엔딩연출메이슨1(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003586, illust_id='Mason_closeEye', msg='$52010055_QD__52010055__25$', duration=1500, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003586, illust_id='Mason_closeEye', msg='$52010055_QD__52010055__25$', duration=1500, align=Align.left)
         self.select_camera(trigger_id=4014)
         self.select_camera_path(path_ids=[4014,4015], return_view=False)
         self.set_npc_emotion_sequence(spawn_id=13, sequence_name='Attack_Idle_A')
@@ -730,7 +730,7 @@ class 엔딩연출콘대르1(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_effect(trigger_ids=[500], visible=True)
         self.set_effect(trigger_ids=[501], visible=True)
-        self.add_cinematic_talk(npc_id=11003776, illust_id='Conder_normal', msg='$52010055_QD__52010055__26$', duration=3000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003776, illust_id='Conder_normal', msg='$52010055_QD__52010055__26$', duration=3000, align=Align.left)
         self.select_camera_path(path_ids=[4016,4017], return_view=False)
         self.move_npc(spawn_id=13, patrol_name='PatrolDataCondorAttack1') # 엔딩 연출용 콘대르 돌진
 
@@ -756,7 +756,7 @@ class 엔딩연출콘대르2(trigger_api.Trigger):
 class 엔딩연출클림슨발록사망1(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_npc_emotion_sequence(spawn_id=2003, sequence_name='Dead_01_A')
-        self.add_cinematic_talk(npc_id=29000382, msg='$52010055_QD__52010055__27$', duration=3000, align=Align.Right) # 크아악
+        self.add_cinematic_talk(npc_id=29000382, msg='$52010055_QD__52010055__27$', duration=3000, align=Align.right) # 크아악
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=2000):
@@ -788,7 +788,7 @@ class 엔딩연출크림슨발록대사1(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.visible_my_pc(is_visible=True)
         self.select_camera(trigger_id=4006)
-        self.add_cinematic_talk(npc_id=29000382, msg='$52010055_QD__52010055__28$', duration=3000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=29000382, msg='$52010055_QD__52010055__28$', duration=3000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -825,7 +825,7 @@ class 엔딩연출크림슨카메라1(trigger_api.Trigger):
 
 class 엔딩연출크림슨대사1(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=29000378, msg='$52010055_QD__52010055__29$', duration=3000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=29000378, msg='$52010055_QD__52010055__29$', duration=3000, align=Align.right)
         self.move_npc(spawn_id=700, patrol_name='PatrolData700') # 엔딩 연출용 크림슨도망
         self.move_npc(spawn_id=701, patrol_name='PatrolData701') # 엔딩 연출용 크림슨도망
         self.move_npc(spawn_id=702, patrol_name='PatrolData702') # 엔딩 연출용 크림슨도망
@@ -886,7 +886,7 @@ class 엔딩대사콘대르1(trigger_api.Trigger):
         self.set_npc_rotation(spawn_id=15, rotation=60.0)
         self.set_npc_rotation(spawn_id=14, rotation=330.0)
         self.set_npc_emotion_sequence(spawn_id=13, sequence_name='Talk_A')
-        self.add_cinematic_talk(npc_id=11003776, illust_id='Conder_normal', msg='$52010055_QD__52010055__30$', duration=3000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003776, illust_id='Conder_normal', msg='$52010055_QD__52010055__30$', duration=3000, align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -896,7 +896,7 @@ class 엔딩대사콘대르1(trigger_api.Trigger):
 class 엔딩대사샤텐1(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_npc_emotion_sequence(spawn_id=15, sequence_name='Talk_A')
-        self.add_cinematic_talk(npc_id=11003584, illust_id='Schatten_normal', msg='$52010055_QD__52010055__31$', duration=3000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003584, illust_id='Schatten_normal', msg='$52010055_QD__52010055__31$', duration=3000, align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -911,7 +911,7 @@ class 엔딩대사메이슨1(trigger_api.Trigger):
         self.set_mesh(trigger_ids=[10003])
         self.set_mesh(trigger_ids=[10004])
         self.set_npc_emotion_sequence(spawn_id=14, sequence_name='Talk_A')
-        self.add_cinematic_talk(npc_id=11003586, illust_id='Mason_closeEye', msg='$52010055_QD__52010055__32$', duration=3000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003586, illust_id='Mason_closeEye', msg='$52010055_QD__52010055__32$', duration=3000, align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -933,8 +933,8 @@ class 함교로카메라전환1(trigger_api.Trigger):
 class 엔딩대사네이린1(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_npc_emotion_sequence(spawn_id=22, sequence_name='Talk_A')
-        self.add_cinematic_talk(npc_id=11003536, illust_id='Neirin_normal', msg='$52010055_QD__52010055__33$', duration=4000, align=Align.Right)
-        self.add_cinematic_talk(npc_id=11003536, illust_id='Neirin_normal', msg='$52010055_QD__52010055__34$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003536, illust_id='Neirin_normal', msg='$52010055_QD__52010055__33$', duration=4000, align=Align.right)
+        self.add_cinematic_talk(npc_id=11003536, illust_id='Neirin_normal', msg='$52010055_QD__52010055__34$', duration=4000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=8000):
@@ -944,8 +944,8 @@ class 엔딩대사네이린1(trigger_api.Trigger):
 class 엔딩대사블리체1(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_npc_emotion_sequence(spawn_id=21, sequence_name='Talk_A')
-        self.add_cinematic_talk(npc_id=11003533, illust_id='Bliche_normal', msg='$52010055_QD__52010055__35$', duration=3000, align=Align.Right)
-        self.add_cinematic_talk(npc_id=11003533, illust_id='Bliche_normal', msg='$52010055_QD__52010055__36$', duration=5000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003533, illust_id='Bliche_normal', msg='$52010055_QD__52010055__35$', duration=3000, align=Align.right)
+        self.add_cinematic_talk(npc_id=11003533, illust_id='Bliche_normal', msg='$52010055_QD__52010055__36$', duration=5000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=8000):

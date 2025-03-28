@@ -92,7 +92,7 @@ class 보보스퇴장_02(trigger_api.Trigger):
         self.move_npc(spawn_id=121, patrol_name='MS2PatrolData_2001')
         # 책 틈에서 지내게 해줬으니, 소원 들어준 거야…
         self.add_balloon_talk(spawn_id=121, msg='$63000073_CS__63000073_MAIN__0$', duration=2500, delay_tick=1000)
-        # self.add_cinematic_talk(npc_id=11004371, msg='책 틈에서 지내게 했으니, 소원 들어준 거야…', duration=2000, align=Align.Right)
+        # self.add_cinematic_talk(npc_id=11004371, msg='책 틈에서 지내게 했으니, 소원 들어준 거야…', duration=2000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -215,7 +215,7 @@ class 에이든대화_01(trigger_api.Trigger):
 
 class 에이든대화_02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11004359, msg='$63000073_CS__63000073_MAIN__1$', duration=2500, align=Align.Right, illust_id='0') # 아… 머리야.\n이게 어떻게 된 일이지
+        self.add_cinematic_talk(npc_id=11004359, msg='$63000073_CS__63000073_MAIN__1$', duration=2500, align=Align.right, illust_id='0') # 아… 머리야.\n이게 어떻게 된 일이지
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -234,7 +234,7 @@ class 에이든대화_03(trigger_api.Trigger):
 class 에이든대화_04(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_pc_emotion_loop(sequence_name='Talk_A', duration=2500.0)
-        self.add_cinematic_talk(npc_id=0, msg='$63000073_CS__63000073_MAIN__2$', duration=2500, align=Align.Right) # $npcName:11004359$이지?
+        self.add_cinematic_talk(npc_id=0, msg='$63000073_CS__63000073_MAIN__2$', duration=2500, align=Align.right) # $npcName:11004359$이지?
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -245,7 +245,7 @@ class 에이든대화_05(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_pc_emotion_loop(sequence_name='Talk_A', duration=2500.0)
         # 네 동생, $npcName:11004354$$pp:가,이$ 마을에서 널 기다리고 있어.\n마을에서 같이 부모님을 찾아보자고 하는데.
-        self.add_cinematic_talk(npc_id=0, msg='$63000073_CS__63000073_MAIN__3$', duration=4500, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, msg='$63000073_CS__63000073_MAIN__3$', duration=4500, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):
@@ -265,7 +265,7 @@ class 에이든대화_07(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_npc_emotion_loop(spawn_id=122, sequence_name='Talk_A', duration=3500.0)
         # …뭐라고?\n그럼… 나만 당한 게 아닌 건가?
-        self.add_cinematic_talk(npc_id=11004359, msg='$63000073_CS__63000073_MAIN__4$', duration=3500, align=Align.Right, illust_id='0')
+        self.add_cinematic_talk(npc_id=11004359, msg='$63000073_CS__63000073_MAIN__4$', duration=3500, align=Align.right, illust_id='0')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -276,7 +276,7 @@ class 에이든대화_08(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_npc_emotion_loop(spawn_id=122, sequence_name='Talk_A', duration=4500.0)
         # 어서 $npcName:11004354$$pp:를,을$ 만나봐야겠군.\n먼저 출발할게, 마을에서 보자.
-        self.add_cinematic_talk(npc_id=11004359, msg='$63000073_CS__63000073_MAIN__5$', duration=4500, align=Align.Right, illust_id='0')
+        self.add_cinematic_talk(npc_id=11004359, msg='$63000073_CS__63000073_MAIN__5$', duration=4500, align=Align.right, illust_id='0')
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):

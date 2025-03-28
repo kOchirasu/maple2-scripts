@@ -28,7 +28,7 @@ class ready(trigger_api.Trigger):
 
 class Monologue_01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=0, msg='으으.......', duration=2500, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, msg='으으.......', duration=2500, align=Align.right)
         self.set_scene_skip(state=end, action='exit')
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -38,7 +38,7 @@ class Monologue_01(trigger_api.Trigger):
 
 class Monologue_02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=0, msg='도대체 무슨 일이 일어난 거지?', duration=2500, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, msg='도대체 무슨 일이 일어난 거지?', duration=2500, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=2500):
@@ -47,7 +47,7 @@ class Monologue_02(trigger_api.Trigger):
 
 class Monologue_03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=0, msg='.......', duration=3000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, msg='.......', duration=3000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -59,7 +59,7 @@ class Monologue_04(trigger_api.Trigger):
         self.set_cinematic_ui(type=1)
         self.set_cinematic_ui(type=3)
         self.set_pc_emotion_loop(sequence_name='Sit_Ground_Idle_A', duration=3000.0)
-        self.add_cinematic_talk(npc_id=0, msg='잠깐! 여기는?!', duration=3000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, msg='잠깐! 여기는?!', duration=3000, align=Align.right)
         self.set_scene_skip() # Missing State: State
 
     def on_tick(self) -> trigger_api.Trigger:

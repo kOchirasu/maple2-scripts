@@ -60,7 +60,7 @@ class 불난통로_01(trigger_api.Trigger):
 class 불난통로_02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_cinematic_ui(type=3)
-        self.add_cinematic_talk(npc_id=11004785, msg='$52000192_QD__52000192__0$', align=Align.Left, illust_id='Ereb_surprise', duration=4000)
+        self.add_cinematic_talk(npc_id=11004785, msg='$52000192_QD__52000192__0$', align=Align.left, illust_id='Ereb_surprise', duration=4000)
         self.select_camera_path(path_ids=[4002,4003], return_view=False)
         self.set_pc_emotion_loop(sequence_name='Attack_Idle_A', duration=5000.0)
 
@@ -83,7 +83,7 @@ class 불난통로_03(trigger_api.Trigger):
 class 불난통로_04(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.add_cinematic_talk(npc_id=0, msg='$52000192_QD__52000192__2$', duration=5000)
-        self.add_cinematic_talk(npc_id=11004787, msg='$52000192_QD__52000192__3$', align=Align.Left, illust_id='Baron_normal', duration=4000)
+        self.add_cinematic_talk(npc_id=11004787, msg='$52000192_QD__52000192__3$', align=Align.left, illust_id='Baron_normal', duration=4000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=9000):
@@ -159,7 +159,7 @@ class 불꺼라불꺼_02(trigger_api.Trigger):
 class 불꺼라불꺼_02_02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_cinematic_ui(type=3)
-        self.add_cinematic_talk(npc_id=11004787, msg='$52000192_QD__52000192__6$', illust_id='Baron_normal', align=Align.Left, duration=4000)
+        self.add_cinematic_talk(npc_id=11004787, msg='$52000192_QD__52000192__6$', illust_id='Baron_normal', align=Align.left, duration=4000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):

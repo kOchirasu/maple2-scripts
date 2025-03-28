@@ -83,8 +83,8 @@ class 투르카대사1(trigger_api.Trigger):
         self.destroy_monster(spawn_ids=[500], arg2=False)
         self.set_scene_skip(state=컷신3_1, action='nextState')
         self.select_camera_path(path_ids=[700,701], return_view=False)
-        self.add_cinematic_talk(npc_id=11004430, illust_id='Turka_normal', msg='$52100105_QD__52100105_03__0$', duration=6000, align=Align.Right)
-        self.add_cinematic_talk(npc_id=11004430, illust_id='Turka_normal', msg='$52100105_QD__52100105_03__1$', duration=6000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11004430, illust_id='Turka_normal', msg='$52100105_QD__52100105_03__0$', duration=6000, align=Align.right)
+        self.add_cinematic_talk(npc_id=11004430, illust_id='Turka_normal', msg='$52100105_QD__52100105_03__1$', duration=6000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=500):
@@ -113,8 +113,8 @@ class 클라디아이동1(trigger_api.Trigger):
 class 클라디아대사1(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_npc_emotion_loop(spawn_id=500, sequence_name='Talk_A', duration=8666.0)
-        self.add_cinematic_talk(npc_id=11004392, illust_id='cladia_normal', msg='$52100105_QD__52100105_03__2$', duration=5000, align=Align.Left)
-        self.add_cinematic_talk(npc_id=11004392, illust_id='cladia_angry', msg='$52100105_QD__52100105_03__3$', duration=5000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11004392, illust_id='cladia_normal', msg='$52100105_QD__52100105_03__2$', duration=5000, align=Align.left)
+        self.add_cinematic_talk(npc_id=11004392, illust_id='cladia_angry', msg='$52100105_QD__52100105_03__3$', duration=5000, align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=1000):
@@ -124,7 +124,7 @@ class 클라디아대사1(trigger_api.Trigger):
 class 투르카공격지시1(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera(trigger_id=705)
-        self.add_cinematic_talk(npc_id=11004430, illust_id='Turka_normal', msg='$52100105_QD__52100105_03__4$', duration=3000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11004430, illust_id='Turka_normal', msg='$52100105_QD__52100105_03__4$', duration=3000, align=Align.right)
         self.set_npc_emotion_loop(spawn_id=400, sequence_name='Bore_A', duration=1333.0)
         self.set_npc_emotion_loop(spawn_id=500, sequence_name='Attack_Idle_A', duration=5333.0)
 

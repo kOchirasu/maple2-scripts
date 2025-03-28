@@ -57,7 +57,7 @@ class ErebTalk_02(trigger_api.Trigger):
 
 class Erebintroduce(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.show_caption(scale=2.3, type='NameCaption', title='$52000033_QD__AUDIENCEWITHEREB_02__18$', desc='$52000033_QD__AUDIENCEWITHEREB_02__19$', align=Align.CenterLeft, offset_rate_x=-0.15, duration=3000)
+        self.show_caption(scale=2.3, type='NameCaption', title='$52000033_QD__AUDIENCEWITHEREB_02__18$', desc='$52000033_QD__AUDIENCEWITHEREB_02__19$', align=Align.centerLeft, offset_rate_x=-0.15, duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -77,7 +77,7 @@ class ErebTalk_03(trigger_api.Trigger):
 
 class Kaltalk_01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11001665, msg='$52000033_QD__AUDIENCEWITHEREB_02__4$', duration=3000, illust_id='Karl_normal', align=Align.Left)
+        self.add_cinematic_talk(npc_id=11001665, msg='$52000033_QD__AUDIENCEWITHEREB_02__4$', duration=3000, illust_id='Karl_normal', align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -98,7 +98,7 @@ class Kaltalk_02(trigger_api.Trigger):
 
 class kaltroduce(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.show_caption(scale=2.3, type='NameCaption', title='$52000033_QD__AUDIENCEWITHEREB_02__20$', desc='$52000033_QD__AUDIENCEWITHEREB_02__21$', align=Align.CenterLeft, offset_rate_x=-0.15, duration=3000)
+        self.show_caption(scale=2.3, type='NameCaption', title='$52000033_QD__AUDIENCEWITHEREB_02__20$', desc='$52000033_QD__AUDIENCEWITHEREB_02__21$', align=Align.centerLeft, offset_rate_x=-0.15, duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -108,8 +108,8 @@ class kaltroduce(trigger_api.Trigger):
 class talk_01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[601], return_view=False) # 뒷 뷰
-        self.add_cinematic_talk(npc_id=11001663, illust_id='Ereb_normal', msg='$52000033_QD__AUDIENCEWITHEREB_02__7$', duration=1000, align=Align.Left) # 에레브
-        self.add_cinematic_talk(npc_id=11001665, illust_id='Karl_normal', msg='$52000033_QD__AUDIENCEWITHEREB_02__8$', duration=3000, align=Align.Right) # 칼
+        self.add_cinematic_talk(npc_id=11001663, illust_id='Ereb_normal', msg='$52000033_QD__AUDIENCEWITHEREB_02__7$', duration=1000, align=Align.left) # 에레브
+        self.add_cinematic_talk(npc_id=11001665, illust_id='Karl_normal', msg='$52000033_QD__AUDIENCEWITHEREB_02__8$', duration=3000, align=Align.right) # 칼
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -119,8 +119,8 @@ class talk_01(trigger_api.Trigger):
 class talk_02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.add_cinematic_talk(npc_id=11001666, illust_id='Fray_serious', msg='$52000033_QD__AUDIENCEWITHEREB_02__9$', duration=3000, delay_tick=3)
-        self.add_cinematic_talk(npc_id=11001663, illust_id='Ereb_closeEye', msg='$52000033_QD__AUDIENCEWITHEREB_02__10$', duration=1000, align=Align.Left) # 에레브
-        self.add_cinematic_talk(npc_id=11001665, illust_id='Karl_normal', msg='$52000033_QD__AUDIENCEWITHEREB_02__11$', duration=1000, align=Align.Right) # 칼
+        self.add_cinematic_talk(npc_id=11001663, illust_id='Ereb_closeEye', msg='$52000033_QD__AUDIENCEWITHEREB_02__10$', duration=1000, align=Align.left) # 에레브
+        self.add_cinematic_talk(npc_id=11001665, illust_id='Karl_normal', msg='$52000033_QD__AUDIENCEWITHEREB_02__11$', duration=1000, align=Align.right) # 칼
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=6649):
@@ -129,8 +129,8 @@ class talk_02(trigger_api.Trigger):
 
 class talk_03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11001666, illust_id='Fray_normal', msg='$52000033_QD__AUDIENCEWITHEREB_02__12$', duration=3000, align=Align.Right)
-        self.add_cinematic_talk(npc_id=11001666, illust_id='Fray_normal', msg='$52000033_QD__AUDIENCEWITHEREB_02__13$', duration=3000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11001666, illust_id='Fray_normal', msg='$52000033_QD__AUDIENCEWITHEREB_02__12$', duration=3000, align=Align.right)
+        self.add_cinematic_talk(npc_id=11001666, illust_id='Fray_normal', msg='$52000033_QD__AUDIENCEWITHEREB_02__13$', duration=3000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=6000):
@@ -139,8 +139,8 @@ class talk_03(trigger_api.Trigger):
 
 class talk_04(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11001666, illust_id='Fray_normal', msg='$52000033_QD__AUDIENCEWITHEREB_02__14$', duration=3000, align=Align.Right)
-        self.add_cinematic_talk(npc_id=11001666, illust_id='Fray_normal', msg='$52000033_QD__AUDIENCEWITHEREB_02__15$', duration=3000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11001666, illust_id='Fray_normal', msg='$52000033_QD__AUDIENCEWITHEREB_02__14$', duration=3000, align=Align.right)
+        self.add_cinematic_talk(npc_id=11001666, illust_id='Fray_normal', msg='$52000033_QD__AUDIENCEWITHEREB_02__15$', duration=3000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=8000):
@@ -149,8 +149,8 @@ class talk_04(trigger_api.Trigger):
 
 class talk_05(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11001663, illust_id='Ereb_normal', msg='$52000033_QD__AUDIENCEWITHEREB_02__16$', duration=3000, align=Align.Left) # 에레브
-        self.add_cinematic_talk(npc_id=11001665, illust_id='Karl_normal', msg='$52000033_QD__AUDIENCEWITHEREB_02__17$', duration=3000, delay_tick=3, align=Align.Right) # 칼
+        self.add_cinematic_talk(npc_id=11001663, illust_id='Ereb_normal', msg='$52000033_QD__AUDIENCEWITHEREB_02__16$', duration=3000, align=Align.left) # 에레브
+        self.add_cinematic_talk(npc_id=11001665, illust_id='Karl_normal', msg='$52000033_QD__AUDIENCEWITHEREB_02__17$', duration=3000, delay_tick=3, align=Align.right) # 칼
         self.set_scene_skip() # Missing State: State
 
     def on_tick(self) -> trigger_api.Trigger:

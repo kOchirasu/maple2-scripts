@@ -82,8 +82,8 @@ class mermaid_02(trigger_api.Trigger):
 
 class mermaid_02_talk(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003889, illust_id='Firis_normal', msg='$52100011_QD__MAIN__0$', align=Align.Left, duration=2000)
-        self.add_cinematic_talk(npc_id=11003888, illust_id='Celine_normal', msg='$52100011_QD__MAIN__1$', align=Align.Right, duration=2000)
+        self.add_cinematic_talk(npc_id=11003889, illust_id='Firis_normal', msg='$52100011_QD__MAIN__0$', align=Align.left, duration=2000)
+        self.add_cinematic_talk(npc_id=11003888, illust_id='Celine_normal', msg='$52100011_QD__MAIN__1$', align=Align.right, duration=2000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -94,9 +94,9 @@ class scene_01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.reset_camera()
         self.select_camera(trigger_id=8006)
-        self.add_cinematic_talk(npc_id=11003889, illust_id='Firis_normal', msg='$52100011_QD__MAIN__2$', align=Align.Left, duration=3000)
-        self.add_cinematic_talk(npc_id=11003888, illust_id='Celine_normal', msg='$52100011_QD__MAIN__3$', align=Align.Right, duration=3000)
-        self.add_cinematic_talk(npc_id=11003889, illust_id='Firis_normal', msg='$52100011_QD__MAIN__4$', align=Align.Left, duration=3000)
+        self.add_cinematic_talk(npc_id=11003889, illust_id='Firis_normal', msg='$52100011_QD__MAIN__2$', align=Align.left, duration=3000)
+        self.add_cinematic_talk(npc_id=11003888, illust_id='Celine_normal', msg='$52100011_QD__MAIN__3$', align=Align.right, duration=3000)
+        self.add_cinematic_talk(npc_id=11003889, illust_id='Firis_normal', msg='$52100011_QD__MAIN__4$', align=Align.left, duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=9000):
@@ -170,7 +170,7 @@ class battle_02(trigger_api.Trigger):
         self.set_cinematic_ui(type=1)
         self.set_cinematic_ui(type=3)
         self.move_npc(spawn_id=101, patrol_name='MS2PatrolData_2005')
-        self.add_cinematic_talk(npc_id=11003888, illust_id='Celine_normal', msg='$52100011_QD__MAIN__10$', align=Align.Right, duration=3000)
+        self.add_cinematic_talk(npc_id=11003888, illust_id='Celine_normal', msg='$52100011_QD__MAIN__10$', align=Align.right, duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.npc_detected(box_id=704, spawn_ids=[101]):

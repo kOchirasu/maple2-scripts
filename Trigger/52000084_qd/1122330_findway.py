@@ -75,7 +75,7 @@ class 연출시작(trigger_api.Trigger):
 
 class NpcTalk01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003068, illust_id='Seolnunyi_normal', msg='$52000084_QD__1122330_FINDWAY__0$', align=Align.Right, duration=4000)
+        self.add_cinematic_talk(npc_id=11003068, illust_id='Seolnunyi_normal', msg='$52000084_QD__1122330_FINDWAY__0$', align=Align.right, duration=4000)
         self.set_skip(state=NpcTalk01Skip)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -95,7 +95,7 @@ class NpcTalk01Skip(trigger_api.Trigger):
 
 class NpcTalk02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003068, illust_id='Seolnunyi_normal', msg='$52000084_QD__1122330_FINDWAY__1$', align=Align.Right, duration=5000)
+        self.add_cinematic_talk(npc_id=11003068, illust_id='Seolnunyi_normal', msg='$52000084_QD__1122330_FINDWAY__1$', align=Align.right, duration=5000)
         self.set_skip(state=NpcTalk02Skip)
 
     def on_tick(self) -> trigger_api.Trigger:

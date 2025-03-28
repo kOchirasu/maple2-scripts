@@ -46,7 +46,7 @@ class 시공의균열(trigger_api.Trigger):
 class 시공의균열_02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[4001,4002], return_view=False)
-        self.show_caption(type='VerticalCaption', title='$52000194_QD__52000194__0$', desc='$52000194_QD__52000194__1$', align=Align.BottomLeft, duration=5000, scale=2.5)
+        self.show_caption(type='VerticalCaption', title='$52000194_QD__52000194__0$', desc='$52000194_QD__52000194__1$', align=Align.bottomLeft, duration=5000, scale=2.5)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):

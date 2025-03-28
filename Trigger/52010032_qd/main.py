@@ -37,7 +37,7 @@ class 치유의식_01(trigger_api.Trigger):
         self.set_cinematic_ui(type=1)
         self.set_cinematic_ui(type=3)
         self.set_npc_emotion_sequence(spawn_id=201, sequence_name='Talk_A')
-        self.add_cinematic_talk(npc_id=11003389, msg='$52010032_QD__MAIN__0$', duration=3000, illust_id='0', align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003389, msg='$52010032_QD__MAIN__0$', duration=3000, illust_id='0', align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -49,7 +49,7 @@ class 치유의식_02(trigger_api.Trigger):
         self.select_camera_path(path_ids=[4002,4003], return_view=False)
         self.move_npc(spawn_id=201, patrol_name='MS2PatrolData_3001')
         self.move_user_path(patrol_name='MS2PatrolData_3002')
-        self.add_cinematic_talk(npc_id=11003389, msg='$52010032_QD__MAIN__1$', duration=3000, illust_id='0', align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003389, msg='$52010032_QD__MAIN__1$', duration=3000, illust_id='0', align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):
@@ -61,7 +61,7 @@ class 치유의식_03(trigger_api.Trigger):
         self.set_npc_emotion_sequence(spawn_id=201, sequence_name='Bore_B')
         self.set_effect(trigger_ids=[5001], visible=True)
         self.set_pc_emotion_sequence(sequence_names=['Emotion_Cry_A'])
-        self.add_cinematic_talk(npc_id=11003389, msg='$52010032_QD__MAIN__2$', duration=3000, illust_id='0', align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003389, msg='$52010032_QD__MAIN__2$', duration=3000, illust_id='0', align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):
@@ -80,7 +80,7 @@ class 치유의식_04(trigger_api.Trigger):
 
 class 치유의식_05(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003390, msg='$52010032_QD__MAIN__3$', duration=3000, illust_id='0', align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003390, msg='$52010032_QD__MAIN__3$', duration=3000, illust_id='0', align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):

@@ -51,9 +51,9 @@ class 크리티아스로_02(trigger_api.Trigger):
         self.select_camera_path(path_ids=[4003,4004,4005], return_view=False)
         self.set_cinematic_ui(type=3)
         self.set_npc_emotion_loop(spawn_id=102, sequence_name='Talk_B', duration=100000000000.0)
-        self.add_cinematic_talk(npc_id=11004434, illust_id='Bliche_normal', align=Align.Left, msg='$52020040_QD__52020040__0$', duration=3000)
-        self.add_cinematic_talk(npc_id=11004437, illust_id='Neirin_smile', align=Align.Right, msg='$52020040_QD__52020040__1$', duration=3000)
-        self.add_cinematic_talk(npc_id=11004434, illust_id='Bliche_normal', align=Align.Left, msg='$52020040_QD__52020040__2$', duration=3000)
+        self.add_cinematic_talk(npc_id=11004434, illust_id='Bliche_normal', align=Align.left, msg='$52020040_QD__52020040__0$', duration=3000)
+        self.add_cinematic_talk(npc_id=11004437, illust_id='Neirin_smile', align=Align.right, msg='$52020040_QD__52020040__1$', duration=3000)
+        self.add_cinematic_talk(npc_id=11004434, illust_id='Bliche_normal', align=Align.left, msg='$52020040_QD__52020040__2$', duration=3000)
         self.set_scene_skip(state=Skip_1, action='nextState')
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -64,7 +64,7 @@ class 크리티아스로_02(trigger_api.Trigger):
 class 크리티아스로_02_01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[4006], return_view=False)
-        self.show_caption(type='HorizonCaption', title='$52020040_QD__52020040__3$', align=Align.BottomLeft, duration=5000, scale=2.5)
+        self.show_caption(type='HorizonCaption', title='$52020040_QD__52020040__3$', align=Align.bottomLeft, duration=5000, scale=2.5)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):
@@ -74,9 +74,9 @@ class 크리티아스로_02_01(trigger_api.Trigger):
 class 크리티아스로_03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[4007], return_view=False)
-        self.add_cinematic_talk(npc_id=11004436, illust_id='Schatten_smile', align=Align.Left, msg='$52020040_QD__52020040__4$', duration=3000)
-        self.add_cinematic_talk(npc_id=11004438, illust_id='Mason_closeEye', align=Align.Right, msg='$52020040_QD__52020040__5$', duration=3000)
-        self.add_cinematic_talk(npc_id=11004435, illust_id='Conder_smile', align=Align.Left, msg='$52020040_QD__52020040__6$', duration=3000)
+        self.add_cinematic_talk(npc_id=11004436, illust_id='Schatten_smile', align=Align.left, msg='$52020040_QD__52020040__4$', duration=3000)
+        self.add_cinematic_talk(npc_id=11004438, illust_id='Mason_closeEye', align=Align.right, msg='$52020040_QD__52020040__5$', duration=3000)
+        self.add_cinematic_talk(npc_id=11004435, illust_id='Conder_smile', align=Align.left, msg='$52020040_QD__52020040__6$', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=9000):
@@ -87,7 +87,7 @@ class 크리티아스로_04(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_ambient_light(primary=Vector3(232,92,53))
         self.set_directional_light(diffuse_color=Vector3(41,21,18), specular_color=Vector3(130,130,130))
-        self.add_cinematic_talk(npc_id=11004435, illust_id='Conder_normal', align=Align.Left, msg='$52020040_QD__52020040__7$', duration=2500)
+        self.add_cinematic_talk(npc_id=11004435, illust_id='Conder_normal', align=Align.left, msg='$52020040_QD__52020040__7$', duration=2500)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -114,14 +114,14 @@ class 경보(trigger_api.Trigger):
 class 경보_01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[4008], return_view=False)
-        self.add_cinematic_talk(npc_id=11004437, illust_id='Neirin_surprise', align=Align.Left, msg='$52020040_QD__52020040__8$', duration=2500)
-        self.add_cinematic_talk(npc_id=11004437, illust_id='Neirin_surprise', align=Align.Left, msg='$52020040_QD__52020040__9$', duration=2800)
-        self.add_cinematic_talk(npc_id=11004434, illust_id='Bliche_normal', align=Align.Right, msg='$52020040_QD__52020040__10$', duration=2800)
-        self.add_cinematic_talk(npc_id=11004437, illust_id='Neirin_surprise', align=Align.Left, msg='$52020040_QD__52020040__11$', duration=2800)
-        self.add_cinematic_talk(npc_id=11004434, illust_id='Bliche_normal', align=Align.Right, msg='$52020040_QD__52020040__12$', duration=2400)
-        self.add_cinematic_talk(npc_id=11004437, illust_id='Neirin_surprise', align=Align.Left, msg='$52020040_QD__52020040__13$', duration=2800)
-        self.add_cinematic_talk(npc_id=11004434, illust_id='Bliche_mad', align=Align.Right, msg='$52020040_QD__52020040__14$', duration=2800)
-        self.add_cinematic_talk(npc_id=11004437, illust_id='Neirin_surprise', align=Align.Left, msg='$52020040_QD__52020040__15$', duration=2400)
+        self.add_cinematic_talk(npc_id=11004437, illust_id='Neirin_surprise', align=Align.left, msg='$52020040_QD__52020040__8$', duration=2500)
+        self.add_cinematic_talk(npc_id=11004437, illust_id='Neirin_surprise', align=Align.left, msg='$52020040_QD__52020040__9$', duration=2800)
+        self.add_cinematic_talk(npc_id=11004434, illust_id='Bliche_normal', align=Align.right, msg='$52020040_QD__52020040__10$', duration=2800)
+        self.add_cinematic_talk(npc_id=11004437, illust_id='Neirin_surprise', align=Align.left, msg='$52020040_QD__52020040__11$', duration=2800)
+        self.add_cinematic_talk(npc_id=11004434, illust_id='Bliche_normal', align=Align.right, msg='$52020040_QD__52020040__12$', duration=2400)
+        self.add_cinematic_talk(npc_id=11004437, illust_id='Neirin_surprise', align=Align.left, msg='$52020040_QD__52020040__13$', duration=2800)
+        self.add_cinematic_talk(npc_id=11004434, illust_id='Bliche_mad', align=Align.right, msg='$52020040_QD__52020040__14$', duration=2800)
+        self.add_cinematic_talk(npc_id=11004437, illust_id='Neirin_surprise', align=Align.left, msg='$52020040_QD__52020040__15$', duration=2400)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=21300):
@@ -154,7 +154,7 @@ class 경보끝_01(trigger_api.Trigger):
         self.set_actor(trigger_id=206, visible=True, initial_sequence='sf_quest_light_A01_Off')
         self.set_actor(trigger_id=207, visible=True, initial_sequence='sf_quest_light_A01_Off')
         self.set_actor(trigger_id=208, visible=True, initial_sequence='sf_quest_light_A01_Off')
-        self.add_cinematic_talk(npc_id=11004435, illust_id='Conder_normal', align=Align.Right, msg='$52020040_QD__52020040__19$', duration=3000)
+        self.add_cinematic_talk(npc_id=11004435, illust_id='Conder_normal', align=Align.right, msg='$52020040_QD__52020040__19$', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -179,19 +179,19 @@ class 경보끝_02_02(trigger_api.Trigger):
 class 경보끝_02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[4012], return_view=False)
-        self.add_cinematic_talk(npc_id=11004437, illust_id='Neirin_surprise', align=Align.Left, msg='$52020040_QD__52020040__20$', duration=2800)
-        self.add_cinematic_talk(npc_id=11004437, illust_id='Neirin_surprise', align=Align.Left, msg='$52020040_QD__52020040__21$', duration=2800)
-        self.add_cinematic_talk(npc_id=11004437, illust_id='Neirin_surprise', align=Align.Left, msg='$52020040_QD__52020040__22$', duration=3000)
-        self.add_cinematic_talk(npc_id=11004434, illust_id='Bliche_normal', align=Align.Right, msg='$52020040_QD__52020040__23$', duration=3000)
-        self.add_cinematic_talk(npc_id=11004434, illust_id='Bliche_normal', align=Align.Right, msg='$52020040_QD__52020040__24$', duration=3000)
-        self.add_cinematic_talk(npc_id=11004437, illust_id='Neirin_surprise', align=Align.Left, msg='$52020040_QD__52020040__25$', duration=3000)
-        self.add_cinematic_talk(npc_id=11004435, illust_id='Conder_normal', align=Align.Right, msg='$52020040_QD__52020040__26$', duration=3000)
-        self.add_cinematic_talk(npc_id=11004436, illust_id='Schatten_surprise', align=Align.Left, msg='$52020040_QD__52020040__27$', duration=3000)
-        self.add_cinematic_talk(npc_id=11004435, illust_id='Conder_normal', align=Align.Right, msg='$52020040_QD__52020040__28$', duration=2500)
-        self.add_cinematic_talk(npc_id=11004438, illust_id='Mason_normal', align=Align.Left, msg='$52020040_QD__52020040__29$', duration=3000)
-        self.add_cinematic_talk(npc_id=11004434, illust_id='Bliche_normal', align=Align.Right, msg='$52020040_QD__52020040__30$', duration=2500)
-        self.add_cinematic_talk(npc_id=11004434, illust_id='Bliche_normal', align=Align.Right, msg='$52020040_QD__52020040__31$', duration=3000)
-        self.add_cinematic_talk(npc_id=11004438, illust_id='Mason_normal', align=Align.Left, msg='$52020040_QD__52020040__32$', duration=3000)
+        self.add_cinematic_talk(npc_id=11004437, illust_id='Neirin_surprise', align=Align.left, msg='$52020040_QD__52020040__20$', duration=2800)
+        self.add_cinematic_talk(npc_id=11004437, illust_id='Neirin_surprise', align=Align.left, msg='$52020040_QD__52020040__21$', duration=2800)
+        self.add_cinematic_talk(npc_id=11004437, illust_id='Neirin_surprise', align=Align.left, msg='$52020040_QD__52020040__22$', duration=3000)
+        self.add_cinematic_talk(npc_id=11004434, illust_id='Bliche_normal', align=Align.right, msg='$52020040_QD__52020040__23$', duration=3000)
+        self.add_cinematic_talk(npc_id=11004434, illust_id='Bliche_normal', align=Align.right, msg='$52020040_QD__52020040__24$', duration=3000)
+        self.add_cinematic_talk(npc_id=11004437, illust_id='Neirin_surprise', align=Align.left, msg='$52020040_QD__52020040__25$', duration=3000)
+        self.add_cinematic_talk(npc_id=11004435, illust_id='Conder_normal', align=Align.right, msg='$52020040_QD__52020040__26$', duration=3000)
+        self.add_cinematic_talk(npc_id=11004436, illust_id='Schatten_surprise', align=Align.left, msg='$52020040_QD__52020040__27$', duration=3000)
+        self.add_cinematic_talk(npc_id=11004435, illust_id='Conder_normal', align=Align.right, msg='$52020040_QD__52020040__28$', duration=2500)
+        self.add_cinematic_talk(npc_id=11004438, illust_id='Mason_normal', align=Align.left, msg='$52020040_QD__52020040__29$', duration=3000)
+        self.add_cinematic_talk(npc_id=11004434, illust_id='Bliche_normal', align=Align.right, msg='$52020040_QD__52020040__30$', duration=2500)
+        self.add_cinematic_talk(npc_id=11004434, illust_id='Bliche_normal', align=Align.right, msg='$52020040_QD__52020040__31$', duration=3000)
+        self.add_cinematic_talk(npc_id=11004438, illust_id='Mason_normal', align=Align.left, msg='$52020040_QD__52020040__32$', duration=3000)
         self.add_cinematic_talk(npc_id=0, msg='$52020040_QD__52020040__33$', duration=2500)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -203,16 +203,16 @@ class 경보끝_03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[4011,4013], return_view=False)
         # self.set_pc_emotion_loop(sequence_name='Talk_A', duration=10000000000000.0)
-        self.add_cinematic_talk(npc_id=11004438, illust_id='Mason_normal', msg='$52020040_QD__52020040__34$', align=Align.Left, duration=3000)
+        self.add_cinematic_talk(npc_id=11004438, illust_id='Mason_normal', msg='$52020040_QD__52020040__34$', align=Align.left, duration=3000)
         self.add_cinematic_talk(npc_id=0, msg='$52020040_QD__52020040__35$', duration=3000)
         self.add_cinematic_talk(npc_id=0, msg='$52020040_QD__52020040__36$', duration=3000)
-        self.add_cinematic_talk(npc_id=11004436, illust_id='Schatten_surprise', align=Align.Left, msg='$52020040_QD__52020040__37$', duration=3500)
-        self.add_cinematic_talk(npc_id=11004437, illust_id='Neirin_normal', align=Align.Right, msg='$52020040_QD__52020040__38$', duration=3000)
+        self.add_cinematic_talk(npc_id=11004436, illust_id='Schatten_surprise', align=Align.left, msg='$52020040_QD__52020040__37$', duration=3500)
+        self.add_cinematic_talk(npc_id=11004437, illust_id='Neirin_normal', align=Align.right, msg='$52020040_QD__52020040__38$', duration=3000)
         self.add_cinematic_talk(npc_id=0, msg='$52020040_QD__52020040__39$', duration=3000)
-        self.add_cinematic_talk(npc_id=11004434, illust_id='Bliche_closeEye', align=Align.Left, msg='$52020040_QD__52020040__40$', duration=2800)
-        self.add_cinematic_talk(npc_id=11004437, illust_id='Neirin_normal', align=Align.Right, msg='$52020040_QD__52020040__41$', duration=3000)
-        self.add_cinematic_talk(npc_id=11004434, illust_id='Bliche_closeEye', align=Align.Left, msg='$52020040_QD__52020040__42$', duration=3000)
-        self.add_cinematic_talk(npc_id=11004434, illust_id='Bliche_normal', align=Align.Left, msg='$52020040_QD__52020040__43$', duration=3000)
+        self.add_cinematic_talk(npc_id=11004434, illust_id='Bliche_closeEye', align=Align.left, msg='$52020040_QD__52020040__40$', duration=2800)
+        self.add_cinematic_talk(npc_id=11004437, illust_id='Neirin_normal', align=Align.right, msg='$52020040_QD__52020040__41$', duration=3000)
+        self.add_cinematic_talk(npc_id=11004434, illust_id='Bliche_closeEye', align=Align.left, msg='$52020040_QD__52020040__42$', duration=3000)
+        self.add_cinematic_talk(npc_id=11004434, illust_id='Bliche_normal', align=Align.left, msg='$52020040_QD__52020040__43$', duration=3000)
         self.add_cinematic_talk(npc_id=0, msg='$52020040_QD__52020040__44$', duration=3000)
         self.set_scene_skip() # Missing State: State
 

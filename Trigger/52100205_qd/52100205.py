@@ -64,7 +64,7 @@ class CameraEffect03_2(trigger_api.Trigger):
 class CameraEffect03_3(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[4004], return_view=False)
-        self.show_caption(type='VerticalCaption', title='$52100205_QD__52100205__1$', align=Align.BottomLeft, duration=5000, scale=2.5)
+        self.show_caption(type='VerticalCaption', title='$52100205_QD__52100205__1$', align=Align.bottomLeft, duration=5000, scale=2.5)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):
@@ -106,7 +106,7 @@ class CameraEffect03_6(trigger_api.Trigger):
 class CameraEffect03_7(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_cinematic_ui(type=3)
-        self.add_cinematic_talk(npc_id=11004612, msg='$52100205_QD__52100205__2$', align=Align.Left, illust_id='cladia_normal', duration=4000)
+        self.add_cinematic_talk(npc_id=11004612, msg='$52100205_QD__52100205__2$', align=Align.left, illust_id='cladia_normal', duration=4000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -164,7 +164,7 @@ class 제시카_04(trigger_api.Trigger):
 class 제시카_05(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_cinematic_ui(type=3)
-        self.add_cinematic_talk(npc_id=11004575, msg='$52100205_QD__52100205__3$', align=Align.Left, illust_id='Jessica_normal', duration=4000)
+        self.add_cinematic_talk(npc_id=11004575, msg='$52100205_QD__52100205__3$', align=Align.left, illust_id='Jessica_normal', duration=4000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):

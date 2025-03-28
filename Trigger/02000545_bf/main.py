@@ -91,7 +91,7 @@ class 물가보여주기(trigger_api.Trigger):
         self.set_cinematic_ui(type=3)
         self.set_onetime_effect(id=101, enable=True, path='BG/Common/Eff_Com_Vibrate_Short.xml')
         self.select_camera_path(path_ids=[7001], return_view=False)
-        self.add_cinematic_talk(npc_id=11004687, msg='$02000545_BF__MAIN__6$', align=Align.Left, duration=4000)
+        self.add_cinematic_talk(npc_id=11004687, msg='$02000545_BF__MAIN__6$', align=Align.left, duration=4000)
         self.set_effect(trigger_ids=[5001], visible=True)
         self.set_scene_skip(state=몬스터웨이브1, action='nextState')
 
@@ -199,7 +199,7 @@ class 거미여왕스폰2(trigger_api.Trigger):
         self.set_cinematic_ui(type=1)
         self.set_cinematic_ui(type=3)
         self.spawn_monster(spawn_ids=[608])
-        self.add_cinematic_talk(npc_id=11004687, msg='$02000545_BF__MAIN__14$', align=Align.Left, duration=3000)
+        self.add_cinematic_talk(npc_id=11004687, msg='$02000545_BF__MAIN__14$', align=Align.left, duration=3000)
         self.set_mesh(trigger_ids=[2051,2052,2053,2054,2055,2056,2057,2058,2059,2060,2061,2062,2063,2064,2065,2066,2067,2068,2069,2070,2071,2072,2073,2074,2075,2076,2077,2078,2079,2080,2081,2082,2083,2084,2085,2086,2087,2088,2089,2090,2091,2092,2093,2094,2095,2096,2097,2098,2099,2100,2101,2102,2103,2104,2105,2106,2107,2108,2109,2110,2111,2112,2113,2114,2115,2116,2117,2118,2119,2120,2121,2122,2123,2124,2125,2126,2127,2128,2129,2130,2131,2132,2133,2134,2135,2136,2137,2138,2139,2140,2141,2142,2143,2144,2145,2146,2147])
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -217,7 +217,7 @@ class 거미여왕스폰3(trigger_api.Trigger):
         self.set_effect(trigger_ids=[5014], visible=True)
         self.set_effect(trigger_ids=[5015], visible=True)
         self.set_onetime_effect(id=102, enable=True, path='BG/Common/Eff_Com_Vibrate_Short.xml')
-        self.add_cinematic_talk(npc_id=11004687, msg='$02000545_BF__MAIN__15$', align=Align.Left, duration=3000)
+        self.add_cinematic_talk(npc_id=11004687, msg='$02000545_BF__MAIN__15$', align=Align.left, duration=3000)
         self.set_mesh(trigger_ids=[2999], visible=True)
         self.set_effect(trigger_ids=[5010], visible=True)
         self.destroy_monster(spawn_ids=[606,607])
@@ -243,7 +243,7 @@ class 거미여왕기어올라오기(trigger_api.Trigger):
         self.select_camera_path(path_ids=[7004,7005], return_view=False)
         self.set_effect(trigger_ids=[5011], visible=True)
         self.spawn_monster(spawn_ids=[102])
-        self.add_cinematic_talk(npc_id=23300010, msg='$02000545_BF__MAIN__16$', align=Align.Left, duration=4000)
+        self.add_cinematic_talk(npc_id=23300010, msg='$02000545_BF__MAIN__16$', align=Align.left, duration=4000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):

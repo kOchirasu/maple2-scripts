@@ -35,7 +35,7 @@ class camera(trigger_api.Trigger):
 class scene_01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_npc_emotion_sequence(spawn_id=101, sequence_name='ChatUp_A')
-        self.add_cinematic_talk(npc_id=11003216, msg='$52000046_QD__MAIN__0$', duration=3000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003216, msg='$52000046_QD__MAIN__0$', duration=3000, align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -44,7 +44,7 @@ class scene_01(trigger_api.Trigger):
 
 class scene_02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.show_caption(scale=2.3, type='NameCaption', title='$52000046_QD__MAIN__1$', desc='$52000046_QD__MAIN__2$', align=Align.CenterLeft, offset_rate_x=-0.15, duration=4000)
+        self.show_caption(scale=2.3, type='NameCaption', title='$52000046_QD__MAIN__1$', desc='$52000046_QD__MAIN__2$', align=Align.centerLeft, offset_rate_x=-0.15, duration=4000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):

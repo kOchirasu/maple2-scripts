@@ -46,8 +46,8 @@ class 투르카대면_02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[4001], return_view=False)
         self.set_cinematic_ui(type=3)
-        self.add_cinematic_talk(npc_id=11004678, illust_id='Neirin_surprise', align=Align.Left, msg='$52100208_QD__52100208__0$', duration=4000)
-        self.add_cinematic_talk(npc_id=11004675, illust_id='Bliche_mad', align=Align.Right, msg='$52100208_QD__52100208__1$', duration=4500)
+        self.add_cinematic_talk(npc_id=11004678, illust_id='Neirin_surprise', align=Align.left, msg='$52100208_QD__52100208__0$', duration=4000)
+        self.add_cinematic_talk(npc_id=11004675, illust_id='Bliche_mad', align=Align.right, msg='$52100208_QD__52100208__1$', duration=4500)
         self.set_scene_skip(state=Skip_1, action='nextState')
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -128,8 +128,8 @@ class 투르카대면_07_01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[4020], return_view=False)
         self.set_npc_emotion_loop(spawn_id=208, sequence_name='Attack_Idle_A', duration=100000000.0)
-        self.add_cinematic_talk(npc_id=11004682, illust_id='ArcaneBlader_unfair', align=Align.Right, msg='$52100208_QD__52100208__8$', duration=3000)
-        self.add_cinematic_talk(npc_id=11004680, illust_id='Eone_serious', align=Align.Right, msg='$52100208_QD__52100208__9$', duration=3000)
+        self.add_cinematic_talk(npc_id=11004682, illust_id='ArcaneBlader_unfair', align=Align.right, msg='$52100208_QD__52100208__8$', duration=3000)
+        self.add_cinematic_talk(npc_id=11004680, illust_id='Eone_serious', align=Align.right, msg='$52100208_QD__52100208__9$', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=6500):
@@ -160,8 +160,8 @@ class 투르카대면_10(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[4010], return_view=False)
         self.set_npc_emotion_sequence(spawn_id=201, sequence_name='Bore_A')
-        self.add_cinematic_talk(npc_id=11004675, illust_id='Bliche_mad', align=Align.Right, msg='$52100208_QD__52100208__12$', duration=4000)
-        self.add_cinematic_talk(npc_id=11004588, illust_id='Conder_normal', align=Align.Left, msg='$52100208_QD__52100208__13$', duration=4000)
+        self.add_cinematic_talk(npc_id=11004675, illust_id='Bliche_mad', align=Align.right, msg='$52100208_QD__52100208__12$', duration=4000)
+        self.add_cinematic_talk(npc_id=11004588, illust_id='Conder_normal', align=Align.left, msg='$52100208_QD__52100208__13$', duration=4000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=8000):
@@ -203,8 +203,8 @@ class 투르카대면_13_02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[4016], return_view=False)
         self.move_npc(spawn_id=202, patrol_name='MS2PatrolData_3003')
-        self.add_cinematic_talk(npc_id=11004588, illust_id='Conder_normal', align=Align.Right, msg='$52100208_QD__52100208__17$', duration=4000)
-        self.add_cinematic_talk(npc_id=11004588, illust_id='Conder_normal', align=Align.Right, msg='$52100208_QD__52100208__18$', duration=4000)
+        self.add_cinematic_talk(npc_id=11004588, illust_id='Conder_normal', align=Align.right, msg='$52100208_QD__52100208__17$', duration=4000)
+        self.add_cinematic_talk(npc_id=11004588, illust_id='Conder_normal', align=Align.right, msg='$52100208_QD__52100208__18$', duration=4000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=8000):
@@ -245,8 +245,8 @@ class 투르카대면_13_05(trigger_api.Trigger):
 class 투르카대면_13_06(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.move_npc(spawn_id=204, patrol_name='MS2PatrolData_3004')
-        self.add_cinematic_talk(npc_id=11004678, illust_id='Neirin_surprise', align=Align.Left, msg='$52100208_QD__52100208__21$', duration=4000)
-        self.add_cinematic_talk(npc_id=11004677, illust_id='Schatten_surprise', align=Align.Right, msg='$52100208_QD__52100208__22$', duration=4000)
+        self.add_cinematic_talk(npc_id=11004678, illust_id='Neirin_surprise', align=Align.left, msg='$52100208_QD__52100208__21$', duration=4000)
+        self.add_cinematic_talk(npc_id=11004677, illust_id='Schatten_surprise', align=Align.right, msg='$52100208_QD__52100208__22$', duration=4000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=8000):
@@ -277,7 +277,7 @@ class 투르카대면_16(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[4018], return_view=False)
         self.add_cinematic_talk(npc_id=0, illust_id='0', msg='$52100208_QD__52100208__24$', duration=3000)
-        self.add_cinematic_talk(npc_id=11004679, illust_id='Mason_closeEye', align=Align.Right, msg='$52100208_QD__52100208__25$', duration=4000)
+        self.add_cinematic_talk(npc_id=11004679, illust_id='Mason_closeEye', align=Align.right, msg='$52100208_QD__52100208__25$', duration=4000)
         self.set_scene_skip() # Missing State: State
 
     def on_tick(self) -> trigger_api.Trigger:

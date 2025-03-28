@@ -137,7 +137,7 @@ class 하렌(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[4012], return_view=False)
         self.set_npc_emotion_sequence(spawn_id=113, sequence_name='Bore_A')
-        self.show_caption(type='VerticalCaption', title='하렌', desc='흑성회 제 3 간부', align=Align.CenterLeft, duration=3000, scale=2.0)
+        self.show_caption(type='VerticalCaption', title='하렌', desc='흑성회 제 3 간부', align=Align.centerLeft, duration=3000, scale=2.0)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -148,7 +148,7 @@ class 카일(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[4024], return_view=False)
         self.set_npc_emotion_sequence(spawn_id=114, sequence_name='Bore_B')
-        self.show_caption(type='VerticalCaption', title='카일', desc='흑성회 제 4 간부', align=Align.CenterRight, duration=3000, scale=2.0)
+        self.show_caption(type='VerticalCaption', title='카일', desc='흑성회 제 4 간부', align=Align.centerRight, duration=3000, scale=2.0)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -159,7 +159,7 @@ class 브리드민(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[4008], return_view=False)
         self.set_npc_emotion_sequence(spawn_id=115, sequence_name='Bore_B')
-        self.show_caption(type='VerticalCaption', title='브리드 민', desc='흑성회 제 5 간부', align=Align.CenterLeft, duration=3000, scale=2.0)
+        self.show_caption(type='VerticalCaption', title='브리드 민', desc='흑성회 제 5 간부', align=Align.centerLeft, duration=3000, scale=2.0)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -170,7 +170,7 @@ class 바사라첸(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[4025], return_view=False)
         self.set_npc_emotion_sequence(spawn_id=112, sequence_name='Bore_A')
-        self.show_caption(type='VerticalCaption', title='바사라첸', desc='흑성회 제 2 간부', align=Align.CenterRight, duration=3000, scale=2.0)
+        self.show_caption(type='VerticalCaption', title='바사라첸', desc='흑성회 제 2 간부', align=Align.centerRight, duration=3000, scale=2.0)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -182,7 +182,7 @@ class 웨이홍(trigger_api.Trigger):
         self.select_camera_path(path_ids=[4026], return_view=False)
         self.set_npc_emotion_sequence(spawn_id=111, sequence_name='Bore_A')
         self.add_cinematic_talk(npc_id=11003754, msg='여어~ $MyPCName$, 용케도 살아있었군.\\n정말 그 끈질긴 생명력은 칭찬하지 않을 수 없군 그래.', duration=4000)
-        self.show_caption(type='VerticalCaption', title='웨이홍', desc='흑성회 보스', align=Align.CenterLeft, duration=3000, scale=2.0)
+        self.show_caption(type='VerticalCaption', title='웨이홍', desc='흑성회 보스', align=Align.centerLeft, duration=3000, scale=2.0)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):

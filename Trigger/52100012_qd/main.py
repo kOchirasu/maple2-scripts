@@ -65,8 +65,8 @@ class ready(trigger_api.Trigger):
 
 class ready_02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003889, illust_id='Firis_normal', msg='$52100012_QD__MAIN__0$', align=Align.Left, duration=2000)
-        self.add_cinematic_talk(npc_id=11003888, illust_id='Celine_normal', msg='$52100012_QD__MAIN__1$', align=Align.Left, duration=2000)
+        self.add_cinematic_talk(npc_id=11003889, illust_id='Firis_normal', msg='$52100012_QD__MAIN__0$', align=Align.left, duration=2000)
+        self.add_cinematic_talk(npc_id=11003888, illust_id='Celine_normal', msg='$52100012_QD__MAIN__1$', align=Align.left, duration=2000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -146,8 +146,8 @@ class scene_04(trigger_api.Trigger):
 
 class scene_05(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003889, illust_id='Firis_normal', msg='$52100012_QD__MAIN__6$', align=Align.Left, duration=2000)
-        self.add_cinematic_talk(npc_id=11003888, illust_id='Celine_normal', msg='$52100012_QD__MAIN__7$', align=Align.Left, duration=2000)
+        self.add_cinematic_talk(npc_id=11003889, illust_id='Firis_normal', msg='$52100012_QD__MAIN__6$', align=Align.left, duration=2000)
+        self.add_cinematic_talk(npc_id=11003888, illust_id='Celine_normal', msg='$52100012_QD__MAIN__7$', align=Align.left, duration=2000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -395,8 +395,8 @@ class Ending_01(trigger_api.Trigger):
         self.set_actor(trigger_id=3104, visible=True, initial_sequence='Idle_A')
         self.select_camera_path(path_ids=[8007], return_view=False)
         self.set_onetime_effect(id=1, path='BG/Common/ScreenMask/Eff_fadein_1sec.xml')
-        self.add_cinematic_talk(npc_id=11003889, illust_id='Firis_normal', msg='$52100012_QD__MAIN__12$', align=Align.Left, duration=2000)
-        self.add_cinematic_talk(npc_id=11003888, illust_id='Celine_normal', msg='$52100012_QD__MAIN__13$', align=Align.Right, duration=2000)
+        self.add_cinematic_talk(npc_id=11003889, illust_id='Firis_normal', msg='$52100012_QD__MAIN__12$', align=Align.left, duration=2000)
+        self.add_cinematic_talk(npc_id=11003888, illust_id='Celine_normal', msg='$52100012_QD__MAIN__13$', align=Align.right, duration=2000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):

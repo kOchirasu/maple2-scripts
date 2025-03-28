@@ -336,7 +336,7 @@ class scene_01_3(trigger_api.Trigger):
         self.set_effect(trigger_ids=[7307], visible=True)
         self.add_cinematic_talk(npc_id=11001851, msg='$63000041_CS__MAIN__23$', duration=4000)
         self.set_onetime_effect(id=1966, enable=True, path='BG/Common/Sound/Eff_Madria_Tutorial_01_00001966.xml')
-        self.show_caption(scale=2.3, type='NameCaption', title='$63000041_CS__MAIN__56$', desc='$63000041_CS__MAIN__57$', align=Align.CenterLeft, offset_rate_x=-0.15, duration=4000)
+        self.show_caption(scale=2.3, type='NameCaption', title='$63000041_CS__MAIN__56$', desc='$63000041_CS__MAIN__57$', align=Align.centerLeft, offset_rate_x=-0.15, duration=4000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=8000):

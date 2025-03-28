@@ -110,7 +110,7 @@ class 피그밍그부족의제단원경신1(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_quest_accept(quest_id=91000047)
         self.set_onetime_effect(id=1, path='BG/Common/ScreenMask/Eff_CameraMasking_FastFadeIn.xml')
-        self.show_caption(type='VerticalCaption', title='$52020036_QD__MAIN__0$', desc='$52020036_QD__MAIN__1$', align=Align.BottomLeft, duration=7000, scale=2.5)
+        self.show_caption(type='VerticalCaption', title='$52020036_QD__MAIN__0$', desc='$52020036_QD__MAIN__1$', align=Align.bottomLeft, duration=7000, scale=2.5)
         self.set_cinematic_ui(type=1)
         self.set_cinematic_ui(type=3)
         self.select_camera_path(path_ids=[3000,3001], return_view=False)
@@ -162,7 +162,7 @@ class 오프닝크림슨발록비추기(trigger_api.Trigger):
 
 class 크림슨발록오프닝대사(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003781, msg='$52020036_QD__MAIN__2$', duration=3000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003781, msg='$52020036_QD__MAIN__2$', duration=3000, align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -201,7 +201,7 @@ class 유저를경로이동시킨다(trigger_api.Trigger):
 
 class 콘대르등장대사(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003776, illust_id='Conder_normal', msg='$52020036_QD__MAIN__3$', duration=3000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003776, illust_id='Conder_normal', msg='$52020036_QD__MAIN__3$', duration=3000, align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=2000):
@@ -283,7 +283,7 @@ class 티나비추기(trigger_api.Trigger):
 class 티나대사1(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_onetime_effect(id=1, path='BG/Common/ScreenMask/Eff_CameraMasking_FastFadeIn.xml')
-        self.add_cinematic_talk(npc_id=11000136, illust_id='Tina_normal', msg='$52020036_QD__MAIN__4$', duration=5000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11000136, illust_id='Tina_normal', msg='$52020036_QD__MAIN__4$', duration=5000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):
@@ -718,7 +718,7 @@ class 엔딩크림슨발록비추기(trigger_api.Trigger):
 class 크림슨발록엔딩닝대사(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.remove_buff(box_id=9000, skill_id=99910150)
-        self.add_cinematic_talk(npc_id=11003781, msg='$52020036_QD__MAIN__5$', duration=5000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003781, msg='$52020036_QD__MAIN__5$', duration=5000, align=Align.left)
         self.set_npc_emotion_sequence(spawn_id=7000, sequence_name='Attack_01_A', duration_tick=1900)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -765,7 +765,7 @@ class 엔딩카메라1(trigger_api.Trigger):
 
 class 콘대르엔딩대사1(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003776, illust_id='Conder_normal', msg='$52020036_QD__MAIN__6$', duration=4000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003776, illust_id='Conder_normal', msg='$52020036_QD__MAIN__6$', duration=4000, align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):
@@ -774,7 +774,7 @@ class 콘대르엔딩대사1(trigger_api.Trigger):
 
 class 구르는천둥엔딩대사1(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003779, illust_id='LoudFist_normal', msg='$52020036_QD__MAIN__7$', duration=4000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003779, illust_id='LoudFist_normal', msg='$52020036_QD__MAIN__7$', duration=4000, align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):
@@ -802,7 +802,7 @@ class 트리스탄등장카메라1(trigger_api.Trigger):
 
 class 트리스탄대사1(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11001975, illust_id='Tristan_normal', msg='$52020036_QD__MAIN__8$', duration=3000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11001975, illust_id='Tristan_normal', msg='$52020036_QD__MAIN__8$', duration=3000, align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):
@@ -829,7 +829,7 @@ class 콘대르엔딩카메라2(trigger_api.Trigger):
 
 class 콘대르엔딩대사2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003776, illust_id='Conder_normal', msg='$52020036_QD__MAIN__9$', duration=1000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003776, illust_id='Conder_normal', msg='$52020036_QD__MAIN__9$', duration=1000, align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=1000):
@@ -847,7 +847,7 @@ class 콘대르엔딩카메라3(trigger_api.Trigger):
 
 class 콘대르엔딩대사3(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003776, illust_id='Conder_normal', msg='$52020036_QD__MAIN__10$', duration=2000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003776, illust_id='Conder_normal', msg='$52020036_QD__MAIN__10$', duration=2000, align=Align.left)
         self.set_npc_emotion_sequence(spawn_id=3500, sequence_name='Bore_A', duration_tick=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -866,7 +866,7 @@ class 트리스탄엔딩카메라2(trigger_api.Trigger):
 
 class 트리스탄엔딩대사2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003777, illust_id='Tristan_normal', msg='$52020036_QD__MAIN__11$', duration=4000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003777, illust_id='Tristan_normal', msg='$52020036_QD__MAIN__11$', duration=4000, align=Align.left)
         self.set_npc_emotion_sequence(spawn_id=6500, sequence_name='Talk_A', duration_tick=7000)
 
     def on_tick(self) -> trigger_api.Trigger:

@@ -20,7 +20,7 @@ class ready(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_cinematic_ui(type=1)
         self.set_cinematic_ui(type=3)
-        self.add_cinematic_talk(npc_id=11003163, illust_id='Nelf_normal', msg='$52000116_QD__MAIN__0$', duration=4000, align=Align.Right) # 11003163: 넬프
+        self.add_cinematic_talk(npc_id=11003163, illust_id='Nelf_normal', msg='$52000116_QD__MAIN__0$', duration=4000, align=Align.right) # 11003163: 넬프
         self.set_scene_skip(state=fadeout, action='nextState')
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -192,7 +192,7 @@ class thank(trigger_api.Trigger):
 
 class endready(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.show_caption(scale=2.3, type='NameCaption', title='$52000116_QD__MAIN__8$', desc='$52000116_QD__MAIN__9$', align=Align.CenterLeft, offset_rate_x=-0.15, duration=4000)
+        self.show_caption(scale=2.3, type='NameCaption', title='$52000116_QD__MAIN__8$', desc='$52000116_QD__MAIN__9$', align=Align.centerLeft, offset_rate_x=-0.15, duration=4000)
         self.set_scene_skip() # Missing State: State
 
     def on_tick(self) -> trigger_api.Trigger:

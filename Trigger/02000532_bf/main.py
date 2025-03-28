@@ -42,7 +42,7 @@ class start(trigger_api.Trigger):
         self.set_scene_skip(state=목표, action='nextState')
         self.select_camera_path(path_ids=[604,603])
         self.set_onetime_effect(id=1, path='BG/Common/ScreenMask/Eff_fadein_1sec.xml')
-        self.show_caption(type='VerticalCaption', title='$02000532_BF__MAIN__0$', desc='$02000532_BF__MAIN__1$', align=Align.CenterRight, duration=3000, scale=2.0)
+        self.show_caption(type='VerticalCaption', title='$02000532_BF__MAIN__0$', desc='$02000532_BF__MAIN__1$', align=Align.centerRight, duration=3000, scale=2.0)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=6000):

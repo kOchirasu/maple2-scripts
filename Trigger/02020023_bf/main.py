@@ -39,7 +39,7 @@ class 카메라_시작(trigger_api.Trigger):
 class 카메라_캡션(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[501,502])
-        self.show_caption(type='VerticalCaption', title='$02020023_BF__main__3$', desc='$02020023_BF__main__4$', align=Align.CenterLeft, duration=4000, scale=2.0)
+        self.show_caption(type='VerticalCaption', title='$02020023_BF__main__3$', desc='$02020023_BF__main__4$', align=Align.centerLeft, duration=4000, scale=2.0)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -67,7 +67,7 @@ class 카메라_블리체등장(trigger_api.Trigger):
 class 카메라_블리체뒤돌기(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_npc_rotation(spawn_id=102, rotation=180.0)
-        self.add_cinematic_talk(npc_id=23200083, illust_id='Bliche_normal', msg='$02020023_BF__main__1$', duration=4000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=23200083, illust_id='Bliche_normal', msg='$02020023_BF__main__1$', duration=4000, align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -76,7 +76,7 @@ class 카메라_블리체뒤돌기(trigger_api.Trigger):
 
 class 카메라_블리체대사1(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=23200083, illust_id='Bliche_normal', msg='$02020023_BF__main__0$', duration=4000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=23200083, illust_id='Bliche_normal', msg='$02020023_BF__main__0$', duration=4000, align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -95,7 +95,7 @@ class 카메라_블리체대사1(trigger_api.Trigger):
 """
 class 블리체_전투시작대사(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=23200083, illust_id='Bliche_normal', msg='$02020023_BF__main__5$', duration=4000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=23200083, illust_id='Bliche_normal', msg='$02020023_BF__main__5$', duration=4000, align=Align.left)
         self.set_scene_skip() # Missing State: State
 
     def on_tick(self) -> trigger_api.Trigger:

@@ -60,7 +60,7 @@ class 엘리니아전경씬01(trigger_api.Trigger):
 
 class 엘리니아전경씬02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.show_caption(type='VerticalCaption', title='$52000101_QD__52000101__0$', desc='$52000101_QD__52000101__1$', align=Align.BottomLeft, duration=10000, scale=2.5)
+        self.show_caption(type='VerticalCaption', title='$52000101_QD__52000101__0$', desc='$52000101_QD__52000101__1$', align=Align.bottomLeft, duration=10000, scale=2.5)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=7000):
@@ -253,7 +253,7 @@ class 케이틀린화남01(trigger_api.Trigger):
 class 케이틀린화남02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_onetime_effect(id=1, path='BG/Common/ScreenMask/Eff_CameraMasking_FastFadeIn.xml')
-        self.add_cinematic_talk(npc_id=0, msg='$52000101_QD__52000101__5$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, msg='$52000101_QD__52000101__5$', duration=4000, align=Align.right)
         self.select_camera_path(path_ids=[1006,1007], return_view=False)
         self.move_npc(spawn_id=200, patrol_name='MS2PatrolData_caitTurn') # 마드리아 이동
         self.move_user_path(patrol_name='MS2PatrolData_PC_Run')
@@ -265,7 +265,7 @@ class 케이틀린화남02(trigger_api.Trigger):
 
 class 케이틀린화남03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003146, msg='$52000101_QD__52000101__6$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003146, msg='$52000101_QD__52000101__6$', duration=4000, align=Align.right)
         self.set_onetime_effect(id=3000946, enable=True, path='BG/Common/Sound/Eff_Caitlyn_IntroQuest_03000946.xml')
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -277,7 +277,7 @@ class 케이틀린화남04(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.face_emotion(spawn_id=200, emotion_name='UpSet')
         self.select_camera_path(path_ids=[1008,1009], return_view=False)
-        self.add_cinematic_talk(npc_id=11003146, msg='$52000101_QD__52000101__7$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003146, msg='$52000101_QD__52000101__7$', duration=4000, align=Align.right)
         self.set_onetime_effect(id=3000947, enable=True, path='BG/Common/Sound/Eff_Caitlyn_IntroQuest_03000947.xml')
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -288,7 +288,7 @@ class 케이틀린화남04(trigger_api.Trigger):
 class 케이틀린화남05(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[1200], return_view=False)
-        self.add_cinematic_talk(npc_id=11003146, msg='$52000101_QD__52000101__8$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003146, msg='$52000101_QD__52000101__8$', duration=4000, align=Align.right)
         self.set_onetime_effect(id=3000948, enable=True, path='BG/Common/Sound/Eff_Caitlyn_IntroQuest_03000948.xml')
 
     def on_tick(self) -> trigger_api.Trigger:

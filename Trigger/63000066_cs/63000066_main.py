@@ -75,7 +75,7 @@ class 암전_02(trigger_api.Trigger):
 class 마리엔등장_01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.spawn_monster(spawn_ids=[201])
-        self.add_cinematic_talk(npc_id=11004293, msg='$63000066_CS__63000066_MAIN__0$', duration=2500, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11004293, msg='$63000066_CS__63000066_MAIN__0$', duration=2500, align=Align.right)
         self.set_scene_skip(state=스킵종료, action='exit')
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -112,7 +112,7 @@ class 마리엔등장_04(trigger_api.Trigger):
 
 class 마리엔등장_05(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11004293, msg='$63000066_CS__63000066_MAIN__1$', duration=2500, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11004293, msg='$63000066_CS__63000066_MAIN__1$', duration=2500, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -130,7 +130,7 @@ class 마리엔등장_06(trigger_api.Trigger):
 
 class 마리엔등장_07(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11004293, msg='$63000066_CS__63000066_MAIN__2$', duration=3000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11004293, msg='$63000066_CS__63000066_MAIN__2$', duration=3000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3500):
@@ -166,7 +166,7 @@ class 마리엔등장_10(trigger_api.Trigger):
 
 class 마리엔등장_11(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11004293, msg='$63000066_CS__63000066_MAIN__3$', duration=2500, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11004293, msg='$63000066_CS__63000066_MAIN__3$', duration=2500, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3500):

@@ -54,7 +54,7 @@ class scene_03(trigger_api.Trigger):
 
 class scene_04(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003215, msg='$52000046_QD__MAIN_01__0$', duration=3735, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003215, msg='$52000046_QD__MAIN_01__0$', duration=3735, align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -63,7 +63,7 @@ class scene_04(trigger_api.Trigger):
 
 class scene_05(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003215, msg='$52000046_QD__MAIN_01__1$', duration=2000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003215, msg='$52000046_QD__MAIN_01__1$', duration=2000, align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -72,7 +72,7 @@ class scene_05(trigger_api.Trigger):
 
 class scene_06(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003215, msg='$52000046_QD__MAIN_01__2$', duration=2000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003215, msg='$52000046_QD__MAIN_01__2$', duration=2000, align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -81,7 +81,7 @@ class scene_06(trigger_api.Trigger):
 
 class scene_07(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003215, msg='$52000046_QD__MAIN_01__3$', duration=2000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003215, msg='$52000046_QD__MAIN_01__3$', duration=2000, align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):

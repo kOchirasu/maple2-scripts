@@ -40,7 +40,7 @@ class fadein(trigger_api.Trigger):
 class jordyidle(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_npc_emotion_sequence(spawn_id=101, sequence_name='Bore_A')
-        self.add_cinematic_talk(npc_id=11003166, msg='$52000117_QD__MAIN__0$', duration=3000, illust_id='Jordy_normal', align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003166, msg='$52000117_QD__MAIN__0$', duration=3000, illust_id='Jordy_normal', align=Align.left)
         self.add_cinematic_talk(npc_id=11003166, msg='$52000117_QD__MAIN__1$', duration=3000)
         self.set_scene_skip(state=end, action='exit')
 

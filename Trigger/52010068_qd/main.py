@@ -71,7 +71,7 @@ class Orde_In_Turn(trigger_api.Trigger):
         self.select_camera(trigger_id=600)
         self.set_effect(trigger_ids=[5001], visible=True)
         self.set_npc_rotation(spawn_id=101, rotation=-45.0)
-        self.add_cinematic_talk(npc_id=11004033, illust_id='Orde_normal', msg='$52010068_QD__MAIN__0$', align=Align.Left)
+        self.add_cinematic_talk(npc_id=11004033, illust_id='Orde_normal', msg='$52010068_QD__MAIN__0$', align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=2000):
@@ -81,7 +81,7 @@ class Orde_In_Turn(trigger_api.Trigger):
 class Orde_In_Talk(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_npc_emotion_sequence(spawn_id=101, sequence_name='IceSphere_A')
-        self.add_cinematic_talk(npc_id=11004033, illust_id='Orde_normal', msg='$52010068_QD__MAIN__1$', align=Align.Left)
+        self.add_cinematic_talk(npc_id=11004033, illust_id='Orde_normal', msg='$52010068_QD__MAIN__1$', align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):

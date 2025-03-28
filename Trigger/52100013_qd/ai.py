@@ -121,8 +121,8 @@ class Ending_02(trigger_api.Trigger):
         self.set_npc_emotion_loop(spawn_id=202, sequence_name='Stun_A', duration=9000000.0)
         self.move_npc(spawn_id=103, patrol_name='MS2PatrolData_2008')
         self.move_npc(spawn_id=104, patrol_name='MS2PatrolData_2007')
-        self.add_cinematic_talk(npc_id=11003889, illust_id='Firis_normal', msg='$52100013_QD__AI__1$', align=Align.Right, duration=2000)
-        self.add_cinematic_talk(npc_id=11003888, illust_id='Celine_normal', msg='$52100013_QD__AI__2$', align=Align.Left, duration=2000)
+        self.add_cinematic_talk(npc_id=11003889, illust_id='Firis_normal', msg='$52100013_QD__AI__1$', align=Align.right, duration=2000)
+        self.add_cinematic_talk(npc_id=11003888, illust_id='Celine_normal', msg='$52100013_QD__AI__2$', align=Align.left, duration=2000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -132,8 +132,8 @@ class Ending_02(trigger_api.Trigger):
 class Ending_03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_dialogue(type=1, spawn_id=202, script='$52100013_QD__AI__3$', time=2)
-        self.add_cinematic_talk(npc_id=11003888, illust_id='Celine_normal', msg='$52100013_QD__AI__4$', align=Align.Left, duration=2000)
-        self.add_cinematic_talk(npc_id=11003889, illust_id='Firis_normal', msg='$52100013_QD__AI__5$', align=Align.Right, duration=2000)
+        self.add_cinematic_talk(npc_id=11003888, illust_id='Celine_normal', msg='$52100013_QD__AI__4$', align=Align.left, duration=2000)
+        self.add_cinematic_talk(npc_id=11003889, illust_id='Firis_normal', msg='$52100013_QD__AI__5$', align=Align.right, duration=2000)
         self.set_dialogue(type=1, spawn_id=202, script='$52100013_QD__AI__6$', time=2, arg5=6)
 
     def on_tick(self) -> trigger_api.Trigger:

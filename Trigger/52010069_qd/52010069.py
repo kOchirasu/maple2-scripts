@@ -38,7 +38,7 @@ class 전경씬_02(trigger_api.Trigger):
 
 class 전경씬_03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.show_caption(type='VerticalCaption', title='$52010069_QD__52010069__0$', align=Align.BottomLeft, duration=5000, scale=2.5)
+        self.show_caption(type='VerticalCaption', title='$52010069_QD__52010069__0$', align=Align.bottomLeft, duration=5000, scale=2.5)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):
@@ -180,7 +180,7 @@ class 재회_04(trigger_api.Trigger):
         self.select_camera_path(path_ids=[4008], return_view=False)
         self.move_user_path(patrol_name='MS2PatrolData1')
         self.add_cinematic_talk(npc_id=0, msg='$52010069_QD__52010069__7$', duration=3000)
-        self.add_cinematic_talk(npc_id=11001229, align=Align.Left, illust_id='Ishura_Dark_Idle', msg='$52010069_QD__52010069__8$', duration=3000)
+        self.add_cinematic_talk(npc_id=11001229, align=Align.left, illust_id='Ishura_Dark_Idle', msg='$52010069_QD__52010069__8$', duration=3000)
         self.add_cinematic_talk(npc_id=0, msg='$52010069_QD__52010069__9$', duration=3000)
         self.add_cinematic_talk(npc_id=0, msg='$52010069_QD__52010069__10$', duration=3000)
 
