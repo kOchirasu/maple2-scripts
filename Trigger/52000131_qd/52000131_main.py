@@ -101,7 +101,7 @@ class 버튼과대화_01(trigger_api.Trigger):
 class 버튼과대화_02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_scene_skip(state=마무리, action='exit')
-        self.add_cinematic_talk(npc_id=11001540, msg='$52000131_QD__52000131_MAIN__1$', duration=3000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11001540, msg='$52000131_QD__52000131_MAIN__1$', duration=3000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -120,7 +120,7 @@ class 버튼과대화_03(trigger_api.Trigger):
 
 class 버튼과대화_04(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=0, msg='$52000131_QD__52000131_MAIN__2$', duration=3000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, msg='$52000131_QD__52000131_MAIN__2$', duration=3000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -138,7 +138,7 @@ class 버튼과대화_05(trigger_api.Trigger):
 
 class 버튼과대화_06(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11001540, msg='$52000131_QD__52000131_MAIN__3$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11001540, msg='$52000131_QD__52000131_MAIN__3$', duration=4000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -156,7 +156,7 @@ class 버튼과대화_07(trigger_api.Trigger):
 
 class 버튼과대화_08(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=0, msg='$52000131_QD__52000131_MAIN__4$', duration=3000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, msg='$52000131_QD__52000131_MAIN__4$', duration=3000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -174,7 +174,7 @@ class 버튼과대화_09(trigger_api.Trigger):
 
 class 버튼과대화_10(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11001540, msg='$52000131_QD__52000131_MAIN__5$', duration=3000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11001540, msg='$52000131_QD__52000131_MAIN__5$', duration=3000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -192,7 +192,7 @@ class 버튼과대화_11(trigger_api.Trigger):
 
 class 버튼과대화_12(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=0, msg='$52000131_QD__52000131_MAIN__6$', duration=3000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, msg='$52000131_QD__52000131_MAIN__6$', duration=3000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -210,7 +210,7 @@ class 버튼과대화_13(trigger_api.Trigger):
 
 class 버튼과대화_14(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11001540, msg='$52000131_QD__52000131_MAIN__7$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11001540, msg='$52000131_QD__52000131_MAIN__7$', duration=4000, align=Align.right)
         self.set_npc_emotion_sequence(spawn_id=101, sequence_name='Talk_A')
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -220,7 +220,7 @@ class 버튼과대화_14(trigger_api.Trigger):
 
 class 버튼과대화_15(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=0, msg='$52000131_QD__52000131_MAIN__8$', duration=3000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, msg='$52000131_QD__52000131_MAIN__8$', duration=3000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -229,7 +229,7 @@ class 버튼과대화_15(trigger_api.Trigger):
 
 class 버튼과대화_16(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11001540, msg='$52000131_QD__52000131_MAIN__9$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11001540, msg='$52000131_QD__52000131_MAIN__9$', duration=4000, align=Align.right)
         self.set_npc_emotion_sequence(spawn_id=101, sequence_name='Talk_A')
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -239,7 +239,7 @@ class 버튼과대화_16(trigger_api.Trigger):
 
 class 버튼과대화_17(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=0, msg='$52000131_QD__52000131_MAIN__10$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, msg='$52000131_QD__52000131_MAIN__10$', duration=4000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -249,8 +249,8 @@ class 버튼과대화_17(trigger_api.Trigger):
 class 버튼과대화_18(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_npc_emotion_sequence(spawn_id=101, sequence_name='Talk_A')
-        self.add_cinematic_talk(npc_id=11001540, msg='$52000131_QD__52000131_MAIN__11$', duration=3000, align=Align.Right)
-        self.add_cinematic_talk(npc_id=11001540, msg='$52000131_QD__52000131_MAIN__12$', duration=3000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11001540, msg='$52000131_QD__52000131_MAIN__11$', duration=3000, align=Align.right)
+        self.add_cinematic_talk(npc_id=11001540, msg='$52000131_QD__52000131_MAIN__12$', duration=3000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=6000):
@@ -260,8 +260,8 @@ class 버튼과대화_18(trigger_api.Trigger):
 class 버튼과대화_19(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_npc_emotion_sequence(spawn_id=101, sequence_name='Talk_A')
-        self.add_cinematic_talk(npc_id=11001540, msg='$52000131_QD__52000131_MAIN__13$', duration=3000, align=Align.Right)
-        self.add_cinematic_talk(npc_id=11001540, msg='$52000131_QD__52000131_MAIN__14$', duration=3000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11001540, msg='$52000131_QD__52000131_MAIN__13$', duration=3000, align=Align.right)
+        self.add_cinematic_talk(npc_id=11001540, msg='$52000131_QD__52000131_MAIN__14$', duration=3000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=6000):
@@ -279,7 +279,7 @@ class 버튼과대화_20(trigger_api.Trigger):
 
 class 버튼과대화_21(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=0, msg='$52000131_QD__52000131_MAIN__15$', duration=3000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, msg='$52000131_QD__52000131_MAIN__15$', duration=3000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):

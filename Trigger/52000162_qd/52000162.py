@@ -46,7 +46,7 @@ class 리스항구전경_01(trigger_api.Trigger):
 class 리스항구전경_02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[4004,4003], return_view=False)
-        self.show_caption(type='VerticalCaption', title='$52000162_QD__52000162__0$', align=Align.BottomLeft, duration=3000, scale=2.5)
+        self.show_caption(type='VerticalCaption', title='$52000162_QD__52000162__0$', align=Align.bottomLeft, duration=3000, scale=2.5)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):

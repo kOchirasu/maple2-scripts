@@ -49,7 +49,7 @@ class CameraEffect03(trigger_api.Trigger):
 class CameraEffect04(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_onetime_effect(id=2, path='BG/Common/ScreenMask/Eff_CameraMasking_FastFadeIn.xml')
-        self.add_cinematic_talk(npc_id=11003793, msg='$52010054_QD__52010054_QD__0$', duration=7000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003793, msg='$52010054_QD__52010054_QD__0$', duration=7000, align=Align.right)
         self.select_camera_path(path_ids=[4002,4003], return_view=False)
         self.set_cinematic_ui(type=3)
 
@@ -60,7 +60,7 @@ class CameraEffect04(trigger_api.Trigger):
 
 class CameraEffect05(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003793, msg='$52010054_QD__52010054_QD__1$', duration=5000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003793, msg='$52010054_QD__52010054_QD__1$', duration=5000, align=Align.right)
         self.select_camera_path(path_ids=[4004,4005], return_view=False)
         self.set_npc_emotion_sequence(spawn_id=2001, sequence_name='Attack_01_C,Attack_Idle_A')
 
@@ -71,7 +71,7 @@ class CameraEffect05(trigger_api.Trigger):
 
 class CameraEffect06(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003793, msg='$52010054_QD__52010054_QD__2$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003793, msg='$52010054_QD__52010054_QD__2$', duration=4000, align=Align.right)
         self.select_camera_path(path_ids=[4006,4007], return_view=False)
         self.set_npc_emotion_sequence(spawn_id=2002, sequence_name='Attack_01_B,Attack_Idle_A')
 
@@ -82,7 +82,7 @@ class CameraEffect06(trigger_api.Trigger):
 
 class CameraEffect07(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003793, msg='$52010054_QD__52010054_QD__3$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003793, msg='$52010054_QD__52010054_QD__3$', duration=4000, align=Align.right)
         self.select_camera_path(path_ids=[4008,4009,4013,4014], return_view=False)
 
     def on_tick(self) -> trigger_api.Trigger:

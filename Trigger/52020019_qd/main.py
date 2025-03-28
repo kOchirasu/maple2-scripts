@@ -48,7 +48,7 @@ class Camera_Work_01(trigger_api.Trigger):
 
 class ShowCaption(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.show_caption(type='VerticalCaption', title='$map:52020019$', desc='$npcName:11003614$의 두 번째 시험장.', align=Align.BottomLeft, duration=2000, scale=1.5)
+        self.show_caption(type='VerticalCaption', title='$map:52020019$', desc='$npcName:11003614$의 두 번째 시험장.', align=Align.bottomLeft, duration=2000, scale=1.5)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -85,7 +85,7 @@ class EventScene_02(trigger_api.Trigger):
 class EventScene_03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.move_npc(spawn_id=102, patrol_name='MS2PatrolData_3002')
-        self.add_cinematic_talk(npc_id=11003598, msg='오호.... 제법 기합을 넣을 줄 아시는군요.', duration=2500, illust_id='Michael_normal', align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003598, msg='오호.... 제법 기합을 넣을 줄 아시는군요.', duration=2500, illust_id='Michael_normal', align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -95,7 +95,7 @@ class EventScene_03(trigger_api.Trigger):
 class EventScene_04(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_npc_emotion_sequence(spawn_id=102, sequence_name='Talk_A')
-        self.add_cinematic_talk(npc_id=11003598, msg='그럼 시작하기전에....', duration=2500, illust_id='Michael_normal', align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003598, msg='그럼 시작하기전에....', duration=2500, illust_id='Michael_normal', align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -105,7 +105,7 @@ class EventScene_04(trigger_api.Trigger):
 class EventScene_05(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_npc_emotion_sequence(spawn_id=102, sequence_name='Talk_A')
-        self.add_cinematic_talk(npc_id=11003598, msg='정식으로 제 소개를 하죠.', duration=2500, illust_id='Michael_normal', align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003598, msg='정식으로 제 소개를 하죠.', duration=2500, illust_id='Michael_normal', align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -125,7 +125,7 @@ class EventScene_06(trigger_api.Trigger):
 class EventScene_07(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.add_cinematic_talk(npc_id=11003598, msg='크리티아스 제 3기사. 몽환의 $npcName:11003598$입니다.', duration=3000, illust_id='Michael_normal')
-        self.show_caption(type='NameCaption', title='$npcName:11003598$', desc='몽환의 기사', align=Align.CenterLeft, offset_rate_x=0.05, offset_rate_y=0.15, duration=3000, scale=2.0)
+        self.show_caption(type='NameCaption', title='$npcName:11003598$', desc='몽환의 기사', align=Align.centerLeft, offset_rate_x=0.05, offset_rate_y=0.15, duration=3000, scale=2.0)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3500):
@@ -231,7 +231,7 @@ class EventScene_11(trigger_api.Trigger):
 
 class EventScene_12(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003598, msg='이런, 이제 막 재미있어지려는 참이었는데 아쉽군요.', duration=2500, illust_id='Michael_normal', align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003598, msg='이런, 이제 막 재미있어지려는 참이었는데 아쉽군요.', duration=2500, illust_id='Michael_normal', align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -240,7 +240,7 @@ class EventScene_12(trigger_api.Trigger):
 
 class EventScene_13(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003598, msg='뭐, 다음 기회라는 것도 있으니 이번엔 여기까지만 하겠습니다.', duration=2500, illust_id='Michael_normal', align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003598, msg='뭐, 다음 기회라는 것도 있으니 이번엔 여기까지만 하겠습니다.', duration=2500, illust_id='Michael_normal', align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -267,7 +267,7 @@ class EventScene_15(trigger_api.Trigger):
 
 class EventScene_16(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003598, msg='네. 분부대로.', duration=2500, illust_id='Michael_normal', align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003598, msg='네. 분부대로.', duration=2500, illust_id='Michael_normal', align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):

@@ -78,7 +78,7 @@ class scene_02(trigger_api.Trigger):
 class scene_03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[4009], return_view=False)
-        self.add_cinematic_talk(npc_id=11003214, msg='$52000125_QD__MAIN__1$', duration=3000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003214, msg='$52000125_QD__MAIN__1$', duration=3000, align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -87,7 +87,7 @@ class scene_03(trigger_api.Trigger):
 
 class scene_04(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003214, msg='$52000125_QD__MAIN__2$', duration=3000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003214, msg='$52000125_QD__MAIN__2$', duration=3000, align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -97,7 +97,7 @@ class scene_04(trigger_api.Trigger):
 class scene_05(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[4008], return_view=False)
-        self.add_cinematic_talk(npc_id=11003213, msg='$52000125_QD__MAIN__3$', duration=3000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003213, msg='$52000125_QD__MAIN__3$', duration=3000, align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -116,7 +116,7 @@ class scene_06(trigger_api.Trigger):
 class scene_07(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[4010], return_view=False)
-        self.add_cinematic_talk(npc_id=11003212, msg='$52000125_QD__MAIN__5$', duration=3000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003212, msg='$52000125_QD__MAIN__5$', duration=3000, align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -215,7 +215,7 @@ class endcamera(trigger_api.Trigger):
 
 class bye(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003214, msg='$52000125_QD__MAIN__10$', duration=3000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003214, msg='$52000125_QD__MAIN__10$', duration=3000, align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=2000):
@@ -227,7 +227,7 @@ class run(trigger_api.Trigger):
         self.move_npc(spawn_id=304, patrol_name='MS2PatrolData_3002')
         self.move_npc(spawn_id=305, patrol_name='MS2PatrolData_3002')
         self.move_npc(spawn_id=306, patrol_name='MS2PatrolData_3002')
-        self.add_cinematic_talk(npc_id=11003214, msg='$52000125_QD__MAIN__11$', duration=3000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003214, msg='$52000125_QD__MAIN__11$', duration=3000, align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):

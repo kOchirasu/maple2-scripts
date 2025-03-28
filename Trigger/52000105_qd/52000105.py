@@ -298,7 +298,7 @@ class 떠나는할아버지02(trigger_api.Trigger):
 
 class 떠나는할아버지03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003175, illust_id='Ten_normal', msg='$52000105_QD__52000105__1$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003175, illust_id='Ten_normal', msg='$52000105_QD__52000105__1$', duration=4000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -329,7 +329,7 @@ class 떠나는할아버지06(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_cinematic_ui(type=1)
         self.set_cinematic_ui(type=3)
-        self.show_caption(type='VerticalCaption', title='$52000105_QD__52000105__4$', desc='$52000105_QD__52000105__5$', align=Align.BottomLeft, duration=10000, scale=2.5)
+        self.show_caption(type='VerticalCaption', title='$52000105_QD__52000105__4$', desc='$52000105_QD__52000105__5$', align=Align.bottomLeft, duration=10000, scale=2.5)
         self.set_scene_skip() # Missing State: State
 
     def on_tick(self) -> trigger_api.Trigger:

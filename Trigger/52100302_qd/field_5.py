@@ -138,7 +138,7 @@ class 마를레네_연출_03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_cinematic_ui(type=3)
         self.move_npc(spawn_id=999, patrol_name='MS2PatrolData_3001')
-        self.add_cinematic_talk(npc_id=11004680, illust_id='Eone_normal', align=Align.Right, msg='$52100302_QD__FIELD_5__3$', duration=4000)
+        self.add_cinematic_talk(npc_id=11004680, illust_id='Eone_normal', align=Align.right, msg='$52100302_QD__FIELD_5__3$', duration=4000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):
@@ -149,8 +149,8 @@ class 마를레네_연출_04(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[4003], return_view=False)
         self.set_npc_emotion_loop(spawn_id=999, sequence_name='Talk_A', duration=8000.0)
-        self.add_cinematic_talk(npc_id=11004680, illust_id='Eone_normal', align=Align.Right, msg='$52100302_QD__FIELD_5__4$', duration=4000)
-        self.add_cinematic_talk(npc_id=11004680, illust_id='Eone_normal', align=Align.Right, msg='$52100302_QD__FIELD_5__5$', duration=4000)
+        self.add_cinematic_talk(npc_id=11004680, illust_id='Eone_normal', align=Align.right, msg='$52100302_QD__FIELD_5__4$', duration=4000)
+        self.add_cinematic_talk(npc_id=11004680, illust_id='Eone_normal', align=Align.right, msg='$52100302_QD__FIELD_5__5$', duration=4000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=1000):

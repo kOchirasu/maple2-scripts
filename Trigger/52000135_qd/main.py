@@ -58,7 +58,7 @@ class 아노스대사01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[8001], return_view=False)
         self.move_npc(spawn_id=101, patrol_name='MS2PatrolData_Anos_01')
-        self.add_cinematic_talk(npc_id=11003251, illust_id='Anos_normal', msg='$52000135_QD__MAIN__0$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003251, illust_id='Anos_normal', msg='$52000135_QD__MAIN__0$', duration=4000, align=Align.right)
         self.set_npc_emotion_loop(spawn_id=101, sequence_name='Talk_A', duration=8500.0)
         self.set_scene_skip(state=오브젝트조사전_스킵완료, action='nextState') # setsceneskip 1 set
         # setsceneskip 1 set
@@ -81,7 +81,7 @@ class 아노스대사01_skip(trigger_api.Trigger):
 
 class 아노스대사02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003251, illust_id='Anos_normal', msg='$52000135_QD__MAIN__1$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003251, illust_id='Anos_normal', msg='$52000135_QD__MAIN__1$', duration=4000, align=Align.right)
         self.set_npc_emotion_loop(spawn_id=101, sequence_name='Talk_A', duration=6800.0)
         self.set_skip(state=아노스대사02_skip)
 
@@ -102,7 +102,7 @@ class 아노스대사02_skip(trigger_api.Trigger):
 class 아노스대사03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[8002])
-        self.add_cinematic_talk(npc_id=11003251, illust_id='0', msg='$52000135_QD__MAIN__2$', duration=3000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003251, illust_id='0', msg='$52000135_QD__MAIN__2$', duration=3000, align=Align.right)
         self.set_npc_emotion_loop(spawn_id=101, sequence_name='ChatUp_A', duration=5400.0)
         self.move_user_path(patrol_name='MS2PatrolData_PC_03')
         # Missing State: State,  setsceneskip 1 close
@@ -156,7 +156,7 @@ class 오브젝트반응이후(trigger_api.Trigger):
 
 class 아노스대사04(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003251, illust_id='Anos_normal', msg='$52000135_QD__MAIN__3$', duration=3000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003251, illust_id='Anos_normal', msg='$52000135_QD__MAIN__3$', duration=3000, align=Align.left)
         self.set_npc_emotion_loop(spawn_id=101, sequence_name='Talk_A', duration=7000.0)
         self.move_npc(spawn_id=101, patrol_name='MS2PatrolData_Anos_0201')
         self.set_scene_skip(state=오브젝트조사후_스킵완료, action='nextState') # setsceneskip 2 set
@@ -180,7 +180,7 @@ class 아노스대사04_skip(trigger_api.Trigger):
 
 class 아노스대사05(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003251, illust_id='Anos_normal', msg='$52000135_QD__MAIN__4$', duration=3000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003251, illust_id='Anos_normal', msg='$52000135_QD__MAIN__4$', duration=3000, align=Align.left)
         self.set_npc_emotion_loop(spawn_id=101, sequence_name='Talk_A', duration=8300.0)
         self.move_npc(spawn_id=101, patrol_name='MS2PatrolData_Anos_0202')
         self.set_skip(state=아노스대사05_skip)
@@ -201,7 +201,7 @@ class 아노스대사05_skip(trigger_api.Trigger):
 
 class 아노스대사06(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003251, illust_id='Anos_normal', msg='$52000135_QD__MAIN__5$', duration=3000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003251, illust_id='Anos_normal', msg='$52000135_QD__MAIN__5$', duration=3000, align=Align.left)
         self.set_npc_emotion_loop(spawn_id=101, sequence_name='Talk_A', duration=6500.0)
         self.move_npc(spawn_id=101, patrol_name='MS2PatrolData_Anos_0203')
         self.set_skip(state=아노스대사06_skip)
@@ -222,7 +222,7 @@ class 아노스대사06_skip(trigger_api.Trigger):
 
 class 아노스대사07(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003251, illust_id='Anos_normal', msg='$52000135_QD__MAIN__6$', duration=3000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003251, illust_id='Anos_normal', msg='$52000135_QD__MAIN__6$', duration=3000, align=Align.left)
         self.set_npc_emotion_loop(spawn_id=101, sequence_name='Chatup_A', duration=7900.0)
         self.move_npc(spawn_id=101, patrol_name='MS2PatrolData_Anos_0204')
         self.set_skip(state=아노스대사07_skip)
@@ -268,7 +268,7 @@ class 크리스탈꺼짐(trigger_api.Trigger):
 class 아노스대사08(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         # self.select_camera_path(path_ids=[8005], return_view=False)
-        self.add_cinematic_talk(npc_id=11003251, illust_id='0', msg='$52000135_QD__MAIN__7$', duration=3000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003251, illust_id='0', msg='$52000135_QD__MAIN__7$', duration=3000, align=Align.right)
         self.set_npc_emotion_loop(spawn_id=101, sequence_name='Talk_A', duration=11000.0)
         self.set_effect(trigger_ids=[3012])
         self.set_skip(state=아노스대사08_skip)
@@ -290,7 +290,7 @@ class 아노스대사08_skip(trigger_api.Trigger):
 class 아시모프대사01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[8010], return_view=False)
-        self.add_cinematic_talk(npc_id=11003250, illust_id='0', msg='$52000135_QD__MAIN__8$', duration=3000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003250, illust_id='0', msg='$52000135_QD__MAIN__8$', duration=3000, align=Align.right)
         self.set_npc_emotion_loop(spawn_id=102, sequence_name='Talk_A', duration=5100.0)
         self.set_skip(state=아시모프대사01_skip)
 
@@ -310,7 +310,7 @@ class 아시모프대사01_skip(trigger_api.Trigger):
 
 class 아노스대사09(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003251, illust_id='0', msg='$52000135_QD__MAIN__9$', duration=3000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003251, illust_id='0', msg='$52000135_QD__MAIN__9$', duration=3000, align=Align.right)
         self.set_npc_emotion_loop(spawn_id=101, sequence_name='Talk_A', duration=3800.0)
         self.move_user_path(patrol_name='MS2PatrolData_PC_0302')
         self.set_skip(state=아노스대사09_skip)
@@ -331,7 +331,7 @@ class 아노스대사09_skip(trigger_api.Trigger):
 
 class PC크리스탈접근(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=0, illust_id='0', msg='$52000135_QD__MAIN__10$', duration=2000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, illust_id='0', msg='$52000135_QD__MAIN__10$', duration=2000, align=Align.right)
         self.set_pc_emotion_loop(sequence_name='Object_React_H', duration=1500.0)
         self.set_npc_emotion_loop(spawn_id=101, sequence_name='Talk_A', duration=2000.0)
         self.set_npc_emotion_loop(spawn_id=102, sequence_name='Talk_A', duration=2000.0)
@@ -420,7 +420,7 @@ class 크리스탈다시꺼짐(trigger_api.Trigger):
 
 class 아노스대사11(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003251, illust_id='0', msg='$52000135_QD__MAIN__16$', duration=5000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003251, illust_id='0', msg='$52000135_QD__MAIN__16$', duration=5000, align=Align.right)
         self.move_npc(spawn_id=101, patrol_name='MS2PatrolData_Anos_07')
         self.set_skip(state=아노스대사11_skip)
 
@@ -441,7 +441,7 @@ class 아노스대사11_skip(trigger_api.Trigger):
 class 아시모프대사02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[8010], return_view=False)
-        self.add_cinematic_talk(npc_id=11003250, illust_id='Asimov_normal', msg='$52000135_QD__MAIN__17$', duration=3000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003250, illust_id='Asimov_normal', msg='$52000135_QD__MAIN__17$', duration=3000, align=Align.left)
         self.set_npc_emotion_loop(spawn_id=102, sequence_name='Talk_A', duration=8600.0)
         # Missing State: State,  setsceneskip 2 close
         self.set_scene_skip()

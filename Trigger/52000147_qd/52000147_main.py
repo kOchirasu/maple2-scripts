@@ -41,7 +41,7 @@ class 뚜벅뚜벅_01(trigger_api.Trigger):
 
 class 뚜벅뚜벅_02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=0, msg='$52000147_QD__52000147_MAIN__0$', duration=2500, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, msg='$52000147_QD__52000147_MAIN__0$', duration=2500, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=6500):
@@ -121,7 +121,7 @@ class 목격_07(trigger_api.Trigger):
 class 목격_08(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_scene_skip(state=삼자대화_01)
-        self.add_cinematic_talk(npc_id=11003382, msg='$52000147_QD__52000147_MAIN__1$', duration=4000, illust_id='DarkLord_normal', align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003382, msg='$52000147_QD__52000147_MAIN__1$', duration=4000, illust_id='DarkLord_normal', align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):
@@ -169,7 +169,7 @@ class 삼자대화_04(trigger_api.Trigger):
 class 삼자대화_05(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_scene_skip(state=하스터와전투_01, action='nextState')
-        self.add_cinematic_talk(npc_id=0, msg='$52000147_QD__52000147_MAIN__2$', duration=3500, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, msg='$52000147_QD__52000147_MAIN__2$', duration=3500, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=2000):
@@ -197,7 +197,7 @@ class 삼자대화_07(trigger_api.Trigger):
 
 class 삼자대화_08(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003189, msg='$52000147_QD__52000147_MAIN__3$', duration=3000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003189, msg='$52000147_QD__52000147_MAIN__3$', duration=3000, align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3500):
@@ -215,7 +215,7 @@ class 삼자대화_09(trigger_api.Trigger):
 
 class 삼자대화_10(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003382, msg='$52000147_QD__52000147_MAIN__4$', duration=3000, illust_id='DarkLord_normal', align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003382, msg='$52000147_QD__52000147_MAIN__4$', duration=3000, illust_id='DarkLord_normal', align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3500):
@@ -224,7 +224,7 @@ class 삼자대화_10(trigger_api.Trigger):
 
 class 삼자대화_11(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003189, msg='$52000147_QD__52000147_MAIN__5$', duration=2500, illust_id='Hastur_normal', align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003189, msg='$52000147_QD__52000147_MAIN__5$', duration=2500, illust_id='Hastur_normal', align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3500):
@@ -233,8 +233,8 @@ class 삼자대화_11(trigger_api.Trigger):
 
 class 삼자대화_12(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003382, msg='$52000147_QD__52000147_MAIN__6$', duration=4000, illust_id='DarkLord_normal', align=Align.Right)
-        self.add_cinematic_talk(npc_id=11003382, msg='$52000147_QD__52000147_MAIN__7$', duration=3000, illust_id='DarkLord_normal', align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003382, msg='$52000147_QD__52000147_MAIN__6$', duration=4000, illust_id='DarkLord_normal', align=Align.right)
+        self.add_cinematic_talk(npc_id=11003382, msg='$52000147_QD__52000147_MAIN__7$', duration=3000, illust_id='DarkLord_normal', align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=8000):
@@ -243,7 +243,7 @@ class 삼자대화_12(trigger_api.Trigger):
 
 class 삼자대화_13(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=0, msg='$52000147_QD__52000147_MAIN__8$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, msg='$52000147_QD__52000147_MAIN__8$', duration=4000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4500):
@@ -252,7 +252,7 @@ class 삼자대화_13(trigger_api.Trigger):
 
 class 삼자대화_14(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003189, msg='$52000147_QD__52000147_MAIN__9$', duration=3000, illust_id='Hastur_normal', align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003189, msg='$52000147_QD__52000147_MAIN__9$', duration=3000, illust_id='Hastur_normal', align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3500):
@@ -261,8 +261,8 @@ class 삼자대화_14(trigger_api.Trigger):
 
 class 삼자대화_15(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003382, msg='$52000147_QD__52000147_MAIN__10$', duration=3000, illust_id='DarkLord_normal', align=Align.Right)
-        self.add_cinematic_talk(npc_id=11003382, msg='$52000147_QD__52000147_MAIN__11$', duration=3000, illust_id='DarkLord_normal', align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003382, msg='$52000147_QD__52000147_MAIN__10$', duration=3000, illust_id='DarkLord_normal', align=Align.right)
+        self.add_cinematic_talk(npc_id=11003382, msg='$52000147_QD__52000147_MAIN__11$', duration=3000, illust_id='DarkLord_normal', align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=7000):
@@ -271,7 +271,7 @@ class 삼자대화_15(trigger_api.Trigger):
 
 class 삼자대화_16(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003189, msg='$52000147_QD__52000147_MAIN__12$', duration=3000, illust_id='Hastur_normal', align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003189, msg='$52000147_QD__52000147_MAIN__12$', duration=3000, illust_id='Hastur_normal', align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3500):
@@ -280,7 +280,7 @@ class 삼자대화_16(trigger_api.Trigger):
 
 class 삼자대화_17(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003382, msg='$52000147_QD__52000147_MAIN__13$', duration=3000, illust_id='DarkLord_normal', align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003382, msg='$52000147_QD__52000147_MAIN__13$', duration=3000, illust_id='DarkLord_normal', align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3500):
@@ -289,7 +289,7 @@ class 삼자대화_17(trigger_api.Trigger):
 
 class 삼자대화_18(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=0, msg='$52000147_QD__52000147_MAIN__14$', duration=3000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, msg='$52000147_QD__52000147_MAIN__14$', duration=3000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3500):
@@ -307,7 +307,7 @@ class 삼자대화_19(trigger_api.Trigger):
 
 class 삼자대화_20(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003189, msg='$52000147_QD__52000147_MAIN__15$', duration=2500, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003189, msg='$52000147_QD__52000147_MAIN__15$', duration=2500, align=Align.left)
         self.set_npc_emotion_loop(spawn_id=102, sequence_name='Attack_Idle_A', duration=4000.0)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -365,7 +365,7 @@ class 하스터와전투_05(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.destroy_monster(spawn_ids=[103])
         self.spawn_monster(spawn_ids=[104])
-        self.add_cinematic_talk(npc_id=11003189, msg='$52000147_QD__52000147_MAIN__16$', duration=2500, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003189, msg='$52000147_QD__52000147_MAIN__16$', duration=2500, align=Align.left)
         self.move_user(map_id=52000147, portal_id=99)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -394,7 +394,7 @@ class 하스터와전투_07(trigger_api.Trigger):
 class 전투후대화_01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_scene_skip(state=전투후대화_02)
-        self.add_cinematic_talk(npc_id=11003382, msg='$52000147_QD__52000147_MAIN__17$', duration=3000, illust_id='DarkLord_normal', align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003382, msg='$52000147_QD__52000147_MAIN__17$', duration=3000, illust_id='DarkLord_normal', align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3500):
@@ -415,7 +415,7 @@ class 전투후대화_02(trigger_api.Trigger):
 class 전투후대화_03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_scene_skip(state=전투후대화_03_01)
-        self.add_cinematic_talk(npc_id=11003189, msg='$52000147_QD__52000147_MAIN__18$', duration=3000, illust_id='Hastur_normal', align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003189, msg='$52000147_QD__52000147_MAIN__18$', duration=3000, illust_id='Hastur_normal', align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3500):
@@ -435,8 +435,8 @@ class 전투후대화_03_01(trigger_api.Trigger):
 class 전투후대화_04(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_scene_skip(state=전투후대화_05)
-        self.add_cinematic_talk(npc_id=11003382, msg='$52000147_QD__52000147_MAIN__19$', duration=3000, illust_id='DarkLord_normal', align=Align.Right)
-        self.add_cinematic_talk(npc_id=11003382, msg='$52000147_QD__52000147_MAIN__20$', duration=2500, illust_id='DarkLord_normal', align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003382, msg='$52000147_QD__52000147_MAIN__19$', duration=3000, illust_id='DarkLord_normal', align=Align.right)
+        self.add_cinematic_talk(npc_id=11003382, msg='$52000147_QD__52000147_MAIN__20$', duration=2500, illust_id='DarkLord_normal', align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=6000):
@@ -503,7 +503,7 @@ class 전투후대화_10(trigger_api.Trigger):
 class 전투후대화_11(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_scene_skip(state=전투후대화_12)
-        self.add_cinematic_talk(npc_id=11003189, msg='$52000147_QD__52000147_MAIN__21$', duration=3000, illust_id='Hastur_normal', align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003189, msg='$52000147_QD__52000147_MAIN__21$', duration=3000, illust_id='Hastur_normal', align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3500):
@@ -541,7 +541,7 @@ class 전투후대화_14(trigger_api.Trigger):
 
 class 전투후대화_15(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=0, msg='$52000147_QD__52000147_MAIN__22$', duration=3000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, msg='$52000147_QD__52000147_MAIN__22$', duration=3000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3500):

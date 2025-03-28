@@ -109,7 +109,7 @@ class 발록검마인사_01(trigger_api.Trigger):
 
 class 발록검마인사_02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11001811, msg='$52010065_QD__52010065_main__1$', duration=3000, illust_id='BlackWizard_normal', align=Align.Right)
+        self.add_cinematic_talk(npc_id=11001811, msg='$52010065_QD__52010065_main__1$', duration=3000, illust_id='BlackWizard_normal', align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3500):
@@ -217,7 +217,7 @@ class 비웃는검마_01(trigger_api.Trigger):
 
 class 비웃는검마_02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11001811, msg='$52010065_QD__52010065_main__3$', duration=3000, illust_id='BlackWizard_normal', align=Align.Right)
+        self.add_cinematic_talk(npc_id=11001811, msg='$52010065_QD__52010065_main__3$', duration=3000, illust_id='BlackWizard_normal', align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=2000):
@@ -226,8 +226,8 @@ class 비웃는검마_02(trigger_api.Trigger):
 
 class 비웃는검마_03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003820, msg='$52010065_QD__52010065_main__4$', duration=3000, illust_id='Bella_normal', align=Align.Left)
-        self.add_cinematic_talk(npc_id=11001811, msg='$52010065_QD__52010065_main__5$', duration=3000, illust_id='BlackWizard_normal', align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003820, msg='$52010065_QD__52010065_main__4$', duration=3000, illust_id='Bella_normal', align=Align.left)
+        self.add_cinematic_talk(npc_id=11001811, msg='$52010065_QD__52010065_main__5$', duration=3000, illust_id='BlackWizard_normal', align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=6500):
@@ -364,8 +364,8 @@ class 검마퇴장_05(trigger_api.Trigger):
 
 class 검마퇴장_06(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11001811, msg='$52010065_QD__52010065_main__6$', duration=3000, align=Align.Right)
-        self.add_cinematic_talk(npc_id=11001811, msg='$52010065_QD__52010065_main__7$', duration=3000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11001811, msg='$52010065_QD__52010065_main__6$', duration=3000, align=Align.right)
+        self.add_cinematic_talk(npc_id=11001811, msg='$52010065_QD__52010065_main__7$', duration=3000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=6500):

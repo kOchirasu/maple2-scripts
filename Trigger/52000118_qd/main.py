@@ -61,7 +61,7 @@ class dooropen(trigger_api.Trigger):
 class jordyspawn(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[4004], return_view=False)
-        self.add_cinematic_talk(npc_id=11003186, msg='$52000118_QD__MAIN__1$', duration=3000, illust_id='Jordy_normal', align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003186, msg='$52000118_QD__MAIN__1$', duration=3000, illust_id='Jordy_normal', align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -71,7 +71,7 @@ class jordyspawn(trigger_api.Trigger):
 class jordyin(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.add_cinematic_talk(npc_id=11003167, msg='$52000118_QD__MAIN__2$', duration=3000)
-        self.add_cinematic_talk(npc_id=11003186, msg='$52000118_QD__MAIN__3$', duration=3000, illust_id='Jordy_normal', align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003186, msg='$52000118_QD__MAIN__3$', duration=3000, illust_id='Jordy_normal', align=Align.left)
         self.move_npc(spawn_id=102, patrol_name='MS2PatrolData_3001') # 조디 올라감
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -83,7 +83,7 @@ class jordyhello(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[4007], return_view=False)
         self.set_npc_emotion_sequence(spawn_id=102, sequence_name='Talk_A')
-        self.add_cinematic_talk(npc_id=11003186, msg='$52000118_QD__MAIN__4$', duration=1000, illust_id='Jordy_normal', align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003186, msg='$52000118_QD__MAIN__4$', duration=1000, illust_id='Jordy_normal', align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=1000):
@@ -93,7 +93,7 @@ class jordyhello(trigger_api.Trigger):
 class huk(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_npc_emotion_loop(spawn_id=101, sequence_name='Sit_Down_A', duration=1000.0)
-        self.add_cinematic_talk(npc_id=11003167, msg='$52000118_QD__MAIN__5$', duration=1000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003167, msg='$52000118_QD__MAIN__5$', duration=1000, align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=1000):
@@ -122,8 +122,8 @@ class talk_01(trigger_api.Trigger):
 class talk_02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_npc_emotion_sequence(spawn_id=102, sequence_name='Talk_A')
-        self.add_cinematic_talk(npc_id=11003186, msg='$52000118_QD__MAIN__7$', duration=3000, illust_id='Jordy_normal', align=Align.Left)
-        self.add_cinematic_talk(npc_id=11003186, msg='$52000118_QD__MAIN__8$', duration=3000, illust_id='Jordy_normal', align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003186, msg='$52000118_QD__MAIN__7$', duration=3000, illust_id='Jordy_normal', align=Align.left)
+        self.add_cinematic_talk(npc_id=11003186, msg='$52000118_QD__MAIN__8$', duration=3000, illust_id='Jordy_normal', align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=6000):
@@ -133,7 +133,7 @@ class talk_02(trigger_api.Trigger):
 class talk_03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_npc_emotion_sequence(spawn_id=102, sequence_name='Talk_A')
-        self.add_cinematic_talk(npc_id=11003186, msg='$52000118_QD__MAIN__9$', duration=3000, illust_id='Jordy_normal', align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003186, msg='$52000118_QD__MAIN__9$', duration=3000, illust_id='Jordy_normal', align=Align.left)
         self.add_cinematic_talk(npc_id=11003167, msg='$52000118_QD__MAIN__10$', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -144,7 +144,7 @@ class talk_03(trigger_api.Trigger):
 class talk_04(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_npc_emotion_sequence(spawn_id=102, sequence_name='Talk_A')
-        self.add_cinematic_talk(npc_id=11003186, msg='$52000118_QD__MAIN__11$', duration=3000, illust_id='Jordy_normal', align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003186, msg='$52000118_QD__MAIN__11$', duration=3000, illust_id='Jordy_normal', align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -164,7 +164,7 @@ class killyou(trigger_api.Trigger):
 class talk_05(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_npc_emotion_sequence(spawn_id=102, sequence_name='Talk_A')
-        self.add_cinematic_talk(npc_id=11003186, msg='$52000118_QD__MAIN__13$', duration=3000, illust_id='Jordy_normal', align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003186, msg='$52000118_QD__MAIN__13$', duration=3000, illust_id='Jordy_normal', align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -216,7 +216,7 @@ class talk_08(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[4007], return_view=False)
         self.set_npc_emotion_sequence(spawn_id=102, sequence_name='Talk_A')
-        self.add_cinematic_talk(npc_id=11003186, msg='$52000118_QD__MAIN__16$', duration=3000, illust_id='Jordy_normal', align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003186, msg='$52000118_QD__MAIN__16$', duration=3000, illust_id='Jordy_normal', align=Align.left)
         self.add_cinematic_talk(npc_id=11003167, msg='$52000118_QD__MAIN__17$', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -237,8 +237,8 @@ class talk_09(trigger_api.Trigger):
 class talk_10(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_npc_emotion_sequence(spawn_id=102, sequence_name='Talk_A')
-        self.add_cinematic_talk(npc_id=11003186, msg='$52000118_QD__MAIN__19$', duration=3000, illust_id='Jordy_normal', align=Align.Left)
-        self.add_cinematic_talk(npc_id=11003186, msg='$52000118_QD__MAIN__20$', duration=3000, illust_id='Jordy_normal', align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003186, msg='$52000118_QD__MAIN__19$', duration=3000, illust_id='Jordy_normal', align=Align.left)
+        self.add_cinematic_talk(npc_id=11003186, msg='$52000118_QD__MAIN__20$', duration=3000, illust_id='Jordy_normal', align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=6000):

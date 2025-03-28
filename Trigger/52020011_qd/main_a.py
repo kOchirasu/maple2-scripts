@@ -39,7 +39,7 @@ class scene_01(trigger_api.Trigger):
         self.set_cinematic_ui(type=1)
         self.set_cinematic_ui(type=3)
         self.select_camera_path(path_ids=[4002], return_view=False)
-        self.show_caption(type='VerticalCaption', title='$map:52020011$', desc='$NpcName:11003599$의 임시 거처', align=Align.CenterLeft, offset_rate_x=0.05, offset_rate_y=0.15, duration=3000, scale=1.5)
+        self.show_caption(type='VerticalCaption', title='$map:52020011$', desc='$NpcName:11003599$의 임시 거처', align=Align.centerLeft, offset_rate_x=0.05, offset_rate_y=0.15, duration=3000, scale=1.5)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=2500):
@@ -69,7 +69,7 @@ class scene_03(trigger_api.Trigger):
 
 class scene_04(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.show_caption(type='NameCaption', title='$NpcName:11003599$', desc='크리티아스 왕녀', align=Align.CenterLeft, offset_rate_x=0.05, offset_rate_y=0.15, duration=3000, scale=2.0)
+        self.show_caption(type='NameCaption', title='$NpcName:11003599$', desc='크리티아스 왕녀', align=Align.centerLeft, offset_rate_x=0.05, offset_rate_y=0.15, duration=3000, scale=2.0)
         self.add_cinematic_talk(npc_id=11003599, msg='그래, 반갑구나.', duration=2800)
         self.set_scene_skip() # Missing State: State
 

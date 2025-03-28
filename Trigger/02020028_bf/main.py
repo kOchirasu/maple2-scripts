@@ -10,8 +10,8 @@ class 전투시작(trigger_api.Trigger):
 
 class 시작(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=24120001, illust_id='Neirin_normal', msg='$02020028_BF__main__0$', duration=5000, align=Align.Left)
-        self.add_cinematic_talk(npc_id=24120001, illust_id='Neirin_normal', msg='$02020028_BF__main__1$', duration=5000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=24120001, illust_id='Neirin_normal', msg='$02020028_BF__main__0$', duration=5000, align=Align.left)
+        self.add_cinematic_talk(npc_id=24120001, illust_id='Neirin_normal', msg='$02020028_BF__main__1$', duration=5000, align=Align.left)
 
 
 initial_state = 전투시작

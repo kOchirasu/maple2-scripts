@@ -179,7 +179,7 @@ class 던전종료연출시작(trigger_api.Trigger):
         self.select_camera(trigger_id=305)
         self.set_onetime_effect(id=2, path='BG/Common/ScreenMask/Eff_fadein_1sec.xml')
         self.set_npc_emotion_loop(spawn_id=1922, sequence_name='Talk_A', duration=3000.0)
-        self.add_cinematic_talk(npc_id=11001567, illust_id='11001567', msg='$52100031_QD__MADRICANSIEGE__2$', duration=3000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11001567, illust_id='11001567', msg='$52100031_QD__MADRICANSIEGE__2$', duration=3000, align=Align.right)
         self.set_skip(state=던전종료연출종료)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -194,7 +194,7 @@ class 던전종료연출01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera(trigger_id=304)
         self.set_npc_emotion_loop(spawn_id=1921, sequence_name='Talk_A', duration=3000.0)
-        self.add_cinematic_talk(npc_id=11001566, illust_id='11001566', msg='$52100031_QD__MADRICANSIEGE__3$', duration=3000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11001566, illust_id='11001566', msg='$52100031_QD__MADRICANSIEGE__3$', duration=3000, align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=2500):
@@ -205,7 +205,7 @@ class 던전종료연출02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_npc_rotation(spawn_id=1920, rotation=180.0)
         self.set_npc_emotion_loop(spawn_id=1920, sequence_name='Talk_A', duration=3000.0)
-        self.add_cinematic_talk(npc_id=11001568, illust_id='11001568', msg='$52100031_QD__MADRICANSIEGE__4$', duration=3000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11001568, illust_id='11001568', msg='$52100031_QD__MADRICANSIEGE__4$', duration=3000, align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=2000):

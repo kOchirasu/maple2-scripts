@@ -40,7 +40,7 @@ class 카메라_시작(trigger_api.Trigger):
 class 카메라_캡션(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[501,502], return_view=False)
-        self.show_caption(type='VerticalCaption', title='$02020021_BF__main__3$', desc='$02020021_BF__main__4$', align=Align.CenterLeft, duration=4000, scale=2.0)
+        self.show_caption(type='VerticalCaption', title='$02020021_BF__main__3$', desc='$02020021_BF__main__4$', align=Align.centerLeft, duration=4000, scale=2.0)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -50,7 +50,7 @@ class 카메라_캡션(trigger_api.Trigger):
 class 카메라_샤텐대사1(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[503,504], return_view=False)
-        self.add_cinematic_talk(npc_id=23200085, illust_id='Schatten_normal', msg='$02020021_BF__main__0$', duration=4000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=23200085, illust_id='Schatten_normal', msg='$02020021_BF__main__0$', duration=4000, align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -59,7 +59,7 @@ class 카메라_샤텐대사1(trigger_api.Trigger):
 
 class 카메라_샤텐대사2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=23200085, illust_id='Schatten_normal', msg='$02020021_BF__main__1$', duration=4000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=23200085, illust_id='Schatten_normal', msg='$02020021_BF__main__1$', duration=4000, align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -69,7 +69,7 @@ class 카메라_샤텐대사2(trigger_api.Trigger):
 class 카메라_샤텐대사3(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[505,506], return_view=False)
-        self.add_cinematic_talk(npc_id=23200085, illust_id='Schatten_normal', msg='$02020021_BF__main__2$', duration=4000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=23200085, illust_id='Schatten_normal', msg='$02020021_BF__main__2$', duration=4000, align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -79,7 +79,7 @@ class 카메라_샤텐대사3(trigger_api.Trigger):
 class 카메라_샤텐대사4(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[507,508], return_view=False)
-        self.add_cinematic_talk(npc_id=23200085, illust_id='Schatten_normal', msg='$02020021_BF__main__5$', duration=4000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=23200085, illust_id='Schatten_normal', msg='$02020021_BF__main__5$', duration=4000, align=Align.left)
         self.set_scene_skip() # Missing State: State
 
     def on_tick(self) -> trigger_api.Trigger:

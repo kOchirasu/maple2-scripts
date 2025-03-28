@@ -66,7 +66,7 @@ class 연출시작_3(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_onetime_effect(id=3, path='BG/Common/ScreenMask/Eff_fadein_1sec.xml')
         self.select_camera_path(path_ids=[4001,4002], return_view=False)
-        self.show_caption(type='VerticalCaption', title='$52100300_QD__MAIN__12$', align=Align.BottomLeft, duration=3000, scale=2.5)
+        self.show_caption(type='VerticalCaption', title='$52100300_QD__MAIN__12$', align=Align.bottomLeft, duration=3000, scale=2.5)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -78,7 +78,7 @@ class 연출시작_4(trigger_api.Trigger):
         self.select_camera_path(path_ids=[4003], return_view=False)
         self.set_cinematic_ui(type=3)
         self.add_cinematic_talk(npc_id=0, msg='$52100300_QD__MAIN__13$', duration=3500)
-        self.add_cinematic_talk(npc_id=11004682, illust_id='11004022', align=Align.Right, msg='$52100300_QD__MAIN__14$', duration=3500)
+        self.add_cinematic_talk(npc_id=11004682, illust_id='11004022', align=Align.right, msg='$52100300_QD__MAIN__14$', duration=3500)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=7000):
@@ -88,7 +88,7 @@ class 연출시작_4(trigger_api.Trigger):
 class 연출시작_5(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.move_npc(spawn_id=351, patrol_name='MS2PatrolData_3001')
-        self.add_cinematic_talk(npc_id=11004682, illust_id='11004022', align=Align.Right, msg='$52100300_QD__MAIN__15$', duration=3500)
+        self.add_cinematic_talk(npc_id=11004682, illust_id='11004022', align=Align.right, msg='$52100300_QD__MAIN__15$', duration=3500)
         self.add_cinematic_talk(npc_id=0, msg='$52100300_QD__MAIN__16$', duration=3500)
 
     def on_tick(self) -> trigger_api.Trigger:

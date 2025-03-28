@@ -92,7 +92,7 @@ class PC화남02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.move_user_path(patrol_name='MS2PatrolData_Trun')
         self.set_onetime_effect(id=1, path='BG/Common/ScreenMask/Eff_CameraMasking_FastFadeIn.xml')
-        self.add_cinematic_talk(npc_id=11003148, illust_id='Anos_normal', msg='$52000102_QD__52000102__0$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003148, illust_id='Anos_normal', msg='$52000102_QD__52000102__0$', duration=4000, align=Align.right)
         self.select_camera_path(path_ids=[4000,4001], return_view=False)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -102,7 +102,7 @@ class PC화남02(trigger_api.Trigger):
 
 class PC화남03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003148, illust_id='Anos_normal', msg='$52000102_QD__52000102__1$', duration=2000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003148, illust_id='Anos_normal', msg='$52000102_QD__52000102__1$', duration=2000, align=Align.right)
         self.set_sound(trigger_id=9005, enable=True) # 케이틀린 대련 브금
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -113,7 +113,7 @@ class PC화남03(trigger_api.Trigger):
 class PC화남04(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[4002], return_view=False)
-        self.add_cinematic_talk(npc_id=0, msg='$52000102_QD__52000102__2$', duration=2000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, msg='$52000102_QD__52000102__2$', duration=2000, align=Align.right)
         self.face_emotion(emotion_name='PC_OutOfMind_01')
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -134,7 +134,7 @@ class PC화남04B(trigger_api.Trigger):
 class PC화남05(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[4003], return_view=False)
-        self.add_cinematic_talk(npc_id=0, msg='$52000102_QD__52000102__3$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, msg='$52000102_QD__52000102__3$', duration=4000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):
@@ -144,7 +144,7 @@ class PC화남05(trigger_api.Trigger):
 class PC화남06(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[4004], return_view=False)
-        self.add_cinematic_talk(npc_id=0, msg='$52000102_QD__52000102__4$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, msg='$52000102_QD__52000102__4$', duration=4000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):
@@ -154,7 +154,7 @@ class PC화남06(trigger_api.Trigger):
 class PC화남08(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[4005], return_view=False)
-        self.add_cinematic_talk(npc_id=11003149, illust_id='Asimov_normal', msg='$52000102_QD__52000102__5$', duration=3000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003149, illust_id='Asimov_normal', msg='$52000102_QD__52000102__5$', duration=3000, align=Align.right)
         self.face_emotion(emotion_name='ChaosMod_Start')
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -165,7 +165,7 @@ class PC화남08(trigger_api.Trigger):
 class PC화남09(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[4006,4007], return_view=False)
-        self.add_cinematic_talk(npc_id=0, msg='$52000102_QD__52000102__6$', duration=3000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, msg='$52000102_QD__52000102__6$', duration=3000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -185,7 +185,7 @@ class PC화남11(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_cinematic_ui(type=1)
         self.set_cinematic_ui(type=3)
-        self.show_caption(type='VerticalCaption', title='$52000102_QD__52000102__7$', desc='$52000102_QD__52000102__8$', align=Align.BottomLeft, duration=10000, scale=2.5)
+        self.show_caption(type='VerticalCaption', title='$52000102_QD__52000102__7$', desc='$52000102_QD__52000102__8$', align=Align.bottomLeft, duration=10000, scale=2.5)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):

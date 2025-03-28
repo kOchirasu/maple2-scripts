@@ -133,7 +133,7 @@ class Event_07(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_cinematic_ui(type=1)
         self.set_cinematic_ui(type=3)
-        self.add_cinematic_talk(npc_id=11003603, illust_id='0', msg='인간! 파편이 돌아왔다! 어서 이리 와라!', duration=2800, align=Align.Left) # 11003603: 틱토그
+        self.add_cinematic_talk(npc_id=11003603, illust_id='0', msg='인간! 파편이 돌아왔다! 어서 이리 와라!', duration=2800, align=Align.left) # 11003603: 틱토그
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):

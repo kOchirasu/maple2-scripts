@@ -68,9 +68,9 @@ class 도망쳐_01(trigger_api.Trigger):
         self.set_cinematic_ui(type=3)
         self.set_pc_emotion_loop(sequence_name='Attack_Idle_A', duration=3000.0)
         self.add_cinematic_talk(npc_id=0, msg='$52000198_QD__52000198__0$', duration=4000)
-        self.add_cinematic_talk(npc_id=11001302, msg='$52000198_QD__52000198__1$', align=Align.Left, illust_id='Ereb_serious', duration=4500)
+        self.add_cinematic_talk(npc_id=11001302, msg='$52000198_QD__52000198__1$', align=Align.left, illust_id='Ereb_serious', duration=4500)
         self.add_cinematic_talk(npc_id=0, msg='$52000198_QD__52000198__2$', duration=4000)
-        self.add_cinematic_talk(npc_id=11001302, msg='$52000198_QD__52000198__3$', align=Align.Left, illust_id='Ereb_serious', duration=4500)
+        self.add_cinematic_talk(npc_id=11001302, msg='$52000198_QD__52000198__3$', align=Align.left, illust_id='Ereb_serious', duration=4500)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=17000):
@@ -188,7 +188,7 @@ class 도망쳐_09(trigger_api.Trigger):
 class 도망쳐_10(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_cinematic_ui(type=3)
-        self.add_cinematic_talk(npc_id=11001302, msg='$52000198_QD__52000198__8$', align=Align.Right, illust_id='Ereb_serious', duration=4500)
+        self.add_cinematic_talk(npc_id=11001302, msg='$52000198_QD__52000198__8$', align=Align.right, illust_id='Ereb_serious', duration=4500)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4500):
@@ -199,7 +199,7 @@ class 도망쳐_10_01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_pc_emotion_loop(sequence_name='Talk_A', duration=4000.0)
         self.add_cinematic_talk(npc_id=0, msg='$52000198_QD__52000198__9$', duration=4000)
-        self.add_cinematic_talk(npc_id=11001302, msg='$52000198_QD__52000198__10$', align=Align.Right, illust_id='Ereb_serious', duration=4500)
+        self.add_cinematic_talk(npc_id=11001302, msg='$52000198_QD__52000198__10$', align=Align.right, illust_id='Ereb_serious', duration=4500)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=8500):
@@ -210,8 +210,8 @@ class 도망쳐_10_02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_pc_emotion_loop(sequence_name='Talk_A', duration=4500.0)
         self.add_cinematic_talk(npc_id=0, msg='$52000198_QD__52000198__11$', duration=4500)
-        self.add_cinematic_talk(npc_id=11001302, msg='$52000198_QD__52000198__12$', align=Align.Right, illust_id='Ereb_closeEye', duration=1800)
-        self.add_cinematic_talk(npc_id=11001302, msg='$52000198_QD__52000198__13$', align=Align.Right, illust_id='Ereb_serious', duration=4500)
+        self.add_cinematic_talk(npc_id=11001302, msg='$52000198_QD__52000198__12$', align=Align.right, illust_id='Ereb_closeEye', duration=1800)
+        self.add_cinematic_talk(npc_id=11001302, msg='$52000198_QD__52000198__13$', align=Align.right, illust_id='Ereb_serious', duration=4500)
         self.set_scene_skip() # Missing State: State
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -276,7 +276,7 @@ class 도망쳐_15(trigger_api.Trigger):
         self.set_cinematic_ui(type=3)
         self.set_pc_emotion_loop(sequence_name='Talk_A', duration=4000.0)
         self.add_cinematic_talk(npc_id=0, msg='$52000198_QD__52000198__15$', duration=4000)
-        self.add_cinematic_talk(npc_id=11004787, msg='$52000198_QD__52000198__16$', align=Align.Left, illust_id='Baron_normal', duration=4500)
+        self.add_cinematic_talk(npc_id=11004787, msg='$52000198_QD__52000198__16$', align=Align.left, illust_id='Baron_normal', duration=4500)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=8500):
@@ -287,8 +287,8 @@ class 도망쳐_15_01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_pc_emotion_loop(sequence_name='Talk_A', duration=4000.0)
         self.add_cinematic_talk(npc_id=0, msg='$52000198_QD__52000198__17$', duration=4500)
-        self.add_cinematic_talk(npc_id=11004787, msg='$52000198_QD__52000198__18$', align=Align.Left, illust_id='Baron_normal', duration=4000)
-        self.add_cinematic_talk(npc_id=11004787, msg='$52000198_QD__52000198__19$', align=Align.Left, illust_id='Baron_normal', duration=4000)
+        self.add_cinematic_talk(npc_id=11004787, msg='$52000198_QD__52000198__18$', align=Align.left, illust_id='Baron_normal', duration=4000)
+        self.add_cinematic_talk(npc_id=11004787, msg='$52000198_QD__52000198__19$', align=Align.left, illust_id='Baron_normal', duration=4000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=12500):
@@ -328,9 +328,9 @@ class 도망쳐_19(trigger_api.Trigger):
 class 도망쳐_20(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_cinematic_ui(type=1)
-        self.add_cinematic_talk(npc_id=11001302, msg='$52000198_QD__52000198__20$', align=Align.Right, illust_id='Ereb_surprise', duration=4000)
-        self.add_cinematic_talk(npc_id=11004787, msg='$52000198_QD__52000198__21$', align=Align.Left, illust_id='Baron_normal', duration=4000)
-        self.add_cinematic_talk(npc_id=11001302, msg='$52000198_QD__52000198__22$', align=Align.Right, illust_id='Ereb_serious', duration=4500)
+        self.add_cinematic_talk(npc_id=11001302, msg='$52000198_QD__52000198__20$', align=Align.right, illust_id='Ereb_surprise', duration=4000)
+        self.add_cinematic_talk(npc_id=11004787, msg='$52000198_QD__52000198__21$', align=Align.left, illust_id='Baron_normal', duration=4000)
+        self.add_cinematic_talk(npc_id=11001302, msg='$52000198_QD__52000198__22$', align=Align.right, illust_id='Ereb_serious', duration=4500)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=12500):
@@ -370,7 +370,7 @@ class 도망쳐_24(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_cinematic_ui(type=1)
         self.reset_camera()
-        self.add_cinematic_talk(npc_id=11001302, msg='$52000198_QD__52000198__23$', align=Align.Right, illust_id='Ereb_serious', duration=3000)
+        self.add_cinematic_talk(npc_id=11001302, msg='$52000198_QD__52000198__23$', align=Align.right, illust_id='Ereb_serious', duration=3000)
         self.set_scene_skip() # Missing State: State
 
     def on_tick(self) -> trigger_api.Trigger:

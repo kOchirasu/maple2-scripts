@@ -218,7 +218,7 @@ class 리엔을떠나다02(trigger_api.Trigger):
 class 리엔을떠나다03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_cinematic_ui(type=3)
-        self.add_cinematic_talk(npc_id=11003174, msg='$52000106_QD__52000106__3$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003174, msg='$52000106_QD__52000106__3$', duration=4000, align=Align.right)
         self.select_camera_path(path_ids=[1006,1007], return_view=False)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -228,7 +228,7 @@ class 리엔을떠나다03(trigger_api.Trigger):
 
 class 리엔을떠나다04(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003174, msg='$52000106_QD__52000106__4$', duration=5000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003174, msg='$52000106_QD__52000106__4$', duration=5000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):
@@ -238,7 +238,7 @@ class 리엔을떠나다04(trigger_api.Trigger):
 class 리엔을떠나다05(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[1008,1009], return_view=False)
-        self.add_cinematic_talk(npc_id=11003174, illust_id='Ririn_normal', msg='$52000106_QD__52000106__5$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003174, illust_id='Ririn_normal', msg='$52000106_QD__52000106__5$', duration=4000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -247,7 +247,7 @@ class 리엔을떠나다05(trigger_api.Trigger):
 
 class 리엔을떠나다06(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003174, illust_id='Ririn_normal', msg='$52000106_QD__52000106__6$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003174, illust_id='Ririn_normal', msg='$52000106_QD__52000106__6$', duration=4000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -267,7 +267,7 @@ class 리엔을떠나다08(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_cinematic_ui(type=1)
         self.set_cinematic_ui(type=3)
-        self.show_caption(type='VerticalCaption', title='$52000106_QD__52000106__7$', desc='$52000106_QD__52000106__8$', align=Align.BottomLeft, duration=10000, scale=2.5)
+        self.show_caption(type='VerticalCaption', title='$52000106_QD__52000106__7$', desc='$52000106_QD__52000106__8$', align=Align.bottomLeft, duration=10000, scale=2.5)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):

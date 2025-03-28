@@ -86,7 +86,7 @@ class 카메라304(trigger_api.Trigger):
 class 부관대사03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_skip(state=연출02종료)
-        self.add_cinematic_talk(npc_id=11003536, illust_id='Neirin_surprise', msg='$52010038_QD__MAIN__0$', duration=7000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003536, illust_id='Neirin_surprise', msg='$52010038_QD__MAIN__0$', duration=7000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -150,7 +150,7 @@ class 카메라302(trigger_api.Trigger):
 class 보스대사01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_skip(state=보스연출종료)
-        self.add_cinematic_talk(npc_id=11003185, illust_id='ShadowClaw_normal', msg='$52010038_QD__MAIN__2$', duration=5000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003185, illust_id='ShadowClaw_normal', msg='$52010038_QD__MAIN__2$', duration=5000, align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=1500):
@@ -169,7 +169,7 @@ class 보스이동(trigger_api.Trigger):
 
 class 카메라303(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003185, illust_id='ShadowClaw_normal', msg='$52010038_QD__MAIN__3$', duration=5000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003185, illust_id='ShadowClaw_normal', msg='$52010038_QD__MAIN__3$', duration=5000, align=Align.left)
         self.select_camera(trigger_id=303)
         self.set_skip(state=보스연출종료)
 

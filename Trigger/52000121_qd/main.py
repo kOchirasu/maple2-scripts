@@ -244,7 +244,7 @@ class 아르마노열폭준비(trigger_api.Trigger):
 class 아르마노열폭시작(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.face_emotion(spawn_id=104, emotion_name='Angry')
-        self.add_cinematic_talk(npc_id=11003364, msg='$52000121_QD__MAIN__7$', duration=2000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003364, msg='$52000121_QD__MAIN__7$', duration=2000, align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=2000):
@@ -266,7 +266,7 @@ class 투르카공격00(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[8030], return_view=False)
         self.move_npc(spawn_id=101, patrol_name='MS2PatrolData_101_Attack')
-        self.add_cinematic_talk(npc_id=11003362, msg='$52000121_QD__MAIN__8$', duration=1000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003362, msg='$52000121_QD__MAIN__8$', duration=1000, align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=1000):
@@ -288,7 +288,7 @@ class 마노비치대사02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[8022], return_view=False)
         self.set_npc_emotion_loop(spawn_id=102, sequence_name='Attack_Idle_A', duration=3000.0)
-        self.add_cinematic_talk(npc_id=11003308, msg='$52000121_QD__MAIN__9$', duration=1500, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003308, msg='$52000121_QD__MAIN__9$', duration=1500, align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=1500):
@@ -338,7 +338,7 @@ class 잠시후(trigger_api.Trigger):
 class 불효자멘붕(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.face_emotion(spawn_id=106, emotion_name='Cry')
-        self.add_cinematic_talk(npc_id=11003364, msg='$52000121_QD__MAIN__10$', duration=1500, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003364, msg='$52000121_QD__MAIN__10$', duration=1500, align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=1500):
@@ -348,7 +348,7 @@ class 불효자멘붕(trigger_api.Trigger):
 class 오스칼멘붕(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_npc_emotion_loop(spawn_id=103, sequence_name='Stun_A', duration=3000.0)
-        self.add_cinematic_talk(npc_id=11003309, illust_id='Oskhal_normal', msg='$52000121_QD__MAIN__11$', duration=2000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003309, illust_id='Oskhal_normal', msg='$52000121_QD__MAIN__11$', duration=2000, align=Align.left)
         self.set_skip(state=오스칼멘붕_skip)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -520,7 +520,7 @@ class 전투직전_스킵완료(trigger_api.Trigger):
 class 전투대기01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.reset_camera(interpolation_time=2.0)
-        # self.add_cinematic_talk(npc_id=29000251, illust_id='Oskhal_normal', msg='$52000121_QD__MAIN__17$', duration=2000, align=Align.Left)
+        # self.add_cinematic_talk(npc_id=29000251, illust_id='Oskhal_normal', msg='$52000121_QD__MAIN__17$', duration=2000, align=Align.left)
         # self.set_skip() # Missing State: State
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -765,7 +765,7 @@ class 마노비치죽음(trigger_api.Trigger):
 class 아르마노오열(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[8050], return_view=False)
-        self.add_cinematic_talk(npc_id=11003364, msg='$52000121_QD__MAIN__26$', duration=4000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003364, msg='$52000121_QD__MAIN__26$', duration=4000, align=Align.left)
         # Missing State: State,  setsceneskip 2 close
         self.set_scene_skip()
         # setsceneskip 2 close

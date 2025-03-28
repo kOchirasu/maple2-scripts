@@ -42,7 +42,7 @@ class 카메라이동_01(trigger_api.Trigger):
 
 class 카메라이동_02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.show_caption(type='VerticalCaption', title='$52000129_QD__52000129_MAIN__0$', desc='$52000129_QD__52000129_MAIN__1$', align=Align.BottomLeft, duration=4000, scale=2.5)
+        self.show_caption(type='VerticalCaption', title='$52000129_QD__52000129_MAIN__0$', desc='$52000129_QD__52000129_MAIN__1$', align=Align.bottomLeft, duration=4000, scale=2.5)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=6000):

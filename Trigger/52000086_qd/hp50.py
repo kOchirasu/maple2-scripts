@@ -82,7 +82,7 @@ class 에르다등장(trigger_api.Trigger):
 
 class 에르다대사01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003069, illust_id='SnowQueen_normal', msg='$52000086_QD__HP50__0$', align=Align.Right, duration=5000)
+        self.add_cinematic_talk(npc_id=11003069, illust_id='SnowQueen_normal', msg='$52000086_QD__HP50__0$', align=Align.right, duration=5000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):
@@ -92,8 +92,8 @@ class 에르다대사01(trigger_api.Trigger):
 class 비에른대사01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera(trigger_id=315)
-        self.add_cinematic_talk(npc_id=11003075, illust_id='SnowKing_normal', msg='$52000086_QD__HP50__1$', align=Align.Left, duration=3000)
-        self.add_cinematic_talk(npc_id=11003075, illust_id='SnowKing_normal', msg='$52000086_QD__HP50__2$', align=Align.Left, duration=2000)
+        self.add_cinematic_talk(npc_id=11003075, illust_id='SnowKing_normal', msg='$52000086_QD__HP50__1$', align=Align.left, duration=3000)
+        self.add_cinematic_talk(npc_id=11003075, illust_id='SnowKing_normal', msg='$52000086_QD__HP50__2$', align=Align.left, duration=2000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):
@@ -104,7 +104,7 @@ class 에르다대사02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera(trigger_id=316)
         self.visible_my_pc(is_visible=False) # 캐릭터 숨김
-        self.add_cinematic_talk(npc_id=11003074, illust_id='SnowQueen_normal', msg='$52000086_QD__HP50__3$', align=Align.Right, duration=3000)
+        self.add_cinematic_talk(npc_id=11003074, illust_id='SnowQueen_normal', msg='$52000086_QD__HP50__3$', align=Align.right, duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -113,8 +113,8 @@ class 에르다대사02(trigger_api.Trigger):
 
 class 비에른대사02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003075, illust_id='SnowKing_normal', msg='$52000086_QD__HP50__4$', align=Align.Left, duration=4000)
-        self.add_cinematic_talk(npc_id=11003075, illust_id='SnowKing_normal', msg='$52000086_QD__HP50__5$', align=Align.Left, duration=5000)
+        self.add_cinematic_talk(npc_id=11003075, illust_id='SnowKing_normal', msg='$52000086_QD__HP50__4$', align=Align.left, duration=4000)
+        self.add_cinematic_talk(npc_id=11003075, illust_id='SnowKing_normal', msg='$52000086_QD__HP50__5$', align=Align.left, duration=5000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=9000):
@@ -134,8 +134,8 @@ class 에르다대사03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.visible_my_pc(is_visible=True) # 캐릭터 보임
         self.select_camera(trigger_id=317)
-        self.add_cinematic_talk(npc_id=11003074, illust_id='SnowQueen_normal', msg='$52000086_QD__HP50__6$', align=Align.Right, duration=4000)
-        self.add_cinematic_talk(npc_id=11003074, illust_id='SnowQueen_normal', msg='$52000086_QD__HP50__7$', align=Align.Right, duration=4000)
+        self.add_cinematic_talk(npc_id=11003074, illust_id='SnowQueen_normal', msg='$52000086_QD__HP50__6$', align=Align.right, duration=4000)
+        self.add_cinematic_talk(npc_id=11003074, illust_id='SnowQueen_normal', msg='$52000086_QD__HP50__7$', align=Align.right, duration=4000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=8000):
@@ -145,7 +145,7 @@ class 에르다대사03(trigger_api.Trigger):
 class 비에른대사03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera(trigger_id=318)
-        self.add_cinematic_talk(npc_id=11003075, illust_id='SnowKing_normal', msg='$52000086_QD__HP50__8$', align=Align.Left, duration=2000)
+        self.add_cinematic_talk(npc_id=11003075, illust_id='SnowKing_normal', msg='$52000086_QD__HP50__8$', align=Align.left, duration=2000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=2000):
@@ -155,7 +155,7 @@ class 비에른대사03(trigger_api.Trigger):
 class 에르다대사04(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera(trigger_id=317)
-        self.add_cinematic_talk(npc_id=11003074, illust_id='SnowQueen_normal', msg='$52000086_QD__HP50__9$', align=Align.Right, duration=2000)
+        self.add_cinematic_talk(npc_id=11003074, illust_id='SnowQueen_normal', msg='$52000086_QD__HP50__9$', align=Align.right, duration=2000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=2000):
@@ -165,7 +165,7 @@ class 에르다대사04(trigger_api.Trigger):
 class 비에른대사04(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera(trigger_id=312)
-        self.add_cinematic_talk(npc_id=11003075, illust_id='SnowKing_normal', msg='$52000086_QD__HP50__10$', align=Align.Right, duration=5000)
+        self.add_cinematic_talk(npc_id=11003075, illust_id='SnowKing_normal', msg='$52000086_QD__HP50__10$', align=Align.right, duration=5000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):
@@ -175,8 +175,8 @@ class 비에른대사04(trigger_api.Trigger):
 class 비에른대사05(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera(trigger_id=318)
-        self.add_cinematic_talk(npc_id=11003075, illust_id='SnowKing_normal', msg='$52000086_QD__HP50__11$', align=Align.Left, duration=4000)
-        self.add_cinematic_talk(npc_id=11003075, illust_id='SnowKing_normal', msg='$52000086_QD__HP50__12$', align=Align.Left, duration=4000)
+        self.add_cinematic_talk(npc_id=11003075, illust_id='SnowKing_normal', msg='$52000086_QD__HP50__11$', align=Align.left, duration=4000)
+        self.add_cinematic_talk(npc_id=11003075, illust_id='SnowKing_normal', msg='$52000086_QD__HP50__12$', align=Align.left, duration=4000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=8000):
@@ -186,7 +186,7 @@ class 비에른대사05(trigger_api.Trigger):
 class 에르다대사05(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera(trigger_id=317)
-        self.add_cinematic_talk(npc_id=11003074, illust_id='SnowQueen_normal', msg='$52000086_QD__HP50__13$', align=Align.Right, duration=2000)
+        self.add_cinematic_talk(npc_id=11003074, illust_id='SnowQueen_normal', msg='$52000086_QD__HP50__13$', align=Align.right, duration=2000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=2000):
@@ -197,8 +197,8 @@ class 에르다대사06(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.destroy_monster(spawn_ids=[1008])
         self.set_visible_breakable_object(trigger_ids=[4000], visible=True)
-        self.add_cinematic_talk(npc_id=11003075, illust_id='SnowKing_normal', msg='$52000086_QD__HP50__14$', align=Align.Left, duration=2000)
-        self.add_cinematic_talk(npc_id=11003074, illust_id='SnowQueen_normal', msg='$52000086_QD__HP50__15$', align=Align.Right, duration=5000)
+        self.add_cinematic_talk(npc_id=11003075, illust_id='SnowKing_normal', msg='$52000086_QD__HP50__14$', align=Align.left, duration=2000)
+        self.add_cinematic_talk(npc_id=11003074, illust_id='SnowQueen_normal', msg='$52000086_QD__HP50__15$', align=Align.right, duration=5000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=7000):
@@ -210,9 +210,9 @@ class 에르다대사07(trigger_api.Trigger):
         self.select_camera(trigger_id=319)
         self.spawn_monster(spawn_ids=[1009], auto_target=False)
         self.set_visible_breakable_object(trigger_ids=[4000])
-        self.add_cinematic_talk(npc_id=11003074, illust_id='SnowQueen_normal', msg='$52000086_QD__HP50__16$', align=Align.Right, duration=3000)
-        self.add_cinematic_talk(npc_id=11003074, illust_id='SnowQueen_normal', msg='$52000086_QD__HP50__17$', align=Align.Right, duration=5000)
-        self.add_cinematic_talk(npc_id=11003074, illust_id='SnowQueen_normal', msg='$52000086_QD__HP50__18$', align=Align.Right, duration=5000)
+        self.add_cinematic_talk(npc_id=11003074, illust_id='SnowQueen_normal', msg='$52000086_QD__HP50__16$', align=Align.right, duration=3000)
+        self.add_cinematic_talk(npc_id=11003074, illust_id='SnowQueen_normal', msg='$52000086_QD__HP50__17$', align=Align.right, duration=5000)
+        self.add_cinematic_talk(npc_id=11003074, illust_id='SnowQueen_normal', msg='$52000086_QD__HP50__18$', align=Align.right, duration=5000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=13000):
@@ -232,8 +232,8 @@ class 에르다이동(trigger_api.Trigger):
 class 에르다대사08(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.move_npc(spawn_id=1007, patrol_name='MS2PatrolData_1007A')
-        self.add_cinematic_talk(npc_id=11003074, illust_id='SnowQueen_normal', msg='$52000086_QD__HP50__19$', align=Align.Right, duration=4000)
-        self.add_cinematic_talk(npc_id=11003074, illust_id='SnowQueen_normal', msg='$52000086_QD__HP50__20$', align=Align.Right, duration=4000)
+        self.add_cinematic_talk(npc_id=11003074, illust_id='SnowQueen_normal', msg='$52000086_QD__HP50__19$', align=Align.right, duration=4000)
+        self.add_cinematic_talk(npc_id=11003074, illust_id='SnowQueen_normal', msg='$52000086_QD__HP50__20$', align=Align.right, duration=4000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=8000):
@@ -310,7 +310,7 @@ class 에드다이동02(trigger_api.Trigger):
 
 class 에르다대사10(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003074, illust_id='SnowQueen_normal', msg='$52000086_QD__HP50__21$', align=Align.Right, duration=5000)
+        self.add_cinematic_talk(npc_id=11003074, illust_id='SnowQueen_normal', msg='$52000086_QD__HP50__21$', align=Align.right, duration=5000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):
@@ -320,7 +320,7 @@ class 에르다대사10(trigger_api.Trigger):
 class 비에른대사10(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera(trigger_id=322)
-        self.add_cinematic_talk(npc_id=11003075, illust_id='SnowKing_normal', msg='$52000086_QD__HP50__22$', align=Align.Left, duration=3000)
+        self.add_cinematic_talk(npc_id=11003075, illust_id='SnowKing_normal', msg='$52000086_QD__HP50__22$', align=Align.left, duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -329,7 +329,7 @@ class 비에른대사10(trigger_api.Trigger):
 
 class 에르다대사11(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003074, illust_id='SnowQueen_normal', msg='$52000086_QD__HP50__23$', align=Align.Right, duration=2000)
+        self.add_cinematic_talk(npc_id=11003074, illust_id='SnowQueen_normal', msg='$52000086_QD__HP50__23$', align=Align.right, duration=2000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=2000):
@@ -339,8 +339,8 @@ class 에르다대사11(trigger_api.Trigger):
 class 비에른대사11(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera(trigger_id=323)
-        self.add_cinematic_talk(npc_id=11003075, illust_id='SnowKing_normal', msg='$52000086_QD__HP50__24$', align=Align.Left, duration=4000)
-        self.add_cinematic_talk(npc_id=11003075, illust_id='SnowKing_normal', msg='$52000086_QD__HP50__25$', align=Align.Left, duration=2000)
+        self.add_cinematic_talk(npc_id=11003075, illust_id='SnowKing_normal', msg='$52000086_QD__HP50__24$', align=Align.left, duration=4000)
+        self.add_cinematic_talk(npc_id=11003075, illust_id='SnowKing_normal', msg='$52000086_QD__HP50__25$', align=Align.left, duration=2000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=6000):
@@ -349,7 +349,7 @@ class 비에른대사11(trigger_api.Trigger):
 
 class 비에른대사12(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003075, illust_id='SnowKing_normal', msg='$52000086_QD__HP50__26$', align=Align.Left, duration=4000)
+        self.add_cinematic_talk(npc_id=11003075, illust_id='SnowKing_normal', msg='$52000086_QD__HP50__26$', align=Align.left, duration=4000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -358,7 +358,7 @@ class 비에른대사12(trigger_api.Trigger):
 
 class 에르다대사12(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003074, illust_id='SnowQueen_normal', msg='$52000086_QD__HP50__27$', align=Align.Right, duration=3000)
+        self.add_cinematic_talk(npc_id=11003074, illust_id='SnowQueen_normal', msg='$52000086_QD__HP50__27$', align=Align.right, duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -369,7 +369,7 @@ class 비에른대사13(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera(trigger_id=322)
         self.set_npc_emotion_loop(spawn_id=1102, sequence_name='Idle_A', duration=1000000000000.0)
-        self.add_cinematic_talk(npc_id=11003075, illust_id='SnowKing_normal', msg='$52000086_QD__HP50__28$', align=Align.Left, duration=5000)
+        self.add_cinematic_talk(npc_id=11003075, illust_id='SnowKing_normal', msg='$52000086_QD__HP50__28$', align=Align.left, duration=5000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):
@@ -380,7 +380,7 @@ class 비에른대사14(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera(trigger_id=324)
         self.move_npc(spawn_id=1102, patrol_name='MS2PatrolData_1102A')
-        self.add_cinematic_talk(npc_id=11003075, illust_id='SnowKing_normal', msg='$52000086_QD__HP50__29$', align=Align.Left, duration=3000)
+        self.add_cinematic_talk(npc_id=11003075, illust_id='SnowKing_normal', msg='$52000086_QD__HP50__29$', align=Align.left, duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -390,7 +390,7 @@ class 비에른대사14(trigger_api.Trigger):
 class 에드다이동03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera(trigger_id=325)
-        self.add_cinematic_talk(npc_id=11003074, illust_id='SnowQueen_normal', msg='$52000086_QD__HP50__30$', align=Align.Right, duration=3000)
+        self.add_cinematic_talk(npc_id=11003074, illust_id='SnowQueen_normal', msg='$52000086_QD__HP50__30$', align=Align.right, duration=3000)
         # self.move_npc(spawn_id=1101, patrol_name='MS2PatrolData_1101B')
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -409,7 +409,7 @@ class PC말풍선대사(trigger_api.Trigger):
 
 class 에르다대사13(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003074, illust_id='SnowQueen_normal', msg='$52000086_QD__HP50__32$', align=Align.Right, duration=3000)
+        self.add_cinematic_talk(npc_id=11003074, illust_id='SnowQueen_normal', msg='$52000086_QD__HP50__32$', align=Align.right, duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -418,7 +418,7 @@ class 에르다대사13(trigger_api.Trigger):
 
 class 에르다대사13To1(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003074, illust_id='SnowQueen_normal', msg='$52000086_QD__HP50__33$', align=Align.Right, duration=3000)
+        self.add_cinematic_talk(npc_id=11003074, illust_id='SnowQueen_normal', msg='$52000086_QD__HP50__33$', align=Align.right, duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):

@@ -90,7 +90,7 @@ class EventTalk_01(trigger_api.Trigger):
 
 class EventTalk_02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=0, msg='설마....', duration=2500, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, msg='설마....', duration=2500, align=Align.right)
         self.set_scene_skip() # Missing State: State
 
     def on_tick(self) -> trigger_api.Trigger:

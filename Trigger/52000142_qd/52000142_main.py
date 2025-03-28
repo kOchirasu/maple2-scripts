@@ -110,7 +110,7 @@ class 구보훈련_02(trigger_api.Trigger):
 class 구보훈련_03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[8007], return_view=False)
-        self.add_cinematic_talk(npc_id=0, msg='$52000142_QD__52000142_MAIN__0$', duration=3500, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, msg='$52000142_QD__52000142_MAIN__0$', duration=3500, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3500):
@@ -282,7 +282,7 @@ class 퀘스트1완료_03(trigger_api.Trigger):
 class 로베와대화1_01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_scene_skip(state=벌칙_01, action='nextState')
-        self.add_cinematic_talk(npc_id=0, msg='$52000142_QD__52000142_MAIN__1$', duration=3500, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, msg='$52000142_QD__52000142_MAIN__1$', duration=3500, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3500):
@@ -291,7 +291,7 @@ class 로베와대화1_01(trigger_api.Trigger):
 
 class 로베와대화1_02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003401, msg='$52000142_QD__52000142_MAIN__2$', duration=3000, illust_id='Robe_normal', align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003401, msg='$52000142_QD__52000142_MAIN__2$', duration=3000, illust_id='Robe_normal', align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3500):
@@ -300,7 +300,7 @@ class 로베와대화1_02(trigger_api.Trigger):
 
 class 로베와대화1_03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=0, msg='$52000142_QD__52000142_MAIN__3$', duration=3500, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, msg='$52000142_QD__52000142_MAIN__3$', duration=3500, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3500):
@@ -309,7 +309,7 @@ class 로베와대화1_03(trigger_api.Trigger):
 
 class 로베와대화1_04(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003401, msg='$52000142_QD__52000142_MAIN__4$', duration=4000, illust_id='Robe_normal', align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003401, msg='$52000142_QD__52000142_MAIN__4$', duration=4000, illust_id='Robe_normal', align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -318,7 +318,7 @@ class 로베와대화1_04(trigger_api.Trigger):
 
 class 로베와대화1_05(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=0, msg='$52000142_QD__52000142_MAIN__5$', duration=3000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, msg='$52000142_QD__52000142_MAIN__5$', duration=3000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3500):
@@ -327,9 +327,9 @@ class 로베와대화1_05(trigger_api.Trigger):
 
 class 로베와대화1_06(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003401, msg='$52000142_QD__52000142_MAIN__6$', duration=3500, illust_id='Robe_normal', align=Align.Right)
-        self.add_cinematic_talk(npc_id=11003401, msg='$52000142_QD__52000142_MAIN__7$', duration=2500, illust_id='Robe_normal', align=Align.Right)
-        self.add_cinematic_talk(npc_id=11003401, msg='$52000142_QD__52000142_MAIN__8$', duration=4000, illust_id='Robe_normal', align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003401, msg='$52000142_QD__52000142_MAIN__6$', duration=3500, illust_id='Robe_normal', align=Align.right)
+        self.add_cinematic_talk(npc_id=11003401, msg='$52000142_QD__52000142_MAIN__7$', duration=2500, illust_id='Robe_normal', align=Align.right)
+        self.add_cinematic_talk(npc_id=11003401, msg='$52000142_QD__52000142_MAIN__8$', duration=4000, illust_id='Robe_normal', align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=11000):
@@ -338,7 +338,7 @@ class 로베와대화1_06(trigger_api.Trigger):
 
 class 로베와대화1_07(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=0, msg='$52000142_QD__52000142_MAIN__9$', duration=3500, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, msg='$52000142_QD__52000142_MAIN__9$', duration=3500, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3500):
@@ -347,7 +347,7 @@ class 로베와대화1_07(trigger_api.Trigger):
 
 class 로베와대화1_08(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003401, msg='$52000142_QD__52000142_MAIN__10$', duration=3500, illust_id='Robe_normal', align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003401, msg='$52000142_QD__52000142_MAIN__10$', duration=3500, illust_id='Robe_normal', align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3500):
@@ -383,7 +383,7 @@ class 동료의비웃음_03(trigger_api.Trigger):
 
 class 해명에도불구_01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=0, msg='$52000142_QD__52000142_MAIN__14$', duration=3000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, msg='$52000142_QD__52000142_MAIN__14$', duration=3000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3500):
@@ -392,7 +392,7 @@ class 해명에도불구_01(trigger_api.Trigger):
 
 class 해명에도불구_02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003401, msg='$52000142_QD__52000142_MAIN__15$', duration=3000, illust_id='Robe_normal', align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003401, msg='$52000142_QD__52000142_MAIN__15$', duration=3000, illust_id='Robe_normal', align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3500):
@@ -401,7 +401,7 @@ class 해명에도불구_02(trigger_api.Trigger):
 
 class 해명에도불구_03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=0, msg='$52000142_QD__52000142_MAIN__16$', duration=3000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, msg='$52000142_QD__52000142_MAIN__16$', duration=3000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3500):
@@ -450,7 +450,7 @@ class 벌칙_03(trigger_api.Trigger):
 class 벌칙_04(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_scene_skip(state=수호사제찾기_01, action='nextState')
-        self.add_cinematic_talk(npc_id=0, msg='$52000142_QD__52000142_MAIN__18$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, msg='$52000142_QD__52000142_MAIN__18$', duration=4000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -468,7 +468,7 @@ class 벌칙_04_1(trigger_api.Trigger):
 
 class 벌칙_05(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=0, msg='$52000142_QD__52000142_MAIN__19$', duration=3500, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, msg='$52000142_QD__52000142_MAIN__19$', duration=3500, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3500):
@@ -477,7 +477,7 @@ class 벌칙_05(trigger_api.Trigger):
 
 class 벌칙_06(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003399, msg='$52000142_QD__52000142_MAIN__20$', duration=3500, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003399, msg='$52000142_QD__52000142_MAIN__20$', duration=3500, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3500):
@@ -495,7 +495,7 @@ class 벌칙_06_1(trigger_api.Trigger):
 
 class 벌칙_07(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003401, msg='$52000142_QD__52000142_MAIN__21$', duration=3500, illust_id='Robe_normal', align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003401, msg='$52000142_QD__52000142_MAIN__21$', duration=3500, illust_id='Robe_normal', align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3500):
@@ -504,7 +504,7 @@ class 벌칙_07(trigger_api.Trigger):
 
 class 벌칙_08(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=0, msg='$52000142_QD__52000142_MAIN__22$', duration=3000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, msg='$52000142_QD__52000142_MAIN__22$', duration=3000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3500):
@@ -513,9 +513,9 @@ class 벌칙_08(trigger_api.Trigger):
 
 class 벌칙_09(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003401, msg='$52000142_QD__52000142_MAIN__23$', duration=4000, illust_id='Robe_normal', align=Align.Right)
-        self.add_cinematic_talk(npc_id=11003401, msg='$52000142_QD__52000142_MAIN__24$', duration=2500, illust_id='Robe_normal', align=Align.Right)
-        self.add_cinematic_talk(npc_id=11003401, msg='$52000142_QD__52000142_MAIN__25$', duration=3000, illust_id='Robe_normal', align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003401, msg='$52000142_QD__52000142_MAIN__23$', duration=4000, illust_id='Robe_normal', align=Align.right)
+        self.add_cinematic_talk(npc_id=11003401, msg='$52000142_QD__52000142_MAIN__24$', duration=2500, illust_id='Robe_normal', align=Align.right)
+        self.add_cinematic_talk(npc_id=11003401, msg='$52000142_QD__52000142_MAIN__25$', duration=3000, illust_id='Robe_normal', align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=10000):
@@ -524,8 +524,8 @@ class 벌칙_09(trigger_api.Trigger):
 
 class 벌칙_10(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=0, msg='$52000142_QD__52000142_MAIN__26$', duration=3500, align=Align.Right)
-        self.add_cinematic_talk(npc_id=0, msg='$52000142_QD__52000142_MAIN__27$', duration=3500, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, msg='$52000142_QD__52000142_MAIN__26$', duration=3500, align=Align.right)
+        self.add_cinematic_talk(npc_id=0, msg='$52000142_QD__52000142_MAIN__27$', duration=3500, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=7500):
@@ -601,7 +601,7 @@ class 퀘스트2완료_03(trigger_api.Trigger):
 class 란스구하기_01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_scene_skip(state=란스구하기스킵_01, action='nextState')
-        self.add_cinematic_talk(npc_id=0, msg='$52000142_QD__52000142_MAIN__28$', duration=3000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, msg='$52000142_QD__52000142_MAIN__28$', duration=3000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3500):
@@ -610,7 +610,7 @@ class 란스구하기_01(trigger_api.Trigger):
 
 class 란스구하기_02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003403, msg='$52000142_QD__52000142_MAIN__29$', duration=3500, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003403, msg='$52000142_QD__52000142_MAIN__29$', duration=3500, align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3500):
@@ -619,7 +619,7 @@ class 란스구하기_02(trigger_api.Trigger):
 
 class 란스구하기_03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003401, msg='$52000142_QD__52000142_MAIN__30$', duration=2500, illust_id='Robe_normal', align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003401, msg='$52000142_QD__52000142_MAIN__30$', duration=2500, illust_id='Robe_normal', align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -638,8 +638,8 @@ class 란스구하기_04(trigger_api.Trigger):
 
 class 란스구하기_05(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=0, msg='$52000142_QD__52000142_MAIN__31$', duration=3000, align=Align.Right)
-        self.add_cinematic_talk(npc_id=0, msg='$52000142_QD__52000142_MAIN__32$', duration=3500, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, msg='$52000142_QD__52000142_MAIN__31$', duration=3000, align=Align.right)
+        self.add_cinematic_talk(npc_id=0, msg='$52000142_QD__52000142_MAIN__32$', duration=3500, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=7500):
@@ -648,7 +648,7 @@ class 란스구하기_05(trigger_api.Trigger):
 
 class 란스구하기_06(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003399, msg='$52000142_QD__52000142_MAIN__33$', duration=1000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003399, msg='$52000142_QD__52000142_MAIN__33$', duration=1000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=1000):
@@ -690,7 +690,7 @@ class 란스구하기_08(trigger_api.Trigger):
 class 란스구하기_09(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_dialogue(type=1, spawn_id=108, script='$52000142_QD__52000142_MAIN__35$', time=3)
-        # self.add_cinematic_talk(npc_id=11003401, msg='$52000142_QD__52000142_MAIN__35$', duration=2500, illust_id='Robe_normal', align=Align.Right)
+        # self.add_cinematic_talk(npc_id=11003401, msg='$52000142_QD__52000142_MAIN__35$', duration=2500, illust_id='Robe_normal', align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=2000):
@@ -699,7 +699,7 @@ class 란스구하기_09(trigger_api.Trigger):
 
 class 란스구하기_10(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=0, msg='$52000142_QD__52000142_MAIN__36$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, msg='$52000142_QD__52000142_MAIN__36$', duration=4000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -718,7 +718,7 @@ class 란스구하기_10_1(trigger_api.Trigger):
 class 란스구하기_11(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_npc_emotion_sequence(spawn_id=110, sequence_name='Bore_B')
-        self.add_cinematic_talk(npc_id=11003403, msg='$52000142_QD__52000142_MAIN__37$', duration=5720, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003403, msg='$52000142_QD__52000142_MAIN__37$', duration=5720, align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5720):
@@ -736,8 +736,8 @@ class 란스구하기_11_1(trigger_api.Trigger):
 
 class 란스구하기_12(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003401, msg='$52000142_QD__52000142_MAIN__38$', duration=3000, illust_id='Robe_normal', align=Align.Right)
-        self.add_cinematic_talk(npc_id=11003401, msg='$52000142_QD__52000142_MAIN__39$', duration=2500, illust_id='Robe_normal', align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003401, msg='$52000142_QD__52000142_MAIN__38$', duration=3000, illust_id='Robe_normal', align=Align.right)
+        self.add_cinematic_talk(npc_id=11003401, msg='$52000142_QD__52000142_MAIN__39$', duration=2500, illust_id='Robe_normal', align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=6000):
@@ -747,7 +747,7 @@ class 란스구하기_12(trigger_api.Trigger):
 class 란스구하기_13(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.move_user_path(patrol_name='MS2PatrolData_2004')
-        self.add_cinematic_talk(npc_id=0, msg='$52000142_QD__52000142_MAIN__40$', duration=3000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, msg='$52000142_QD__52000142_MAIN__40$', duration=3000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3500):
@@ -756,7 +756,7 @@ class 란스구하기_13(trigger_api.Trigger):
 
 class 란스구하기_14(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003401, msg='$52000142_QD__52000142_MAIN__41$', duration=5903, illust_id='Robe_normal', align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003401, msg='$52000142_QD__52000142_MAIN__41$', duration=5903, illust_id='Robe_normal', align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=8698):
@@ -766,7 +766,7 @@ class 란스구하기_14(trigger_api.Trigger):
 class 란스구하기_15(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.move_npc(spawn_id=110, patrol_name='MS2PatrolData_2005')
-        self.add_cinematic_talk(npc_id=11003403, msg='$52000142_QD__52000142_MAIN__42$', duration=5955, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003403, msg='$52000142_QD__52000142_MAIN__42$', duration=5955, align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5955):
@@ -775,7 +775,7 @@ class 란스구하기_15(trigger_api.Trigger):
 
 class 란스구하기_16(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003401, msg='$52000142_QD__52000142_MAIN__43$', duration=3500, illust_id='Robe_normal', align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003401, msg='$52000142_QD__52000142_MAIN__43$', duration=3500, illust_id='Robe_normal', align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3500):
@@ -784,7 +784,7 @@ class 란스구하기_16(trigger_api.Trigger):
 
 class 란스구하기_17(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003403, msg='$52000142_QD__52000142_MAIN__44$', duration=3500, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003403, msg='$52000142_QD__52000142_MAIN__44$', duration=3500, align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3500):
@@ -793,7 +793,7 @@ class 란스구하기_17(trigger_api.Trigger):
 
 class 란스구하기_18(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=0, msg='$52000142_QD__52000142_MAIN__45$', duration=3000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, msg='$52000142_QD__52000142_MAIN__45$', duration=3000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3500):
@@ -802,7 +802,7 @@ class 란스구하기_18(trigger_api.Trigger):
 
 class 란스구하기_19(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003401, msg='$52000142_QD__52000142_MAIN__46$', duration=3000, illust_id='Robe_normal', align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003401, msg='$52000142_QD__52000142_MAIN__46$', duration=3000, illust_id='Robe_normal', align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3500):
@@ -811,9 +811,9 @@ class 란스구하기_19(trigger_api.Trigger):
 
 class 란스구하기_20(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003403, msg='$52000142_QD__52000142_MAIN__47$', duration=3000, align=Align.Left)
-        self.add_cinematic_talk(npc_id=11003403, msg='$52000142_QD__52000142_MAIN__48$', duration=2500, align=Align.Left)
-        self.add_cinematic_talk(npc_id=11003403, msg='$52000142_QD__52000142_MAIN__49$', duration=3500, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003403, msg='$52000142_QD__52000142_MAIN__47$', duration=3000, align=Align.left)
+        self.add_cinematic_talk(npc_id=11003403, msg='$52000142_QD__52000142_MAIN__48$', duration=2500, align=Align.left)
+        self.add_cinematic_talk(npc_id=11003403, msg='$52000142_QD__52000142_MAIN__49$', duration=3500, align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=10000):
@@ -822,7 +822,7 @@ class 란스구하기_20(trigger_api.Trigger):
 
 class 란스구하기_21(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003401, msg='$52000142_QD__52000142_MAIN__50$', duration=3000, illust_id='Robe_normal', align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003401, msg='$52000142_QD__52000142_MAIN__50$', duration=3000, illust_id='Robe_normal', align=Align.right)
         self.set_scene_skip() # Missing State: State
 
     def on_tick(self) -> trigger_api.Trigger:

@@ -133,7 +133,7 @@ class fadein(trigger_api.Trigger):
 class praymove_01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.move_npc(spawn_id=103, patrol_name='MS2PatrolData_103')
-        self.add_cinematic_talk(npc_id=11003165, illust_id='Fray_normal', msg='$63000042_CS__WAKEUP02__9$', duration=3000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003165, illust_id='Fray_normal', msg='$63000042_CS__WAKEUP02__9$', duration=3000, align=Align.left)
         self.set_scene_skip(state=end, action='exit')
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -153,7 +153,7 @@ class praytalk_02(trigger_api.Trigger):
 
 class pray(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.show_caption(scale=2.5, type='NameCaption', title='$63000042_CS__WAKEUP02__11$', desc='$63000042_CS__WAKEUP02__12$', align=Align.CenterRight, offset_rate_x=0.5, duration=4000)
+        self.show_caption(scale=2.5, type='NameCaption', title='$63000042_CS__WAKEUP02__11$', desc='$63000042_CS__WAKEUP02__12$', align=Align.centerRight, offset_rate_x=0.5, duration=4000)
         self.select_camera_path(path_ids=[502,503], return_view=False)
         self.set_scene_skip() # Missing State: State
 

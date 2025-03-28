@@ -113,7 +113,7 @@ class 인트로_지역소개(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_cinematic_ui(type=1)
         self.set_cinematic_ui(type=3)
-        self.show_caption(type='VerticalCaption', title='$52010056_QD__EventSection__54$', desc='$52010056_QD__EventSection__0$', align=Align.BottomLeft, duration=3500, scale=1.0)
+        self.show_caption(type='VerticalCaption', title='$52010056_QD__EventSection__54$', desc='$52010056_QD__EventSection__0$', align=Align.bottomLeft, duration=3500, scale=1.0)
         self.set_scene_skip(state=시작연출_준비, action='nextState') # 크림슨 발록 연출 스킵
         # 트리스탄 등장 연출로 이동
 
@@ -237,7 +237,7 @@ class 시작연출_지역소개(trigger_api.Trigger):
         self.set_cinematic_ui(type=1)
         self.set_cinematic_ui(type=3)
         self.set_onetime_effect(id=1, path='BG/Common/ScreenMask/Eff_fadein_1sec.xml') # 페이드 아웃 끔
-        self.show_caption(type='VerticalCaption', title='$52010056_QD__EventSection__12$', align=Align.BottomLeft, duration=3500, scale=1.0)
+        self.show_caption(type='VerticalCaption', title='$52010056_QD__EventSection__12$', align=Align.bottomLeft, duration=3500, scale=1.0)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=100):

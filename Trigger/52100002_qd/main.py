@@ -130,8 +130,8 @@ class 종료연출대기(trigger_api.Trigger):
 class 종료연출(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_skip(state=연출종료)
-        self.add_cinematic_talk(npc_id=11003889, illust_id='Firis_normal', msg='$02000392_BF__MAIN__0$', align=Align.Left, duration=4000)
-        self.add_cinematic_talk(npc_id=11003888, illust_id='Celine_normal', msg='$02000392_BF__MAIN__1$', align=Align.Right, duration=3000)
+        self.add_cinematic_talk(npc_id=11003889, illust_id='Firis_normal', msg='$02000392_BF__MAIN__0$', align=Align.left, duration=4000)
+        self.add_cinematic_talk(npc_id=11003888, illust_id='Celine_normal', msg='$02000392_BF__MAIN__1$', align=Align.right, duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=7000):
@@ -177,8 +177,8 @@ class 자매대화(trigger_api.Trigger):
 
 class 자매대화01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003889, illust_id='Firis_normal', msg='$02000392_BF__MAIN__3$', align=Align.Left, duration=4000)
-        self.add_cinematic_talk(npc_id=11003888, illust_id='Celine_normal', msg='$02000392_BF__MAIN__4$', align=Align.Right, duration=4000)
+        self.add_cinematic_talk(npc_id=11003889, illust_id='Firis_normal', msg='$02000392_BF__MAIN__3$', align=Align.left, duration=4000)
+        self.add_cinematic_talk(npc_id=11003888, illust_id='Celine_normal', msg='$02000392_BF__MAIN__4$', align=Align.right, duration=4000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=8000):
@@ -187,7 +187,7 @@ class 자매대화01(trigger_api.Trigger):
 
 class 자매대화02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003889, illust_id='Firis_normal', msg='$02000392_BF__MAIN__5$', align=Align.Left, duration=5000)
+        self.add_cinematic_talk(npc_id=11003889, illust_id='Firis_normal', msg='$02000392_BF__MAIN__5$', align=Align.left, duration=5000)
         self.set_dialogue(type=1, spawn_id=1097, script='$02000392_BF__MAIN__6$', time=2, arg5=2)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -197,7 +197,7 @@ class 자매대화02(trigger_api.Trigger):
 
 class 자매대화03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003888, illust_id='Celine_normal', msg='$02000392_BF__MAIN__11$', align=Align.Left, duration=4000)
+        self.add_cinematic_talk(npc_id=11003888, illust_id='Celine_normal', msg='$02000392_BF__MAIN__11$', align=Align.left, duration=4000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=2000):
@@ -215,7 +215,7 @@ class PC대사3(trigger_api.Trigger):
 
 class 자매대화04(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003888, illust_id='Celine_normal', msg='$02000392_BF__MAIN__7$', align=Align.Left, duration=3000)
+        self.add_cinematic_talk(npc_id=11003888, illust_id='Celine_normal', msg='$02000392_BF__MAIN__7$', align=Align.left, duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -224,7 +224,7 @@ class 자매대화04(trigger_api.Trigger):
 
 class 자매대화05(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003888, illust_id='Celine_normal', msg='$02000392_BF__MAIN__8$', align=Align.Left, duration=3000)
+        self.add_cinematic_talk(npc_id=11003888, illust_id='Celine_normal', msg='$02000392_BF__MAIN__8$', align=Align.left, duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -233,7 +233,7 @@ class 자매대화05(trigger_api.Trigger):
 
 class 자매대화06(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003888, illust_id='Celine_normal', msg='$02000392_BF__MAIN__9$', align=Align.Left, duration=3000)
+        self.add_cinematic_talk(npc_id=11003888, illust_id='Celine_normal', msg='$02000392_BF__MAIN__9$', align=Align.left, duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=6000):

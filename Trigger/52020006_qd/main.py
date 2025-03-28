@@ -306,7 +306,7 @@ class 세리하와함께전투_전투직전스킵(trigger_api.Trigger):
 class 전투대기01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.reset_camera(interpolation_time=2.0)
-        # self.add_cinematic_talk(npc_id=29000251, illust_id='11000015', msg='$52000121_QD__MAIN__17$', duration=2000, align=Align.Left)
+        # self.add_cinematic_talk(npc_id=29000251, illust_id='11000015', msg='$52000121_QD__MAIN__17$', duration=2000, align=Align.left)
         # self.set_skip() # Missing State: State
 
     def on_tick(self) -> trigger_api.Trigger:

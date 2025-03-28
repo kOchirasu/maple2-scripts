@@ -227,7 +227,7 @@ class 쉐도우클로전투_완료연출02(trigger_api.Trigger):
 class 쉐도우클로전투_완료연출03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[3002,3003], return_view=False)
-        self.add_cinematic_talk(npc_id=11003185, illust_id='0', msg='$52000112_QD__52000112__3$', duration=5000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003185, illust_id='0', msg='$52000112_QD__52000112__3$', duration=5000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):
@@ -236,7 +236,7 @@ class 쉐도우클로전투_완료연출03(trigger_api.Trigger):
 
 class 쉐도우클로전투_완료연출04(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=0, illust_id='0', msg='$52000112_QD__52000112__4$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, illust_id='0', msg='$52000112_QD__52000112__4$', duration=4000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -285,7 +285,7 @@ class 쉐도우클로전투_완료연출07_b(trigger_api.Trigger):
 class 쉐도우클로전투_완료연출07(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[3007,3008], return_view=False)
-        self.add_cinematic_talk(npc_id=11003185, illust_id='0', msg='$52000112_QD__52000112__5$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003185, illust_id='0', msg='$52000112_QD__52000112__5$', duration=4000, align=Align.right)
         self.set_npc_emotion_loop(spawn_id=208, sequence_name='Stun_A', duration=15500.0)
         self.set_mesh(trigger_ids=[300,301,302,303,304,305,306,307], interval=700) # 큐브하나씩부셔지는연출
 
@@ -299,7 +299,7 @@ class 쉐도우클로전투_완료연출08(trigger_api.Trigger):
         self.select_camera_path(path_ids=[3009,3010], return_view=False)
         self.destroy_monster(spawn_ids=[201,202,203])
         self.visible_my_pc(is_visible=False) # 유저 투명 처리
-        self.add_cinematic_talk(npc_id=11003185, illust_id='0', msg='$52000112_QD__52000112__6$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003185, illust_id='0', msg='$52000112_QD__52000112__6$', duration=4000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):

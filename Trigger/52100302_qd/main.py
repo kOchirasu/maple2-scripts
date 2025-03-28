@@ -148,8 +148,8 @@ class 카메라시작(trigger_api.Trigger):
 
 class 마를레네대사(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11004582, msg='$52100302_QD__MAIN__0$', align=Align.Left, illust_id='Eone_normal', duration=5000)
-        self.add_cinematic_talk(npc_id=11004582, msg='$52100302_QD__MAIN__1$', align=Align.Left, illust_id='Eone_serious', duration=4500)
+        self.add_cinematic_talk(npc_id=11004582, msg='$52100302_QD__MAIN__0$', align=Align.left, illust_id='Eone_normal', duration=5000)
+        self.add_cinematic_talk(npc_id=11004582, msg='$52100302_QD__MAIN__1$', align=Align.left, illust_id='Eone_serious', duration=4500)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=9500):

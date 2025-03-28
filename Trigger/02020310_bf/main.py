@@ -146,7 +146,7 @@ class 카메라시작(trigger_api.Trigger):
 
 class 마를레네대사(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11004582, msg='$02020310_BF__MAIN__0$', align=Align.Left, illust_id='Eone_serious', duration=6000)
+        self.add_cinematic_talk(npc_id=11004582, msg='$02020310_BF__MAIN__0$', align=Align.left, illust_id='Eone_serious', duration=6000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=9500):

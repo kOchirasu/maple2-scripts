@@ -109,7 +109,7 @@ class 보보스의오해_02(trigger_api.Trigger):
 class 보보스의오해_03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         # 미안해… 소원… 들어줘야 하니까.\n내가 루돌프 되면 꼭 내려줄게.
-        self.add_cinematic_talk(npc_id=11004373, msg='$63000077_CS__63000077_MAIN__0$', duration=3500, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11004373, msg='$63000077_CS__63000077_MAIN__0$', duration=3500, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -146,7 +146,7 @@ class 보보스의오해_06(trigger_api.Trigger):
 class 보보스의오해_07(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_pc_emotion_sequence(sequence_names=['Emotion_Angry_A'])
-        self.add_cinematic_talk(npc_id=0, msg='$63000077_CS__63000077_MAIN__2$', duration=2800, align=Align.Right) # 이봐, 무슨 짓이야! 당장 그만둬!
+        self.add_cinematic_talk(npc_id=0, msg='$63000077_CS__63000077_MAIN__2$', duration=2800, align=Align.right) # 이봐, 무슨 짓이야! 당장 그만둬!
         self.move_npc(spawn_id=101, patrol_name='MS2PatrolData_2001')
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -166,7 +166,7 @@ class 보보스의오해_08(trigger_api.Trigger):
 class 보보스의오해_09(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         # 응…? 나…는 소원 들어주고 있어.\n$npcName:11004356$의 크리스마스 소원.
-        self.add_cinematic_talk(npc_id=11004373, msg='$63000077_CS__63000077_MAIN__3$', duration=3500, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11004373, msg='$63000077_CS__63000077_MAIN__3$', duration=3500, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -187,7 +187,7 @@ class 보보스의오해_10(trigger_api.Trigger):
 class 보보스의오해_11(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         # $npcName:11004356$의 소원은 그런 게 아냐!\n$npcName:11004368$$pp:는,은$ $npcName:11004356$의 소중한 가족이라고! 당장 내려줘!
-        self.add_cinematic_talk(npc_id=0, msg='$63000077_CS__63000077_MAIN__4$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, msg='$63000077_CS__63000077_MAIN__4$', duration=4000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4500):
@@ -205,7 +205,7 @@ class 보보스의오해_12(trigger_api.Trigger):
 
 class 보보스의오해_13(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11004373, msg='$63000077_CS__63000077_MAIN__5$', duration=2500, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11004373, msg='$63000077_CS__63000077_MAIN__5$', duration=2500, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -215,7 +215,7 @@ class 보보스의오해_13(trigger_api.Trigger):
 class 보보스의오해_14(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         # $npcName:11004356$ 아빠, 여기 있어야 된다.\n$npcName:11004373$$pp:는,은$ 착한 일을 하는 거다.
-        self.add_cinematic_talk(npc_id=11004373, msg='$63000077_CS__63000077_MAIN__6$', duration=3500, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11004373, msg='$63000077_CS__63000077_MAIN__6$', duration=3500, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -234,7 +234,7 @@ class 보보스의오해_15(trigger_api.Trigger):
 class 보보스의오해_16(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.face_emotion(emotion_name='Trigger_disappoint')
-        self.add_cinematic_talk(npc_id=0, msg='$63000077_CS__63000077_MAIN__7$', duration=2500, align=Align.Right) # 정말 말이 안 통하는 녀석이잖아.
+        self.add_cinematic_talk(npc_id=0, msg='$63000077_CS__63000077_MAIN__7$', duration=2500, align=Align.right) # 정말 말이 안 통하는 녀석이잖아.
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -244,7 +244,7 @@ class 보보스의오해_16(trigger_api.Trigger):
 class 보보스의오해_17(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.face_emotion(emotion_name='Trigger_panic')
-        self.add_cinematic_talk(npc_id=0, msg='$63000077_CS__63000077_MAIN__8$', duration=2500, align=Align.Right) # 도대체 무슨 소릴 하는 거야?
+        self.add_cinematic_talk(npc_id=0, msg='$63000077_CS__63000077_MAIN__8$', duration=2500, align=Align.right) # 도대체 무슨 소릴 하는 거야?
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -266,7 +266,7 @@ class 보보스의오해_18(trigger_api.Trigger):
 class 보보스의오해_19(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         # $npcName:11004373$, 착한 일 하고 산타 할아버지한테 인정 받을 거다.
-        self.add_cinematic_talk(npc_id=11004373, msg='$63000077_CS__63000077_MAIN__9$', duration=2500, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11004373, msg='$63000077_CS__63000077_MAIN__9$', duration=2500, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -276,7 +276,7 @@ class 보보스의오해_19(trigger_api.Trigger):
 class 보보스의오해_20(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         # 루돌프 돼서, 행복해지고…\n$npcName:11004356$이랑도 같이 놀 거야.
-        self.add_cinematic_talk(npc_id=11004373, msg='$63000077_CS__63000077_MAIN__10$', duration=3000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11004373, msg='$63000077_CS__63000077_MAIN__10$', duration=3000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3500):
@@ -294,7 +294,7 @@ class 보보스의오해_21(trigger_api.Trigger):
 
 class 보보스의오해_22(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11004373, msg='$63000077_CS__63000077_MAIN__11$', duration=2000, align=Align.Right) # 날 방해하면…
+        self.add_cinematic_talk(npc_id=11004373, msg='$63000077_CS__63000077_MAIN__11$', duration=2000, align=Align.right) # 날 방해하면…
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=2500):
@@ -304,7 +304,7 @@ class 보보스의오해_22(trigger_api.Trigger):
 class 보보스의오해_23(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         # &lt;font size='40'&gt;때릴 거다!&lt;/font&gt;
-        self.add_cinematic_talk(npc_id=11004373, msg='$63000077_CS__63000077_MAIN__12$', duration=2000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11004373, msg='$63000077_CS__63000077_MAIN__12$', duration=2000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=2500):
@@ -393,7 +393,7 @@ class 패배한보보스_03(trigger_api.Trigger):
 
 class 클라우스대화_01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11004368, msg='$63000077_CS__63000077_MAIN__13$', duration=2500, align=Align.Left) # 도와주셔서 감사합니다!
+        self.add_cinematic_talk(npc_id=11004368, msg='$63000077_CS__63000077_MAIN__13$', duration=2500, align=Align.left) # 도와주셔서 감사합니다!
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -402,7 +402,7 @@ class 클라우스대화_01(trigger_api.Trigger):
 
 class 클라우스대화_02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11004368, msg='$63000077_CS__63000077_MAIN__14$', duration=2500, align=Align.Left) # 그런데 누구……?
+        self.add_cinematic_talk(npc_id=11004368, msg='$63000077_CS__63000077_MAIN__14$', duration=2500, align=Align.left) # 그런데 누구……?
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -482,7 +482,7 @@ class 에블린일기_03(trigger_api.Trigger):
 class 다시만난가족_01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         # 제가 $npcName:11004356$의 마음을 아프게 한 것도 사실이고,\n제 딸 $npcName:11004356$의 마음을 달래주려는 순진한 $npcName:11004373$의 부탁이니…
-        self.add_cinematic_talk(npc_id=11004368, msg='$63000077_CS__63000077_MAIN__16$', duration=3500, illust_id='June_normal', align=Align.Left)
+        self.add_cinematic_talk(npc_id=11004368, msg='$63000077_CS__63000077_MAIN__16$', duration=3500, illust_id='June_normal', align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -492,7 +492,7 @@ class 다시만난가족_01(trigger_api.Trigger):
 class 다시만난가족_02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         # 잠깐 나무 위에 올라가 있는 것도 나쁘지 않겠다 싶었답니다
-        self.add_cinematic_talk(npc_id=11004368, msg='$63000077_CS__63000077_MAIN__17$', duration=3000, illust_id='June_normal', align=Align.Left)
+        self.add_cinematic_talk(npc_id=11004368, msg='$63000077_CS__63000077_MAIN__17$', duration=3000, illust_id='June_normal', align=Align.left)
         self.spawn_monster(spawn_ids=[103,104,105], auto_target=False)
         self.move_npc(spawn_id=103, patrol_name='MS2PatrolData_2003')
 
@@ -506,7 +506,7 @@ class 다시만난가족_02(trigger_api.Trigger):
 
 class 다시만난가족_03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11004356, msg='$63000077_CS__63000077_MAIN__18$', duration=2000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11004356, msg='$63000077_CS__63000077_MAIN__18$', duration=2000, align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=500):
@@ -525,7 +525,7 @@ class 다시만난가족_04(trigger_api.Trigger):
 class 다시만난가족_05(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         # 그건 그냥 투정이었어.\n내 소원은 그런 게 아니란 말이에요!
-        self.add_cinematic_talk(npc_id=11004356, msg='$63000077_CS__63000077_MAIN__19$', duration=3500, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11004356, msg='$63000077_CS__63000077_MAIN__19$', duration=3500, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -535,7 +535,7 @@ class 다시만난가족_05(trigger_api.Trigger):
 class 다시만난가족_06(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera(trigger_id=8012)
-        self.add_cinematic_talk(npc_id=11004373, msg='$63000077_CS__63000077_MAIN__20$', duration=2000, align=Align.Left) # 으응???
+        self.add_cinematic_talk(npc_id=11004373, msg='$63000077_CS__63000077_MAIN__20$', duration=2000, align=Align.left) # 으응???
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=2500):
@@ -554,7 +554,7 @@ class 다시만난가족_07(trigger_api.Trigger):
 class 다시만난가족_08(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         # $npcName:11004356$…소원 아니야?\n내가 잘못한거야…?
-        self.add_cinematic_talk(npc_id=11004373, msg='$63000077_CS__63000077_MAIN__21$', duration=3500, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11004373, msg='$63000077_CS__63000077_MAIN__21$', duration=3500, align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=2500):
@@ -574,7 +574,7 @@ class 다시만난가족_09(trigger_api.Trigger):
 class 다시만난가족_10(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         # 보…?\n그날 밤 내 얘길 듣고 간 게 역시 너였구나.
-        self.add_cinematic_talk(npc_id=11004356, msg='$63000077_CS__63000077_MAIN__22$', duration=3500, illust_id='Evelyn_glad', align=Align.Right)
+        self.add_cinematic_talk(npc_id=11004356, msg='$63000077_CS__63000077_MAIN__22$', duration=3500, illust_id='Evelyn_glad', align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=2000):
@@ -594,7 +594,7 @@ class 다시만난가족_11(trigger_api.Trigger):
 class 다시만난가족_12(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         # 미안…미안해…!\n소원을 들어주고… 행복하게 해주고 싶었는데…!
-        self.add_cinematic_talk(npc_id=11004373, msg='$63000077_CS__63000077_MAIN__23$', duration=4000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11004373, msg='$63000077_CS__63000077_MAIN__23$', duration=4000, align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4500):
@@ -604,7 +604,7 @@ class 다시만난가족_12(trigger_api.Trigger):
 class 다시만난가족_13(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         # $npcName:11004373$$pp:가,이$… 너무 미안해…!
-        self.add_cinematic_talk(npc_id=11004373, msg='$63000077_CS__63000077_MAIN__24$', duration=3000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11004373, msg='$63000077_CS__63000077_MAIN__24$', duration=3000, align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3500):
@@ -615,7 +615,7 @@ class 다시만난가족_14(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera(trigger_id=8011)
         # 아니야, 털북숭이. 미안해 할 필요 없어.\n$npcName:11004356$의 소원은 따로 있으니까
-        self.add_cinematic_talk(npc_id=11004361, msg='$63000077_CS__63000077_MAIN__25$', duration=4000, illust_id='Aiden_smile', align=Align.Right)
+        self.add_cinematic_talk(npc_id=11004361, msg='$63000077_CS__63000077_MAIN__25$', duration=4000, illust_id='Aiden_smile', align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4500):
@@ -625,7 +625,7 @@ class 다시만난가족_14(trigger_api.Trigger):
 class 다시만난가족_15(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         # 그래. 진짜 소원을 말하면, 그걸 들어주렴.
-        self.add_cinematic_talk(npc_id=11004365, msg='$63000077_CS__63000077_MAIN__26$', duration=3500, illust_id='Mia_happy', align=Align.Right)
+        self.add_cinematic_talk(npc_id=11004365, msg='$63000077_CS__63000077_MAIN__26$', duration=3500, illust_id='Mia_happy', align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -634,7 +634,7 @@ class 다시만난가족_15(trigger_api.Trigger):
 
 class 다시만난가족_16(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11004356, msg='$63000077_CS__63000077_MAIN__27$', duration=2000, illust_id='Evelyn_normal', align=Align.Right) # ……
+        self.add_cinematic_talk(npc_id=11004356, msg='$63000077_CS__63000077_MAIN__27$', duration=2000, illust_id='Evelyn_normal', align=Align.right) # ……
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=2000):
@@ -644,7 +644,7 @@ class 다시만난가족_16(trigger_api.Trigger):
 class 다시만난가족_17(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         # 미안해요, 모두.\n내가 부린 투정 때문에… 모두 너무 고생했어요.
-        self.add_cinematic_talk(npc_id=11004356, msg='$63000077_CS__63000077_MAIN__28$', duration=3500, illust_id='Evelyn_sad', align=Align.Right)
+        self.add_cinematic_talk(npc_id=11004356, msg='$63000077_CS__63000077_MAIN__28$', duration=3500, illust_id='Evelyn_sad', align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -654,7 +654,7 @@ class 다시만난가족_17(trigger_api.Trigger):
 class 다시만난가족_18(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         # 그래서, 우리 $npcName:11004356$의 진짜 크리스마스 소원은 뭐지?
-        self.add_cinematic_talk(npc_id=11004368, msg='$63000077_CS__63000077_MAIN__29$', duration=3000, illust_id='June_smile', align=Align.Right)
+        self.add_cinematic_talk(npc_id=11004368, msg='$63000077_CS__63000077_MAIN__29$', duration=3000, illust_id='June_smile', align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3500):
@@ -664,7 +664,7 @@ class 다시만난가족_18(trigger_api.Trigger):
 class 다시만난가족_19(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         # 우리 가족 모두 함께 모여서…\n행복한 크리스마스 파티를 하는 거예요
-        self.add_cinematic_talk(npc_id=11004356, msg='$63000077_CS__63000077_MAIN__30$', duration=3500, illust_id='Evelyn_glad', align=Align.Right)
+        self.add_cinematic_talk(npc_id=11004356, msg='$63000077_CS__63000077_MAIN__30$', duration=3500, illust_id='Evelyn_glad', align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):

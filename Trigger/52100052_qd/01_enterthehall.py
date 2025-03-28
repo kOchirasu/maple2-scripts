@@ -45,7 +45,7 @@ class BlackeyeApp02(trigger_api.Trigger):
         self.set_cinematic_ui(type=3)
         self.select_camera(trigger_id=600)
         self.move_npc(spawn_id=101, patrol_name='MS2PatrolData_101')
-        self.add_cinematic_talk(npc_id=11001590, illust_id='11001590', msg='$52100052_QD__01_ENTERTHEHALL__0$', duration=3000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11001590, illust_id='11001590', msg='$52100052_QD__01_ENTERTHEHALL__0$', duration=3000, align=Align.left)
         self.set_skip(state=BlackeyeApp02Skip)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -65,7 +65,7 @@ class BlackeyeApp02Skip(trigger_api.Trigger):
 class BlackeyeApp03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_npc_emotion_loop(spawn_id=101, sequence_name='Talk_A', duration=3000.0)
-        self.add_cinematic_talk(npc_id=11001590, illust_id='11001590', msg='$52100052_QD__01_ENTERTHEHALL__1$', duration=3000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11001590, illust_id='11001590', msg='$52100052_QD__01_ENTERTHEHALL__1$', duration=3000, align=Align.left)
         self.set_skip(state=BlackeyeApp03Skip)
 
     def on_tick(self) -> trigger_api.Trigger:

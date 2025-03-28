@@ -88,7 +88,7 @@ class 앤등장(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[8001], return_view=False)
         self.move_npc(spawn_id=101, patrol_name='MS2PatrolData_ann01')
-        self.add_cinematic_talk(npc_id=11003432, illust_id='Ann_normal', msg='$02000065_BF__MAIN__0$', duration=3000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003432, illust_id='Ann_normal', msg='$02000065_BF__MAIN__0$', duration=3000, align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):

@@ -119,7 +119,7 @@ class 클라디아대사1(trigger_api.Trigger):
         self.set_onetime_effect(id=1, path='BG/Common/ScreenMask/Eff_fadein_3sec.xml')
         self.select_camera_path(path_ids=[1000,1001], return_view=False)
         self.set_npc_emotion_loop(spawn_id=2000, sequence_name='Bore_A', duration=1333.0)
-        self.add_cinematic_talk(npc_id=11004419, msg='$52100103_QD__MAIN__0$', duration=3000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11004419, msg='$52100103_QD__MAIN__0$', duration=3000, align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=1000):
@@ -130,7 +130,7 @@ class 마를레네대사1(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_onetime_effect(id=1, path='BG/Common/ScreenMask/Eff_fadein_3sec.xml')
         self.set_npc_emotion_loop(spawn_id=1000, sequence_name='Talk_A', duration=1333.0)
-        self.add_cinematic_talk(npc_id=11004395, msg='$52100103_QD__MAIN__1$', duration=3000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11004395, msg='$52100103_QD__MAIN__1$', duration=3000, align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=1500):
@@ -155,8 +155,8 @@ class 마를레네대사2(trigger_api.Trigger):
         self.spawn_monster(spawn_ids=[203], auto_target=False)
         self.set_npc_rotation(spawn_id=1000, rotation=-45.0)
         self.set_npc_rotation(spawn_id=2000, rotation=45.0)
-        self.add_cinematic_talk(npc_id=11004395, msg='$52100103_QD__MAIN__2$', duration=2000, align=Align.Left)
-        self.add_cinematic_talk(npc_id=11004419, msg='$52100103_QD__MAIN__3$', duration=2000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11004395, msg='$52100103_QD__MAIN__2$', duration=2000, align=Align.left)
+        self.add_cinematic_talk(npc_id=11004419, msg='$52100103_QD__MAIN__3$', duration=2000, align=Align.left)
         self.set_npc_emotion_loop(spawn_id=3, sequence_name='Bore_A', duration=1333.0)
         self.select_camera(trigger_id=100)
 
@@ -168,7 +168,7 @@ class 마를레네대사2(trigger_api.Trigger):
 class 투르카대사1(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.move_user_path(patrol_name='PatrolData_PC_01')
-        self.add_cinematic_talk(npc_id=11004430, msg='$52100103_QD__MAIN__4$', duration=3000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11004430, msg='$52100103_QD__MAIN__4$', duration=3000, align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=1000):
@@ -197,7 +197,7 @@ class 포탈오픈(trigger_api.Trigger):
 
 class PC대사(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11004395, msg='$52100103_QD__MAIN__5$', duration=3000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11004395, msg='$52100103_QD__MAIN__5$', duration=3000, align=Align.left)
         self.move_user(map_id=52100103, portal_id=2)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -223,7 +223,7 @@ class PC이동(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.destroy_monster(spawn_ids=[1000], arg2=False)
         self.spawn_monster(spawn_ids=[1001], auto_target=False)
-        self.add_cinematic_talk(npc_id=11004430, msg='$52100103_QD__MAIN__6$', duration=3000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11004430, msg='$52100103_QD__MAIN__6$', duration=3000, align=Align.left)
         self.move_npc(spawn_id=1001, patrol_name='PatrolData_1001_1')
         self.move_npc(spawn_id=300, patrol_name='PatrolData_Turka_2')
         self.move_npc(spawn_id=200, patrol_name='PatrolData_200_2')
@@ -261,7 +261,7 @@ class 투르카대사협박1(trigger_api.Trigger):
         self.set_npc_rotation(spawn_id=201, rotation=-45.0)
         self.set_npc_rotation(spawn_id=200, rotation=15.0)
         self.set_npc_rotation(spawn_id=203, rotation=-15.0)
-        self.add_cinematic_talk(npc_id=11004430, msg='$52100103_QD__MAIN__8$', duration=3000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11004430, msg='$52100103_QD__MAIN__8$', duration=3000, align=Align.left)
         self.set_npc_emotion_loop(spawn_id=300, sequence_name='Bore_A', duration=1333.0)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -271,7 +271,7 @@ class 투르카대사협박1(trigger_api.Trigger):
 
 class 마를레네협박(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11004395, msg='$52100103_QD__MAIN__9$', duration=3000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11004395, msg='$52100103_QD__MAIN__9$', duration=3000, align=Align.left)
         self.set_npc_emotion_loop(spawn_id=1001, sequence_name='Talk_A', duration=1333.0)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -281,9 +281,9 @@ class 마를레네협박(trigger_api.Trigger):
 
 class 투르카대사협박2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11004430, msg='$52100103_QD__MAIN__10$', duration=6000, align=Align.Left)
-        self.add_cinematic_talk(npc_id=11004395, msg='$52100103_QD__MAIN__11$', duration=2000, align=Align.Left)
-        self.add_cinematic_talk(npc_id=11004430, msg='$52100103_QD__MAIN__12$', duration=3000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11004430, msg='$52100103_QD__MAIN__10$', duration=6000, align=Align.left)
+        self.add_cinematic_talk(npc_id=11004395, msg='$52100103_QD__MAIN__11$', duration=2000, align=Align.left)
+        self.add_cinematic_talk(npc_id=11004430, msg='$52100103_QD__MAIN__12$', duration=3000, align=Align.left)
         self.set_npc_emotion_loop(spawn_id=300, sequence_name='Bore_A', duration=1333.0)
         self.destroy_monster(spawn_ids=[2000], arg2=False)
         self.spawn_monster(spawn_ids=[2001], auto_target=False)
@@ -296,8 +296,8 @@ class 투르카대사협박2(trigger_api.Trigger):
 class 클라디아대사(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.move_npc(spawn_id=2001, patrol_name='PatrolData_2001_1')
-        self.add_cinematic_talk(npc_id=11004385, msg='$52100103_QD__MAIN__13$', duration=2000, align=Align.Left)
-        self.add_cinematic_talk(npc_id=11004385, msg='$52100103_QD__MAIN__14$', duration=3500, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11004385, msg='$52100103_QD__MAIN__13$', duration=2000, align=Align.left)
+        self.add_cinematic_talk(npc_id=11004385, msg='$52100103_QD__MAIN__14$', duration=3500, align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=100):
@@ -306,7 +306,7 @@ class 클라디아대사(trigger_api.Trigger):
 
 class 마를레네대사(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11004395, msg='$52100103_QD__MAIN__15$', duration=2000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11004395, msg='$52100103_QD__MAIN__15$', duration=2000, align=Align.left)
         self.set_npc_rotation(spawn_id=1001, rotation=45.0)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -326,8 +326,8 @@ class 클라디아마를레네바라보기(trigger_api.Trigger):
 class 클라디아대사2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_npc_emotion_loop(spawn_id=2001, sequence_name='Talk_A', duration=1333.0)
-        self.add_cinematic_talk(npc_id=11004385, msg='$52100103_QD__MAIN__16$', duration=4000, align=Align.Left)
-        self.add_cinematic_talk(npc_id=11004395, msg='$52100103_QD__MAIN__17$', duration=3000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11004385, msg='$52100103_QD__MAIN__16$', duration=4000, align=Align.left)
+        self.add_cinematic_talk(npc_id=11004395, msg='$52100103_QD__MAIN__17$', duration=3000, align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=1000):
@@ -336,7 +336,7 @@ class 클라디아대사2(trigger_api.Trigger):
 
 class 투르카대사3(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11004430, msg='$52100103_QD__MAIN__18$', duration=3000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11004430, msg='$52100103_QD__MAIN__18$', duration=3000, align=Align.left)
         self.set_npc_emotion_loop(spawn_id=300, sequence_name='Bore_A', duration=1333.0)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -379,7 +379,7 @@ class 투르카퇴장(trigger_api.Trigger):
 class 마를레네엔딩대사(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[1005,1006], return_view=False)
-        self.add_cinematic_talk(npc_id=11004395, msg='$52100103_QD__MAIN__19$', duration=2000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11004395, msg='$52100103_QD__MAIN__19$', duration=2000, align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=1000):

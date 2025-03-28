@@ -91,9 +91,9 @@ class 삼자대화_02(trigger_api.Trigger):
 
 class 삼자대화_03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003329, msg='$52000140_QD__MAIN__2$', duration=2500, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003329, msg='$52000140_QD__MAIN__2$', duration=2500, align=Align.right)
         self.move_npc(spawn_id=101, patrol_name='MS2PatrolData_2003')
-        self.add_cinematic_talk(npc_id=11003329, msg='$52000140_QD__MAIN__3$', duration=2500, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003329, msg='$52000140_QD__MAIN__3$', duration=2500, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5300):
@@ -181,7 +181,7 @@ class 알론과대화_01(trigger_api.Trigger):
 
 class 알론과대화_02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003328, msg='$52000140_QD__MAIN__5$', duration=3000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003328, msg='$52000140_QD__MAIN__5$', duration=3000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -199,8 +199,8 @@ class 알론과대화_03(trigger_api.Trigger):
 
 class 알론과대화_04(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003328, msg='$52000140_QD__MAIN__7$', duration=2500, align=Align.Right)
-        self.add_cinematic_talk(npc_id=11003328, msg='$52000140_QD__MAIN__8$', duration=2500, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003328, msg='$52000140_QD__MAIN__7$', duration=2500, align=Align.right)
+        self.add_cinematic_talk(npc_id=11003328, msg='$52000140_QD__MAIN__8$', duration=2500, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5300):
@@ -221,7 +221,7 @@ class 알론과대화_05(trigger_api.Trigger):
 
 class 알론과대화_06(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003328, msg='$52000140_QD__MAIN__10$', duration=2000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003328, msg='$52000140_QD__MAIN__10$', duration=2000, align=Align.right)
         self.move_user_path(patrol_name='MS2PatrolData_2008')
         self.spawn_monster(spawn_ids=[102], auto_target=False)
 
@@ -241,7 +241,7 @@ class 알론과대화_07(trigger_api.Trigger):
 
 class 차삼자대화_01_2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003329, msg='$52000140_QD__MAIN__11$', duration=3000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003329, msg='$52000140_QD__MAIN__11$', duration=3000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -259,8 +259,8 @@ class 차삼자대화_02_2(trigger_api.Trigger):
 
 class 차삼자대화_03_2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003329, msg='$52000140_QD__MAIN__13$', duration=2500, align=Align.Right)
-        self.add_cinematic_talk(npc_id=11003329, msg='$52000140_QD__MAIN__14$', duration=2500, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003329, msg='$52000140_QD__MAIN__13$', duration=2500, align=Align.right)
+        self.add_cinematic_talk(npc_id=11003329, msg='$52000140_QD__MAIN__14$', duration=2500, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5200):
@@ -279,8 +279,8 @@ class 차삼자대화_04_2(trigger_api.Trigger):
 
 class 차삼자대화_05_2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003329, msg='$52000140_QD__MAIN__17$', duration=2500, align=Align.Right)
-        self.add_cinematic_talk(npc_id=11003329, msg='$52000140_QD__MAIN__18$', duration=2500, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003329, msg='$52000140_QD__MAIN__17$', duration=2500, align=Align.right)
+        self.add_cinematic_talk(npc_id=11003329, msg='$52000140_QD__MAIN__18$', duration=2500, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5300):
@@ -298,7 +298,7 @@ class 차삼자대화_06_2(trigger_api.Trigger):
 
 class 차삼자대화_07_2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003329, msg='$52000140_QD__MAIN__20$', duration=2500, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003329, msg='$52000140_QD__MAIN__20$', duration=2500, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -362,8 +362,8 @@ class 투르카와전투_03(trigger_api.Trigger):
 class 차삼자대화_01_3(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_onetime_effect(id=1, path='BG/Common/ScreenMask/Eff_fadein_1sec.xml')
-        self.add_cinematic_talk(npc_id=11003329, msg='$52000140_QD__MAIN__22$', duration=2500, align=Align.Right)
-        self.add_cinematic_talk(npc_id=11003329, msg='$52000140_QD__MAIN__23$', duration=2500, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003329, msg='$52000140_QD__MAIN__22$', duration=2500, align=Align.right)
+        self.add_cinematic_talk(npc_id=11003329, msg='$52000140_QD__MAIN__23$', duration=2500, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5300):

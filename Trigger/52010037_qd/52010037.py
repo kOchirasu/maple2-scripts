@@ -97,7 +97,7 @@ class 지하기지전경씬02_c(trigger_api.Trigger):
 
 class 지하기지전경씬03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.show_caption(type='VerticalCaption', title='$52010037_QD__52010037__0$', desc='$52010037_QD__52010037__1$', align=Align.BottomLeft, duration=7000, scale=2.5)
+        self.show_caption(type='VerticalCaption', title='$52010037_QD__52010037__0$', desc='$52010037_QD__52010037__1$', align=Align.bottomLeft, duration=7000, scale=2.5)
         self.select_camera_path(path_ids=[3006,3007], return_view=False)
 
     def on_tick(self) -> trigger_api.Trigger:

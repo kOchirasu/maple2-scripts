@@ -41,7 +41,7 @@ class 카메라_시작(trigger_api.Trigger):
 class 카메라_캡션(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[5001,5002])
-        self.show_caption(type='VerticalCaption', title='$02020025_BF__main__3$', desc='$02020025_BF__main__4$', align=Align.CenterLeft, duration=5000, scale=2.0)
+        self.show_caption(type='VerticalCaption', title='$02020025_BF__main__3$', desc='$02020025_BF__main__4$', align=Align.centerLeft, duration=5000, scale=2.0)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -62,7 +62,7 @@ class 유저연출(trigger_api.Trigger):
 class 카메라_콘대르설명1(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_npc_emotion_loop(spawn_id=202, sequence_name='Talk_B', duration=18430.0)
-        self.add_cinematic_talk(npc_id=24110001, msg='$02020025_BF__main__0$', duration=4000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=24110001, msg='$02020025_BF__main__0$', duration=4000, align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=1000):
@@ -89,7 +89,7 @@ class 유저연출_3(trigger_api.Trigger):
 
 class 카메라_콘대르설명2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=24110001, illust_id='Conder_normal', msg='$02020025_BF__main__1$', duration=4000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=24110001, illust_id='Conder_normal', msg='$02020025_BF__main__1$', duration=4000, align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -98,7 +98,7 @@ class 카메라_콘대르설명2(trigger_api.Trigger):
 
 class 카메라_콘대르설명3(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=24110001, illust_id='Conder_normal', msg='$02020025_BF__main__2$', duration=4000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=24110001, illust_id='Conder_normal', msg='$02020025_BF__main__2$', duration=4000, align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -107,7 +107,7 @@ class 카메라_콘대르설명3(trigger_api.Trigger):
 
 class 카메라_콘대르설명4(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=24110001, illust_id='Conder_normal', msg='$02020025_BF__main__7$', duration=4000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=24110001, illust_id='Conder_normal', msg='$02020025_BF__main__7$', duration=4000, align=Align.left)
         self.set_scene_skip() # Missing State: State
 
     def on_tick(self) -> trigger_api.Trigger:

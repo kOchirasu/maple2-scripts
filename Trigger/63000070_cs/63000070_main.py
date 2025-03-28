@@ -141,7 +141,7 @@ class scene1_ladygoback1(trigger_api.Trigger):
         self.select_camera_path(path_ids=[8006,8007], return_view=False)
         self.move_npc(spawn_id=101, patrol_name='Patrol_lady_backward_01')
         # 하지만 여기까지 온 것이 가상하니까,\n제안을 하나 하지.
-        self.add_cinematic_talk(npc_id=11004289, illust_id='Rue_Halloween', align=Align.Right, msg='$63000070_CS__63000070_MAIN__4$', duration=5000)
+        self.add_cinematic_talk(npc_id=11004289, illust_id='Rue_Halloween', align=Align.right, msg='$63000070_CS__63000070_MAIN__4$', duration=5000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):
@@ -152,7 +152,7 @@ class scene1_ladygoback2(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[8008], return_view=False)
         # 자, 네가 원하던 것!\n가질 수 있다면 가져봐.
-        self.add_cinematic_talk(npc_id=11004289, illust_id='Rue_Halloween', align=Align.Right, msg='$63000070_CS__63000070_MAIN__5$', duration=3000)
+        self.add_cinematic_talk(npc_id=11004289, illust_id='Rue_Halloween', align=Align.right, msg='$63000070_CS__63000070_MAIN__5$', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -164,7 +164,7 @@ class scene1_ladygoback3(trigger_api.Trigger):
         self.select_camera_path(path_ids=[8010], return_view=False)
         self.move_npc(spawn_id=101, patrol_name='Patrol_lady_backward_02')
         # 그래… 네가 찾으려던 것, 이 안에 있어.\n하지만 넌 얻을 수 없을 거야.
-        self.add_cinematic_talk(npc_id=11004289, illust_id='Rue_Halloween', align=Align.Right, msg='$63000070_CS__63000070_MAIN__6$', duration=4000)
+        self.add_cinematic_talk(npc_id=11004289, illust_id='Rue_Halloween', align=Align.right, msg='$63000070_CS__63000070_MAIN__6$', duration=4000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -173,7 +173,7 @@ class scene1_ladygoback3(trigger_api.Trigger):
 
 class scene1_ladygoback4(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11004289, illust_id='Rue_Halloween', align=Align.Right, msg='$63000070_CS__63000070_MAIN__7$', duration=4000) # 왠줄 알아?
+        self.add_cinematic_talk(npc_id=11004289, illust_id='Rue_Halloween', align=Align.right, msg='$63000070_CS__63000070_MAIN__7$', duration=4000) # 왠줄 알아?
         self.set_npc_emotion_loop(spawn_id=101, sequence_name='Talk_A', duration=4000.0)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -371,7 +371,7 @@ class scene2_girltalk(trigger_api.Trigger):
 
 class scene2_casezoomin(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11004308, align=Align.Right, msg='$63000070_CS__63000070_MAIN__11$', duration=3000) # 진실을 확인할 시간
+        self.add_cinematic_talk(npc_id=11004308, align=Align.right, msg='$63000070_CS__63000070_MAIN__11$', duration=3000) # 진실을 확인할 시간
         # Missing State: State,  setsceneskip 2 close
         self.set_scene_skip()
         # setsceneskip 2 close

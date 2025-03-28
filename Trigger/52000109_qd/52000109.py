@@ -30,7 +30,7 @@ class Wait02(trigger_api.Trigger):
 
 class Wait03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.show_caption(type='VerticalCaption', title='$52000109_QD__52000109__0$', desc='$52000109_QD__52000109__1$', align=Align.BottomLeft, duration=6000, scale=2.5)
+        self.show_caption(type='VerticalCaption', title='$52000109_QD__52000109__0$', desc='$52000109_QD__52000109__1$', align=Align.bottomLeft, duration=6000, scale=2.5)
         self.set_onetime_effect(id=40, enable=True, path='BG/Common/Eff_Com_Vibrate_Short.xml')
         self.move_user(map_id=52000109, portal_id=10)
 
@@ -55,7 +55,7 @@ class 에델슈타인전경씬01(trigger_api.Trigger):
 
 class 에델슈타인전경씬02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003292, illust_id='Ayesha_normal', msg='$52000109_QD__52000109__4$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003292, illust_id='Ayesha_normal', msg='$52000109_QD__52000109__4$', duration=4000, align=Align.right)
         self.set_onetime_effect(id=3000982, enable=True, path='BG/Common/Sound/Eff_Ayesha_IntroMovie_03000982.xml')
         self.set_onetime_effect(id=50, enable=True, path='BG/Common/Eff_Com_Vibrate_Short.xml')
 
@@ -66,7 +66,7 @@ class 에델슈타인전경씬02(trigger_api.Trigger):
 
 class 에델슈타인전경씬03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=0, illust_id='0', msg='$52000109_QD__52000109__5$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, illust_id='0', msg='$52000109_QD__52000109__5$', duration=4000, align=Align.right)
         self.set_onetime_effect(id=60, enable=True, path='BG/Common/Eff_Com_Vibrate_Short.xml')
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -76,7 +76,7 @@ class 에델슈타인전경씬03(trigger_api.Trigger):
 
 class 에델슈타인전경씬04(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003292, illust_id='Ayesha_normal', msg='$52000109_QD__52000109__6$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003292, illust_id='Ayesha_normal', msg='$52000109_QD__52000109__6$', duration=4000, align=Align.right)
         self.set_onetime_effect(id=3000983, enable=True, path='BG/Common/Sound/Eff_Ayesha_IntroMovie_03000983.xml')
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -86,7 +86,7 @@ class 에델슈타인전경씬04(trigger_api.Trigger):
 
 class 에델슈타인전경씬05(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=0, illust_id='0', msg='$52000109_QD__52000109__7$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, illust_id='0', msg='$52000109_QD__52000109__7$', duration=4000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -95,7 +95,7 @@ class 에델슈타인전경씬05(trigger_api.Trigger):
 
 class 에델슈타인전경씬06(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=0, illust_id='0', msg='$52000109_QD__52000109__8$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, illust_id='0', msg='$52000109_QD__52000109__8$', duration=4000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -104,7 +104,7 @@ class 에델슈타인전경씬06(trigger_api.Trigger):
 
 class 에델슈타인전경씬07(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003292, illust_id='Ayesha_normal', msg='$52000109_QD__52000109__9$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003292, illust_id='Ayesha_normal', msg='$52000109_QD__52000109__9$', duration=4000, align=Align.right)
         self.set_onetime_effect(id=3000984, enable=True, path='BG/Common/Sound/Eff_Ayesha_IntroMovie_03000984.xml')
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -114,7 +114,7 @@ class 에델슈타인전경씬07(trigger_api.Trigger):
 
 class 에델슈타인전경씬08(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=0, illust_id='0', msg='$52000109_QD__52000109__10$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, illust_id='0', msg='$52000109_QD__52000109__10$', duration=4000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -134,7 +134,7 @@ class 에델슈타인전경씬10(trigger_api.Trigger):
 
 class 에델슈타인전경씬11(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=0, illust_id='0', msg='$52000109_QD__52000109__11$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, illust_id='0', msg='$52000109_QD__52000109__11$', duration=4000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -143,7 +143,7 @@ class 에델슈타인전경씬11(trigger_api.Trigger):
 
 class 에델슈타인전경씬12(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=0, illust_id='0', msg='$52000109_QD__52000109__12$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, illust_id='0', msg='$52000109_QD__52000109__12$', duration=4000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -228,7 +228,7 @@ class 라딘등장씬03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_cinematic_ui(type=1)
         self.set_cinematic_ui(type=3)
-        self.add_cinematic_talk(npc_id=11003295, illust_id='Radin_normal', msg='$52000109_QD__52000109__15$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003295, illust_id='Radin_normal', msg='$52000109_QD__52000109__15$', duration=4000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):
@@ -315,7 +315,7 @@ class 라딘대화씬03(trigger_api.Trigger):
 
 class 라딘대화씬04(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.show_caption(type='VerticalCaption', title='$52000109_QD__52000109__18$', desc='$52000109_QD__52000109__19$', align=Align.BottomLeft, duration=10000, scale=2.5)
+        self.show_caption(type='VerticalCaption', title='$52000109_QD__52000109__18$', desc='$52000109_QD__52000109__19$', align=Align.bottomLeft, duration=10000, scale=2.5)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=10000):

@@ -52,7 +52,7 @@ class eventscene_01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_cinematic_ui(type=1)
         self.set_cinematic_ui(type=3)
-        self.add_cinematic_talk(npc_id=11003169, illust_id='Jordy_normal', msg='$52000119_QD__MAIN__0$', duration=3000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003169, illust_id='Jordy_normal', msg='$52000119_QD__MAIN__0$', duration=3000, align=Align.left)
         self.set_scene_skip(state=fadeout_02, action='nextState')
 
     def on_tick(self) -> trigger_api.Trigger:

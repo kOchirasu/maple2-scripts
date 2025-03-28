@@ -34,7 +34,7 @@ class ErebTalk_01(trigger_api.Trigger):
         self.set_cinematic_ui(type=1)
         self.set_cinematic_ui(type=3)
         self.select_camera_path(path_ids=[700], return_view=False) # 에레브 얼굴로 클로즈업
-        self.add_cinematic_talk(npc_id=11001663, illust_id='Ereb_normal', msg='$52000033_QD__AUDIENCEWITHEREB_03__0$', duration=3000, align=Align.Left) # 에레브
+        self.add_cinematic_talk(npc_id=11001663, illust_id='Ereb_normal', msg='$52000033_QD__AUDIENCEWITHEREB_03__0$', duration=3000, align=Align.left) # 에레브
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):
@@ -44,7 +44,7 @@ class ErebTalk_01(trigger_api.Trigger):
 class ErebTalk_02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[901], return_view=False) # 에레브 얼굴로 클로즈업
-        self.add_cinematic_talk(npc_id=11001663, msg='$52000033_QD__AUDIENCEWITHEREB_03__1$', duration=3000, align=Align.Left) # 에레브
+        self.add_cinematic_talk(npc_id=11001663, msg='$52000033_QD__AUDIENCEWITHEREB_03__1$', duration=3000, align=Align.left) # 에레브
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -111,7 +111,7 @@ class fadein(trigger_api.Trigger):
 
 class ErebTalk_04(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11001663, illust_id='Ereb_surprise', msg='$52000033_QD__AUDIENCEWITHEREB_03__5$', duration=3000, align=Align.Left) # 에레브
+        self.add_cinematic_talk(npc_id=11001663, illust_id='Ereb_surprise', msg='$52000033_QD__AUDIENCEWITHEREB_03__5$', duration=3000, align=Align.left) # 에레브
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -121,7 +121,7 @@ class ErebTalk_04(trigger_api.Trigger):
 class ErebTalk_05(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_sound(trigger_id=7001, enable=True)
-        self.add_cinematic_talk(npc_id=11001663, illust_id='Ereb_closeEye', msg='$52000033_QD__AUDIENCEWITHEREB_03__6$', duration=3000, align=Align.Left) # 에레브
+        self.add_cinematic_talk(npc_id=11001663, illust_id='Ereb_closeEye', msg='$52000033_QD__AUDIENCEWITHEREB_03__6$', duration=3000, align=Align.left) # 에레브
         self.add_balloon_talk(spawn_id=401, msg='$52000033_QD__AUDIENCEWITHEREB_03__7$', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -131,7 +131,7 @@ class ErebTalk_05(trigger_api.Trigger):
 
 class ErebTalk_06(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11001663, illust_id='Ereb_serious', msg='$52000033_QD__AUDIENCEWITHEREB_03__8$', duration=3000, align=Align.Left) # 에레브
+        self.add_cinematic_talk(npc_id=11001663, illust_id='Ereb_serious', msg='$52000033_QD__AUDIENCEWITHEREB_03__8$', duration=3000, align=Align.left) # 에레브
         self.move_npc(spawn_id=601, patrol_name='MS2PatrolData_1006')
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -141,7 +141,7 @@ class ErebTalk_06(trigger_api.Trigger):
 
 class ErebTalk_07(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11001663, illust_id='Ereb_closeEye', msg='$52000033_QD__AUDIENCEWITHEREB_03__9$', duration=3000, align=Align.Left) # 에레브
+        self.add_cinematic_talk(npc_id=11001663, illust_id='Ereb_closeEye', msg='$52000033_QD__AUDIENCEWITHEREB_03__9$', duration=3000, align=Align.left) # 에레브
         self.destroy_monster(spawn_ids=[601])
         self.set_scene_skip() # Missing State: State
 

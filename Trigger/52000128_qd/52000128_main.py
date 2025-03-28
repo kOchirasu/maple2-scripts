@@ -114,7 +114,7 @@ class 빅스소개_01(trigger_api.Trigger):
 
 class 빅스소개_02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003272, msg='$52000128_QD__52000128_MAIN__0$', duration=2000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003272, msg='$52000128_QD__52000128_MAIN__0$', duration=2000, align=Align.left)
         self.set_scene_skip(state=제시소개_01, action='nextState')
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -124,7 +124,7 @@ class 빅스소개_02(trigger_api.Trigger):
 
 class 빅스소개_03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.show_caption(type='VerticalCaption', title='$52000128_QD__52000128_MAIN__1$', desc='$52000128_QD__52000128_MAIN__2$', align=Align.BottomLeft, duration=3000, scale=2.5)
+        self.show_caption(type='VerticalCaption', title='$52000128_QD__52000128_MAIN__1$', desc='$52000128_QD__52000128_MAIN__2$', align=Align.bottomLeft, duration=3000, scale=2.5)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3500):
@@ -144,7 +144,7 @@ class 제시소개_01(trigger_api.Trigger):
 
 class 제시소개_02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003273, msg='$52000128_QD__52000128_MAIN__3$', duration=2000, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003273, msg='$52000128_QD__52000128_MAIN__3$', duration=2000, align=Align.left)
         self.set_scene_skip(state=카일소개_01, action='nextState')
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -154,7 +154,7 @@ class 제시소개_02(trigger_api.Trigger):
 
 class 제시소개_03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.show_caption(type='VerticalCaption', title='$52000128_QD__52000128_MAIN__4$', desc='$52000128_QD__52000128_MAIN__5$', align=Align.BottomLeft, duration=3000, scale=2.5)
+        self.show_caption(type='VerticalCaption', title='$52000128_QD__52000128_MAIN__4$', desc='$52000128_QD__52000128_MAIN__5$', align=Align.bottomLeft, duration=3000, scale=2.5)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3500):
@@ -182,7 +182,7 @@ class 카일소개_02(trigger_api.Trigger):
 
 class 카일소개_03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003280, msg='$52000128_QD__52000128_MAIN__6$', duration=2351, align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003280, msg='$52000128_QD__52000128_MAIN__6$', duration=2351, align=Align.left)
         self.set_npc_emotion_sequence(spawn_id=103, sequence_name='Bore_B')
         self.set_scene_skip(state=퀘스트시작_01, action='nextState')
 
@@ -193,7 +193,7 @@ class 카일소개_03(trigger_api.Trigger):
 
 class 카일소개_04(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.show_caption(type='VerticalCaption', title='$52000128_QD__52000128_MAIN__7$', desc='$52000128_QD__52000128_MAIN__8$', align=Align.BottomLeft, duration=3000, scale=2.5)
+        self.show_caption(type='VerticalCaption', title='$52000128_QD__52000128_MAIN__7$', desc='$52000128_QD__52000128_MAIN__8$', align=Align.bottomLeft, duration=3000, scale=2.5)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3500):
@@ -442,7 +442,7 @@ class 교도관전투끝_03(trigger_api.Trigger):
 class 전투끝_04(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_scene_skip(state=벨마등장_06, action='nextState')
-        self.add_cinematic_talk(npc_id=0, msg='$52000128_QD__52000128_MAIN__12$', duration=3000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, msg='$52000128_QD__52000128_MAIN__12$', duration=3000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3300):
@@ -452,7 +452,7 @@ class 전투끝_04(trigger_api.Trigger):
 class 전투끝_05(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_pc_emotion_sequence(sequence_names=['Emotion_Suprise_A'])
-        self.add_cinematic_talk(npc_id=0, msg='$52000128_QD__52000128_MAIN__13$', duration=3000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, msg='$52000128_QD__52000128_MAIN__13$', duration=3000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3300):
@@ -470,7 +470,7 @@ class 벨마등장_01(trigger_api.Trigger):
 
 class 벨마등장_02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003274, msg='$52000128_QD__52000128_MAIN__14$', duration=3000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003274, msg='$52000128_QD__52000128_MAIN__14$', duration=3000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3300):
@@ -480,7 +480,7 @@ class 벨마등장_02(trigger_api.Trigger):
 class 벨마등장_03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[8007], return_view=False)
-        self.add_cinematic_talk(npc_id=0, msg='$52000128_QD__52000128_MAIN__15$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, msg='$52000128_QD__52000128_MAIN__15$', duration=4000, align=Align.right)
         self.set_pc_emotion_sequence(sequence_names=['Talk_A'])
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -500,7 +500,7 @@ class 벨마등장_04(trigger_api.Trigger):
 class 벨마등장_05(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_npc_emotion_sequence(spawn_id=105, sequence_name='Attack_01_B')
-        self.add_cinematic_talk(npc_id=11003274, msg='$52000128_QD__52000128_MAIN__16$', duration=3000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003274, msg='$52000128_QD__52000128_MAIN__16$', duration=3000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -570,8 +570,8 @@ class 전투후대화_01(trigger_api.Trigger):
         self.select_camera_path(path_ids=[8010], return_view=False)
         self.face_emotion()
         self.set_pc_emotion_sequence(sequence_names=['Talk_A'])
-        self.add_cinematic_talk(npc_id=0, msg='$52000128_QD__52000128_MAIN__17$', duration=3000, align=Align.Right)
-        self.add_cinematic_talk(npc_id=0, msg='$52000128_QD__52000128_MAIN__18$', duration=3000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, msg='$52000128_QD__52000128_MAIN__17$', duration=3000, align=Align.right)
+        self.add_cinematic_talk(npc_id=0, msg='$52000128_QD__52000128_MAIN__18$', duration=3000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=6500):
@@ -619,7 +619,7 @@ class 탈출_03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[8008], return_view=False)
         self.set_npc_emotion_sequence(spawn_id=105, sequence_name='Attack_01_B')
-        self.add_cinematic_talk(npc_id=11003274, msg='$52000128_QD__52000128_MAIN__20$', duration=2000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003274, msg='$52000128_QD__52000128_MAIN__20$', duration=2000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=2000):

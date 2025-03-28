@@ -68,9 +68,9 @@ class CameraEffect03_3(trigger_api.Trigger):
 class 여제알현(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_cinematic_ui(type=3)
-        self.add_cinematic_talk(npc_id=11004785, msg='$52000200_QD__52000200__1$', illust_id='Ereb_normal', align=Align.Left, duration=4000)
-        self.add_cinematic_talk(npc_id=11004778, msg='$52000200_QD__52000200__2$', align=Align.Right, illust_id='Karl_normal', duration=4000)
-        self.add_cinematic_talk(npc_id=11004785, msg='$52000200_QD__52000200__3$', illust_id='Ereb_normal', align=Align.Left, duration=4000)
+        self.add_cinematic_talk(npc_id=11004785, msg='$52000200_QD__52000200__1$', illust_id='Ereb_normal', align=Align.left, duration=4000)
+        self.add_cinematic_talk(npc_id=11004778, msg='$52000200_QD__52000200__2$', align=Align.right, illust_id='Karl_normal', duration=4000)
+        self.add_cinematic_talk(npc_id=11004785, msg='$52000200_QD__52000200__3$', illust_id='Ereb_normal', align=Align.left, duration=4000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=12000):
@@ -80,9 +80,9 @@ class 여제알현(trigger_api.Trigger):
 class 여제알현_02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[4004,4005], return_view=False)
-        self.add_cinematic_talk(npc_id=11004778, msg='$52000200_QD__52000200__4$', align=Align.Right, illust_id='Karl_normal', duration=4000)
-        self.add_cinematic_talk(npc_id=11004785, msg='$52000200_QD__52000200__5$', illust_id='Ereb_normal', align=Align.Left, duration=4500)
-        self.add_cinematic_talk(npc_id=11004785, msg='$52000200_QD__52000200__6$', illust_id='Ereb_normal', align=Align.Left, duration=3000)
+        self.add_cinematic_talk(npc_id=11004778, msg='$52000200_QD__52000200__4$', align=Align.right, illust_id='Karl_normal', duration=4000)
+        self.add_cinematic_talk(npc_id=11004785, msg='$52000200_QD__52000200__5$', illust_id='Ereb_normal', align=Align.left, duration=4500)
+        self.add_cinematic_talk(npc_id=11004785, msg='$52000200_QD__52000200__6$', illust_id='Ereb_normal', align=Align.left, duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=11500):
@@ -91,9 +91,9 @@ class 여제알현_02(trigger_api.Trigger):
 
 class 여제알현_03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11004778, msg='$52000200_QD__52000200__7$', align=Align.Right, illust_id='Karl_normal', duration=4000)
-        self.add_cinematic_talk(npc_id=11004778, msg='$52000200_QD__52000200__8$', align=Align.Right, illust_id='Karl_normal', duration=4000)
-        self.add_cinematic_talk(npc_id=11004785, msg='$52000200_QD__52000200__9$', illust_id='Ereb_surprise', align=Align.Left, duration=3000)
+        self.add_cinematic_talk(npc_id=11004778, msg='$52000200_QD__52000200__7$', align=Align.right, illust_id='Karl_normal', duration=4000)
+        self.add_cinematic_talk(npc_id=11004778, msg='$52000200_QD__52000200__8$', align=Align.right, illust_id='Karl_normal', duration=4000)
+        self.add_cinematic_talk(npc_id=11004785, msg='$52000200_QD__52000200__9$', illust_id='Ereb_surprise', align=Align.left, duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=11000):
@@ -113,12 +113,12 @@ class 여제알현_04(trigger_api.Trigger):
 
 class 여제알현_05(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11004782, msg='$52000200_QD__52000200__10$', align=Align.Left, illust_id='Ruana_normal', duration=4000)
-        self.add_cinematic_talk(npc_id=11004785, msg='$52000200_QD__52000200__11$', align=Align.Left, illust_id='Ereb_surprise', duration=4000)
-        self.add_cinematic_talk(npc_id=11004778, msg='$52000200_QD__52000200__12$', align=Align.Right, illust_id='Karl_normal', duration=4500)
-        self.add_cinematic_talk(npc_id=11004778, msg='$52000200_QD__52000200__13$', align=Align.Right, illust_id='Karl_normal', duration=4500)
-        self.add_cinematic_talk(npc_id=11004785, msg='$52000200_QD__52000200__14$', align=Align.Left, illust_id='Ereb_surprise', duration=3000)
-        self.add_cinematic_talk(npc_id=11004778, msg='$52000200_QD__52000200__15$', align=Align.Right, illust_id='Karl_normal', duration=4500)
+        self.add_cinematic_talk(npc_id=11004782, msg='$52000200_QD__52000200__10$', align=Align.left, illust_id='Ruana_normal', duration=4000)
+        self.add_cinematic_talk(npc_id=11004785, msg='$52000200_QD__52000200__11$', align=Align.left, illust_id='Ereb_surprise', duration=4000)
+        self.add_cinematic_talk(npc_id=11004778, msg='$52000200_QD__52000200__12$', align=Align.right, illust_id='Karl_normal', duration=4500)
+        self.add_cinematic_talk(npc_id=11004778, msg='$52000200_QD__52000200__13$', align=Align.right, illust_id='Karl_normal', duration=4500)
+        self.add_cinematic_talk(npc_id=11004785, msg='$52000200_QD__52000200__14$', align=Align.left, illust_id='Ereb_surprise', duration=3000)
+        self.add_cinematic_talk(npc_id=11004778, msg='$52000200_QD__52000200__15$', align=Align.right, illust_id='Karl_normal', duration=4500)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=25000):
@@ -128,13 +128,13 @@ class 여제알현_05(trigger_api.Trigger):
 class 여제알현_06(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[4007,4008], return_view=False)
-        self.add_cinematic_talk(npc_id=11004785, msg='$52000200_QD__52000200__16$', align=Align.Left, illust_id='Ereb_surprise', duration=4500)
-        self.add_cinematic_talk(npc_id=11004778, msg='$52000200_QD__52000200__17$', align=Align.Right, illust_id='Karl_normal', duration=2800)
-        self.add_cinematic_talk(npc_id=11004778, msg='$52000200_QD__52000200__18$', align=Align.Right, illust_id='Karl_normal', duration=4500)
-        self.add_cinematic_talk(npc_id=11004785, msg='$52000200_QD__52000200__19$', align=Align.Left, illust_id='Ereb_surprise', duration=4000)
-        self.add_cinematic_talk(npc_id=11004785, msg='$52000200_QD__52000200__20$', align=Align.Left, illust_id='Ereb_closeEye', duration=4000)
-        self.add_cinematic_talk(npc_id=11004785, msg='$52000200_QD__52000200__21$', align=Align.Left, illust_id='Ereb_closeEye', duration=4000)
-        self.add_cinematic_talk(npc_id=11004778, msg='$52000200_QD__52000200__22$', align=Align.Right, illust_id='Karl_normal', duration=4000)
+        self.add_cinematic_talk(npc_id=11004785, msg='$52000200_QD__52000200__16$', align=Align.left, illust_id='Ereb_surprise', duration=4500)
+        self.add_cinematic_talk(npc_id=11004778, msg='$52000200_QD__52000200__17$', align=Align.right, illust_id='Karl_normal', duration=2800)
+        self.add_cinematic_talk(npc_id=11004778, msg='$52000200_QD__52000200__18$', align=Align.right, illust_id='Karl_normal', duration=4500)
+        self.add_cinematic_talk(npc_id=11004785, msg='$52000200_QD__52000200__19$', align=Align.left, illust_id='Ereb_surprise', duration=4000)
+        self.add_cinematic_talk(npc_id=11004785, msg='$52000200_QD__52000200__20$', align=Align.left, illust_id='Ereb_closeEye', duration=4000)
+        self.add_cinematic_talk(npc_id=11004785, msg='$52000200_QD__52000200__21$', align=Align.left, illust_id='Ereb_closeEye', duration=4000)
+        self.add_cinematic_talk(npc_id=11004778, msg='$52000200_QD__52000200__22$', align=Align.right, illust_id='Karl_normal', duration=4000)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=27800):
@@ -166,14 +166,14 @@ class 음모_03(trigger_api.Trigger):
         self.set_cinematic_ui(type=2)
         self.set_cinematic_ui(type=1)
         self.set_cinematic_ui(type=3)
-        self.add_cinematic_talk(npc_id=11001975, msg='$52000200_QD__52000200__24$', align=Align.Left, duration=4500)
-        self.add_cinematic_talk(npc_id=11004778, msg='$52000200_QD__52000200__25$', align=Align.Right, illust_id='Karl_normal', duration=2800)
-        self.add_cinematic_talk(npc_id=11004778, msg='$52000200_QD__52000200__26$', align=Align.Right, illust_id='Karl_normal', duration=4000)
-        self.add_cinematic_talk(npc_id=11004778, msg='$52000200_QD__52000200__27$', align=Align.Right, illust_id='Karl_normal', duration=3000)
-        self.add_cinematic_talk(npc_id=11000264, msg='$52000200_QD__52000200__28$', align=Align.Left, illust_id='Radin_normal', duration=4500)
-        self.add_cinematic_talk(npc_id=11000264, msg='$52000200_QD__52000200__29$', align=Align.Left, illust_id='Radin_normal', duration=4000)
-        self.add_cinematic_talk(npc_id=11004778, msg='$52000200_QD__52000200__30$', align=Align.Right, illust_id='Karl_normal', duration=4000)
-        self.add_cinematic_talk(npc_id=11000264, msg='$52000200_QD__52000200__31$', align=Align.Left, illust_id='Radin_normal', duration=4000)
+        self.add_cinematic_talk(npc_id=11001975, msg='$52000200_QD__52000200__24$', align=Align.left, duration=4500)
+        self.add_cinematic_talk(npc_id=11004778, msg='$52000200_QD__52000200__25$', align=Align.right, illust_id='Karl_normal', duration=2800)
+        self.add_cinematic_talk(npc_id=11004778, msg='$52000200_QD__52000200__26$', align=Align.right, illust_id='Karl_normal', duration=4000)
+        self.add_cinematic_talk(npc_id=11004778, msg='$52000200_QD__52000200__27$', align=Align.right, illust_id='Karl_normal', duration=3000)
+        self.add_cinematic_talk(npc_id=11000264, msg='$52000200_QD__52000200__28$', align=Align.left, illust_id='Radin_normal', duration=4500)
+        self.add_cinematic_talk(npc_id=11000264, msg='$52000200_QD__52000200__29$', align=Align.left, illust_id='Radin_normal', duration=4000)
+        self.add_cinematic_talk(npc_id=11004778, msg='$52000200_QD__52000200__30$', align=Align.right, illust_id='Karl_normal', duration=4000)
+        self.add_cinematic_talk(npc_id=11000264, msg='$52000200_QD__52000200__31$', align=Align.left, illust_id='Radin_normal', duration=4000)
         self.set_scene_skip() # Missing State: State
 
     def on_tick(self) -> trigger_api.Trigger:

@@ -48,7 +48,7 @@ class 카메라이동_01(trigger_api.Trigger):
 
 class 카메라이동_02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.show_caption(type='VerticalCaption', title='$52000146_QD__52000146_MAIN__0$', desc='$52000146_QD__52000146_MAIN__1$', align=Align.BottomLeft, duration=4000, scale=2.5)
+        self.show_caption(type='VerticalCaption', title='$52000146_QD__52000146_MAIN__0$', desc='$52000146_QD__52000146_MAIN__1$', align=Align.bottomLeft, duration=4000, scale=2.5)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):
@@ -95,8 +95,8 @@ class 걸으며대화_01(trigger_api.Trigger):
 
 class 걸으며대화_02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003189, msg='$52000146_QD__52000146_MAIN__2$', duration=3000, illust_id='Hastur_normal', align=Align.Left)
-        self.add_cinematic_talk(npc_id=11003189, msg='$52000146_QD__52000146_MAIN__3$', duration=4000, illust_id='Hastur_normal', align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003189, msg='$52000146_QD__52000146_MAIN__2$', duration=3000, illust_id='Hastur_normal', align=Align.left)
+        self.add_cinematic_talk(npc_id=11003189, msg='$52000146_QD__52000146_MAIN__3$', duration=4000, illust_id='Hastur_normal', align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=8000):
@@ -105,7 +105,7 @@ class 걸으며대화_02(trigger_api.Trigger):
 
 class 걸으며대화_03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=0, msg='$52000146_QD__52000146_MAIN__4$', duration=3000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, msg='$52000146_QD__52000146_MAIN__4$', duration=3000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -114,7 +114,7 @@ class 걸으며대화_03(trigger_api.Trigger):
 
 class 걸으며대화_04(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003189, msg='$52000146_QD__52000146_MAIN__5$', duration=3000, illust_id='Hastur_normal', align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003189, msg='$52000146_QD__52000146_MAIN__5$', duration=3000, illust_id='Hastur_normal', align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -123,7 +123,7 @@ class 걸으며대화_04(trigger_api.Trigger):
 
 class 걸으며대화_05(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=0, msg='$52000146_QD__52000146_MAIN__6$', duration=3500, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, msg='$52000146_QD__52000146_MAIN__6$', duration=3500, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3500):
@@ -132,7 +132,7 @@ class 걸으며대화_05(trigger_api.Trigger):
 
 class 걸으며대화_06(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003189, msg='$52000146_QD__52000146_MAIN__7$', duration=3000, illust_id='Hastur_normal', align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003189, msg='$52000146_QD__52000146_MAIN__7$', duration=3000, illust_id='Hastur_normal', align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -142,7 +142,7 @@ class 걸으며대화_06(trigger_api.Trigger):
 class 멈춰서대화_01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_scene_skip(state=전투_01, action='nextState')
-        self.add_cinematic_talk(npc_id=0, msg='$52000146_QD__52000146_MAIN__8$', duration=3000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, msg='$52000146_QD__52000146_MAIN__8$', duration=3000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -151,7 +151,7 @@ class 멈춰서대화_01(trigger_api.Trigger):
 
 class 멈춰서대화_02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003189, msg='$52000146_QD__52000146_MAIN__9$', duration=4000, illust_id='Hastur_normal', align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003189, msg='$52000146_QD__52000146_MAIN__9$', duration=4000, illust_id='Hastur_normal', align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -228,7 +228,7 @@ class 전투종료_03(trigger_api.Trigger):
 class 전투후대화_01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_scene_skip(state=스킵도착_01, action='nextState')
-        self.add_cinematic_talk(npc_id=0, msg='$52000146_QD__52000146_MAIN__10$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, msg='$52000146_QD__52000146_MAIN__10$', duration=4000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -237,7 +237,7 @@ class 전투후대화_01(trigger_api.Trigger):
 
 class 전투후대화_02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003189, msg='$52000146_QD__52000146_MAIN__11$', duration=3000, illust_id='Hastur_normal', align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003189, msg='$52000146_QD__52000146_MAIN__11$', duration=3000, illust_id='Hastur_normal', align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -246,7 +246,7 @@ class 전투후대화_02(trigger_api.Trigger):
 
 class 전투후대화_03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=0, msg='$52000146_QD__52000146_MAIN__12$', duration=3500, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, msg='$52000146_QD__52000146_MAIN__12$', duration=3500, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -255,7 +255,7 @@ class 전투후대화_03(trigger_api.Trigger):
 
 class 전투후대화_04(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003189, msg='$52000146_QD__52000146_MAIN__13$', duration=3500, illust_id='Hastur_normal', align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003189, msg='$52000146_QD__52000146_MAIN__13$', duration=3500, illust_id='Hastur_normal', align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -264,7 +264,7 @@ class 전투후대화_04(trigger_api.Trigger):
 
 class 전투후대화_05(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=0, msg='$52000146_QD__52000146_MAIN__14$', duration=3500, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, msg='$52000146_QD__52000146_MAIN__14$', duration=3500, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -273,7 +273,7 @@ class 전투후대화_05(trigger_api.Trigger):
 
 class 전투후대화_06(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003189, msg='$52000146_QD__52000146_MAIN__15$', duration=4000, illust_id='Hastur_normal', align=Align.Left)
+        self.add_cinematic_talk(npc_id=11003189, msg='$52000146_QD__52000146_MAIN__15$', duration=4000, illust_id='Hastur_normal', align=Align.left)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -294,7 +294,7 @@ class 전투후대화_07(trigger_api.Trigger):
 
 class 전투후대화_08(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=0, msg='$52000146_QD__52000146_MAIN__16$', duration=5000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, msg='$52000146_QD__52000146_MAIN__16$', duration=5000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):
@@ -346,8 +346,8 @@ class 전투후대화_10(trigger_api.Trigger):
 class 전투후대화_11(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_scene_skip(state=하스터찾기_01, action='nextState')
-        self.add_cinematic_talk(npc_id=0, msg='$52000146_QD__52000146_MAIN__18$', duration=4000, align=Align.Right)
-        self.add_cinematic_talk(npc_id=0, msg='$52000146_QD__52000146_MAIN__19$', duration=3000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, msg='$52000146_QD__52000146_MAIN__18$', duration=4000, align=Align.right)
+        self.add_cinematic_talk(npc_id=0, msg='$52000146_QD__52000146_MAIN__19$', duration=3000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=7500):

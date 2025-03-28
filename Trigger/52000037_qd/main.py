@@ -63,7 +63,7 @@ class startscene(trigger_api.Trigger):
 class scene_01(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.move_npc(spawn_id=602, patrol_name='MS2PatrolData_3002')
-        self.add_cinematic_talk(npc_id=11003202, illust_id='Jordy_normal', msg='$52000037_QD__MAIN__0$', duration=3000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003202, illust_id='Jordy_normal', msg='$52000037_QD__MAIN__0$', duration=3000, align=Align.right)
         self.set_scene_skip(state=fadeout, action='exit')
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -74,7 +74,7 @@ class scene_01(trigger_api.Trigger):
 class scene_02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.move_npc(spawn_id=604, patrol_name='MS2PatrolData_3004')
-        self.add_cinematic_talk(npc_id=11003204, msg='$52000037_QD__MAIN__1$', duration=2000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003204, msg='$52000037_QD__MAIN__1$', duration=2000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -83,7 +83,7 @@ class scene_02(trigger_api.Trigger):
 
 class scene_03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003202, illust_id='Jordy_normal', msg='$52000037_QD__MAIN__2$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003202, illust_id='Jordy_normal', msg='$52000037_QD__MAIN__2$', duration=4000, align=Align.right)
         self.set_npc_emotion_sequence(spawn_id=602, sequence_name='Bore_A')
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -93,7 +93,7 @@ class scene_03(trigger_api.Trigger):
 
 class scene_04(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003204, msg='$52000037_QD__MAIN__3$', duration=2000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003204, msg='$52000037_QD__MAIN__3$', duration=2000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -103,7 +103,7 @@ class scene_04(trigger_api.Trigger):
 class scene_05(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_npc_emotion_sequence(spawn_id=602, sequence_name='Attack_01_B')
-        self.add_cinematic_talk(npc_id=11003202, illust_id='Jordy_normal', msg='$52000037_QD__MAIN__4$', duration=3000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003202, illust_id='Jordy_normal', msg='$52000037_QD__MAIN__4$', duration=3000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -113,7 +113,7 @@ class scene_05(trigger_api.Trigger):
 class scene_06(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_npc_emotion_sequence(spawn_id=604, sequence_name='Bore_C')
-        self.add_cinematic_talk(npc_id=11003204, msg='$52000037_QD__MAIN__5$', duration=3000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003204, msg='$52000037_QD__MAIN__5$', duration=3000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=1000):
@@ -196,7 +196,7 @@ class scene_14(trigger_api.Trigger):
 class scene_15(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_npc_emotion_sequence(spawn_id=602, sequence_name='Bore_A')
-        self.add_cinematic_talk(npc_id=11003202, illust_id='Jordy_normal', msg='$52000037_QD__MAIN__6$', duration=3000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003202, illust_id='Jordy_normal', msg='$52000037_QD__MAIN__6$', duration=3000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
@@ -206,7 +206,7 @@ class scene_15(trigger_api.Trigger):
 class scene_16(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_npc_emotion_sequence(spawn_id=604, sequence_name='Bore_C')
-        self.add_cinematic_talk(npc_id=11003204, msg='$52000037_QD__MAIN__7$', duration=3000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003204, msg='$52000037_QD__MAIN__7$', duration=3000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):

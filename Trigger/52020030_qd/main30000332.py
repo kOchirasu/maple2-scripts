@@ -30,7 +30,7 @@ class 천공의탑전경보여주기02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_onetime_effect(id=1, path='BG/Common/ScreenMask/Eff_fadein_1sec.xml')
         self.select_camera_path(path_ids=[4008,4010], return_view=False)
-        self.show_caption(type='VerticalCaption', title='천공의 탑', desc='크리티아스 마법 연구소', align=Align.CenterLeft, duration=3000, scale=2.0)
+        self.show_caption(type='VerticalCaption', title='천공의 탑', desc='크리티아스 마법 연구소', align=Align.centerLeft, duration=3000, scale=2.0)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):

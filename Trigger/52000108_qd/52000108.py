@@ -72,7 +72,7 @@ class 불끄기퀘스트01(trigger_api.Trigger):
 class 불끄기퀘스트02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_onetime_effect(id=1, path='BG/Common/ScreenMask/Eff_CameraMasking_FastFadeIn.xml')
-        self.add_cinematic_talk(npc_id=11003292, illust_id='0', msg='$52000108_QD__52000108__0$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003292, illust_id='0', msg='$52000108_QD__52000108__0$', duration=4000, align=Align.right)
         self.set_onetime_effect(id=3000972, enable=True, path='BG/Common/Sound/Eff_Ayesha_IntroMovie_03000972.xml')
         self.move_npc(spawn_id=200, patrol_name='MS2PatrolData_ishaTrun')
         self.move_user_path(patrol_name='MS2PatrolData_PCTrun')
@@ -84,7 +84,7 @@ class 불끄기퀘스트02(trigger_api.Trigger):
 
 class 불끄기퀘스트03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=0, illust_id='0', msg='$52000108_QD__52000108__1$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, illust_id='0', msg='$52000108_QD__52000108__1$', duration=4000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -93,7 +93,7 @@ class 불끄기퀘스트03(trigger_api.Trigger):
 
 class 불끄기퀘스트04(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=0, illust_id='0', msg='$52000108_QD__52000108__2$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, illust_id='0', msg='$52000108_QD__52000108__2$', duration=4000, align=Align.right)
         self.set_pc_emotion_loop(sequence_name='Emotion_Dance_S', duration=4000.0)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -103,7 +103,7 @@ class 불끄기퀘스트04(trigger_api.Trigger):
 
 class 불끄기퀘스트05(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=0, illust_id='0', msg='$52000108_QD__52000108__3$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, illust_id='0', msg='$52000108_QD__52000108__3$', duration=4000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -115,7 +115,7 @@ class 불끄기퀘스트06(trigger_api.Trigger):
         self.set_sound(trigger_id=9000, enable=True)
         self.select_camera_path(path_ids=[2002], return_view=False)
         self.set_onetime_effect(id=40, enable=True, path='BG/Common/Eff_Com_Vibrate_Short.xml')
-        self.add_cinematic_talk(npc_id=11003292, illust_id='0', msg='$52000108_QD__52000108__4$', duration=6000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003292, illust_id='0', msg='$52000108_QD__52000108__4$', duration=6000, align=Align.right)
         self.set_onetime_effect(id=3000973, enable=True, path='BG/Common/Sound/Eff_Ayesha_IntroMovie_03000973.xml')
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -126,7 +126,7 @@ class 불끄기퀘스트06(trigger_api.Trigger):
 class 불끄기퀘스트07(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_onetime_effect(id=50, enable=True, path='BG/Common/Eff_Com_Vibrate_Short.xml')
-        self.add_cinematic_talk(npc_id=0, illust_id='0', msg='$52000108_QD__52000108__5$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, illust_id='0', msg='$52000108_QD__52000108__5$', duration=4000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -135,7 +135,7 @@ class 불끄기퀘스트07(trigger_api.Trigger):
 
 class 불끄기퀘스트08(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003292, illust_id='$52000108_QD__52000108__45$', msg='$52000108_QD__52000108__6$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003292, illust_id='$52000108_QD__52000108__45$', msg='$52000108_QD__52000108__6$', duration=4000, align=Align.right)
         self.set_onetime_effect(id=3000974, enable=True, path='BG/Common/Sound/Eff_Ayesha_IntroMovie_03000974.xml')
         self.select_camera_path(path_ids=[2003], return_view=False)
 
@@ -149,7 +149,7 @@ class 불끄기퀘스트09(trigger_api.Trigger):
         self.set_onetime_effect(id=60, enable=True, path='BG/Common/Eff_Com_Vibrate_Short.xml')
         self.select_camera_path(path_ids=[2004], return_view=False)
         self.set_mesh(trigger_ids=[2001], visible=True)
-        self.add_cinematic_talk(npc_id=11003292, msg='$52000108_QD__52000108__7$', duration=8000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003292, msg='$52000108_QD__52000108__7$', duration=8000, align=Align.right)
         self.set_onetime_effect(id=3000975, enable=True, path='BG/Common/Sound/Eff_Ayesha_IntroMovie_03000975.xml')
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -160,7 +160,7 @@ class 불끄기퀘스트09(trigger_api.Trigger):
 class 불끄기퀘스트10(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[2003], return_view=False)
-        self.add_cinematic_talk(npc_id=11003292, illust_id='0', msg='$52000108_QD__52000108__8$', duration=5000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003292, illust_id='0', msg='$52000108_QD__52000108__8$', duration=5000, align=Align.right)
         self.set_onetime_effect(id=3000976, enable=True, path='BG/Common/Sound/Eff_Ayesha_IntroMovie_03000976.xml')
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -171,7 +171,7 @@ class 불끄기퀘스트10(trigger_api.Trigger):
 class 불끄기퀘스트11(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[2008], return_view=False)
-        self.add_cinematic_talk(npc_id=0, illust_id='0', msg='$52000108_QD__52000108__9$', duration=2000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, illust_id='0', msg='$52000108_QD__52000108__9$', duration=2000, align=Align.right)
         self.set_pc_emotion_sequence(sequence_names=['Emotion_Choice_A'])
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -181,7 +181,7 @@ class 불끄기퀘스트11(trigger_api.Trigger):
 
 class 불끄기퀘스트12(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=0, illust_id='0', msg='$52000108_QD__52000108__10$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, illust_id='0', msg='$52000108_QD__52000108__10$', duration=4000, align=Align.right)
         self.set_pc_emotion_loop(sequence_name='Snare_A', duration=5000.0)
         self.face_emotion(emotion_name='PC_OutOfMind_01')
 
@@ -256,7 +256,7 @@ class 저항군로봇퀘스트02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_scene_skip(state=Skip_2, action='nextState')
         self.set_onetime_effect(id=2, path='BG/Common/ScreenMask/Eff_CameraMasking_FastFadeIn.xml')
-        self.add_cinematic_talk(npc_id=0, illust_id='0', msg='$52000108_QD__52000108__11$', duration=6000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, illust_id='0', msg='$52000108_QD__52000108__11$', duration=6000, align=Align.right)
         self.set_pc_emotion_loop(sequence_name='Object_React_D', duration=25000.0)
         self.move_npc(spawn_id=200, patrol_name='MS2PatrolData_ishaCom')
 
@@ -267,7 +267,7 @@ class 저항군로봇퀘스트02(trigger_api.Trigger):
 
 class 저항군로봇퀘스트03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003292, msg='$52000108_QD__52000108__12$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003292, msg='$52000108_QD__52000108__12$', duration=4000, align=Align.right)
         self.set_onetime_effect(id=3000977, enable=True, path='BG/Common/Sound/Eff_Ayesha_IntroMovie_03000977.xml')
         self.select_camera_path(path_ids=[2015], return_view=False)
         self.move_npc(spawn_id=200, patrol_name='MS2PatrolData_isha_8')
@@ -279,7 +279,7 @@ class 저항군로봇퀘스트03(trigger_api.Trigger):
 
 class 저항군로봇퀘스트04(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=0, illust_id='0', msg='$52000108_QD__52000108__13$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, illust_id='0', msg='$52000108_QD__52000108__13$', duration=4000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -288,7 +288,7 @@ class 저항군로봇퀘스트04(trigger_api.Trigger):
 
 class 저항군로봇퀘스트05(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=0, illust_id='0', msg='$52000108_QD__52000108__14$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, illust_id='0', msg='$52000108_QD__52000108__14$', duration=4000, align=Align.right)
         self.select_camera_path(path_ids=[2016], return_view=False)
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -298,7 +298,7 @@ class 저항군로봇퀘스트05(trigger_api.Trigger):
 
 class 저항군로봇퀘스트06(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11003292, msg='$52000108_QD__52000108__15$', duration=6000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003292, msg='$52000108_QD__52000108__15$', duration=6000, align=Align.right)
         self.set_onetime_effect(id=3000978, enable=True, path='BG/Common/Sound/Eff_Ayesha_IntroMovie_03000978.xml')
         self.move_npc(spawn_id=200, patrol_name='MS2PatrolData_isha_9')
         self.select_camera_path(path_ids=[2017,2018], return_view=False)
@@ -310,7 +310,7 @@ class 저항군로봇퀘스트06(trigger_api.Trigger):
 
 class 저항군로봇퀘스트07(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=0, illust_id='0', msg='$52000108_QD__52000108__16$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, illust_id='0', msg='$52000108_QD__52000108__16$', duration=4000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -320,7 +320,7 @@ class 저항군로봇퀘스트07(trigger_api.Trigger):
 class 저항군로봇퀘스트08(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[2028], return_view=False)
-        self.add_cinematic_talk(npc_id=11003292, msg='$52000108_QD__52000108__17$', duration=6000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003292, msg='$52000108_QD__52000108__17$', duration=6000, align=Align.right)
         self.set_onetime_effect(id=3000979, enable=True, path='BG/Common/Sound/Eff_Ayesha_IntroMovie_03000979.xml')
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -348,7 +348,7 @@ class 저항군로봇퀘스트10(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.face_emotion(emotion_name='PC_OutOfMind_01')
         self.select_camera_path(path_ids=[2031], return_view=False)
-        self.add_cinematic_talk(npc_id=0, illust_id='0', msg='$52000108_QD__52000108__18$', duration=3000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, illust_id='0', msg='$52000108_QD__52000108__18$', duration=3000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):
@@ -423,7 +423,7 @@ class 저항군로봇퀘스트15(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.move_user(map_id=52000108, portal_id=11)
         self.select_camera_path(path_ids=[2026,2027], return_view=False)
-        self.show_caption(type='NameCaption', title='$52000108_QD__52000108__24$', desc='$52000108_QD__52000108__25$', align=Align.TopCenter, duration=4000, scale=3.0)
+        self.show_caption(type='NameCaption', title='$52000108_QD__52000108__24$', desc='$52000108_QD__52000108__25$', align=Align.topCenter, duration=4000, scale=3.0)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4100):
@@ -510,7 +510,7 @@ class 체키등판퀘스트02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_scene_skip(state=Skip_3, action='nextState')
         self.set_onetime_effect(id=3, path='BG/Common/ScreenMask/Eff_CameraMasking_FastFadeIn.xml')
-        self.add_cinematic_talk(npc_id=11003191, msg='$52000108_QD__52000108__26$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003191, msg='$52000108_QD__52000108__26$', duration=4000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -521,7 +521,7 @@ class 체키등판퀘스트03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[2034,2035], return_view=False)
         self.move_npc(spawn_id=201, patrol_name='MS2PatrolData_CheckyBoss')
-        self.add_cinematic_talk(npc_id=11003191, msg='$52000108_QD__52000108__27$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003191, msg='$52000108_QD__52000108__27$', duration=4000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -531,7 +531,7 @@ class 체키등판퀘스트03(trigger_api.Trigger):
 class 체키등판퀘스트04(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[2036], return_view=False)
-        self.add_cinematic_talk(npc_id=11003184, msg='$52000108_QD__52000108__28$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003184, msg='$52000108_QD__52000108__28$', duration=4000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5459):
@@ -541,7 +541,7 @@ class 체키등판퀘스트04(trigger_api.Trigger):
 class 체키등판퀘스트05(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[2037,2038], return_view=False)
-        self.add_cinematic_talk(npc_id=11003191, msg='$52000108_QD__52000108__29$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003191, msg='$52000108_QD__52000108__29$', duration=4000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -551,7 +551,7 @@ class 체키등판퀘스트05(trigger_api.Trigger):
 class 체키등판퀘스트06(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[2039,2040], return_view=False)
-        self.add_cinematic_talk(npc_id=11003184, msg='$52000108_QD__52000108__30$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003184, msg='$52000108_QD__52000108__30$', duration=4000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4388):
@@ -615,7 +615,7 @@ class 프로토콜해피02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_scene_skip(state=Skip_4, action='nextState')
         self.set_onetime_effect(id=4, path='BG/Common/ScreenMask/Eff_CameraMasking_FastFadeIn.xml')
-        self.add_cinematic_talk(npc_id=11003191, msg='$52000108_QD__52000108__33$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003191, msg='$52000108_QD__52000108__33$', duration=4000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -626,7 +626,7 @@ class 프로토콜해피03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.move_user_path(patrol_name='MS2PatrolData_PC_front')
         self.select_camera_path(path_ids=[2043], return_view=False)
-        self.add_cinematic_talk(npc_id=0, illust_id='0', msg='$52000108_QD__52000108__34$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, illust_id='0', msg='$52000108_QD__52000108__34$', duration=4000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -637,7 +637,7 @@ class 프로토콜해피04(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.face_emotion(emotion_name='ChaosMod_Start')
         self.select_camera_path(path_ids=[2044], return_view=False)
-        self.add_cinematic_talk(npc_id=0, illust_id='0', msg='$52000108_QD__52000108__35$', duration=2500, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, illust_id='0', msg='$52000108_QD__52000108__35$', duration=2500, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=2500):
@@ -648,7 +648,7 @@ class 프로토콜해피05(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_npc_emotion_loop(spawn_id=208, sequence_name='Attack_Idle_A', duration=20000.0)
         self.select_camera_path(path_ids=[2045,2046], return_view=False)
-        self.add_cinematic_talk(npc_id=11003292, msg='$52000108_QD__52000108__36$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003292, msg='$52000108_QD__52000108__36$', duration=4000, align=Align.right)
         self.set_onetime_effect(id=3000980, enable=True, path='BG/Common/Sound/Eff_Ayesha_IntroMovie_03000980.xml')
 
     def on_tick(self) -> trigger_api.Trigger:
@@ -660,7 +660,7 @@ class 프로토콜해피06(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.face_emotion()
         self.select_camera_path(path_ids=[2047], return_view=False)
-        self.add_cinematic_talk(npc_id=0, illust_id='0', msg='$52000108_QD__52000108__37$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, illust_id='0', msg='$52000108_QD__52000108__37$', duration=4000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -671,7 +671,7 @@ class 프로토콜해피07(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.face_emotion(spawn_id=209, emotion_name='Surprised')
         self.select_camera_path(path_ids=[2048], return_view=False)
-        self.add_cinematic_talk(npc_id=11003183, msg='$52000108_QD__52000108__38$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003183, msg='$52000108_QD__52000108__38$', duration=4000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -681,7 +681,7 @@ class 프로토콜해피07(trigger_api.Trigger):
 class 프로토콜해피08(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[2049,2050], return_view=False)
-        self.add_cinematic_talk(npc_id=0, illust_id='0', msg='$52000108_QD__52000108__39$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, illust_id='0', msg='$52000108_QD__52000108__39$', duration=4000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -691,7 +691,7 @@ class 프로토콜해피08(trigger_api.Trigger):
 class 프로토콜해피09(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[2051,2053], return_view=False)
-        self.add_cinematic_talk(npc_id=0, illust_id='0', msg='$52000108_QD__52000108__40$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=0, illust_id='0', msg='$52000108_QD__52000108__40$', duration=4000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):
@@ -702,7 +702,7 @@ class 프로토콜해피10(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.set_npc_emotion_sequence(spawn_id=209, sequence_name='Bore_A')
         self.select_camera_path(path_ids=[2052], return_view=False)
-        self.add_cinematic_talk(npc_id=11003183, msg='$52000108_QD__52000108__41$', duration=4000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11003183, msg='$52000108_QD__52000108__41$', duration=4000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=4000):

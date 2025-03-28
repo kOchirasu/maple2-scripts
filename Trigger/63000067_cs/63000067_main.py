@@ -101,7 +101,7 @@ class 마리엔등장_03(trigger_api.Trigger):
 
 class 마리엔등장_04(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11004294, msg='$63000067_CS__63000067_MAIN__0$', duration=3000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11004294, msg='$63000067_CS__63000067_MAIN__0$', duration=3000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3500):
@@ -110,7 +110,7 @@ class 마리엔등장_04(trigger_api.Trigger):
 
 class 마리엔등장_05(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11004294, msg='$63000067_CS__63000067_MAIN__1$', duration=3500, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11004294, msg='$63000067_CS__63000067_MAIN__1$', duration=3500, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3500):
@@ -128,7 +128,7 @@ class 마리엔등장_06(trigger_api.Trigger):
 
 class 마리엔등장_07(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11004294, msg='$63000067_CS__63000067_MAIN__2$', duration=3500, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11004294, msg='$63000067_CS__63000067_MAIN__2$', duration=3500, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3500):
@@ -146,7 +146,7 @@ class 마리엔등장_08(trigger_api.Trigger):
 
 class 마리엔등장_09(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11004294, msg='$63000067_CS__63000067_MAIN__3$', duration=2000, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11004294, msg='$63000067_CS__63000067_MAIN__3$', duration=2000, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=2500):
@@ -155,7 +155,7 @@ class 마리엔등장_09(trigger_api.Trigger):
 
 class 마리엔등장_10(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
-        self.add_cinematic_talk(npc_id=11004294, msg='$63000067_CS__63000067_MAIN__4$', duration=2500, align=Align.Right)
+        self.add_cinematic_talk(npc_id=11004294, msg='$63000067_CS__63000067_MAIN__4$', duration=2500, align=Align.right)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3500):

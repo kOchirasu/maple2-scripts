@@ -634,7 +634,7 @@ class 세리하등장02(trigger_api.Trigger):
 class 세리하등장03(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.move_npc(spawn_id=122, patrol_name='Seriha_walkinto')
-        self.show_caption(type='NameCaption', title='$npc:11003660$', desc='흑성회 특수부대장, $npc:11003659$의 측근', align=Align.CenterLeft, offset_rate_x=0.5, offset_rate_y=0.15, duration=5000, scale=2.0)
+        self.show_caption(type='NameCaption', title='$npc:11003660$', desc='흑성회 특수부대장, $npc:11003659$의 측근', align=Align.centerLeft, offset_rate_x=0.5, offset_rate_y=0.15, duration=5000, scale=2.0)
 
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):

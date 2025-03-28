@@ -53,7 +53,7 @@ class 숙소도착_01(trigger_api.Trigger):
 class 숙소도착_02(trigger_api.Trigger):
     def on_enter(self) -> 'trigger_api.Trigger':
         self.select_camera_path(path_ids=[4001,4002], return_view=False)
-        self.show_caption(type='VerticalCaption', title='$52000174_QD__52000174__0$', align=Align.BottomLeft, duration=3000, scale=2.5)
+        self.show_caption(type='VerticalCaption', title='$52000174_QD__52000174__0$', align=Align.bottomLeft, duration=3000, scale=2.5)
         self.move_user_path(patrol_name='MS2PatrolData_3003')
 
     def on_tick(self) -> trigger_api.Trigger:
