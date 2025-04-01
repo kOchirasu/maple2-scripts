@@ -4,7 +4,7 @@ import trigger_api
 
 class 신호대기(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Timer') >= 1:
+        if self.user_value(key='Timer') == 1:
             return 시작(self.ctx)
 
 

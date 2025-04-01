@@ -9,7 +9,7 @@ class Wait(trigger_api.Trigger):
         self.set_interact_object(trigger_ids=[10001149], state=0) # MakeTireZipTrack
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='TireSpawn') >= 1:
+        if self.user_value(key='TireSpawn') == 1:
             return GuideInteract(self.ctx)
 
 

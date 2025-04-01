@@ -14,7 +14,7 @@ class 대기(trigger_api.Trigger):
         self.set_user_value(trigger_id=99990012, key='BossObjectStart', value=0)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='BossPhase') >= 1:
+        if self.user_value(key='BossPhase') == 1:
             return 보스_추가대사(self.ctx)
 
 
@@ -49,11 +49,11 @@ class 보스소환1(trigger_api.Trigger):
         self.spawn_monster(spawn_ids=[921], auto_target=False)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='BossPhase') >= 2:
+        if self.user_value(key='BossPhase') == 2:
             return 대기(self.ctx)
         if self.monster_dead(spawn_ids=[921]):
             return 보스군단_클리어(self.ctx)
-        if self.user_value(key='ObjectStart') >= 2 and self.npc_detected(box_id=9099, spawn_ids=[921]):
+        if self.user_value(key='ObjectStart') == 2 and self.npc_detected(box_id=9099, spawn_ids=[921]):
             return 보스_무적페이즈(self.ctx)
 
 
@@ -62,11 +62,11 @@ class 보스소환2(trigger_api.Trigger):
         self.spawn_monster(spawn_ids=[922], auto_target=False)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='BossPhase') >= 2:
+        if self.user_value(key='BossPhase') == 2:
             return 대기(self.ctx)
         if self.monster_dead(spawn_ids=[922]):
             return 보스군단_클리어(self.ctx)
-        if self.user_value(key='ObjectStart') >= 2 and self.npc_detected(box_id=9099, spawn_ids=[922]):
+        if self.user_value(key='ObjectStart') == 2 and self.npc_detected(box_id=9099, spawn_ids=[922]):
             return 보스_무적페이즈(self.ctx)
 
 
@@ -75,11 +75,11 @@ class 보스소환3(trigger_api.Trigger):
         self.spawn_monster(spawn_ids=[923], auto_target=False)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='BossPhase') >= 2:
+        if self.user_value(key='BossPhase') == 2:
             return 대기(self.ctx)
         if self.monster_dead(spawn_ids=[923]):
             return 보스군단_클리어(self.ctx)
-        if self.user_value(key='ObjectStart') >= 2 and self.npc_detected(box_id=9099, spawn_ids=[923]):
+        if self.user_value(key='ObjectStart') == 2 and self.npc_detected(box_id=9099, spawn_ids=[923]):
             return 보스_무적페이즈(self.ctx)
 
 
@@ -88,11 +88,11 @@ class 보스소환4(trigger_api.Trigger):
         self.spawn_monster(spawn_ids=[924], auto_target=False)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='BossPhase') >= 2:
+        if self.user_value(key='BossPhase') == 2:
             return 대기(self.ctx)
         if self.monster_dead(spawn_ids=[924]):
             return 보스군단_클리어(self.ctx)
-        if self.user_value(key='ObjectStart') >= 2 and self.npc_detected(box_id=9099, spawn_ids=[924]):
+        if self.user_value(key='ObjectStart') == 2 and self.npc_detected(box_id=9099, spawn_ids=[924]):
             return 보스_무적페이즈(self.ctx)
 
 
@@ -101,11 +101,11 @@ class 보스소환5(trigger_api.Trigger):
         self.spawn_monster(spawn_ids=[925], auto_target=False)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='BossPhase') >= 2:
+        if self.user_value(key='BossPhase') == 2:
             return 대기(self.ctx)
         if self.monster_dead(spawn_ids=[925]):
             return 보스군단_클리어(self.ctx)
-        if self.user_value(key='ObjectStart') >= 2 and self.npc_detected(box_id=9099, spawn_ids=[925]):
+        if self.user_value(key='ObjectStart') == 2 and self.npc_detected(box_id=9099, spawn_ids=[925]):
             return 보스_무적페이즈(self.ctx)
 
 
@@ -114,11 +114,11 @@ class 보스소환6(trigger_api.Trigger):
         self.spawn_monster(spawn_ids=[926], auto_target=False)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='BossPhase') >= 2:
+        if self.user_value(key='BossPhase') == 2:
             return 대기(self.ctx)
         if self.monster_dead(spawn_ids=[926]):
             return 보스군단_클리어(self.ctx)
-        if self.user_value(key='ObjectStart') >= 2 and self.npc_detected(box_id=9099, spawn_ids=[926]):
+        if self.user_value(key='ObjectStart') == 2 and self.npc_detected(box_id=9099, spawn_ids=[926]):
             return 보스_무적페이즈(self.ctx)
 
 
@@ -133,7 +133,7 @@ class 보스_무적페이즈(trigger_api.Trigger):
         self.set_user_value(trigger_id=99990013, key='BombPhase', value=1)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='BossPhase') >= 2:
+        if self.user_value(key='BossPhase') == 2:
             return 대기(self.ctx)
         if self.monster_dead(spawn_ids=[921]) and self.monster_dead(spawn_ids=[922]) and self.monster_dead(spawn_ids=[923]) and self.monster_dead(spawn_ids=[924]) and self.monster_dead(spawn_ids=[925]) and self.monster_dead(spawn_ids=[926]):
             return 보스군단_클리어(self.ctx)
@@ -146,7 +146,7 @@ class 보스_무적페이즈_대사1(trigger_api.Trigger):
         self.side_npc_talk(npc_id=11003536, illust='Neirin_surprise', duration=5000, script='$02020061_BF__BATTLE_3__2$')
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='BossPhase') >= 2:
+        if self.user_value(key='BossPhase') == 2:
             return 대기(self.ctx)
         if self.monster_dead(spawn_ids=[921]) and self.monster_dead(spawn_ids=[922]) and self.monster_dead(spawn_ids=[923]) and self.monster_dead(spawn_ids=[924]) and self.monster_dead(spawn_ids=[925]) and self.monster_dead(spawn_ids=[926]):
             return 보스군단_클리어(self.ctx)
@@ -159,7 +159,7 @@ class 보스_무적페이즈_대사2(trigger_api.Trigger):
         self.side_npc_talk(npc_id=11003533, illust='Bliche_normal', duration=5000, script='$02020061_BF__BATTLE_3__3$')
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='BossPhase') >= 2:
+        if self.user_value(key='BossPhase') == 2:
             return 대기(self.ctx)
         if self.monster_dead(spawn_ids=[921]) and self.monster_dead(spawn_ids=[922]) and self.monster_dead(spawn_ids=[923]) and self.monster_dead(spawn_ids=[924]) and self.monster_dead(spawn_ids=[925]) and self.monster_dead(spawn_ids=[926]):
             return 보스군단_클리어(self.ctx)

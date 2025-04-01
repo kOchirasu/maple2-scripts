@@ -10,7 +10,7 @@ class Setting(trigger_api.Trigger):
         self.set_user_value(key='BattleRidingOff', value=0)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='BattleRidingOnCount') >= 1:
+        if self.user_value(key='BattleRidingOnCount') == 1:
             return RidingSpawn(self.ctx)
 
 
@@ -45,7 +45,7 @@ class RidingSpawn(trigger_api.Trigger):
 
 class RidingSpawn_Extra_none(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='BattleRidingOff') >= 1:
+        if self.user_value(key='BattleRidingOff') == 1:
             return Quit(self.ctx)
 
 
@@ -54,7 +54,7 @@ class RidingSpawn_Extra_north(trigger_api.Trigger):
         self.start_combine_spawn(group_id=[10000515], is_start=True) # riding battle test
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='BattleRidingOff') >= 1:
+        if self.user_value(key='BattleRidingOff') == 1:
             return Quit(self.ctx)
 
 
@@ -63,7 +63,7 @@ class RidingSpawn_Extra_south(trigger_api.Trigger):
         self.start_combine_spawn(group_id=[10000517], is_start=True) # riding battle test
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='BattleRidingOff') >= 1:
+        if self.user_value(key='BattleRidingOff') == 1:
             return Quit(self.ctx)
 
 
@@ -72,7 +72,7 @@ class RidingSpawn_Extra_east(trigger_api.Trigger):
         self.start_combine_spawn(group_id=[10000516], is_start=True) # riding battle test
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='BattleRidingOff') >= 1:
+        if self.user_value(key='BattleRidingOff') == 1:
             return Quit(self.ctx)
 
 
@@ -81,7 +81,7 @@ class RidingSpawn_Extra_west(trigger_api.Trigger):
         self.start_combine_spawn(group_id=[10000518], is_start=True) # riding battle test
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='BattleRidingOff') >= 1:
+        if self.user_value(key='BattleRidingOff') == 1:
             return Quit(self.ctx)
 
 
@@ -90,7 +90,7 @@ class RidingSpawn_Extra_northsouth(trigger_api.Trigger):
         self.start_combine_spawn(group_id=[10000515,10000517], is_start=True) # riding battle test
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='BattleRidingOff') >= 1:
+        if self.user_value(key='BattleRidingOff') == 1:
             return Quit(self.ctx)
 
 
@@ -99,7 +99,7 @@ class RidingSpawn_Extra_northeast(trigger_api.Trigger):
         self.start_combine_spawn(group_id=[10000515,10000516], is_start=True) # riding battle test
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='BattleRidingOff') >= 1:
+        if self.user_value(key='BattleRidingOff') == 1:
             return Quit(self.ctx)
 
 
@@ -108,7 +108,7 @@ class RidingSpawn_Extra_northwest(trigger_api.Trigger):
         self.start_combine_spawn(group_id=[10000515,10000518], is_start=True) # riding battle test
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='BattleRidingOff') >= 1:
+        if self.user_value(key='BattleRidingOff') == 1:
             return Quit(self.ctx)
 
 
@@ -117,7 +117,7 @@ class RidingSpawn_Extra_eastwest(trigger_api.Trigger):
         self.start_combine_spawn(group_id=[10000516,10000518], is_start=True) # riding battle test
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='BattleRidingOff') >= 1:
+        if self.user_value(key='BattleRidingOff') == 1:
             return Quit(self.ctx)
 
 
@@ -126,7 +126,7 @@ class RidingSpawn_Extra_southeast(trigger_api.Trigger):
         self.start_combine_spawn(group_id=[10000516,10000517], is_start=True) # riding battle test
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='BattleRidingOff') >= 1:
+        if self.user_value(key='BattleRidingOff') == 1:
             return Quit(self.ctx)
 
 
@@ -135,7 +135,7 @@ class RidingSpawn_Extra_southwest(trigger_api.Trigger):
         self.start_combine_spawn(group_id=[10000518,10000517], is_start=True) # riding battle test
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='BattleRidingOff') >= 1:
+        if self.user_value(key='BattleRidingOff') == 1:
             return Quit(self.ctx)
 
 

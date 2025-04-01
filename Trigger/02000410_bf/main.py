@@ -38,7 +38,7 @@ class 전투시작_인페르녹전함(trigger_api.Trigger):
 
 class 첫번째페이즈_인페르녹전함(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='SecondPhase') >= 1:
+        if self.user_value(key='SecondPhase') == 1:
             # 1페이즈 전투 진행하면서  SecondPhase = 1 신호를 받을때까지 여기서 대기
             return 두번째페이즈_인페르녹전함(self.ctx)
 
@@ -53,7 +53,7 @@ class 두번째페이즈_인페르녹전함(trigger_api.Trigger):
         self.dungeon_mission_complete(feature='DungeonRankBalance_02', mission_id=24090017)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='ThirdPhase') >= 1:
+        if self.user_value(key='ThirdPhase') == 1:
             # 2페이즈 전투 진행하면서, 인페르녹 전함에게   ThirdPhase = 1 신호를 받을때까지 여기서 대기
             return 세번째페이즈_인페르녹등장(self.ctx)
 
@@ -68,7 +68,7 @@ class 세번째페이즈_인페르녹등장(trigger_api.Trigger):
         self.set_sound(trigger_id=8410, enable=True) # 보스 등장하면 보스용 BGM으로 교체하기
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='BalrogMagicBursterBattlePhase') >= 1:
+        if self.user_value(key='BalrogMagicBursterBattlePhase') == 1:
             # 인페르녹과 전투 시작할 때 몬스터 AI에서 이 신호를 보낼때까지 대기
             # 즉  BalrogMagicBursterBattlePhase = 1 신호를 AI에서 부터 트리거가  받을때까지 여기서 대기
             return 인페르녹전투시작(self.ctx)

@@ -28,7 +28,7 @@ class 보스등장(trigger_api.Trigger):
         self.set_portal(portal_id=9902)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='DungeonReset') >= 1:
+        if self.user_value(key='DungeonReset') == 1:
             return 던전초기화진행(self.ctx) # @####@##
         if self.monster_dead(spawn_ids=[99]):
             return 종료딜레이(self.ctx)

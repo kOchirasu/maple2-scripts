@@ -4,7 +4,7 @@ import trigger_api
 
 class 소환(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='MonsterSpawn') >= 1:
+        if self.user_value(key='MonsterSpawn') == 1:
             return 끝_1(self.ctx)
 
     def on_exit(self) -> None:

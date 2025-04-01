@@ -17,7 +17,7 @@ class 보스등장때까지잠시대기(trigger_api.Trigger):
 
 class 트리거영역체크시작(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='MobSpawnStop') >= 4:
+        if self.user_value(key='MobSpawnStop') == 4:
             # 보스 HP가 기준 이하가 되면, 졸몹 등장 로직 정지, AI_TurkaHoodForce_Phase03.xml 에서 MobSpawnStop = 4 신호를 이 트리거에 보내서 작동 정지 시킴
             return 졸몬스터제거작업(self.ctx)
         # ##  보스가 죽으면 졸몹 등장 트리거 종료시키기 ##
@@ -38,7 +38,7 @@ class 졸몬스터등장대기중(trigger_api.Trigger):
 
 class 트리거영역안플레이어최종체크(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='MobSpawnStop') >= 4:
+        if self.user_value(key='MobSpawnStop') == 4:
             # 보스 HP가 기준 이하가 되면, 졸몹 등장 로직 정지
             return 졸몬스터제거작업(self.ctx)
         # ##  보스가 죽으면 졸몹 등장 트리거 종료시키기 ##
@@ -65,7 +65,7 @@ class 졸몬스터등장하기(trigger_api.Trigger):
 
 class 트리거영역에계속있는지체크(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='MobSpawnStop') >= 4:
+        if self.user_value(key='MobSpawnStop') == 4:
             # 보스 HP가 기준 이하가 되면, 졸몹 등장 로직 정지
             return 졸몬스터제거작업(self.ctx)
         # ##  보스가 죽으면 졸몹 등장 트리거 종료시키기 ##
@@ -91,7 +91,7 @@ class 졸몬스터리젠단계시작(trigger_api.Trigger):
 
 class 졸몬스터리젠대기중(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='MobSpawnStop') >= 4:
+        if self.user_value(key='MobSpawnStop') == 4:
             # 보스 HP가 기준 이하가 되면, 졸몹 등장 로직 정지
             return 졸몬스터제거작업(self.ctx)
         # ##  보스가 죽으면 졸몹 등장 트리거 종료시키기 ##
@@ -107,7 +107,7 @@ class 졸몬스터리젠대기중(trigger_api.Trigger):
 
 class 졸몬스터리젠YesNo(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='MobSpawnStop') >= 4:
+        if self.user_value(key='MobSpawnStop') == 4:
             # 보스 HP가 기준 이하가 되면, 졸몹 등장 로직 정지
             return 졸몬스터제거작업(self.ctx)
         # ##  보스가 죽으면 졸몹 등장 트리거 종료시키기 ##
@@ -136,7 +136,7 @@ class 졸몬스터제거작업(trigger_api.Trigger):
         self.destroy_monster(spawn_ids=[10601,10602,10603,10604])
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='MobSpawnStop') >= 4:
+        if self.user_value(key='MobSpawnStop') == 4:
             # 보스 HP가 기준 이하가 되면, 졸몹 등장 로직 정지, AI_TurkaHoodForce_Phase03.xml 에서 MobSpawnStop = 4 신호를 이 트리거에 보내서 작동 정지 시킴
             return 종료(self.ctx)
         # ##  보스가 죽으면 졸몹 등장 트리거 종료시키기 ##

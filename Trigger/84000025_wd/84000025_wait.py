@@ -61,7 +61,7 @@ class 둘다입장(trigger_api.Trigger):
         self.set_user_value(key='StartWedding', value=0) # 결혼시작확인 초기화
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='StartWedding') >= 1:
+        if self.user_value(key='StartWedding') == 1:
             # 주례에게 말 걸어 결혼식 시작하기로 할 때 npcscriptfunction에서 triggervalue 컬럼에 입력된 값을 쏨(setuservalue와 같은 역할). 이 값을 받은 경우 다음 state로 넘긴다.
             return 결혼확인띄우기(self.ctx)
         if self.time_expired(timer_id='4000'):
@@ -125,7 +125,7 @@ class 결혼식연출진행중(trigger_api.Trigger):
         self.set_user_value(trigger_id=4001, key='Weddingceremonystarts', value=1) # 연출 시작하라고 main에 쏘는 신호
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Weddingceremonyfail') >= 1:
+        if self.user_value(key='Weddingceremonyfail') == 1:
             # 결혼 실패
             self.set_user_value(key='Weddingceremonyfail', value=0) # 초기화
             return 위치세팅(self.ctx)

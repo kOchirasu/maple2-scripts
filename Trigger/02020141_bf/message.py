@@ -22,11 +22,11 @@ class 메시지작동준비(trigger_api.Trigger):
 
 class 메시지작동대기버프체크(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='TriggerEnd') >= 99:
+        if self.user_value(key='TriggerEnd') == 99:
             # AI_TurkaHoodForce_Phase03.xml로 부터 이 변수 99 신호 받으면 트리거 종료함
             return 트리거종료(self.ctx)
         # 애디셔널 50000348(레벨1) 졸몹이 보스에게 보호 5중첩 버프 애디셔널 부여함
-        if self.user_value(key='MessageAlarm') >= 13:
+        if self.user_value(key='MessageAlarm') == 13:
             # 이 변수가 1씩 계속 더해져서 13이 되면, 경고 메시지 출력하는 단계로 넘어가기
             return 경고메시지출력(self.ctx)
         if self.check_npc_additional_effect(spawn_id=99, additional_effect_id=50000348, level=1):

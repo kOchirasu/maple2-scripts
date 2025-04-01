@@ -19,7 +19,7 @@ class NpcDown(trigger_api.Trigger):
         self.spawn_monster(spawn_ids=[512], auto_target=False)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='NpcRemove') >= 1:
+        if self.user_value(key='NpcRemove') == 1:
             return Quit(self.ctx)
 
 

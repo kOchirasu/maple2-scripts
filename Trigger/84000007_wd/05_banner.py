@@ -21,287 +21,287 @@ class SetBanner(trigger_api.Trigger):
         self.set_mesh(trigger_ids=[700,701,702,703,704,705,706,707,708,709,710,711,712,713,714,715], fade=2.0)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='BannerNumber') >= 70:
+        if self.user_value(key='BannerNumber') == 70:
             self.set_mesh(trigger_ids=[717], visible=True, fade=2.0)
             self.set_mesh(trigger_ids=[700], visible=True, fade=2.0)
             return NextWait(self.ctx)
-        if self.user_value(key='BannerNumber') >= 69:
+        if self.user_value(key='BannerNumber') == 69:
             self.set_mesh(trigger_ids=[716], visible=True, fade=2.0)
             self.set_mesh(trigger_ids=[709], visible=True, fade=2.0)
             return NextWait(self.ctx)
-        if self.user_value(key='BannerNumber') >= 68:
+        if self.user_value(key='BannerNumber') == 68:
             self.set_mesh(trigger_ids=[716], visible=True, fade=2.0)
             self.set_mesh(trigger_ids=[708], visible=True, fade=2.0)
             return NextWait(self.ctx)
-        if self.user_value(key='BannerNumber') >= 67:
+        if self.user_value(key='BannerNumber') == 67:
             self.set_mesh(trigger_ids=[716], visible=True, fade=2.0)
             self.set_mesh(trigger_ids=[707], visible=True, fade=2.0)
             return NextWait(self.ctx)
-        if self.user_value(key='BannerNumber') >= 66:
+        if self.user_value(key='BannerNumber') == 66:
             self.set_mesh(trigger_ids=[716], visible=True, fade=2.0)
             self.set_mesh(trigger_ids=[706], visible=True, fade=2.0)
             return NextWait(self.ctx)
-        if self.user_value(key='BannerNumber') >= 65:
+        if self.user_value(key='BannerNumber') == 65:
             self.set_mesh(trigger_ids=[716], visible=True, fade=2.0)
             self.set_mesh(trigger_ids=[705], visible=True, fade=2.0)
             return NextWait(self.ctx)
-        if self.user_value(key='BannerNumber') >= 64:
+        if self.user_value(key='BannerNumber') == 64:
             self.set_mesh(trigger_ids=[716], visible=True, fade=2.0)
             self.set_mesh(trigger_ids=[704], visible=True, fade=2.0)
             return NextWait(self.ctx)
-        if self.user_value(key='BannerNumber') >= 63:
+        if self.user_value(key='BannerNumber') == 63:
             self.set_mesh(trigger_ids=[716], visible=True, fade=2.0)
             self.set_mesh(trigger_ids=[703], visible=True, fade=2.0)
             return NextWait(self.ctx)
-        if self.user_value(key='BannerNumber') >= 62:
+        if self.user_value(key='BannerNumber') == 62:
             self.set_mesh(trigger_ids=[716], visible=True, fade=2.0)
             self.set_mesh(trigger_ids=[702], visible=True, fade=2.0)
             return NextWait(self.ctx)
-        if self.user_value(key='BannerNumber') >= 61:
+        if self.user_value(key='BannerNumber') == 61:
             self.set_mesh(trigger_ids=[716], visible=True, fade=2.0)
             self.set_mesh(trigger_ids=[701], visible=True, fade=2.0)
             return NextWait(self.ctx)
-        if self.user_value(key='BannerNumber') >= 60:
+        if self.user_value(key='BannerNumber') == 60:
             self.set_mesh(trigger_ids=[716], visible=True, fade=2.0)
             self.set_mesh(trigger_ids=[700], visible=True, fade=2.0)
             return NextWait(self.ctx)
-        if self.user_value(key='BannerNumber') >= 59:
+        if self.user_value(key='BannerNumber') == 59:
             self.set_mesh(trigger_ids=[715], visible=True, fade=2.0)
             self.set_mesh(trigger_ids=[709], visible=True, fade=2.0)
             return NextWait(self.ctx)
-        if self.user_value(key='BannerNumber') >= 58:
+        if self.user_value(key='BannerNumber') == 58:
             self.set_mesh(trigger_ids=[715], visible=True, fade=2.0)
             self.set_mesh(trigger_ids=[708], visible=True, fade=2.0)
             return NextWait(self.ctx)
-        if self.user_value(key='BannerNumber') >= 57:
+        if self.user_value(key='BannerNumber') == 57:
             self.set_mesh(trigger_ids=[715], visible=True, fade=2.0)
             self.set_mesh(trigger_ids=[707], visible=True, fade=2.0)
             return NextWait(self.ctx)
-        if self.user_value(key='BannerNumber') >= 56:
+        if self.user_value(key='BannerNumber') == 56:
             self.set_mesh(trigger_ids=[715], visible=True, fade=2.0)
             self.set_mesh(trigger_ids=[706], visible=True, fade=2.0)
             return NextWait(self.ctx)
-        if self.user_value(key='BannerNumber') >= 55:
+        if self.user_value(key='BannerNumber') == 55:
             self.set_mesh(trigger_ids=[715], visible=True, fade=2.0)
             self.set_mesh(trigger_ids=[705], visible=True, fade=2.0)
             return NextWait(self.ctx)
-        if self.user_value(key='BannerNumber') >= 54:
+        if self.user_value(key='BannerNumber') == 54:
             self.set_mesh(trigger_ids=[715], visible=True, fade=2.0)
             self.set_mesh(trigger_ids=[704], visible=True, fade=2.0)
             return NextWait(self.ctx)
-        if self.user_value(key='BannerNumber') >= 53:
+        if self.user_value(key='BannerNumber') == 53:
             self.set_mesh(trigger_ids=[715], visible=True, fade=2.0)
             self.set_mesh(trigger_ids=[703], visible=True, fade=2.0)
             return NextWait(self.ctx)
-        if self.user_value(key='BannerNumber') >= 52:
+        if self.user_value(key='BannerNumber') == 52:
             self.set_mesh(trigger_ids=[715], visible=True, fade=2.0)
             self.set_mesh(trigger_ids=[702], visible=True, fade=2.0)
             return NextWait(self.ctx)
-        if self.user_value(key='BannerNumber') >= 51:
+        if self.user_value(key='BannerNumber') == 51:
             self.set_mesh(trigger_ids=[715], visible=True, fade=2.0)
             self.set_mesh(trigger_ids=[701], visible=True, fade=2.0)
             return NextWait(self.ctx)
-        if self.user_value(key='BannerNumber') >= 50:
+        if self.user_value(key='BannerNumber') == 50:
             self.set_mesh(trigger_ids=[715], visible=True, fade=2.0)
             self.set_mesh(trigger_ids=[700], visible=True, fade=2.0)
             return NextWait(self.ctx)
-        if self.user_value(key='BannerNumber') >= 49:
+        if self.user_value(key='BannerNumber') == 49:
             self.set_mesh(trigger_ids=[714], visible=True, fade=2.0)
             self.set_mesh(trigger_ids=[709], visible=True, fade=2.0)
             return NextWait(self.ctx)
-        if self.user_value(key='BannerNumber') >= 48:
+        if self.user_value(key='BannerNumber') == 48:
             self.set_mesh(trigger_ids=[714], visible=True, fade=2.0)
             self.set_mesh(trigger_ids=[708], visible=True, fade=2.0)
             return NextWait(self.ctx)
-        if self.user_value(key='BannerNumber') >= 47:
+        if self.user_value(key='BannerNumber') == 47:
             self.set_mesh(trigger_ids=[714], visible=True, fade=2.0)
             self.set_mesh(trigger_ids=[707], visible=True, fade=2.0)
             return NextWait(self.ctx)
-        if self.user_value(key='BannerNumber') >= 46:
+        if self.user_value(key='BannerNumber') == 46:
             self.set_mesh(trigger_ids=[714], visible=True, fade=2.0)
             self.set_mesh(trigger_ids=[706], visible=True, fade=2.0)
             return NextWait(self.ctx)
-        if self.user_value(key='BannerNumber') >= 45:
+        if self.user_value(key='BannerNumber') == 45:
             self.set_mesh(trigger_ids=[714], visible=True, fade=2.0)
             self.set_mesh(trigger_ids=[705], visible=True, fade=2.0)
             return NextWait(self.ctx)
-        if self.user_value(key='BannerNumber') >= 44:
+        if self.user_value(key='BannerNumber') == 44:
             self.set_mesh(trigger_ids=[714], visible=True, fade=2.0)
             self.set_mesh(trigger_ids=[704], visible=True, fade=2.0)
             return NextWait(self.ctx)
-        if self.user_value(key='BannerNumber') >= 43:
+        if self.user_value(key='BannerNumber') == 43:
             self.set_mesh(trigger_ids=[714], visible=True, fade=2.0)
             self.set_mesh(trigger_ids=[703], visible=True, fade=2.0)
             return NextWait(self.ctx)
-        if self.user_value(key='BannerNumber') >= 42:
+        if self.user_value(key='BannerNumber') == 42:
             self.set_mesh(trigger_ids=[714], visible=True, fade=2.0)
             self.set_mesh(trigger_ids=[702], visible=True, fade=2.0)
             return NextWait(self.ctx)
-        if self.user_value(key='BannerNumber') >= 41:
+        if self.user_value(key='BannerNumber') == 41:
             self.set_mesh(trigger_ids=[714], visible=True, fade=2.0)
             self.set_mesh(trigger_ids=[701], visible=True, fade=2.0)
             return NextWait(self.ctx)
-        if self.user_value(key='BannerNumber') >= 40:
+        if self.user_value(key='BannerNumber') == 40:
             self.set_mesh(trigger_ids=[714], visible=True, fade=2.0)
             self.set_mesh(trigger_ids=[700], visible=True, fade=2.0)
             return NextWait(self.ctx)
-        if self.user_value(key='BannerNumber') >= 39:
+        if self.user_value(key='BannerNumber') == 39:
             self.set_mesh(trigger_ids=[713], visible=True, fade=2.0)
             self.set_mesh(trigger_ids=[709], visible=True, fade=2.0)
             return NextWait(self.ctx)
-        if self.user_value(key='BannerNumber') >= 38:
+        if self.user_value(key='BannerNumber') == 38:
             self.set_mesh(trigger_ids=[713], visible=True, fade=2.0)
             self.set_mesh(trigger_ids=[708], visible=True, fade=2.0)
             return NextWait(self.ctx)
-        if self.user_value(key='BannerNumber') >= 37:
+        if self.user_value(key='BannerNumber') == 37:
             self.set_mesh(trigger_ids=[713], visible=True, fade=2.0)
             self.set_mesh(trigger_ids=[707], visible=True, fade=2.0)
             return NextWait(self.ctx)
-        if self.user_value(key='BannerNumber') >= 36:
+        if self.user_value(key='BannerNumber') == 36:
             self.set_mesh(trigger_ids=[713], visible=True, fade=2.0)
             self.set_mesh(trigger_ids=[706], visible=True, fade=2.0)
             return NextWait(self.ctx)
-        if self.user_value(key='BannerNumber') >= 35:
+        if self.user_value(key='BannerNumber') == 35:
             self.set_mesh(trigger_ids=[713], visible=True, fade=2.0)
             self.set_mesh(trigger_ids=[705], visible=True, fade=2.0)
             return NextWait(self.ctx)
-        if self.user_value(key='BannerNumber') >= 34:
+        if self.user_value(key='BannerNumber') == 34:
             self.set_mesh(trigger_ids=[713], visible=True, fade=2.0)
             self.set_mesh(trigger_ids=[704], visible=True, fade=2.0)
             return NextWait(self.ctx)
-        if self.user_value(key='BannerNumber') >= 33:
+        if self.user_value(key='BannerNumber') == 33:
             self.set_mesh(trigger_ids=[713], visible=True, fade=2.0)
             self.set_mesh(trigger_ids=[703], visible=True, fade=2.0)
             return NextWait(self.ctx)
-        if self.user_value(key='BannerNumber') >= 32:
+        if self.user_value(key='BannerNumber') == 32:
             self.set_mesh(trigger_ids=[713], visible=True, fade=2.0)
             self.set_mesh(trigger_ids=[702], visible=True, fade=2.0)
             return NextWait(self.ctx)
-        if self.user_value(key='BannerNumber') >= 31:
+        if self.user_value(key='BannerNumber') == 31:
             self.set_mesh(trigger_ids=[713], visible=True, fade=2.0)
             self.set_mesh(trigger_ids=[701], visible=True, fade=2.0)
             return NextWait(self.ctx)
-        if self.user_value(key='BannerNumber') >= 30:
+        if self.user_value(key='BannerNumber') == 30:
             self.set_mesh(trigger_ids=[713], visible=True, fade=2.0)
             self.set_mesh(trigger_ids=[700], visible=True, fade=2.0)
             return NextWait(self.ctx)
-        if self.user_value(key='BannerNumber') >= 29:
+        if self.user_value(key='BannerNumber') == 29:
             self.set_mesh(trigger_ids=[712], visible=True, fade=2.0)
             self.set_mesh(trigger_ids=[709], visible=True, fade=2.0)
             return NextWait(self.ctx)
-        if self.user_value(key='BannerNumber') >= 28:
+        if self.user_value(key='BannerNumber') == 28:
             self.set_mesh(trigger_ids=[712], visible=True, fade=2.0)
             self.set_mesh(trigger_ids=[708], visible=True, fade=2.0)
             return NextWait(self.ctx)
-        if self.user_value(key='BannerNumber') >= 27:
+        if self.user_value(key='BannerNumber') == 27:
             self.set_mesh(trigger_ids=[712], visible=True, fade=2.0)
             self.set_mesh(trigger_ids=[707], visible=True, fade=2.0)
             return NextWait(self.ctx)
-        if self.user_value(key='BannerNumber') >= 26:
+        if self.user_value(key='BannerNumber') == 26:
             self.set_mesh(trigger_ids=[712], visible=True, fade=2.0)
             self.set_mesh(trigger_ids=[706], visible=True, fade=2.0)
             return NextWait(self.ctx)
-        if self.user_value(key='BannerNumber') >= 25:
+        if self.user_value(key='BannerNumber') == 25:
             self.set_mesh(trigger_ids=[712], visible=True, fade=2.0)
             self.set_mesh(trigger_ids=[705], visible=True, fade=2.0)
             return NextWait(self.ctx)
-        if self.user_value(key='BannerNumber') >= 24:
+        if self.user_value(key='BannerNumber') == 24:
             self.set_mesh(trigger_ids=[712], visible=True, fade=2.0)
             self.set_mesh(trigger_ids=[704], visible=True, fade=2.0)
             return NextWait(self.ctx)
-        if self.user_value(key='BannerNumber') >= 23:
+        if self.user_value(key='BannerNumber') == 23:
             self.set_mesh(trigger_ids=[712], visible=True, fade=2.0)
             self.set_mesh(trigger_ids=[703], visible=True, fade=2.0)
             return NextWait(self.ctx)
-        if self.user_value(key='BannerNumber') >= 22:
+        if self.user_value(key='BannerNumber') == 22:
             self.set_mesh(trigger_ids=[712], visible=True, fade=2.0)
             self.set_mesh(trigger_ids=[702], visible=True, fade=2.0)
             return NextWait(self.ctx)
-        if self.user_value(key='BannerNumber') >= 21:
+        if self.user_value(key='BannerNumber') == 21:
             self.set_mesh(trigger_ids=[712], visible=True, fade=2.0)
             self.set_mesh(trigger_ids=[701], visible=True, fade=2.0)
             return NextWait(self.ctx)
-        if self.user_value(key='BannerNumber') >= 20:
+        if self.user_value(key='BannerNumber') == 20:
             self.set_mesh(trigger_ids=[712], visible=True, fade=2.0)
             self.set_mesh(trigger_ids=[700], visible=True, fade=2.0)
             return NextWait(self.ctx)
-        if self.user_value(key='BannerNumber') >= 19:
+        if self.user_value(key='BannerNumber') == 19:
             self.set_mesh(trigger_ids=[711], visible=True, fade=2.0)
             self.set_mesh(trigger_ids=[709], visible=True, fade=2.0)
             return NextWait(self.ctx)
-        if self.user_value(key='BannerNumber') >= 18:
+        if self.user_value(key='BannerNumber') == 18:
             self.set_mesh(trigger_ids=[711], visible=True, fade=2.0)
             self.set_mesh(trigger_ids=[708], visible=True, fade=2.0)
             return NextWait(self.ctx)
-        if self.user_value(key='BannerNumber') >= 17:
+        if self.user_value(key='BannerNumber') == 17:
             self.set_mesh(trigger_ids=[711], visible=True, fade=2.0)
             self.set_mesh(trigger_ids=[707], visible=True, fade=2.0)
             return NextWait(self.ctx)
-        if self.user_value(key='BannerNumber') >= 16:
+        if self.user_value(key='BannerNumber') == 16:
             self.set_mesh(trigger_ids=[711], visible=True, fade=2.0)
             self.set_mesh(trigger_ids=[706], visible=True, fade=2.0)
             return NextWait(self.ctx)
-        if self.user_value(key='BannerNumber') >= 15:
+        if self.user_value(key='BannerNumber') == 15:
             self.set_mesh(trigger_ids=[711], visible=True, fade=2.0)
             self.set_mesh(trigger_ids=[705], visible=True, fade=2.0)
             return NextWait(self.ctx)
-        if self.user_value(key='BannerNumber') >= 14:
+        if self.user_value(key='BannerNumber') == 14:
             self.set_mesh(trigger_ids=[711], visible=True, fade=2.0)
             self.set_mesh(trigger_ids=[704], visible=True, fade=2.0)
             return NextWait(self.ctx)
-        if self.user_value(key='BannerNumber') >= 13:
+        if self.user_value(key='BannerNumber') == 13:
             self.set_mesh(trigger_ids=[711], visible=True, fade=2.0)
             self.set_mesh(trigger_ids=[703], visible=True, fade=2.0)
             return NextWait(self.ctx)
-        if self.user_value(key='BannerNumber') >= 12:
+        if self.user_value(key='BannerNumber') == 12:
             self.set_mesh(trigger_ids=[711], visible=True, fade=2.0)
             self.set_mesh(trigger_ids=[702], visible=True, fade=2.0)
             return NextWait(self.ctx)
-        if self.user_value(key='BannerNumber') >= 11:
+        if self.user_value(key='BannerNumber') == 11:
             self.set_mesh(trigger_ids=[711], visible=True, fade=2.0)
             self.set_mesh(trigger_ids=[701], visible=True, fade=2.0)
             return NextWait(self.ctx)
-        if self.user_value(key='BannerNumber') >= 10:
+        if self.user_value(key='BannerNumber') == 10:
             self.set_mesh(trigger_ids=[711], visible=True, fade=2.0)
             self.set_mesh(trigger_ids=[700], visible=True, fade=2.0)
             return NextWait(self.ctx)
-        if self.user_value(key='BannerNumber') >= 9:
+        if self.user_value(key='BannerNumber') == 9:
             self.set_mesh(trigger_ids=[710], visible=True, fade=2.0)
             self.set_mesh(trigger_ids=[709], visible=True, fade=2.0)
             return NextWait(self.ctx)
-        if self.user_value(key='BannerNumber') >= 8:
+        if self.user_value(key='BannerNumber') == 8:
             self.set_mesh(trigger_ids=[710], visible=True, fade=2.0)
             self.set_mesh(trigger_ids=[708], visible=True, fade=2.0)
             return NextWait(self.ctx)
-        if self.user_value(key='BannerNumber') >= 7:
+        if self.user_value(key='BannerNumber') == 7:
             self.set_mesh(trigger_ids=[710], visible=True, fade=2.0)
             self.set_mesh(trigger_ids=[707], visible=True, fade=2.0)
             return NextWait(self.ctx)
-        if self.user_value(key='BannerNumber') >= 6:
+        if self.user_value(key='BannerNumber') == 6:
             self.set_mesh(trigger_ids=[710], visible=True, fade=2.0)
             self.set_mesh(trigger_ids=[706], visible=True, fade=2.0)
             return NextWait(self.ctx)
-        if self.user_value(key='BannerNumber') >= 5:
+        if self.user_value(key='BannerNumber') == 5:
             self.set_mesh(trigger_ids=[710], visible=True, fade=2.0)
             self.set_mesh(trigger_ids=[705], visible=True, fade=2.0)
             return NextWait(self.ctx)
-        if self.user_value(key='BannerNumber') >= 4:
+        if self.user_value(key='BannerNumber') == 4:
             self.set_mesh(trigger_ids=[710], visible=True, fade=2.0)
             self.set_mesh(trigger_ids=[704], visible=True, fade=2.0)
             return NextWait(self.ctx)
-        if self.user_value(key='BannerNumber') >= 3:
+        if self.user_value(key='BannerNumber') == 3:
             self.set_mesh(trigger_ids=[710], visible=True, fade=2.0)
             self.set_mesh(trigger_ids=[703], visible=True, fade=2.0)
             return NextWait(self.ctx)
-        if self.user_value(key='BannerNumber') >= 2:
+        if self.user_value(key='BannerNumber') == 2:
             self.set_mesh(trigger_ids=[710], visible=True, fade=2.0)
             self.set_mesh(trigger_ids=[702], visible=True, fade=2.0)
             return NextWait(self.ctx)
-        if self.user_value(key='BannerNumber') >= 1:
+        if self.user_value(key='BannerNumber') == 1:
             self.set_mesh(trigger_ids=[710], visible=True, fade=2.0)
             self.set_mesh(trigger_ids=[701], visible=True, fade=2.0)
             return NextWait(self.ctx)
-        if self.user_value(key='BannerNumber') >= 0:
+        if self.user_value(key='BannerNumber') == 0:
             self.set_mesh(trigger_ids=[710], visible=True, fade=2.0)
             self.set_mesh(trigger_ids=[700], visible=True, fade=2.0)
             return NextWait(self.ctx)
@@ -312,7 +312,7 @@ class SetBanner(trigger_api.Trigger):
 
 class NextWait(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='SetBanner') >= 1:
+        if self.user_value(key='SetBanner') == 1:
             return SetBanner(self.ctx)
 
 

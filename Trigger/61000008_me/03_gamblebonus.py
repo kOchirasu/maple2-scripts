@@ -7,21 +7,21 @@ class Wait(trigger_api.Trigger):
         self.set_effect(trigger_ids=[8001]) # Firework
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='GamblePass') >= 22:
+        if self.user_value(key='GamblePass') == 22:
             return GambleBonusDelay01(self.ctx)
-        if self.user_value(key='GamblePass') >= 23:
+        if self.user_value(key='GamblePass') == 23:
             return GambleBonusDelay01(self.ctx)
-        if self.user_value(key='GamblePass') >= 32:
+        if self.user_value(key='GamblePass') == 32:
             return GambleBonusDelay01(self.ctx)
-        if self.user_value(key='GamblePass') >= 33:
+        if self.user_value(key='GamblePass') == 33:
             return GambleBonusDelay01(self.ctx)
-        if self.user_value(key='JackpotPass') >= 22:
+        if self.user_value(key='JackpotPass') == 22:
             return JackpotBonusDelay01(self.ctx)
-        if self.user_value(key='JackpotPass') >= 23:
+        if self.user_value(key='JackpotPass') == 23:
             return JackpotBonusDelay01(self.ctx)
-        if self.user_value(key='JackpotPass') >= 32:
+        if self.user_value(key='JackpotPass') == 32:
             return JackpotBonusDelay01(self.ctx)
-        if self.user_value(key='JackpotPass') >= 33:
+        if self.user_value(key='JackpotPass') == 33:
             return JackpotBonusDelay01(self.ctx)
 
 

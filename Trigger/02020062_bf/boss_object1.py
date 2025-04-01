@@ -10,7 +10,7 @@ class 대기(trigger_api.Trigger):
         self.set_interact_object(trigger_ids=[12000111], state=2)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='BossObjectStart') >= 1:
+        if self.user_value(key='BossObjectStart') == 1:
             return 레버1_체크(self.ctx)
 
 
@@ -19,7 +19,7 @@ class 레버1_체크(trigger_api.Trigger):
         self.spawn_monster(spawn_ids=[721], auto_target=False)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='BossObjectStart') >= 2:
+        if self.user_value(key='BossObjectStart') == 2:
             return 종료(self.ctx)
         if self.monster_dead(spawn_ids=[711]):
             return 레버1_발동(self.ctx)
@@ -33,7 +33,7 @@ class 레버1_발동(trigger_api.Trigger):
         self.set_interact_object(trigger_ids=[12000111], state=1)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='BossObjectStart') >= 2:
+        if self.user_value(key='BossObjectStart') == 2:
             return 종료(self.ctx)
         if self.monster_dead(spawn_ids=[921]) and self.monster_dead(spawn_ids=[922]) and self.monster_dead(spawn_ids=[923]):
             return 종료(self.ctx)
@@ -46,7 +46,7 @@ class 레버1_안내(trigger_api.Trigger):
         self.set_user_value(trigger_id=99990023, key='MonsterSpawn', value=1)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='BossObjectStart') >= 2:
+        if self.user_value(key='BossObjectStart') == 2:
             return 종료(self.ctx)
         if self.monster_dead(spawn_ids=[921]) and self.monster_dead(spawn_ids=[922]) and self.monster_dead(spawn_ids=[923]):
             return 종료(self.ctx)
@@ -59,7 +59,7 @@ class 레버1_재활성(trigger_api.Trigger):
         self.set_interact_object(trigger_ids=[12000111], state=1)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='BossObjectStart') >= 2:
+        if self.user_value(key='BossObjectStart') == 2:
             return 종료(self.ctx)
         if self.monster_dead(spawn_ids=[921]) and self.monster_dead(spawn_ids=[922]) and self.monster_dead(spawn_ids=[923]):
             return 종료(self.ctx)
@@ -69,7 +69,7 @@ class 레버1_재활성(trigger_api.Trigger):
 
 class 레버1_재활성_대기(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='BossObjectStart') >= 2:
+        if self.user_value(key='BossObjectStart') == 2:
             return 종료(self.ctx)
         if self.monster_dead(spawn_ids=[921]) and self.monster_dead(spawn_ids=[922]) and self.monster_dead(spawn_ids=[923]):
             return 종료(self.ctx)

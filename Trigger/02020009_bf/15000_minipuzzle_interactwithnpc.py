@@ -28,7 +28,7 @@ class Wait(trigger_api.Trigger):
         self.set_effect(trigger_ids=[15304]) # Shy Sound Effect
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='TimeEventOn') >= 1:
+        if self.user_value(key='TimeEventOn') == 1:
             return SettingDelay(self.ctx)
 
 
@@ -65,7 +65,7 @@ class InteractWithNpc_NpcTypeA_Setting(trigger_api.Trigger):
             # UI 표시 안함 / 황금 상자 소유권 Additional Effect 71001051 지속시간 동일
             self.set_timer(timer_id='1', seconds=120, auto_remove=True)
             return InteractWithNpc_NpcTypeA_NpcSpawn(self.ctx)
-        if self.user_value(key='TimeEventOn') >= 0:
+        if self.user_value(key='TimeEventOn') == 0:
             return Wait(self.ctx)
 
 
@@ -76,7 +76,7 @@ class InteractWithNpc_NpcTypeA_NpcSpawn(trigger_api.Trigger):
         self.set_user_value(trigger_id=1000051, key='NPCTalk', value=1)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='StandAsideTypeA') >= 1:
+        if self.user_value(key='StandAsideTypeA') == 1:
             # 몬스터 21001030 / AI_KritiasSlime_MiniPuzzle_TypeA 에서 받는 신호
             self.set_user_value(trigger_id=1000051, key='NPCTalk', value=0)
             return InteractWithNpc_NpcTypeA_NpcChange(self.ctx)
@@ -121,7 +121,7 @@ class InteractWithNpc_NpcTypeB_Setting(trigger_api.Trigger):
         if self.object_interacted(interact_ids=[12000093], state=0):
             self.set_timer(timer_id='1', seconds=120, auto_remove=True)
             return InteractWithNpc_NpcTypeB_NpcSpawn(self.ctx)
-        if self.user_value(key='TimeEventOn') >= 0:
+        if self.user_value(key='TimeEventOn') == 0:
             return Wait(self.ctx)
 
 
@@ -132,7 +132,7 @@ class InteractWithNpc_NpcTypeB_NpcSpawn(trigger_api.Trigger):
         self.set_user_value(trigger_id=1000052, key='NPCTalk', value=1)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='StandAsideTypeB') >= 1:
+        if self.user_value(key='StandAsideTypeB') == 1:
             # 몬스터 21001031 / AI_KritiasSlime_MiniPuzzle_TypeB 에서 받는 신호
             self.set_user_value(trigger_id=1000052, key='NPCTalk', value=0)
             return InteractWithNpc_NpcTypeB_NpcChange(self.ctx)

@@ -23,7 +23,7 @@ class 카메라세팅(trigger_api.Trigger):
 
 class 강제퇴장대기(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='exitstudio') >= 1:
+        if self.user_value(key='exitstudio') == 1:
             # 관리인에게 말 걸어 나가겠다고 할 때 npcscriptfunction에서 triggervalue 컬럼에 입력된 값을 쏨(setuservalue와 같은 역할). 이 값을 받은 경우 다음 state로 넘긴다.
             return 강제퇴장준비(self.ctx)
         if self.time_expired(timer_id='4000'):

@@ -9,7 +9,7 @@ class idle(trigger_api.Trigger):
         self.set_actor(trigger_id=2203, initial_sequence='Sit_Ground_Idle_A')
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='cage_03') >= 1:
+        if self.user_value(key='cage_03') == 1:
             return ready(self.ctx)
 
 

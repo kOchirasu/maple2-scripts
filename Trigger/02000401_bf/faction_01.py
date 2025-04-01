@@ -10,7 +10,7 @@ class 대기(trigger_api.Trigger):
         self.set_interact_object(trigger_ids=[12000037], state=2)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='faction01') >= 1:
+        if self.user_value(key='faction01') == 1:
             return 석궁준비(self.ctx)
 
 
@@ -68,7 +68,7 @@ class 종료체크(trigger_api.Trigger):
 
 class NPC삭제대기(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='DungeonClear') >= 1:
+        if self.user_value(key='DungeonClear') == 1:
             self.destroy_monster(spawn_ids=[1001,1002,1003,1004,1005], arg2=False)
             return 종료(self.ctx)
 

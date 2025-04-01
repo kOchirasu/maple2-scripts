@@ -15,7 +15,7 @@ class Round_check(trigger_api.Trigger):
         self.set_user_value(trigger_id=991112, key='item_717_spawn', value=0)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Round_01') >= 1:
+        if self.user_value(key='Round_01') == 1:
             return Round_01_Ready(self.ctx)
 
 
@@ -44,7 +44,7 @@ class Round_01_Start(trigger_api.Trigger):
             return item_716(self.ctx)
         if self.random_condition(weight=1.0):
             return item_717(self.ctx)
-        if self.user_value(key='Round_01') >= 0:
+        if self.user_value(key='Round_01') == 0:
             # 스위치가 꺼지면 스테이트 초기화
             return Round_check(self.ctx)
 
@@ -54,7 +54,7 @@ class NextSpawn(trigger_api.Trigger):
         if self.wait_tick(wait_tick=5000):
             # 5초 뒤에 랜덤스폰
             return Round_01_Start(self.ctx)
-        if self.user_value(key='Round_01') >= 0:
+        if self.user_value(key='Round_01') == 0:
             # 스위치가 꺼지면 스테이트 초기화
             return Round_check(self.ctx)
 

@@ -10,7 +10,7 @@ class 대기(trigger_api.Trigger):
         self.destroy_monster(spawn_ids=[10004])
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Battle_01') >= 1:
+        if self.user_value(key='Battle_01') == 1:
             return 트리거01진행(self.ctx)
 
 

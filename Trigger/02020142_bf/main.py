@@ -94,7 +94,7 @@ class 투르카대사연출(trigger_api.Trigger):
 
 class 페이즈보스등장대기1(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='1PhaseSpawnStart') >= 1:
+        if self.user_value(key='1PhaseSpawnStart') == 1:
             # 시작 이벤트 연출용 NPC의 "AI_TurkaReaperCostume_EventStart.xml" 에서 이 변수 1 신호를 받아서 1페이즈 보스 등장시킴
             return 페이즈보스등장1(self.ctx)
 
@@ -114,7 +114,7 @@ class 페이즈전투진행1(trigger_api.Trigger):
         self.set_portal(portal_id=108, visible=True, enable=True, minimap_visible=True)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='2PhaseSpawnStart') >= 1:
+        if self.user_value(key='2PhaseSpawnStart') == 1:
             # 1페이즈 트루카 HP 1%가 되면 AI에서 이 변수 1 신호 보내고 스스로 사라짐
             return 페이즈전투완료_2페이즈투르카등장1(self.ctx)
 
@@ -143,7 +143,7 @@ class 졸구간시작연출딜레이(trigger_api.Trigger):
         self.change_background(dds='BG_Turka_A.dds')
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='StageOpen') >= 1:
+        if self.user_value(key='StageOpen') == 1:
             # 보스AI로 부터 신호 받아서 -> 졸구간 지형생성 등등 연출 시작
             return 최초졸구간몬스터등장(self.ctx)
 
@@ -180,21 +180,21 @@ class 졸구간본격진행(trigger_api.Trigger):
 
 class 졸구간진행체크중(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='TriggerMesh12') >= 0:
+        if self.user_value(key='TriggerMesh12') == 0:
             # 첫번째 가운데지형 졸몹이 다 죽으면 TriggerMesh12 변수 0이  되어, 두번째 가운데지형 졸몹 등장  단계로 넘어감
             return 두번째가운데진행01(self.ctx)
-        if self.user_value(key='TriggerMesh22') >= 0:
+        if self.user_value(key='TriggerMesh22') == 0:
             # 두번째 가운데지형 졸몹이 다 죽으면 TriggerMesh22 변수 0이  되어, 세번째 가운데지형 졸몹 등장  단계로 넘어감
             return 세번째가운데진행01(self.ctx)
-        if self.user_value(key='TriggerMesh32') >= 0:
+        if self.user_value(key='TriggerMesh32') == 0:
             # 세번째 가운데지형 졸몹이 다 죽으면 TriggerMesh32 변수 0이  되어, 2페이즈 보스 전투판으로 가는 포탈 생성하기
             # 중요: 이 곳에서 실행되면 보스의 AI_TurkaHoodForce_Phase02.xml 에 설정된  TwoPhaseMainBattle 변수의 1 신호를 보냄
             return 가운데지점보스방가는포탈생성(self.ctx)
-        if self.user_value(key='2PhaseStartOk') >= 1:
+        if self.user_value(key='2PhaseStartOk') == 1:
             # 두번째 페이즈에서의 투르카 보스가 본격 2페이즈 전투 시작하면 2PhaseStartOk 변수 1 신호를 보내는데, 이 변수 1이 되면 졸구간 모든 지형과 포탈 생성시키고, 졸몹 제거함
             return 모든졸구간지형과포탈생성(self.ctx)
         # ## 퀘스트용 투르카 던전은 가운데 지형만 지형하고 왼쪽 오른쪽 지형은 진행 필요 없어 주석처리함 ##
-        if self.user_value(key='TurkaTwoPhaseEnd') >= 1:
+        if self.user_value(key='TurkaTwoPhaseEnd') == 1:
             # 두번째 페이즈에서의 투르카 보스 전투 끝나면 이 보스 AI에서 TurkaTwoPhaseEnd 변수 1 신호를 받게 되어 이 맵에서의 진행 끝내기
             return 이맵에서진행끝내고다음맵으로이동(self.ctx)
 

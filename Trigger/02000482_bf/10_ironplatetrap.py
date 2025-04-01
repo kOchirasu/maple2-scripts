@@ -14,7 +14,7 @@ class Setting(trigger_api.Trigger):
         self.set_user_value(key='TrapOn', value=0)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='TrapOn') >= 1:
+        if self.user_value(key='TrapOn') == 1:
             return LeverOnDelay(self.ctx)
 
 

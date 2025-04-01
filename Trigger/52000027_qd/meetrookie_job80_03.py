@@ -333,7 +333,7 @@ class 레버찾기01(trigger_api.Trigger):
 
 class 레버찾기02(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='TrapOpen') >= 1:
+        if self.user_value(key='TrapOpen') == 1:
             return 함정연출01(self.ctx)
 
     def on_exit(self) -> None:

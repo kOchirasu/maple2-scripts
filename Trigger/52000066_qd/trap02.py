@@ -10,7 +10,7 @@ class Wait(trigger_api.Trigger):
         self.set_user_value(key='TrapLeverOn', value=0)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='TrapLeverOn') >= 1:
+        if self.user_value(key='TrapLeverOn') == 1:
             return TrapLeverOn01(self.ctx)
 
 
@@ -22,7 +22,7 @@ class TrapLeverOn01(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.object_interacted(interact_ids=[10001071], state=0):
             return TrapFalse01(self.ctx)
-        if self.user_value(key='TrapLeverOn') >= 2:
+        if self.user_value(key='TrapLeverOn') == 2:
             return Quit(self.ctx)
 
 

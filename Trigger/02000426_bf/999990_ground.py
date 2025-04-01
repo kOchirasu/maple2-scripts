@@ -15,7 +15,7 @@ class 시작(trigger_api.Trigger):
 
 class 대기중(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='ZakumBodyAppearance') >= 1:
+        if self.user_value(key='ZakumBodyAppearance') == 1:
             return 층지형의숨겨진바닥생성3(self.ctx)
 
 

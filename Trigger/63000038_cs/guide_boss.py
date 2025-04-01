@@ -4,7 +4,7 @@ import trigger_api
 
 class 대기(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='BossGuide') >= 1:
+        if self.user_value(key='BossGuide') == 1:
             return 가이드분기(self.ctx)
 
 

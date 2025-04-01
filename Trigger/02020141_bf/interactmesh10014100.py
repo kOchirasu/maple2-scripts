@@ -25,7 +25,7 @@ class 탈것_등장대기(trigger_api.Trigger):
 
 class WaitTick후에결정01(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='RidingBattle') >= -1:
+        if self.user_value(key='RidingBattle') == -1:
             # 보스가 죽으면 AI_TurkaHoodForce_Phase03.xml 에서 RidingBattle = -1 신호를 보냄
             return 종료(self.ctx)
         if self.wait_tick(wait_tick=110000):
@@ -34,7 +34,7 @@ class WaitTick후에결정01(trigger_api.Trigger):
 
 class WaitTick후에결정02(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='RidingBattle') >= -1:
+        if self.user_value(key='RidingBattle') == -1:
             # 보스가 죽으면 AI_TurkaHoodForce_Phase03.xml 에서 RidingBattle = -1 신호를 보냄
             return 종료(self.ctx)
         if self.wait_tick(wait_tick=135000):
@@ -43,7 +43,7 @@ class WaitTick후에결정02(trigger_api.Trigger):
 
 class WaitTick후에결정03(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='RidingBattle') >= -1:
+        if self.user_value(key='RidingBattle') == -1:
             # 보스가 죽으면 AI_TurkaHoodForce_Phase03.xml 에서 RidingBattle = -1 신호를 보냄
             return 종료(self.ctx)
         if self.wait_tick(wait_tick=150000):
@@ -82,7 +82,7 @@ class 탈것_등장(trigger_api.Trigger):
         if self.object_interacted(interact_ids=[10003154], state=0):
             # arg2="0" 노말 상태 (툴벤치에서 상태 입력)      arg2="1" 반응가능 상태 (툴벤치에서 상태 입력)      arg2="2" 오브젝트 사라짐
             return 종료(self.ctx)
-        if self.user_value(key='RidingBattle') >= -1:
+        if self.user_value(key='RidingBattle') == -1:
             return 종료(self.ctx)
 
 

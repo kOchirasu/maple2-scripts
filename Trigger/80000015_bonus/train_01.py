@@ -15,7 +15,7 @@ class 대기(trigger_api.Trigger):
 
 class 아이템체크(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='itemSpawn') >= 1:
+        if self.user_value(key='itemSpawn') == 1:
             return 생성(self.ctx)
         if self.wait_tick(wait_tick=200):
             self.create_item(spawn_ids=[9020,9021,9022,9023,9024,9025], arg5=15)

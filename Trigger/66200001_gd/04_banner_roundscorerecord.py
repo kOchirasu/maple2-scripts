@@ -30,7 +30,7 @@ class Enter(trigger_api.Trigger):
         self.set_user_value(key='RedteamScore', value=0)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='RoundScoreRecord') >= 1:
+        if self.user_value(key='RoundScoreRecord') == 1:
             return R01BannerUpdate(self.ctx)
 
 
@@ -43,7 +43,7 @@ class R01BannerUpdate(trigger_api.Trigger):
         self.set_user_value(key='RoundScoreRecord', value=0)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='RoundScoreRecord') >= 2:
+        if self.user_value(key='RoundScoreRecord') == 2:
             return R02BannerUpdate(self.ctx)
 
 
@@ -56,7 +56,7 @@ class R02BannerUpdate(trigger_api.Trigger):
         self.set_user_value(key='RoundScoreRecord', value=0)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='RoundScoreRecord') >= 3:
+        if self.user_value(key='RoundScoreRecord') == 3:
             return R03BannerUpdate(self.ctx)
 
 
@@ -69,11 +69,11 @@ class R03BannerUpdate(trigger_api.Trigger):
         self.set_user_value(key='RoundScoreRecord', value=0)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='BlueteamScore') >= 3:
+        if self.user_value(key='BlueteamScore') == 3:
             return BlueTeamWin(self.ctx)
-        if self.user_value(key='RedteamScore') >= 3:
+        if self.user_value(key='RedteamScore') == 3:
             return RedTeamWin(self.ctx)
-        if self.user_value(key='RoundScoreRecord') >= 4:
+        if self.user_value(key='RoundScoreRecord') == 4:
             return R04BannerUpdate(self.ctx)
 
 
@@ -86,11 +86,11 @@ class R04BannerUpdate(trigger_api.Trigger):
         self.set_user_value(key='RoundScoreRecord', value=0)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='BlueteamScore') >= 3:
+        if self.user_value(key='BlueteamScore') == 3:
             return BlueTeamWin(self.ctx)
-        if self.user_value(key='RedteamScore') >= 3:
+        if self.user_value(key='RedteamScore') == 3:
             return RedTeamWin(self.ctx)
-        if self.user_value(key='RoundScoreRecord') >= 5:
+        if self.user_value(key='RoundScoreRecord') == 5:
             return R05BannerUpdate(self.ctx)
 
 
@@ -103,11 +103,11 @@ class R05BannerUpdate(trigger_api.Trigger):
         self.set_user_value(key='RoundScoreRecord', value=0)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='BlueteamScore') >= 3:
+        if self.user_value(key='BlueteamScore') == 3:
             return BlueTeamWin(self.ctx)
-        if self.user_value(key='RedteamScore') >= 3:
+        if self.user_value(key='RedteamScore') == 3:
             return RedTeamWin(self.ctx)
-        if self.user_value(key='RoundScoreRecord') >= 5:
+        if self.user_value(key='RoundScoreRecord') == 5:
             return EndGame(self.ctx)
 
 

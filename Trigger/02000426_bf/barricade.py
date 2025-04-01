@@ -32,7 +32,7 @@ class 차단(trigger_api.Trigger):
         self.set_mesh(trigger_ids=[3100,3101,3102,3103,3104,3105,3106,3107,3108], fade=3.0)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='BattleEnd') >= 1:
+        if self.user_value(key='BattleEnd') == 1:
             return 차단해제(self.ctx)
 
 

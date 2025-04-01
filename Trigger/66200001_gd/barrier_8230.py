@@ -10,15 +10,15 @@ class Wait(trigger_api.Trigger):
         self.set_interact_object(trigger_ids=[10001207], state=2) # Off
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Barrier23') >= 1:
+        if self.user_value(key='Barrier23') == 1:
             return Sensor7231(self.ctx)
-        if self.user_value(key='Barrier23') >= 2:
+        if self.user_value(key='Barrier23') == 2:
             return Sensor7232(self.ctx)
-        if self.user_value(key='Barrier23') >= 3:
+        if self.user_value(key='Barrier23') == 3:
             return Sensor7233(self.ctx)
-        if self.user_value(key='Barrier23') >= 4:
+        if self.user_value(key='Barrier23') == 4:
             return Sensor7234(self.ctx)
-        if self.user_value(key='Barrier23') >= 5:
+        if self.user_value(key='Barrier23') == 5:
             return Sensor7235(self.ctx)
 
 
@@ -30,7 +30,7 @@ class Sensor7231(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.count_users(box_id=9230) == 1:
             return Activate7231(self.ctx)
-        if self.user_value(key='Barrier23') >= 10:
+        if self.user_value(key='Barrier23') == 10:
             return Reset(self.ctx)
 
 
@@ -41,7 +41,7 @@ class Activate7231(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.count_users(box_id=9230) != 1:
             return Sensor7231(self.ctx)
-        if self.user_value(key='Barrier23') >= 10:
+        if self.user_value(key='Barrier23') == 10:
             return Reset(self.ctx)
 
 
@@ -57,7 +57,7 @@ class Sensor7232(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.count_users(box_id=9230) == 2:
             return SafeGreen7232(self.ctx)
-        if self.user_value(key='Barrier23') >= 10:
+        if self.user_value(key='Barrier23') == 10:
             return Reset(self.ctx)
 
 
@@ -70,7 +70,7 @@ class SafeGreen7232(trigger_api.Trigger):
             return CheckSameUserTag7232(self.ctx)
         if self.count_users(box_id=9230) != 2:
             return Sensor7232(self.ctx)
-        if self.user_value(key='Barrier23') >= 10:
+        if self.user_value(key='Barrier23') == 10:
             return Reset(self.ctx)
 
 
@@ -82,7 +82,7 @@ class CheckSameUserTag7232(trigger_api.Trigger):
             return Sensor7232(self.ctx)
         if not self.check_same_user_tag(box_id=9230):
             return SafeGreen7232(self.ctx)
-        if self.user_value(key='Barrier23') >= 10:
+        if self.user_value(key='Barrier23') == 10:
             return Reset(self.ctx)
 
 
@@ -97,7 +97,7 @@ class Enable7232(trigger_api.Trigger):
             return Activate7232(self.ctx)
         if self.count_users(box_id=9230) != 2:
             return Sensor7232(self.ctx)
-        if self.user_value(key='Barrier23') >= 10:
+        if self.user_value(key='Barrier23') == 10:
             return Reset(self.ctx)
 
 
@@ -110,7 +110,7 @@ class Activate7232(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.count_users(box_id=9230) != 2:
             return Sensor7232(self.ctx)
-        if self.user_value(key='Barrier23') >= 10:
+        if self.user_value(key='Barrier23') == 10:
             return Reset(self.ctx)
         if self.wait_tick(wait_tick=1000):
             return Delay7232(self.ctx)
@@ -123,7 +123,7 @@ class Delay7232(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.count_users(box_id=9230) != 2:
             return Sensor7232(self.ctx)
-        if self.user_value(key='Barrier23') >= 10:
+        if self.user_value(key='Barrier23') == 10:
             return Reset(self.ctx)
         if self.object_interacted(interact_ids=[10001207], state=0):
             # Off
@@ -138,7 +138,7 @@ class DeActivate7232(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=1000):
             return Sensor7232(self.ctx)
-        if self.user_value(key='Barrier23') >= 10:
+        if self.user_value(key='Barrier23') == 10:
             return Reset(self.ctx)
 
 
@@ -154,7 +154,7 @@ class Sensor7233(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.count_users(box_id=9230) == 3:
             return SafeGreen7233(self.ctx)
-        if self.user_value(key='Barrier23') >= 10:
+        if self.user_value(key='Barrier23') == 10:
             return Reset(self.ctx)
 
 
@@ -167,7 +167,7 @@ class SafeGreen7233(trigger_api.Trigger):
             return CheckSameUserTag7233(self.ctx)
         if self.count_users(box_id=9230) != 3:
             return Sensor7233(self.ctx)
-        if self.user_value(key='Barrier23') >= 10:
+        if self.user_value(key='Barrier23') == 10:
             return Reset(self.ctx)
 
 
@@ -179,7 +179,7 @@ class CheckSameUserTag7233(trigger_api.Trigger):
             return Sensor7233(self.ctx)
         if not self.check_same_user_tag(box_id=9230):
             return SafeGreen7233(self.ctx)
-        if self.user_value(key='Barrier23') >= 10:
+        if self.user_value(key='Barrier23') == 10:
             return Reset(self.ctx)
 
 
@@ -194,7 +194,7 @@ class Enable7233(trigger_api.Trigger):
             return Activate7233(self.ctx)
         if self.count_users(box_id=9230) != 3:
             return Sensor7233(self.ctx)
-        if self.user_value(key='Barrier23') >= 10:
+        if self.user_value(key='Barrier23') == 10:
             return Reset(self.ctx)
 
 
@@ -207,7 +207,7 @@ class Activate7233(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.count_users(box_id=9230) != 3:
             return Sensor7233(self.ctx)
-        if self.user_value(key='Barrier23') >= 10:
+        if self.user_value(key='Barrier23') == 10:
             return Reset(self.ctx)
         if self.wait_tick(wait_tick=1000):
             return Delay7233(self.ctx)
@@ -220,7 +220,7 @@ class Delay7233(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.count_users(box_id=9230) != 3:
             return Sensor7233(self.ctx)
-        if self.user_value(key='Barrier23') >= 10:
+        if self.user_value(key='Barrier23') == 10:
             return Reset(self.ctx)
         if self.object_interacted(interact_ids=[10001207], state=0):
             # Off
@@ -235,7 +235,7 @@ class DeActivate7233(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=1000):
             return Sensor7233(self.ctx)
-        if self.user_value(key='Barrier23') >= 10:
+        if self.user_value(key='Barrier23') == 10:
             return Reset(self.ctx)
 
 
@@ -251,7 +251,7 @@ class Sensor7234(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.count_users(box_id=9230) == 4:
             return SafeGreen7234(self.ctx)
-        if self.user_value(key='Barrier23') >= 10:
+        if self.user_value(key='Barrier23') == 10:
             return Reset(self.ctx)
 
 
@@ -264,7 +264,7 @@ class SafeGreen7234(trigger_api.Trigger):
             return CheckSameUserTag7234(self.ctx)
         if self.count_users(box_id=9230) != 4:
             return Sensor7234(self.ctx)
-        if self.user_value(key='Barrier23') >= 10:
+        if self.user_value(key='Barrier23') == 10:
             return Reset(self.ctx)
 
 
@@ -276,7 +276,7 @@ class CheckSameUserTag7234(trigger_api.Trigger):
             return Sensor7234(self.ctx)
         if not self.check_same_user_tag(box_id=9230):
             return SafeGreen7234(self.ctx)
-        if self.user_value(key='Barrier23') >= 10:
+        if self.user_value(key='Barrier23') == 10:
             return Reset(self.ctx)
 
 
@@ -291,7 +291,7 @@ class Enable7234(trigger_api.Trigger):
             return Activate7234(self.ctx)
         if self.count_users(box_id=9230) != 4:
             return Sensor7234(self.ctx)
-        if self.user_value(key='Barrier23') >= 10:
+        if self.user_value(key='Barrier23') == 10:
             return Reset(self.ctx)
 
 
@@ -304,7 +304,7 @@ class Activate7234(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.count_users(box_id=9230) != 4:
             return Sensor7234(self.ctx)
-        if self.user_value(key='Barrier23') >= 10:
+        if self.user_value(key='Barrier23') == 10:
             return Reset(self.ctx)
         if self.wait_tick(wait_tick=1000):
             return Delay7234(self.ctx)
@@ -317,7 +317,7 @@ class Delay7234(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.count_users(box_id=9230) != 4:
             return Sensor7234(self.ctx)
-        if self.user_value(key='Barrier23') >= 10:
+        if self.user_value(key='Barrier23') == 10:
             return Reset(self.ctx)
         if self.object_interacted(interact_ids=[10001207], state=0):
             # Off
@@ -332,7 +332,7 @@ class DeActivate7234(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=1000):
             return Sensor7234(self.ctx)
-        if self.user_value(key='Barrier23') >= 10:
+        if self.user_value(key='Barrier23') == 10:
             return Reset(self.ctx)
 
 
@@ -348,7 +348,7 @@ class Sensor7235(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.count_users(box_id=9230) == 5:
             return SafeGreen7235(self.ctx)
-        if self.user_value(key='Barrier23') >= 10:
+        if self.user_value(key='Barrier23') == 10:
             return Reset(self.ctx)
 
 
@@ -361,7 +361,7 @@ class SafeGreen7235(trigger_api.Trigger):
             return CheckSameUserTag7235(self.ctx)
         if self.count_users(box_id=9230) != 5:
             return Sensor7235(self.ctx)
-        if self.user_value(key='Barrier23') >= 10:
+        if self.user_value(key='Barrier23') == 10:
             return Reset(self.ctx)
 
 
@@ -373,7 +373,7 @@ class CheckSameUserTag7235(trigger_api.Trigger):
             return Sensor7235(self.ctx)
         if not self.check_same_user_tag(box_id=9230):
             return SafeGreen7235(self.ctx)
-        if self.user_value(key='Barrier23') >= 10:
+        if self.user_value(key='Barrier23') == 10:
             return Reset(self.ctx)
 
 
@@ -388,7 +388,7 @@ class Enable7235(trigger_api.Trigger):
             return Activate7235(self.ctx)
         if self.count_users(box_id=9230) != 5:
             return Sensor7235(self.ctx)
-        if self.user_value(key='Barrier23') >= 10:
+        if self.user_value(key='Barrier23') == 10:
             return Reset(self.ctx)
 
 
@@ -401,7 +401,7 @@ class Activate7235(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.count_users(box_id=9230) != 5:
             return Sensor7235(self.ctx)
-        if self.user_value(key='Barrier23') >= 10:
+        if self.user_value(key='Barrier23') == 10:
             return Reset(self.ctx)
         if self.wait_tick(wait_tick=1000):
             return Delay7235(self.ctx)
@@ -414,7 +414,7 @@ class Delay7235(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.count_users(box_id=9230) != 5:
             return Sensor7235(self.ctx)
-        if self.user_value(key='Barrier23') >= 10:
+        if self.user_value(key='Barrier23') == 10:
             return Reset(self.ctx)
         if self.object_interacted(interact_ids=[10001207], state=0):
             # Off
@@ -429,7 +429,7 @@ class DeActivate7235(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=1000):
             return Sensor7235(self.ctx)
-        if self.user_value(key='Barrier23') >= 10:
+        if self.user_value(key='Barrier23') == 10:
             return Reset(self.ctx)
 
 

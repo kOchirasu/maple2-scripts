@@ -5,7 +5,7 @@ from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 class 대기(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='BombPhase') >= 2:
+        if self.user_value(key='BombPhase') == 2:
             return 무적해제안내(self.ctx)
 
 
@@ -15,7 +15,7 @@ class 무적해제안내(trigger_api.Trigger):
         self.set_event_ui_script(type=BannerType.Text, script='$02020061_BF__BOSS_INVINCIBLE_OFF__0$', duration=5000)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='BossClear') >= 1:
+        if self.user_value(key='BossClear') == 1:
             return 종료(self.ctx)
 
 

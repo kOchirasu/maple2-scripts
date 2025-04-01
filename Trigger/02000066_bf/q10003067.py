@@ -13,7 +13,7 @@ class 대기(trigger_api.Trigger):
 
 class 포털활성화(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='woodsoflife') >= 1:
+        if self.user_value(key='woodsoflife') == 1:
             return None # Missing State: 포털비활성화
 
 

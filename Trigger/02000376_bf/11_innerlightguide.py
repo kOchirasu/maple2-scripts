@@ -13,7 +13,7 @@ class Wait(trigger_api.Trigger):
         self.set_effect(trigger_ids=[5104]) # 화살표
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='DungeonStart') >= 1:
+        if self.user_value(key='DungeonStart') == 1:
             return LodingDelay01(self.ctx)
 
 

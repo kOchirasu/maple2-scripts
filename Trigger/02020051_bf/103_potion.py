@@ -4,7 +4,7 @@ import trigger_api
 
 class 준비(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Main') >= 1:
+        if self.user_value(key='Main') == 1:
             return 포션사용_준비(self.ctx)
 
 
@@ -32,7 +32,7 @@ class 시작(trigger_api.Trigger):
         self.set_user_value(trigger_id=101, key='Potion', value=1)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Main') >= 2:
+        if self.user_value(key='Main') == 2:
             return 준비(self.ctx)
 
 

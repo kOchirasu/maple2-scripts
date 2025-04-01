@@ -9,7 +9,7 @@ class Wait(trigger_api.Trigger):
         self.set_portal(portal_id=15700)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='PortalOn') >= 1:
+        if self.user_value(key='PortalOn') == 1:
             return PortalOn(self.ctx)
 
 
@@ -19,7 +19,7 @@ class PortalOn(trigger_api.Trigger):
         self.set_portal(portal_id=15700, enable=True)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='PortalOn') >= 2:
+        if self.user_value(key='PortalOn') == 2:
             return PortalOff(self.ctx)
 
 
@@ -29,7 +29,7 @@ class PortalOff(trigger_api.Trigger):
         self.set_portal(portal_id=15700)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='PortalOn') >= 0:
+        if self.user_value(key='PortalOn') == 0:
             return Wait(self.ctx)
 
 

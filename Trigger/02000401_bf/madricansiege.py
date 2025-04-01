@@ -141,7 +141,7 @@ class 보스등장(trigger_api.Trigger):
         self.set_user_value(trigger_id=99999096, key='faction04', value=1)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='bossSpawn') >= 1:
+        if self.user_value(key='bossSpawn') == 1:
             return 던전종료대기(self.ctx)
 
 

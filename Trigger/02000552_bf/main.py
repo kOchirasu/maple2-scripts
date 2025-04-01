@@ -65,16 +65,16 @@ class 쉬운난이도보스등장(trigger_api.Trigger):
 
 class 보스전투중(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='SmallRemove') >= 1:
+        if self.user_value(key='SmallRemove') == 1:
             # 블랙빈이 방구 공격 할 때 AI에서 이 신호 SmallRemove = 1 보냄
             return 작아짐제거(self.ctx)
-        if self.user_value(key='VacuumMessage') >= 1:
+        if self.user_value(key='VacuumMessage') == 1:
             # 블랙빈 진공청소기 흡수된 플레이어 있으면 AI에서 이 신호 VacuumMessage = 1 보냄
             return 메시지출력(self.ctx)
-        if self.user_value(key='NextPortal') >= 1:
+        if self.user_value(key='NextPortal') == 1:
             # 블랙빈 첫번째 전투판 전투 끝나면 AI에서 이 신호 NextPortal = 1 보냄
             return 다음이동포탈등장(self.ctx)
-        if self.user_value(key='End') >= 1:
+        if self.user_value(key='End') == 1:
             # 블랙빈AI에서 End = 1 신호를 보냄
             return 종료딜레이(self.ctx)
         if self.dungeon_timeout():

@@ -16,17 +16,17 @@ class Ready(trigger_api.Trigger):
 
 class 스테이지4_시작(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Stage04') >= 11:
+        if self.user_value(key='Stage04') == 11:
             return 스테이지4_왼쪽_왼쪽진행(self.ctx)
-        if self.user_value(key='Stage04') >= 12:
+        if self.user_value(key='Stage04') == 12:
             return 스테이지4_왼쪽_왼쪽가운데진행(self.ctx)
-        if self.user_value(key='Stage04') >= 21:
+        if self.user_value(key='Stage04') == 21:
             return 스테이지4_가운데_왼쪽가운데진행(self.ctx)
-        if self.user_value(key='Stage04') >= 22:
+        if self.user_value(key='Stage04') == 22:
             return 스테이지4_가운데_오른쪽가운데진행(self.ctx)
-        if self.user_value(key='Stage04') >= 31:
+        if self.user_value(key='Stage04') == 31:
             return 스테이지4_오른쪽_오른쪽가운데진행(self.ctx)
-        if self.user_value(key='Stage04') >= 32:
+        if self.user_value(key='Stage04') == 32:
             return 스테이지4_오른쪽_오른쪽진행(self.ctx)
 
 
@@ -86,7 +86,7 @@ class 스테이지4_오른쪽_오른쪽진행(trigger_api.Trigger):
 
 class 혹시모를_던전리셋신호_대기(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='DungeonReset') >= 1:
+        if self.user_value(key='DungeonReset') == 1:
             return Ready(self.ctx)
 
 

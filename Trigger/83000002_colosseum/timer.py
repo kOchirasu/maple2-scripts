@@ -5,25 +5,25 @@ import trigger_api
 # <라운드 시작하면서 5분 시간 제한 타이머>
 class 대기(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Timer') >= 1:
+        if self.user_value(key='Timer') == 1:
             return 스테이지1(self.ctx)
-        if self.user_value(key='Timer') >= 2:
+        if self.user_value(key='Timer') == 2:
             return 스테이지2(self.ctx)
-        if self.user_value(key='Timer') >= 3:
+        if self.user_value(key='Timer') == 3:
             return 스테이지3(self.ctx)
-        if self.user_value(key='Timer') >= 4:
+        if self.user_value(key='Timer') == 4:
             return 스테이지4(self.ctx)
-        if self.user_value(key='Timer') >= 5:
+        if self.user_value(key='Timer') == 5:
             return 스테이지5(self.ctx)
-        if self.user_value(key='Timer') >= 6:
+        if self.user_value(key='Timer') == 6:
             return 스테이지6(self.ctx)
-        if self.user_value(key='Timer') >= 7:
+        if self.user_value(key='Timer') == 7:
             return 스테이지7(self.ctx)
-        if self.user_value(key='Timer') >= 8:
+        if self.user_value(key='Timer') == 8:
             return 스테이지8(self.ctx)
-        if self.user_value(key='Timer') >= 9:
+        if self.user_value(key='Timer') == 9:
             return 스테이지9(self.ctx)
-        if self.user_value(key='Timer') >= 10:
+        if self.user_value(key='Timer') == 10:
             return 스테이지10(self.ctx)
 
 

@@ -7,7 +7,7 @@ class Wait(trigger_api.Trigger):
         self.set_user_value(key='MelodyOn', value=0)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='MelodyOn') >= 1:
+        if self.user_value(key='MelodyOn') == 1:
             return PuzzleOn(self.ctx)
 
 

@@ -19,9 +19,9 @@ class Wait(trigger_api.Trigger):
         self.set_user_value(key='HiddenRouteOpen', value=0)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='HiddenRouteOpen') >= 1:
+        if self.user_value(key='HiddenRouteOpen') == 1:
             return Opened(self.ctx)
-        if self.user_value(key='HiddenRouteOpen') >= 2:
+        if self.user_value(key='HiddenRouteOpen') == 2:
             return Closed(self.ctx)
 
 

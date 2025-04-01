@@ -258,7 +258,7 @@ class step_06(trigger_api.Trigger):
         pass
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='LadderGoBossRoom') >= 1:
+        if self.user_value(key='LadderGoBossRoom') == 1:
             return step_07(self.ctx)
 
 

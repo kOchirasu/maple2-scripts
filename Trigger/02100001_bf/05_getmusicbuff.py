@@ -20,7 +20,7 @@ class GiveBuff01(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=1000):
             return GiveBuff01(self.ctx)
-        if self.user_value(key='GiveBuffSlowly') >= 1:
+        if self.user_value(key='GiveBuffSlowly') == 1:
             return GiveBuff02(self.ctx)
 
 
@@ -32,7 +32,7 @@ class GiveBuff02(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.user_detected(box_ids=[9901]):
             return GiveBuff02(self.ctx)
-        if self.user_value(key='GiveBuffSlowly') >= 2:
+        if self.user_value(key='GiveBuffSlowly') == 2:
             return Quit(self.ctx)
 
 

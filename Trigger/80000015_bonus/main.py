@@ -37,7 +37,7 @@ class 시작(trigger_api.Trigger):
         if self.wait_tick(wait_tick=1500):
             pass
         """
-        if self.user_value(key='Dead_A') >= 1 and self.user_value(key='Dead_B') >= 1:
+        if self.user_value(key='Dead_A') == 1 and self.user_value(key='Dead_B') == 1:
             return 보스소환대기(self.ctx)
 
 

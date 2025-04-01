@@ -17,7 +17,7 @@ class 시작(trigger_api.Trigger):
 
 class 대기중(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='SummonZakumArmRegenCheck') >= 1:
+        if self.user_value(key='SummonZakumArmRegenCheck') == 1:
             # 자쿰몸통 AI에서 이 변수 1 신호를 보내서 자쿰팔 소환을 소환하는데, 트리거는 이 변수 1 신호를 받게 되어서 자쿰팔 등장 유무를 알수있게 되는 것임
             return 자쿰몸통무적버프로직_시작대기중(self.ctx)
 
@@ -39,7 +39,7 @@ class 자쿰몸통무적버프로직_작동(trigger_api.Trigger):
         self.add_buff(box_ids=[2012], skill_id=50000265, level=1, is_skill_set=False)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='SummonZakumArmMany') >= 0:
+        if self.user_value(key='SummonZakumArmMany') == 0:
             # 모든 자쿰팔 제거 되어서 이 변수 0이 되면, 버프 제거함
             return 자쿰몸통무적버프_제거대기(self.ctx)
 

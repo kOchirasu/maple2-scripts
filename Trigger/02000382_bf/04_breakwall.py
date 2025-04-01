@@ -10,7 +10,7 @@ class Wait(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.user_detected(box_ids=[9100]):
             return BreakWall(self.ctx)
-        if self.user_value(key='BossKill') >= 1:
+        if self.user_value(key='BossKill') == 1:
             return BreakWall(self.ctx)
 
 

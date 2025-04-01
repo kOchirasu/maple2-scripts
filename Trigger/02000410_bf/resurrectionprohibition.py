@@ -20,10 +20,10 @@ class 전투시작(trigger_api.Trigger):
             return 지금부터부활불가처리(self.ctx)
         """
         # 인페르녹과 전투 시작할 때 인페르녹  AI에서 BalrogMagicBursterBattlePhase =  1 신호를 보낼때까지 대기
-        if self.user_value(key='BalrogMagicBursterBattlePhase') >= 1:
+        if self.user_value(key='BalrogMagicBursterBattlePhase') == 1:
             return 지금부터부활불가처리(self.ctx)
         """
-        if self.user_value(key='ThirdPhase') >= 1:
+        if self.user_value(key='ThirdPhase') == 1:
             # 2페이즈 전투 다 끝나고 , 파괴되어 너덜너덜해진 인페르녹 전함에게   ThirdPhase = 1 신호를 받을때까지 여기서 대기, 즉 AI_AirshipBalrogCrimsonBroken.xml 에서 보냄
             return 지금부터부활불가처리(self.ctx)
 

@@ -16,7 +16,7 @@ class 완료npc리젠(trigger_api.Trigger):
         self.spawn_monster(spawn_ids=[2002])
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='clearafter') >= 1:
+        if self.user_value(key='clearafter') == 1:
             return 완료npc킬(self.ctx)
 
 

@@ -21,7 +21,7 @@ class MobSpawn(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.monster_dead(spawn_ids=[803]):
             return Delay01(self.ctx)
-        if self.user_value(key='RemoveAll') >= 1:
+        if self.user_value(key='RemoveAll') == 1:
             return Quit(self.ctx)
 
 

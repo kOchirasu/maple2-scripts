@@ -4,7 +4,7 @@ import trigger_api
 
 class 레이저_01_생성(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Laser') >= 1:
+        if self.user_value(key='Laser') == 1:
             self.spawn_monster(spawn_ids=[902]) # 몬스터 등장
             return 레이저_01_소멸(self.ctx)
 
@@ -47,7 +47,7 @@ class 레이저_03_소멸(trigger_api.Trigger):
 
 class 레이저_04(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Laser') >= 0:
+        if self.user_value(key='Laser') == 0:
             self.destroy_monster(spawn_ids=[713])
 
 

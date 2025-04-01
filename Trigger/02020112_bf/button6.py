@@ -13,7 +13,7 @@ class 작동(trigger_api.Trigger):
         self.set_actor(trigger_id=9906, visible=True, initial_sequence='Interaction_Lapentafoothold_A01_Off')
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='ButtonSuccess') >= 1:
+        if self.user_value(key='ButtonSuccess') == 1:
             return 종료(self.ctx)
         if self.user_detected(box_ids=[922], job_code=0):
             return 감지(self.ctx)
@@ -24,7 +24,7 @@ class 감지(trigger_api.Trigger):
         self.set_actor(trigger_id=9906, visible=True, initial_sequence='Interaction_Lapentafoothold_A01_On')
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='ButtonSuccess') >= 1:
+        if self.user_value(key='ButtonSuccess') == 1:
             return 종료(self.ctx)
         if not self.user_detected(box_ids=[922], job_code=0):
             return 작동(self.ctx)

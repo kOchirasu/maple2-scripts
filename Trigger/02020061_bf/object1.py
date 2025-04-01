@@ -10,7 +10,7 @@ class 대기(trigger_api.Trigger):
         self.set_interact_object(trigger_ids=[12000084], state=2)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='ObjectStart') >= 1:
+        if self.user_value(key='ObjectStart') == 1:
             return 레버1_체크(self.ctx)
 
 
@@ -19,7 +19,7 @@ class 레버1_체크(trigger_api.Trigger):
         self.spawn_monster(spawn_ids=[721], auto_target=False)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='ObjectStart') >= 0:
+        if self.user_value(key='ObjectStart') == 0:
             return 대기(self.ctx)
         if self.monster_dead(spawn_ids=[711]):
             return 레버1_발동(self.ctx)
@@ -32,7 +32,7 @@ class 레버1_안내멘트(trigger_api.Trigger):
         self.set_event_ui_script(type=BannerType.Text, script='$02020061_BF__OBJECT1__0$', duration=5000, box_ids=['9011'])
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='ObjectStart') >= 0:
+        if self.user_value(key='ObjectStart') == 0:
             return 대기(self.ctx)
         if self.monster_dead(spawn_ids=[711]):
             return 레버1_발동(self.ctx)
@@ -45,7 +45,7 @@ class 레버1_발동(trigger_api.Trigger):
         self.set_event_ui_script(type=BannerType.Text, script='$02020061_BF__OBJECT1__1$', duration=5000, box_ids=['9011'])
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='ObjectStart') >= 0:
+        if self.user_value(key='ObjectStart') == 0:
             return 대기(self.ctx)
         if self.monster_dead(spawn_ids=[701]):
             return 종료(self.ctx)
@@ -58,7 +58,7 @@ class 레버1_몬스터등장(trigger_api.Trigger):
         self.set_user_value(trigger_id=99990014, key='EliteSpawn', value=1)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='ObjectStart') >= 0:
+        if self.user_value(key='ObjectStart') == 0:
             return 대기(self.ctx)
         if self.monster_dead(spawn_ids=[701]):
             return 종료(self.ctx)
@@ -71,7 +71,7 @@ class 레버1_재활성(trigger_api.Trigger):
         self.set_interact_object(trigger_ids=[12000084], state=1)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='ObjectStart') >= 0:
+        if self.user_value(key='ObjectStart') == 0:
             return 대기(self.ctx)
         if self.monster_dead(spawn_ids=[701]):
             return 종료(self.ctx)
@@ -81,7 +81,7 @@ class 레버1_재활성(trigger_api.Trigger):
 
 class 레버1_재활성_대기(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='ObjectStart') >= 0:
+        if self.user_value(key='ObjectStart') == 0:
             return 대기(self.ctx)
         if self.monster_dead(spawn_ids=[701]):
             return 종료(self.ctx)

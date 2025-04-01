@@ -4,9 +4,9 @@ import trigger_api
 
 class 대기(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='wave01') >= 1:
+        if self.user_value(key='wave01') == 1:
             return 소환(self.ctx)
-        if self.user_value(key='EndDungeon') >= 1:
+        if self.user_value(key='EndDungeon') == 1:
             return 종료(self.ctx)
 
 
@@ -17,7 +17,7 @@ class 소환(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=7000):
             return 대기(self.ctx)
-        if self.user_value(key='EndDungeon') >= 1:
+        if self.user_value(key='EndDungeon') == 1:
             return 종료(self.ctx)
 
 

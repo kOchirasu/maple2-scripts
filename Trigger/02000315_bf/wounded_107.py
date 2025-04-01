@@ -18,7 +18,7 @@ class WakeUp(trigger_api.Trigger):
         self.spawn_monster(spawn_ids=[107], auto_target=False)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='BridgeOpen') >= 3:
+        if self.user_value(key='BridgeOpen') == 3:
             return Patrol03(self.ctx)
 
 

@@ -30,7 +30,7 @@ class 전투시작_인페르녹전함(trigger_api.Trigger):
 
 class 첫번째페이즈_인페르녹전함(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='AirshipBalrogCrimsonBroken') >= 1:
+        if self.user_value(key='AirshipBalrogCrimsonBroken') == 1:
             # 1페이즈 인페르녹의 전함이 파괴될때   AirshipBalrogCrimsonBroken = 1 신호를 받을때까지 여기서 대기
             return 인페르녹전함파괴연출(self.ctx)
 
@@ -61,7 +61,7 @@ class 인페르녹전함파괴연출2(trigger_api.Trigger):
 
 class 두번째페이즈_인페르녹전함(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='AirshipBalrogCrimsonFlameBroken') >= 1:
+        if self.user_value(key='AirshipBalrogCrimsonFlameBroken') == 1:
             # 2페이즈 인페르녹의 전함이 파괴될때   AirshipBalrogCrimsonFlameBroken = 1 신호를 받을때까지 여기서 대기
             return 인페르녹전함파괴_인페르녹등장연출(self.ctx)
 
@@ -134,11 +134,11 @@ class 인페르녹전함파괴_인페르녹등장연출6(trigger_api.Trigger):
 
 class 세번째페이즈_인페르녹등장(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='BalrogMagicBursterBattlePhase') >= 1: # 15분 다 지나 끝난 이후  실패한 경우
+        if self.user_value(key='BalrogMagicBursterBattlePhase') == 1: # 15분 다 지나 끝난 이후  실패한 경우
             # 인페르녹과 전투 시작할 때 몬스터 AI에서 이 신호를 보낼때까지 대기
             # 즉  BalrogMagicBursterBattlePhase = 1 신호를 AI에서 부터 트리거가  받을때까지 여기서 대기
             return None # Missing State: 성공이벤트실행
-        if self.user_value(key='BalrogMagicBursterBattlePhase') >= 1:
+        if self.user_value(key='BalrogMagicBursterBattlePhase') == 1:
             # 인페르녹과 전투 시작할 때 몬스터 AI에서 이 신호를 보낼때까지 대기
             # 즉  BalrogMagicBursterBattlePhase = 1 신호를 AI에서 부터 트리거가  받을때까지 여기서 대기
             return None # Missing State: 실패이벤트실행

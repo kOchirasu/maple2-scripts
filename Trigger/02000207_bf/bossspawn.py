@@ -20,7 +20,7 @@ class 소환(trigger_api.Trigger):
         self.spawn_monster(spawn_ids=[2001], auto_target=False)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='ZakumDungeonEnd') >= 1:
+        if self.user_value(key='ZakumDungeonEnd') == 1:
             return 종료딜레이(self.ctx)
         if self.dungeon_timeout():
             return 던전실패(self.ctx)

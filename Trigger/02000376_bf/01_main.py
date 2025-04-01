@@ -90,7 +90,7 @@ class NpcPatrol02(trigger_api.Trigger):
         self.set_event_ui_script(type=BannerType.Text, script='$02000376_BF__01_MAIN__2$', duration=5000, box_ids=['0'])
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='PatrolEnd') >= 1:
+        if self.user_value(key='PatrolEnd') == 1:
             return NpcPatrol03(self.ctx)
         if self.monster_dead(spawn_ids=[900]):
             # 토템 제거
@@ -349,7 +349,7 @@ class StartPuzzle02(trigger_api.Trigger):
 # NPC 말풍선 퍼즐에 대한 멘트 스크립트 모노로그
 class EndPuzzle01(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='PuzzleSolved') >= 1:
+        if self.user_value(key='PuzzleSolved') == 1:
             return GateOpen01(self.ctx)
 
 

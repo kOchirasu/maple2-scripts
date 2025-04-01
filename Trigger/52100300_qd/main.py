@@ -249,7 +249,7 @@ class 추가대사_04(trigger_api.Trigger):
         self.side_npc_talk(npc_id=29500101, illust='ArcheonBlack_Normal', script='$52100300_QD__MAIN__7$', duration=5000)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='SpawnRoomEnd') >= 1:
+        if self.user_value(key='SpawnRoomEnd') == 1:
             self.set_actor(trigger_id=9001, visible=True, initial_sequence='sf_fi_funct_darkdoor_A01_start')
             return 길열림(self.ctx)
 
@@ -297,7 +297,7 @@ class 추가대사_06(trigger_api.Trigger):
         self.side_npc_talk(npc_id=11003536, illust='Neirin_normal', script='$52100300_QD__MAIN__10$', duration=5000)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='RandomBombEnd') >= 1:
+        if self.user_value(key='RandomBombEnd') == 1:
             self.set_user_value(trigger_id=99990004, key='Laser', value=0)
             return 보스전(self.ctx)
 

@@ -4,7 +4,7 @@ import trigger_api
 
 class 대기(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Reconnect') >= 1:
+        if self.user_value(key='Reconnect') == 1:
             return 버프쏴주기(self.ctx)
 
 
@@ -14,7 +14,7 @@ class 버프쏴주기(trigger_api.Trigger):
         self.set_timer(timer_id='1', seconds=5)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Reconnect') >= 2:
+        if self.user_value(key='Reconnect') == 2:
             return 종료(self.ctx)
         if self.time_expired(timer_id='1'):
             return 대기(self.ctx)

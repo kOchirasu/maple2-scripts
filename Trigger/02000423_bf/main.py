@@ -10,7 +10,7 @@ class 시작대기중(trigger_api.Trigger):
 class 기본셋팅시작(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         # 100번 MS2RegionSpawn 에서 등장한 몬스터가 101번 트리거영역에 감지 되었으면
-        if self.user_value(key='PortalHidden') >= 1:
+        if self.user_value(key='PortalHidden') == 1:
             return 보스사냥후포탈생성(self.ctx)
         # 100번 MS2RegionSpawn 에서 등장한 몬스터가 101번 트리거영역에 없으면
         if self.npc_detected(box_id=101, spawn_ids=[100]):

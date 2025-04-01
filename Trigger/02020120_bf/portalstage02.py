@@ -58,11 +58,11 @@ class Ready(trigger_api.Trigger):
 
 class 스테이지2_시작(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Stage02') >= 11:
+        if self.user_value(key='Stage02') == 11:
             return 스테이지2_왼쪽진행(self.ctx)
-        if self.user_value(key='Stage02') >= 21:
+        if self.user_value(key='Stage02') == 21:
             return 스테이지2_가운데진행(self.ctx)
-        if self.user_value(key='Stage02') >= 31:
+        if self.user_value(key='Stage02') == 31:
             return 스테이지2_오른쪽진행(self.ctx)
 
 
@@ -95,7 +95,7 @@ class 스테이지2_오른쪽진행(trigger_api.Trigger):
 
 class 혹시모를_던전리셋신호_대기(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='DungeonReset') >= 1:
+        if self.user_value(key='DungeonReset') == 1:
             return Ready(self.ctx)
 
 

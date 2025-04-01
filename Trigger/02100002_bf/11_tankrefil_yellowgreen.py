@@ -13,7 +13,7 @@ class Wait(trigger_api.Trigger):
         self.set_effect(trigger_ids=[5501]) # Tank_Fill_Above_Sound
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='ActivateTank') >= 1:
+        if self.user_value(key='ActivateTank') == 1:
             return Gauge100(self.ctx)
 
 
@@ -30,7 +30,7 @@ class Gauge100(trigger_api.Trigger):
         if self.detect_liftable_object(box_ids=[2001], item_id=30000883):
             # 같은색 물감통이면
             return Gauge100_Refil(self.ctx)
-        if self.user_value(key='DungeonQuit') >= 1:
+        if self.user_value(key='DungeonQuit') == 1:
             return Quit(self.ctx)
 
 
@@ -60,7 +60,7 @@ class Gauge75(trigger_api.Trigger):
         if self.detect_liftable_object(box_ids=[2001], item_id=30000883):
             # 같은색 물감통이면
             return Gauge75_Refil(self.ctx)
-        if self.user_value(key='DungeonQuit') >= 1:
+        if self.user_value(key='DungeonQuit') == 1:
             return Quit(self.ctx)
 
 
@@ -90,7 +90,7 @@ class Gauge50(trigger_api.Trigger):
         if self.detect_liftable_object(box_ids=[2001], item_id=30000883):
             # 같은색 물감통이면
             return Gauge50_Refil(self.ctx)
-        if self.user_value(key='DungeonQuit') >= 1:
+        if self.user_value(key='DungeonQuit') == 1:
             return Quit(self.ctx)
 
 
@@ -120,7 +120,7 @@ class Gauge25(trigger_api.Trigger):
         if self.detect_liftable_object(box_ids=[2001], item_id=30000883):
             # 같은색 물감통이면
             return Gauge25_Refil(self.ctx)
-        if self.user_value(key='DungeonQuit') >= 1:
+        if self.user_value(key='DungeonQuit') == 1:
             return Quit(self.ctx)
 
 
@@ -147,7 +147,7 @@ class Gauge1(trigger_api.Trigger):
         if self.detect_liftable_object(box_ids=[2001], item_id=30000883):
             # 같은색 물감통이면
             return Gauge1_Refil(self.ctx)
-        if self.user_value(key='DungeonQuit') >= 1:
+        if self.user_value(key='DungeonQuit') == 1:
             return Quit(self.ctx)
 
 

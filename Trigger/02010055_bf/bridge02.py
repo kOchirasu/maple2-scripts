@@ -13,7 +13,7 @@ class NPC감지대기(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.npc_detected(box_id=103, spawn_ids=[2099]):
             return 오브젝트반응대기(self.ctx)
-        if self.user_value(key='SecondPhaseEnd') >= 1:
+        if self.user_value(key='SecondPhaseEnd') == 1:
             return 오브젝트반응대기(self.ctx)
 
 

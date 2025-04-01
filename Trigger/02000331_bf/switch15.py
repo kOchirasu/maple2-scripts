@@ -15,7 +15,7 @@ class 대기(trigger_api.Trigger):
 
 class 전투체크(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='SecondBridgeOff') >= 1:
+        if self.user_value(key='SecondBridgeOff') == 1:
             return 스위치준비(self.ctx)
 
 

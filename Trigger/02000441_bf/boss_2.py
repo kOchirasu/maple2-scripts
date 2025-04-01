@@ -4,7 +4,7 @@ import trigger_api
 
 class idle(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='monster_respawn') >= 1:
+        if self.user_value(key='monster_respawn') == 1:
             return 몬스터체력_75(self.ctx)
 
 

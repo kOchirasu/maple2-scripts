@@ -9,15 +9,15 @@ class Round_check(trigger_api.Trigger):
         self.destroy_monster(spawn_ids=[401,402,403,404,405,406,407,408,409,410,411,412,413,414,415,416,417])
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Round_01') >= 1:
+        if self.user_value(key='Round_01') == 1:
             return Round_01_Ready(self.ctx)
-        if self.user_value(key='Round_02') >= 1:
+        if self.user_value(key='Round_02') == 1:
             return None # Missing State: Round_02_Ready
-        if self.user_value(key='Round_03') >= 1:
+        if self.user_value(key='Round_03') == 1:
             return None # Missing State: Round_03_Ready
-        if self.user_value(key='Round_04') >= 1:
+        if self.user_value(key='Round_04') == 1:
             return None # Missing State: Round_04_Ready
-        if self.user_value(key='Round_05') >= 1:
+        if self.user_value(key='Round_05') == 1:
             return None # Missing State: Round_05_Ready
 
 
@@ -37,7 +37,7 @@ class Round_01(trigger_api.Trigger):
             return Round_01_Random_03(self.ctx)
         if self.random_condition(weight=1.0):
             return Round_01_Random_04(self.ctx)
-        if self.user_value(key='Round_02') >= 1:
+        if self.user_value(key='Round_02') == 1:
             return Round_02(self.ctx)
 
 
@@ -49,9 +49,9 @@ class Round_01_Random_01(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='5'):
             return Round_01(self.ctx)
-        if self.user_value(key='Round_01') >= 0:
+        if self.user_value(key='Round_01') == 0:
             return Round_check(self.ctx)
-        if self.user_value(key='Reset') >= 1:
+        if self.user_value(key='Reset') == 1:
             return End(self.ctx)
 
 
@@ -63,9 +63,9 @@ class Round_01_Random_02(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='5'):
             return Round_01(self.ctx)
-        if self.user_value(key='Round_01') >= 0:
+        if self.user_value(key='Round_01') == 0:
             return Round_check(self.ctx)
-        if self.user_value(key='Reset') >= 1:
+        if self.user_value(key='Reset') == 1:
             return End(self.ctx)
 
 
@@ -77,9 +77,9 @@ class Round_01_Random_03(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='5'):
             return Round_01(self.ctx)
-        if self.user_value(key='Round_01') >= 0:
+        if self.user_value(key='Round_01') == 0:
             return Round_check(self.ctx)
-        if self.user_value(key='Reset') >= 1:
+        if self.user_value(key='Reset') == 1:
             return End(self.ctx)
 
 
@@ -91,9 +91,9 @@ class Round_01_Random_04(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='5'):
             return Round_01(self.ctx)
-        if self.user_value(key='Round_01') >= 0:
+        if self.user_value(key='Round_01') == 0:
             return Round_check(self.ctx)
-        if self.user_value(key='Reset') >= 1:
+        if self.user_value(key='Reset') == 1:
             return End(self.ctx)
 
 
@@ -126,9 +126,9 @@ class Round_02_Random_01(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='4'):
             return Round_02(self.ctx)
-        if self.user_value(key='Round_02') >= 0:
+        if self.user_value(key='Round_02') == 0:
             return Round_check(self.ctx)
-        if self.user_value(key='Reset') >= 1:
+        if self.user_value(key='Reset') == 1:
             return End(self.ctx)
 
 
@@ -141,9 +141,9 @@ class Round_02_Random_02(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='4'):
             return Round_02(self.ctx)
-        if self.user_value(key='Round_02') >= 0:
+        if self.user_value(key='Round_02') == 0:
             return Round_check(self.ctx)
-        if self.user_value(key='Reset') >= 1:
+        if self.user_value(key='Reset') == 1:
             return End(self.ctx)
 
 
@@ -156,9 +156,9 @@ class Round_02_Random_03(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='4'):
             return Round_02(self.ctx)
-        if self.user_value(key='Round_02') >= 0:
+        if self.user_value(key='Round_02') == 0:
             return Round_check(self.ctx)
-        if self.user_value(key='Reset') >= 1:
+        if self.user_value(key='Reset') == 1:
             return End(self.ctx)
 
 
@@ -171,9 +171,9 @@ class Round_02_Random_04(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='4'):
             return Round_02(self.ctx)
-        if self.user_value(key='Round_02') >= 0:
+        if self.user_value(key='Round_02') == 0:
             return Round_check(self.ctx)
-        if self.user_value(key='Reset') >= 1:
+        if self.user_value(key='Reset') == 1:
             return End(self.ctx)
 
 
@@ -186,9 +186,9 @@ class Round_02_Random_05(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='4'):
             return Round_02(self.ctx)
-        if self.user_value(key='Round_02') >= 0:
+        if self.user_value(key='Round_02') == 0:
             return Round_check(self.ctx)
-        if self.user_value(key='Reset') >= 1:
+        if self.user_value(key='Reset') == 1:
             return End(self.ctx)
 
 
@@ -201,9 +201,9 @@ class Round_02_Random_06(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='3'):
             return Round_02(self.ctx)
-        if self.user_value(key='Round_02') >= 0:
+        if self.user_value(key='Round_02') == 0:
             return Round_check(self.ctx)
-        if self.user_value(key='Reset') >= 1:
+        if self.user_value(key='Reset') == 1:
             return End(self.ctx)
 
 
@@ -237,9 +237,9 @@ class Round_03_Random_01(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='7'):
             return Round_03(self.ctx)
-        if self.user_value(key='Round_03') >= 0:
+        if self.user_value(key='Round_03') == 0:
             return Round_check(self.ctx)
-        if self.user_value(key='Reset') >= 1:
+        if self.user_value(key='Reset') == 1:
             return End(self.ctx)
 
 
@@ -253,9 +253,9 @@ class Round_03_Random_02(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='7'):
             return Round_03(self.ctx)
-        if self.user_value(key='Round_03') >= 0:
+        if self.user_value(key='Round_03') == 0:
             return Round_check(self.ctx)
-        if self.user_value(key='Reset') >= 1:
+        if self.user_value(key='Reset') == 1:
             return End(self.ctx)
 
 
@@ -269,9 +269,9 @@ class Round_03_Random_03(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='7'):
             return Round_03(self.ctx)
-        if self.user_value(key='Round_03') >= 0:
+        if self.user_value(key='Round_03') == 0:
             return Round_check(self.ctx)
-        if self.user_value(key='Reset') >= 1:
+        if self.user_value(key='Reset') == 1:
             return End(self.ctx)
 
 
@@ -285,9 +285,9 @@ class Round_03_Random_04(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='7'):
             return Round_03(self.ctx)
-        if self.user_value(key='Round_03') >= 0:
+        if self.user_value(key='Round_03') == 0:
             return Round_check(self.ctx)
-        if self.user_value(key='Reset') >= 1:
+        if self.user_value(key='Reset') == 1:
             return End(self.ctx)
 
 
@@ -301,9 +301,9 @@ class Round_03_Random_05(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='7'):
             return Round_03(self.ctx)
-        if self.user_value(key='Round_03') >= 0:
+        if self.user_value(key='Round_03') == 0:
             return Round_check(self.ctx)
-        if self.user_value(key='Reset') >= 1:
+        if self.user_value(key='Reset') == 1:
             return End(self.ctx)
 
 
@@ -317,9 +317,9 @@ class Round_03_Random_06(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='7'):
             return Round_03(self.ctx)
-        if self.user_value(key='Round_03') >= 0:
+        if self.user_value(key='Round_03') == 0:
             return Round_check(self.ctx)
-        if self.user_value(key='Reset') >= 1:
+        if self.user_value(key='Reset') == 1:
             return End(self.ctx)
 
 
@@ -336,9 +336,9 @@ class Round_03_Random_07(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='7'):
             return Round_03(self.ctx)
-        if self.user_value(key='Round_03') >= 0:
+        if self.user_value(key='Round_03') == 0:
             return Round_check(self.ctx)
-        if self.user_value(key='Reset') >= 1:
+        if self.user_value(key='Reset') == 1:
             return End(self.ctx)
 
 
@@ -355,9 +355,9 @@ class Round_03_Random_08(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='7'):
             return Round_03(self.ctx)
-        if self.user_value(key='Round_03') >= 0:
+        if self.user_value(key='Round_03') == 0:
             return Round_check(self.ctx)
-        if self.user_value(key='Reset') >= 1:
+        if self.user_value(key='Reset') == 1:
             return End(self.ctx)
 
 
@@ -392,9 +392,9 @@ class Round_04_Random_01(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='7'):
             return Round_04(self.ctx)
-        if self.user_value(key='Round_04') >= 0:
+        if self.user_value(key='Round_04') == 0:
             return Round_check(self.ctx)
-        if self.user_value(key='Reset') >= 1:
+        if self.user_value(key='Reset') == 1:
             return End(self.ctx)
 
 
@@ -409,9 +409,9 @@ class Round_04_Random_02(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='7'):
             return Round_04(self.ctx)
-        if self.user_value(key='Round_04') >= 0:
+        if self.user_value(key='Round_04') == 0:
             return Round_check(self.ctx)
-        if self.user_value(key='Reset') >= 1:
+        if self.user_value(key='Reset') == 1:
             return End(self.ctx)
 
 
@@ -426,9 +426,9 @@ class Round_04_Random_03(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='7'):
             return Round_04(self.ctx)
-        if self.user_value(key='Round_04') >= 0:
+        if self.user_value(key='Round_04') == 0:
             return Round_check(self.ctx)
-        if self.user_value(key='Reset') >= 1:
+        if self.user_value(key='Reset') == 1:
             return End(self.ctx)
 
 
@@ -443,9 +443,9 @@ class Round_04_Random_04(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='7'):
             return Round_04(self.ctx)
-        if self.user_value(key='Round_04') >= 0:
+        if self.user_value(key='Round_04') == 0:
             return Round_check(self.ctx)
-        if self.user_value(key='Reset') >= 1:
+        if self.user_value(key='Reset') == 1:
             return End(self.ctx)
 
 
@@ -460,9 +460,9 @@ class Round_04_Random_05(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='7'):
             return Round_04(self.ctx)
-        if self.user_value(key='Round_04') >= 0:
+        if self.user_value(key='Round_04') == 0:
             return Round_check(self.ctx)
-        if self.user_value(key='Reset') >= 1:
+        if self.user_value(key='Reset') == 1:
             return End(self.ctx)
 
 
@@ -477,9 +477,9 @@ class Round_04_Random_06(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='7'):
             return Round_04(self.ctx)
-        if self.user_value(key='Round_04') >= 0:
+        if self.user_value(key='Round_04') == 0:
             return Round_check(self.ctx)
-        if self.user_value(key='Reset') >= 1:
+        if self.user_value(key='Reset') == 1:
             return End(self.ctx)
 
 
@@ -496,9 +496,9 @@ class Round_04_Random_07(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='6'):
             return Round_04(self.ctx)
-        if self.user_value(key='Round_04') >= 0:
+        if self.user_value(key='Round_04') == 0:
             return Round_check(self.ctx)
-        if self.user_value(key='Reset') >= 1:
+        if self.user_value(key='Reset') == 1:
             return End(self.ctx)
 
 
@@ -515,9 +515,9 @@ class Round_04_Random_08(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='6'):
             return Round_04(self.ctx)
-        if self.user_value(key='Round_04') >= 0:
+        if self.user_value(key='Round_04') == 0:
             return Round_check(self.ctx)
-        if self.user_value(key='Reset') >= 1:
+        if self.user_value(key='Reset') == 1:
             return End(self.ctx)
 
 
@@ -552,9 +552,9 @@ class Round_05_Random_01(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='7'):
             return Round_05(self.ctx)
-        if self.user_value(key='Round_05') >= 0:
+        if self.user_value(key='Round_05') == 0:
             return Round_check(self.ctx)
-        if self.user_value(key='Reset') >= 1:
+        if self.user_value(key='Reset') == 1:
             return End(self.ctx)
 
 
@@ -569,9 +569,9 @@ class Round_05_Random_02(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='7'):
             return Round_05(self.ctx)
-        if self.user_value(key='Round_05') >= 0:
+        if self.user_value(key='Round_05') == 0:
             return Round_check(self.ctx)
-        if self.user_value(key='Reset') >= 1:
+        if self.user_value(key='Reset') == 1:
             return End(self.ctx)
 
 
@@ -586,9 +586,9 @@ class Round_05_Random_03(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='7'):
             return Round_05(self.ctx)
-        if self.user_value(key='Round_05') >= 0:
+        if self.user_value(key='Round_05') == 0:
             return Round_check(self.ctx)
-        if self.user_value(key='Reset') >= 1:
+        if self.user_value(key='Reset') == 1:
             return End(self.ctx)
 
 
@@ -603,9 +603,9 @@ class Round_05_Random_04(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='7'):
             return Round_05(self.ctx)
-        if self.user_value(key='Round_05') >= 0:
+        if self.user_value(key='Round_05') == 0:
             return Round_check(self.ctx)
-        if self.user_value(key='Reset') >= 1:
+        if self.user_value(key='Reset') == 1:
             return End(self.ctx)
 
 
@@ -620,9 +620,9 @@ class Round_05_Random_05(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='7'):
             return Round_05(self.ctx)
-        if self.user_value(key='Round_05') >= 0:
+        if self.user_value(key='Round_05') == 0:
             return Round_check(self.ctx)
-        if self.user_value(key='Reset') >= 1:
+        if self.user_value(key='Reset') == 1:
             return End(self.ctx)
 
 
@@ -637,9 +637,9 @@ class Round_05_Random_06(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='7'):
             return Round_05(self.ctx)
-        if self.user_value(key='Round_05') >= 0:
+        if self.user_value(key='Round_05') == 0:
             return Round_check(self.ctx)
-        if self.user_value(key='Reset') >= 1:
+        if self.user_value(key='Reset') == 1:
             return End(self.ctx)
 
 
@@ -656,9 +656,9 @@ class Round_05_Random_07(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='6'):
             return Round_05(self.ctx)
-        if self.user_value(key='Round_05') >= 0:
+        if self.user_value(key='Round_05') == 0:
             return Round_check(self.ctx)
-        if self.user_value(key='Reset') >= 1:
+        if self.user_value(key='Reset') == 1:
             return End(self.ctx)
 
 
@@ -675,9 +675,9 @@ class Round_05_Random_08(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='6'):
             return Round_05(self.ctx)
-        if self.user_value(key='Round_05') >= 0:
+        if self.user_value(key='Round_05') == 0:
             return Round_check(self.ctx)
-        if self.user_value(key='Reset') >= 1:
+        if self.user_value(key='Reset') == 1:
             return End(self.ctx)
 
 

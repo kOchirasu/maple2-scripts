@@ -4,7 +4,7 @@ import trigger_api
 
 class 전투시작(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Message') >= 1:
+        if self.user_value(key='Message') == 1:
             # 파풀라투스 AI에서 Message = 1 신호를 받으면 진행함
             return 메시지출력01(self.ctx)
 
@@ -24,7 +24,7 @@ class 메시지출력01(trigger_api.Trigger):
 
 class 메시지출력02대기(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Message') >= 2:
+        if self.user_value(key='Message') == 2:
             # 파풀라투스 AI에서 Message = 2 신호를 받으면 진행함
             return 메시지출력02(self.ctx)
 
@@ -44,7 +44,7 @@ class 메시지출력02(trigger_api.Trigger):
 
 class 메시지출력03대기(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Message') >= 3:
+        if self.user_value(key='Message') == 3:
             # 파풀라투스 AI에서 Message = 3 신호를 받으면 진행함
             return 메시지출력03(self.ctx)
 

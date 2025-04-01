@@ -8,7 +8,7 @@ class 대기(trigger_api.Trigger):
         self.set_mesh(trigger_ids=[3903], visible=True)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='cannon03') >= 1:
+        if self.user_value(key='cannon03') == 1:
             return 생성(self.ctx)
 
 

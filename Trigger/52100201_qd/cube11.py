@@ -4,7 +4,7 @@ import trigger_api
 
 class 대기(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Cube') >= 1:
+        if self.user_value(key='Cube') == 1:
             return 큐브11(self.ctx)
 
 
@@ -21,7 +21,7 @@ class 큐브11(trigger_api.Trigger):
 
 class 메쉬제거(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Cube') >= 2:
+        if self.user_value(key='Cube') == 2:
             self.set_user_value(trigger_id=910011, key='Cube', value=1)
             return 큐브제거(self.ctx)
 

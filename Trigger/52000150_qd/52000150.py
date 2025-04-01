@@ -332,7 +332,7 @@ class 아노스흑화준비(trigger_api.Trigger):
         self.set_user_value(trigger_id=10001, key='52000150', value=0) # 전투 컨텐츠 시작을 위한 벨류 세팅
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='52000150monster') >= 1:
+        if self.user_value(key='52000150monster') == 1:
             # 통신 받음 : 몬스터 다 잡으면 쏴주는 신호
             return 아노스흑화대기(self.ctx) # 아노스흑화01"/
 

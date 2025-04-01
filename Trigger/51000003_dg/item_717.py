@@ -9,7 +9,7 @@ class Spawn_check(trigger_api.Trigger):
         self.set_effect(trigger_ids=[7727])
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='item_717_spawn') >= 1:
+        if self.user_value(key='item_717_spawn') == 1:
             return SpawnItem(self.ctx)
 
 
@@ -21,7 +21,7 @@ class SpawnItem(trigger_api.Trigger):
         if self.user_detected(box_ids=[727]):
             # 플레이어가 닿으면 획득
             return GetItem_Random(self.ctx)
-        if self.user_value(key='item_717_spawn') >= 0:
+        if self.user_value(key='item_717_spawn') == 0:
             return Spawn_check(self.ctx)
 
 

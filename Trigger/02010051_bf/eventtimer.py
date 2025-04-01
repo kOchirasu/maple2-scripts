@@ -10,7 +10,7 @@ class 대기(trigger_api.Trigger):
 
 class 시간체크(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='timercheck') >= 1:
+        if self.user_value(key='timercheck') == 1:
             return 업적이벤트(self.ctx)
         if self.wait_tick(wait_tick=240000):
             return 종료(self.ctx)

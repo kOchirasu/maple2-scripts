@@ -8,7 +8,7 @@ class Wait(trigger_api.Trigger):
         self.set_user_value(key='RemoveInnerLight', value=0)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='ResetInnerLight') >= 1:
+        if self.user_value(key='ResetInnerLight') == 1:
             return Play(self.ctx)
 
 
@@ -18,7 +18,7 @@ class Play(trigger_api.Trigger):
         self.set_user_value(key='RemoveInnerLight', value=0)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='RemoveInnerLight') >= 1:
+        if self.user_value(key='RemoveInnerLight') == 1:
             return RemoveLight01(self.ctx)
 
 

@@ -14,7 +14,7 @@ class 대기(trigger_api.Trigger):
         self.set_interact_object(trigger_ids=[10001265], state=2)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='WoundStart') >= 1:
+        if self.user_value(key='WoundStart') == 1:
             return 랜덤조건(self.ctx)
 
 
@@ -36,7 +36,7 @@ class 랜덤조건(trigger_api.Trigger):
             return 체크10001264(self.ctx)
         if self.random_condition(weight=13.0):
             return 체크10001265(self.ctx)
-        if self.user_value(key='WoundEnd') >= 1:
+        if self.user_value(key='WoundEnd') == 1:
             self.set_user_value(trigger_id=993001, key='WoundStart', value=0)
             return 대기(self.ctx)
 
@@ -56,7 +56,7 @@ class 생성10001258(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=25000):
             return 랜덤조건(self.ctx)
-        if self.user_value(key='WoundEnd') >= 1:
+        if self.user_value(key='WoundEnd') == 1:
             self.set_user_value(trigger_id=993001, key='WoundStart', value=0)
             return 대기(self.ctx)
 
@@ -76,7 +76,7 @@ class 생성10001259(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=25000):
             return 랜덤조건(self.ctx)
-        if self.user_value(key='WoundEnd') >= 1:
+        if self.user_value(key='WoundEnd') == 1:
             self.set_user_value(trigger_id=993001, key='WoundStart', value=0)
             return 대기(self.ctx)
 
@@ -96,7 +96,7 @@ class 생성10001260(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=25000):
             return 랜덤조건(self.ctx)
-        if self.user_value(key='WoundEnd') >= 1:
+        if self.user_value(key='WoundEnd') == 1:
             self.set_user_value(trigger_id=993001, key='WoundStart', value=0)
             return 대기(self.ctx)
 
@@ -116,7 +116,7 @@ class 생성10001261(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=25000):
             return 랜덤조건(self.ctx)
-        if self.user_value(key='WoundEnd') >= 1:
+        if self.user_value(key='WoundEnd') == 1:
             self.set_user_value(trigger_id=993001, key='WoundStart', value=0)
             return 대기(self.ctx)
 
@@ -136,7 +136,7 @@ class 생성10001262(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=25000):
             return 랜덤조건(self.ctx)
-        if self.user_value(key='WoundEnd') >= 1:
+        if self.user_value(key='WoundEnd') == 1:
             self.set_user_value(trigger_id=993001, key='WoundStart', value=0)
             return 대기(self.ctx)
 
@@ -156,7 +156,7 @@ class 생성10001263(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=25000):
             return 랜덤조건(self.ctx)
-        if self.user_value(key='WoundEnd') >= 1:
+        if self.user_value(key='WoundEnd') == 1:
             self.set_user_value(trigger_id=993001, key='WoundStart', value=0)
             return 대기(self.ctx)
 
@@ -176,7 +176,7 @@ class 생성10001264(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=25000):
             return 랜덤조건(self.ctx)
-        if self.user_value(key='WoundEnd') >= 1:
+        if self.user_value(key='WoundEnd') == 1:
             self.set_user_value(trigger_id=993001, key='WoundStart', value=0)
             return 대기(self.ctx)
 
@@ -196,7 +196,7 @@ class 생성10001265(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=25000):
             return 랜덤조건(self.ctx)
-        if self.user_value(key='WoundEnd') >= 1:
+        if self.user_value(key='WoundEnd') == 1:
             self.set_user_value(trigger_id=993001, key='WoundStart', value=0)
             return 대기(self.ctx)
 

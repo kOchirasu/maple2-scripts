@@ -4,7 +4,7 @@ import trigger_api
 
 class 대기(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='AI_Phase') >= 2:
+        if self.user_value(key='AI_Phase') == 2:
             return 패이즈_2_시작(self.ctx)
 
 

@@ -4,7 +4,7 @@ import trigger_api
 
 class gameset(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Fail') >= 1:
+        if self.user_value(key='Fail') == 1:
             return Fail_condition(self.ctx)
 
 

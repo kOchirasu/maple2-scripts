@@ -12,9 +12,9 @@ class 시작(trigger_api.Trigger):
 # **********************환경 변화 페이즈_2*********************************************************************************************
 class 환경변화_2(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Movement') >= 0:
+        if self.user_value(key='Movement') == 0:
             return 시작(self.ctx)
-        if self.user_value(key='dark') >= 3:
+        if self.user_value(key='dark') == 3:
             return 페이드아웃_2(self.ctx)
 
 
@@ -42,7 +42,7 @@ class 조명변경_2(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=12000):
             return 페이드인_2(self.ctx)
-        if self.user_value(key='Movement') >= 0:
+        if self.user_value(key='Movement') == 0:
             return 시작(self.ctx)
 
 
@@ -85,9 +85,9 @@ class 조명리셋_2(trigger_api.Trigger):
         self.set_portal(portal_id=8, visible=True, enable=True, minimap_visible=True)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Movement') >= 0:
+        if self.user_value(key='Movement') == 0:
             return 시작(self.ctx)
-        if self.user_value(key='dark') >= 4:
+        if self.user_value(key='dark') == 4:
             return 중앙지역이동_2(self.ctx)
 
 
@@ -123,7 +123,7 @@ class 포탈설정_2(trigger_api.Trigger):
         self.set_portal(portal_id=8, visible=True, enable=True, minimap_visible=True)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Movement') >= 0:
+        if self.user_value(key='Movement') == 0:
             return 시작(self.ctx)
 
 

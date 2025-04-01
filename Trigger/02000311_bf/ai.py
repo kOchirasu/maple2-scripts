@@ -7,7 +7,7 @@ class idle(trigger_api.Trigger):
         self.set_user_value(trigger_id=9999993, key='Buff_01', value=0)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Phase_02') >= 1:
+        if self.user_value(key='Phase_02') == 1:
             return Phase_02(self.ctx)
 
 

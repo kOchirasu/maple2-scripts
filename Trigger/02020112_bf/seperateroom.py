@@ -11,7 +11,7 @@ class 대기(trigger_api.Trigger):
         self.set_user_value(trigger_id=99990015, key='Extinction', value=0)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Start') >= 1:
+        if self.user_value(key='Start') == 1:
             return 시작(self.ctx)
 
 
@@ -26,7 +26,7 @@ class 격리조치_1_준비(trigger_api.Trigger):
         self.set_user_value(trigger_id=99990013, key='Extinction', value=1)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Start') >= 2:
+        if self.user_value(key='Start') == 2:
             return 종료(self.ctx)
         if self.npc_hp(spawn_id=191, is_relative=True) <= 45:
             return 격리조치_2_준비(self.ctx)
@@ -37,7 +37,7 @@ class 격리조치_2_준비(trigger_api.Trigger):
         self.set_user_value(trigger_id=99990014, key='Extinction', value=1)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Start') >= 2:
+        if self.user_value(key='Start') == 2:
             return 종료(self.ctx)
         if self.npc_hp(spawn_id=191, is_relative=True) <= 20:
             return 격리조치_2_준비(self.ctx)
@@ -48,7 +48,7 @@ class 격리조치_3_준비(trigger_api.Trigger):
         self.set_user_value(trigger_id=99990015, key='Extinction', value=1)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Start') >= 2:
+        if self.user_value(key='Start') == 2:
             return 종료(self.ctx)
 
 

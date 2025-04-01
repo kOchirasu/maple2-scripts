@@ -4,21 +4,21 @@ import trigger_api
 
 class 대기(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Sidetalk') >= 1:
+        if self.user_value(key='Sidetalk') == 1:
             self.side_npc_talk(npc_id=11004715, illust='Eone_serious', script='$52100303_QD__SIDETALK__0$', duration=3000)
             return 세번째(self.ctx)
 
 
 class 세번째(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Sidetalk') >= 2:
+        if self.user_value(key='Sidetalk') == 2:
             self.side_npc_talk(npc_id=11004715, illust='Eone_serious', script='$52100303_QD__SIDETALK__1$', duration=3000)
             return 네번째(self.ctx)
 
 
 class 네번째(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Sidetalk') >= 3:
+        if self.user_value(key='Sidetalk') == 3:
             self.side_npc_talk(npc_id=11004715, illust='Eone_serious', script='$52100303_QD__SIDETALK__2$', duration=3000)
             return 대사대기(self.ctx)
 

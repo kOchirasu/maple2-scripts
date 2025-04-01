@@ -8,7 +8,7 @@ class 대기(trigger_api.Trigger):
         self.start_combine_spawn(group_id=[1002])
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Summon_monster') >= 1:
+        if self.user_value(key='Summon_monster') == 1:
             return 몬스터등장(self.ctx)
 
 
@@ -24,7 +24,7 @@ class 몬스터등장(trigger_api.Trigger):
 
 class 리셋(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Summon_monster') >= 2:
+        if self.user_value(key='Summon_monster') == 2:
             return 대기(self.ctx)
 
 

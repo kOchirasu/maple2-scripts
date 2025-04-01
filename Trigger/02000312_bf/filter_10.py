@@ -27,7 +27,7 @@ class CheckStart(trigger_api.Trigger):
 
 class Check01(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='1stTreeRemove') >= 1:
+        if self.user_value(key='1stTreeRemove') == 1:
             return Check02(self.ctx)
         if self.wait_tick(wait_tick=2000):
             return CheckStart(self.ctx)
@@ -35,7 +35,7 @@ class Check01(trigger_api.Trigger):
 
 class Check02(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='2ndTreeRemove') >= 1:
+        if self.user_value(key='2ndTreeRemove') == 1:
             return Check03(self.ctx)
         if self.wait_tick(wait_tick=2000):
             return CheckStart(self.ctx)
@@ -43,7 +43,7 @@ class Check02(trigger_api.Trigger):
 
 class Check03(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='3rdTreeRemove') >= 1:
+        if self.user_value(key='3rdTreeRemove') == 1:
             return Check04(self.ctx)
         if self.wait_tick(wait_tick=2000):
             return CheckStart(self.ctx)
@@ -51,7 +51,7 @@ class Check03(trigger_api.Trigger):
 
 class Check04(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='4thTreeRemove') >= 1:
+        if self.user_value(key='4thTreeRemove') == 1:
             return Check05(self.ctx)
         if self.wait_tick(wait_tick=2000):
             return CheckStart(self.ctx)
@@ -59,7 +59,7 @@ class Check04(trigger_api.Trigger):
 
 class Check05(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='5thTreeRemove') >= 1:
+        if self.user_value(key='5thTreeRemove') == 1:
             return Check06(self.ctx)
         if self.wait_tick(wait_tick=2000):
             return CheckStart(self.ctx)
@@ -67,7 +67,7 @@ class Check05(trigger_api.Trigger):
 
 class Check06(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='6thTreeRemove') >= 1:
+        if self.user_value(key='6thTreeRemove') == 1:
             return Check07(self.ctx)
         if self.wait_tick(wait_tick=2000):
             return CheckStart(self.ctx)
@@ -75,7 +75,7 @@ class Check06(trigger_api.Trigger):
 
 class Check07(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='7thTreeRemove') >= 1:
+        if self.user_value(key='7thTreeRemove') == 1:
             return Check08(self.ctx)
         if self.wait_tick(wait_tick=2000):
             return CheckStart(self.ctx)
@@ -83,7 +83,7 @@ class Check07(trigger_api.Trigger):
 
 class Check08(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='8thTreeRemove') >= 1:
+        if self.user_value(key='8thTreeRemove') == 1:
             return BoardApp(self.ctx)
         if self.wait_tick(wait_tick=2000):
             return CheckStart(self.ctx)

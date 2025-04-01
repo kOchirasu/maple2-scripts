@@ -14,7 +14,7 @@ class Wait(trigger_api.Trigger):
         self.set_portal(portal_id=21)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='PortalOn') >= 1:
+        if self.user_value(key='PortalOn') == 1:
             return PortalOnDelay(self.ctx)
 
 
@@ -32,7 +32,7 @@ class PortalOn(trigger_api.Trigger):
         self.set_portal(portal_id=21, visible=True, enable=True, minimap_visible=True)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='MissionStart') >= 1:
+        if self.user_value(key='MissionStart') == 1:
             return CountDown(self.ctx)
 
 
@@ -54,7 +54,7 @@ class ShutDown(trigger_api.Trigger):
         self.set_portal(portal_id=21)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='DungeonClear') >= 1:
+        if self.user_value(key='DungeonClear') == 1:
             return Release(self.ctx)
 
 

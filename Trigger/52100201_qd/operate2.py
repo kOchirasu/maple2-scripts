@@ -4,7 +4,7 @@ import trigger_api
 
 class 대기(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='summon') >= 1:
+        if self.user_value(key='summon') == 1:
             return 몬스터소환(self.ctx)
 
 
@@ -14,7 +14,7 @@ class 몬스터소환(trigger_api.Trigger):
         self.set_user_value(trigger_id=99990003, key='summon', value=2)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='summon') >= 2:
+        if self.user_value(key='summon') == 2:
             return 대기(self.ctx)
 
 

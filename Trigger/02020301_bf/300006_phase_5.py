@@ -5,7 +5,7 @@ from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 class 대기(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='AI_Phase') >= 5:
+        if self.user_value(key='AI_Phase') == 5:
             return 패이즈_5_시작(self.ctx)
 
 
@@ -17,7 +17,7 @@ class 패이즈_5_시작(trigger_api.Trigger):
         self.set_user_value(key='AI_Phase', value=0)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Portal_On_04') >= 1:
+        if self.user_value(key='Portal_On_04') == 1:
             return 포탈_오픈_대기(self.ctx)
 
 

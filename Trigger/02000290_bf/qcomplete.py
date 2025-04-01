@@ -16,7 +16,7 @@ class 완료npc리젠(trigger_api.Trigger):
         self.spawn_monster(spawn_ids=[915])
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='dungeonclear') >= 1:
+        if self.user_value(key='dungeonclear') == 1:
             return 완료npc킬(self.ctx)
 
 

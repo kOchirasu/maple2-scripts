@@ -35,10 +35,10 @@ class 순간이동포탈감추기(trigger_api.Trigger):
         self.set_portal(portal_id=13091)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='SpeedRacingMode') >= 1:
+        if self.user_value(key='SpeedRacingMode') == 1:
             # 블랙빈 AI에서 이 신호를 SpeedRacingMode = 1 보냄
             return 순간이동포탈등장(self.ctx)
-        if self.user_value(key='SpeedRacingMode') >= 2:
+        if self.user_value(key='SpeedRacingMode') == 2:
             # 블랙빈 AI에서 이 신호를 SpeedRacingMode = 2 보냄, 1페이지 블랙빈이 죽으면 보내는 숫자 2
             return 종료딜레이(self.ctx)
 
@@ -70,7 +70,7 @@ class 순간이동포탈등장(trigger_api.Trigger):
         self.set_portal(portal_id=13091, visible=True, enable=True, minimap_visible=True)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='SpeedRacingMode') >= 0:
+        if self.user_value(key='SpeedRacingMode') == 0:
             # 블랙빈 AI에서 이 신호를 SpeedRacingMode = 0 보냄
             return 잠시대기(self.ctx)
 

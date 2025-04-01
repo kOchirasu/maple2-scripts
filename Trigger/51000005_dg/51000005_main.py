@@ -229,7 +229,7 @@ class 결과연출(trigger_api.Trigger):
         self.set_effect(trigger_ids=[604])
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='ThreeTwoOneResult') >= 1:
+        if self.user_value(key='ThreeTwoOneResult') == 1:
             # ThreeTwoOneResult 1 = 유저승리 = 다른방향
             # # 26300737 가이드 텍스트 ON : 승리
             self.show_guide_summary(entity_id=2, text_id=26300737, duration=3000)
@@ -242,7 +242,7 @@ class 결과연출(trigger_api.Trigger):
             self.add_balloon_talk(msg='$51000005_DG__51000005_MAIN__7$', duration=3000) # …PC : 이겼다!
             self.play_system_sound_in_box(sound='System_PinkBeans_Arcade_Correct_01') # 성공 효과음 02100327
             return 결과정산(self.ctx)
-        if self.user_value(key='ThreeTwoOneResult') >= 0:
+        if self.user_value(key='ThreeTwoOneResult') == 0:
             # ThreeTwoOneResult 0 = 유저패배 = 같은방향
             # # 26300738 가이드 텍스트 ON : 패배
             self.show_guide_summary(entity_id=3, text_id=26300738, duration=3000)

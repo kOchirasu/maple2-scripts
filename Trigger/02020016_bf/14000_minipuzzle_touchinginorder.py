@@ -35,7 +35,7 @@ class Wait(trigger_api.Trigger):
         self.set_effect(trigger_ids=[14202]) # Wrong Sound Effect
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='TimeEventOn') >= 1:
+        if self.user_value(key='TimeEventOn') == 1:
             return SettingDelay(self.ctx)
 
 
@@ -43,7 +43,7 @@ class SettingDelay(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):
             return Setting(self.ctx)
-        if self.user_value(key='TimeEventOn') >= 0:
+        if self.user_value(key='TimeEventOn') == 0:
             return Wait(self.ctx)
 
 
@@ -57,7 +57,7 @@ class Setting(trigger_api.Trigger):
             # UI 표시 안함 / 황금 상자 소유권 Additional Effect 71001041 지속시간 동일
             self.set_timer(timer_id='1', seconds=120, auto_remove=True)
             return TouchingInNumericalOrder_Start_Delay(self.ctx)
-        if self.user_value(key='TimeEventOn') >= 0:
+        if self.user_value(key='TimeEventOn') == 0:
             return Wait(self.ctx)
 
 
@@ -234,7 +234,7 @@ class TouchingInNumericalOrder_FailDelay(trigger_api.Trigger):
             return TouchingInNumericalOrder_Fail(self.ctx)
         if self.time_expired(timer_id='1'):
             return ResetTimer(self.ctx)
-        if self.user_value(key='TimeEventOn') >= 0:
+        if self.user_value(key='TimeEventOn') == 0:
             return ResetTimer(self.ctx)
 
 
@@ -267,7 +267,7 @@ class TouchingInNumericalOrder_Fail(trigger_api.Trigger):
         if self.time_expired(timer_id='1'):
             # 타임 이벤트가 종료했으면
             return ResetTimer(self.ctx)
-        if self.user_value(key='TimeEventOn') >= 0:
+        if self.user_value(key='TimeEventOn') == 0:
             return ResetTimer(self.ctx)
 
 

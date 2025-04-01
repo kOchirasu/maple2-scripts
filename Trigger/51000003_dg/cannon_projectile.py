@@ -11,17 +11,17 @@ class Round_check(trigger_api.Trigger):
         self.destroy_monster(spawn_ids=[111,112,113,114,115,116,117,118])
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Round_01') >= 1:
+        if self.user_value(key='Round_01') == 1:
             return Round_01(self.ctx)
-        if self.user_value(key='Round_02') >= 1:
+        if self.user_value(key='Round_02') == 1:
             return Round_02(self.ctx)
-        if self.user_value(key='Round_03') >= 1:
+        if self.user_value(key='Round_03') == 1:
             return Round_03(self.ctx)
-        if self.user_value(key='Round_04') >= 1:
+        if self.user_value(key='Round_04') == 1:
             return Round_04(self.ctx)
-        if self.user_value(key='Round_05') >= 1:
+        if self.user_value(key='Round_05') == 1:
             return Round_05(self.ctx)
-        if self.user_value(key='Round_06') >= 1:
+        if self.user_value(key='Round_06') == 1:
             return Round_06(self.ctx)
 
 
@@ -31,9 +31,9 @@ class Round_01(trigger_api.Trigger):
         self.spawn_monster(spawn_ids=[118], delay=1500)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Round_02') >= 1:
+        if self.user_value(key='Round_02') == 1:
             return Round_02(self.ctx)
-        if self.user_value(key='Reset') >= 1:
+        if self.user_value(key='Reset') == 1:
             return End(self.ctx)
 
 
@@ -43,9 +43,9 @@ class Round_02(trigger_api.Trigger):
         self.spawn_monster(spawn_ids=[117], delay=1100)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Round_03') >= 1:
+        if self.user_value(key='Round_03') == 1:
             return Round_03(self.ctx)
-        if self.user_value(key='Reset') >= 1:
+        if self.user_value(key='Reset') == 1:
             return End(self.ctx)
 
 
@@ -55,9 +55,9 @@ class Round_03(trigger_api.Trigger):
         self.spawn_monster(spawn_ids=[116], delay=1300)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Round_04') >= 1:
+        if self.user_value(key='Round_04') == 1:
             return Round_04(self.ctx)
-        if self.user_value(key='Reset') >= 1:
+        if self.user_value(key='Reset') == 1:
             return End(self.ctx)
 
 
@@ -67,9 +67,9 @@ class Round_04(trigger_api.Trigger):
         self.spawn_monster(spawn_ids=[115], delay=900)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Round_05') >= 1:
+        if self.user_value(key='Round_05') == 1:
             return Round_05(self.ctx)
-        if self.user_value(key='Reset') >= 1:
+        if self.user_value(key='Reset') == 1:
             return End(self.ctx)
 
 
@@ -86,9 +86,9 @@ class Round_05(trigger_api.Trigger):
         self.spawn_monster(spawn_ids=[108])
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Round_06') >= 1:
+        if self.user_value(key='Round_06') == 1:
             return Round_check(self.ctx)
-        if self.user_value(key='Reset') >= 1:
+        if self.user_value(key='Reset') == 1:
             return End(self.ctx)
 
 
@@ -101,7 +101,7 @@ class Round_06(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=6000):
             return None # Missing State: Round_06_02
-        if self.user_value(key='Reset') >= 1:
+        if self.user_value(key='Reset') == 1:
             return End(self.ctx)
 
 

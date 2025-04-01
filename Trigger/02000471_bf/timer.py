@@ -8,7 +8,7 @@ class idle(trigger_api.Trigger):
         self.set_user_value(trigger_id=2040301, key='TimerEnd', value=0)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='TimerStart') >= 1:
+        if self.user_value(key='TimerStart') == 1:
             return start(self.ctx)
 
 
@@ -20,7 +20,7 @@ class start(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.time_expired(timer_id='Timer'):
             return end_fail(self.ctx)
-        if self.user_value(key='InteractClear') >= 1:
+        if self.user_value(key='InteractClear') == 1:
             return end_clear(self.ctx)
 
 

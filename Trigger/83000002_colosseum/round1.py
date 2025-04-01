@@ -15,7 +15,7 @@ class 대기(trigger_api.Trigger):
         self.set_sound(trigger_id=13001)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='StartRound1') >= 1:
+        if self.user_value(key='StartRound1') == 1:
             # self.set_user_value(trigger_id=910001, key='StartRound1', value=0)
             return 시작딜레이(self.ctx)
 

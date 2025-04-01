@@ -7,7 +7,7 @@ class 대기(trigger_api.Trigger):
         self.set_sound(trigger_id=13500)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='ChangeBGM') >= 1:
+        if self.user_value(key='ChangeBGM') == 1:
             return BGM변경(self.ctx)
 
 

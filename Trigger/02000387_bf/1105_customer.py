@@ -9,7 +9,7 @@ class Wait(trigger_api.Trigger):
         self.set_user_value(key='ItemNumber', value=0)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='CustomerEnter') >= 1:
+        if self.user_value(key='CustomerEnter') == 1:
             return CustomerEnterDelay(self.ctx)
 
 
@@ -271,15 +271,15 @@ class WrongItem(trigger_api.Trigger):
 
 class WrongItemReturn(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='ItemNumber') >= 30000668:
+        if self.user_value(key='ItemNumber') == 30000668:
             return PickItem_30000668(self.ctx)
-        if self.user_value(key='ItemNumber') >= 30000671:
+        if self.user_value(key='ItemNumber') == 30000671:
             return PickItem_30000671(self.ctx)
-        if self.user_value(key='ItemNumber') >= 30000672:
+        if self.user_value(key='ItemNumber') == 30000672:
             return PickItem_30000672(self.ctx)
-        if self.user_value(key='ItemNumber') >= 30000673:
+        if self.user_value(key='ItemNumber') == 30000673:
             return PickItem_30000673(self.ctx)
-        if self.user_value(key='ItemNumber') >= 30000676:
+        if self.user_value(key='ItemNumber') == 30000676:
             return PickItem_30000676(self.ctx)
 
 

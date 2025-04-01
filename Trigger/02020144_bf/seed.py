@@ -45,7 +45,7 @@ class 씨앗패턴1_확률체크(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.monster_dead(spawn_ids=[101]):
             return 종료(self.ctx)
-        if self.user_value(key='TimerReset') >= 1:
+        if self.user_value(key='TimerReset') == 1:
             return 보스체력체크2(self.ctx)
         if self.random_condition(weight=25.0):
             return 씨앗패턴1_1(self.ctx)
@@ -65,7 +65,7 @@ class 씨앗패턴1_1(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.monster_dead(spawn_ids=[101]):
             return 종료(self.ctx)
-        if self.user_value(key='TimerReset') >= 1:
+        if self.user_value(key='TimerReset') == 1:
             return 보스체력체크2(self.ctx)
         if self.object_interacted(interact_ids=[10002124], state=0):
             self.set_mesh(trigger_ids=[9001])
@@ -80,7 +80,7 @@ class 씨앗패턴1_2(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.monster_dead(spawn_ids=[101]):
             return 종료(self.ctx)
-        if self.user_value(key='TimerReset') >= 1:
+        if self.user_value(key='TimerReset') == 1:
             return 보스체력체크2(self.ctx)
         if self.object_interacted(interact_ids=[10002125], state=0):
             self.set_mesh(trigger_ids=[9002])
@@ -95,7 +95,7 @@ class 씨앗패턴1_3(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.monster_dead(spawn_ids=[101]):
             return 종료(self.ctx)
-        if self.user_value(key='TimerReset') >= 1:
+        if self.user_value(key='TimerReset') == 1:
             return 보스체력체크2(self.ctx)
         if self.object_interacted(interact_ids=[10002126], state=0):
             self.set_mesh(trigger_ids=[9003])
@@ -110,7 +110,7 @@ class 씨앗패턴1_4(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.monster_dead(spawn_ids=[101]):
             return 종료(self.ctx)
-        if self.user_value(key='TimerReset') >= 1:
+        if self.user_value(key='TimerReset') == 1:
             return 보스체력체크2(self.ctx)
         if self.object_interacted(interact_ids=[10002127], state=0):
             self.set_mesh(trigger_ids=[9004])
@@ -125,7 +125,7 @@ class 씨앗패턴1_1_심기(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.monster_dead(spawn_ids=[101]):
             return 종료(self.ctx)
-        if self.user_value(key='TimerReset') >= 1:
+        if self.user_value(key='TimerReset') == 1:
             return 보스체력체크2(self.ctx)
         if self.object_interacted(interact_ids=[10002128], state=0) or self.object_interacted(interact_ids=[10002129], state=0):
             return 씨앗패턴1_종료(self.ctx)
@@ -139,7 +139,7 @@ class 씨앗패턴1_2_심기(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.monster_dead(spawn_ids=[101]):
             return 종료(self.ctx)
-        if self.user_value(key='TimerReset') >= 1:
+        if self.user_value(key='TimerReset') == 1:
             return 보스체력체크2(self.ctx)
         if self.object_interacted(interact_ids=[10002128], state=0) or self.object_interacted(interact_ids=[10002129], state=0):
             return 씨앗패턴1_종료(self.ctx)
@@ -153,7 +153,7 @@ class 씨앗패턴1_3_심기(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.monster_dead(spawn_ids=[101]):
             return 종료(self.ctx)
-        if self.user_value(key='TimerReset') >= 1:
+        if self.user_value(key='TimerReset') == 1:
             return 보스체력체크2(self.ctx)
         if self.object_interacted(interact_ids=[10002128], state=0) or self.object_interacted(interact_ids=[10002129], state=0):
             return 씨앗패턴1_종료(self.ctx)
@@ -167,7 +167,7 @@ class 씨앗패턴1_4_심기(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.monster_dead(spawn_ids=[101]):
             return 종료(self.ctx)
-        if self.user_value(key='TimerReset') >= 1:
+        if self.user_value(key='TimerReset') == 1:
             return 보스체력체크2(self.ctx)
         if self.object_interacted(interact_ids=[10002128], state=0) or self.object_interacted(interact_ids=[10002129], state=0):
             return 씨앗패턴1_종료(self.ctx)
@@ -186,7 +186,7 @@ class 씨앗패턴1_종료(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.monster_dead(spawn_ids=[101]):
             return 종료(self.ctx)
-        if self.user_value(key='TimerReset') >= 1:
+        if self.user_value(key='TimerReset') == 1:
             return 보스체력체크2(self.ctx)
         if self.wait_tick(wait_tick=10000):
             return 보스체력체크2(self.ctx)
@@ -221,7 +221,7 @@ class 씨앗패턴2_확률체크(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.monster_dead(spawn_ids=[101]):
             return 종료(self.ctx)
-        if self.user_value(key='TimerReset') >= 2:
+        if self.user_value(key='TimerReset') == 2:
             return 보스체력체크3(self.ctx)
         if self.random_condition(weight=25.0):
             return 씨앗패턴2_1(self.ctx)
@@ -241,7 +241,7 @@ class 씨앗패턴2_1(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.monster_dead(spawn_ids=[101]):
             return 종료(self.ctx)
-        if self.user_value(key='TimerReset') >= 2:
+        if self.user_value(key='TimerReset') == 2:
             return 보스체력체크3(self.ctx)
         if self.object_interacted(interact_ids=[10002124], state=0):
             self.set_mesh(trigger_ids=[9001])
@@ -256,7 +256,7 @@ class 씨앗패턴2_2(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.monster_dead(spawn_ids=[101]):
             return 종료(self.ctx)
-        if self.user_value(key='TimerReset') >= 2:
+        if self.user_value(key='TimerReset') == 2:
             return 보스체력체크3(self.ctx)
         if self.object_interacted(interact_ids=[10002125], state=0):
             self.set_mesh(trigger_ids=[9002])
@@ -271,7 +271,7 @@ class 씨앗패턴2_3(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.monster_dead(spawn_ids=[101]):
             return 종료(self.ctx)
-        if self.user_value(key='TimerReset') >= 2:
+        if self.user_value(key='TimerReset') == 2:
             return 보스체력체크3(self.ctx)
         if self.object_interacted(interact_ids=[10002126], state=0):
             self.set_mesh(trigger_ids=[9003])
@@ -286,7 +286,7 @@ class 씨앗패턴2_4(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.monster_dead(spawn_ids=[101]):
             return 종료(self.ctx)
-        if self.user_value(key='TimerReset') >= 2:
+        if self.user_value(key='TimerReset') == 2:
             return 보스체력체크3(self.ctx)
         if self.object_interacted(interact_ids=[10002127], state=0):
             self.set_mesh(trigger_ids=[9004])
@@ -301,7 +301,7 @@ class 씨앗패턴2_1_심기(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.monster_dead(spawn_ids=[101]):
             return 종료(self.ctx)
-        if self.user_value(key='TimerReset') >= 2:
+        if self.user_value(key='TimerReset') == 2:
             return 보스체력체크3(self.ctx)
         if self.object_interacted(interact_ids=[10002128], state=0) or self.object_interacted(interact_ids=[10002129], state=0):
             return 씨앗패턴2_종료(self.ctx)
@@ -315,7 +315,7 @@ class 씨앗패턴2_2_심기(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.monster_dead(spawn_ids=[101]):
             return 종료(self.ctx)
-        if self.user_value(key='TimerReset') >= 2:
+        if self.user_value(key='TimerReset') == 2:
             return 보스체력체크3(self.ctx)
         if self.object_interacted(interact_ids=[10002128], state=0) or self.object_interacted(interact_ids=[10002129], state=0):
             return 씨앗패턴2_종료(self.ctx)
@@ -329,7 +329,7 @@ class 씨앗패턴2_3_심기(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.monster_dead(spawn_ids=[101]):
             return 종료(self.ctx)
-        if self.user_value(key='TimerReset') >= 2:
+        if self.user_value(key='TimerReset') == 2:
             return 보스체력체크3(self.ctx)
         if self.object_interacted(interact_ids=[10002128], state=0) or self.object_interacted(interact_ids=[10002129], state=0):
             return 씨앗패턴2_종료(self.ctx)
@@ -343,7 +343,7 @@ class 씨앗패턴2_4_심기(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.monster_dead(spawn_ids=[101]):
             return 종료(self.ctx)
-        if self.user_value(key='TimerReset') >= 2:
+        if self.user_value(key='TimerReset') == 2:
             return 보스체력체크3(self.ctx)
         if self.object_interacted(interact_ids=[10002128], state=0) or self.object_interacted(interact_ids=[10002129], state=0):
             return 씨앗패턴2_종료(self.ctx)
@@ -362,7 +362,7 @@ class 씨앗패턴2_종료(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.monster_dead(spawn_ids=[101]):
             return 종료(self.ctx)
-        if self.user_value(key='TimerReset') >= 2:
+        if self.user_value(key='TimerReset') == 2:
             return 보스체력체크3(self.ctx)
         if self.wait_tick(wait_tick=10000):
             return 보스체력체크3(self.ctx)
@@ -397,7 +397,7 @@ class 씨앗패턴3_확률체크(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.monster_dead(spawn_ids=[101]):
             return 종료(self.ctx)
-        if self.user_value(key='TimerReset') >= 3:
+        if self.user_value(key='TimerReset') == 3:
             return 종료(self.ctx)
         if self.random_condition(weight=25.0):
             return 씨앗패턴3_1(self.ctx)
@@ -417,7 +417,7 @@ class 씨앗패턴3_1(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.monster_dead(spawn_ids=[101]):
             return 종료(self.ctx)
-        if self.user_value(key='TimerReset') >= 3:
+        if self.user_value(key='TimerReset') == 3:
             return 종료(self.ctx)
         if self.object_interacted(interact_ids=[10002124], state=0):
             self.set_mesh(trigger_ids=[9001])
@@ -432,7 +432,7 @@ class 씨앗패턴3_2(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.monster_dead(spawn_ids=[101]):
             return 종료(self.ctx)
-        if self.user_value(key='TimerReset') >= 3:
+        if self.user_value(key='TimerReset') == 3:
             return 종료(self.ctx)
         if self.object_interacted(interact_ids=[10002125], state=0):
             self.set_mesh(trigger_ids=[9002])
@@ -447,7 +447,7 @@ class 씨앗패턴3_3(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.monster_dead(spawn_ids=[101]):
             return 종료(self.ctx)
-        if self.user_value(key='TimerReset') >= 3:
+        if self.user_value(key='TimerReset') == 3:
             return 종료(self.ctx)
         if self.object_interacted(interact_ids=[10002126], state=0):
             self.set_mesh(trigger_ids=[9003])
@@ -462,7 +462,7 @@ class 씨앗패턴3_4(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.monster_dead(spawn_ids=[101]):
             return 종료(self.ctx)
-        if self.user_value(key='TimerReset') >= 3:
+        if self.user_value(key='TimerReset') == 3:
             return 종료(self.ctx)
         if self.object_interacted(interact_ids=[10002127], state=0):
             self.set_mesh(trigger_ids=[9004])
@@ -477,7 +477,7 @@ class 씨앗패턴3_1_심기(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.monster_dead(spawn_ids=[101]):
             return 종료(self.ctx)
-        if self.user_value(key='TimerReset') >= 3:
+        if self.user_value(key='TimerReset') == 3:
             return 종료(self.ctx)
         if self.object_interacted(interact_ids=[10002128], state=0) or self.object_interacted(interact_ids=[10002129], state=0):
             return 씨앗패턴3_종료(self.ctx)
@@ -491,7 +491,7 @@ class 씨앗패턴3_2_심기(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.monster_dead(spawn_ids=[101]):
             return 종료(self.ctx)
-        if self.user_value(key='TimerReset') >= 3:
+        if self.user_value(key='TimerReset') == 3:
             return 종료(self.ctx)
         if self.object_interacted(interact_ids=[10002128], state=0) or self.object_interacted(interact_ids=[10002129], state=0):
             return 씨앗패턴3_종료(self.ctx)
@@ -505,7 +505,7 @@ class 씨앗패턴3_3_심기(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.monster_dead(spawn_ids=[101]):
             return 종료(self.ctx)
-        if self.user_value(key='TimerReset') >= 3:
+        if self.user_value(key='TimerReset') == 3:
             return 종료(self.ctx)
         if self.object_interacted(interact_ids=[10002128], state=0) or self.object_interacted(interact_ids=[10002129], state=0):
             return 씨앗패턴3_종료(self.ctx)
@@ -519,7 +519,7 @@ class 씨앗패턴3_4_심기(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.monster_dead(spawn_ids=[101]):
             return 종료(self.ctx)
-        if self.user_value(key='TimerReset') >= 3:
+        if self.user_value(key='TimerReset') == 3:
             return 종료(self.ctx)
         if self.object_interacted(interact_ids=[10002128], state=0) or self.object_interacted(interact_ids=[10002129], state=0):
             return 씨앗패턴3_종료(self.ctx)
@@ -537,7 +537,7 @@ class 씨앗패턴3_종료(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.monster_dead(spawn_ids=[101]):
             return 종료(self.ctx)
-        if self.user_value(key='TimerReset') >= 3:
+        if self.user_value(key='TimerReset') == 3:
             return 종료(self.ctx)
         if self.wait_tick(wait_tick=10000):
             return 종료(self.ctx)

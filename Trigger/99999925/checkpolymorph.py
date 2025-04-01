@@ -4,7 +4,7 @@ import trigger_api
 
 class CheckIdle(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='BuffGo') >= 1:
+        if self.user_value(key='BuffGo') == 1:
             return Checkpoly(self.ctx)
 
 

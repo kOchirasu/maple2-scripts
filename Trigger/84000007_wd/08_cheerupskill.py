@@ -4,13 +4,13 @@ import trigger_api
 
 class Wait(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='CheerUpTimer') >= 1:
+        if self.user_value(key='CheerUpTimer') == 1:
             return CheerUpTimer_30(self.ctx)
-        if self.user_value(key='CheerUpTimer') >= 2:
+        if self.user_value(key='CheerUpTimer') == 2:
             return CheerUpTimer_20(self.ctx)
-        if self.user_value(key='CheerUpTimer') >= 3:
+        if self.user_value(key='CheerUpTimer') == 3:
             return CheerUpTimer_15(self.ctx)
-        if self.user_value(key='CheerUpTimer') >= 4:
+        if self.user_value(key='CheerUpTimer') == 4:
             return CheerUpTimer_10(self.ctx)
 
 

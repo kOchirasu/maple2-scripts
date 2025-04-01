@@ -12,7 +12,7 @@ class 대기(trigger_api.Trigger):
         self.debug_string(feature='Develop', value='이건 Develop 환경에서 나오는 스트링 입니다.')
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='battlesetting') >= 1:
+        if self.user_value(key='battlesetting') == 1:
             return 전투_1라운드세팅(self.ctx)
 
 

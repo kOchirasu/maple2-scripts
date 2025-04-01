@@ -8,9 +8,9 @@ class 대기(trigger_api.Trigger):
         self.set_user_value(trigger_id=99990014, key='Extinction_1_check', value=0)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='EliteDead') >= 1:
+        if self.user_value(key='EliteDead') == 1:
             return 종료2(self.ctx)
-        if self.user_value(key='Extinction') >= 1:
+        if self.user_value(key='Extinction') == 1:
             return 시작(self.ctx)
 
 
@@ -19,7 +19,7 @@ class 시작(trigger_api.Trigger):
         self.set_event_ui_script(type=BannerType.Text, script='$02020112_BF__ROOM1__0$', duration=3000)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='EliteDead') >= 1:
+        if self.user_value(key='EliteDead') == 1:
             return 종료2(self.ctx)
         if self.wait_tick(wait_tick=3000):
             return 격리(self.ctx)
@@ -38,7 +38,7 @@ class 격리(trigger_api.Trigger):
         self.add_buff(box_ids=[941], skill_id=70002106, level=1, is_skill_set=False)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='EliteDead') >= 1:
+        if self.user_value(key='EliteDead') == 1:
             return 종료2(self.ctx)
         if self.monster_dead(spawn_ids=[181,182,183]):
             return 구출(self.ctx)
@@ -51,7 +51,7 @@ class 소멸(trigger_api.Trigger):
         self.add_buff(box_ids=[941], skill_id=70002107, level=1, is_skill_set=False)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='EliteDead') >= 1:
+        if self.user_value(key='EliteDead') == 1:
             return 종료2(self.ctx)
         return 종료(self.ctx)
 
@@ -61,7 +61,7 @@ class 구출(trigger_api.Trigger):
         self.move_user(map_id=2020112, portal_id=5, box_id=941)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='EliteDead') >= 1:
+        if self.user_value(key='EliteDead') == 1:
             return 종료2(self.ctx)
         return 종료(self.ctx)
 

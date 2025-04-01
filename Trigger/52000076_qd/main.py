@@ -597,7 +597,7 @@ class BossBattleStart01(trigger_api.Trigger):
         self.set_mesh(trigger_ids=[3801,3802,3803,3804,3805,3806,3807,3808,3809,3810,3811,3812,3813,3814,3815,3816], interval=200, fade=2.0)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='saveEveIntheDark') >= 1:
+        if self.user_value(key='saveEveIntheDark') == 1:
             return BossNpcChange01(self.ctx)
         if self.monster_dead(spawn_ids=[1099]):
             return BossNpcChange01(self.ctx)

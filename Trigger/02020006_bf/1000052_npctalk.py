@@ -4,7 +4,7 @@ import trigger_api
 
 class Wait(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='NPCTalk') >= 1:
+        if self.user_value(key='NPCTalk') == 1:
             return NPCTalkOnWait(self.ctx)
 
 
@@ -27,7 +27,7 @@ class TalkDelay(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=17000):
             return NPCTalkOn(self.ctx)
-        if self.user_value(key='NPCTalk') >= 0:
+        if self.user_value(key='NPCTalk') == 0:
             return None # Missing State: NPCTalkOff
 
 

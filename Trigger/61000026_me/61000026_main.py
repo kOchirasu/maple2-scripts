@@ -61,7 +61,7 @@ class StateNone(trigger_api.Trigger):
         self.field_game_constant(key='EventHideAndSeekWin', value='hideandseek_win')
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='WaitForEnterUser') >= 1:
+        if self.user_value(key='WaitForEnterUser') == 1:
             return WaitForEnterUser(self.ctx)
 
 
@@ -72,9 +72,9 @@ class WaitForEnterUser(trigger_api.Trigger):
         self.set_timer(timer_id='1', seconds=60, auto_remove=True, display=True)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='GameRuleNotice') >= 1:
+        if self.user_value(key='GameRuleNotice') == 1:
             return GameRuleNotice(self.ctx)
-        if self.user_value(key='ShortOfUser') >= 1:
+        if self.user_value(key='ShortOfUser') == 1:
             return ShortOfUser(self.ctx)
         if self.wait_and_reset_tick(wait_tick=5000):
             self.show_guide_summary(entity_id=26500301, text_id=26500301, duration=4500)
@@ -91,7 +91,7 @@ class GameRuleNotice(trigger_api.Trigger):
         self.set_event_ui_script(type=BannerType.Text, script='$61000023_ME__61000023_MAIN__1$', duration=10000)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='DivideIntoTeams') >= 1:
+        if self.user_value(key='DivideIntoTeams') == 1:
             return DivideIntoTeams(self.ctx)
 
 
@@ -102,18 +102,18 @@ class DivideIntoTeams(trigger_api.Trigger):
         self.show_count_ui(text='$61000023_ME__61000023_MAIN__0$', count=5)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='MoveGameArea') >= 1:
+        if self.user_value(key='MoveGameArea') == 1:
             return MoveGameArea(self.ctx)
-        if self.user_value(key='ShortOfUser') >= 1:
+        if self.user_value(key='ShortOfUser') == 1:
             return ShortOfUser(self.ctx)
 
 
 # 유저가 게임포탈로 이동할 동안 카메라 무빙
 class MoveGameArea(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='BeInHidingTeams') >= 1:
+        if self.user_value(key='BeInHidingTeams') == 1:
             return BeInHidingTeams(self.ctx)
-        if self.user_value(key='ShortOfUser') >= 1:
+        if self.user_value(key='ShortOfUser') == 1:
             return ShortOfUser(self.ctx)
 
 
@@ -126,9 +126,9 @@ class BeInHidingTeams(trigger_api.Trigger):
         self.field_game_message(custom=2, type='SetEventUI', arg1=True, script='$61000023_ME__61000023_MAIN__3$', duration=30000)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='LookingForATeams') >= 1:
+        if self.user_value(key='LookingForATeams') == 1:
             return LookingForATeams(self.ctx)
-        if self.user_value(key='TeamMatchResult') >= 1:
+        if self.user_value(key='TeamMatchResult') == 1:
             return TeamMatchResult(self.ctx)
 
     def on_exit(self) -> None:
@@ -142,7 +142,7 @@ class LookingForATeams(trigger_api.Trigger):
         self.set_timer(timer_id='1', seconds=150, auto_remove=True, display=True)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='TeamMatchResult') >= 1:
+        if self.user_value(key='TeamMatchResult') == 1:
             return TeamMatchResult(self.ctx)
 
     def on_exit(self) -> None:
@@ -152,7 +152,7 @@ class LookingForATeams(trigger_api.Trigger):
 # 숨바꼭질 승패 결정
 class TeamMatchResult(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='GameExitNotice') >= 1:
+        if self.user_value(key='GameExitNotice') == 1:
             return GameExitNotice(self.ctx)
 
 
@@ -163,7 +163,7 @@ class GameExitNotice(trigger_api.Trigger):
         self.set_event_ui_script(type=BannerType.Text, script='$61000023_ME__61000023_MAIN__4$', duration=10000)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='End') >= 1:
+        if self.user_value(key='End') == 1:
             return End(self.ctx)
 
 
@@ -174,7 +174,7 @@ class ShortOfUser(trigger_api.Trigger):
         self.set_event_ui_script(type=BannerType.Text, script='$61000023_ME__61000023_MAIN__5$', duration=10000)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='End') >= 1:
+        if self.user_value(key='End') == 1:
             return End(self.ctx)
 
 

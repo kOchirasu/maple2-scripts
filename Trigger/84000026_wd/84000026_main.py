@@ -20,7 +20,7 @@ class 결혼식연출시작요청대기(trigger_api.Trigger):
         self.hide_guide_summary(entity_id=28400140)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Weddingceremonystarts') >= 1:
+        if self.user_value(key='Weddingceremonystarts') == 1:
             # 결혼하시겠습니까 입력창 띄우자마자 쏘는 신호 받으면 하객옮기기 트리거 시작되도록
             self.set_user_value(key='Weddingceremonystarts', value=0) # 받자마자 초기화
             self.lock_my_pc(is_lock=True) # PC 움직임 락
@@ -322,7 +322,7 @@ class 뒷풀이03(trigger_api.Trigger):
         self.set_user_value(key='EndWedding', value=0) # 결혼종료확인 초기화
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='EndWedding') >= 1:
+        if self.user_value(key='EndWedding') == 1:
             return 결혼종료확인(self.ctx)
 
     def on_exit(self) -> None:

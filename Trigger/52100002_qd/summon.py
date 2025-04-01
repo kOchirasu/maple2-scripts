@@ -9,7 +9,7 @@ class 대기(trigger_api.Trigger):
         self.set_effect(trigger_ids=[603])
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='SummonSister') >= 1:
+        if self.user_value(key='SummonSister') == 1:
             return 룸체크(self.ctx)
 
 

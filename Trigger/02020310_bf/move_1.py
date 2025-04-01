@@ -5,7 +5,7 @@ from System.Numerics import Vector3
 
 class 대기(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Archeon1') >= 1:
+        if self.user_value(key='Archeon1') == 1:
             self.set_user_value(trigger_id=900007, key='Archeon1', value=0)
             return Archeon_Ready(self.ctx)
 

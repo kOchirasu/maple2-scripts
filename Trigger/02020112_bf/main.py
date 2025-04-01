@@ -41,7 +41,7 @@ class 중력방_발판(trigger_api.Trigger):
         self.set_user_value(trigger_id=99990020, key='GravityRoom', value=1)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='GravityRoom') >= 2:
+        if self.user_value(key='GravityRoom') == 2:
             return 중력방_전투(self.ctx)
 
 
@@ -84,7 +84,7 @@ class 카메라_종료(trigger_api.Trigger):
 
 class 격리방_지하(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='MonsterDead') >= 1:
+        if self.user_value(key='MonsterDead') == 1:
             return 격리방_대기(self.ctx)
 
 

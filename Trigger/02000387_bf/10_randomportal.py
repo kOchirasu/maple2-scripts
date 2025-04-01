@@ -27,7 +27,7 @@ class Wait(trigger_api.Trigger):
         self.set_user_value(key='DungeonClear', value=0)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='RandomPortalOn') >= 1:
+        if self.user_value(key='RandomPortalOn') == 1:
             return Guide01(self.ctx)
 
 
@@ -220,7 +220,7 @@ class GameStart02(trigger_api.Trigger):
 
 class secondsWait10(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='DungeonClear') >= 1:
+        if self.user_value(key='DungeonClear') == 1:
             return Quit(self.ctx)
         if self.wait_tick(wait_tick=10000):
             return CheckMemeberAgain(self.ctx) # 1인 테스트용 임시
@@ -232,7 +232,7 @@ class CheckMemeberAgain(trigger_api.Trigger):
             return secondsWait10(self.ctx)
         if self.count_users(box_id=9900) < 4:
             return EndGame01(self.ctx)
-        if self.user_value(key='DungeonClear') >= 1:
+        if self.user_value(key='DungeonClear') == 1:
             return Quit(self.ctx)
 
 
@@ -243,7 +243,7 @@ class EndGame01(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):
             return PCMoveOut01(self.ctx)
-        if self.user_value(key='DungeonClear') >= 1:
+        if self.user_value(key='DungeonClear') == 1:
             return Quit(self.ctx)
 
 

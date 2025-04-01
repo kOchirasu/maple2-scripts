@@ -4,7 +4,7 @@ import trigger_api
 
 class 대기(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='GaugeStart') >= 1:
+        if self.user_value(key='GaugeStart') == 1:
             return 생성(self.ctx)
 
 
@@ -15,7 +15,7 @@ class 생성(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=10000):
             return 생성(self.ctx)
-        if self.user_value(key='GaugeClosed') >= 1:
+        if self.user_value(key='GaugeClosed') == 1:
             return 종료(self.ctx)
 
 

@@ -38,7 +38,7 @@ class 대기(trigger_api.Trigger):
         if self.wait_tick(wait_tick=11000):
             # waitTick 시간 조절을 넣음
             return 포탈생성(self.ctx)
-        if self.user_value(key='SetLight') >= 1:
+        if self.user_value(key='SetLight') == 1:
             return 포탈생성(self.ctx)
 
 

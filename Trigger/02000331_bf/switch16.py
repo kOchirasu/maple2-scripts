@@ -16,7 +16,7 @@ class 대기(trigger_api.Trigger):
 
 class 첫번째전투종료(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='FirstBridgeOff') >= 1:
+        if self.user_value(key='FirstBridgeOff') == 1:
             # 다리무너진후
             return 딜레이01(self.ctx)
 

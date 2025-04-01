@@ -26,7 +26,7 @@ class 대기(trigger_api.Trigger):
         self.set_actor(trigger_id=214, visible=True, initial_sequence='sf_quest_light_A01_Off')
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='AllertStart') >= 1:
+        if self.user_value(key='AllertStart') == 1:
             return 이펙트시퀀스01(self.ctx)
 
 
@@ -98,7 +98,7 @@ class 이펙트시퀀스04(trigger_api.Trigger):
         self.set_effect(trigger_ids=[6103,6105], visible=True)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='AllertEnd') >= 1:
+        if self.user_value(key='AllertEnd') == 1:
             self.set_user_value(trigger_id=999004, key='AllertStart', value=0)
             return 대기(self.ctx)
 

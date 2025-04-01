@@ -19,13 +19,13 @@ class Ready(trigger_api.Trigger):
 
 class 보스의저주디버프사용신호대기(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='SkillDebuffCheck_2Phase') >= 1:
+        if self.user_value(key='SkillDebuffCheck_2Phase') == 1:
             # 보스가 플레이어에게 폭발 저주 디버프 부여 스킬 사용할 때 이 트리거에게  SkillDebuffCheck_2Phase = 1 신호를 보냄
             return 소환몹활성화될때까지잠시기다리기(self.ctx)
-        if self.user_value(key='FirstBattleEnd') >= 1:
+        if self.user_value(key='FirstBattleEnd') == 1:
             # 보스전 첫번째 전투판에서의 전투가 끝났으면, 바로 폭발 저주 디버프 제거 단계로 넘어가도록 하기
             return 폭발저주디버프제거잠시대기(self.ctx)
-        if self.user_value(key='FirstBattleEnd') >= 99:
+        if self.user_value(key='FirstBattleEnd') == 99:
             # 이슈라가 2페이즈 끝내고 3페이즈 넘어갈 때 이 변수 99 보내서 저주 디버프 제거 단계 실행 후 이 트리거 작동 정지시킴
             return 폭발저주디버프제거하고종료(self.ctx)
 
@@ -41,13 +41,13 @@ class 소환몹활성화될때까지잠시기다리기(trigger_api.Trigger):
 
 class 소환몹전멸할때까지대기(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='MonsterMany') >= 0:
+        if self.user_value(key='MonsterMany') == 0:
             # 등장하는 소환 졸몹이 전부 죽으면  MonsterMany 변수 -1씩하여 결국  0이 되어서 아래 <transition state="폭발저주디버프제거"> 단계로 넘어가게 됨
             return 폭발저주디버프제거잠시대기(self.ctx)
-        if self.user_value(key='FirstBattleEnd') >= 1:
+        if self.user_value(key='FirstBattleEnd') == 1:
             # 첫번째 전투판에서 보스가 죽으면 높은 확률로 바로 스킬브레이크 발동될 수 있는데, 이때 폭발 저주 제거해 줘야 하기 때문에 이 조건을 설정함
             return 폭발저주디버프제거잠시대기(self.ctx)
-        if self.user_value(key='FirstBattleEnd') >= 99:
+        if self.user_value(key='FirstBattleEnd') == 99:
             # 이슈라가 2페이즈 끝내고 3페이즈 넘어갈 때 이 변수 99 보내서 저주 디버프 제거 단계 실행 후 이 트리거 작동 정지시킴
             return 폭발저주디버프제거하고종료(self.ctx)
 

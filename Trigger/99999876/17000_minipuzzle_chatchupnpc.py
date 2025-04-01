@@ -23,7 +23,7 @@ class Setting(trigger_api.Trigger):
         self.spawn_monster(spawn_ids=[17101], auto_target=False)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='ChangeNpc') >= 1:
+        if self.user_value(key='ChangeNpc') == 1:
             # 17101 몬스터 AI에서 받는 신호
             return ChatchUpNpc(self.ctx)
 

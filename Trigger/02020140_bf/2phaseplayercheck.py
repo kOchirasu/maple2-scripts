@@ -10,7 +10,7 @@ class 시작대기중(trigger_api.Trigger):
 
 class 안잡힌플레이어체크(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='2PhasePlayerCheckStart') >= 1:
+        if self.user_value(key='2PhasePlayerCheckStart') == 1:
             # 2페이즈 트루카AI에서 전투 시작때 플레이어 잡기 행동이후, 안잡힌 남은 플레이어의 유무 체크 시작을 위해, 이  변수 1을 보냄
             return 페이즈지점체크하기1(self.ctx)
 

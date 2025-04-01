@@ -119,9 +119,9 @@ class 문열기시작2(trigger_api.Trigger):
 
 class 게임로직종료대기(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='GameLogicEnd') >= 1:
+        if self.user_value(key='GameLogicEnd') == 1:
             return 게임로직종료및성공(self.ctx)
-        if self.user_value(key='GameLogicEnd') >= 2:
+        if self.user_value(key='GameLogicEnd') == 2:
             return 게임로직종료및실패(self.ctx)
 
 

@@ -10,9 +10,9 @@ class Wait(trigger_api.Trigger):
         self.set_user_value(key='FindKey', value=0)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='FindKey') >= 1:
+        if self.user_value(key='FindKey') == 1:
             return StateTrue(self.ctx)
-        if self.user_value(key='FindKey') >= 2:
+        if self.user_value(key='FindKey') == 2:
             return StateFalse(self.ctx)
 
 

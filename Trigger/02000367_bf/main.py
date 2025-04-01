@@ -63,7 +63,7 @@ class 전투03(trigger_api.Trigger):
 
 class 합류대기(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='main') >= 1:
+        if self.user_value(key='main') == 1:
             return 전투04(self.ctx)
 
 

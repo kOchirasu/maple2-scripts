@@ -17,7 +17,7 @@ class MobSpawn(trigger_api.Trigger):
         self.spawn_monster(spawn_ids=[600,601,602,603,604,701,702,703,704,705], auto_target=False)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='RemoveAll') >= 1:
+        if self.user_value(key='RemoveAll') == 1:
             return Quit(self.ctx)
 
 

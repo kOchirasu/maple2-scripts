@@ -12,7 +12,7 @@ class 대기(trigger_api.Trigger):
         self.set_user_value(trigger_id=99990001, key='End', value=0)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='battlesetting') >= 1:
+        if self.user_value(key='battlesetting') == 1:
             return 전투_1라운드(self.ctx)
 
 

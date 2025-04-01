@@ -5,7 +5,7 @@ from System.Numerics import Vector3
 
 class 체력조건(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='respawn_phase_3') >= 1:
+        if self.user_value(key='respawn_phase_3') == 1:
             return 전투페이즈(self.ctx)
 
 

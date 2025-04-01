@@ -4,7 +4,7 @@ import trigger_api
 
 class 대기(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='ZakumArmDeath01') >= 1:
+        if self.user_value(key='ZakumArmDeath01') == 1:
             return 트로피지급(self.ctx)
 
 

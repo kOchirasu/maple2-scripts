@@ -15,7 +15,7 @@ class buff_1(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=60000):
             return buff_2(self.ctx)
-        if self.user_value(key='debuff') >= 1:
+        if self.user_value(key='debuff') == 1:
             return None # Missing State: 끝
 
 

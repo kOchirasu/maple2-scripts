@@ -4,7 +4,7 @@ import trigger_api
 
 class Wait(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='NPCKill') >= 1:
+        if self.user_value(key='NPCKill') == 1:
             return NPCKillWait(self.ctx)
 
 

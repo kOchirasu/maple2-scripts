@@ -9,7 +9,7 @@ class Wait(trigger_api.Trigger):
         self.set_user_value(key='ItemNumber', value=0)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='CustomerEnter') >= 1:
+        if self.user_value(key='CustomerEnter') == 1:
             return CustomerEnterDelay(self.ctx)
 
 
@@ -417,29 +417,29 @@ class WrongItem(trigger_api.Trigger):
 
 class WrongItemReturn(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='ItemNumber') >= 30000617:
+        if self.user_value(key='ItemNumber') == 30000617:
             return PickItem_30000617(self.ctx)
-        if self.user_value(key='ItemNumber') >= 30000618:
+        if self.user_value(key='ItemNumber') == 30000618:
             return PickItem_30000618(self.ctx)
-        if self.user_value(key='ItemNumber') >= 30000622:
+        if self.user_value(key='ItemNumber') == 30000622:
             return PickItem_30000622(self.ctx)
-        if self.user_value(key='ItemNumber') >= 30000661:
+        if self.user_value(key='ItemNumber') == 30000661:
             return None # Missing State: PickItem_30000661
-        if self.user_value(key='ItemNumber') >= 30000662:
+        if self.user_value(key='ItemNumber') == 30000662:
             return PickItem_30000662(self.ctx)
-        if self.user_value(key='ItemNumber') >= 30000664:
+        if self.user_value(key='ItemNumber') == 30000664:
             return PickItem_30000664(self.ctx)
-        if self.user_value(key='ItemNumber') >= 30000665:
+        if self.user_value(key='ItemNumber') == 30000665:
             return PickItem_30000665(self.ctx)
-        if self.user_value(key='ItemNumber') >= 30000666:
+        if self.user_value(key='ItemNumber') == 30000666:
             return PickItem_30000666(self.ctx)
-        if self.user_value(key='ItemNumber') >= 30000667:
+        if self.user_value(key='ItemNumber') == 30000667:
             return PickItem_30000667(self.ctx)
-        if self.user_value(key='ItemNumber') >= 30000670:
+        if self.user_value(key='ItemNumber') == 30000670:
             return PickItem_30000670(self.ctx)
-        if self.user_value(key='ItemNumber') >= 30000681:
+        if self.user_value(key='ItemNumber') == 30000681:
             return PickItem_30000681(self.ctx)
-        if self.user_value(key='ItemNumber') >= 30000684:
+        if self.user_value(key='ItemNumber') == 30000684:
             return PickItem_30000684(self.ctx)
 
 

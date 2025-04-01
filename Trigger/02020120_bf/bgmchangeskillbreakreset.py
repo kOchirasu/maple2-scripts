@@ -21,7 +21,7 @@ class 던전시간작동대기(trigger_api.Trigger):
         if self.count_users(box_id=399) >= 1:
             # MS2TriggerBox   TriggerObjectID = 399, 이 트리거 박스 안에 플레이어가 한명이라도 체크 되면        399은 보스 메인 전투판만 포함되는 범위
             return 스킬브레이크신호대기_BGM교체(self.ctx)
-        if self.user_value(key='BgmChangeTriggerCancel') >= 1:
+        if self.user_value(key='BgmChangeTriggerCancel') == 1:
             # 이슈라가 메인 전투판에 오기 전에 죽으면 BGM 변경 트리거 자체를 종료 시키기 , 이슈라가 Kill되면 나오는 이벤트 연출용 AI_IshuraRbladerDark_EventLeave.xml 에서 신호 보냄
             return 종료(self.ctx)
 
@@ -65,7 +65,7 @@ class 스킬브레이크실패연출출력(trigger_api.Trigger):
         pass
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='DungeonReset') >= 1:
+        if self.user_value(key='DungeonReset') == 1:
             return Ready(self.ctx)
 
 

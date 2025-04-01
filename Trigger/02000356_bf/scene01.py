@@ -17,7 +17,7 @@ class 시작대기중(trigger_api.Trigger):
         self.set_effect(trigger_ids=[609]) # 알론 음성
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='SetSkillA') >= 1:
+        if self.user_value(key='SetSkillA') == 1:
             return 연출시작딜레이(self.ctx)
 
 

@@ -8,7 +8,7 @@ class idle(trigger_api.Trigger):
         self.set_user_value(trigger_id=203903, key='Summon', value=0)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Summon') >= 1:
+        if self.user_value(key='Summon') == 1:
             return Summon(self.ctx)
 
 
@@ -18,7 +18,7 @@ class Summon(trigger_api.Trigger):
         self.set_user_value(trigger_id=203903, key='Summon', value=0)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Summon') >= 1:
+        if self.user_value(key='Summon') == 1:
             return Summon_02(self.ctx)
 
 
@@ -30,7 +30,7 @@ class Summon_02(trigger_api.Trigger):
         self.set_user_value(trigger_id=203903, key='Summon', value=0)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Summon') >= 1:
+        if self.user_value(key='Summon') == 1:
             return Summon_03(self.ctx)
 
 
@@ -40,7 +40,7 @@ class Summon_03(trigger_api.Trigger):
         self.set_user_value(trigger_id=203903, key='Summon', value=0)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Summon') >= 1:
+        if self.user_value(key='Summon') == 1:
             return Summon(self.ctx)
 
 

@@ -14,19 +14,19 @@ class 대기(trigger_api.Trigger):
         self.set_effect(trigger_ids=[600])
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='LavaflowHigh') >= 1:
+        if self.user_value(key='LavaflowHigh') == 1:
             # 자쿰 팔이 제거될 때 LavaflowHigh 혹은 LavaflowLow 신호를 보내서 이 부분 작동하게 됨
             return 칸분기3(self.ctx)
-        if self.user_value(key='LavaflowLow') >= 1:
+        if self.user_value(key='LavaflowLow') == 1:
             # 자쿰 팔이 제거될 때 LavaflowHigh 혹은 LavaflowLow 신호를 보내서 이 부분 작동하게 됨
             return 칸분기2(self.ctx)
-        if self.user_value(key='LavaflowLeft') >= 1:
+        if self.user_value(key='LavaflowLeft') == 1:
             # 왼쪽 용암 담당 계약의 토템이 생성될때, 이 부분 작동,   LavaflowLeft 변수는 자쿰몸체 보스한테 LavaflowLeft = 1 설정되어서 넘어오는 것임
             return 왼쪽용암생성(self.ctx)
-        if self.user_value(key='LavaflowRight') >= 1:
+        if self.user_value(key='LavaflowRight') == 1:
             # 오른쪽 용암 담당 계약의 토템이 생성될때, 이 부분 작동,   LavaflowRight 변수는 자쿰몸체 보스한테 LavaflowRight = 1 설정되어서 넘어오는 것임
             return 오른쪽용암생성(self.ctx)
-        if self.user_value(key='BattleEnd2') >= 1:
+        if self.user_value(key='BattleEnd2') == 1:
             # BattleEnd2 변수는 보스 생성쪽 트리거 설정 xml 에서 보스가 죽을 경우 BattleEnd2 = 1 설정되어서 넘어오는 것임
             return 종료(self.ctx)
 
@@ -45,7 +45,7 @@ class 칸분기3(trigger_api.Trigger):
             return 칸이동3(self.ctx)
         if self.random_condition(weight=48.0):
             return 리턴(self.ctx)
-        if self.user_value(key='BattleEnd2') >= 1:
+        if self.user_value(key='BattleEnd2') == 1:
             return 종료(self.ctx)
 
 
@@ -56,7 +56,7 @@ class 칸이동3(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=28000):
             return 리턴(self.ctx)
-        if self.user_value(key='BattleEnd2') >= 1:
+        if self.user_value(key='BattleEnd2') == 1:
             return 종료(self.ctx)
 
 
@@ -74,7 +74,7 @@ class 칸분기2(trigger_api.Trigger):
             return 칸이동2(self.ctx)
         if self.random_condition(weight=1.0):
             return 리턴(self.ctx)
-        if self.user_value(key='BattleEnd2') >= 1:
+        if self.user_value(key='BattleEnd2') == 1:
             return 종료(self.ctx)
 
 
@@ -85,7 +85,7 @@ class 칸이동2(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=20000):
             return 리턴(self.ctx)
-        if self.user_value(key='BattleEnd2') >= 1:
+        if self.user_value(key='BattleEnd2') == 1:
             return 종료(self.ctx)
 
 
@@ -113,9 +113,9 @@ class 왼쪽용암생성(trigger_api.Trigger):
 
     def on_tick(self) -> trigger_api.Trigger:
         # 보스가 죽으면 보스 스폰시키는 트리거 xml 에서 BattleEnd2 = 1 신호를 보내서 올라와 있는 용암을 여기서 바로 제거 시키게 함
-        if self.user_value(key='LavaflowLeftStop') >= 1:
+        if self.user_value(key='LavaflowLeftStop') == 1:
             return 왼쪽용암내려가기(self.ctx)
-        if self.user_value(key='BattleEnd2') >= 1:
+        if self.user_value(key='BattleEnd2') == 1:
             return 종료(self.ctx)
 
 
@@ -147,9 +147,9 @@ class 오른쪽용암생성(trigger_api.Trigger):
 
     def on_tick(self) -> trigger_api.Trigger:
         # 보스가 죽으면 보스 스폰시키는 트리거 xml 에서 BattleEnd2 = 1 신호를 보내서 올라와 있는 용암을 여기서 바로 제거 시키게 함
-        if self.user_value(key='LavaflowRightStop') >= 1:
+        if self.user_value(key='LavaflowRightStop') == 1:
             return 오른쪽용암내려가기(self.ctx)
-        if self.user_value(key='BattleEnd2') >= 1:
+        if self.user_value(key='BattleEnd2') == 1:
             return 종료(self.ctx)
 
 

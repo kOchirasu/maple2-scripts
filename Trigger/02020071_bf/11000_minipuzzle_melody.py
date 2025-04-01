@@ -51,7 +51,7 @@ class Wait(trigger_api.Trigger):
         self.set_effect(trigger_ids=[11302]) # Wrong Sound Effect
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='TimeEventOn') >= 1:
+        if self.user_value(key='TimeEventOn') == 1:
             return Setting(self.ctx)
 
 
@@ -65,7 +65,7 @@ class Setting(trigger_api.Trigger):
             # UI 표시 안함 / 황금 상자 소유권 Additional Effect 71001011 지속시간 동일
             self.set_timer(timer_id='1', seconds=120, auto_remove=True)
             return StartMelodyQuiz_Delay01(self.ctx)
-        if self.user_value(key='TimeEventOn') >= 0:
+        if self.user_value(key='TimeEventOn') == 0:
             return Wait(self.ctx)
 
 
@@ -155,9 +155,9 @@ class MelodyQuizPattern01(trigger_api.Trigger):
         self.set_user_value(trigger_id=101, key='PatternPick', value=1)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='AnswerIsRight') >= 1:
+        if self.user_value(key='AnswerIsRight') == 1:
             return EndMelodyQuiz_Success(self.ctx)
-        if self.user_value(key='AnswerIsWrong') >= 1:
+        if self.user_value(key='AnswerIsWrong') == 1:
             return EndMelodyQuiz_Fail(self.ctx)
         if self.time_expired(timer_id='1'):
             # UI 표시 안함 / 황금 상자 소유권 Additional Effect 71001011 지속시간 동일
@@ -175,9 +175,9 @@ class MelodyQuizPattern02(trigger_api.Trigger):
         self.set_user_value(trigger_id=102, key='PatternPick', value=1)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='AnswerIsRight') >= 1:
+        if self.user_value(key='AnswerIsRight') == 1:
             return EndMelodyQuiz_Success(self.ctx)
-        if self.user_value(key='AnswerIsWrong') >= 1:
+        if self.user_value(key='AnswerIsWrong') == 1:
             return EndMelodyQuiz_Fail(self.ctx)
         if self.time_expired(timer_id='1'):
             # UI 표시 안함 / 황금 상자 소유권 Additional Effect 71001011 지속시간 동일
@@ -194,9 +194,9 @@ class MelodyQuizPattern03(trigger_api.Trigger):
         self.set_user_value(trigger_id=103, key='PatternPick', value=1)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='AnswerIsRight') >= 1:
+        if self.user_value(key='AnswerIsRight') == 1:
             return EndMelodyQuiz_Success(self.ctx)
-        if self.user_value(key='AnswerIsWrong') >= 1:
+        if self.user_value(key='AnswerIsWrong') == 1:
             return EndMelodyQuiz_Fail(self.ctx)
         if self.time_expired(timer_id='1'):
             # UI 표시 안함 / 황금 상자 소유권 Additional Effect 71001011 지속시간 동일
@@ -213,9 +213,9 @@ class MelodyQuizPattern04(trigger_api.Trigger):
         self.set_user_value(trigger_id=104, key='PatternPick', value=1)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='AnswerIsRight') >= 1:
+        if self.user_value(key='AnswerIsRight') == 1:
             return EndMelodyQuiz_Success(self.ctx)
-        if self.user_value(key='AnswerIsWrong') >= 1:
+        if self.user_value(key='AnswerIsWrong') == 1:
             return EndMelodyQuiz_Fail(self.ctx)
         if self.time_expired(timer_id='1'):
             # UI 표시 안함 / 황금 상자 소유권 Additional Effect 71001011 지속시간 동일
@@ -232,9 +232,9 @@ class MelodyQuizPattern05(trigger_api.Trigger):
         self.set_user_value(trigger_id=105, key='PatternPick', value=1)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='AnswerIsRight') >= 1:
+        if self.user_value(key='AnswerIsRight') == 1:
             return EndMelodyQuiz_Success(self.ctx)
-        if self.user_value(key='AnswerIsWrong') >= 1:
+        if self.user_value(key='AnswerIsWrong') == 1:
             return EndMelodyQuiz_Fail(self.ctx)
         if self.time_expired(timer_id='1'):
             # UI 표시 안함 / 황금 상자 소유권 Additional Effect 71001011 지속시간 동일
@@ -251,9 +251,9 @@ class MelodyQuizPattern06(trigger_api.Trigger):
         self.set_user_value(trigger_id=106, key='PatternPick', value=1)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='AnswerIsRight') >= 1:
+        if self.user_value(key='AnswerIsRight') == 1:
             return EndMelodyQuiz_Success(self.ctx)
-        if self.user_value(key='AnswerIsWrong') >= 1:
+        if self.user_value(key='AnswerIsWrong') == 1:
             return EndMelodyQuiz_Fail(self.ctx)
         if self.time_expired(timer_id='1'):
             # UI 표시 안함 / 황금 상자 소유권 Additional Effect 71001011 지속시간 동일
@@ -270,9 +270,9 @@ class MelodyQuizPattern07(trigger_api.Trigger):
         self.set_user_value(trigger_id=107, key='PatternPick', value=1)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='AnswerIsRight') >= 1:
+        if self.user_value(key='AnswerIsRight') == 1:
             return EndMelodyQuiz_Success(self.ctx)
-        if self.user_value(key='AnswerIsWrong') >= 1:
+        if self.user_value(key='AnswerIsWrong') == 1:
             return EndMelodyQuiz_Fail(self.ctx)
         if self.time_expired(timer_id='1'):
             # UI 표시 안함 / 황금 상자 소유권 Additional Effect 71001011 지속시간 동일
@@ -289,9 +289,9 @@ class MelodyQuizPattern08(trigger_api.Trigger):
         self.set_user_value(trigger_id=108, key='PatternPick', value=1)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='AnswerIsRight') >= 1:
+        if self.user_value(key='AnswerIsRight') == 1:
             return EndMelodyQuiz_Success(self.ctx)
-        if self.user_value(key='AnswerIsWrong') >= 1:
+        if self.user_value(key='AnswerIsWrong') == 1:
             return EndMelodyQuiz_Fail(self.ctx)
         if self.time_expired(timer_id='1'):
             # UI 표시 안함 / 황금 상자 소유권 Additional Effect 71001011 지속시간 동일
@@ -308,9 +308,9 @@ class MelodyQuizPattern09(trigger_api.Trigger):
         self.set_user_value(trigger_id=109, key='PatternPick', value=1)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='AnswerIsRight') >= 1:
+        if self.user_value(key='AnswerIsRight') == 1:
             return EndMelodyQuiz_Success(self.ctx)
-        if self.user_value(key='AnswerIsWrong') >= 1:
+        if self.user_value(key='AnswerIsWrong') == 1:
             return EndMelodyQuiz_Fail(self.ctx)
         if self.time_expired(timer_id='1'):
             # UI 표시 안함 / 황금 상자 소유권 Additional Effect 71001011 지속시간 동일
@@ -327,9 +327,9 @@ class MelodyQuizPattern10(trigger_api.Trigger):
         self.set_user_value(trigger_id=110, key='PatternPick', value=1)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='AnswerIsRight') >= 1:
+        if self.user_value(key='AnswerIsRight') == 1:
             return EndMelodyQuiz_Success(self.ctx)
-        if self.user_value(key='AnswerIsWrong') >= 1:
+        if self.user_value(key='AnswerIsWrong') == 1:
             return EndMelodyQuiz_Fail(self.ctx)
         if self.time_expired(timer_id='1'):
             # UI 표시 안함 / 황금 상자 소유권 Additional Effect 71001011 지속시간 동일
@@ -346,9 +346,9 @@ class MelodyQuizPattern11(trigger_api.Trigger):
         self.set_user_value(trigger_id=111, key='PatternPick', value=1)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='AnswerIsRight') >= 1:
+        if self.user_value(key='AnswerIsRight') == 1:
             return EndMelodyQuiz_Success(self.ctx)
-        if self.user_value(key='AnswerIsWrong') >= 1:
+        if self.user_value(key='AnswerIsWrong') == 1:
             return EndMelodyQuiz_Fail(self.ctx)
         if self.time_expired(timer_id='1'):
             # UI 표시 안함 / 황금 상자 소유권 Additional Effect 71001011 지속시간 동일
@@ -365,9 +365,9 @@ class MelodyQuizPattern12(trigger_api.Trigger):
         self.set_user_value(trigger_id=112, key='PatternPick', value=1)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='AnswerIsRight') >= 1:
+        if self.user_value(key='AnswerIsRight') == 1:
             return EndMelodyQuiz_Success(self.ctx)
-        if self.user_value(key='AnswerIsWrong') >= 1:
+        if self.user_value(key='AnswerIsWrong') == 1:
             return EndMelodyQuiz_Fail(self.ctx)
         if self.time_expired(timer_id='1'):
             # UI 표시 안함 / 황금 상자 소유권 Additional Effect 71001011 지속시간 동일
@@ -384,9 +384,9 @@ class MelodyQuizPattern13(trigger_api.Trigger):
         self.set_user_value(trigger_id=113, key='PatternPick', value=1)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='AnswerIsRight') >= 1:
+        if self.user_value(key='AnswerIsRight') == 1:
             return EndMelodyQuiz_Success(self.ctx)
-        if self.user_value(key='AnswerIsWrong') >= 1:
+        if self.user_value(key='AnswerIsWrong') == 1:
             return EndMelodyQuiz_Fail(self.ctx)
         if self.time_expired(timer_id='1'):
             # UI 표시 안함 / 황금 상자 소유권 Additional Effect 71001011 지속시간 동일
@@ -403,9 +403,9 @@ class MelodyQuizPattern14(trigger_api.Trigger):
         self.set_user_value(trigger_id=114, key='PatternPick', value=1)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='AnswerIsRight') >= 1:
+        if self.user_value(key='AnswerIsRight') == 1:
             return EndMelodyQuiz_Success(self.ctx)
-        if self.user_value(key='AnswerIsWrong') >= 1:
+        if self.user_value(key='AnswerIsWrong') == 1:
             return EndMelodyQuiz_Fail(self.ctx)
         if self.time_expired(timer_id='1'):
             # UI 표시 안함 / 황금 상자 소유권 Additional Effect 71001011 지속시간 동일
@@ -422,9 +422,9 @@ class MelodyQuizPattern15(trigger_api.Trigger):
         self.set_user_value(trigger_id=115, key='PatternPick', value=1)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='AnswerIsRight') >= 1:
+        if self.user_value(key='AnswerIsRight') == 1:
             return EndMelodyQuiz_Success(self.ctx)
-        if self.user_value(key='AnswerIsWrong') >= 1:
+        if self.user_value(key='AnswerIsWrong') == 1:
             return EndMelodyQuiz_Fail(self.ctx)
         if self.time_expired(timer_id='1'):
             # UI 표시 안함 / 황금 상자 소유권 Additional Effect 71001011 지속시간 동일
@@ -441,9 +441,9 @@ class MelodyQuizPattern16(trigger_api.Trigger):
         self.set_user_value(trigger_id=116, key='PatternPick', value=1)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='AnswerIsRight') >= 1:
+        if self.user_value(key='AnswerIsRight') == 1:
             return EndMelodyQuiz_Success(self.ctx)
-        if self.user_value(key='AnswerIsWrong') >= 1:
+        if self.user_value(key='AnswerIsWrong') == 1:
             return EndMelodyQuiz_Fail(self.ctx)
         if self.time_expired(timer_id='1'):
             # UI 표시 안함 / 황금 상자 소유권 Additional Effect 71001011 지속시간 동일
@@ -460,9 +460,9 @@ class MelodyQuizPattern17(trigger_api.Trigger):
         self.set_user_value(trigger_id=117, key='PatternPick', value=1)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='AnswerIsRight') >= 1:
+        if self.user_value(key='AnswerIsRight') == 1:
             return EndMelodyQuiz_Success(self.ctx)
-        if self.user_value(key='AnswerIsWrong') >= 1:
+        if self.user_value(key='AnswerIsWrong') == 1:
             return EndMelodyQuiz_Fail(self.ctx)
         if self.time_expired(timer_id='1'):
             # UI 표시 안함 / 황금 상자 소유권 Additional Effect 71001011 지속시간 동일
@@ -479,9 +479,9 @@ class MelodyQuizPattern18(trigger_api.Trigger):
         self.set_user_value(trigger_id=118, key='PatternPick', value=1)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='AnswerIsRight') >= 1:
+        if self.user_value(key='AnswerIsRight') == 1:
             return EndMelodyQuiz_Success(self.ctx)
-        if self.user_value(key='AnswerIsWrong') >= 1:
+        if self.user_value(key='AnswerIsWrong') == 1:
             return EndMelodyQuiz_Fail(self.ctx)
         if self.time_expired(timer_id='1'):
             # UI 표시 안함 / 황금 상자 소유권 Additional Effect 71001011 지속시간 동일
@@ -498,9 +498,9 @@ class MelodyQuizPattern19(trigger_api.Trigger):
         self.set_user_value(trigger_id=119, key='PatternPick', value=1)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='AnswerIsRight') >= 1:
+        if self.user_value(key='AnswerIsRight') == 1:
             return EndMelodyQuiz_Success(self.ctx)
-        if self.user_value(key='AnswerIsWrong') >= 1:
+        if self.user_value(key='AnswerIsWrong') == 1:
             return EndMelodyQuiz_Fail(self.ctx)
         if self.time_expired(timer_id='1'):
             # UI 표시 안함 / 황금 상자 소유권 Additional Effect 71001011 지속시간 동일
@@ -517,9 +517,9 @@ class MelodyQuizPattern20(trigger_api.Trigger):
         self.set_user_value(trigger_id=120, key='PatternPick', value=1)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='AnswerIsRight') >= 1:
+        if self.user_value(key='AnswerIsRight') == 1:
             return EndMelodyQuiz_Success(self.ctx)
-        if self.user_value(key='AnswerIsWrong') >= 1:
+        if self.user_value(key='AnswerIsWrong') == 1:
             return EndMelodyQuiz_Fail(self.ctx)
         if self.time_expired(timer_id='1'):
             # UI 표시 안함 / 황금 상자 소유권 Additional Effect 71001011 지속시간 동일
@@ -543,7 +543,7 @@ class EndMelodyQuiz_Success(trigger_api.Trigger):
             # RareBox 맵 별로 유니크하도록 변경해야 하는 값
             return MelodyQuiz_Success_Quit(self.ctx)
         """
-        if self.user_value(key='TimeEventOn') >= 0:
+        if self.user_value(key='TimeEventOn') == 0:
             pass
         """
         if self.time_expired(timer_id='2'):
@@ -556,7 +556,7 @@ class EndMelodyQuiz_Fail(trigger_api.Trigger):
         self.set_effect(trigger_ids=[11302], visible=True) # Wrong Sound Effect
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='TimeEventOn') >= 0:
+        if self.user_value(key='TimeEventOn') == 0:
             return EndMelodyQuiz_Fail_2(self.ctx)
         if self.time_expired(timer_id='1'):
             # UI 표시 안함 / 황금 상자 소유권 Additional Effect 71001011 지속시간 동일
@@ -579,45 +579,45 @@ class MelodyQuiz_Retry(trigger_api.Trigger):
         self.set_user_value(key='AnswerIsWrong', value=0)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='PatternPick') >= 101:
+        if self.user_value(key='PatternPick') == 101:
             return MelodyQuizPattern01(self.ctx)
-        if self.user_value(key='PatternPick') >= 102:
+        if self.user_value(key='PatternPick') == 102:
             return MelodyQuizPattern02(self.ctx)
-        if self.user_value(key='PatternPick') >= 103:
+        if self.user_value(key='PatternPick') == 103:
             return MelodyQuizPattern03(self.ctx)
-        if self.user_value(key='PatternPick') >= 104:
+        if self.user_value(key='PatternPick') == 104:
             return MelodyQuizPattern04(self.ctx)
-        if self.user_value(key='PatternPick') >= 105:
+        if self.user_value(key='PatternPick') == 105:
             return MelodyQuizPattern05(self.ctx)
-        if self.user_value(key='PatternPick') >= 106:
+        if self.user_value(key='PatternPick') == 106:
             return MelodyQuizPattern06(self.ctx)
-        if self.user_value(key='PatternPick') >= 107:
+        if self.user_value(key='PatternPick') == 107:
             return MelodyQuizPattern07(self.ctx)
-        if self.user_value(key='PatternPick') >= 108:
+        if self.user_value(key='PatternPick') == 108:
             return MelodyQuizPattern08(self.ctx)
-        if self.user_value(key='PatternPick') >= 109:
+        if self.user_value(key='PatternPick') == 109:
             return MelodyQuizPattern09(self.ctx)
-        if self.user_value(key='PatternPick') >= 110:
+        if self.user_value(key='PatternPick') == 110:
             return MelodyQuizPattern10(self.ctx)
-        if self.user_value(key='PatternPick') >= 111:
+        if self.user_value(key='PatternPick') == 111:
             return MelodyQuizPattern11(self.ctx)
-        if self.user_value(key='PatternPick') >= 112:
+        if self.user_value(key='PatternPick') == 112:
             return MelodyQuizPattern12(self.ctx)
-        if self.user_value(key='PatternPick') >= 113:
+        if self.user_value(key='PatternPick') == 113:
             return MelodyQuizPattern13(self.ctx)
-        if self.user_value(key='PatternPick') >= 114:
+        if self.user_value(key='PatternPick') == 114:
             return MelodyQuizPattern14(self.ctx)
-        if self.user_value(key='PatternPick') >= 115:
+        if self.user_value(key='PatternPick') == 115:
             return MelodyQuizPattern15(self.ctx)
-        if self.user_value(key='PatternPick') >= 116:
+        if self.user_value(key='PatternPick') == 116:
             return MelodyQuizPattern16(self.ctx)
-        if self.user_value(key='PatternPick') >= 117:
+        if self.user_value(key='PatternPick') == 117:
             return MelodyQuizPattern17(self.ctx)
-        if self.user_value(key='PatternPick') >= 118:
+        if self.user_value(key='PatternPick') == 118:
             return MelodyQuizPattern18(self.ctx)
-        if self.user_value(key='PatternPick') >= 119:
+        if self.user_value(key='PatternPick') == 119:
             return MelodyQuizPattern19(self.ctx)
-        if self.user_value(key='PatternPick') >= 120: # 패턴 추가
+        if self.user_value(key='PatternPick') == 120: # 패턴 추가
             return MelodyQuizPattern20(self.ctx)
 
 

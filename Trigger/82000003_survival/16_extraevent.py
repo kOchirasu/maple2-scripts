@@ -15,10 +15,10 @@ class Setting(trigger_api.Trigger):
 
     def on_tick(self) -> trigger_api.Trigger:
         # ExtraEventOn / ExtraEventRandomDelay01 / ExtraEvent01_Fast / ExtraEvent02_MapHack / ExtraEvent03_RobotSpawn / ExtraEvent04_DogEverywhere / ExtraEvent05_SkillCoolDownTimeReduce / ExtraEvent06_NoMoreFarming
-        if self.user_value(key='ExtraEventTestOn') >= 1:
+        if self.user_value(key='ExtraEventTestOn') == 1:
             # test용 수정 가능 지점 : 발동 시킬 이벤트 종류
             return ExtraEventOn(self.ctx)
-        if self.user_value(key='ExtraEventCheck') >= 1:
+        if self.user_value(key='ExtraEventCheck') == 1:
             # ExtraEventOccurrenceProbability / ExtraEventOn
             return ExtraEventOccurrenceProbability(self.ctx)
 
@@ -29,13 +29,13 @@ class ExtraEventOccurrenceProbability(trigger_api.Trigger):
             return ExtraEventOff(self.ctx)
         if self.random_condition(weight=40.0):
             return ExtraEventOn(self.ctx)
-        if self.user_value(key='ExtraEventOff') >= 1:
+        if self.user_value(key='ExtraEventOff') == 1:
             return Quit(self.ctx)
 
 
 class ExtraEventOff(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='ExtraEventOff') >= 1:
+        if self.user_value(key='ExtraEventOff') == 1:
             return Quit(self.ctx)
 
 
@@ -57,17 +57,17 @@ class RelicLeft05(trigger_api.Trigger):
         self.set_user_value(trigger_id=15, key='RelicMobSpawn', value=1)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='RelicMobRedDie') >= 1:
+        if self.user_value(key='RelicMobRedDie') == 1:
             return RelicLeft04_NoRed(self.ctx)
-        if self.user_value(key='RelicMobSkyblueDie') >= 1:
+        if self.user_value(key='RelicMobSkyblueDie') == 1:
             return RelicLeft04_NoSkyblue(self.ctx)
-        if self.user_value(key='RelicMobGreenDie') >= 1:
+        if self.user_value(key='RelicMobGreenDie') == 1:
             return RelicLeft04_NoGreen(self.ctx)
-        if self.user_value(key='RelicMobYellowDie') >= 1:
+        if self.user_value(key='RelicMobYellowDie') == 1:
             return RelicLeft04_NoYellow(self.ctx)
-        if self.user_value(key='RelicMobGreyDie') >= 1:
+        if self.user_value(key='RelicMobGreyDie') == 1:
             return RelicLeft04_NoGrey(self.ctx)
-        if self.user_value(key='ExtraEventOff') >= 1:
+        if self.user_value(key='ExtraEventOff') == 1:
             return Quit(self.ctx)
 
     def on_exit(self) -> None:
@@ -84,15 +84,15 @@ class RelicLeft04_NoRed(trigger_api.Trigger):
         self.write_log(log_name='Survival', event='MokumKill_01') # 모쿰 이벤트 로그 - 4마리 남음
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='RelicMobSkyblueDie') >= 1:
+        if self.user_value(key='RelicMobSkyblueDie') == 1:
             return RelicLeft03_NoRed_NoSkyblue(self.ctx)
-        if self.user_value(key='RelicMobGreenDie') >= 1:
+        if self.user_value(key='RelicMobGreenDie') == 1:
             return RelicLeft03_NoRed_NoGreen(self.ctx)
-        if self.user_value(key='RelicMobYellowDie') >= 1:
+        if self.user_value(key='RelicMobYellowDie') == 1:
             return RelicLeft03_NoRed_NoYellow(self.ctx)
-        if self.user_value(key='RelicMobGreyDie') >= 1:
+        if self.user_value(key='RelicMobGreyDie') == 1:
             return RelicLeft03_NoRed_NoGrey(self.ctx)
-        if self.user_value(key='ExtraEventOff') >= 1:
+        if self.user_value(key='ExtraEventOff') == 1:
             return Quit(self.ctx)
 
     def on_exit(self) -> None:
@@ -105,15 +105,15 @@ class RelicLeft04_NoRed(trigger_api.Trigger):
 
 class RelicLeft04_NoSkyblue(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='RelicMobRedDie') >= 1:
+        if self.user_value(key='RelicMobRedDie') == 1:
             return RelicLeft03_NoRed_NoSkyblue(self.ctx)
-        if self.user_value(key='RelicMobGreenDie') >= 1:
+        if self.user_value(key='RelicMobGreenDie') == 1:
             return RelicLeft03_NoSkyblue_NoGreen(self.ctx)
-        if self.user_value(key='RelicMobYellowDie') >= 1:
+        if self.user_value(key='RelicMobYellowDie') == 1:
             return RelicLeft03_NoSkyblue_NoYellow(self.ctx)
-        if self.user_value(key='RelicMobGreyDie') >= 1:
+        if self.user_value(key='RelicMobGreyDie') == 1:
             return RelicLeft03_NoSkyblue_NoGrey(self.ctx)
-        if self.user_value(key='ExtraEventOff') >= 1:
+        if self.user_value(key='ExtraEventOff') == 1:
             return Quit(self.ctx)
 
     def on_exit(self) -> None:
@@ -126,15 +126,15 @@ class RelicLeft04_NoSkyblue(trigger_api.Trigger):
 
 class RelicLeft04_NoGreen(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='RelicMobRedDie') >= 1:
+        if self.user_value(key='RelicMobRedDie') == 1:
             return RelicLeft03_NoRed_NoGreen(self.ctx)
-        if self.user_value(key='RelicMobSkyblueDie') >= 1:
+        if self.user_value(key='RelicMobSkyblueDie') == 1:
             return RelicLeft03_NoSkyblue_NoGreen(self.ctx)
-        if self.user_value(key='RelicMobYellowDie') >= 1:
+        if self.user_value(key='RelicMobYellowDie') == 1:
             return RelicLeft03_NoGreen_NoYellow(self.ctx)
-        if self.user_value(key='RelicMobGreyDie') >= 1:
+        if self.user_value(key='RelicMobGreyDie') == 1:
             return RelicLeft03_NoGreen_NoGrey(self.ctx)
-        if self.user_value(key='ExtraEventOff') >= 1:
+        if self.user_value(key='ExtraEventOff') == 1:
             return Quit(self.ctx)
 
     def on_exit(self) -> None:
@@ -147,15 +147,15 @@ class RelicLeft04_NoGreen(trigger_api.Trigger):
 
 class RelicLeft04_NoYellow(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='RelicMobRedDie') >= 1:
+        if self.user_value(key='RelicMobRedDie') == 1:
             return RelicLeft03_NoRed_NoYellow(self.ctx)
-        if self.user_value(key='RelicMobSkyblueDie') >= 1:
+        if self.user_value(key='RelicMobSkyblueDie') == 1:
             return RelicLeft03_NoSkyblue_NoYellow(self.ctx)
-        if self.user_value(key='RelicMobGreenDie') >= 1:
+        if self.user_value(key='RelicMobGreenDie') == 1:
             return RelicLeft03_NoGreen_NoYellow(self.ctx)
-        if self.user_value(key='RelicMobGreyDie') >= 1:
+        if self.user_value(key='RelicMobGreyDie') == 1:
             return RelicLeft03_NoYellow_NoGrey(self.ctx)
-        if self.user_value(key='ExtraEventOff') >= 1:
+        if self.user_value(key='ExtraEventOff') == 1:
             return Quit(self.ctx)
 
     def on_exit(self) -> None:
@@ -168,15 +168,15 @@ class RelicLeft04_NoYellow(trigger_api.Trigger):
 
 class RelicLeft04_NoGrey(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='RelicMobRedDie') >= 1:
+        if self.user_value(key='RelicMobRedDie') == 1:
             return RelicLeft03_NoRed_NoGrey(self.ctx)
-        if self.user_value(key='RelicMobSkyblueDie') >= 1:
+        if self.user_value(key='RelicMobSkyblueDie') == 1:
             return RelicLeft03_NoSkyblue_NoGrey(self.ctx)
-        if self.user_value(key='RelicMobGreenDie') >= 1:
+        if self.user_value(key='RelicMobGreenDie') == 1:
             return RelicLeft03_NoGreen_NoGrey(self.ctx)
-        if self.user_value(key='RelicMobYellowDie') >= 1:
+        if self.user_value(key='RelicMobYellowDie') == 1:
             return RelicLeft03_NoYellow_NoGrey(self.ctx)
-        if self.user_value(key='ExtraEventOff') >= 1:
+        if self.user_value(key='ExtraEventOff') == 1:
             return Quit(self.ctx)
 
     def on_exit(self) -> None:
@@ -193,13 +193,13 @@ class RelicLeft03_NoRed_NoSkyblue(trigger_api.Trigger):
         self.write_log(log_name='Survival', event='MokumKill_02') # 모쿰 이벤트 로그 - 3마리 남음
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='RelicMobGreenDie') >= 1:
+        if self.user_value(key='RelicMobGreenDie') == 1:
             return RelicLeft02_NoRed_NoSkyblue_NoGreen(self.ctx)
-        if self.user_value(key='RelicMobYellowDie') >= 1:
+        if self.user_value(key='RelicMobYellowDie') == 1:
             return RelicLeft02_NoRed_NoSkyblue_NoYellow(self.ctx)
-        if self.user_value(key='RelicMobGreyDie') >= 1:
+        if self.user_value(key='RelicMobGreyDie') == 1:
             return RelicLeft02_NoRed_NoSkyblue_NoGrey(self.ctx)
-        if self.user_value(key='ExtraEventOff') >= 1:
+        if self.user_value(key='ExtraEventOff') == 1:
             return Quit(self.ctx)
 
     def on_exit(self) -> None:
@@ -212,13 +212,13 @@ class RelicLeft03_NoRed_NoSkyblue(trigger_api.Trigger):
 
 class RelicLeft03_NoRed_NoGreen(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='RelicMobSkyblueDie') >= 1:
+        if self.user_value(key='RelicMobSkyblueDie') == 1:
             return RelicLeft02_NoRed_NoSkyblue_NoGreen(self.ctx)
-        if self.user_value(key='RelicMobYellowDie') >= 1:
+        if self.user_value(key='RelicMobYellowDie') == 1:
             return RelicLeft02_NoRed_NoGreen_NoYellow(self.ctx)
-        if self.user_value(key='RelicMobGreyDie') >= 1:
+        if self.user_value(key='RelicMobGreyDie') == 1:
             return RelicLeft02_NoRed_NoGreen_NoGrey(self.ctx)
-        if self.user_value(key='ExtraEventOff') >= 1:
+        if self.user_value(key='ExtraEventOff') == 1:
             return Quit(self.ctx)
 
     def on_exit(self) -> None:
@@ -231,13 +231,13 @@ class RelicLeft03_NoRed_NoGreen(trigger_api.Trigger):
 
 class RelicLeft03_NoRed_NoYellow(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='RelicMobSkyblueDie') >= 1:
+        if self.user_value(key='RelicMobSkyblueDie') == 1:
             return RelicLeft02_NoRed_NoSkyblue_NoYellow(self.ctx)
-        if self.user_value(key='RelicMobGreenDie') >= 1:
+        if self.user_value(key='RelicMobGreenDie') == 1:
             return RelicLeft02_NoRed_NoGreen_NoYellow(self.ctx)
-        if self.user_value(key='RelicMobGreyDie') >= 1:
+        if self.user_value(key='RelicMobGreyDie') == 1:
             return RelicLeft02_NoRed_NoYellow_NoGrey(self.ctx)
-        if self.user_value(key='ExtraEventOff') >= 1:
+        if self.user_value(key='ExtraEventOff') == 1:
             return Quit(self.ctx)
 
     def on_exit(self) -> None:
@@ -250,13 +250,13 @@ class RelicLeft03_NoRed_NoYellow(trigger_api.Trigger):
 
 class RelicLeft03_NoRed_NoGrey(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='RelicMobSkyblueDie') >= 1:
+        if self.user_value(key='RelicMobSkyblueDie') == 1:
             return RelicLeft02_NoRed_NoSkyblue_NoGrey(self.ctx)
-        if self.user_value(key='RelicMobGreenDie') >= 1:
+        if self.user_value(key='RelicMobGreenDie') == 1:
             return RelicLeft02_NoRed_NoGreen_NoGrey(self.ctx)
-        if self.user_value(key='RelicMobYellowDie') >= 1:
+        if self.user_value(key='RelicMobYellowDie') == 1:
             return RelicLeft02_NoRed_NoYellow_NoGrey(self.ctx)
-        if self.user_value(key='ExtraEventOff') >= 1:
+        if self.user_value(key='ExtraEventOff') == 1:
             return Quit(self.ctx)
 
     def on_exit(self) -> None:
@@ -269,13 +269,13 @@ class RelicLeft03_NoRed_NoGrey(trigger_api.Trigger):
 
 class RelicLeft03_NoSkyblue_NoGreen(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='RelicMobRedDie') >= 1:
+        if self.user_value(key='RelicMobRedDie') == 1:
             return RelicLeft02_NoRed_NoSkyblue_NoGreen(self.ctx)
-        if self.user_value(key='RelicMobYellowDie') >= 1:
+        if self.user_value(key='RelicMobYellowDie') == 1:
             return RelicLeft02_NoSkyblue_NoGreen_NoYellow(self.ctx)
-        if self.user_value(key='RelicMobGreyDie') >= 1:
+        if self.user_value(key='RelicMobGreyDie') == 1:
             return RelicLeft02_NoSkyblue_NoGreen_NoGrey(self.ctx)
-        if self.user_value(key='ExtraEventOff') >= 1:
+        if self.user_value(key='ExtraEventOff') == 1:
             return Quit(self.ctx)
 
     def on_exit(self) -> None:
@@ -288,13 +288,13 @@ class RelicLeft03_NoSkyblue_NoGreen(trigger_api.Trigger):
 
 class RelicLeft03_NoSkyblue_NoYellow(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='RelicMobRedDie') >= 1:
+        if self.user_value(key='RelicMobRedDie') == 1:
             return RelicLeft02_NoRed_NoSkyblue_NoYellow(self.ctx)
-        if self.user_value(key='RelicMobGreenDie') >= 1:
+        if self.user_value(key='RelicMobGreenDie') == 1:
             return RelicLeft02_NoSkyblue_NoGreen_NoYellow(self.ctx)
-        if self.user_value(key='RelicMobGreyDie') >= 1:
+        if self.user_value(key='RelicMobGreyDie') == 1:
             return RelicLeft02_NoSkyblue_NoYellow_NoGrey(self.ctx)
-        if self.user_value(key='ExtraEventOff') >= 1:
+        if self.user_value(key='ExtraEventOff') == 1:
             return Quit(self.ctx)
 
     def on_exit(self) -> None:
@@ -307,13 +307,13 @@ class RelicLeft03_NoSkyblue_NoYellow(trigger_api.Trigger):
 
 class RelicLeft03_NoSkyblue_NoGrey(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='RelicMobRedDie') >= 1:
+        if self.user_value(key='RelicMobRedDie') == 1:
             return RelicLeft02_NoRed_NoSkyblue_NoGrey(self.ctx)
-        if self.user_value(key='RelicMobGreenDie') >= 1:
+        if self.user_value(key='RelicMobGreenDie') == 1:
             return RelicLeft02_NoSkyblue_NoGreen_NoGrey(self.ctx)
-        if self.user_value(key='RelicMobYellowDie') >= 1:
+        if self.user_value(key='RelicMobYellowDie') == 1:
             return RelicLeft02_NoSkyblue_NoYellow_NoGrey(self.ctx)
-        if self.user_value(key='ExtraEventOff') >= 1:
+        if self.user_value(key='ExtraEventOff') == 1:
             return Quit(self.ctx)
 
     def on_exit(self) -> None:
@@ -326,13 +326,13 @@ class RelicLeft03_NoSkyblue_NoGrey(trigger_api.Trigger):
 
 class RelicLeft03_NoGreen_NoYellow(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='RelicMobRedDie') >= 1:
+        if self.user_value(key='RelicMobRedDie') == 1:
             return RelicLeft02_NoRed_NoGreen_NoYellow(self.ctx)
-        if self.user_value(key='RelicMobSkyblueDie') >= 1:
+        if self.user_value(key='RelicMobSkyblueDie') == 1:
             return RelicLeft02_NoSkyblue_NoGreen_NoYellow(self.ctx)
-        if self.user_value(key='RelicMobGreyDie') >= 1:
+        if self.user_value(key='RelicMobGreyDie') == 1:
             return RelicLeft02_NoGreen_NoYellow_NoGrey(self.ctx)
-        if self.user_value(key='ExtraEventOff') >= 1:
+        if self.user_value(key='ExtraEventOff') == 1:
             return Quit(self.ctx)
 
     def on_exit(self) -> None:
@@ -345,13 +345,13 @@ class RelicLeft03_NoGreen_NoYellow(trigger_api.Trigger):
 
 class RelicLeft03_NoGreen_NoGrey(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='RelicMobRedDie') >= 1:
+        if self.user_value(key='RelicMobRedDie') == 1:
             return RelicLeft02_NoRed_NoGreen_NoGrey(self.ctx)
-        if self.user_value(key='RelicMobSkyblueDie') >= 1:
+        if self.user_value(key='RelicMobSkyblueDie') == 1:
             return RelicLeft02_NoSkyblue_NoGreen_NoGrey(self.ctx)
-        if self.user_value(key='RelicMobYellowDie') >= 1:
+        if self.user_value(key='RelicMobYellowDie') == 1:
             return RelicLeft02_NoGreen_NoYellow_NoGrey(self.ctx)
-        if self.user_value(key='ExtraEventOff') >= 1:
+        if self.user_value(key='ExtraEventOff') == 1:
             return Quit(self.ctx)
 
     def on_exit(self) -> None:
@@ -364,13 +364,13 @@ class RelicLeft03_NoGreen_NoGrey(trigger_api.Trigger):
 
 class RelicLeft03_NoYellow_NoGrey(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='RelicMobRedDie') >= 1:
+        if self.user_value(key='RelicMobRedDie') == 1:
             return RelicLeft02_NoRed_NoYellow_NoGrey(self.ctx)
-        if self.user_value(key='RelicMobSkyblueDie') >= 1:
+        if self.user_value(key='RelicMobSkyblueDie') == 1:
             return RelicLeft02_NoSkyblue_NoYellow_NoGrey(self.ctx)
-        if self.user_value(key='RelicMobGreenDie') >= 1:
+        if self.user_value(key='RelicMobGreenDie') == 1:
             return RelicLeft02_NoGreen_NoYellow_NoGrey(self.ctx)
-        if self.user_value(key='ExtraEventOff') >= 1:
+        if self.user_value(key='ExtraEventOff') == 1:
             return Quit(self.ctx)
 
     def on_exit(self) -> None:
@@ -387,11 +387,11 @@ class RelicLeft02_NoRed_NoSkyblue_NoGreen(trigger_api.Trigger):
         self.write_log(log_name='Survival', event='MokumKill_03') # 모쿰 이벤트 로그 - 2마리 남음
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='RelicMobYellowDie') >= 1:
+        if self.user_value(key='RelicMobYellowDie') == 1:
             return RelicLeft01_OnlyGrey(self.ctx)
-        if self.user_value(key='RelicMobGreyDie') >= 1:
+        if self.user_value(key='RelicMobGreyDie') == 1:
             return RelicLeft01_OnlyYellow(self.ctx)
-        if self.user_value(key='ExtraEventOff') >= 1:
+        if self.user_value(key='ExtraEventOff') == 1:
             return Quit(self.ctx)
 
     def on_exit(self) -> None:
@@ -404,11 +404,11 @@ class RelicLeft02_NoRed_NoSkyblue_NoGreen(trigger_api.Trigger):
 
 class RelicLeft02_NoRed_NoSkyblue_NoYellow(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='RelicMobGreenDie') >= 1:
+        if self.user_value(key='RelicMobGreenDie') == 1:
             return RelicLeft01_OnlyGrey(self.ctx)
-        if self.user_value(key='RelicMobGreyDie') >= 1:
+        if self.user_value(key='RelicMobGreyDie') == 1:
             return RelicLeft01_OnlyGreen(self.ctx)
-        if self.user_value(key='ExtraEventOff') >= 1:
+        if self.user_value(key='ExtraEventOff') == 1:
             return Quit(self.ctx)
 
     def on_exit(self) -> None:
@@ -421,11 +421,11 @@ class RelicLeft02_NoRed_NoSkyblue_NoYellow(trigger_api.Trigger):
 
 class RelicLeft02_NoRed_NoSkyblue_NoGrey(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='RelicMobGreenDie') >= 1:
+        if self.user_value(key='RelicMobGreenDie') == 1:
             return RelicLeft01_OnlyYellow(self.ctx)
-        if self.user_value(key='RelicMobYellowDie') >= 1:
+        if self.user_value(key='RelicMobYellowDie') == 1:
             return RelicLeft01_OnlyGreen(self.ctx)
-        if self.user_value(key='ExtraEventOff') >= 1:
+        if self.user_value(key='ExtraEventOff') == 1:
             return Quit(self.ctx)
 
     def on_exit(self) -> None:
@@ -438,11 +438,11 @@ class RelicLeft02_NoRed_NoSkyblue_NoGrey(trigger_api.Trigger):
 
 class RelicLeft02_NoRed_NoGreen_NoYellow(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='RelicMobSkyblueDie') >= 1:
+        if self.user_value(key='RelicMobSkyblueDie') == 1:
             return RelicLeft01_OnlyGrey(self.ctx)
-        if self.user_value(key='RelicMobGreyDie') >= 1:
+        if self.user_value(key='RelicMobGreyDie') == 1:
             return RelicLeft01_OnlySkyblue(self.ctx)
-        if self.user_value(key='ExtraEventOff') >= 1:
+        if self.user_value(key='ExtraEventOff') == 1:
             return Quit(self.ctx)
 
     def on_exit(self) -> None:
@@ -455,11 +455,11 @@ class RelicLeft02_NoRed_NoGreen_NoYellow(trigger_api.Trigger):
 
 class RelicLeft02_NoRed_NoGreen_NoGrey(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='RelicMobSkyblueDie') >= 1:
+        if self.user_value(key='RelicMobSkyblueDie') == 1:
             return RelicLeft01_OnlyYellow(self.ctx)
-        if self.user_value(key='RelicMobYellowDie') >= 1:
+        if self.user_value(key='RelicMobYellowDie') == 1:
             return RelicLeft01_OnlySkyblue(self.ctx)
-        if self.user_value(key='ExtraEventOff') >= 1:
+        if self.user_value(key='ExtraEventOff') == 1:
             return Quit(self.ctx)
 
     def on_exit(self) -> None:
@@ -472,11 +472,11 @@ class RelicLeft02_NoRed_NoGreen_NoGrey(trigger_api.Trigger):
 
 class RelicLeft02_NoRed_NoYellow_NoGrey(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='RelicMobSkyblueDie') >= 1:
+        if self.user_value(key='RelicMobSkyblueDie') == 1:
             return RelicLeft01_OnlyGreen(self.ctx)
-        if self.user_value(key='RelicMobGreenDie') >= 1:
+        if self.user_value(key='RelicMobGreenDie') == 1:
             return RelicLeft01_OnlySkyblue(self.ctx)
-        if self.user_value(key='ExtraEventOff') >= 1:
+        if self.user_value(key='ExtraEventOff') == 1:
             return Quit(self.ctx)
 
     def on_exit(self) -> None:
@@ -489,11 +489,11 @@ class RelicLeft02_NoRed_NoYellow_NoGrey(trigger_api.Trigger):
 
 class RelicLeft02_NoSkyblue_NoGreen_NoYellow(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='RelicMobRedDie') >= 1:
+        if self.user_value(key='RelicMobRedDie') == 1:
             return RelicLeft01_OnlyGrey(self.ctx)
-        if self.user_value(key='RelicMobGreyDie') >= 1:
+        if self.user_value(key='RelicMobGreyDie') == 1:
             return RelicLeft01_OnlyRed(self.ctx)
-        if self.user_value(key='ExtraEventOff') >= 1:
+        if self.user_value(key='ExtraEventOff') == 1:
             return Quit(self.ctx)
 
     def on_exit(self) -> None:
@@ -506,11 +506,11 @@ class RelicLeft02_NoSkyblue_NoGreen_NoYellow(trigger_api.Trigger):
 
 class RelicLeft02_NoSkyblue_NoGreen_NoGrey(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='RelicMobRedDie') >= 1:
+        if self.user_value(key='RelicMobRedDie') == 1:
             return RelicLeft01_OnlyYellow(self.ctx)
-        if self.user_value(key='RelicMobYellowDie') >= 1:
+        if self.user_value(key='RelicMobYellowDie') == 1:
             return RelicLeft01_OnlyRed(self.ctx)
-        if self.user_value(key='ExtraEventOff') >= 1:
+        if self.user_value(key='ExtraEventOff') == 1:
             return Quit(self.ctx)
 
     def on_exit(self) -> None:
@@ -523,11 +523,11 @@ class RelicLeft02_NoSkyblue_NoGreen_NoGrey(trigger_api.Trigger):
 
 class RelicLeft02_NoSkyblue_NoYellow_NoGrey(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='RelicMobRedDie') >= 1:
+        if self.user_value(key='RelicMobRedDie') == 1:
             return RelicLeft01_OnlyGreen(self.ctx)
-        if self.user_value(key='RelicMobGreenDie') >= 1:
+        if self.user_value(key='RelicMobGreenDie') == 1:
             return RelicLeft01_OnlyRed(self.ctx)
-        if self.user_value(key='ExtraEventOff') >= 1:
+        if self.user_value(key='ExtraEventOff') == 1:
             return Quit(self.ctx)
 
     def on_exit(self) -> None:
@@ -540,11 +540,11 @@ class RelicLeft02_NoSkyblue_NoYellow_NoGrey(trigger_api.Trigger):
 
 class RelicLeft02_NoGreen_NoYellow_NoGrey(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='RelicMobRedDie') >= 1:
+        if self.user_value(key='RelicMobRedDie') == 1:
             return RelicLeft01_OnlySkyblue(self.ctx)
-        if self.user_value(key='RelicMobSkyblueDie') >= 1:
+        if self.user_value(key='RelicMobSkyblueDie') == 1:
             return RelicLeft01_OnlyRed(self.ctx)
-        if self.user_value(key='ExtraEventOff') >= 1:
+        if self.user_value(key='ExtraEventOff') == 1:
             return Quit(self.ctx)
 
     def on_exit(self) -> None:
@@ -561,9 +561,9 @@ class RelicLeft01_OnlyRed(trigger_api.Trigger):
         self.write_log(log_name='Survival', event='MokumKill_04') # 모쿰 이벤트 로그 - 1마리 남음
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='RelicMobRedDie') >= 1:
+        if self.user_value(key='RelicMobRedDie') == 1:
             return ExtraEventRandomDelay01(self.ctx)
-        if self.user_value(key='ExtraEventOff') >= 1:
+        if self.user_value(key='ExtraEventOff') == 1:
             return Quit(self.ctx)
 
     def on_exit(self) -> None:
@@ -576,9 +576,9 @@ class RelicLeft01_OnlyRed(trigger_api.Trigger):
 
 class RelicLeft01_OnlySkyblue(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='RelicMobSkyblueDie') >= 1:
+        if self.user_value(key='RelicMobSkyblueDie') == 1:
             return ExtraEventRandomDelay01(self.ctx)
-        if self.user_value(key='ExtraEventOff') >= 1:
+        if self.user_value(key='ExtraEventOff') == 1:
             return Quit(self.ctx)
 
     def on_exit(self) -> None:
@@ -591,9 +591,9 @@ class RelicLeft01_OnlySkyblue(trigger_api.Trigger):
 
 class RelicLeft01_OnlyGreen(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='RelicMobGreenDie') >= 1:
+        if self.user_value(key='RelicMobGreenDie') == 1:
             return ExtraEventRandomDelay01(self.ctx)
-        if self.user_value(key='ExtraEventOff') >= 1:
+        if self.user_value(key='ExtraEventOff') == 1:
             return Quit(self.ctx)
 
     def on_exit(self) -> None:
@@ -606,9 +606,9 @@ class RelicLeft01_OnlyGreen(trigger_api.Trigger):
 
 class RelicLeft01_OnlyYellow(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='RelicMobYellowDie') >= 1:
+        if self.user_value(key='RelicMobYellowDie') == 1:
             return ExtraEventRandomDelay01(self.ctx)
-        if self.user_value(key='ExtraEventOff') >= 1:
+        if self.user_value(key='ExtraEventOff') == 1:
             return Quit(self.ctx)
 
     def on_exit(self) -> None:
@@ -621,9 +621,9 @@ class RelicLeft01_OnlyYellow(trigger_api.Trigger):
 
 class RelicLeft01_OnlyGrey(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='RelicMobGreyDie') >= 1:
+        if self.user_value(key='RelicMobGreyDie') == 1:
             return ExtraEventRandomDelay01(self.ctx)
-        if self.user_value(key='ExtraEventOff') >= 1:
+        if self.user_value(key='ExtraEventOff') == 1:
             return Quit(self.ctx)
 
     def on_exit(self) -> None:
@@ -638,7 +638,7 @@ class ExtraEventRandomDelay01(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=6000):
             return ExtraEventRandomDelay02(self.ctx)
-        if self.user_value(key='ExtraEventOff') >= 1:
+        if self.user_value(key='ExtraEventOff') == 1:
             return Quit(self.ctx)
 
 
@@ -650,7 +650,7 @@ class ExtraEventRandomDelay02(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):
             return ExtraEventRandomDelay03(self.ctx)
-        if self.user_value(key='ExtraEventOff') >= 1:
+        if self.user_value(key='ExtraEventOff') == 1:
             return Quit(self.ctx)
 
 
@@ -663,7 +663,7 @@ class ExtraEventRandomDelay03(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):
             return ExtraEventRandom(self.ctx) # ExtraEventRandom
-        if self.user_value(key='ExtraEventOff') >= 1:
+        if self.user_value(key='ExtraEventOff') == 1:
             return Quit(self.ctx)
 
 
@@ -679,7 +679,7 @@ class ExtraEventRandom(trigger_api.Trigger):
             return ExtraEvent04_SkillCoolDownTimeReduce(self.ctx)
         if self.random_condition(weight=20.0):
             return ExtraEvent05_NoMoreFarming(self.ctx)
-        if self.user_value(key='ExtraEventOff') >= 1:
+        if self.user_value(key='ExtraEventOff') == 1:
             return Quit(self.ctx)
 
 
@@ -692,7 +692,7 @@ class ExtraEvent01_Fast(trigger_api.Trigger):
         self.set_gravity(gravity=30.0)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='ExtraEventOff') >= 1:
+        if self.user_value(key='ExtraEventOff') == 1:
             return Quit(self.ctx)
 
 
@@ -705,7 +705,7 @@ class ExtraEvent02_MapHack(trigger_api.Trigger):
         self.add_buff(box_ids=[9000], skill_id=71000052, level=2, ignore_player=False, is_skill_set=False)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='ExtraEventOff') >= 1:
+        if self.user_value(key='ExtraEventOff') == 1:
             return Quit(self.ctx)
 
 
@@ -717,7 +717,7 @@ class ExtraEvent03_RobotSpawn(trigger_api.Trigger):
         self.set_user_value(trigger_id=10, key='BattleRidingOnCount', value=1)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='ExtraEventOff') >= 1:
+        if self.user_value(key='ExtraEventOff') == 1:
             return Quit(self.ctx)
 
     def on_exit(self) -> None:
@@ -732,7 +732,7 @@ class ExtraEvent04_SkillCoolDownTimeReduce(trigger_api.Trigger):
         self.add_buff(box_ids=[9000], skill_id=71000076, level=1, ignore_player=False, is_skill_set=False)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='ExtraEventOff') >= 1:
+        if self.user_value(key='ExtraEventOff') == 1:
             return Quit(self.ctx)
 
 
@@ -752,7 +752,7 @@ class ExtraEvent05_NoMoreFarming(trigger_api.Trigger):
         self.set_user_value(trigger_id=9, key='NormaBoxOff', value=1)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='ExtraEventOff') >= 1:
+        if self.user_value(key='ExtraEventOff') == 1:
             return Quit(self.ctx)
 
 

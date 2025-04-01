@@ -9,33 +9,33 @@ class Wait(trigger_api.Trigger):
         self.set_mesh(trigger_ids=[5230], visible=True) # 23 / Ground inner
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Box23Check') >= 0:
+        if self.user_value(key='Box23Check') == 0:
             return Sensor0(self.ctx)
-        if self.user_value(key='Box23Check') >= 1:
+        if self.user_value(key='Box23Check') == 1:
             return Sensor1(self.ctx)
-        if self.user_value(key='Box23Check') >= 2:
+        if self.user_value(key='Box23Check') == 2:
             return Sensor2(self.ctx)
-        if self.user_value(key='Box23Check') >= 3:
+        if self.user_value(key='Box23Check') == 3:
             return Sensor3(self.ctx)
-        if self.user_value(key='Box23Check') >= 4:
+        if self.user_value(key='Box23Check') == 4:
             return Sensor4(self.ctx)
-        if self.user_value(key='Box23Check') >= 5:
+        if self.user_value(key='Box23Check') == 5:
             return Sensor5(self.ctx)
-        if self.user_value(key='Box23Check') >= 7:
+        if self.user_value(key='Box23Check') == 7:
             return Sensor7(self.ctx)
-        if self.user_value(key='Box23Check') >= 8:
+        if self.user_value(key='Box23Check') == 8:
             return Sensor8(self.ctx)
-        if self.user_value(key='Box23Check') >= 9:
+        if self.user_value(key='Box23Check') == 9:
             return Sensor9(self.ctx)
-        if self.user_value(key='Box23Check') >= 6:
+        if self.user_value(key='Box23Check') == 6:
             return Sensor10(self.ctx)
-        if self.user_value(key='Box23Check') >= 15:
+        if self.user_value(key='Box23Check') == 15:
             return Sensor15(self.ctx)
-        if self.user_value(key='Box23Check') >= 20:
+        if self.user_value(key='Box23Check') == 20:
             return Sensor20(self.ctx)
-        if self.user_value(key='Box23Check') >= 25:
+        if self.user_value(key='Box23Check') == 25:
             return Sensor25(self.ctx)
-        if self.user_value(key='Box23Check') >= 30:
+        if self.user_value(key='Box23Check') == 30:
             return Sensor30(self.ctx)
 
 

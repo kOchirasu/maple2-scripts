@@ -4,7 +4,7 @@ import trigger_api
 
 class 체력조건(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='respawn_phase_4') >= 1:
+        if self.user_value(key='respawn_phase_4') == 1:
             return 전투페이즈(self.ctx)
 
 

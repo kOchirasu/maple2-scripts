@@ -11,7 +11,7 @@ class Ready(trigger_api.Trigger):
 
 class 전투시작(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='ItemNotice01') >= 1:
+        if self.user_value(key='ItemNotice01') == 1:
             # 인페르녹이 최초 등장하여 광역기폭발 공격할 때 이 신호를 보냄
             return 필수아이템01(self.ctx)
 
@@ -31,7 +31,7 @@ class 필수아이템01(trigger_api.Trigger):
 
 class 다음대기(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='ItemNotice02') >= 1:
+        if self.user_value(key='ItemNotice02') == 1:
             # 인페르녹이 광역공격 할때 이 신호를 보냄
             return 필수아이템02(self.ctx)
 

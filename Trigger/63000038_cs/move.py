@@ -8,7 +8,7 @@ class 대기(trigger_api.Trigger):
         self.set_interact_object(trigger_ids=[10001024], state=0)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Setlever') >= 1:
+        if self.user_value(key='Setlever') == 1:
             return 레버반응대기(self.ctx)
 
 

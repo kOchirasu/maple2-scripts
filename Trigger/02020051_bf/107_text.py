@@ -4,7 +4,7 @@ import trigger_api
 
 class 가이드시작(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Text') >= 1:
+        if self.user_value(key='Text') == 1:
             return 대기(self.ctx)
 
 
@@ -25,7 +25,7 @@ class 가이드_1(trigger_api.Trigger):
 
 class 종료(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Text') >= 2:
+        if self.user_value(key='Text') == 2:
             return 가이드시작(self.ctx)
 
 

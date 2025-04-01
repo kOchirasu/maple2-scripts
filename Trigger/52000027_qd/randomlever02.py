@@ -20,7 +20,7 @@ class 대기(trigger_api.Trigger):
 # 첫 번째 레버 정답 패턴
 class 번패턴1(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='SetLever') >= 1:
+        if self.user_value(key='SetLever') == 1:
             return 번패턴_모든레버켜기1(self.ctx)
 
 
@@ -145,7 +145,7 @@ class 번패턴_3번레버_마지막도전1(trigger_api.Trigger):
 # 두 번째 레버 정답 패턴
 class 번패턴2(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='SetLever') >= 1:
+        if self.user_value(key='SetLever') == 1:
             return 번패턴_모든레버켜기2(self.ctx)
 
 
@@ -270,7 +270,7 @@ class 번패턴_3번레버_마지막도전2(trigger_api.Trigger):
 # 세 번째 레버 정답 패턴
 class 번패턴3(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='SetLever') >= 1:
+        if self.user_value(key='SetLever') == 1:
             return 번패턴_모든레버켜기3(self.ctx)
 
 

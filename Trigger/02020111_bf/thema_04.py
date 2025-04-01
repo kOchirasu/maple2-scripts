@@ -19,7 +19,7 @@ class 몬스터등장(trigger_api.Trigger):
         self.spawn_monster(spawn_ids=[171,172,173,174,175,176])
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='monster_die') >= 1:
+        if self.user_value(key='monster_die') == 1:
             return 몬스터소멸(self.ctx)
         if self.monster_dead(spawn_ids=[171,172,173,174,175,176]):
             return 대기(self.ctx)
@@ -27,7 +27,7 @@ class 몬스터등장(trigger_api.Trigger):
 
 class 대기(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='monster_die') >= 1:
+        if self.user_value(key='monster_die') == 1:
             return 몬스터소멸(self.ctx)
         if self.wait_tick(wait_tick=10000):
             return 몬스터등장(self.ctx)
@@ -38,7 +38,7 @@ class 몬스터소멸(trigger_api.Trigger):
         self.destroy_monster(spawn_ids=[171,172,173,174,175,176])
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='SkillBreakFail') >= 1:
+        if self.user_value(key='SkillBreakFail') == 1:
             return 시작(self.ctx)
 
 

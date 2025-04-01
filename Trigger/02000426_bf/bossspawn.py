@@ -50,10 +50,10 @@ class 쉬운난이도보스등장(trigger_api.Trigger):
 
 class 대기(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='ZakumBodyAppearance') >= 1:
+        if self.user_value(key='ZakumBodyAppearance') == 1:
             # AI_ZakumBrownImitation.xml 로 부터 신호 받아서 자쿰몸체를 스폰시키기
             return 자쿰몸체등장(self.ctx)
-        if self.user_value(key='ZakumDungeonEnd') >= 1:
+        if self.user_value(key='ZakumDungeonEnd') == 1:
             return 종료딜레이(self.ctx)
         if self.dungeon_timeout():
             return 던전실패(self.ctx)

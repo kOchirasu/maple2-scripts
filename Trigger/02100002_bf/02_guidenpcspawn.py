@@ -8,7 +8,7 @@ class Wait(trigger_api.Trigger):
         self.destroy_monster(spawn_ids=[109])
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='GuideNpcSpawn') >= 1:
+        if self.user_value(key='GuideNpcSpawn') == 1:
             return NpcSpawn(self.ctx)
 
 

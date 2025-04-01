@@ -4,13 +4,13 @@ import trigger_api
 
 class 감지(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Boss') >= 1:
+        if self.user_value(key='Boss') == 1:
             return 페이즈1(self.ctx)
 
 
 class 페이즈1(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='SerihaAI') >= 1:
+        if self.user_value(key='SerihaAI') == 1:
             # <AI에서 신호 쏴줌(AI_Seriha.xml)>
             return 도약(self.ctx)
 

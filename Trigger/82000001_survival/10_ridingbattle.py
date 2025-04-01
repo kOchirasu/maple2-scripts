@@ -10,7 +10,7 @@ class Setting(trigger_api.Trigger):
         self.set_user_value(key='BattleRidingOff', value=0)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='BattleRidingOnCount') >= 1:
+        if self.user_value(key='BattleRidingOnCount') == 1:
             return OnOffRandom(self.ctx)
 
 
@@ -24,7 +24,7 @@ class OnOffRandom(trigger_api.Trigger):
 
 class BattleRidingOff(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='BattleRidingOff') >= 1:
+        if self.user_value(key='BattleRidingOff') == 1:
             return Quit(self.ctx)
 
 
@@ -32,7 +32,7 @@ class BattleRidingOn(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=1000):
             return DelayRandom(self.ctx)
-        if self.user_value(key='BattleRidingOff') >= 1:
+        if self.user_value(key='BattleRidingOff') == 1:
             return Quit(self.ctx)
 
 
@@ -60,7 +60,7 @@ class Delay_5min00sec(trigger_api.Trigger):
             # 5분 300초 300000 ms
             # test용 10배 빠름 100000
             return RidingSpawn(self.ctx)
-        if self.user_value(key='BattleRidingOff') >= 1:
+        if self.user_value(key='BattleRidingOff') == 1:
             return Quit(self.ctx)
 
 
@@ -70,7 +70,7 @@ class Delay_5min20sec(trigger_api.Trigger):
             # 320초 320000 ms
             # test용 10배 빠름 106000
             return RidingSpawn(self.ctx)
-        if self.user_value(key='BattleRidingOff') >= 1:
+        if self.user_value(key='BattleRidingOff') == 1:
             return Quit(self.ctx)
 
 
@@ -80,7 +80,7 @@ class Delay_5min40sec(trigger_api.Trigger):
             # 340초 340000 ms
             # test용 10배 빠름 113000
             return RidingSpawn(self.ctx)
-        if self.user_value(key='BattleRidingOff') >= 1:
+        if self.user_value(key='BattleRidingOff') == 1:
             return Quit(self.ctx)
 
 
@@ -90,7 +90,7 @@ class Delay_6min00sec(trigger_api.Trigger):
             # 6분 360초 360000 ms
             # test용 10배 빠름 120000
             return RidingSpawn(self.ctx)
-        if self.user_value(key='BattleRidingOff') >= 1:
+        if self.user_value(key='BattleRidingOff') == 1:
             return Quit(self.ctx)
 
 
@@ -100,7 +100,7 @@ class Delay_6min20sec(trigger_api.Trigger):
             # 380초 380000 ms
             # test용 10배 빠름 126000
             return RidingSpawn(self.ctx)
-        if self.user_value(key='BattleRidingOff') >= 1:
+        if self.user_value(key='BattleRidingOff') == 1:
             return Quit(self.ctx)
 
 
@@ -110,7 +110,7 @@ class Delay_6min40sec(trigger_api.Trigger):
             # 400초 400000 ms
             # test용 10배 빠름 133000
             return RidingSpawn(self.ctx)
-        if self.user_value(key='BattleRidingOff') >= 1:
+        if self.user_value(key='BattleRidingOff') == 1:
             return Quit(self.ctx)
 
 
@@ -120,7 +120,7 @@ class Delay_7min00sec(trigger_api.Trigger):
             # 7분 420초 420000 ms
             # test용 10배 빠름 140000
             return RidingSpawn(self.ctx)
-        if self.user_value(key='BattleRidingOff') >= 1:
+        if self.user_value(key='BattleRidingOff') == 1:
             return Quit(self.ctx)
 
 
@@ -156,7 +156,7 @@ class RidingSpawn(trigger_api.Trigger):
 
 class RidingSpawn_Extra_none(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='BattleRidingOff') >= 1:
+        if self.user_value(key='BattleRidingOff') == 1:
             return Quit(self.ctx)
 
 
@@ -165,7 +165,7 @@ class RidingSpawn_Extra_north(trigger_api.Trigger):
         self.start_combine_spawn(group_id=[10000338], is_start=True) # riding battle test
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='BattleRidingOff') >= 1:
+        if self.user_value(key='BattleRidingOff') == 1:
             return Quit(self.ctx)
 
 
@@ -174,7 +174,7 @@ class RidingSpawn_Extra_south(trigger_api.Trigger):
         self.start_combine_spawn(group_id=[10000340], is_start=True) # riding battle test
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='BattleRidingOff') >= 1:
+        if self.user_value(key='BattleRidingOff') == 1:
             return Quit(self.ctx)
 
 
@@ -183,7 +183,7 @@ class RidingSpawn_Extra_east(trigger_api.Trigger):
         self.start_combine_spawn(group_id=[10000339], is_start=True) # riding battle test
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='BattleRidingOff') >= 1:
+        if self.user_value(key='BattleRidingOff') == 1:
             return Quit(self.ctx)
 
 
@@ -192,7 +192,7 @@ class RidingSpawn_Extra_west(trigger_api.Trigger):
         self.start_combine_spawn(group_id=[10000341], is_start=True) # riding battle test
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='BattleRidingOff') >= 1:
+        if self.user_value(key='BattleRidingOff') == 1:
             return Quit(self.ctx)
 
 
@@ -201,7 +201,7 @@ class RidingSpawn_Extra_northsouth(trigger_api.Trigger):
         self.start_combine_spawn(group_id=[10000338,10000340], is_start=True) # riding battle test
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='BattleRidingOff') >= 1:
+        if self.user_value(key='BattleRidingOff') == 1:
             return Quit(self.ctx)
 
 
@@ -210,7 +210,7 @@ class RidingSpawn_Extra_northeast(trigger_api.Trigger):
         self.start_combine_spawn(group_id=[10000338,10000339], is_start=True) # riding battle test
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='BattleRidingOff') >= 1:
+        if self.user_value(key='BattleRidingOff') == 1:
             return Quit(self.ctx)
 
 
@@ -219,7 +219,7 @@ class RidingSpawn_Extra_northwest(trigger_api.Trigger):
         self.start_combine_spawn(group_id=[10000338,10000341], is_start=True) # riding battle test
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='BattleRidingOff') >= 1:
+        if self.user_value(key='BattleRidingOff') == 1:
             return Quit(self.ctx)
 
 
@@ -228,7 +228,7 @@ class RidingSpawn_Extra_eastwest(trigger_api.Trigger):
         self.start_combine_spawn(group_id=[10000339,10000341], is_start=True) # riding battle test
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='BattleRidingOff') >= 1:
+        if self.user_value(key='BattleRidingOff') == 1:
             return Quit(self.ctx)
 
 
@@ -237,7 +237,7 @@ class RidingSpawn_Extra_southeast(trigger_api.Trigger):
         self.start_combine_spawn(group_id=[10000339,10000340], is_start=True) # riding battle test
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='BattleRidingOff') >= 1:
+        if self.user_value(key='BattleRidingOff') == 1:
             return Quit(self.ctx)
 
 
@@ -246,7 +246,7 @@ class RidingSpawn_Extra_southwest(trigger_api.Trigger):
         self.start_combine_spawn(group_id=[10000341,10000340], is_start=True) # riding battle test
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='BattleRidingOff') >= 1:
+        if self.user_value(key='BattleRidingOff') == 1:
             return Quit(self.ctx)
 
 

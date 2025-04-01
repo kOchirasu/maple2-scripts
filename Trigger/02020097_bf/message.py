@@ -15,7 +15,7 @@ class 대기상태(trigger_api.Trigger):
         if self.user_detected(box_ids=[12]):
             # MS2TriggerBox   TriggerObjectID = 12, 이 트리거 박스 안에 플레이어가 한명이라도 체크 되면        12은 2페이지 전투판 진입로에 설치된 영역임
             return 경비병도움안내(self.ctx)
-        if self.user_value(key='StairsOk2nd') >= 1:
+        if self.user_value(key='StairsOk2nd') == 1:
             return 트리거종료(self.ctx)
 
 

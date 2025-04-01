@@ -5,7 +5,7 @@ from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 class 대기(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Plant') >= 1:
+        if self.user_value(key='Plant') == 1:
             return 몬스터소환(self.ctx)
         if self.monster_dead(spawn_ids=[101]):
             return 종료(self.ctx)

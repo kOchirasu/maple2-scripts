@@ -10,7 +10,7 @@ class 시작(trigger_api.Trigger):
 
 class 전투시작(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='summon_3_3') >= 1:
+        if self.user_value(key='summon_3_3') == 1:
             return 버프(self.ctx)
 
 

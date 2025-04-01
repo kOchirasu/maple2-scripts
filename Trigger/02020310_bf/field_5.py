@@ -11,7 +11,7 @@ class 대기(trigger_api.Trigger):
         self.set_interact_object(trigger_ids=[12000403], state=0)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Block') >= 1:
+        if self.user_value(key='Block') == 1:
             self.set_user_value(trigger_id=900006, key='Block', value=0)
             return Archeon_Ready(self.ctx)
 

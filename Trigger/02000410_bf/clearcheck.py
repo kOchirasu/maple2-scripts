@@ -14,7 +14,7 @@ class 전투시작(trigger_api.Trigger):
         if self.dungeon_play_time() >= 420:
             # 플레이 시간이 7분 되면, 전멸체크 로직 부분으로 넘어가기
             return 지금부터파티전멸체크(self.ctx)
-        if self.user_value(key='ThirdPhase') >= 1:
+        if self.user_value(key='ThirdPhase') == 1:
             # 2페이즈 전투 다 끝나고 , 파괴되어진 AI_AirshipBalrogCrimsonBroken.xml 인페르녹 전함에게   ThirdPhase = 1 신호를 받을때까지 여기서 대기, 즉 AI_AirshipBalrogCrimsonBroken.xml 에서 보냄
             return 지금부터파티전멸체크(self.ctx)
         if self.dungeon_state() == 'Fail':

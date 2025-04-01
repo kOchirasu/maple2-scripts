@@ -9,7 +9,7 @@ class Wait(trigger_api.Trigger):
         self.set_user_value(key='TrainMove', value=0)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='TrainMove') >= 1:
+        if self.user_value(key='TrainMove') == 1:
             return FourthPhaseChase01(self.ctx)
 
     def on_exit(self) -> None:

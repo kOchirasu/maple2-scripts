@@ -23,7 +23,7 @@ class 기본셋팅(trigger_api.Trigger):
 
 class 트리거작동01(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='BuffDeleteOk') >= 1:
+        if self.user_value(key='BuffDeleteOk') == 1:
             # 보스가 버프 사용 행동을 한 다음 바로, 이 트리거에게 BuffDeleteOk= 1 셋팅 신호를 보냄, (AI_SandstoneGiantBlueShine.xml로 )
             return 트리거작동02대기중(self.ctx)
 
@@ -36,7 +36,7 @@ class 트리거작동02대기중(trigger_api.Trigger):
 
 class 트리거작동02(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='MonsterMany') >= 0:
+        if self.user_value(key='MonsterMany') == 0:
             # 소환몹이 다 죽어 이 변수가 0되면 버프 제거 단계로 가기
             return 버프제거(self.ctx)
 

@@ -27,7 +27,7 @@ class 대기(trigger_api.Trigger):
         self.set_actor(trigger_id=222)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='EventStart') >= 1:
+        if self.user_value(key='EventStart') == 1:
             return 이벤트조건(self.ctx)
 
 

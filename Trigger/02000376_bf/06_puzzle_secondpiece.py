@@ -22,25 +22,25 @@ class Wait(trigger_api.Trigger):
         self.set_mesh(trigger_ids=[3210,3211,3212,3213,3214,3215,3216,3217,3218,3219]) # Pattern_LightOn
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='PickSecondPieceExceptA01') >= 1:
+        if self.user_value(key='PickSecondPieceExceptA01') == 1:
             return RandomPick_ExceptA01(self.ctx)
-        if self.user_value(key='PickSecondPieceExceptA02') >= 1:
+        if self.user_value(key='PickSecondPieceExceptA02') == 1:
             return RandomPick_ExceptA02(self.ctx)
-        if self.user_value(key='PickSecondPieceExceptA03') >= 1:
+        if self.user_value(key='PickSecondPieceExceptA03') == 1:
             return RandomPick_ExceptA03(self.ctx)
-        if self.user_value(key='PickSecondPieceExceptB01') >= 1:
+        if self.user_value(key='PickSecondPieceExceptB01') == 1:
             return RandomPick_ExceptB01(self.ctx)
-        if self.user_value(key='PickSecondPieceExceptB02') >= 1:
+        if self.user_value(key='PickSecondPieceExceptB02') == 1:
             return RandomPick_ExceptB02(self.ctx)
-        if self.user_value(key='PickSecondPieceExceptC01') >= 1:
+        if self.user_value(key='PickSecondPieceExceptC01') == 1:
             return RandomPick_ExceptC01(self.ctx)
-        if self.user_value(key='PickSecondPieceExceptD01') >= 1:
+        if self.user_value(key='PickSecondPieceExceptD01') == 1:
             return RandomPick_ExceptD01(self.ctx)
-        if self.user_value(key='PickSecondPieceExceptD02') >= 1:
+        if self.user_value(key='PickSecondPieceExceptD02') == 1:
             return RandomPick_ExceptD02(self.ctx)
-        if self.user_value(key='PickSecondPieceExceptE01') >= 1:
+        if self.user_value(key='PickSecondPieceExceptE01') == 1:
             return RandomPick_ExceptE01(self.ctx)
-        if self.user_value(key='PickSecondPieceExceptE02') >= 1:
+        if self.user_value(key='PickSecondPieceExceptE02') == 1:
             return RandomPick_ExceptE02(self.ctx)
 
 
@@ -270,7 +270,7 @@ class Pattern01_Pick(trigger_api.Trigger):
         self.set_mesh(trigger_ids=[3200], visible=True) # Pattern_Ground_A01
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='CheckSecondPiece') >= 1:
+        if self.user_value(key='CheckSecondPiece') == 1:
             return Pattern01_Check(self.ctx)
 
 
@@ -292,9 +292,9 @@ class Pattern01_CorrectAnswer(trigger_api.Trigger):
         self.set_mesh(trigger_ids=[3210], visible=True, start_delay=100, fade=5.0) # Pattern_LightOn_A01
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='ResetSecondPiece') >= 1:
+        if self.user_value(key='ResetSecondPiece') == 1:
             return Pattern01_Reset01(self.ctx)
-        if self.user_value(key='LockSecondPiece') >= 1:
+        if self.user_value(key='LockSecondPiece') == 1:
             return Quit(self.ctx)
 
 
@@ -326,7 +326,7 @@ class Pattern01_Reset02(trigger_api.Trigger):
         self.set_mesh(trigger_ids=[3210], start_delay=100, fade=5.0) # Pattern_LightOn_A01
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='CheckSecondPiece') >= 1:
+        if self.user_value(key='CheckSecondPiece') == 1:
             return Pattern01_Check(self.ctx)
 
 
@@ -336,7 +336,7 @@ class Pattern02_Pick(trigger_api.Trigger):
         self.set_mesh(trigger_ids=[3201], visible=True) # Pattern_Ground_A02
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='CheckSecondPiece') >= 1:
+        if self.user_value(key='CheckSecondPiece') == 1:
             return Pattern02_Check(self.ctx)
 
 
@@ -358,9 +358,9 @@ class Pattern02_CorrectAnswer(trigger_api.Trigger):
         self.set_mesh(trigger_ids=[3211], visible=True, start_delay=100, fade=5.0) # Pattern_LightOn_A02
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='ResetSecondPiece') >= 1:
+        if self.user_value(key='ResetSecondPiece') == 1:
             return Pattern02_Reset01(self.ctx)
-        if self.user_value(key='LockSecondPiece') >= 1:
+        if self.user_value(key='LockSecondPiece') == 1:
             return Quit(self.ctx)
 
 
@@ -392,7 +392,7 @@ class Pattern02_Reset02(trigger_api.Trigger):
         self.set_mesh(trigger_ids=[3211], start_delay=100, fade=5.0) # Pattern_LightOn_A02
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='CheckSecondPiece') >= 1:
+        if self.user_value(key='CheckSecondPiece') == 1:
             return Pattern02_Check(self.ctx)
 
 
@@ -402,7 +402,7 @@ class Pattern03_Pick(trigger_api.Trigger):
         self.set_mesh(trigger_ids=[3202], visible=True) # Pattern_Ground_A03
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='CheckSecondPiece') >= 1:
+        if self.user_value(key='CheckSecondPiece') == 1:
             return Pattern03_Check(self.ctx)
 
 
@@ -424,9 +424,9 @@ class Pattern03_CorrectAnswer(trigger_api.Trigger):
         self.set_mesh(trigger_ids=[3212], visible=True, start_delay=100, fade=5.0) # Pattern_LightOn_A03
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='ResetSecondPiece') >= 1:
+        if self.user_value(key='ResetSecondPiece') == 1:
             return Pattern03_Reset01(self.ctx)
-        if self.user_value(key='LockSecondPiece') >= 1:
+        if self.user_value(key='LockSecondPiece') == 1:
             return Quit(self.ctx)
 
 
@@ -458,7 +458,7 @@ class Pattern03_Reset02(trigger_api.Trigger):
         self.set_mesh(trigger_ids=[3212], start_delay=100, fade=5.0) # Pattern_LightOn_A03
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='CheckSecondPiece') >= 1:
+        if self.user_value(key='CheckSecondPiece') == 1:
             return Pattern03_Check(self.ctx)
 
 
@@ -468,7 +468,7 @@ class Pattern04_Pick(trigger_api.Trigger):
         self.set_mesh(trigger_ids=[3203], visible=True) # Pattern_Ground_B01
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='CheckSecondPiece') >= 1:
+        if self.user_value(key='CheckSecondPiece') == 1:
             return Pattern04_Check(self.ctx)
 
 
@@ -490,9 +490,9 @@ class Pattern04_CorrectAnswer(trigger_api.Trigger):
         self.set_mesh(trigger_ids=[3213], visible=True, start_delay=100, fade=5.0) # Pattern_LightOn_B01
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='ResetSecondPiece') >= 1:
+        if self.user_value(key='ResetSecondPiece') == 1:
             return Pattern04_Reset01(self.ctx)
-        if self.user_value(key='LockSecondPiece') >= 1:
+        if self.user_value(key='LockSecondPiece') == 1:
             return Quit(self.ctx)
 
 
@@ -524,7 +524,7 @@ class Pattern04_Reset02(trigger_api.Trigger):
         self.set_mesh(trigger_ids=[3213], start_delay=100, fade=5.0) # Pattern_LightOn_B01
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='CheckSecondPiece') >= 1:
+        if self.user_value(key='CheckSecondPiece') == 1:
             return Pattern04_Check(self.ctx)
 
 
@@ -534,7 +534,7 @@ class Pattern05_Pick(trigger_api.Trigger):
         self.set_mesh(trigger_ids=[3204], visible=True) # Pattern_Ground_B02
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='CheckSecondPiece') >= 1:
+        if self.user_value(key='CheckSecondPiece') == 1:
             return Pattern05_Check(self.ctx)
 
 
@@ -556,9 +556,9 @@ class Pattern05_CorrectAnswer(trigger_api.Trigger):
         self.set_mesh(trigger_ids=[3214], visible=True, start_delay=100, fade=5.0) # Pattern_LightOn_B02
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='ResetSecondPiece') >= 1:
+        if self.user_value(key='ResetSecondPiece') == 1:
             return Pattern05_Reset01(self.ctx)
-        if self.user_value(key='LockSecondPiece') >= 1:
+        if self.user_value(key='LockSecondPiece') == 1:
             return Quit(self.ctx)
 
 
@@ -590,7 +590,7 @@ class Pattern05_Reset02(trigger_api.Trigger):
         self.set_mesh(trigger_ids=[3214], start_delay=100, fade=5.0) # Pattern_LightOn_B02
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='CheckSecondPiece') >= 1:
+        if self.user_value(key='CheckSecondPiece') == 1:
             return Pattern05_Check(self.ctx)
 
 
@@ -600,7 +600,7 @@ class Pattern06_Pick(trigger_api.Trigger):
         self.set_mesh(trigger_ids=[3205], visible=True) # Pattern_Ground_C01
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='CheckSecondPiece') >= 1:
+        if self.user_value(key='CheckSecondPiece') == 1:
             return Pattern06_Check(self.ctx)
 
 
@@ -622,9 +622,9 @@ class Pattern06_CorrectAnswer(trigger_api.Trigger):
         self.set_mesh(trigger_ids=[3215], visible=True, start_delay=100, fade=5.0) # Pattern_LightOn_C01
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='ResetSecondPiece') >= 1:
+        if self.user_value(key='ResetSecondPiece') == 1:
             return Pattern06_Reset01(self.ctx)
-        if self.user_value(key='LockSecondPiece') >= 1:
+        if self.user_value(key='LockSecondPiece') == 1:
             return Quit(self.ctx)
 
 
@@ -656,7 +656,7 @@ class Pattern06_Reset02(trigger_api.Trigger):
         self.set_mesh(trigger_ids=[3215], start_delay=100, fade=5.0) # Pattern_LightOn_C01
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='CheckSecondPiece') >= 1:
+        if self.user_value(key='CheckSecondPiece') == 1:
             return Pattern06_Check(self.ctx)
 
 
@@ -666,7 +666,7 @@ class Pattern07_Pick(trigger_api.Trigger):
         self.set_mesh(trigger_ids=[3206], visible=True) # Pattern_Ground_D01
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='CheckSecondPiece') >= 1:
+        if self.user_value(key='CheckSecondPiece') == 1:
             return Pattern07_Check(self.ctx)
 
 
@@ -688,9 +688,9 @@ class Pattern07_CorrectAnswer(trigger_api.Trigger):
         self.set_mesh(trigger_ids=[3216], visible=True, start_delay=100, fade=5.0) # Pattern_LightOn_D01
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='ResetSecondPiece') >= 1:
+        if self.user_value(key='ResetSecondPiece') == 1:
             return Pattern07_Reset01(self.ctx)
-        if self.user_value(key='LockSecondPiece') >= 1:
+        if self.user_value(key='LockSecondPiece') == 1:
             return Quit(self.ctx)
 
 
@@ -722,7 +722,7 @@ class Pattern07_Reset02(trigger_api.Trigger):
         self.set_mesh(trigger_ids=[3216], start_delay=100, fade=5.0) # Pattern_LightOn_D01
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='CheckSecondPiece') >= 1:
+        if self.user_value(key='CheckSecondPiece') == 1:
             return Pattern07_Check(self.ctx)
 
 
@@ -732,7 +732,7 @@ class Pattern08_Pick(trigger_api.Trigger):
         self.set_mesh(trigger_ids=[3207], visible=True) # Pattern_Ground_D02
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='CheckSecondPiece') >= 1:
+        if self.user_value(key='CheckSecondPiece') == 1:
             return Pattern08_Check(self.ctx)
 
 
@@ -754,9 +754,9 @@ class Pattern08_CorrectAnswer(trigger_api.Trigger):
         self.set_mesh(trigger_ids=[3217], visible=True, start_delay=100, fade=5.0) # Pattern_LightOn_D02
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='ResetSecondPiece') >= 1:
+        if self.user_value(key='ResetSecondPiece') == 1:
             return Pattern08_Reset01(self.ctx)
-        if self.user_value(key='LockSecondPiece') >= 1:
+        if self.user_value(key='LockSecondPiece') == 1:
             return Quit(self.ctx)
 
 
@@ -788,7 +788,7 @@ class Pattern08_Reset02(trigger_api.Trigger):
         self.set_mesh(trigger_ids=[3217], start_delay=100, fade=5.0) # Pattern_LightOn_D02
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='CheckSecondPiece') >= 1:
+        if self.user_value(key='CheckSecondPiece') == 1:
             return Pattern08_Check(self.ctx)
 
 
@@ -798,7 +798,7 @@ class Pattern09_Pick(trigger_api.Trigger):
         self.set_mesh(trigger_ids=[3208], visible=True) # Pattern_Ground_E01
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='CheckSecondPiece') >= 1:
+        if self.user_value(key='CheckSecondPiece') == 1:
             return Pattern09_Check(self.ctx)
 
 
@@ -820,9 +820,9 @@ class Pattern09_CorrectAnswer(trigger_api.Trigger):
         self.set_mesh(trigger_ids=[3218], visible=True, start_delay=100, fade=5.0) # Pattern_LightOn_E01
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='ResetSecondPiece') >= 1:
+        if self.user_value(key='ResetSecondPiece') == 1:
             return Pattern09_Reset01(self.ctx)
-        if self.user_value(key='LockSecondPiece') >= 1:
+        if self.user_value(key='LockSecondPiece') == 1:
             return Quit(self.ctx)
 
 
@@ -854,7 +854,7 @@ class Pattern09_Reset02(trigger_api.Trigger):
         self.set_mesh(trigger_ids=[3218], start_delay=100, fade=5.0) # Pattern_LightOn_E01
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='CheckSecondPiece') >= 1:
+        if self.user_value(key='CheckSecondPiece') == 1:
             return Pattern09_Check(self.ctx)
 
 
@@ -864,7 +864,7 @@ class Pattern10_Pick(trigger_api.Trigger):
         self.set_mesh(trigger_ids=[3209], visible=True) # Pattern_Ground_E02
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='CheckSecondPiece') >= 1:
+        if self.user_value(key='CheckSecondPiece') == 1:
             return Pattern10_Check(self.ctx)
 
 
@@ -886,9 +886,9 @@ class Pattern10_CorrectAnswer(trigger_api.Trigger):
         self.set_mesh(trigger_ids=[3219], visible=True, start_delay=100, fade=5.0) # Pattern_LightOn_E02
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='ResetSecondPiece') >= 1:
+        if self.user_value(key='ResetSecondPiece') == 1:
             return Pattern10_Reset01(self.ctx)
-        if self.user_value(key='LockSecondPiece') >= 1:
+        if self.user_value(key='LockSecondPiece') == 1:
             return Quit(self.ctx)
 
 
@@ -920,7 +920,7 @@ class Pattern10_Reset02(trigger_api.Trigger):
         self.set_mesh(trigger_ids=[3219], start_delay=100, fade=5.0) # Pattern_LightOn_E02
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='CheckSecondPiece') >= 1:
+        if self.user_value(key='CheckSecondPiece') == 1:
             return Pattern10_Check(self.ctx)
 
 

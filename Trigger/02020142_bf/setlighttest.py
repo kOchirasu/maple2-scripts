@@ -20,9 +20,9 @@ class 트리거시작(trigger_api.Trigger):
         self.set_user_value(key='TestSetLight', value=0)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='TestSetLight') >= 1:
+        if self.user_value(key='TestSetLight') == 1:
             return 어둠조명설정(self.ctx)
-        if self.user_value(key='TestSetLight') >= 2:
+        if self.user_value(key='TestSetLight') == 2:
             return 밝은조명설정(self.ctx)
 
 

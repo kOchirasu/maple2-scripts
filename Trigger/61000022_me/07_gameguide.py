@@ -4,19 +4,19 @@ import trigger_api
 
 class Wait(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='GameGuide') >= 1:
+        if self.user_value(key='GameGuide') == 1:
             return GameGuideR1_30(self.ctx)
-        if self.user_value(key='GameGuide') >= 2:
+        if self.user_value(key='GameGuide') == 2:
             return GameGuideR2_20(self.ctx)
-        if self.user_value(key='GameGuide') >= 3:
+        if self.user_value(key='GameGuide') == 3:
             return GameGuideR3_15(self.ctx)
-        if self.user_value(key='GameGuide') >= 4:
+        if self.user_value(key='GameGuide') == 4:
             return GameGuideR4_10(self.ctx)
-        if self.user_value(key='GameGuide') >= 5:
+        if self.user_value(key='GameGuide') == 5:
             return GameGuideR5_10(self.ctx)
-        if self.user_value(key='GameGuide') >= 6:
+        if self.user_value(key='GameGuide') == 6:
             return GambleGuideR4_15(self.ctx)
-        if self.user_value(key='GameGuide') >= 7:
+        if self.user_value(key='GameGuide') == 7:
             return JackpotGuideR4_20(self.ctx)
 
 

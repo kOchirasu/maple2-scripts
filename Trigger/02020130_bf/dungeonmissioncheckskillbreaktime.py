@@ -31,7 +31,7 @@ class 보스스킬브레이크시작_대기중(trigger_api.Trigger):
 class 던전미션_체크(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         # 3마리 보스 스킬브레이크 동시에 시간 이내 막을 경우에 대해서 보스 3명 복수 조건 체크 하기
-        if self.user_value(key='IshuraSkillBreakClear') >= 1 and self.user_value(key='YuperiaSkillBreakClear') >= 1 and self.user_value(key='RenduebianSkillBreakClear') >= 1:
+        if self.user_value(key='IshuraSkillBreakClear') == 1 and self.user_value(key='YuperiaSkillBreakClear') == 1 and self.user_value(key='RenduebianSkillBreakClear') == 1:
             return 던전미션_스킬브레이크저지_성공(self.ctx)
         """
         all_of:  <쉴드가 깨지기까지 6초보다 많은 시간이 남은 경우 = 8초 이내로 파괴>

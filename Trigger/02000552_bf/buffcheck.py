@@ -45,7 +45,7 @@ class 블랙빈에게버프부여(trigger_api.Trigger):
 
 class 블랙빈에게버프삭제체크(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='MonsterMany') >= 0:
+        if self.user_value(key='MonsterMany') == 0:
             # 졸몹이 전멸해 이 변수가 0이 되면
             return 블랙빈에게버프삭제대기(self.ctx)
 

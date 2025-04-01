@@ -79,9 +79,9 @@ class Wait(trigger_api.Trigger):
         self.set_user_value(key='AgentOff', value=0)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='ElevatorOn') >= 1:
+        if self.user_value(key='ElevatorOn') == 1:
             return BoardApp01(self.ctx)
-        if self.user_value(key='AgentOff') >= 1:
+        if self.user_value(key='AgentOff') == 1:
             return AgentOff01(self.ctx)
 
 

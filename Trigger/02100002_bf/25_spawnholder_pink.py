@@ -11,7 +11,7 @@ class Wait(trigger_api.Trigger):
         self.set_interact_object(trigger_ids=[10001257], state=0)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='ActivateHolder') >= 1:
+        if self.user_value(key='ActivateHolder') == 1:
             return LoadingDelay(self.ctx)
 
 
@@ -30,7 +30,7 @@ class SpawnStart(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.object_interacted(interact_ids=[10001257], state=0):
             return StopDelay(self.ctx)
-        if self.user_value(key='DungeonQuit') >= 1:
+        if self.user_value(key='DungeonQuit') == 1:
             return Quit(self.ctx)
 
 
@@ -42,7 +42,7 @@ class StopDelay(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=1000):
             return SpawnStop(self.ctx)
-        if self.user_value(key='DungeonQuit') >= 1:
+        if self.user_value(key='DungeonQuit') == 1:
             return Quit(self.ctx)
 
 
@@ -55,7 +55,7 @@ class SpawnStop(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.object_interacted(interact_ids=[10001256], state=0):
             return StartDelay(self.ctx)
-        if self.user_value(key='DungeonQuit') >= 1:
+        if self.user_value(key='DungeonQuit') == 1:
             return Quit(self.ctx)
 
 
@@ -67,7 +67,7 @@ class StartDelay(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=1000):
             return SpawnStart(self.ctx)
-        if self.user_value(key='DungeonQuit') >= 1:
+        if self.user_value(key='DungeonQuit') == 1:
             return Quit(self.ctx)
 
 

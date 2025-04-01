@@ -10,7 +10,7 @@ class Wait(trigger_api.Trigger):
         self.set_effect(trigger_ids=[5103]) # 03Round_ShadowApp
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='MobWaveStart') >= 1:
+        if self.user_value(key='MobWaveStart') == 1:
             return Ready(self.ctx)
 
 
@@ -788,7 +788,7 @@ class NpcDownPenaltyStart(trigger_api.Trigger):
 
 class NpcDownPenaltyEnd(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='PenaltyFinish') >= 1:
+        if self.user_value(key='PenaltyFinish') == 1:
             return ReturnToWave(self.ctx)
 
 
@@ -802,17 +802,17 @@ class ReturnToWave(trigger_api.Trigger):
         self.remove_balloon_talk(spawn_id=1103)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='WaveTime') >= 1:
+        if self.user_value(key='WaveTime') == 1:
             return SecondWaveStart(self.ctx)
-        if self.user_value(key='WaveTime') >= 2:
+        if self.user_value(key='WaveTime') == 2:
             return ThirdWaveStart(self.ctx)
-        if self.user_value(key='WaveTime') >= 3:
+        if self.user_value(key='WaveTime') == 3:
             return FourthWaveStart(self.ctx)
-        if self.user_value(key='WaveTime') >= 4:
+        if self.user_value(key='WaveTime') == 4:
             return FifthWaveStart(self.ctx)
-        if self.user_value(key='WaveTime') >= 5:
+        if self.user_value(key='WaveTime') == 5:
             return SixthWaveStart(self.ctx)
-        if self.user_value(key='WaveTime') >= 6:
+        if self.user_value(key='WaveTime') == 6:
             return SixthWaveStart(self.ctx)
 
 

@@ -10,7 +10,7 @@ class ready(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=5000):
             return ready(self.ctx)
-        if self.user_value(key='timer') >= 1:
+        if self.user_value(key='timer') == 1:
             return Ready_Idle(self.ctx)
 
 

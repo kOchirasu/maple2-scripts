@@ -5,7 +5,7 @@ import trigger_api
 # <5페이즈 크림슨 발록의 AI 너프버전으로 시작>
 class 대기(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='5Phase') >= 1:
+        if self.user_value(key='5Phase') == 1:
             return 크림슨발록스폰체크(self.ctx)
 
 

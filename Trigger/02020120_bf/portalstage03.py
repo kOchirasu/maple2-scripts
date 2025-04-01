@@ -16,19 +16,19 @@ class Ready(trigger_api.Trigger):
 
 class 스테이지3_시작(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Stage03') >= 11:
+        if self.user_value(key='Stage03') == 11:
             return 스테이지3_왼쪽_왼쪽진행(self.ctx)
-        if self.user_value(key='Stage03') >= 12:
+        if self.user_value(key='Stage03') == 12:
             return 스테이지3_왼쪽_가운데진행(self.ctx)
-        if self.user_value(key='Stage03') >= 21:
+        if self.user_value(key='Stage03') == 21:
             return 스테이지3_가운데_왼쪽진행(self.ctx)
-        if self.user_value(key='Stage03') >= 22:
+        if self.user_value(key='Stage03') == 22:
             return 스테이지3_가운데_가운데진행(self.ctx)
-        if self.user_value(key='Stage03') >= 23:
+        if self.user_value(key='Stage03') == 23:
             return 스테이지3_가운데_오른쪽진행(self.ctx)
-        if self.user_value(key='Stage03') >= 31:
+        if self.user_value(key='Stage03') == 31:
             return 스테이지3_오른쪽_가운데진행(self.ctx)
-        if self.user_value(key='Stage03') >= 32:
+        if self.user_value(key='Stage03') == 32:
             return 스테이지3_오른쪽_오른쪽진행(self.ctx)
 
 
@@ -103,7 +103,7 @@ class 스테이지3_오른쪽_오른쪽진행(trigger_api.Trigger):
 
 class 혹시모를_던전리셋신호_대기(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='DungeonReset') >= 1:
+        if self.user_value(key='DungeonReset') == 1:
             return Ready(self.ctx)
 
 

@@ -87,7 +87,7 @@ class StageEnter(trigger_api.Trigger):
         self.set_effect(trigger_ids=[5001], visible=True)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='StageClear01') >= 1:
+        if self.user_value(key='StageClear01') == 1:
             return StageClear01(self.ctx)
 
 
@@ -103,7 +103,7 @@ class StageClear01(trigger_api.Trigger):
         self.set_effect(trigger_ids=[5002,5100,5101], visible=True)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='StageClear02') >= 1:
+        if self.user_value(key='StageClear02') == 1:
             return StageClear02(self.ctx)
 
 
@@ -119,7 +119,7 @@ class StageClear02(trigger_api.Trigger):
         self.set_effect(trigger_ids=[5003,5200,5201], visible=True)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='StageClear03') >= 1:
+        if self.user_value(key='StageClear03') == 1:
             return StageClear03(self.ctx)
 
 
@@ -135,7 +135,7 @@ class StageClear03(trigger_api.Trigger):
         self.set_effect(trigger_ids=[5004,5300,5301], visible=True)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='StageClear04') >= 1:
+        if self.user_value(key='StageClear04') == 1:
             return StageClear04(self.ctx)
 
 
@@ -151,7 +151,7 @@ class StageClear04(trigger_api.Trigger):
         self.set_effect(trigger_ids=[5005,5400,5401], visible=True)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='StageClear05') >= 1:
+        if self.user_value(key='StageClear05') == 1:
             return StageClear05(self.ctx)
 
 

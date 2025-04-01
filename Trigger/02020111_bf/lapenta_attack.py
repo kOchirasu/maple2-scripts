@@ -9,7 +9,7 @@ class 시작(trigger_api.Trigger):
         self.set_directional_light(diffuse_color=Vector3(192,210,211), specular_color=Vector3(170,170,170))
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Lapenta_Attack') >= 1:
+        if self.user_value(key='Lapenta_Attack') == 1:
             return 대기(self.ctx)
 
 
@@ -46,7 +46,7 @@ class 실패조건버프(trigger_api.Trigger):
         self.add_buff(box_ids=[101], skill_id=70002181, level=1)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Lapenta_Attack') >= 0:
+        if self.user_value(key='Lapenta_Attack') == 0:
             return 시작(self.ctx)
 
 

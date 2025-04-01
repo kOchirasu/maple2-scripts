@@ -16,7 +16,7 @@ class 클리어성공유무체크시작(trigger_api.Trigger):
                 이 맵은 한맵에 2개 난이도가 존재하는데, 만약 스폰포인트 99로 보스가 등장할 하여 트리거가 이 단계에 오면 98 스폰 포인트의 보스가 죽은 것으로 처리해 버리기 때문에 
                  보스AI에서 죽을때 변수 신호 보내는 방식을 사용하였음
         """
-        if self.user_value(key='BossDead') >= 1:
+        if self.user_value(key='BossDead') == 1:
             return 연출딜레이(self.ctx)
         if self.dungeon_timeout():
             # 던전 시간 다 된경우

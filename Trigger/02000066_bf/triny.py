@@ -4,7 +4,7 @@ import trigger_api
 
 class 시작(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='randomTalk') >= 1:
+        if self.user_value(key='randomTalk') == 1:
             self.spawn_monster(spawn_ids=[5002], auto_target=False)
             return 전투대기(self.ctx)
 

@@ -527,7 +527,7 @@ class 벨마전투_01(trigger_api.Trigger):
         self.spawn_monster(spawn_ids=[106])
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='battleStop') >= 1:
+        if self.user_value(key='battleStop') == 1:
             return 벨마전투끝_01(self.ctx)
 
 

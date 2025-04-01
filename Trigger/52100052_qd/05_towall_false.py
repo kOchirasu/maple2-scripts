@@ -9,7 +9,7 @@ class Wait(trigger_api.Trigger):
         self.set_user_value(key='AnotherGuide', value=0)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='ToWallFalse') >= 1:
+        if self.user_value(key='ToWallFalse') == 1:
             return ToWallFalse(self.ctx)
 
 
@@ -41,7 +41,7 @@ class NoticeOn(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=3000):
             return CloseGuide02(self.ctx)
-        if self.user_value(key='AnotherGuide') >= 1:
+        if self.user_value(key='AnotherGuide') == 1:
             return CloseGuide01(self.ctx)
 
 

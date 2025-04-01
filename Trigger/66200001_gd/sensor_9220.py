@@ -9,17 +9,17 @@ class Wait(trigger_api.Trigger):
         self.set_mesh(trigger_ids=[5220], visible=True) # 22 / Ground inner
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Box22Check') >= 0:
+        if self.user_value(key='Box22Check') == 0:
             return Sensor0(self.ctx)
-        if self.user_value(key='Box22Check') >= 1:
+        if self.user_value(key='Box22Check') == 1:
             return Sensor1(self.ctx)
-        if self.user_value(key='Box22Check') >= 2:
+        if self.user_value(key='Box22Check') == 2:
             return Sensor2(self.ctx)
-        if self.user_value(key='Box22Check') >= 3:
+        if self.user_value(key='Box22Check') == 3:
             return Sensor3(self.ctx)
-        if self.user_value(key='Box22Check') >= 4:
+        if self.user_value(key='Box22Check') == 4:
             return Sensor4(self.ctx)
-        if self.user_value(key='Box22Check') >= 5:
+        if self.user_value(key='Box22Check') == 5:
             return Sensor5(self.ctx)
 
 

@@ -4,7 +4,7 @@ import trigger_api
 
 class 체력조건(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='respawn') >= 1:
+        if self.user_value(key='respawn') == 1:
             return 몬스터사망(self.ctx)
 
 

@@ -8,7 +8,7 @@ class 대기(trigger_api.Trigger):
         self.set_user_value(trigger_id=99990001, key='Seed3interact', value=0)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Seed3start') >= 1:
+        if self.user_value(key='Seed3start') == 1:
             return 시작(self.ctx)
 
 
@@ -19,7 +19,7 @@ class 시작(trigger_api.Trigger):
         self.set_interact_object(trigger_ids=[10002111], state=1, arg3=True)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Seed3start') >= 2:
+        if self.user_value(key='Seed3start') == 2:
             return 종료(self.ctx)
         if self.object_interacted(interact_ids=[10002111], state=0):
             return 씨앗3_심기(self.ctx)
@@ -32,7 +32,7 @@ class 씨앗3_심기(trigger_api.Trigger):
         self.set_interact_object(trigger_ids=[10002122], state=1, arg3=True)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Seed3start') >= 2:
+        if self.user_value(key='Seed3start') == 2:
             return 종료(self.ctx)
         if self.object_interacted(interact_ids=[10002122], state=0):
             return 씨앗3_중보(self.ctx)

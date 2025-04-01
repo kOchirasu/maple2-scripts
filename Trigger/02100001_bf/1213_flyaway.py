@@ -7,7 +7,7 @@ class Wait(trigger_api.Trigger):
         self.set_user_value(key='FlyAway', value=0)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='FlyAway') >= 1:
+        if self.user_value(key='FlyAway') == 1:
             return FlyAway(self.ctx)
 
 

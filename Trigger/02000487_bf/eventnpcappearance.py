@@ -15,7 +15,7 @@ class 보스등장대기(trigger_api.Trigger):
         self.spawn_monster(spawn_ids=[131])
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='EventNpcAppearance') >= 1:
+        if self.user_value(key='EventNpcAppearance') == 1:
             # 필드보스가 등장하여 전투 상태가 되면 AI 에서 EventNpcAppearance = 1  신호를 트리거에게 보내서 이 신호를 트리거가 받으면 이부분 실행함
             return 우호적NPC등장(self.ctx)
 
@@ -39,7 +39,7 @@ class 우호적NPC등장(trigger_api.Trigger):
 
 class 대기(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='EventNpcAppearance') >= 2:
+        if self.user_value(key='EventNpcAppearance') == 2:
             # 필드보스가 죽거나 전투가 풀리면 AI 에서 EventNpcAppearance = 2  신호를 트리거에게 보내서 이 신호를 트리거가 받으면 이부분 실행함
             return 시작대기중(self.ctx) # 다시 처음으로 돌아감, 초기화
 

@@ -5,9 +5,9 @@ from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 class Staging(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Fireworks') >= 1:
+        if self.user_value(key='Fireworks') == 1:
             return Volley_Ready(self.ctx)
-        if self.user_value(key='Fireworks') >= 2:
+        if self.user_value(key='Fireworks') == 2:
             return Volley_Ready2(self.ctx)
 
 

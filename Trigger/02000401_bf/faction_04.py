@@ -10,7 +10,7 @@ class 대기(trigger_api.Trigger):
         self.set_interact_object(trigger_ids=[12000040], state=2)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='faction04') >= 1:
+        if self.user_value(key='faction04') == 1:
             return 인원수체크(self.ctx)
 
 
@@ -46,7 +46,7 @@ class 반응대기(trigger_api.Trigger):
         self.reset_camera()
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='NPClanding') >= 1:
+        if self.user_value(key='NPClanding') == 1:
             return 룸체크(self.ctx)
 
 
@@ -87,7 +87,7 @@ class 보스소환(trigger_api.Trigger):
         self.destroy_monster(spawn_ids=[1300], arg2=False)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='DungeonClear') >= 1:
+        if self.user_value(key='DungeonClear') == 1:
             self.destroy_monster(spawn_ids=[1300,1301,1302,1303,1304,1305], arg2=False)
             self.set_interact_object(trigger_ids=[12000029], state=0)
             self.set_interact_object(trigger_ids=[12000040], state=0)

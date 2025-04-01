@@ -4,7 +4,7 @@ import trigger_api
 
 class Idle(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='CannonSpawn') >= 1:
+        if self.user_value(key='CannonSpawn') == 1:
             return CannonSpawn(self.ctx)
 
 

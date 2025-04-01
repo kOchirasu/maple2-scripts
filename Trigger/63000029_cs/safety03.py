@@ -7,7 +7,7 @@ class Wait(trigger_api.Trigger):
         self.set_user_value(key='SafetyStart', value=0)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='SafetyStart') >= 1:
+        if self.user_value(key='SafetyStart') == 1:
             return Enter01(self.ctx)
 
 

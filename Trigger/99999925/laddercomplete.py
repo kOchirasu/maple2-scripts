@@ -12,7 +12,7 @@ class IsLadderComplete(trigger_api.Trigger):
         self.set_ladder(trigger_ids=[316])
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='ladderComp') >= 1:
+        if self.user_value(key='ladderComp') == 1:
             return ladderComplete(self.ctx)
 
 

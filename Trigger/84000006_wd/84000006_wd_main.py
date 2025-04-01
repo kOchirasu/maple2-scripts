@@ -195,7 +195,7 @@ class Pinata_Ready(trigger_api.Trigger):
         self.show_guide_summary(entity_id=28500010, text_id=28500010, duration=5000) # 가이드 : 오브젝트 상호작용해서 보상수령하셈
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Steal') >= 1:
+        if self.user_value(key='Steal') == 1:
             # 시간경과 or 전부 훔쳐먹음
             return Pinata_Fight(self.ctx)
 

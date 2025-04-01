@@ -4,27 +4,27 @@ import trigger_api
 
 class Wait(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='DanceGuide') >= 1:
+        if self.user_value(key='DanceGuide') == 1:
             return DanceGuideP1_Random(self.ctx)
-        if self.user_value(key='DanceGuide') >= 2:
+        if self.user_value(key='DanceGuide') == 2:
             return DanceGuideP2_Random(self.ctx)
-        if self.user_value(key='DanceGuide') >= 3:
+        if self.user_value(key='DanceGuide') == 3:
             return DanceGuideP3_01(self.ctx)
-        if self.user_value(key='DanceGuide') >= 41:
+        if self.user_value(key='DanceGuide') == 41:
             return DanceGuideP41_01(self.ctx)
-        if self.user_value(key='DanceGuide') >= 42:
+        if self.user_value(key='DanceGuide') == 42:
             return DanceGuideP42_01(self.ctx)
-        if self.user_value(key='DanceGuide') >= 51:
+        if self.user_value(key='DanceGuide') == 51:
             return DanceGuideP51_01(self.ctx)
-        if self.user_value(key='DanceGuide') >= 52:
+        if self.user_value(key='DanceGuide') == 52:
             return DanceGuideP52_01(self.ctx)
-        if self.user_value(key='DanceGuide') >= 61:
+        if self.user_value(key='DanceGuide') == 61:
             return DanceGuideP61_01(self.ctx)
-        if self.user_value(key='DanceGuide') >= 62:
+        if self.user_value(key='DanceGuide') == 62:
             return DanceGuideP62_01(self.ctx)
-        if self.user_value(key='DanceGuide') >= 71:
+        if self.user_value(key='DanceGuide') == 71:
             return DanceGuideP71_01(self.ctx)
-        if self.user_value(key='DanceGuide') >= 72:
+        if self.user_value(key='DanceGuide') == 72:
             return DanceGuideP72_01(self.ctx)
 
 

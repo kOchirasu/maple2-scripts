@@ -8,7 +8,7 @@ class 대기(trigger_api.Trigger):
         self.set_actor(trigger_id=201, visible=True, initial_sequence='sf_fi_funct_darkdoor_A01_off')
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='SecondPhaseEnd') >= 1:
+        if self.user_value(key='SecondPhaseEnd') == 1:
             return 문열림(self.ctx)
 
 

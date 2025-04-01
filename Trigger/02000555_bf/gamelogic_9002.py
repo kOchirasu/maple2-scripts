@@ -13,7 +13,7 @@ class 대기(trigger_api.Trigger):
         self.lock_my_pc()
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='GameLogicStart') >= 1:
+        if self.user_value(key='GameLogicStart') == 1:
             return 게임진입(self.ctx)
 
 

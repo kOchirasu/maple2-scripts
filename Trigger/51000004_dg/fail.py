@@ -7,7 +7,7 @@ class gameset(trigger_api.Trigger):
         self.select_camera(trigger_id=8011, enable=False) # 카메라 옆으로 보냄, 줌인
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Fail') >= 1:
+        if self.user_value(key='Fail') == 1:
             return Fail_condition(self.ctx)
 
 

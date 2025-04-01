@@ -15,7 +15,7 @@ class Setting(trigger_api.Trigger):
         self.set_user_value(key='NormaBoxOff', value=0)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='NormaBoxOnCount') >= 1:
+        if self.user_value(key='NormaBoxOnCount') == 1:
             return Delay(self.ctx)
 
 
@@ -25,7 +25,7 @@ class Delay(trigger_api.Trigger):
         self.start_combine_spawn(group_id=[10000259,10000260,10000261,10000262,10000264,10000266,10000270,10000273,10000276], is_start=True)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='NormaBoxOff') >= 1:
+        if self.user_value(key='NormaBoxOff') == 1:
             return Quit(self.ctx)
 
 

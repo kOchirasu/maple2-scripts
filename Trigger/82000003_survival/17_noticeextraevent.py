@@ -7,7 +7,7 @@ class Setting(trigger_api.Trigger):
         self.set_user_value(key='NoticeExtraEvent', value=0)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='NoticeExtraEvent') >= 1:
+        if self.user_value(key='NoticeExtraEvent') == 1:
             # AI에서 신호 받아야 함
             return NoticeExtraEvent01(self.ctx)
 

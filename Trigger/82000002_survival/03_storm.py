@@ -7,7 +7,7 @@ class Wait(trigger_api.Trigger):
         self.create_widget(type='SurvivalContents')
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='StormStart') >= 1:
+        if self.user_value(key='StormStart') == 1:
             return SetStorm(self.ctx)
 
 

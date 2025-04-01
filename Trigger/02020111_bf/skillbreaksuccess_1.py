@@ -5,7 +5,7 @@ from System.Numerics import Vector3
 
 class 시작(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='SkillBreakSuccess_1') >= 1 and self.user_value(key='SkillBreakSuccess_2') >= 1 and self.user_value(key='SkillBreakSuccess_3') >= 1 and self.user_value(key='SkillBreakSuccess_4') >= 1:
+        if self.user_value(key='SkillBreakSuccess_1') == 1 and self.user_value(key='SkillBreakSuccess_2') == 1 and self.user_value(key='SkillBreakSuccess_3') == 1 and self.user_value(key='SkillBreakSuccess_4') == 1:
             return 버프발동(self.ctx)
 
 
@@ -25,7 +25,7 @@ class 버프발동(trigger_api.Trigger):
         self.set_user_value(trigger_id=900204, key='Message', value=1)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='SkillBreakSuccess_1') >= 0 and self.user_value(key='SkillBreakSuccess_2') >= 0 and self.user_value(key='SkillBreakSuccess_3') >= 0 and self.user_value(key='SkillBreakSuccess_4') >= 0 and self.user_value(key='SkillBreakSuccess_Reset') >= 0:
+        if self.user_value(key='SkillBreakSuccess_1') == 0 and self.user_value(key='SkillBreakSuccess_2') == 0 and self.user_value(key='SkillBreakSuccess_3') == 0 and self.user_value(key='SkillBreakSuccess_4') == 0 and self.user_value(key='SkillBreakSuccess_Reset') == 0:
             return 시작(self.ctx)
 
 

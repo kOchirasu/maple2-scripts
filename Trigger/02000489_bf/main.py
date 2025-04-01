@@ -19,7 +19,7 @@ class chaos_raid(trigger_api.Trigger):
         self.spawn_monster(spawn_ids=[402], auto_target=False)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='ExitPortal') >= 1:
+        if self.user_value(key='ExitPortal') == 1:
             return end(self.ctx)
 
 

@@ -57,7 +57,7 @@ class 차등장1(trigger_api.Trigger):
         self.spawn_monster(spawn_ids=[2001], auto_target=False)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='SetSkillA') >= 1:
+        if self.user_value(key='SetSkillA') == 1:
             self.set_mesh(trigger_ids=[3101,3102,3103,3104,3105,3106])
             return 차등장대기2(self.ctx)
 
@@ -73,7 +73,7 @@ class 차등장2(trigger_api.Trigger):
         self.spawn_monster(spawn_ids=[2002], auto_target=False)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='SetSkillB') >= 1:
+        if self.user_value(key='SetSkillB') == 1:
             self.set_mesh(trigger_ids=[3201,3202,3203,3204,3205,3206,3207,3208])
             return 엘리트등장(self.ctx)
 

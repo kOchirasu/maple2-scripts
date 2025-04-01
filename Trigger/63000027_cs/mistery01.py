@@ -334,7 +334,7 @@ class Collapse01(trigger_api.Trigger):
         self.set_effect(trigger_ids=[5300], visible=True) # Sound_SpaceDestroy
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='ZoomIn') >= 1:
+        if self.user_value(key='ZoomIn') == 1:
             return Collapse02(self.ctx)
 
 
@@ -343,7 +343,7 @@ class Collapse02(trigger_api.Trigger):
         self.select_camera(trigger_id=711)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='CollapseEnd') >= 1:
+        if self.user_value(key='CollapseEnd') == 1:
             return PCFainted01(self.ctx)
 
 

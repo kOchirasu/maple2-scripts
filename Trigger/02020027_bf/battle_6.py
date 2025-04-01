@@ -13,7 +13,7 @@ class 전투시작(trigger_api.Trigger):
 
 class 스킬사용(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='summon_2') >= 1:
+        if self.user_value(key='summon_2') == 1:
             return 몬스터소환(self.ctx)
 
 

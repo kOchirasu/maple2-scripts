@@ -14,7 +14,7 @@ class 대기(trigger_api.Trigger):
             return 종료(self.ctx)
         if self.dungeon_variable(var_id=913) == 1:
             return 종료(self.ctx)
-        if self.user_value(key='Start') >= 1:
+        if self.user_value(key='Start') == 1:
             return 시작(self.ctx)
 
 
@@ -132,7 +132,7 @@ class 종료(trigger_api.Trigger):
         self.set_interact_object(trigger_ids=[10002176], state=0)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='BadMob') >= 1:
+        if self.user_value(key='BadMob') == 1:
             return 대기(self.ctx)
 
 

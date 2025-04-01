@@ -10,9 +10,9 @@ class Wait(trigger_api.Trigger):
         self.set_mesh(trigger_ids=[1022]) # red
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='ColorStart') >= 1:
+        if self.user_value(key='ColorStart') == 1:
             return YellowBefore(self.ctx)
-        if self.user_value(key='ColorStart') >= 6:
+        if self.user_value(key='ColorStart') == 6:
             return RedBefore(self.ctx)
 
 
@@ -24,15 +24,15 @@ class YellowBefore(trigger_api.Trigger):
         self.set_mesh(trigger_ids=[1022]) # red
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='ColorClear') >= 1:
+        if self.user_value(key='ColorClear') == 1:
             return Clear(self.ctx)
-        if self.user_value(key='ColorReset') >= 1:
+        if self.user_value(key='ColorReset') == 1:
             return Reset(self.ctx)
-        if self.user_value(key='ColorEnd') >= 1:
+        if self.user_value(key='ColorEnd') == 1:
             return Regen(self.ctx)
-        if self.user_value(key='Color22') >= 2:
+        if self.user_value(key='Color22') == 2:
             return GreenAfter(self.ctx)
-        if self.user_value(key='Color22') >= 3:
+        if self.user_value(key='Color22') == 3:
             return None # Missing State: YellowtoRed
 
 
@@ -44,15 +44,15 @@ class RedBefore(trigger_api.Trigger):
         self.set_mesh(trigger_ids=[822]) # yellow
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='ColorClear') >= 1:
+        if self.user_value(key='ColorClear') == 1:
             return Clear(self.ctx)
-        if self.user_value(key='ColorReset') >= 1:
+        if self.user_value(key='ColorReset') == 1:
             return Reset(self.ctx)
-        if self.user_value(key='ColorEnd') >= 1:
+        if self.user_value(key='ColorEnd') == 1:
             return Regen(self.ctx)
-        if self.user_value(key='Color22') >= 1:
+        if self.user_value(key='Color22') == 1:
             return YellowAfter(self.ctx)
-        if self.user_value(key='Color22') >= 2:
+        if self.user_value(key='Color22') == 2:
             return GreenAfter(self.ctx)
 
 
@@ -62,15 +62,15 @@ class GreenAfter(trigger_api.Trigger):
         self.set_mesh(trigger_ids=[922], visible=True) # green
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='ColorClear') >= 1:
+        if self.user_value(key='ColorClear') == 1:
             return Clear(self.ctx)
-        if self.user_value(key='ColorReset') >= 1:
+        if self.user_value(key='ColorReset') == 1:
             return Reset(self.ctx)
-        if self.user_value(key='ColorEnd') >= 1:
+        if self.user_value(key='ColorEnd') == 1:
             return Regen(self.ctx)
-        if self.user_value(key='Color22') >= 1:
+        if self.user_value(key='Color22') == 1:
             return YellowAfter(self.ctx)
-        if self.user_value(key='Color22') >= 3:
+        if self.user_value(key='Color22') == 3:
             return RedAfter(self.ctx)
 
 
@@ -82,15 +82,15 @@ class YellowAfter(trigger_api.Trigger):
         self.set_mesh(trigger_ids=[1022], start_delay=100) # red
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='ColorClear') >= 1:
+        if self.user_value(key='ColorClear') == 1:
             return Clear(self.ctx)
-        if self.user_value(key='ColorReset') >= 1:
+        if self.user_value(key='ColorReset') == 1:
             return Reset(self.ctx)
-        if self.user_value(key='ColorEnd') >= 1:
+        if self.user_value(key='ColorEnd') == 1:
             return Regen(self.ctx)
-        if self.user_value(key='Color22') >= 2:
+        if self.user_value(key='Color22') == 2:
             return GreenAfter(self.ctx)
-        if self.user_value(key='Color22') >= 3:
+        if self.user_value(key='Color22') == 3:
             return RedAfter(self.ctx)
 
 
@@ -102,15 +102,15 @@ class RedAfter(trigger_api.Trigger):
         self.set_mesh(trigger_ids=[822], start_delay=100) # yellow
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='ColorClear') >= 1:
+        if self.user_value(key='ColorClear') == 1:
             return Clear(self.ctx)
-        if self.user_value(key='ColorReset') >= 1:
+        if self.user_value(key='ColorReset') == 1:
             return Reset(self.ctx)
-        if self.user_value(key='ColorEnd') >= 1:
+        if self.user_value(key='ColorEnd') == 1:
             return Regen(self.ctx)
-        if self.user_value(key='Color22') >= 1:
+        if self.user_value(key='Color22') == 1:
             return YellowAfter(self.ctx)
-        if self.user_value(key='Color22') >= 2:
+        if self.user_value(key='Color22') == 2:
             return GreenAfter(self.ctx)
 
 
@@ -122,7 +122,7 @@ class Clear(trigger_api.Trigger):
         self.set_mesh(trigger_ids=[1022], fade=2.0) # red
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='ColorEnd') >= 1:
+        if self.user_value(key='ColorEnd') == 1:
             return Regen(self.ctx)
 
 
@@ -150,7 +150,7 @@ class Reset(trigger_api.Trigger):
         self.set_user_value(key='ColorClear', value=0) # Sensor Trigger
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='ColorEnd') >= 1:
+        if self.user_value(key='ColorEnd') == 1:
             return Wait(self.ctx)
 
     def on_exit(self) -> None:

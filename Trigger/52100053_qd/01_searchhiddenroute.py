@@ -65,7 +65,7 @@ class FindKeyFromFabricbox(trigger_api.Trigger):
         self.set_user_value(trigger_id=3500, key='FindKey', value=2)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='PortalOn') >= 1:
+        if self.user_value(key='PortalOn') == 1:
             return PortalOn(self.ctx)
 
 
@@ -78,7 +78,7 @@ class FindKeyFromCandle(trigger_api.Trigger):
         self.set_user_value(trigger_id=3500, key='FindKey', value=2)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='PortalOn') >= 1:
+        if self.user_value(key='PortalOn') == 1:
             return PortalOn(self.ctx)
 
 
@@ -91,7 +91,7 @@ class FindKeyFromDocument(trigger_api.Trigger):
         self.set_user_value(trigger_id=3500, key='FindKey', value=1)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='PortalOn') >= 1:
+        if self.user_value(key='PortalOn') == 1:
             return PortalOn(self.ctx)
 
 

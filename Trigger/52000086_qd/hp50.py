@@ -49,7 +49,7 @@ class 대기(trigger_api.Trigger):
         self.set_portal(portal_id=91)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='hp50') >= 1:
+        if self.user_value(key='hp50') == 1:
             return 연출시작(self.ctx)
 
 

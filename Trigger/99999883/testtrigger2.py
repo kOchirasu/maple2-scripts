@@ -7,7 +7,7 @@ class State1(trigger_api.Trigger):
         self.debug_string(value='현재 State1')
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='test') >= 1:
+        if self.user_value(key='test') == 1:
             return State2(self.ctx)
 
 

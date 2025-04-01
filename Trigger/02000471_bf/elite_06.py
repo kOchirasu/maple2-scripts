@@ -4,13 +4,13 @@ import trigger_api
 
 class idle(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='10002024clear') < 1 and self.user_value(key='SpawnCheck') >= 1:
+        if self.user_value(key='10002024clear') != 1 and self.user_value(key='SpawnCheck') == 1:
             return spawn(self.ctx)
 
 
 class spawn(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Buff') >= 1:
+        if self.user_value(key='Buff') == 1:
             return buff(self.ctx)
 
 

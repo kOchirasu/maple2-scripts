@@ -7,7 +7,7 @@ class 대기(trigger_api.Trigger):
         self.set_user_value(trigger_id=99990001, key='SpawnRoomEnd', value=0)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Spawn') >= 1:
+        if self.user_value(key='Spawn') == 1:
             return 스폰1(self.ctx)
 
 

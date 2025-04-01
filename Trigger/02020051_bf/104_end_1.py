@@ -4,7 +4,7 @@ import trigger_api
 
 class 사망조건(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='End') >= 1:
+        if self.user_value(key='End') == 1:
             return 준비(self.ctx)
 
 
@@ -29,7 +29,7 @@ class 준비_2(trigger_api.Trigger):
 
 class 몬스터사망_1(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.npc_is_dead_by_string_id(string_id='Gigantika_01') or self.user_value(key='End') >= 3:
+        if self.npc_is_dead_by_string_id(string_id='Gigantika_01') or self.user_value(key='End') == 3:
             return 종료(self.ctx)
 
 
@@ -54,7 +54,7 @@ class 종료_2(trigger_api.Trigger):
         self.set_user_value(trigger_id=107, key='Text', value=2)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='End') >= 2:
+        if self.user_value(key='End') == 2:
             return 사망조건(self.ctx)
 
 

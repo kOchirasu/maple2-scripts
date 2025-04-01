@@ -5,7 +5,7 @@ from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 class 대기(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='GaugeOpen') >= 1:
+        if self.user_value(key='GaugeOpen') == 1:
             return 게이지시작(self.ctx)
 
 
@@ -22,9 +22,9 @@ class 게이지시작(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.shadow_expedition_points() >= 1000:
             return 성공(self.ctx)
-        if self.user_value(key='CoreIsDead') >= 1:
+        if self.user_value(key='CoreIsDead') == 1:
             return 실패(self.ctx)
-        if self.user_value(key='EngineIsDead') >= 1:
+        if self.user_value(key='EngineIsDead') == 1:
             return 실패(self.ctx)
 
     def on_exit(self) -> None:

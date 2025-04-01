@@ -39,7 +39,7 @@ class 탈것_등장(trigger_api.Trigger):
         if self.object_interacted(interact_ids=[10003152], state=0):
             # arg2="0" 노말 상태 (툴벤치에서 상태 입력)      arg2="1" 반응가능 상태 (툴벤치에서 상태 입력)      arg2="2" 오브젝트 사라짐
             return 인터렉트_동작중(self.ctx)
-        if self.user_value(key='RidingBattle') >= -1:
+        if self.user_value(key='RidingBattle') == -1:
             # 보스가 죽으면 AI_TurkaHoodForce_Phase03.xml 에서 RidingBattle = -1 신호를 보냄
             return 종료(self.ctx)
 
@@ -52,7 +52,7 @@ class 인터렉트_동작중(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=30000):
             return 탈것_등장대기(self.ctx)
-        if self.user_value(key='RidingBattle') >= -1:
+        if self.user_value(key='RidingBattle') == -1:
             return 종료(self.ctx)
 
 

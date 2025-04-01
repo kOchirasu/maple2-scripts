@@ -7,7 +7,7 @@ class Wait(trigger_api.Trigger):
         self.set_user_value(key='PenaltyMob', value=0)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='PenaltyMob') >= 1:
+        if self.user_value(key='PenaltyMob') == 1:
             return Ready(self.ctx)
 
 

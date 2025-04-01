@@ -12,7 +12,7 @@ class 대기(trigger_api.Trigger):
         self.set_interact_object(trigger_ids=[12000038], state=2)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='faction02') >= 1:
+        if self.user_value(key='faction02') == 1:
             return 말준비(self.ctx)
 
 
@@ -82,7 +82,7 @@ class 차안내2(trigger_api.Trigger):
         self.remove_buff(box_id=199, skill_id=70000107)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='DungeonClear') >= 1:
+        if self.user_value(key='DungeonClear') == 1:
             self.destroy_monster(spawn_ids=[1101,1102,1103,1104,1104], arg2=False)
             self.set_interact_object(trigger_ids=[12000023], state=0)
             self.set_interact_object(trigger_ids=[12000024], state=0)

@@ -110,7 +110,7 @@ class 조건체크몬스터스폰1(trigger_api.Trigger):
         self.set_onetime_effect(id=104, enable=True, path='BG/Common/Eff_Com_Vibrate_Short.xml')
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='main') >= 4:
+        if self.user_value(key='main') == 4:
             return 조건체크몬스터스폰2(self.ctx)
 
 
@@ -150,7 +150,7 @@ class 단계2(trigger_api.Trigger):
         self.set_effect(trigger_ids=[3000], visible=True)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='main') >= 5:
+        if self.user_value(key='main') == 5:
             return 단계시작2(self.ctx)
 
 
@@ -201,7 +201,7 @@ class 조건체크몬스터스폰(trigger_api.Trigger):
         self.side_npc_talk(npc_id=21450036, illust='DesertDragonMagicGreen_normal', duration=4000, script='$02000543_BF__MAIN__10$')
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='main') >= 8:
+        if self.user_value(key='main') == 8:
             return 응접실문열기전몬스터스폰(self.ctx)
 
 

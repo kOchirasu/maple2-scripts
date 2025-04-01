@@ -30,10 +30,10 @@ class 대기(trigger_api.Trigger):
 
 class 유저카운트(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='FieldGameStart') >= 1:
+        if self.user_value(key='FieldGameStart') == 1:
             # <게임 시작 결정>
             return 딜레이(self.ctx)
-        if self.user_value(key='FieldGameStart') >= 2:
+        if self.user_value(key='FieldGameStart') == 2:
             # <방폭 결정>
             return 방폭(self.ctx)
 
@@ -84,7 +84,7 @@ class 시작(trigger_api.Trigger):
         self.spawn_monster(spawn_ids=[701], auto_target=False) # <무적 오브젝트 생성>
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='GaugeClear') >= 1:
+        if self.user_value(key='GaugeClear') == 1:
             # <게이지를 다 채울 경우 다음 라운드>
             return 오브젝트페이즈(self.ctx)
         if self.time_expired(timer_id='1'):
@@ -103,7 +103,7 @@ class 오브젝트페이즈(trigger_api.Trigger):
         self.set_timer(timer_id='2', seconds=180, auto_remove=True, display=True, v_offset=60) # <2라운드 게임 플레이 타임 설정>
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='ObjectClear') >= 1:
+        if self.user_value(key='ObjectClear') == 1:
             # <오브젝트를 파괴했을 경우 다음 라운드>
             return 보스페이즈(self.ctx)
         if self.time_expired(timer_id='2'):
@@ -122,7 +122,7 @@ class 보스페이즈(trigger_api.Trigger):
         self.set_timer(timer_id='3', seconds=180, auto_remove=True, display=True, v_offset=60) # <3라운드 게임 플레이 타임 설정>
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='BossClear') >= 1:
+        if self.user_value(key='BossClear') == 1:
             # <보스를 처치했을 경우 성공>
             return 성공_세팅(self.ctx)
         if self.time_expired(timer_id='3'):

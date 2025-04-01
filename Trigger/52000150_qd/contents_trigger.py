@@ -4,7 +4,7 @@ import trigger_api
 
 class 차원의숲전경씬종료(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='52000150') >= 1:
+        if self.user_value(key='52000150') == 1:
             return 웨이브1알림(self.ctx)
 
 

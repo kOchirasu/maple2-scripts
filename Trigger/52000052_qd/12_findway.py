@@ -21,7 +21,7 @@ class Wait(trigger_api.Trigger):
         self.set_agent(trigger_ids=[28122], visible=True)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='FindWay') >= 1:
+        if self.user_value(key='FindWay') == 1:
             return MovingDelay01(self.ctx)
 
 
@@ -66,7 +66,7 @@ class Round12_Start(trigger_api.Trigger):
         self.set_user_value(trigger_id=912, key='MobWaveStart', value=1)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='12RoundSuccess') >= 1:
+        if self.user_value(key='12RoundSuccess') == 1:
             return Round12_Sucess01(self.ctx)
 
 

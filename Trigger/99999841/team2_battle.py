@@ -14,7 +14,7 @@ class 대기(trigger_api.Trigger):
         self.set_user_value(trigger_id=99990001, key='Team2Win', value=0)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Team2Battle') >= 1:
+        if self.user_value(key='Team2Battle') == 1:
             return 지역선택1(self.ctx)
 
 

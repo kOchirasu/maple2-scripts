@@ -8,7 +8,7 @@ class 시작대기중(trigger_api.Trigger):
         self.set_mesh(trigger_ids=[5001,5002,5003,5004,5005,5006])
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='ZakumBodyAppearance') >= 1:
+        if self.user_value(key='ZakumBodyAppearance') == 1:
             return 층지형의숨겨진바닥생성3(self.ctx)
 
 

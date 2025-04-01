@@ -13,7 +13,7 @@ class 소환대기(trigger_api.Trigger):
         self.set_user_value(trigger_id=999992, key='NpcSpawned10', value=0)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='NpcSpawn10') >= 1:
+        if self.user_value(key='NpcSpawn10') == 1:
             return 소환(self.ctx)
 
 

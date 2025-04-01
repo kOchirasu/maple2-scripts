@@ -109,7 +109,7 @@ class Round01_Start(trigger_api.Trigger):
         self.set_user_value(trigger_id=901, key='MobWaveStart', value=1)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='01RoundSuccess') >= 1:
+        if self.user_value(key='01RoundSuccess') == 1:
             return Round01_Sucess(self.ctx)
 
 

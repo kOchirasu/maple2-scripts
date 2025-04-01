@@ -19,7 +19,7 @@ class Wait(trigger_api.Trigger):
         self.set_user_value(key='EarthquakeStart', value=0)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='EarthquakeStart') >= 1:
+        if self.user_value(key='EarthquakeStart') == 1:
             return Delay01(self.ctx)
 
 

@@ -155,12 +155,12 @@ class Guide01(trigger_api.Trigger):
 
     def on_tick(self) -> trigger_api.Trigger:
         # 21810048 설눈이 신호 받기  <event eventName="TriggerEvent" target="SetUserValue" param1="1122330" param2="BossRoomPortal02" param3="1"/>
-        if self.user_value(key='BossRoomPortal01') >= 1:
+        if self.user_value(key='BossRoomPortal01') == 1:
             return BossRoomPortal01(self.ctx)
         # 21810049 설눈이 신호 받기  <event eventName="TriggerEvent" target="SetUserValue" param1="1122330" param2="BossRoomPortal03" param3="1"/>
-        if self.user_value(key='BossRoomPortal02') >= 1:
+        if self.user_value(key='BossRoomPortal02') == 1:
             return BossRoomPortal02(self.ctx)
-        if self.user_value(key='BossRoomPortal03') >= 1:
+        if self.user_value(key='BossRoomPortal03') == 1:
             return BossRoomPortal03(self.ctx)
 
 

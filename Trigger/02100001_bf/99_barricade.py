@@ -15,7 +15,7 @@ class Wait(trigger_api.Trigger):
         self.set_effect(trigger_ids=[5002]) # MetalDoorClose 사운드 이펙트
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='CageDoorOpen') >= 1:
+        if self.user_value(key='CageDoorOpen') == 1:
             return CageDoorOpenDelay(self.ctx)
 
 
@@ -32,7 +32,7 @@ class CageDoorOpen(trigger_api.Trigger):
         self.set_mesh(trigger_ids=[3100], start_delay=300) # Cage Door
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='MissionStart') >= 1:
+        if self.user_value(key='MissionStart') == 1:
             return CountDown(self.ctx)
 
 
@@ -54,7 +54,7 @@ class ShutDown(trigger_api.Trigger):
         self.set_mesh(trigger_ids=[3100], visible=True) # Cage Door
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='MissionComplete') >= 1:
+        if self.user_value(key='MissionComplete') == 1:
             return Release(self.ctx)
 
 

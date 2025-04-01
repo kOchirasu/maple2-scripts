@@ -14,7 +14,7 @@ class Wait(trigger_api.Trigger):
 
 class LoadingDelay01(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='CameraWalkEnd') >= 1:
+        if self.user_value(key='CameraWalkEnd') == 1:
             return LoadingDelay02(self.ctx)
 
 

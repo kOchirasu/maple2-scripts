@@ -4,7 +4,7 @@ import trigger_api
 
 class Ready(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='SkillBreakSuccess') >= 1:
+        if self.user_value(key='SkillBreakSuccess') == 1:
             # 스킬브레이크 막기 공했으면, 이슈라 AI에서  SkillBreakSuccess = 1 신호를 보냄
             return 스킬브레이크성공_던전미션랭크(self.ctx)
 

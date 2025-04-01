@@ -12,28 +12,28 @@ class Wait(trigger_api.Trigger):
         self.set_user_value(key='StartPatrol', value=0)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='SetRide') >= 1:
+        if self.user_value(key='SetRide') == 1:
             # North_To_South
             return Ride01_Ready(self.ctx)
-        if self.user_value(key='SetRide') >= 2:
+        if self.user_value(key='SetRide') == 2:
             # South_To_North
             return Ride02_Ready(self.ctx)
-        if self.user_value(key='SetRide') >= 3:
+        if self.user_value(key='SetRide') == 3:
             # East_To_West
             return Ride03_Ready(self.ctx)
-        if self.user_value(key='SetRide') >= 4:
+        if self.user_value(key='SetRide') == 4:
             # West_To_East
             return Ride04_Ready(self.ctx)
-        if self.user_value(key='SetRide') >= 5:
+        if self.user_value(key='SetRide') == 5:
             # NorthWest_To_SouthEast
             return Ride05_Ready(self.ctx)
-        if self.user_value(key='SetRide') >= 6:
+        if self.user_value(key='SetRide') == 6:
             # NorthEast_To_SouthWest
             return Ride06_Ready(self.ctx)
-        if self.user_value(key='SetRide') >= 7:
+        if self.user_value(key='SetRide') == 7:
             # SouthWest_To_NorthEast
             return Ride07_Ready(self.ctx)
-        if self.user_value(key='SetRide') >= 8:
+        if self.user_value(key='SetRide') == 8:
             # SouthEast_To_NorthWest
             return Ride08_Ready(self.ctx)
 
@@ -46,7 +46,7 @@ class Ride01_Ready(trigger_api.Trigger):
         self.write_log(log_name='Survival', event='bus_01') # 서바이벌 버스 로그
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='StartPatrol') >= 1:
+        if self.user_value(key='StartPatrol') == 1:
             return Ride01_StartPatrolDelay(self.ctx)
 
 
@@ -84,7 +84,7 @@ class Ride02_Ready(trigger_api.Trigger):
         self.write_log(log_name='Survival', event='bus_02') # 서바이벌 버스 로그
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='StartPatrol') >= 1:
+        if self.user_value(key='StartPatrol') == 1:
             return Ride02_StartPatrolDelay(self.ctx)
 
 
@@ -122,7 +122,7 @@ class Ride03_Ready(trigger_api.Trigger):
         self.write_log(log_name='Survival', event='bus_03') # 서바이벌 버스 로그
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='StartPatrol') >= 1:
+        if self.user_value(key='StartPatrol') == 1:
             return Ride03_StartPatrolDelay(self.ctx)
 
 
@@ -160,7 +160,7 @@ class Ride04_Ready(trigger_api.Trigger):
         self.write_log(log_name='Survival', event='bus_04') # 서바이벌 버스 로그
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='StartPatrol') >= 1:
+        if self.user_value(key='StartPatrol') == 1:
             return Ride04_StartPatrolDelay(self.ctx)
 
 
@@ -198,7 +198,7 @@ class Ride05_Ready(trigger_api.Trigger):
         self.write_log(log_name='Survival', event='bus_05') # 서바이벌 버스 로그
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='StartPatrol') >= 1:
+        if self.user_value(key='StartPatrol') == 1:
             return Ride05_StartPatrolDelay(self.ctx)
 
 
@@ -236,7 +236,7 @@ class Ride06_Ready(trigger_api.Trigger):
         self.write_log(log_name='Survival', event='bus_06') # 서바이벌 버스 로그
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='StartPatrol') >= 1:
+        if self.user_value(key='StartPatrol') == 1:
             return Ride06_StartPatrolDelay(self.ctx)
 
 
@@ -274,7 +274,7 @@ class Ride07_Ready(trigger_api.Trigger):
         self.write_log(log_name='Survival', event='bus_07') # 서바이벌 버스 로그
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='StartPatrol') >= 1:
+        if self.user_value(key='StartPatrol') == 1:
             return Ride07_StartPatrolDelay(self.ctx)
 
 
@@ -312,7 +312,7 @@ class Ride08_Ready(trigger_api.Trigger):
         self.write_log(log_name='Survival', event='bus_08') # 서바이벌 버스 로그
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='StartPatrol') >= 1:
+        if self.user_value(key='StartPatrol') == 1:
             return Ride08_StartPatrolDelay(self.ctx)
 
 

@@ -36,10 +36,10 @@ class 보스등장(trigger_api.Trigger):
 class 대기상태(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         # 2페이즈 전투 다 끝나고 , AI_Balrog_Kritias.xml 발록에게   StairsOk2nd = 1 신호를 받으면 이 부분 실행
-        if self.user_value(key='StairsOk') >= 1:
+        if self.user_value(key='StairsOk') == 1:
             return 계단생성시작중(self.ctx)
         # 3페이지로 들어서면 보스는 하늘높이 날아가는데, 플레이어가 3페이지 전투판으로 들어서면 즉 이 트기러 영역 안으로 들어오면 보스에게 신호를 보내서 3페이지 전투판으로
-        if self.user_value(key='StairsOk2nd') >= 1:
+        if self.user_value(key='StairsOk2nd') == 1:
             return 계단생성시작중2nd(self.ctx)
         if self.user_detected(box_ids=[11]): # 보스가 죽을 경우
             # MS2TriggerBox   TriggerObjectID = 11, 이 트리거 박스 안에 플레이어가 한명이라도 체크 되면        11은 마지막 3페이지 전투판을 커버하는 비교적 좁은 범위
@@ -107,7 +107,7 @@ class 플레이어3페이지전투판으로오기(trigger_api.Trigger):
         # 혹시 몰라서 이부분 다시 설정,          1페이즈 전투 다 끝나고 , AI_Balrog_Kritias.xml 발록에게   StairsOk = 1 신호를 받으면 이 부분 실행
         if self.monster_dead(spawn_ids=[99]):
             return 연출딜레이(self.ctx)
-        if self.user_value(key='StairsOk') >= 1:
+        if self.user_value(key='StairsOk') == 1:
             return None # Missing State: 사다리생성
 
 

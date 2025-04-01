@@ -78,10 +78,10 @@ class 전투진행중(trigger_api.Trigger):
         self.set_user_value(key='GuideMessage', value=0) # GuideMessage 0으로 초기 셋팅
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='GuideMessage') >= 1:
+        if self.user_value(key='GuideMessage') == 1:
             # 자동차AI에서 GuideMessage = 1 신호를 보냄
             return 메시지출력(self.ctx)
-        if self.user_value(key='NextPortal') >= 1:
+        if self.user_value(key='NextPortal') == 1:
             # 블랙빈AI에서 NextPortal = 1 신호를 보냄
             return 다음진행딜레이(self.ctx)
         if self.dungeon_timeout():

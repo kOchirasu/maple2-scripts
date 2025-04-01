@@ -264,7 +264,7 @@ class BossBattle01(trigger_api.Trigger):
         self.spawn_monster(spawn_ids=[4101]) # BossBattle
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='LuminaArmyJoin') >= 1:
+        if self.user_value(key='LuminaArmyJoin') == 1:
             return BossBattle02(self.ctx)
         if self.monster_dead(spawn_ids=[4101]):
             return BossBattle02(self.ctx)

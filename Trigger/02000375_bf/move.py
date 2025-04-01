@@ -31,7 +31,7 @@ class 레버삭제(trigger_api.Trigger):
         self.set_interact_object(trigger_ids=[10001024], state=2)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='BattleEnd') >= 1:
+        if self.user_value(key='BattleEnd') == 1:
             return 대기(self.ctx)
 
 

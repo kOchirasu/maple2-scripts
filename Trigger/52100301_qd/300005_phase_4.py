@@ -8,7 +8,7 @@ class 대기(trigger_api.Trigger):
         self.set_effect(trigger_ids=[200001,200002,200003,200004,200005,200006,200007,200008])
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='AI_Phase') >= 4:
+        if self.user_value(key='AI_Phase') == 4:
             return 패이즈_4_시작(self.ctx)
 
 

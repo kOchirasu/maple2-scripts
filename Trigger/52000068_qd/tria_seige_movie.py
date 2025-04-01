@@ -5,7 +5,7 @@ from Maple2.Server.Game.Scripting.Trigger import Align
 
 class start(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='tria_seige') >= 1:
+        if self.user_value(key='tria_seige') == 1:
             return LoadingDelayB0(self.ctx)
 
 

@@ -14,7 +14,7 @@ class HidePartyUI(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=1000):
             return HidePartyUI(self.ctx)
-        if self.user_value(key='HidePartyUI') >= 1:
+        if self.user_value(key='HidePartyUI') == 1:
             return Quit(self.ctx)
 
 

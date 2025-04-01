@@ -36,7 +36,7 @@ class DungeonStart01(trigger_api.Trigger):
         self.set_actor(trigger_id=4002, initial_sequence='Interaction_vrmachine_A01_on')
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='DungeonRoomOpened') >= 1:
+        if self.user_value(key='DungeonRoomOpened') == 1:
             return DungeonStart02(self.ctx)
 
 

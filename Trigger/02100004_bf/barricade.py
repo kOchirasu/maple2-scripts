@@ -5,7 +5,7 @@ from Maple2.Server.Game.Scripting.Trigger import BannerType
 
 class 대기(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='BattleStart') >= 1:
+        if self.user_value(key='BattleStart') == 1:
             return 카운트(self.ctx)
 
 
@@ -23,7 +23,7 @@ class 차단(trigger_api.Trigger):
         self.set_mesh(trigger_ids=[3000,3001], visible=True)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='BattleEnd') >= 1:
+        if self.user_value(key='BattleEnd') == 1:
             return 차단해제(self.ctx)
 
 

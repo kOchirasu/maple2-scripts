@@ -19,12 +19,12 @@ class idle(trigger_api.Trigger):
         self.add_buff(box_ids=[701], skill_id=99910120, level=1, ignore_player=False, is_skill_set=False)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Ground') >= 1:
+        if self.user_value(key='Ground') == 1:
             self.remove_buff(box_id=701, skill_id=99910120)
             return ready(self.ctx)
         if self.wait_tick(wait_tick=500):
             return buff_01(self.ctx)
-        if self.user_value(key='Ending') >= 1:
+        if self.user_value(key='Ending') == 1:
             return Ending(self.ctx)
 
 
@@ -33,12 +33,12 @@ class buff_01(trigger_api.Trigger):
         self.add_buff(box_ids=[701], skill_id=99910120, level=1, ignore_player=False, is_skill_set=False)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Ground') >= 1:
+        if self.user_value(key='Ground') == 1:
             self.remove_buff(box_id=701, skill_id=99910120)
             return ready(self.ctx)
         if self.wait_tick(wait_tick=500):
             return idle(self.ctx)
-        if self.user_value(key='Ending') >= 1:
+        if self.user_value(key='Ending') == 1:
             return Ending(self.ctx)
 
 
@@ -51,12 +51,12 @@ class questIdle(trigger_api.Trigger):
             return Ending(self.ctx)
         if self.quest_user_detected(box_ids=[701], quest_ids=[50001517], quest_states=[2]):
             return Ending(self.ctx)
-        if self.user_value(key='Ground') >= 1:
+        if self.user_value(key='Ground') == 1:
             self.remove_buff(box_id=701, skill_id=99910120)
             return ready(self.ctx)
         if self.wait_tick(wait_tick=500):
             return questIdle_buff_01(self.ctx)
-        if self.user_value(key='Ending') >= 1:
+        if self.user_value(key='Ending') == 1:
             return Ending(self.ctx)
 
 
@@ -67,12 +67,12 @@ class questIdle_buff_01(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.quest_user_detected(box_ids=[701], quest_ids=[50001518], quest_states=[1]):
             return Ending(self.ctx)
-        if self.user_value(key='Ground') >= 1:
+        if self.user_value(key='Ground') == 1:
             self.remove_buff(box_id=701, skill_id=99910120)
             return ready(self.ctx)
         if self.wait_tick(wait_tick=500):
             return questIdle(self.ctx)
-        if self.user_value(key='Ending') >= 1:
+        if self.user_value(key='Ending') == 1:
             return Ending(self.ctx)
 
 
@@ -90,7 +90,7 @@ class ready(trigger_api.Trigger):
         self.destroy_monster(spawn_ids=[501,502,503,504,505,506,507,508,509,510]) # 수중 위 몬스터 제거
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Ending') >= 1:
+        if self.user_value(key='Ending') == 1:
             return Ending(self.ctx)
         if self.monster_dead(spawn_ids=[201,210]):
             return Ending(self.ctx)

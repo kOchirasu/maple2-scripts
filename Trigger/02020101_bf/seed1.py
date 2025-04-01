@@ -20,7 +20,7 @@ class 시작(trigger_api.Trigger):
         self.set_skill(trigger_ids=[902])
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Seed') >= 1:
+        if self.user_value(key='Seed') == 1:
             return 대기시간(self.ctx)
 
 

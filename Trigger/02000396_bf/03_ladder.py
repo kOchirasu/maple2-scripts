@@ -13,7 +13,7 @@ class Setting(trigger_api.Trigger):
         self.set_user_value(key='EnableLadder', value=0)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='EnableLadder') >= 1:
+        if self.user_value(key='EnableLadder') == 1:
             return LeverOn(self.ctx)
 
 

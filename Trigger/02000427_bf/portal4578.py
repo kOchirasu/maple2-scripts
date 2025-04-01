@@ -14,7 +14,7 @@ class 시작(trigger_api.Trigger):
         self.set_portal(portal_id=8)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='ThirdPhase') >= 1:
+        if self.user_value(key='ThirdPhase') == 1:
             # 2페이즈 전투 다 끝나고, ThirdPhase = 1 신호를 받을때까지 여기서 대기, 즉 AI_Papulatus_CN.xml 에서 신호보냄
             return 순간이동포탈생성(self.ctx)
 

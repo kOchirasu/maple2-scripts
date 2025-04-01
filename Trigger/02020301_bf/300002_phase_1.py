@@ -4,7 +4,7 @@ import trigger_api
 
 class 대기(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='AI_Phase') >= 1:
+        if self.user_value(key='AI_Phase') == 1:
             return 텍스트_대기(self.ctx)
 
 

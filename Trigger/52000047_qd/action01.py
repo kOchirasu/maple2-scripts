@@ -630,7 +630,7 @@ class VasaraBattle02(trigger_api.Trigger):
         self.show_guide_summary(entity_id=25200472, text_id=25200472) # 가이드 : 바사라 첸 쓰러트리기
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='VasaraTired') >= 1:
+        if self.user_value(key='VasaraTired') == 1:
             return VasaraBattle03(self.ctx)
 
 

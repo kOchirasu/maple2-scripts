@@ -8,7 +8,7 @@ class Setting(trigger_api.Trigger):
         self.set_user_value(key='MobWave', value=0)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='MobWave') >= 1:
+        if self.user_value(key='MobWave') == 1:
             return MobSpawn01(self.ctx)
 
 

@@ -4,7 +4,7 @@ import trigger_api
 
 class 대기(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='FinalPhase') >= 1:
+        if self.user_value(key='FinalPhase') == 1:
             return 스폰(self.ctx)
 
 
@@ -17,7 +17,7 @@ class 스폰(trigger_api.Trigger):
             return 스폰(self.ctx)
         if self.monster_dead(spawn_ids=[131,132,133,134,135,136]):
             return 스폰(self.ctx)
-        if self.user_value(key='FinalPhase') >= 2:
+        if self.user_value(key='FinalPhase') == 2:
             return 종료(self.ctx)
 
 

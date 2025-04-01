@@ -4,7 +4,7 @@ import trigger_api
 
 class special_1_1(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='special_1') >= 1:
+        if self.user_value(key='special_1') == 1:
             return special_1_2(self.ctx)
 
 
@@ -22,7 +22,7 @@ class special_2_1(trigger_api.Trigger):
         self.set_local_camera(camera_id=8001)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='special_2') >= 1:
+        if self.user_value(key='special_2') == 1:
             return special_2_2(self.ctx)
 
 
@@ -40,7 +40,7 @@ class special_3_1(trigger_api.Trigger):
         self.set_local_camera(camera_id=8001)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='special_3') >= 1:
+        if self.user_value(key='special_3') == 1:
             return special_3_2(self.ctx)
 
 
@@ -58,7 +58,7 @@ class special_4_1(trigger_api.Trigger):
         self.set_local_camera(camera_id=8001)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='special_4') >= 1:
+        if self.user_value(key='special_4') == 1:
             return special_4_2(self.ctx)
 
 
@@ -76,7 +76,7 @@ class special_5_1(trigger_api.Trigger):
         self.set_local_camera(camera_id=8001)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='special_5') >= 1:
+        if self.user_value(key='special_5') == 1:
             return special_5_2(self.ctx)
 
 

@@ -7,7 +7,7 @@ from Maple2.Server.Game.Scripting.Trigger import Align
 """
 class 대기(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='CameraStart') >= 1:
+        if self.user_value(key='CameraStart') == 1:
             return 유저감지(self.ctx)
 """
 
@@ -124,9 +124,9 @@ class 연출끝_01(trigger_api.Trigger):
         if self.user_detected(box_ids=[902]):
             self.move_user_to_pos(pos=Vector3(300,-225,1500), rot=Vector3(0,0,270))
             return 대화딜레이(self.ctx)
-        if self.user_value(key='DungeonPlayType') >= 1:
+        if self.user_value(key='DungeonPlayType') == 1:
             return NewGame(self.ctx)
-        if self.user_value(key='DungeonPlayType') >= 2:
+        if self.user_value(key='DungeonPlayType') == 2:
             return ContinueGame(self.ctx)
 
 

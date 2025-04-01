@@ -27,7 +27,7 @@ class 몬스터등장(trigger_api.Trigger):
         self.set_mesh(trigger_ids=[1001,1002,1003,1004,1005,1006,1007,1008,1009,1010,1011,1012,1013,1014,1015,1016,1017,1018,1019,1020,1021,1022,1023,1024,1025], interval=200, fade=0.5)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='NextMove') >= 1: # 보스가 죽을 경우
+        if self.user_value(key='NextMove') == 1: # 보스가 죽을 경우
             return 두번째전투판이동다리생성(self.ctx)
         if self.monster_dead(spawn_ids=[2000]):
             return 연출딜레이(self.ctx)

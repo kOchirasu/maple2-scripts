@@ -13,7 +13,7 @@ class 세팅(trigger_api.Trigger):
 
 class 수신대기(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='StatueHuman01Death') >= 1:
+        if self.user_value(key='StatueHuman01Death') == 1:
             self.set_mesh(trigger_ids=[10])
             return 종료(self.ctx)
 

@@ -16,7 +16,7 @@ class 전투시작체크(trigger_api.Trigger):
 
 class 생성대기(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='gogo') >= 1:
+        if self.user_value(key='gogo') == 1:
             return 생성대기2(self.ctx)
 
 

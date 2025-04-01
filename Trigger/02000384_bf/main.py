@@ -36,7 +36,7 @@ class raid(trigger_api.Trigger):
         self.spawn_monster(spawn_ids=[401], auto_target=False)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='ExitPortal') >= 1:
+        if self.user_value(key='ExitPortal') == 1:
             return end(self.ctx)
 
 
@@ -45,7 +45,7 @@ class chaos_raid(trigger_api.Trigger):
         self.spawn_monster(spawn_ids=[402], auto_target=False)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='ExitPortal') >= 1:
+        if self.user_value(key='ExitPortal') == 1:
             return end(self.ctx)
 
 
@@ -166,7 +166,7 @@ class quest_raid(trigger_api.Trigger):
         self.spawn_monster(spawn_ids=[403], auto_target=False)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='ExitPortal') >= 1:
+        if self.user_value(key='ExitPortal') == 1:
             return quest_end(self.ctx)
         if self.user_detected(box_ids=[720]):
             return npcSpawn(self.ctx)
@@ -177,7 +177,7 @@ class npcSpawn(trigger_api.Trigger):
         self.spawn_monster(spawn_ids=[510], auto_target=False)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='ExitPortal') >= 1:
+        if self.user_value(key='ExitPortal') == 1:
             return quest_end(self.ctx)
 
 

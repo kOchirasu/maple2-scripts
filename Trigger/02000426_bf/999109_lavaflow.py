@@ -14,10 +14,10 @@ class 대기(trigger_api.Trigger):
         self.set_effect(trigger_ids=[600])
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='LavaflowRight') >= 1:
+        if self.user_value(key='LavaflowRight') == 1:
             # 오른쪽 용암 담당 계약의 토템이 생성될때, 이 부분 작동,   LavaflowRight 변수는 자쿰몸체 보스한테 LavaflowRight = 1 설정되어서 넘어오는 것임
             return 오른쪽용암생성(self.ctx)
-        if self.user_value(key='BattleEnd2') >= 1:
+        if self.user_value(key='BattleEnd2') == 1:
             # BattleEnd2 변수는 보스 생성쪽 트리거 설정 xml 에서 보스가 죽을 경우 BattleEnd2 = 1 설정되어서 넘어오는 것임
             return 종료(self.ctx)
 
@@ -36,9 +36,9 @@ class 오른쪽용암생성(trigger_api.Trigger):
 
     def on_tick(self) -> trigger_api.Trigger:
         # 보스가 죽으면 보스 스폰시키는 트리거 xml 에서 BattleEnd2 = 1 신호를 보내서 올라와 있는 용암을 여기서 바로 제거 시키게 함
-        if self.user_value(key='LavaflowRightStop') >= 1:
+        if self.user_value(key='LavaflowRightStop') == 1:
             return 오른쪽용암내려가기(self.ctx)
-        if self.user_value(key='BattleEnd2') >= 1:
+        if self.user_value(key='BattleEnd2') == 1:
             return 종료(self.ctx)
 
 

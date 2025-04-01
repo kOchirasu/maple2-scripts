@@ -13,13 +13,13 @@ class 대기(trigger_api.Trigger):
         # self.set_visible_breakable_object(trigger_ids=[1021,1022])
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Block') >= 1:
+        if self.user_value(key='Block') == 1:
             self.set_user_value(trigger_id=900005, key='Block', value=0)
             return ArriveBlock_1(self.ctx)
-        if self.user_value(key='Block') >= 2:
+        if self.user_value(key='Block') == 2:
             self.set_user_value(trigger_id=900005, key='Block', value=0)
             return ArriveBlock_2(self.ctx)
-        if self.user_value(key='Block') >= 3:
+        if self.user_value(key='Block') == 3:
             self.set_user_value(trigger_id=900005, key='Block', value=0)
             return ArriveBlock_3(self.ctx)
 

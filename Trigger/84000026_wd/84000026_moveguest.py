@@ -16,7 +16,7 @@ class 시작(trigger_api.Trigger):
         if self.wedding_hall_state() == 'weddingComplete':
             # 결혼 연출 끝나서 보상받고 결혼상태로 변경되는 시점부터는 자리옮김 멈춤
             return 종료(self.ctx)
-        if self.user_value(key='Weddingceremonystartsready') >= 1:
+        if self.user_value(key='Weddingceremonystartsready') == 1:
             # 결혼하시겠습니까 입력창 띄우자마자 쏘는 신호 받으면 하객옮기기 트리거 시작되도록
             self.set_user_value(key='Weddingceremonystartsready', value=0) # 초기화
             return 새로운하객있는지감지(self.ctx)
@@ -27,7 +27,7 @@ class 새로운하객있는지감지(trigger_api.Trigger):
         if self.wedding_hall_state() == 'weddingComplete':
             # 결혼 연출 끝나서 보상받고 결혼상태로 변경되는 시점부터는 자리옮김 멈춤
             return 종료(self.ctx)
-        if self.user_value(key='Weddingceremonyfail') >= 1:
+        if self.user_value(key='Weddingceremonyfail') == 1:
             # 결혼 실패
             self.set_user_value(key='Weddingceremonyfail', value=0) # 초기화
             return 시작(self.ctx)

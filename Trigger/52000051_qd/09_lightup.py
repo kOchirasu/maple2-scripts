@@ -5,7 +5,7 @@ from System.Numerics import Vector3
 
 class Wait(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='FindLotus') >= 1:
+        if self.user_value(key='FindLotus') == 1:
             return LoadingDelay(self.ctx)
 
 

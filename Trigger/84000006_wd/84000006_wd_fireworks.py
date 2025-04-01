@@ -5,7 +5,7 @@ import trigger_api
 # 불꽃놀이 발사 준비
 class Staging(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Fireworks') >= 1:
+        if self.user_value(key='Fireworks') == 1:
             return Volley(self.ctx)
 
 

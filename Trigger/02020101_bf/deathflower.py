@@ -4,7 +4,7 @@ import trigger_api
 
 class 대기(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='flower') >= 1:
+        if self.user_value(key='flower') == 1:
             return 랜덤대상선정(self.ctx)
 
 
@@ -23,7 +23,7 @@ class 랜덤대상선정(trigger_api.Trigger):
 
 class 변수초기화(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='flower') >= 0:
+        if self.user_value(key='flower') == 0:
             return 대기(self.ctx)
 
 

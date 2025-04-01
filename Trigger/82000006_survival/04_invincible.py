@@ -15,7 +15,7 @@ class MakeInvincible(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=500):
             return MakeInvincible(self.ctx)
-        if self.user_value(key='InvincibleOff') >= 1:
+        if self.user_value(key='InvincibleOff') == 1:
             return Quit(self.ctx)
 
 

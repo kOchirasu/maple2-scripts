@@ -19,7 +19,7 @@ class idle(trigger_api.Trigger):
         self.set_breakable(trigger_ids=[1851,1852,1853,1854,1855,1856,1857,1858,1859,1860,1861,1862,1863,1864,1865,1866,1867,1868,1869,1870,1871])
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='start') >= 1:
+        if self.user_value(key='start') == 1:
             return QuestDungeonStart(self.ctx)
 
 

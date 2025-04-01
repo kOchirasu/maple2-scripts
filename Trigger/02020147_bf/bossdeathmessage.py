@@ -22,13 +22,13 @@ class 변수초기화(trigger_api.Trigger):
 
 class 신호받기대기중(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='DeathIshuraRbladerDark') >= 1:
+        if self.user_value(key='DeathIshuraRbladerDark') == 1:
             # 이슈라 죽으면 이 변수 1 신호를 받음
             return 이슈라죽음알림(self.ctx)
-        if self.user_value(key='DeathRenduebianRbladerDark') >= 1:
+        if self.user_value(key='DeathRenduebianRbladerDark') == 1:
             # 렌듀비앙 죽으면 이 변수 1 신호를 받음
             return 렌듀비앙죽음알림(self.ctx)
-        if self.user_value(key='DeathYuperiaRbladerDark') >= 1:
+        if self.user_value(key='DeathYuperiaRbladerDark') == 1:
             # 유페리아 죽으면 이 변수 1 신호를 받음
             return 유페리아죽음알림(self.ctx)
 
@@ -43,10 +43,10 @@ class 이슈라죽음알림(trigger_api.Trigger):
         # 이슈라 죽음 메시지 출력 도중에 다른 보스가 죽었을 경우에 대한 처리
         if self.wait_tick(wait_tick=3200):
             return 신호받기대기중(self.ctx)
-        if self.user_value(key='DeathRenduebianRbladerDark') >= 1:
+        if self.user_value(key='DeathRenduebianRbladerDark') == 1:
             # 렌듀비앙 죽으면 이 변수 1 신호를 받음
             return 렌듀비앙죽음알림(self.ctx)
-        if self.user_value(key='DeathYuperiaRbladerDark') >= 1:
+        if self.user_value(key='DeathYuperiaRbladerDark') == 1:
             # 유페리아 죽으면 이 변수 1 신호를 받음
             return 유페리아죽음알림(self.ctx)
 
@@ -64,10 +64,10 @@ class 렌듀비앙죽음알림(trigger_api.Trigger):
         # 렌듀비앙 죽음 메시지 출력 도중에 다른 보스가 죽었을 경우에 대한 처리
         if self.wait_tick(wait_tick=3200):
             return 신호받기대기중(self.ctx)
-        if self.user_value(key='DeathIshuraRbladerDark') >= 1:
+        if self.user_value(key='DeathIshuraRbladerDark') == 1:
             # 이슈라 죽으면 이 변수 1 신호를 받음
             return 이슈라죽음알림(self.ctx)
-        if self.user_value(key='DeathYuperiaRbladerDark') >= 1:
+        if self.user_value(key='DeathYuperiaRbladerDark') == 1:
             # 유페리아 죽으면 이 변수 1 신호를 받음
             return 유페리아죽음알림(self.ctx)
 
@@ -85,10 +85,10 @@ class 유페리아죽음알림(trigger_api.Trigger):
         # 유페리아 죽음 메시지 출력 도중에 다른 보스가 죽었을 경우에 대한 처리
         if self.wait_tick(wait_tick=3200):
             return 신호받기대기중(self.ctx)
-        if self.user_value(key='DeathIshuraRbladerDark') >= 1:
+        if self.user_value(key='DeathIshuraRbladerDark') == 1:
             # 이슈라 죽으면 이 변수 1 신호를 받음
             return 이슈라죽음알림(self.ctx)
-        if self.user_value(key='DeathRenduebianRbladerDark') >= 1:
+        if self.user_value(key='DeathRenduebianRbladerDark') == 1:
             # 렌듀비앙 죽으면 이 변수 1 신호를 받음
             return 렌듀비앙죽음알림(self.ctx)
 

@@ -14,9 +14,9 @@ class Wait(trigger_api.Trigger):
         self.set_user_value(key='FindWayRight', value=0)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='FindWayLeft') >= 1:
+        if self.user_value(key='FindWayLeft') == 1:
             return ReadyToWalkIn_FromLeft01(self.ctx)
-        if self.user_value(key='FindWayRight') >= 1:
+        if self.user_value(key='FindWayRight') == 1:
             return ReadyToWalkIn_FromRight01(self.ctx)
 
 
@@ -98,7 +98,7 @@ class Round10_Start(trigger_api.Trigger):
         self.set_user_value(trigger_id=910, key='MobWaveStart', value=1)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='10RoundSuccess') >= 1:
+        if self.user_value(key='10RoundSuccess') == 1:
             return Round10_Sucess01(self.ctx)
 
 

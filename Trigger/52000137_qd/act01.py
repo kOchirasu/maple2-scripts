@@ -546,7 +546,7 @@ class DarkAnosBattle02(trigger_api.Trigger):
         self.spawn_monster(spawn_ids=[900], auto_target=False)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='PatosTired') >= 1:
+        if self.user_value(key='PatosTired') == 1:
             return DarkAnosDown01(self.ctx)
         if self.monster_dead(spawn_ids=[900]):
             # 임시 -  파토스 체력 조건으로 연출 넘어가도록 수정하기

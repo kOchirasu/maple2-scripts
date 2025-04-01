@@ -10,7 +10,7 @@ class Setting(trigger_api.Trigger):
         self.set_interact_object(trigger_ids=[11000038], state=2) # Rare Box
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='RareBoxOnCount') >= 1:
+        if self.user_value(key='RareBoxOnCount') == 1:
             return Delay(self.ctx)
 
 
@@ -30,7 +30,7 @@ class BoxOn(trigger_api.Trigger):
         self.set_interact_object(trigger_ids=[11000038], state=1) # Rare Box
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='RareBoxOff') >= 1:
+        if self.user_value(key='RareBoxOff') == 1:
             return Quit(self.ctx)
 
 

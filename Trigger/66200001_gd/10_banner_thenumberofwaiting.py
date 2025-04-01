@@ -4,7 +4,7 @@ import trigger_api
 
 class Wait(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='BannerCheckIn') >= 1:
+        if self.user_value(key='BannerCheckIn') == 1:
             return BannerCheckIn(self.ctx)
 
 
@@ -22,9 +22,9 @@ class BannerCheckIn(trigger_api.Trigger):
 
 class NextWait(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='BannerCheckIn') >= 1:
+        if self.user_value(key='BannerCheckIn') == 1:
             return BannerCheckIn(self.ctx)
-        if self.user_value(key='BannerCheckIn') >= 0:
+        if self.user_value(key='BannerCheckIn') == 0:
             return Quit(self.ctx)
 
 

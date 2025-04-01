@@ -7,7 +7,7 @@ class 대기(trigger_api.Trigger):
         self.select_camera(trigger_id=690000, enable=False)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Phase_4_Camera_01') >= 1:
+        if self.user_value(key='Phase_4_Camera_01') == 1:
             return 시작(self.ctx)
 
 
@@ -22,7 +22,7 @@ class 시작(trigger_api.Trigger):
 
 class 리셋(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Phase_4_Camera_01') >= 0:
+        if self.user_value(key='Phase_4_Camera_01') == 0:
             return 대기(self.ctx)
 
 

@@ -7,7 +7,7 @@ class 시작(trigger_api.Trigger):
         self.reset_timer(timer_id='990')
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Timmer') >= 1:
+        if self.user_value(key='Timmer') == 1:
             return 타이머(self.ctx)
 
 
@@ -18,7 +18,7 @@ class 타이머(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.wait_tick(wait_tick=600000):
             return 종료(self.ctx)
-        if self.user_value(key='Timmer') >= 3:
+        if self.user_value(key='Timmer') == 3:
             return 시작(self.ctx)
 
 
@@ -28,7 +28,7 @@ class 종료(trigger_api.Trigger):
         self.set_user_value(trigger_id=104, key='End', value=3)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Timmer') >= 2:
+        if self.user_value(key='Timmer') == 2:
             return 시작(self.ctx)
 
 

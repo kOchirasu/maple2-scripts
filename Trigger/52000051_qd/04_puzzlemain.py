@@ -18,7 +18,7 @@ class Wait(trigger_api.Trigger):
         self.set_mesh(trigger_ids=[3020]) # LionStone
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='PuzzleStart') >= 1:
+        if self.user_value(key='PuzzleStart') == 1:
             return StartPuzzle(self.ctx)
 
 
@@ -53,57 +53,57 @@ class CheckAnswer01(trigger_api.Trigger):
 # 순차적으로 체크
 class CheckAnswer02(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='CorrectFirstPiece') >= 2:
+        if self.user_value(key='CorrectFirstPiece') == 2:
             return Retry01(self.ctx)
-        if self.user_value(key='CorrectSecondPiece') >= 2:
+        if self.user_value(key='CorrectSecondPiece') == 2:
             return Retry01(self.ctx)
-        if self.user_value(key='CorrectThirdPiece') >= 2:
+        if self.user_value(key='CorrectThirdPiece') == 2:
             return Retry01(self.ctx)
-        if self.user_value(key='CorrectFouthPiece') >= 2:
+        if self.user_value(key='CorrectFouthPiece') == 2:
             return Retry01(self.ctx)
-        if self.user_value(key='CorrectFirstPiece') >= 1:
+        if self.user_value(key='CorrectFirstPiece') == 1:
             return CheckAnswer03(self.ctx)
 
 
 class CheckAnswer03(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='CorrectFirstPiece') >= 2:
+        if self.user_value(key='CorrectFirstPiece') == 2:
             return Retry01(self.ctx)
-        if self.user_value(key='CorrectSecondPiece') >= 2:
+        if self.user_value(key='CorrectSecondPiece') == 2:
             return Retry01(self.ctx)
-        if self.user_value(key='CorrectThirdPiece') >= 2:
+        if self.user_value(key='CorrectThirdPiece') == 2:
             return Retry01(self.ctx)
-        if self.user_value(key='CorrectFouthPiece') >= 2:
+        if self.user_value(key='CorrectFouthPiece') == 2:
             return Retry01(self.ctx)
-        if self.user_value(key='CorrectSecondPiece') >= 1:
+        if self.user_value(key='CorrectSecondPiece') == 1:
             return CheckAnswer04(self.ctx)
 
 
 class CheckAnswer04(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='CorrectFirstPiece') >= 2:
+        if self.user_value(key='CorrectFirstPiece') == 2:
             return Retry01(self.ctx)
-        if self.user_value(key='CorrectSecondPiece') >= 2:
+        if self.user_value(key='CorrectSecondPiece') == 2:
             return Retry01(self.ctx)
-        if self.user_value(key='CorrectThirdPiece') >= 2:
+        if self.user_value(key='CorrectThirdPiece') == 2:
             return Retry01(self.ctx)
-        if self.user_value(key='CorrectFourthPiece') >= 2:
+        if self.user_value(key='CorrectFourthPiece') == 2:
             return Retry01(self.ctx)
-        if self.user_value(key='CorrectThirdPiece') >= 1:
+        if self.user_value(key='CorrectThirdPiece') == 1:
             return CheckAnswer05(self.ctx)
 
 
 class CheckAnswer05(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='CorrectFirstPiece') >= 2:
+        if self.user_value(key='CorrectFirstPiece') == 2:
             return Retry01(self.ctx)
-        if self.user_value(key='CorrectSecondPiece') >= 2:
+        if self.user_value(key='CorrectSecondPiece') == 2:
             return Retry01(self.ctx)
-        if self.user_value(key='CorrectThirdPiece') >= 2:
+        if self.user_value(key='CorrectThirdPiece') == 2:
             return Retry01(self.ctx)
-        if self.user_value(key='CorrectFourthPiece') >= 2:
+        if self.user_value(key='CorrectFourthPiece') == 2:
             return Retry01(self.ctx)
-        if self.user_value(key='CorrectFourthPiece') >= 1:
+        if self.user_value(key='CorrectFourthPiece') == 1:
             return PuzzleSolved(self.ctx)
 
 

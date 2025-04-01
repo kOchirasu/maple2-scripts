@@ -10,7 +10,7 @@ class 시작대기중(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
         if self.detect_liftable_object(box_ids=[100], item_id=0):
             return 보상테스트07(self.ctx)
-        if self.user_value(key='TimeEvent') >= 1:
+        if self.user_value(key='TimeEvent') == 1:
             return 경험치구슬01(self.ctx)
 
 

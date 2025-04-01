@@ -14,7 +14,7 @@ class IsDungeonRoomReady(trigger_api.Trigger):
 
 class idle(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Ending') >= 1:
+        if self.user_value(key='Ending') == 1:
             return 몬스터소멸(self.ctx)
 
 

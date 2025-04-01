@@ -127,9 +127,9 @@ class 파이널전투(trigger_api.Trigger):
         self.set_user_value(trigger_id=99990003, key='FinalPhase', value=1)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='TimerStart') >= 2:
+        if self.user_value(key='TimerStart') == 2:
             return 파편합성완료(self.ctx)
-        if self.user_value(key='FinalPhase') >= 2:
+        if self.user_value(key='FinalPhase') == 2:
             return 파편합성완료(self.ctx)
 
 

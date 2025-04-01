@@ -19,9 +19,9 @@ class WakeUp(trigger_api.Trigger):
         self.move_npc(spawn_id=103, patrol_name='MS2PatrolData_1031')
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='BridgeOpen') >= 2:
+        if self.user_value(key='BridgeOpen') == 2:
             return Patrol02(self.ctx)
-        if self.user_value(key='BridgeOpen') >= 3:
+        if self.user_value(key='BridgeOpen') == 3:
             return Patrol03(self.ctx)
 
 
@@ -30,7 +30,7 @@ class Patrol02(trigger_api.Trigger):
         self.move_npc(spawn_id=103, patrol_name='MS2PatrolData_1032')
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='BridgeOpen') >= 3:
+        if self.user_value(key='BridgeOpen') == 3:
             return Patrol03(self.ctx)
 
 

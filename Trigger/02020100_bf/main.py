@@ -118,7 +118,7 @@ class 씨앗체험_씨앗들기(trigger_api.Trigger):
         if self.object_interacted(interact_ids=[10002115], state=0):
             return 씨앗체험_나무심기(self.ctx)
         """
-        if self.user_value(key='Seed0interact') >= 1:
+        if self.user_value(key='Seed0interact') == 1:
             return 씨앗체험_나무심기(self.ctx)
 
 
@@ -171,7 +171,7 @@ class 씨앗1_활성화(trigger_api.Trigger):
         self.set_user_value(trigger_id=99990002, key='Seed1start', value=1)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Seed1interact') >= 1:
+        if self.user_value(key='Seed1interact') == 1:
             return 씨앗1_전투(self.ctx)
 
 
@@ -216,7 +216,7 @@ class 씨앗2_활성화(trigger_api.Trigger):
         self.set_actor(trigger_id=1402, visible=True, initial_sequence='Interaction_lapentatree_A01_On')
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Seed2interact') >= 1:
+        if self.user_value(key='Seed2interact') == 1:
             return 씨앗2_전투(self.ctx)
 
 
@@ -259,7 +259,7 @@ class 발판1_활성화대기(trigger_api.Trigger):
         self.set_user_value(trigger_id=99990003, key='Seed2start', value=2)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Seed3interact') >= 1:
+        if self.user_value(key='Seed3interact') == 1:
             return 발판1_몬스터처리(self.ctx)
         if self.monster_dead(spawn_ids=[225,226]):
             return 발판1_몬스터처리(self.ctx)
@@ -270,7 +270,7 @@ class 발판1_몬스터처리(trigger_api.Trigger):
         self.set_user_value(trigger_id=99990004, key='Seed3start', value=1)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Seed3interact') >= 1:
+        if self.user_value(key='Seed3interact') == 1:
             return 발판1_활성화(self.ctx)
 
 
@@ -284,7 +284,7 @@ class 발판1_활성화(trigger_api.Trigger):
         self.set_breakable(trigger_ids=[5011,5012,5013,5014,5015,5016,5017,5018,5019], enable=True)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='EliteClear') >= 1:
+        if self.user_value(key='EliteClear') == 1:
             return 보스전(self.ctx)
 
 

@@ -126,7 +126,7 @@ class 전투_진행(trigger_api.Trigger):
         # self.set_user_value(trigger_id=99990002, key='SpecialTimer', value=1)
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='End') >= 1:
+        if self.user_value(key='End') == 1:
             return 랭크체크대사(self.ctx)
 
 

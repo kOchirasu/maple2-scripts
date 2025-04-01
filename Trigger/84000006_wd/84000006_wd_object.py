@@ -12,7 +12,7 @@ class Staging(trigger_api.Trigger):
         self.set_interact_object(trigger_ids=[10001445], state=2) # 테스트용 1개
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Interaction') >= 1:
+        if self.user_value(key='Interaction') == 1:
             # 경기 준비되면 작동 시작
             return UserCount(self.ctx)
 
@@ -110,7 +110,7 @@ class Under30(trigger_api.Trigger):
 # 경기 종료 준비
 class Standby(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Interaction') >= 2:
+        if self.user_value(key='Interaction') == 2:
             # OFF 신호 수신
             return Interaction_Off(self.ctx)
 

@@ -14,7 +14,7 @@ class 대기(trigger_api.Trigger):
             return 종료(self.ctx)
         if self.dungeon_variable(var_id=3) == 1:
             return 종료(self.ctx)
-        if self.user_value(key='Start') >= 1:
+        if self.user_value(key='Start') == 1:
             return 시작(self.ctx)
 
 

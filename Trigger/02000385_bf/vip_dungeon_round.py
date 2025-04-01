@@ -4,7 +4,7 @@ import trigger_api
 
 class 시작대기(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='round1start') >= 1:
+        if self.user_value(key='round1start') == 1:
             return 라운드01_1(self.ctx)
 
 
@@ -37,7 +37,7 @@ class 라운드03_1(trigger_api.Trigger):
 
 class 라운드대기2(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='round2start') >= 1:
+        if self.user_value(key='round2start') == 1:
             return 라운드01_2(self.ctx)
 
 
@@ -70,7 +70,7 @@ class 라운드03_2(trigger_api.Trigger):
 
 class 라운드대기3(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='round3start') >= 1:
+        if self.user_value(key='round3start') == 1:
             return 라운드01_3(self.ctx)
 
 
@@ -121,7 +121,7 @@ class 라운드05_3(trigger_api.Trigger):
 
 class 라운드대기4(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='round4start') >= 1:
+        if self.user_value(key='round4start') == 1:
             return 라운드01_4(self.ctx)
 
 
@@ -181,7 +181,7 @@ class 라운드06_4(trigger_api.Trigger):
 
 class 라운드대기5(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='round5start') >= 1:
+        if self.user_value(key='round5start') == 1:
             return 라운드01_5(self.ctx)
 
 

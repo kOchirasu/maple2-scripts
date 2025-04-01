@@ -31,7 +31,7 @@ class 전투시작_인페르녹전함(trigger_api.Trigger):
 
 class 첫번째페이즈_인페르녹전함(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='SecondPhase') >= 1:
+        if self.user_value(key='SecondPhase') == 1:
             # 1페이즈 전투 진행하면서  SecondPhase = 1 신호를 받을때까지 여기서 대기
             return 두번째페이즈_인페르녹전함(self.ctx)
         if self.dungeon_timeout():
@@ -50,7 +50,7 @@ class 두번째페이즈_인페르녹전함(trigger_api.Trigger):
         # <action feature="DungeonRankBalance_02" name="DungeonMissionComplete" missionID="24090017"/> ## 중국용 던전랭크 코드: 인페르녹의 전함 측면파괴 던전랭크 달성을 위한 신호
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='ThirdPhase') >= 1:
+        if self.user_value(key='ThirdPhase') == 1:
             # 2페이즈 전투 진행하면서, 인페르녹 전함에게   ThirdPhase = 1 신호를 받을때까지 여기서 대기
             return 세번째페이즈_인페르녹등장(self.ctx)
         if self.dungeon_timeout():

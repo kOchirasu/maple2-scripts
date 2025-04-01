@@ -10,7 +10,7 @@ class 발판초기화(trigger_api.Trigger):
         self.set_interact_object(trigger_ids=[12000116], state=2) # 이동발판트리거
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='MovePanel02') >= 1:
+        if self.user_value(key='MovePanel02') == 1:
             # 이동발판 삭제 후 대기
             return 레버생성(self.ctx)
 

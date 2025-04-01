@@ -4,7 +4,7 @@ import trigger_api
 
 class idle(trigger_api.Trigger):
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='Buff_01') >= 1:
+        if self.user_value(key='Buff_01') == 1:
             return Buff_Ready(self.ctx)
 
 

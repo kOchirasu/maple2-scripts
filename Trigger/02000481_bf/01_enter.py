@@ -21,7 +21,7 @@ class Wait(trigger_api.Trigger):
         self.set_interact_object(trigger_ids=[10002025], state=0) # Lever
 
     def on_tick(self) -> trigger_api.Trigger:
-        if self.user_value(key='start') >= 1:
+        if self.user_value(key='start') == 1:
             return DungeonStart(self.ctx)
 
 
